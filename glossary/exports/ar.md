@@ -16,7 +16,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | training set | مجموعة التدريب | verified_external | training-set: The portion of data used to fit model parameters. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#training-set) |
 | validation set | مجموعة التحقّق | verified_external | validation-set: Data used to select models or tune settings during development. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#validation-set) |
 | test set | مجموعة الاختبار | verified_d2l | test-set: Data held out to assess a fitted model. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=35) |
-| model parameter | معلمة النموذج | proposed | model-parameter: A value learned or fitted as part of a model. |  |
+| model parameter | معلَمة النموذج | proposed | model-parameter: A value learned or fitted as part of a model. |  |
 | weight | الوزن | verified_external | weight: A coefficient that scales an input or connection in a model. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#weight) |
 | bias | انحياز | proposed | bias: An additive offset in a model or prediction. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L294) |
 | prediction | التنبؤ | verified_external | prediction: A model's estimate of an outcome for an input. | review-ar-3518bb0b5f: page |
@@ -48,7 +48,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | matrix multiplication | ضرب المصفوفات | proposed | matrix-multiplication: A product combining rows of one matrix with columns of another. |  |
 | eigenvalue | القيمة الذاتية | proposed | eigenvalue: A scaling factor associated with an eigenvector of a linear map. |  |
 | eigenvector | المتجه الذاتي | proposed | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L318) |
-| singular value decomposition | تحليل القيم المفردة (SVD) | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
+| singular value decomposition | تحليل القيم المفردة | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
 | norm | المعيار | verified_external | norm: A function measuring the size of a vector or other mathematical object. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L248) |
 | Euclidean distance | المسافة الإقليدية | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
 | linear algebra | الجبر الخطي | verified_d2l | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=70) |
@@ -133,7 +133,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | translation equivariance | تساوق الإزاحة | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | وصلة البواقي | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
 | residual network | شبكة البواقي | proposed | residual-network: A neural network built using residual connections. |  |
-| skip connection | وصلة تخطٍّ | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
+| skip connection | وصلة تخط | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
 | image augmentation | زيادة الصور | verified_d2l | image-augmentation: A technique that creates varied training images through transformations. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185) |
 | transfer learning | نقل التعلم | verified_d2l | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=202) |
 | fine-tuning | الضبط الدقيق | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#fine-tuning) |
@@ -158,10 +158,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sequence-to-sequence | تسلسل إلى تسلسل | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | المشفر | verified_d2l | encoder: A component that converts an input into an internal representation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=258) |
 | decoder | مفكك التشفير | proposed | decoder: A component that produces an output from an internal representation or context. |  |
-| teacher forcing | فرض مخرجات المعلّم | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
+| teacher forcing | فرض مخرجات المعلم | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
 | beam search | البحث الشعاعي | verified_d2l | beam-search: A decoding method that retains a limited number of candidate sequences at each step. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=275) |
 | perplexity | الحيرة | proposed | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. |  |
-| long short-term memory | الذاكرة قصيرة المدى الطويلة (LSTM) | proposed | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. |  |
+| long short-term memory | الذاكرة قصيرة المدى الطويلة | proposed | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. |  |
 | gated recurrent unit | وحدة متكررة ذات بوابات | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
 | attention | الانتباه | verified_d2l | attention: A mechanism that forms a context-dependent weighted combination of values. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=87) |
 | self-attention | انتباه ذاتي | proposed | self-attention: Attention in which queries, keys, and values are derived from the same sequence. |  |
@@ -177,7 +177,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | discriminative model | نموذج تمييزي | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L53) |
 | generator | مولد | proposed | generator: A model component that produces synthetic samples. |  |
 | discriminator | مميز | proposed | discriminator: A model component trained to distinguish classes of samples, often real and generated. |  |
-| autoencoder | مشفّر تلقائي | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
+| autoencoder | مشفر تلقائي | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
 | latent variable | متغير كامن | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
 | latent space | فضاء كامن | proposed | latent-space: A space of unobserved representations used by a model. |  |
 | diffusion model | نموذج انتشار | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
@@ -302,7 +302,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | latent variable model | نموذج متغير كامن | proposed | latent-variable-model: A probabilistic model incorporating unobserved variables. |  |
 | mixture model | نموذج خليط | proposed | mixture-model: A probability model combining multiple component distributions. |  |
 | mixture of Gaussians | خليط غاوسي | proposed | mixture-of-gaussians: A probability distribution formed as a weighted combination of Gaussian components. |  |
-| variational inference | استدلال تغيّري | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
+| variational inference | استدلال تغيري | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
 | evidence lower bound | الحد الأدنى للدليل | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
 | log probability | لوغاريتم الاحتمال | proposed | log-probability: The logarithm of a probability or probability density. |  |
 | log-sum-exp | لوغاريتم مجموع الأسيات | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
@@ -329,7 +329,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | weight initialization | تهيئة الأوزان | proposed | weight-initialization: The choice of starting values for model weights. |  |
 | Xavier initialization | تهيئة Xavier | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
 | weight sharing | مشاركة الأوزان | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
-| parameter count | عدد المعلمات | proposed | parameter-count: The number of parameters in a model. |  |
+| parameter count | عدد المعلَمات | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | تعقيد حسابي | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
 | backward pass | التمرير الخلفي | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
 | forward pass | التمرير الأمامي | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
@@ -343,28 +343,28 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | supervised learning | التعلم الخاضع للإشراف | verified_d2l | supervised-learning: Learning a mapping from inputs to observed targets. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=32) |
 | unsupervised learning | تعلم غير خاضع للإشراف | proposed | unsupervised-learning: Learning structure from data without task labels. |  |
 | in-context learning | التعلّم داخل السياق | verified_external | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#in-context-learning) |
-| prompt | موجّه | proposed | prompt: An input that guides a model's response or behavior. |  |
+| prompt | موجه | proposed | prompt: An input that guides a model's response or behavior. |  |
 | context window | نافذة السياق | proposed | context-window: The amount of context a model can process in a single input. |  |
 | next-token prediction | تنبؤ بالرمز التالي | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
 | autoregressive model | نموذج الانحدار الذاتي | verified_d2l | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=216) |
 | autoregressive generation | توليد ذاتي الانحدار | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
 | causal attention | انتباه سببي | verified_d2l | causal-attention: Attention restricted so positions cannot access future positions. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=346) |
 | cross-attention | انتباه متقاطع | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
-| scaled dot-product attention | انتباه الجداء النقطي المقيّس | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
+| scaled dot-product attention | انتباه الجداء النقطي المقيس | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | انتباه softmax | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
 | position embedding | تضمين الموضع | proposed | position-embedding: A representation of position used in a sequence model. |  |
-| rotary position embedding | تضمين موضعي دوّار | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
+| rotary position embedding | تضمين موضعي دوار | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
 | feedforward network | شبكة تغذية أمامية | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
 | residual block | كتلة البواقي | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | طبقة تطبيع | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
 | root mean square | جذر متوسط المربعات | proposed | root-mean-square: The square root of the mean of squared values. |  |
-| encoder-decoder | مشفّر–مفكك تشفير | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
+| encoder-decoder | مشفر–مفكك تشفير | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | طول التسلسل | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | درجة الانتباه | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
 | attention pooling | تجميع الانتباه | verified_d2l | attention-pooling: Combining values using weights determined by an attention mechanism. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=282) |
 | additive attention | الانتباه الجمعي | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
 | dot-product attention | انتباه الجداء النقطي | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
-| masked attention | انتباه مقنّع | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
+| masked attention | انتباه مقنع | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
 | byte pair encoding | ترميز أزواج البايت | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
 | subword | الكلمات الفرعية | verified_d2l | subword: A token unit that can represent part of a word. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=350) |
 | n-gram | n-gram | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
@@ -387,7 +387,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pooling layer | طبقة التجميع | verified_d2l | pooling-layer: A layer that aggregates local groups of activations. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=253) |
 | strided convolution | التفاف بخطوة انزلاق | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | الالتفاف المنقول | verified_d2l | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=271) |
-| dilated convolution | التفاف موسّع | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
+| dilated convolution | التفاف موسع | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
 | depthwise convolution | التفاف عمقي | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
 | pointwise convolution | التفاف نقطي | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
 | image resolution | دقة الصورة | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
@@ -444,7 +444,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mixture of experts | خليط الخبراء | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
 | transition kernel | نواة انتقال | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | مكافأة متوقعة | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
-| effective horizon | أفق فعّال | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
+| effective horizon | أفق فعال | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
 | behavior policy | سياسة السلوك | proposed | behavior-policy: The policy that generates the data used by a learning algorithm. |  |
 | target policy | سياسة الهدف | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
 | temporal-difference error | خطأ الفرق الزمني | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
@@ -460,7 +460,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | greedy policy | سياسة جشعة | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. |  |
 | exploration rate | معدل الاستكشاف | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
 | state-action pair | زوج الحالة والإجراء | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
-| partially observable | مرصود جزئياً | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
+| partially observable | مرصود جزئيًا | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
 | Markov chain Monte Carlo | مونت كارلو بسلسلة ماركوف | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
 | noise ball | كرة ضوضاء | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
 | implicit bias | انحياز ضمني | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
@@ -516,7 +516,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | confidence level | مستوى الثقة | proposed | confidence-level: The long-run coverage probability associated with a confidence interval procedure. |  |
 | statistical power | قوة الاختبار | proposed | statistical-power: The probability that a statistical test rejects a false null hypothesis. |  |
 | variance-preserving | حافظ للتباين | proposed | variance-preserving: Describing a diffusion process designed to keep the marginal variance controlled. |  |
-| variance-exploding | مفجّر للتباين | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
+| variance-exploding | مفجر للتباين | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
 | classifier guidance | توجيه المصنف | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
 | classifier-free guidance | توجيه بلا مصنف | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
 | probability-flow ODE | المعادلة التفاضلية العادية لتدفق الاحتمال | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
@@ -532,7 +532,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | attention sink | مصرف الانتباه | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
 | transformer block | كتلة المحول | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
 | residual stream | تيار البواقي | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
-| vision transformer | محوّل الرؤية (ViT) | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
+| vision transformer | محول الرؤية | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
 | position interpolation | استيفاء المواضع | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
 | relative position | موضع نسبي | proposed | relative-position: The displacement between positions in a sequence. |  |
 | prefill | ملء السياق المسبق | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
@@ -555,7 +555,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | generalization gap | فجوة التعميم | verified_d2l | generalization-gap: The difference between a model's training performance and its performance on unseen data. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=209) |
 | hypothesis class | فئة الفرضيات | proposed | hypothesis-class: The set of candidate functions or models considered by a learning method. |  |
 | uniform convergence | تقارب منتظم | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
-| VC dimension | بُعد VC (فابنيك–تشيرفوننكيس) | proposed | vc-dimension: A measure of the capacity of a class of binary classifiers. |  |
+| VC dimension | بعد VC | proposed | vc-dimension: A measure of the capacity of a class of binary classifiers. |  |
 | adaptive overfitting | فرط الملاءمة التكيفي | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
 | interpolation threshold | عتبة الاستيفاء | proposed | interpolation-threshold: A model-capacity threshold at which a model can fit the training data exactly. |  |
 | logit | لوجيت | proposed | logit: An unnormalized score used as an input to a probability transformation. |  |
@@ -566,7 +566,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | linear recurrence | علاقة تكرارية خطية | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
 | input-dependent | معتمد على المدخل | proposed | input-dependent: Describing a quantity whose value changes with the input. |  |
 | selective scan | مسح انتقائي | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
-| parallel scan | مسح متوازٍ | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
+| parallel scan | مسح متواز | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
 | recurrent state | حالة متكررة | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
 | forget gate | بوابة النسيان | verified_d2l | forget-gate: A gate that controls how much of a previous state is retained. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=228) |
 | input gate | بوابة الإدخال | verified_d2l | input-gate: A gate that controls how much new information enters a recurrent state. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=228) |
@@ -585,34 +585,34 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | attention head | رأس انتباه | proposed | attention-head: One independently parameterized attention operation in multi-head attention. |  |
 | attention map | خريطة الانتباه | proposed | attention-map: A matrix or array of attention weights between queries and keys. |  |
 | causal mask | قناع سببي | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
-| router | مُسيِّر | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
+| router | مسير | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
 | load balancing | موازنة الحمل | proposed | load-balancing: Distributing work across resources or experts to avoid disproportionate assignment. |  |
 | capacity factor | عامل السعة | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
 | scaling law | قانون التحجيم | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
-| compute-optimal | أمثل حسابياً | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
+| compute-optimal | أمثل حسابيًا | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
 | floating-point precision | دقة الفاصلة العائمة | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
 | memory footprint | بصمة الذاكرة | verified_d2l | memory-footprint: The amount of memory occupied by data or a computation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=80) |
 | memory hierarchy | هرمية الذاكرة | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
 | memory access | وصول إلى الذاكرة | proposed | memory-access: A read from or write to a memory location. |  |
-| memory-bound | مقيّد بالذاكرة | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
-| compute-bound | مقيّد بالحوسبة | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
+| memory-bound | مقيد بالذاكرة | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
+| compute-bound | مقيد بالحوسبة | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
 | graph compilation | تصريف المخطط الحسابي | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
 | just-in-time compilation | التصريف في أثناء التنفيذ (JIT) | verified_external | just-in-time-compilation: Compiling code at runtime when needed for execution. | review-ar-339021f726: page |
 | asynchronous execution | تنفيذ غير متزامن | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | المزامنة | verified_d2l | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=158) |
 | all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | تراكم التدرجات | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
-| pipeline parallelism | توازٍ أنبوبي | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
-| tensor parallelism | توازٍ للموترات | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
+| pipeline parallelism | تواز أنبوبي | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
+| tensor parallelism | تواز للموترات | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
 | checkpointing | حفظ نقاط الاستعادة | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
 | reproducibility | قابلية إعادة الإنتاج | proposed | reproducibility: The ability to obtain consistent results when repeating an experiment under specified conditions. |  |
 | random number generator | مولد أعداد عشوائية | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
 | rounding error | خطأ التدوير | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
 | dynamic range | مدى ديناميكي | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | إنتاجية التدريب | proposed | training-throughput: The amount of training work completed per unit time. |  |
-| soft actor-critic | الفاعل–الناقد الليّن (SAC) | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
-| deep Q-network | شبكة Q العميقة (DQN) | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
-| proximal policy optimization | PPO (تحسين السياسة التقاربي) | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
+| soft actor-critic | الفاعل–الناقد اللين | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
+| deep Q-network | شبكة Q العميقة | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
+| proximal policy optimization | تحسين السياسة التقاربي | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
 | trust region | منطقة ثقة | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
 | offline reinforcement learning | تعلم معزز غير متصل | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
 | behavior cloning | استنساخ السلوك | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
@@ -644,7 +644,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | quadratic function | دالة تربيعية | proposed | quadratic-function: A function containing terms of degree at most two. |  |
 | linear system | نظام خطي | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
 | least squares | مربعات صغرى | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. |  |
-| residual | باقٍ | proposed | residual: The difference between an observed value and its fitted or predicted value. |  |
+| residual | باق | proposed | residual: The difference between an observed value and its fitted or predicted value. |  |
 | ill-conditioned | سيئ الاشتراط | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. |  |
 | singular matrix | مصفوفة شاذة | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
 | invertible matrix | مصفوفة قابلة للعكس | proposed | invertible-matrix: A square matrix with an inverse. |  |
@@ -668,7 +668,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Hessian-vector product | جداء المصفوفة الهيسية بمتجه | proposed | hessian-vector-product: The product of a Hessian matrix with a vector, often computed without forming the full matrix. |  |
 | directional derivative | مشتق اتجاهي | proposed | directional-derivative: The rate of change of a function in a specified direction. |  |
 | total derivative | مشتق كلي | proposed | total-derivative: The derivative accounting for dependence through all relevant variables. |  |
-| second derivative | مشتق ثانٍ | proposed | second-derivative: The derivative of a first derivative, measuring how a slope changes. |  |
+| second derivative | مشتق ثان | proposed | second-derivative: The derivative of a first derivative, measuring how a slope changes. |  |
 | initial condition | شرط ابتدائي | proposed | initial-condition: A value specified at the starting point of a differential equation or recurrence. |  |
 | boundary condition | شرط حدي | proposed | boundary-condition: A constraint on a solution at the boundary of its domain. |  |
 | numerical integration | تكامل عددي | proposed | numerical-integration: Approximation of an integral using numerical computations. |  |
@@ -679,13 +679,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fundamental theorem of calculus | المبرهنة الأساسية للتفاضل والتكامل | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
 | implicit differentiation | اشتقاق ضمني | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
 | Lipschitz constant | ثابت ليبشيتز | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
-| Lipschitz continuous | مستمر ليبشيتزياً | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
+| Lipschitz continuous | مستمر ليبشيتزيًا | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
 | convex combination | تركيب محدب | proposed | convex-combination: A weighted sum with nonnegative weights that sum to one. |  |
 | Jensen's inequality | متباينة جينسن | verified_external | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-unsupervised-learning.md#L28) |
 | first-order condition | شرط الرتبة الأولى | proposed | first-order-condition: A condition on first derivatives used to characterize candidate optima. |  |
 | second-order condition | شرط الرتبة الثانية | proposed | second-order-condition: A condition involving second derivatives used to characterize candidate optima. |  |
 | feasible point | نقطة ممكنة | proposed | feasible-point: A point satisfying all constraints of an optimization problem. |  |
-| probability simplex | مبسّط الاحتمالات | proposed | probability-simplex: The set of nonnegative vectors whose components sum to one. |  |
+| probability simplex | مبسط الاحتمالات | proposed | probability-simplex: The set of nonnegative vectors whose components sum to one. |  |
 | stochastic process | عملية عشوائية | proposed | stochastic-process: A collection of random variables indexed by time or another parameter. |  |
 | conditional independence | استقلال شرطي | proposed | conditional-independence: Independence of variables after conditioning on another variable or set of variables. |  |
 | posterior mean | متوسط بعدي | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
@@ -697,10 +697,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sample variance | تباين العينة | verified_external | sample-variance: A statistic measuring dispersion of observed values around their sample mean. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L336) |
 | population mean | متوسط المجتمع | proposed | population-mean: The expected value of a variable in the population under study. |  |
 | sampling error | خطأ المعاينة | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
-| estimator variance | تباين المقدّر | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
+| estimator variance | تباين المقدر | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
 | unbiased estimator | مقدّر غير منحاز | verified_external | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. | review-ar-ff3dc43953: page |
-| consistent estimator | مقدّر متسق | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
-| maximum likelihood estimator | مقدّر الإمكان الأقصى | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
+| consistent estimator | مقدر متسق | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
+| maximum likelihood estimator | مقدر الإمكان الأعظم | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
 | test statistic | إحصائية اختبار | proposed | test-statistic: A quantity computed from data and used by a statistical test. |  |
 | type I error | خطأ من النوع الأول | proposed | type-i-error: Rejecting a true null hypothesis. |  |
 | type II error | خطأ من النوع الثاني | proposed | type-ii-error: Failing to reject a false null hypothesis. |  |
@@ -708,7 +708,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | proposal distribution | توزيع اقتراح | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
 | rejection sampling | أخذ عينات بالرفض | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
 | Gibbs sampling | أخذ عينات غيبس | proposed | gibbs-sampling: A Markov chain Monte Carlo method that repeatedly samples conditional distributions. |  |
-| variational objective | هدف تغيّري | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
+| variational objective | هدف تغيري | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
 | marginal likelihood | إمكان هامشي | proposed | marginal-likelihood: The probability or density of observed data after integrating out latent variables or parameters. |  |
 | entropy rate | معدل الإنتروبيا | proposed | entropy-rate: The rate at which a stochastic process produces uncertainty or information. |  |
 | conditional mutual information | معلومات متبادلة شرطية | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
@@ -785,7 +785,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | hinge loss | الخسارة المفصلية | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L326) |
 | squared loss | الخسارة التربيعية | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#squared-loss) |
 | Huber loss | خسارة هوبر | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
-| regularized objective | هدف منظّم | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
+| regularized objective | هدف منظم | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | تهيئة عشوائية | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | معيار التدرج | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
 | leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
@@ -795,7 +795,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | network depth | عمق الشبكة | proposed | network-depth: The number of successive computational layers in a network. |  |
 | network width | عرض الشبكة | proposed | network-width: The number of units or features in a network layer. |  |
 | training dynamics | ديناميكيات التدريب | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
-| parameter update | تحديث المعلمات | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
+| parameter update | تحديث المعلَمات | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
 | optimizer state | حالة المحسن | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
 | minibatch gradient | تدرج الدفعة المصغرة | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
 | full gradient | تدرج كامل | proposed | full-gradient: The gradient of an objective computed over the full dataset. |  |
@@ -804,7 +804,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | training iteration | تكرار التدريب | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. |  |
 | exponential decay | اضمحلال أسي | proposed | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. |  |
 | decoupled weight decay | اضمحلال وزن منفصل | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
-| second moment | عزم ثانٍ | proposed | second-moment: The expectation or average of the square of a quantity. |  |
+| second moment | عزم ثان | proposed | second-moment: The expectation or average of the square of a quantity. |  |
 | first moment | عزم أول | proposed | first-moment: The expectation or average of a quantity. |  |
 | bias correction | تصحيح الانحياز | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
 | cross-correlation | ارتباط متقاطع | proposed | cross-correlation: An operation that combines a local input window with a kernel without reversing the kernel. |  |
@@ -901,8 +901,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | causal masking | تقنيع سببي | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
 | padding mask | قناع الحشو | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
 | absolute position | موضع مطلق | proposed | absolute-position: A position represented relative to the beginning or another fixed reference. |  |
-| transformer encoder | مشفّر المحول | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
-| transformer decoder | مفكك تشفير المحوّل | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. |  |
+| transformer encoder | مشفر المحول | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
+| transformer decoder | مفكك تشفير المحول | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. |  |
 | autoregressive decoding | فك تشفير انحدار ذاتي | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
 | text generation | توليد النص | proposed | text-generation: Producing text with a model, optionally conditioned on a prompt or context. |  |
 | sequence generation | توليد التسلسل | proposed | sequence-generation: Producing an ordered sequence of model outputs. |  |
@@ -942,12 +942,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | energy-based model | نموذج قائم على الطاقة | proposed | energy-based-model: A probabilistic model that assigns unnormalized probability through an energy function. |  |
 | partition function | دالة التجزئة | verified_external | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. | review-ar-897ea2d06d: page |
 | normalizing constant | ثابت التطبيع | proposed | normalizing-constant: A factor that makes a nonnegative function sum or integrate to one. |  |
-| unnormalized density | كثافة غير مطبّعة | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
+| unnormalized density | كثافة غير مطبعة | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
 | log density | لوغاريتم الكثافة | proposed | log-density: The logarithm of a probability density. |  |
 | denoising score matching | مطابقة درجة إزالة الضوضاء | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
 | contrastive divergence | تباعد تقابلي | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
 | Langevin sampling | أخذ عينات لانجفان | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
-| annealed Langevin dynamics | ديناميكيات لانجفان الملدّنة | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
+| annealed Langevin dynamics | ديناميكيات لانجفان الملدنة | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
 | score network | شبكة الدرجة | proposed | score-network: A neural network trained to estimate a score function. |  |
 | noise level | مستوى الضوضاء | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
 | signal-to-noise ratio | نسبة الإشارة إلى الضوضاء | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
@@ -968,7 +968,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | guidance scale | مقياس التوجيه | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
 | class conditioning | تكييف على الفئة | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
 | diffusion transformer | محول الانتشار | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
-| variational autoencoder | مشفّر تلقائي تغيّري (VAE) | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
+| variational autoencoder | مشفر تلقائي تغيري | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
 | reconstruction error | خطأ إعادة البناء | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
 | bottleneck | عنق زجاجة | proposed | bottleneck: A constrained intermediate representation that limits information or computation. |  |
 | latent code | شفرة كامنة | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
@@ -976,7 +976,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sample quality | جودة العينة | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
 | sample diversity | تنوع العينات | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
 | Fréchet Inception Distance | مسافة فريشيه إنسبشن | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
-| maximum mean discrepancy | أقصى تفاوت في المتوسط (MMD) | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
+| maximum mean discrepancy | أقصى تفاوت في المتوسط | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
 | adversarial training | تدريب خصومي | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
 | adversarial objective | هدف خصومي | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | لعبة أدنى أعلى | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
@@ -990,10 +990,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | strict convexity | تحدب صارم | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
 | smoothness | نعومة | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
 | convex objective | هدف محدب | proposed | convex-objective: An optimization objective that is a convex function. |  |
-| constrained optimization | تحسين مقيّد | proposed | constrained-optimization: Optimization subject to conditions on feasible solutions. |  |
+| constrained optimization | تحسين مقيد | proposed | constrained-optimization: Optimization subject to conditions on feasible solutions. |  |
 | first-order optimality | أمثلية الرتبة الأولى | proposed | first-order-optimality: A condition characterizing a candidate optimum using first-order information. |  |
 | second-order optimality | أمثلية الرتبة الثانية | proposed | second-order-optimality: A condition characterizing a candidate optimum using curvature information. |  |
-| sufficient condition | شرط كافٍ | proposed | sufficient-condition: A condition that guarantees a stated result or property. |  |
+| sufficient condition | شرط كاف | proposed | sufficient-condition: A condition that guarantees a stated result or property. |  |
 | primal problem | مسألة أولية | proposed | primal-problem: The original optimization problem associated with a dual problem. |  |
 | dual variable | متغير ثنوي | proposed | dual-variable: A variable associated with a constraint in a dual or Lagrangian formulation. |  |
 | dual function | دالة ثنوية | proposed | dual-function: A function obtained by optimizing a Lagrangian over primal variables. |  |
@@ -1003,7 +1003,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | complementary slackness | ركود تكميلي | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
 | subgradient method | طريقة التدرج التحتي | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
 | projection operator | مؤثر الإسقاط | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
-| projected gradient descent | النزول التدرجي المُسقَط | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
+| projected gradient descent | النزول التدرجي المسقط | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
 | backtracking line search | بحث خطي بالتراجع | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
 | descent direction | اتجاه النزول | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. |  |
 | descent lemma | توطئة النزول | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
@@ -1035,11 +1035,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | nonconvex optimization | تحسين غير محدب | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
 | shrinkage | التقليص | proposed | shrinkage: Pulling estimates or parameters toward a reference value, often zero. |  |
 | outlier | قيمة شاذة | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
-| generalized linear model | نموذج خطي معمّم | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
+| generalized linear model | نموذج خطي معمم | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
 | exponential family | العائلة الأُسيّة | verified_external | exponential-family: A family of probability distributions with a common exponential-form representation. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L235) |
 | Fisher information matrix | مصفوفة معلومات فيشر | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. |  |
 | asymptotic normality | طبيعية تقاربية | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
-| identifiability | قابلية التعرّف | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
+| identifiability | قابلية التعرف | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
 | posterior mode | منوال بعدي | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
 | Bayesian linear regression | انحدار خطي بايزي | proposed | bayesian-linear-regression: Linear regression that represents uncertainty about parameters with a posterior distribution. |  |
 | Gaussian prior | توزيع قبلي غاوسي | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
@@ -1059,7 +1059,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Cholesky decomposition | تحليل تشوليسكي | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
 | Cholesky factor | عامل تشوليسكي | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
 | log marginal likelihood | لوغاريتم الإمكان الهامشي | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
-| hyperparameter optimization | تحسين المعلمات الفائقة | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. |  |
+| hyperparameter optimization | تحسين المعلَمات الفائقة | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. |  |
 | search space | فضاء البحث | proposed | search-space: The set of configurations or solutions considered by a search procedure. |  |
 | configuration space | فضاء الإعدادات | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
 | validation metric | مقياس التحقق | proposed | validation-metric: A performance measure computed on validation data. |  |
@@ -1070,7 +1070,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | successive halving | تنصيف متتابع | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
 | Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
 | noisy objective | هدف مشوب بالضوضاء | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
-| hyperparameter configuration | إعداد المعلمات الفائقة | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
+| hyperparameter configuration | إعداد المعلَمات الفائقة | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
 | asynchronous scheduling | جدولة غير متزامنة | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
 | rating matrix | مصفوفة التقييمات | proposed | rating-matrix: A matrix of user ratings for items. |  |
 | interaction matrix | مصفوفة التفاعلات | proposed | interaction-matrix: A matrix recording interactions between two sets of entities such as users and items. |  |
@@ -1087,7 +1087,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | selection bias | انحياز الاختيار | proposed | selection-bias: Systematic distortion caused by the process selecting observations into a dataset. |  |
 | long tail | ذيل طويل | proposed | long-tail: A collection of relatively infrequent items that collectively may be substantial. |  |
 | hit rate | معدل الإصابة | proposed | hit-rate: The fraction of cases in which a target item appears in a recommended set. |  |
-| normalized discounted cumulative gain | مكسب تراكمي مخفض مطبّع | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
+| normalized discounted cumulative gain | مكسب تراكمي مخفض مطبع | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
 | information theory | نظرية المعلومات | proposed | information-theory: The study of quantifying information, uncertainty, compression, and communication. |  |
 | information content | محتوى معلوماتي | proposed | information-content: A measure of the information associated with an outcome or message. |  |
 | Shannon entropy | إنتروبيا شانون | proposed | shannon-entropy: The expected self-information of a random variable. |  |
@@ -1114,7 +1114,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | InfoNCE | InfoNCE | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
 | negative pair | زوج سالب | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
 | positive pair | زوج موجب | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
-| natural parameter | معلمة طبيعية | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
+| natural parameter | معلَمة طبيعية | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
 | free energy | طاقة حرة | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
 | importance sampling | أخذ عينات بالأهمية | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
 | detailed balance | توازن تفصيلي | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
@@ -1157,11 +1157,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | attention pattern | نمط الانتباه | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
 | softmax normalization | تطبيع softmax | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
 | top-k routing | تسيير top-k | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
-| expert parallelism | توازٍ للخبراء | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
+| expert parallelism | تواز للخبراء | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
 | shared expert | خبير مشترك | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | ميزانية حسابية | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
 | training compute | حوسبة التدريب | proposed | training-compute: The amount of computation used to train a model. |  |
-| active parameters | معلمات نشطة | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
+| active parameters | معلَمات نشطة | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
 | model width | عرض النموذج | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
 | training tokens | رموز التدريب | proposed | training-tokens: Tokens processed as part of model training. |  |
 | inference cost | كلفة الاستدلال | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
@@ -1178,7 +1178,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | batching | تجميع في دفعات | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
 | perceptual compression | ضغط إدراكي | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
 | semantic compression | ضغط دلالي | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
-| Reflow | Reflow (إعادة التدفق) | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
+| Reflow | إعادة التدفق | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
 | consistency training | تدريب الاتساق | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
 | reference velocity | سرعة مرجعية | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
 | stop-gradient | إيقاف التدرج | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
