@@ -119,7 +119,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | batch normalization | Batchnormalisierung | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
 | layer normalization | Schichtnormalisierung | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | Faltung | proposed | convolution: An operation that combines local input values with shared kernel weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L355) |
-| convolutional neural network | konvolutionäres neuronales Netzwerk | verified_external | convolutional-neural-network: A neural network using convolutional layers to process structured data. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| convolutional neural network | konvolutionäres neuronales Netz | verified_external | convolutional-neural-network: A neural network using convolutional layers to process structured data. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | kernel | Faltungskern | verified_external | kernel: A set of weights applied locally in a convolution. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | filter | Filter | proposed | filter: A learned set of local weights used to extract a pattern. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L74) |
 | channel | Kanal | proposed | channel: A feature dimension in a structured representation such as an image. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L227) |
@@ -821,7 +821,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | aliasing | Aliasing | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
 | pooling window | Pooling-Fenster | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
 | global pooling | globales Pooling | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
-| fully convolutional network | vollständig konvolutionäres Netzwerk | verified_external | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| fully convolutional network | vollständig konvolutionäres Netz | verified_external | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | bilinear interpolation | bilineare Interpolation | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | Nächster-Nachbar-Interpolation | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
 | random horizontal flip | Zufällige horizontale Spiegelung | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |

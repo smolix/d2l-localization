@@ -124,17 +124,17 @@ Wikipedia or a German textbook, and record the choice in DECISIONS.
 
 **Convolution has two word families: the network family is *konvolutionär*;
 the operation and its parts are *Faltung*.** The network is *das
-konvolutionäre neuronale Netzwerk*, short *konvolutionäres Netzwerk*, acronym
-*CNN*; likewise *vollständig konvolutionäres Netzwerk*. The operation is *die
+konvolutionäre neuronale Netz*, short *konvolutionäres Netz*, acronym
+*CNN*; likewise *vollständig konvolutionäres Netz*. The operation is *die
 Faltung*, and layers, blocks and kernels are named after it: Faltungsschicht,
-Faltungsblock, Faltungskern, transponierte Faltung. In this term the noun is
-*Netzwerk*, not *Netz*; every other network keeps *Netz* (neuronales Netz,
-rekurrentes neuronales Netz, Residualnetz, Zielnetz).
+Faltungsblock, Faltungskern, transponierte Faltung. A network is always *das Netz*
+(neuronales Netz, konvolutionäres Netz, rekurrentes neuronales Netz,
+Residualnetz, Zielnetz), never *Netzwerk*.
 
 | English | German | Not |
 |---|---|---|
-| "Convolutional Neural Networks" (heading) | Konvolutionäre Netzwerke | Faltungsnetze, Faltungsnetzwerke |
-| "a convolutional network", "a convnet" | ein konvolutionäres Netzwerk, ein CNN | Faltungsnetz, Convnet, konvolutionäres Netz |
+| "Convolutional Neural Networks" (heading) | Konvolutionäre Netze | Faltungsnetze, Konvolutionäre Netzwerke |
+| "a convolutional network", "a convnet" | ein konvolutionäres Netz, ein CNN | Faltungsnetz, Convnet, konvolutionäres Netzwerk |
 | "the convolutional layers of a CNN" | die Faltungsschichten eines CNN | konvolutionäre Schichten, Konvolutionsschichten |
 | "the convolution of $f$ and $g$" | die Faltung von $f$ und $g$ | Konvolution |
 
@@ -162,20 +162,20 @@ Generalisierung · die Umgebung · der Agent (weak: des Agenten, den Agenten) ·
 das Vokabular · der Vorwärtsdurchlauf, der Rückwärtsdurchlauf · der
 Gewichtszerfall · das Sprachmodell · das Pre-Training · die versteckte Schicht ·
 das neuronale Netz (✗ neuronales Netzwerk) · das konvolutionäre neuronale
-Netzwerk (CNN; ✗ Faltungsnetz, §3.1) · der Parameter (die Parameter, no -s) ·
+Netz (CNN; ✗ Faltungsnetz, §3.1) · der Parameter (die Parameter, no -s) ·
 die Verlustfunktion · die Zielfunktion.
 
 Adjectives in a term are lower case in running text (stochastischer
-Gradientenabstieg, neuronales Netz, konvolutionäres Netzwerk, bestärkendes
+Gradientenabstieg, neuronales Netz, konvolutionäres Netz, bestärkendes
 Lernen) and are inflected: *mit dem stochastischen Gradientenabstieg*, *eines
-neuronalen Netzes*, *in konvolutionären Netzwerken*.
+neuronalen Netzes*, *in konvolutionären Netzen*.
 
 ### 3.3 Loan nouns: gender, genitive, plural
 
 Loan nouns are capitalised and inflected as German nouns. Gender: the Duden
 entry if there is one; otherwise *-ing* → neuter, *-er* → masculine, an acronym
 takes the gender of its German head noun (die GPU ← Einheit, das LSTM, das CNN,
-das RNN, das MLP ← Netzwerk, Netz, Perzeptron). Where Duden gives two genders (Token,
+das RNN, das MLP ← Netz, Netz, Perzeptron). Where Duden gives two genders (Token,
 Batch, Bias), the one below is fixed.
 
 | Loan | Genitive, plural | Note |
@@ -257,7 +257,7 @@ an earlier unit of the page introduced the term, do not repeat it.
   (Regularisierung, Gradient, Tensor, Matrix), or school vocabulary (Ableitung,
   Wahrscheinlichkeit, Mittelwert).
 - With an acronym: *stochastischer Gradientenabstieg* (engl. stochastic
-  gradient descent, SGD), *konvolutionäres neuronales Netzwerk* (engl.
+  gradient descent, SGD), *konvolutionäres neuronales Netz* (engl.
   convolutional neural network, CNN); afterwards write what the English writes
   (SGD, CNN).
 - Never in headings, captions, slides, exercises or table cells.
@@ -387,8 +387,8 @@ build; copy it unchanged.
 | generalization | ML → die Generalisierung; of a theorem → die Verallgemeinerung; *generalized* linear model → verallgemeinertes lineares Modell | generalisiertes Modell |
 | normalization | of activations or data → Normalisierung (Batchnormalisierung); to unit norm → normieren; normal distribution → Normalverteilung; *regularization* → Regularisierung; *standardization* → Standardisierung | mixing them |
 | training, learning | train → trainieren, das Training; learn → lernen (Lernrate, überwachtes Lernen) | Ausbildung, Schulung |
-| network | → das Netz (neuronales Netz, Zielnetz, Residualnetz); only the convolutional family → das Netzwerk (konvolutionäres neuronales Netzwerk, §3.1); computer network → das Netzwerk | neuronales Netzwerk; konvolutionäres Netz |
-| convolution, convolutional | the operation and its parts → die Faltung (Faltungsschicht, Faltungsblock, Faltungskern); the network family → konvolutionär (konvolutionäres Netzwerk, vollständig konvolutionäres Netzwerk) | Faltungsnetz; konvolutionäre Schicht; Konvolution |
+| network, net | → das Netz throughout (neuronales Netz, konvolutionäres Netz, Zielnetz, Residualnetz); computer network → das Netzwerk | neuronales Netzwerk; konvolutionäres Netzwerk |
+| convolution, convolutional | the operation and its parts → die Faltung (Faltungsschicht, Faltungsblock, Faltungskern); the network family → konvolutionär (konvolutionäres Netz, vollständig konvolutionäres Netz) | Faltungsnetz; konvolutionäre Schicht; Konvolution |
 | step size, stride | die Schrittweite (optimization); der Stride (convolution) | Schrittweite for both |
 | mean, average | der Mittelwert; to average → mitteln; "on average" → im Mittel | Durchschnitt (also means intersection of sets) |
 | sequence | ML data → die Sequenz; in mathematics → die Folge (konvergente Folge) | Sequenz for $(x_n)$ |
@@ -417,7 +417,7 @@ older text or a reference work differs, these apply.
 |---|---|---|
 | People's names | As in English: Markov-Kette, Markov-Entscheidungsprozess, Kolmogorov, Chebyshev (§6). | Markow-Kette, Tschebyscheff |
 | Kernel methods, covariance functions | Kernel: Kernel-Funktion, Kernel-Matrix, Kernel-Trick. Reason: *Kern* is the null space of a linear map in the linear-algebra appendix. *Faltungskern* and *Kerndichteschätzer* stay (§8.1). | Kernfunktion, Kernmatrix |
-| CNN | konvolutionäres neuronales Netzwerk, short konvolutionäres Netzwerk, CNN; the operation and its parts stay *Faltung* (§3.1). | Faltungsnetz, konvolutionäre Schicht |
+| CNN | konvolutionäres neuronales Netz, short konvolutionäres Netz, CNN; the operation and its parts stay *Faltung* (§3.1). | Faltungsnetz, konvolutionäre Schicht |
 | Training stages | Nouns: Fine-Tuning, Pre-Training, Post-Training. Verbs: feinabstimmen, vortrainieren (vortrainiert); none for post-training (§3.5). | Vortraining, Feinabstimmung as the nouns; nachtrainieren |
 | Loans kept | Attention, Backpropagation, Early Stopping, Q-Learning. | Aufmerksamkeit, Fehlerrückführung, Q-Lernen |
 | German kept | Einbettung; versteckte Schicht; bestärkendes Lernen; Strategie (policy); Ertrag (return); Abfrage, Schlüssel, Wert; Form (shape); Gewichtszerfall; Lernratenplan; Präzision, Genauigkeit, Trefferquote; Sequenz (ML) and Folge (mathematics); Kodierung; Differentialgleichung. | Embedding; verborgen, verdeckt; Weight Decay; Lernraten-Schedule |
@@ -553,8 +553,9 @@ in the section named.
 11. **Kernel:** Kernel for kernel methods and covariance functions
     (Kernel-Funktion, Kernel-Matrix), Faltungskern for convolutions, Kern for
     the null space (§8.1).
-12. **CNN:** konvolutionäres neuronales Netzwerk, heading "Konvolutionäre
-    Netzwerke" (not Faltungsnetz), with *Netzwerk*; the operation and its parts
+12. **CNN:** konvolutionäres neuronales Netz, heading "Konvolutionäre
+    Netze" (not Faltungsnetz); *Netz* for every network or net (revised
+    the same day: not *Netzwerk*); the operation and its parts
     stay Faltung, Faltungsschicht, Faltungsblock, Faltungskern (§3.1).
 13. **Loan genders and plurals:** as in the table of §3.3.
 14. **Compounds:** closed only for the short list of first parts, a hyphen for
@@ -568,3 +569,7 @@ in the section named.
     parentheses, captions, slides and tables (§2).
 19. **English gloss:** `(engl. …)` once per page, only for German terms whose
     English differs (§3.6).
+20. **Follow-up the same day:** *das Netz* for every network or net, including
+    the convolutional family (konvolutionäres neuronales Netz); *Kern* stays in
+    Kerndichteschätzer and Übergangskern; *Abbildung* serves for both a figure
+    and a mapping.
