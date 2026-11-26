@@ -7,6 +7,15 @@ large run.
 
 | Directory | Language | Page | Result |
 |---|---|---|---|
+| [zh-conv-layer](zh-conv-layer/) | 中文 (zh) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](zh-conv-layer/RESULTS.md) |
+| [ko-conv-layer](ko-conv-layer/) | 한국어 (ko) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](ko-conv-layer/RESULTS.md) |
+| [es-conv-layer](es-conv-layer/) | Español (es) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](es-conv-layer/RESULTS.md) |
+| [fr-conv-layer](fr-conv-layer/) | Français (fr) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](fr-conv-layer/RESULTS.md) |
+| [pt-conv-layer](pt-conv-layer/) | Português (pt) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](pt-conv-layer/RESULTS.md) |
+| [tr-conv-layer](tr-conv-layer/) | Türkçe (tr) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](tr-conv-layer/RESULTS.md) |
+| [vi-conv-layer](vi-conv-layer/) | Tiếng Việt (vi) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](vi-conv-layer/RESULTS.md) |
+| [hi-conv-layer](hi-conv-layer/) | हिन्दी (hi) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](hi-conv-layer/RESULTS.md) |
+| [ar-conv-layer](ar-conv-layer/) | العربية (ar) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](ar-conv-layer/RESULTS.md) |
 | [ja-conv-layer](ja-conv-layer/) | Japanese (ja) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](ja-conv-layer/RESULTS.md) |
 | [de-conv-layer](de-conv-layer/) | German (de) | Convolutions for Images (`chapter_convolutional-neural-networks/conv-layer.md`, 3 units, about 4,200 words) | Fable 5.2 chosen (author, 2026-11-26); see [RESULTS.md](de-conv-layer/RESULTS.md) |
 
@@ -33,6 +42,7 @@ skips the check, and the comparison runs it for every agent afterwards.
 
    ```bash
    bin/l10n compare de evals/de-conv-layer        # writes evals/de-conv-layer/compare.html
+   bin/l10n compare all evals                     # every test plus an overview, in evals/_compare/
    ```
 
    It checks every `answers-*/` directory and writes one HTML page: every
