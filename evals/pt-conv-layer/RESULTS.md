@@ -15,3 +15,18 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Sonnet reworded two sentences to keep math tokens in English order (against TRANSLATING.md §9).
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `4fafcb0`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 0 | 5,120 (1.21) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 0 | 4,976 (1.17) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 4,709 (1.11) |
+
+The native-reader verdict is pending.
