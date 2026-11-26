@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Run the l10n tools from anywhere: bin/l10n <command> ...
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PYTHONPATH="$here/tools${PYTHONPATH:+:$PYTHONPATH}" exec python3 -m l10n "$@"

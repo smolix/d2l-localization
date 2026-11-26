@@ -22,3 +22,9 @@ languages:
 # Earlier editions, listed after a divider at the bottom of the menu.
 old_editions:
   - {code: en, name: English (old), url: https://en-v2.d2l.ai, bucket: d2l-en-v2}
+
+# Test languages: never in the menu, never deployed. `xx` is the pseudo-locale
+# (`l10n pseudo xx`: every translated block wrapped in ⟦…⟧); its files are
+# gitignored.
+test_languages:
+  - {code: xx, locale: en, name: Pseudo, bucket: null, hosts: [xx.d2l.ai], dir: ltr, pinned: null, forum: english}

@@ -1,0 +1,7 @@
+# l10n scratch: work files, build worktrees, upload manifests
+/work/
+/_build/
+/_state/
+# pseudo-locale test language
+/xx/
+__pycache__/
