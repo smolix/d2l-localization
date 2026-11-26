@@ -566,3 +566,72 @@
 - „guard“ → „Schutz“, „constant brake“ → „Dauerbremse“.
 - „live weights“ → „aktuelle Gewichte“, „weight EMA“ → „EMA der Gewichte“.
 - „proxy run“ → „Probelauf“, „clipping fraction“ → „Anteil der Schritte mit Clipping“.
+
+## chapter_attention/queries-keys-values.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „soft lookup“, „hard lookup“ → „weiches Nachschlagen“, „hartes Nachschlagen“.
+- „Nadaraya–Watson kernel regression“, „similarity kernel“, „bandwidth“ → „Nadaraya-Watson-Kernel-Regression“, „Ähnlichkeitskernel“, „Bandbreite“.
+- „compatibility score“ → „Kompatibilitäts-Score“.
+
+## chapter_attention/queries-keys-values.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „attention heatmap“ → „Attention-Heatmap“.
+
+## chapter_attention/attention-scoring.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „dot-product score“ → „Skalarprodukt-Score“, „head width“ → „Kopfbreite“, „score gap“ → „Score-Abstand“.
+
+## chapter_attention/attention-scoring.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „packed sequences“ → „gepackte Sequenzen“, „position-aware keys“ → „Schlüssel mit Positionsinformation“.
+
+## chapter_attention/multihead-attention.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „copy-both task“ → „Aufgabe, beide Werte zu kopieren“, im laufenden Text auch „beim Kopieren beider Werte“.
+- „linear readout“ → „lineares Auslesen“, „mixing matrix“ → „Mischmatrix“, „head width“ → „Kopfbreite“.
+
+## chapter_attention/multihead-attention.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „key–value head“ → „Schlüssel-Wert-Kopf“, in Kurzform „KV-Kopf“.
+
+## chapter_attention/positional-information.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „permutation equivariance“ → „Permutationsäquivarianz“, „position embedding“ → „Positionseinbettung“, „distance penalty“ → „Abstandsstrafe“.
+- „NTK-aware scaling“ → „NTK-bewusste Skalierung“, „content–position cross terms“ → „gemischte Terme aus Inhalt und Position“.
+
+## chapter_attention/attention-at-scale.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „online softmax“ → „Online-Softmax-Algorithmus“, für die Berechnung „Online-Softmax-Berechnung“.
+- „score stripe“ → „Streifen der Score-Matrix“, „tile“ → „Kachel“, „fused kernel“ → „fusionierter Kernel“, „memory traffic“ → „Speicherverkehr“.
+
+## chapter_attention/windowed-linear-attention.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „sliding-window attention“ → „Attention mit gleitendem Fenster“, „windowed layer“ → „Fensterschicht“.
+- „fused kernel“ → „fusionierter Kernel“, „tile“ → „Kachel“, „chunked computation“ → „blockweise Berechnung“.
+- „cross-talk“ → „Störbeiträge“ anderer gespeicherter Werte, „decay gate“ → „Vergessensgate“ (das).
+- „fast weight programmer“ → „Fast Weight Programmer“ (der).
+
+## chapter_attention/windowed-linear-attention.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „scalar decay“ → „skalarer Abklingfaktor“.
+
+## chapter_transformers/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „open-weights LLM“ → „großes Sprachmodell mit offenen Gewichten“.
+- „conditional computation“ → „bedingte Berechnung“, „speculative decoding“ → „spekulative Dekodierung“.
+- „token collapse“ → „Kollaps der Tokenrepräsentationen“.
+
+## chapter_attention/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „circuit“ im mechanistischen Sinn → „Schaltkreis“, „open-weights model“ → „Modell mit offenen Gewichten“.
+- „activation patching“, „attribution patching“ → „das Activation-Patching“, „das Attribution-Patching“.
+- „associative recall“ → „assoziativer Abruf“, „distance bucket“ → „Abstandsklasse“, „learnable sink logits“ → „lernbare Sink-Logits“.
+
+## chapter_attention/what-attention-computes.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „previous-token head“ → „Vorgängerkopf“, „match-and-copy head“ → „Kopf zum Abgleichen und Kopieren“.
+- „skip-trigram“ → „Skip-Trigramm“, „fixed-offset shortcut“ → „Abkürzung über einen festen Versatz“.
+
+## chapter_attention/what-attention-computes.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „copy matrix“ → „Kopiermatrix“, „zero ablation“ → „Nullablation“, „mean ablation“ → „Mittelwertablation“.
