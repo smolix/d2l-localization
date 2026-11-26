@@ -461,3 +461,24 @@
 ## chapter_recurrent-neural-networks/rnn.md#u02 (Codex Astra (medium), 2026-11-26)
 
 - „effective context horizon“ → „effektive Kontextlänge“, „validation perplexity“ → „Validierungsperplexität“.
+
+## chapter_optimization/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „step-size schedule“ → „Schrittweitenplan“, „step-size budget“ → „Schrittweitenbudget“.
+- „edge of stability“ → „Stabilitätsgrenze“, „excess loss“ → „Überschussverlust“.
+
+## chapter_optimization/gd.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „edge of stability“ → „Rand der Stabilität“ für das Trainingsregime, „Stabilitätsgrenze“ für die numerische Schranke.
+- „progressive sharpening“ → „fortschreitende Zunahme der Schärfe“.
+- „strict saddle point“ → „strikter Sattelpunkt“.
+
+## chapter_optimization/gd.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „full-batch gradient descent“ → „Gradientenabstieg auf dem gesamten Trainingssatz“.
+- „preconditioned sharpness“ → „vorkonditionierte Schärfe“.
+
+## chapter_advanced/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „temporal-difference learning“ → „Lernen aus zeitlichen Differenzen“, „Model Predictive Control“ → „modellprädiktive Regelung“.
+- „gradient penalty“ → „Gradientenstrafe“, „velocity field“ → „Geschwindigkeitsfeld“, „consistency distillation“ → „Konsistenzdestillation“.
