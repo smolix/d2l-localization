@@ -1072,3 +1072,99 @@
 
 - „response weight“ → „Antwortgewicht“, „token advantage“ → „Tokenvorteil“, „prefix value“ → „Präfixwert“.
 - „tilted optimum“ → „exponentiell umgewichtetes Optimum“ für die mit dem exponentiellen Belohnungsfaktor umgewichtete Referenzstrategie.
+
+## chapter_generative-adversarial-networks/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „generative adversarial network“ → „generatives adversariales Netz“ (GAN).
+- „non-saturating generator loss“ → „nicht sättigender Generatorverlust“, „zero-centered gradient penalty“ → „um null zentrierter Gradientenstrafterm“.
+- „log density ratio“ → „logarithmiertes Dichteverhältnis“, „witness“ bei integralen Wahrscheinlichkeitsmetriken → „Zeugenfunktion“.
+
+## chapter_generative-adversarial-networks/relativistic.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „relativistic pairing“ → „relativistische Paarbildung“, „pairing critic“ → „Paarkritiker“, „pairing divergence“ → „Paardivergenz“.
+- „rank weight“ → „Ranggewicht“, „mode coverage“ → „Modusabdeckung“.
+
+## chapter_generative-adversarial-networks/relativistic.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „collision minimum“ → „Kollisionsminimum“, „fixed pairing“ → „feste Paarbildung“.
+
+## chapter_generative-adversarial-networks/objectives.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Bayes-risk gap“ → „Differenz der Bayes-Risiken“, in Tabellen kurz „Risikodifferenz“.
+- „critic link“ → „Linkfunktion des Kritikers“; „payoff“ → „Auszahlung“.
+- „integral probability metric“ → „integrale Wahrscheinlichkeitsmetrik“.
+
+## chapter_generative-adversarial-networks/objectives.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „witness function“ → „Zeugenfunktion“, „sample complexity“ → „Stichprobenkomplexität“.
+
+## chapter_generative-adversarial-networks/gan.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „generative adversarial network“ → „generatives adversariales Netz“ (GAN).
+- „realness logit“ → „Logit für die Echtheit“, „source label“ → „Herkunftslabel“.
+- „log density ratio“ → „logarithmiertes Dichteverhältnis“, „log loss“ → „logarithmischer Verlust“.
+- „instance noise“ → „Instance Noise“ (das).
+
+## chapter_generative-adversarial-networks/gan.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „softened reverse KL divergence“ → „abgeschwächte umgekehrte KL-Divergenz“.
+- „saturating / non-saturating loss“ → „sättigender / nicht sättigender Verlust“.
+
+## chapter_generative-adversarial-networks/convergence.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „one-centered penalty“ → „um eins zentrierter Strafterm“, analog zum um null zentrierten Gradientenstrafterm.
+- „underdamped“, „critically damped“, „overdamped“ → „unterkritisch gedämpft“, „kritisch gedämpft“, „überkritisch gedämpft“.
+- „phase portrait“ → „Phasenporträt“.
+
+## chapter_generative-adversarial-networks/convergence.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „on-mode fraction“ → „Anteil modusnaher Samples“. Maßgeblich ist der Abstand zum nächsten Moduszentrum.
+- „cutoff length scale“ → „Grenzlänge“, „critic steepness“ → „Steilheit des Kritikers“.
+
+## chapter_generative-adversarial-networks/conditional.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „class alignment“ → „Klassenübereinstimmung“, „condition alignment“ → „Übereinstimmung mit der Vorgabe“ oder verbal „die Vorgabe erfüllen“. Gemeint ist die Einhaltung der Bedingung, kein Alignment von Sequenzen.
+- „sample fidelity“ → „Bildtreue“ bei generierten Bildern. „referee classifier“ → „Prüfklassifikator“.
+- „projection discriminator“ → „Projektionsdiskriminator“, „projection critic“ → „Projektionskritiker“, „feature modulation“ → „Merkmalsmodulation“.
+
+## chapter_generative-adversarial-networks/conditional.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „real floor“ → „Vergleichswert für echte Bilder“, der zugehörige Datensatz heißt „echte Vergleichsgruppe“.
+- „prototype baseline“ → „Prototypen-Baseline“, „truncation trick“ → „Truncation-Trick“.
+
+## chapter_generative-adversarial-networks/dcgan.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „checkerboard artifacts“ → „Schachbrettartefakte“, „half-life“ → „Halbwertszeit“.
+- „fidelity“ bei erzeugten Bildern → „Bildtreue“.
+
+## chapter_generative-adversarial-networks/dcgan.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „experimental arm“ → „Versuchsvariante“, im laufenden Vergleich kurz „Variante“.
+
+## chapter_generative-adversarial-networks/dcgan.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „non-leaking augmentation“ → „Augmentierung, die nicht auf den Generator durchschlägt“.
+- „real-versus-real floor“ → „Referenzwert für zwei echte Stichproben“.
+
+## chapter_generative-adversarial-networks/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „extragradient method“ → „Extragradientenverfahren“, „optimistic gradient descent“ → „optimistischer Gradientenabstieg“.
+- „alias-free resampling“ → „aliasfreie Neuabtastung“ bei der Verarbeitung von Bildsignalen.
+- „diffusion distillation“ → „Diffusionsdestillation“, „few-step distillation“ → „Destillation auf wenige Schritte“.
+- „lazy regularization“ → „intervallweise Regularisierung“ für die Berechnung des Strafterms in festen Abständen.
+
+## chapter_diffusion-models/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „score“ einer Dichte → „Score“ (der), im Sinne des Gradienten der logarithmischen Dichte.
+- „sampler“ → „Sampler“ (der), „latents“ → „latente Darstellungen“, „log-SNR clock“ → „Zeitskala der Log-SNR“.
+- „few-step distillation“ → „Destillation auf wenige Schritte“, „design space“ → „Entwurfsraum“.
+
+## chapter_generative-adversarial-networks/adversarial-losses.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „perception–distortion trade-off“ → „Zielkonflikt zwischen Wahrnehmungsqualität und Verzerrung“.
+- „teacher / student“ → „Lehrer / Schüler“ bei der Destillation, „one-step generator“ → „Einschrittgenerator“.
+- „two-band benchmark“ → „Benchmark mit zwei Datenbändern“, „audio frame“ → „Audiozeitrahmen“.
+
+## chapter_generative-adversarial-networks/adversarial-losses.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „scoring rule“ → „Bewertungsregel“.
