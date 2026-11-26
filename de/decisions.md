@@ -1269,3 +1269,98 @@
 - „Gershgorin circles“ → „Gershgorin-Kreise“, „Marchenko–Pastur law“ → „Marchenko-Pastur-Gesetz“.
 - „concentration inequalities“ → „Konzentrationsungleichungen“, „Rademacher complexity“ → „Rademacher-Komplexität“.
 - „continuous adjoint sensitivity method“ → „kontinuierliche adjungierte Sensitivitätsmethode“.
+
+## chapter_mdl-linear-algebra/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Gershgorin discs“ → „Gerschgorin-Kreise“, „rank–nullity“ → „Rangsatz“.
+- „spectral theorem“ → „Spektralsatz“, „singular vector“ → „Singulärvektor“, „transient growth“ → „transientes Wachstum“.
+- „low-rank adapter“ → „Adapter mit niedrigem Rang“.
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „signed distance“ → „vorzeichenbehafteter Abstand“, „signed length“ → „vorzeichenbehaftete Länge“.
+- „QR factorization“ → „QR-Zerlegung“.
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „Gram–Schmidt process“ → „Gram-Schmidt-Verfahren“, „oblique projector“ → „schiefer Projektor“.
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „nearest-mean classifier“ → „Klassifikator nach dem nächsten Klassenmittelwert“, als Verfahrensbezeichnung „Klassifikation nach dem nächsten Klassenmittelwert“.
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „Welch bound“ → „Welch-Schranke“.
+
+## chapter_mdl-linear-algebra/mdl-eigendecomposition.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „algebraic multiplicity“ → „algebraische Vielfachheit“, „geometric multiplicity“ → „geometrische Vielfachheit“.
+- „Jordan block“ → „Jordanblock“, „Jordan normal form“ → „jordansche Normalform“, „defective“ → „defekt“.
+- „eigenpair“ → „Eigenpaar“, „eigenspace“ → „Eigenraum“, „characteristic polynomial“ → „charakteristisches Polynom“.
+
+## chapter_mdl-linear-algebra/mdl-eigendecomposition.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „Marchenko–Pastur bulk“ → „Marchenko-Pastur-Intervall“, „upper bulk edge“ → „obere Intervallgrenze“.
+- „Rayleigh quotient“ → „Rayleigh-Quotient“.
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „linear map“ → „lineare Abbildung“ für die Abbildung zwischen Vektorräumen, „composition“ → „Verkettung“, „shear“ → „Scherung“.
+- „rank–nullity theorem“ → „Dimensionssatz“, „Einstein notation“ → „einsteinsche Summenkonvention“, „trace“ → „Spur“ einer Matrix.
+- „running matrix“ → „Beispielmatrix“ für das durchgehende Beispiel dieses Kapitels.
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „null vector“ → „Nullraumvektor“, wenn ein beliebiges Element des Nullraums gemeint ist. „Nullvektor“ bezeichnet den Vektor null.
+- „backward stable“ → „rückwärtsstabil“.
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „signed area“, „signed volume“ → „orientierter Flächeninhalt“, „orientiertes Volumen“. Ein von Kantenvektoren aufgespannter n-dimensionaler Körper heißt „Parallelotop“.
+
+## chapter_mdl-linear-algebra/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „random projection“ → „Zufallsprojektion“, „trainable depth“ → „trainierbare Netztiefe“.
+- „Kreiss matrix theorem“ → „Matrixsatz von Kreiss“, „conductance“ → „Konduktanz“, „lazy chain“ → „träge Kette“.
+- „dynamical isometry“ → „dynamische Isometrie“, „free probability“ → „freie Wahrscheinlichkeitstheorie“.
+- „sketching“ → „Sketching“, „truncated SVD“ → „abgeschnittene Singulärwertzerlegung“, kurz „abgeschnittene SVD“.
+
+## chapter_mdl-linear-algebra/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „leverage scores“ → „Hebelwerte“, „randomized range finder“ → „randomisiertes Verfahren zur Bestimmung des Bildraums“.
+- „sketch“ → „Sketch“ für die beim Sketching verkleinerte Matrix, „polar factor“ → „Polarfaktor“.
+
+## chapter_mdl-linear-algebra/mdl-spectra-in-practice.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „gap ratio“ → „Betragsverhältnis“ der beiden betragsgrößten Eigenwerte, „norm ratio“ → „Normquotient“.
+- „Rayleigh quotient“ → „Rayleigh-Quotient“, „column-stochastic“ → „spaltenstochastisch“.
+
+## chapter_mdl-linear-algebra/mdl-spectra-in-practice.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „top Lyapunov exponent“ → „größter Lyapunov-Exponent“, „circular law“ → „Kreisgesetz“, „resolvent norm“ → „Resolventennorm“.
+
+## chapter_mdl-linear-algebra/mdl-spectra-in-practice.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „Kreiss constant“ → „Kreiss-Konstante“.
+
+## chapter_mdl-calculus/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „matrix calculus“ → „Matrixdifferentialrechnung“, „differential method“ → „Rechnen mit Differentialen“.
+- „Lagrange remainder“ → „Lagrange-Restglied“, „level set“ → „Niveaumenge“, „Wengert tape“ → „Wengert-Liste“.
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „thin SVD“ → „dünne SVD“, „compact SVD“ → „kompakte SVD“, „dyadic sum“ → „dyadische Summe“.
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „truncated SVD“ → „abgeschnittene SVD“, „energy ratio“ → „Energieanteil“.
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „polar factor“ → „Polarfaktor“, „immediate basin“ → „unmittelbares Einzugsgebiet“, „randomized range finder“ → „randomisierte Bestimmung des Bildraums“.
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „stable rank“ → „stabiler Rang“, „interlacing inequalities“ → „Verzahnungsungleichungen“.
