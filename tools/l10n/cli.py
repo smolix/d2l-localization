@@ -110,7 +110,10 @@ def cmd_apply(args):
     lang = _lang(args)
     _need_rev(lang)
     bad = 0
-    for a in args.answers:
+    files = []
+    for a in args.answers:                       # a directory means its *.md files
+        files += sorted(Path(a).glob('*.md')) if Path(a).is_dir() else [Path(a)]
+    for a in files:
         text = Path(a).read_text(encoding='utf-8')
         try:
             answers = parse_answer(text, source=str(a))

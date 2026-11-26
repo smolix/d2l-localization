@@ -23,6 +23,7 @@ class Concept:
     alternatives: list = field(default_factory=list)
     status: str | None = None
     notes: str = ''
+    check: bool = True       # False: common English word; listed in briefs, not enforced
 
     @property
     def binding(self) -> bool:
@@ -44,7 +45,8 @@ class Glossary:
             if line.strip():
                 c = json.loads(line)
                 self.concepts[c['id']] = Concept(c['id'], c['en'], c.get('aliases_en') or [],
-                                                 c.get('sense', ''))
+                                                 c.get('sense', ''),
+                                                 check=c.get('check', True) is not False)
         redirects = {}
         rpath = base / 'concept-redirects.json'
         if rpath.exists():
@@ -100,7 +102,7 @@ class Glossary:
         low = translation.lower()
         for surface, ids in self.find(english):
             cands = [self.concepts[c] for c in ids]
-            if not any(c.binding for c in cands):
+            if not any(c.binding and c.check for c in cands):
                 continue
             forms = [f for c in cands for f in c.forms()]
             if forms and not any(f.lower() in low for f in forms):
