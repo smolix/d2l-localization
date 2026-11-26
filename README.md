@@ -7,7 +7,8 @@ a tagged English release (`en-YYYY.MM.DD`) and is served from its own bucket
 
 - [DESIGN.md](DESIGN.md): how translation, updates, builds and deploys work.
 - [TRANSLATING.md](TRANSLATING.md): instructions for any translation agent or person.
-- [languages.yml](languages.yml): the languages, their buckets and pinned English tags.
+- [languages.yml](languages.yml): the languages, their buckets, pinned English tags and chosen translators.
+- [evals/](evals/README.md): fixed translation tests for choosing a translator per language (`bin/l10n compare`).
 
 - [tools/l10n/](tools/l10n/): the `l10n` command (`bin/l10n`; Python 3.12+, PyYAML).
 - [glossary/](glossary/): the terminology catalog (moved from d2l-neu).
@@ -26,6 +27,7 @@ bin/l10n deploy ja                      # upload to bucket d2l-ja
 bin/l10n bump ja --to en-2027.01.15     # align with a new English tag, emit update units
 bin/l10n check ja --promote             # after the update: move the pin
 bin/l10n menu --upload                  # site/languages.json for the language menu
+bin/l10n compare de evals/de-conv-layer # side-by-side page of several agents' translations
 ```
 
 `bin/l10n pseudo xx` fills the test language `xx` with every block wrapped in

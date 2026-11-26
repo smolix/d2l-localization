@@ -316,6 +316,14 @@ def main(argv=None):
     p.add_argument('--no-delete', action='store_true')
     p.add_argument('--dry-run', action='store_true')
 
+    p = sub.add_parser('compare', help='side-by-side page of several agents\' translations',
+                       description='Check every answers-<agent>/ directory in DIR against the work '
+                                   'files in DIR and write one HTML page that shows them side by side.')
+    p.add_argument('lang')
+    p.add_argument('dir', help='directory with the work files and answers-<agent>/ directories')
+    p.add_argument('--out', help='HTML file (default DIR/compare.html)')
+    p.set_defaults(func=lambda a: __import__('l10n.compare', fromlist=['compare']).compare(a.lang, a.dir, a.out))
+
     p = sub.add_parser('menu', help='write site/languages.json (and upload it)')
     p.add_argument('--out')
     p.add_argument('--all', action='store_true', help='include languages without a release')

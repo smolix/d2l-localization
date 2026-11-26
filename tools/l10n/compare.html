@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translation comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a sticky control strip, a summary row of three model cards, then one
+   aligned row per source block: English | Fable | Opus | Sonnet. */
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --fg: #1d2330; --muted: #5d6677; --line: #dde1e8;
+  --en: #44506a; --a0: #0f7b6c; --a1: #b25d12; --a2: #4b4fc4; --a3: #a2386b; --a4: #5b7a12; --a5: #2f6fa3;
+  --chip: #eef0f4; --warn: #9a6a00; --ok: #1d7a3e; --bad: #b3261e;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12151b; --panel: #1a1f27; --fg: #e3e6ec; --muted: #9aa3b4; --line: #2b323e;
+  --en: #a8b3cc; --a0: #4cc3b0; --a1: #e59a55; --a2: #9ea2ff; --a3: #ee8ab8; --a4: #a9cf5c; --a5: #7fb6e6;
+  --chip: #242b36; --warn: #e0b54a; --ok: #5cc27e; --bad: #f08a80; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12151b; --panel: #1a1f27; --fg: #e3e6ec; --muted: #9aa3b4; --line: #2b323e;
+  --en: #a8b3cc; --a0: #4cc3b0; --a1: #e59a55; --a2: #9ea2ff; --a3: #ee8ab8; --a4: #a9cf5c; --a5: #7fb6e6;
+  --chip: #242b36; --warn: #e0b54a; --ok: #5cc27e; --bad: #f08a80; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; max-width: 1760px; margin: 0 auto; display: grid; gap: 22px; }
+header h1 { font: 600 1.55rem/1.2 var(--sans); margin: 0; text-wrap: balance; }
+header p { margin: 6px 0 0; color: var(--muted); max-width: 75ch; }
+header code, .meta code { font: 0.86em var(--mono); background: var(--chip); padding: 1px 5px; border-radius: 4px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
+.card h2 { margin: 0; font: 600 1.05rem var(--sans); display: flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.stats { display: flex; gap: 18px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+.stat b { display: block; font: 600 1.25rem var(--sans); }
+.stat span { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); }
+details { border-top: 1px solid var(--line); padding-top: 8px; }
+summary { cursor: pointer; color: var(--muted); font-size: 0.88rem; }
+summary:focus-visible, button:focus-visible, label:focus-within { outline: 2px solid var(--a2); outline-offset: 2px; border-radius: 4px; }
+details .body { font-size: 0.88rem; max-height: 340px; overflow: auto; margin-top: 8px; }
+details pre { white-space: pre-wrap; font: 0.8rem/1.45 var(--mono); margin: 0; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); padding-block: 10px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.controls .lbl { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; cursor: pointer; user-select: none; }
+.toggle input { accent-color: var(--fg); }
+.colhead, .row { display: grid; gap: 12px; grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); }
+.colhead { font: 600 0.8rem var(--sans); text-transform: uppercase; letter-spacing: 0.06em; }
+.colhead div { padding: 0 14px; display: flex; align-items: center; gap: 7px; }
+.rows { display: grid; gap: 10px; }
+.row { scroll-margin-top: 70px; }
+.cell { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px 12px; min-width: 0; font: 1.02rem/1.6 var(--serif); }
+.cell.en { background: transparent; border-style: dashed; }
+.cell.missing { color: var(--muted); font: italic 0.9rem var(--sans); }
+.tag { font: 500 0.7rem var(--mono); color: var(--muted); display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.cell .mlabel { display: none; }
+.cell h1, .cell h2, .cell h3, .cell h4 { font-family: var(--sans); margin: 0.1em 0; line-height: 1.3; text-wrap: balance; }
+.cell h1 { font-size: 1.35rem; } .cell h2 { font-size: 1.18rem; } .cell h3 { font-size: 1.05rem; }
+.cell p { margin: 0.35em 0; }
+.cell ul, .cell ol { margin: 0.35em 0; padding-left: 1.3em; }
+.cell code { font: 0.84em var(--mono); background: var(--chip); padding: 1px 4px; border-radius: 4px; }
+.cell .role { font: 500 0.78em var(--mono); background: var(--chip); color: var(--muted); padding: 1px 5px; border-radius: 4px; white-space: nowrap; }
+.cell table { border-collapse: collapse; font-size: 0.9em; }
+.cell td, .cell th { border: 1px solid var(--line); padding: 3px 6px; }
+.cell .tablewrap, .cell mjx-container[display="true"] { overflow-x: auto; max-width: 100%; display: block; }
+.cell img { display: none; }
+.imgnote { font: italic 0.85rem var(--sans); color: var(--muted); }
+@media (max-width: 860px) {
+  .colhead { display: none; }
+  .row { grid-template-columns: minmax(0, 1fr); gap: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .cell .mlabel { display: inline; font: 600 0.72rem var(--sans); text-transform: uppercase; letter-spacing: 0.06em; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1 id="title">Translation comparison</h1>
+    <p id="lede"></p>
+  </header>
+  <section class="cards" id="cards" aria-label="Translators"></section>
+  <div class="controls" role="group" aria-label="Columns" id="controls"><span class="lbl">Show</span></div>
+  <div class="colhead" id="colhead"></div>
+  <main class="rows" id="rows"><p class="imgnote">Loading the translations…</p></main>
+</div>
+
+<script>
+window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' }, startup: { typeset: true } };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<script>
+const DATA = /*DATA*/null;
+const COLS = [{ key: 'en', name: 'English', color: 'var(--en)' }].concat(
+  DATA.agents.map((a, i) => ({ key: a.name, name: a.name, color: 'var(--a' + (i % 6) + ')' })));
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function render(src) {
+  const math = [];
+  const keep = (tex, display) => { math.push(display ? '\\[' + tex + '\\]' : '\\(' + tex + '\\)'); return '\u0000M' + (math.length - 1) + '\u0000'; };
+  let s = src.replace(/<!--[\s\S]*?-->/g, '');
+  s = s.replace(/\$\$([\s\S]+?)\$\$/g, (_, t) => keep(t, true));
+  s = s.replace(/(^|[^\\$])\$([^$\n]+?)\$/g, (_, pre, t) => pre + keep(t, false));
+  s = s.replace(/:(numref|ref|eqref|cite|citet|citep|label|eqlabel):`([^`]+)`/g, (_, r, t) => '\u0000R' + r + '|' + t + '\u0000');
+  s = s.replace(/^:label:.*$/gm, '').replace(/^:width:.*$/gm, '');
+  let html = marked.parse(s, { mangle: false, headerIds: false });
+  html = html.replace(/\u0000R([a-z]+)\|([^\u0000]*)\u0000/g, (_, r, t) => `<span class="role" title=":${r}:">${r === 'cite' || r === 'citet' || r === 'citep' ? '[' + esc(t) + ']' : '→ ' + esc(t)}</span>`);
+  html = html.replace(/\u0000M(\d+)\u0000/g, (_, i) => esc(math[+i]));
+  html = html.replace(/<img [^>]*alt="([^"]*)"[^>]*>/g, (_, alt) => `<span class="imgnote">[Figure: ${alt}]</span>`);
+  html = html.replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+  return html;
+}
+
+function card(m, enWords) {
+  const c = COLS.find(x => x.key === m.name);
+  const ratio = enWords ? (m.words / enWords).toFixed(2) : '–';
+  const cls = m.errors ? 'bad' : (m.warnings ? 'warn' : 'ok');
+  return `<article class="card">
+    <h2><span class="dot" style="background:${c.color}"></span>${esc(c.name)}</h2>
+    <div class="stats">
+      <div class="stat"><b class="${m.errors ? 'bad' : 'ok'}">${m.errors}</b><span>errors</span></div>
+      <div class="stat"><b class="${cls}">${m.warnings}</b><span>warnings</span></div>
+      <div class="stat"><b>${m.words.toLocaleString('en')}</b><span>words · ${ratio}× EN</span></div>
+      ${m.missing ? `<div class="stat"><b class="bad">${m.missing}</b><span>blocks missing</span></div>` : ''}
+    </div>
+    <details><summary>Decisions it recorded</summary><div class="body">${m.decisions ? render(m.decisions) : '<p class="imgnote">None.</p>'}</div></details>
+    <details><summary>Notes for the reviewer</summary><div class="body">${m.notes ? render(m.notes) : '<p class="imgnote">None.</p>'}</div></details>
+    <details><summary>Check output</summary><div class="body"><pre>${esc(m.check)}</pre></div></details>
+  </article>`;
+}
+
+function layout() {
+  const shown = COLS.filter(c => document.getElementById('show-' + c.key).checked).map(c => c.key);
+  document.documentElement.style.setProperty('--cols', Math.max(shown.length, 1));
+  COLS.forEach(c => document.querySelectorAll('[data-k="' + c.key + '"]').forEach(el => { el.hidden = !shown.includes(c.key); }));
+  try { localStorage.setItem('l10n-compare-cols', JSON.stringify(shown)); } catch (e) {}
+}
+
+(function build(data) {
+  document.getElementById('title').textContent = 'Translations of ' + data.page;
+  document.getElementById('lede').innerHTML = `${data.agents.length} translations into <code>${esc(data.lang)}</code> of <code>${esc(data.page)}</code> (English revision <code>${esc((data.rev || '').slice(0, 10))}</code>), from the same work files. Counts are from <code>l10n apply --dry-run</code>.`;
+  document.getElementById('controls').insertAdjacentHTML('beforeend', COLS.map(c =>
+    `<label class="toggle"><input type="checkbox" id="show-${esc(c.key)}" checked> ${esc(c.name)}</label>`).join(''));
+  document.getElementById('cards').innerHTML = data.agents.map(a => card(a, data.en_words)).join('');
+  document.getElementById('colhead').innerHTML = COLS.map(c => `<div data-k="${esc(c.key)}"><span class="dot" style="background:${c.color}"></span>${esc(c.name)}</div>`).join('');
+  document.getElementById('rows').innerHTML = data.blocks.map(b => `<section class="row" id="b-${b.anchor}">` + COLS.map(c => {
+    const t = c.key === 'en' ? b.en : b.tr[c.key];
+    const head = `<div class="tag"><span><span class="mlabel" style="color:${c.color}">${esc(c.name)} · </span>${esc(b.kind)}</span><span>${c.key === 'en' ? b.unit + ' · ' + b.anchor : ''}</span></div>`;
+    return t === undefined
+      ? `<div class="cell missing" data-k="${esc(c.key)}">${head}No translation for this block.</div>`
+      : `<div class="cell ${c.key === 'en' ? 'en' : ''}" data-k="${esc(c.key)}" lang="${c.key === 'en' ? 'en' : esc(data.lang)}">${head}${render(t)}</div>`;
+  }).join('') + '</section>').join('');
+  try {
+    const saved = JSON.parse(localStorage.getItem('l10n-compare-cols') || 'null');
+    if (Array.isArray(saved) && saved.length) COLS.forEach(c => { document.getElementById('show-' + c.key).checked = saved.includes(c.key); });
+  } catch (e) {}
+  layout();
+  document.querySelectorAll('.controls input').forEach(i => i.addEventListener('change', layout));
+  if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();  // otherwise MathJax typesets at startup
+})(DATA);
+</script>
+</body>
+</html>

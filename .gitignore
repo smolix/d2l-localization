@@ -5,3 +5,4 @@
 # pseudo-locale test language
 /xx/
 __pycache__/
+/evals/*/compare.html

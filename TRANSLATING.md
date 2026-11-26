@@ -228,6 +228,12 @@ parentheses, numbers and units. Follow it. In general:
 7. The unit reads as one text, and its opening follows from the previous
    section.
 
+If you can run `bin/l10n apply <lang> <answer files> --dry-run`, run it and fix
+every error. A warning can be a false match (a glossary check that takes the
+verb "returns" for the reinforcement-learning term *return*). Never change the
+translation only to silence a warning: write the correct translation and name
+the false match in NOTES.
+
 ## 10. Example (Japanese, update)
 
 ```
