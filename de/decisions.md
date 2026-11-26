@@ -1219,3 +1219,47 @@
 
 - „fidelity to the input“ → „Vorlagentreue“ (Bildbearbeitung), „replacement inpainting“ → „Inpainting durch Ersetzen“.
 - „round-trip error“ → „Rekonstruktionsfehler“ bei Inversion und anschließender Dekodierung.
+
+## chapter_diffusion-models/latent-diffusion.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „excess kurtosis“ → „Exzess“, „heavy tails“ → „schwere Verteilungsränder“.
+
+## chapter_diffusion-models/latent-diffusion.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „representation autoencoder“ → „Repräsentationsautoencoder“.
+
+## chapter_diffusion-models/latent-diffusion.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „hourglass transformer“ → „Sanduhr-Transformer“.
+
+## chapter_diffusion-models/few-step.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „few-step generation“ → „Generierung in wenigen Schritten“, „flow-map distillation“ → „Destillation der Flussabbildung“.
+- „compositional / Lagrangian / Eulerian identity“ → „Kompositionsidentität / lagrangesche Identität / eulersche Identität“ bei Flussabbildungen.
+- „re-noising“ → „erneutes Verrauschen“, „Jacobian-vector product“ → „Jacobi-Vektor-Produkt“ (JVP).
+
+## chapter_diffusion-models/few-step.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „distribution matching“ → „Verteilungsabgleich“, „distribution matching distillation“ → „Destillation durch Verteilungsabgleich“ (DMD).
+
+## chapter_diffusion-models/discrete-diffusion.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „absorbing kernel“ → „absorbierender Übergangskern“, „uniform kernel“ → „Gleichverteilungskern“.
+- „independence error“ → „Unabhängigkeitsfehler“, der Fehler durch unabhängige Ziehungen beim parallelen Demaskieren.
+- „reveal“ → „aufdecken“, „unmask“ → „demaskieren“.
+
+## chapter_diffusion-models/discrete-diffusion.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „total variation“ als Abstand zwischen Verteilungen → „Totalvariationsabstand“.
+- „confidence remasking“ → „erneute Maskierung nach Konfidenz“, „phantom modes“ → „unechte Modi“.
+
+## chapter_diffusion-models/discrete-diffusion.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „speckles“ → „isolierte Pixel“; das Pixel unterscheidet sich von allen vier direkten Nachbarn.
+- „order-agnostic autoregression“ → „Autoregression in beliebiger Reihenfolge“.
+
+## chapter_diffusion-models/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „prompt alignment“ → „Übereinstimmung mit dem Prompt“.
+- „remasking“ → „erneute Maskierung“, „unmasking“ → „Demaskierung“.
+- „noise-contrastive estimation“ → „rauschkontrastive Schätzung“.
