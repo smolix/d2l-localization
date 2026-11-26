@@ -701,3 +701,66 @@
 ## chapter_transformers/moe.md#u02 (Codex Astra (medium), 2026-11-26)
 
 - „fine-grained expert segmentation“ → „feingranulare Unterteilung der Experten“.
+
+## chapter_recurrent-modern/seq2seq.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „string reversal“ → „Umkehrung von Zeichenketten“, im Experiment kurz „Umkehraufgabe“.
+- „state width“ → „Zustandsbreite“, „per-letter accuracy“ → „Genauigkeit pro Buchstabe“.
+
+## chapter_recurrent-modern/linear-recurrence.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „decay“ → „Abklingfaktor“ für den Multiplikator, „Abklingen“ für den Vorgang. „write vector“ → „Schreibvektor“.
+- „prefix scan“ → „Präfix-Scan“, „doubling scan“ → „Verdopplungsscan“, „work-efficient scan“ → „arbeitseffizienter Scan“. „combine“ → „Verknüpfung“.
+
+## chapter_recurrent-modern/lstm.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „gate“ → „Gatter“ für die rekurrenten Zellen, „memory cell“ → „Speicherzelle“, „candidate state“ → „Kandidatenzustand“.
+- „delayed recall“ → „verzögerter Abruf“, „sequence mixer“ → „Sequenzmischer“ (der).
+
+## chapter_recurrent-modern/lstm.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „keep-gate initialization“ → „Initialisierung auf Erhalt“, „backbone“ → „Grundarchitektur“.
+
+## chapter_recurrent-modern/ssm.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „zero-order hold“ → „Halteglied nullter Ordnung“ (ZOH), „decay rate“ → „Abklingrate“, „per-step decay“ → „Abklingfaktor pro Schritt“.
+- „delayed recall“ → „verzögerter Abruf“, „readout weights“ → „Auslesegewichte“, „leaky integrator“ → „verlustbehafteter Integrator“.
+
+## chapter_recurrent-modern/mamba.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „selective copying“ → „selektives Kopieren“, „filler token“ → „Fülltoken“, „query token“ → „Abfragetoken“.
+- „read vector“ → „Lesevektor“, „adjoint scan“ → „adjungierter Scan“, „zero-order hold“ → „Halteglied nullter Ordnung“.
+
+## chapter_recurrent-modern/mamba.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „spike ratio“ → „Spitzenverhältnis“ für das Verhältnis des größten Beitrags im Symbolfenster zum Beitrag des vorherigen Fülltokens.
+- „write“ als additiver Term der Rekurrenz → „Schreibbeitrag“.
+
+## chapter_recurrent-modern/matrix-state.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „matrix-state recurrence“ → „Rekurrenz mit Matrixzustand“, „retrieval error“ → „Abruffehler“.
+- „state space duality“ → „Zustandsraumdualität“, „codebook“ → „Codebuch“.
+
+## chapter_recurrent-modern/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „threshold circuit“ → „Schwellwertschaltung“, „fast weights“ → „schnelle Gewichte“.
+- „network memories“ → „neuronale Netze als Speicher“, „log-linear attention“ → „log-lineare Attention“.
+
+## chapter_computational-performance/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „computational performance“ → „Rechenleistung“, „performance model“ → „Leistungsmodell“.
+- „host dispatch“ → „Start durch den Host“, bei GPU-Kerneln „Kernel-Start durch den Host“.
+- „sharding“ → „Partitionierung“ beim Aufteilen des Trainingszustands auf mehrere GPUs.
+- „ring allreduce“ → „Ring-Allreduce“, „DDP bucketing“ → „Bündelung von Gradienten in DDP“.
+
+## chapter_recurrent-modern/deltanet.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „key rebinding“ → „Neubelegung eines Schlüssels“, „write strength“ → „Schreibstärke“, „signal erosion“ → „Signalverlust“, „recall loss“ → „Abrufverlust“.
+
+## chapter_recurrent-modern/deltanet.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „cross-moment“ → „Kreuzmoment“, „state tracking“ → „Zustandsverfolgung“, „fast weights“ und „slow weights“ → „schnelle Gewichte“ und „langsame Gewichte“.
+
+## chapter_recurrent-modern/hybrids.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Welch's bound“ → „Welch-Schranke“, „multi-query associative recall“ → „assoziativer Abruf mit mehreren Abfragen“. „Abrufgenauigkeit“ bezeichnet den Anteil korrekt abgerufener Werte.
