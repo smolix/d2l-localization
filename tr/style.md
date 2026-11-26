@@ -1,6 +1,6 @@
 # Style guide: Turkish (tr)
 
-Draft of 2026-11-26 for the author's review. Translators read this with every
+Draft of 2026-11-26 (Fable 5.2) for native-speaker review. Translators read this with every
 unit (TRANSLATING.md §7–§8). Each rule has one reason and one example
 (English → Turkish, or ✗ wrong / ✓ right). Examples marked with a translator's
 name are real sentences from the translation test `evals/tr-conv-layer/`.

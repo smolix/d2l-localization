@@ -1,6 +1,6 @@
 # Style guide: Simplified Chinese (zh, zh-Hans)
 
-Draft of 2026-11-26 for the author's review. Translators read this with every
+Draft of 2026-11-26 (Fable 5.2) for native-speaker review. Translators read this with every
 unit (TRANSLATING.md §7–§8). Each rule has one reason and one example
 (English → Chinese, or ✗ wrong / ✓ right). Points that need the author's or a
 native reviewer's ruling are marked "(to confirm)" and collected in §10.

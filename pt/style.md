@@ -1,6 +1,6 @@
 # Style guide: Brazilian Portuguese (pt, locale pt-BR)
 
-Draft of 2026-11-26 for the author's review. Translators read this with every
+Draft of 2026-11-26 (Fable 5.2) for native-speaker review. Translators read this with every
 unit (TRANSLATING.md §7–§8). Each rule has one reason and one example
 (English → Portuguese, or ✗ wrong / ✓ right). Examples marked F, O or S are
 sentences from the translation test `evals/pt-conv-layer/` (Fable, Opus,
