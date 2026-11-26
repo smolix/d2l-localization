@@ -68,7 +68,7 @@ Attention-Mechanismen: differenzierbares inhaltsbasiertes Retrieval<br>**Abfrage
 <!--en:a83731ae-->
 [Zielkonflikte beim Entwurf]{.kicker}
 
-<!--en:d61f8d70-->
+<!--en:1763c6c1-->
 - **1. Unempfindlichkeit gegenüber der Reihenfolge:** Eine gewichtete Summe $\sum_i \alpha_i \mathbf{v}_i$ ist permutationsinvariant und erfasst die Wortreihenfolge nicht. Deshalb brauchen wir Tabellen für absolute Positionen, **RoPE** oder **ALiBi** (**§{sec_positional-information}**).
 
 <!--en:d74f2d0e-->

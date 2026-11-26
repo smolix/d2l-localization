@@ -287,8 +287,8 @@ Gieriges Dekodieren nach `'The Time Traveller'` und `'It seemed to me that'` üb
 <!--en:0beb3d70-->
 - **Deterministische Attraktoren im Zustandsraum:** In einem autoregressiven RNN mit gierigem Dekodieren sind $\mathbf{H}_t = g(\mathbf{H}_{t-1}, x_t)$ und $x_t = \operatorname*{argmax} \mathbf{O}_{t-1}$ deterministische Abbildungen. Gerät die Trajektorie in die Nähe eines versteckten Zustands, den sie wenige Token zuvor durchlaufen hat, kann sie für immer in einem periodischen Grenzzyklus gefangen bleiben.
 
-<!--en:62b2efb9-->
-- **Auch bei großen Modellen:** Holtzman et al. (2020) wiesen dieselbe **Degeneration neuronal erzeugter Texte** bei GPT-2-Transformern mit 1.5 Milliarden Parametern nach, wenn sie offene Texte durch Maximierung der Likelihood dekodierten.
+<!--en:86dc4ffd-->
+- **Auch bei großen Modellen:** Holtzman et al. (2020) beobachteten dieselbe **Degeneration neuronal erzeugter Texte** bei GPT-2 Large (774 Mio. Parameter), wenn sie offene Texte durch Maximierung der Likelihood dekodierten.
 
 <!--en:c195cb3a-->
 ::: {.slide title="Beam-Search: die w besten Teilhypothesen beibehalten"}
@@ -407,12 +407,12 @@ Jede Regel bestimmt lediglich die Anzahl `keep` der führenden Token, die bei de
 <!--en:2d78347d-->
 Die sortierten Wahrscheinlichkeiten des trainierten RNN für das nächste Token nach `'The Time Traveller'` doppelt logarithmisch auftragen. So wird jede Abschneideregel geometrisch sichtbar:
 
-<!--en:9c9577c0-->
-- **Spitze und Rand der Verteilung:** Über die Ränge $1\text{--}50$ fallen die Wahrscheinlichkeiten zunächst langsam ($0.15 \to 10^{-3}$), dann steil in einen verrauschten Rand mit 900 Token ab.
+<!--en:3ce6ad75-->
+- **Spitze und Rand der Verteilung:** Über die Ränge $1\text{--}100$ fallen die Wahrscheinlichkeiten zunächst langsam ($\approx 0.1 \to 10^{-3}$), dann steil in einen verrauschten Rand mit 900 Token ab.
 
-<!--en:0e67a1c0-->
+<!--en:00c3c71b-->
 - **Senkrechte und waagerechte Grenzen:**
-  - **Top-$k$ ($k = 20$, orange):** Feste senkrechte Grenze bei Rang 20.
+  - **Top-$k$ ($k = 20$, magenta, gestrichelt):** Feste senkrechte Grenze bei Rang 20.
   - **Top-$p$ ($p = 0.9$, grün):** Senkrechte Grenze dort, wo die kumulierte Fläche $90\%$ erreicht.
   - **Min-$p$ ($p_{\min} = 0.05$, rot):** Waagerechte Untergrenze bei $5\%$ des Maximums auf Rang 1 ($0.05\,P(x_{(1)})$). Alles darunter entfällt.
 
@@ -452,8 +452,8 @@ Jeweils 50 Token nach `'The Time Traveller'` durch gieriges Dekodieren, reines S
 <!--en:2be1a899-->
 Als Maß für den Zielkonflikt zwischen **Modell-Likelihood** (mittlere Log-Wahrscheinlichkeit pro erzeugtem Token) und **lexikalischer Vielfalt** dient **$\textrm{distinct-}3$** für 20 zufällige Fortsetzungen aus je 100 Token. Die Kennzahl ist das Verhältnis der Anzahl verschiedener 3-Gramme zur Gesamtzahl der 3-Gramme. Bei $1.00$ gibt es keine Wiederholungen:
 
-<!--en:cb6bceae-->
-- **Einbruch der Vielfalt bei Maximierung:** Gierige Suche und Beam-Search ($w = 4$) erzielen die höchste Log-Wahrscheinlichkeit pro Token ($\approx -1.4$ bis $-1.6$ Nat). Ihre `distinct-3`-Werte fallen jedoch stark ab ($\approx 0.15\text{--}0.30$), weil über $70\%$ ihrer Ausgabe aus wiederholten 3-Grammen besteht.
+<!--en:ff1fb113-->
+- **Einbruch der Vielfalt bei Maximierung:** Gierige Suche und Beam-Search ($w = 4$) erzielen die höchste Log-Wahrscheinlichkeit pro Token ($\approx -1.5$ bis $-2.2$ Nat, mit höherem Wert für Beam-Search). Ihre `distinct-3`-Werte fallen jedoch stark ab ($\approx 0.15\text{--}0.30$), weil über $70\%$ ihrer Ausgabe aus wiederholten 3-Grammen besteht.
 
 <!--en:81167cad-->
 - **Günstiger Kompromiss beim Sampling aus abgeschnittenen Verteilungen:** Reines Sampling ($\tau = 1$) erreicht `distinct-3` $\approx 0.99$ bei geringer Likelihood ($\approx -4.0$ Nat). `top-k=20` und `min-p=0.05` erzielen fast dieselbe Vielfalt (`distinct-3` $\approx 0.97\text{--}0.99$) und erhöhen die Log-Wahrscheinlichkeit pro Token um ein ganzes Nat (auf $\approx -2.9$ Nat).

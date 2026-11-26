@@ -266,8 +266,8 @@ Alle vier Schritte stützen sich ausschließlich auf `train`. Dieselben Transfor
 <!--en:984980b5-->
 [Verfahren zur Modellauswahl]{.kicker}
 
-<!--en:65d6b3d3-->
-Bei nur $1{,}460$ Häusern mit bekanntem Preis beträgt der stichprobenbedingte Standardfehler der Log-RMSE für eine einzelne Validierungsgruppe mit $20\%$ der Daten ($292$ Häuser) $\sim 0.015$. Er übersteigt damit den Abstand zwischen konkurrierenden Modellen.
+<!--en:7b09ca11-->
+Bei nur $1{,}460$ Häusern mit bekanntem Preis umfasst eine einzelne Validierungsgruppe mit $20\%$ der Daten $292$ Häuser. Über mögliche Gruppen dieser Größe hinweg beträgt der Standardfehler der Log-RMSE mehrere Hundertstel. Er übersteigt damit den Abstand zwischen konkurrierenden Modellen.
 
 <!--en:525a5238-->
 - **Aufteilung in 5 Gruppen (`k_fold_data`):** Die Funktion mischt `raw_train` einmal und teilt die Zeilen in $K = 5$ Gruppen zu je $292$ Häusern auf.
@@ -404,8 +404,8 @@ Fragen zum gesamten Ablauf der Modellierung mit Tabellendaten:
 <!--en:a15be92c-->
 | **Kategoriale Merkmale** | `get_dummies(dummy_na=True)` + `reindex` | Binärer Indikator pro Kategorie und eigene `_nan`-Spalte ($345$ Spalten) | Fehlende Werte behalten ihre Aussagekraft (z. B. bedeutet `PoolQC = NaN`, dass kein Schwimmbecken vorhanden ist). |
 
-<!--en:9331e53f-->
-| **Modellauswahl** | 5-fache Kreuzvalidierung mit gemeinsamen Gruppen (`k_fold`) | Mittelung über $5$ Validierungsgruppen (je $292$ Häuser), gepaarte Differenzen | Bei einer einzelnen Gruppe mit $292$ Häusern beträgt die zufällige Schwankung $\pm 0.015$. Überanpassung beim unregularisierten MLP ($0.16$). |
+<!--en:30d66bd0-->
+| **Modellauswahl** | 5-fache Kreuzvalidierung mit gemeinsamen Gruppen (`k_fold`) | Mittelung über $5$ Validierungsgruppen (je $292$ Häuser), gepaarte Differenzen | Je nach gewählter Gruppe mit $292$ Häusern schwankt die Log-RMSE um mehrere Hundertstel. Überanpassung beim unregularisierten MLP ($0.16$). |
 
 <!--en:390074be-->
 | **Einreichung** | Erneutes Training mit `wd = best` auf allen $1{,}460$ Häusern | $\hat{y} = \exp(\hat{z} + \bar{z}_{\textrm{train}})$ liefert wieder Dollarbeträge | Der Trainingsfehler des erneut trainierten Modells liefert keine gültige Schätzung der Generalisierungsgüte. |

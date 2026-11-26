@@ -378,8 +378,8 @@ Score-Funktionen für Attention, skaliertes Skalarprodukt und Maskierung<br>**Sk
 <!--en:0fcbacf4-->
 - **Konstante Entropie mit Skalierung:** Mit $1/\sqrt{d}$ bleibt die Entropie der Gewichte bei allen Breiten nahe $\log 64 - \frac{1}{2} \approx 3.66$ Nat. Das entspricht effektiv $\approx 39$ Schlüsseln.
 
-<!--en:3b09ac80-->
-- **Einbruch ohne Skalierung:** Ohne $1/\sqrt{d}$ fällt die Entropie auf $0.21$ Nat bei $d = 512$. Schon vor dem ersten Gradientenschritt liegt fast das gesamte Gewicht auf einem Schlüssel.
+<!--en:fd6ad26a-->
+- **Einbruch ohne Skalierung:** Ohne $1/\sqrt{d}$ fällt die Entropie auf $\approx 0.2$ Nat bei $d = 512$. Schon vor dem ersten Gradientenschritt liegt fast das gesamte Gewicht auf einem Schlüssel.
 
 <!--en:5f2ccfe6-->
 ::: {.slide title="Maximalgewicht und Norm der Jacobi-Matrix in Abhängigkeit von d"}
@@ -563,8 +563,8 @@ Kann Gradientenabstieg allein aus den Zielausgaben eine Umstellung der Wortfolge
 <!--en:4317ee1a-->
 - Nach $100$ Adam-Schritten zur Minimierung der negativen Log-Likelihood auf zufälligen Sequenzen erreichen alle drei Läufe eine Testgenauigkeit von $100\%$. Im Mittel entfallen mehr als $99\%$ des Gewichts auf $\pi(j)$:
 
-<!--en:ae5ef55e-->
-- Auch bei wiederholten Quelltoken (`c`, `o`) führt die gelernte Schlüsselprojektion jede Abfrage zu $\pi(j)$. Das zeigt die Kreuzung außerhalb der Diagonalen in den Zeilen 3 und 4.
+<!--en:7ed93b49-->
+- Auch bei wiederholten Quelltoken führt die gelernte Schlüsselprojektion jede Abfrage zu $\pi(j)$. Das zeigt sich an der Vertauschung der Positionen $3$ und $4$ (ab $0$ gezählt) außerhalb der Diagonalen.
 
 <!--en:ee26445c-->
 ::: {.slide title="Verständnisfragen zu Skalierung, Maskierung und Invarianzen"}

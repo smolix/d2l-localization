@@ -170,8 +170,8 @@ Entfernen wir die Vorgängerköpfe aus Block 1, fällt die Genauigkeit bei spät
 <!--en:8684f784-->
 Da es $64^{16} \approx 8 \times 10^{28}$ mögliche Muster gibt, ist jede Testsequenz neu. In der Trainingsverteilung sind alle Token-Paare gleich wahrscheinlich. Sobald ein Token und sein Nachfolger im Kontextfenster einmal gemeinsam aufgetreten sind, verknüpft der Induktionsschaltkreis sie miteinander. Das ist eine elementare Form des *In-Context-Lernens* (engl. in-context learning):
 
-<!--en:1a2abd4e-->
-Die Genauigkeit springt von $1/64$ bei der ersten Kopie (auch beim erneuten Beginn des Musters an Position $t = 24$, wo dem inhaltlichen Abgleich noch kein wiederholtes Token vorliegt) auf mehr als $0.9$ ab Position $25$.
+<!--en:52f1826f-->
+Die Genauigkeit springt von $1/64$ bei der ersten Kopie (auch beim erneuten Beginn des Musters an Position $t = 24$, wo dem inhaltlichen Abgleich noch kein wiederholtes Token vorliegt) auf etwa $0.8$ an Position $25$ und wenige Positionen später auf über $0.9$.
 
 <!--en:efbdf9fd-->
 Woher kommt der verbleibende Fehler nach dem erneuten Beginn des Musters? Kommt ein Token $K > 1$-mal im Muster aus $L$ Token vor und hat es verschiedene Nachfolger, ist der Abgleich allein anhand des aktuellen Tokens mehrdeutig. Wer gleichverteilt unter den $K$ Vorkommen wählt, trifft mit Wahrscheinlichkeit $1/K$ den richtigen Nachfolger. Für $L = 24$ und $p = 1/64$ wiederholt sich ein Token im Muster mit Wahrscheinlichkeit $1 - (63/64)^{23} \approx 0.30$. Für den Abgleich einzelner Token mit gleichverteilter Auswahl ergibt sich eine erwartete Gesamtgenauigkeit von
@@ -555,8 +555,8 @@ Korrelationen in Attention-Karten oder Gewichten belegen keine Kausalität. Um z
 <!--en:33c9b25f-->
 - **Erste Kopie ($t < 24$):** Die Genauigkeit liegt auf dem Zufallsniveau von $1/64 \approx 0.016$.
 
-<!--en:cb5940c9-->
-- **Zweite Kopie ($t \ge 25$):** Die Genauigkeit steigt nach *einem einzigen* Vorkommen im Kontext sofort auf über $0.90$. (Genau beim erneuten Beginn an Position $t = 24$ liegt für den inhaltlichen Abgleich noch kein wiederholtes Token vor.)
+<!--en:d253f70d-->
+- **Zweite Kopie ($t \ge 25$):** Die Genauigkeit steigt nach *einem einzigen* Vorkommen im Kontext sofort auf etwa $0.8$ und binnen weniger Positionen auf über $0.90$. (Genau beim erneuten Beginn an Position $t = 24$ liegt für den inhaltlichen Abgleich noch kein wiederholtes Token vor.)
 
 <!--en:51737fdf-->
 ::: {.slide title="Wiederholte Token als Ursache des verbleibenden Fehlers"}

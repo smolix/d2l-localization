@@ -49,8 +49,8 @@ Wir trainieren ein bytebasiertes `MaskedLM` mit 4 Blöcken ($d = 128, H = 4, L =
 <!--en:d6e9ceb4-->
 ### Verlust in Abhängigkeit vom verfügbaren Kontext
 
-<!--en:46e1dbc7-->
-In :numref:`subsec_gpt-rnn-baseline` nahm der Validierungsverlust eines kausalen Sprachmodells von Position zu Position monoton ab, von links ($t = 1$, kein Kontext) nach rechts ($t = T$, vollständiger Präfixkontext). Wie sieht `loss_by_position` für ein bidirektionales `MaskedLM` aus, wenn wir den Rekonstruktionsverlust an jeder Fensterposition $t \in \{0, \dots, n-1\}$ bestimmen?
+<!--en:df35f2b8-->
+In :numref:`subsec_gpt-rnn-baseline` nahm der Validierungsverlust eines kausalen Sprachmodells von Position zu Position monoton ab, von links ($t = 0$, ein Byte Kontext) nach rechts ($t = T - 1$, vollständiger Präfixkontext). Wie sieht `loss_by_position` für ein bidirektionales `MaskedLM` aus, wenn wir den Rekonstruktionsverlust an jeder Fensterposition $t \in \{0, \dots, n-1\}$ bestimmen?
 
 <!--en:45be31d4-->
 Für den bidirektionalen Encoder ergibt sich eine symmetrische **Badewannenkurve (U-Form)**. An jeder Position im Inneren steht Kontext von links und rechts zur Verfügung (etwa 1.5–1.6 Nat/Byte). Nur an den beiden Fensterrändern steigt der Verlust ($t \approx 0$ und $t \approx n-1$, etwa 2.4 Nat/Byte), weil der Kontext dort auf einer Seite fehlt. Werten wir `model` an einem maskierten Satz aus, sehen wir, wie der rechte Kontext fehlende Bytes im Satzinneren eindeutig bestimmt:
@@ -282,8 +282,8 @@ Der Test maskiert jeweils ein Byte und gibt die drei wahrscheinlichsten Vorhersa
 <!--en:943ce95e-->
 - **Decoder-Eingabe beim Teacher Forcing (`dec_in`):** `<bos>` (`id = 16`) voranstellen und die umgekehrte Zielsequenz um eine Position nach rechts verschieben. Mit `dec_in` $= (\texttt{<bos>}, x_T, \dots, x_2)$ sagt der Decoder `tgt` $= (x_T, \dots, x_1)$ vorher.
 
-<!--en:905a8226-->
-- **Exaktes Ground-Truth-Alignment:** Für die Ausgabe an Zielposition $t$ muss der Decoder Quelltoken $x_{T - 1 - t}$ entlang der **Gegendiagonalen** $(t, T - 1 - t)$ abrufen.
+<!--en:b08140a8-->
+- **Exaktes Ground-Truth-Alignment:** Für die Ausgabe an Zielposition $t$ muss der Decoder das Quelltoken an Position $T - 1 - t$ (also $x_{T - t}$) entlang der **Gegendiagonalen** $(t, T - 1 - t)$ abrufen.
 
 <!--en:a3291564-->
 ::: {.slide title="Sequenz-zu-Sequenz-Alignment bei der Umkehrung von Zeichenketten (Fortsetzung)"}
@@ -315,8 +315,8 @@ Das Ziehen eines Batches liefert die Quellsequenz, ihre Umkehrung als Ziel und d
 <!--en:89cbcf40-->
 `self_attention` wendet eine kausale Maske auf das Zielpräfix an. Dagegen greift `cross_attention` auf die gesamte kodierte Quelle `enc` zu (nur mit der optionalen Padding-Maske `cross_mask` für die Quelle):
 
-<!--en:63347537-->
-Bei der autoregressiven Inferenz hängen `enc = self.encoder(src)` und die zugehörigen Schlüssel- und Wertprojektionen der Cross-Attention nur von der Quellsequenz ab. Daher genügt es, sie **einmal pro Prompt** zu berechnen und bei jedem Dekodierschritt wiederzuverwenden.
+<!--en:801e2e2d-->
+Bei der autoregressiven Inferenz hängen `enc = self.encoder(src)` und die zugehörigen Schlüssel- und Wertprojektionen der Cross-Attention nur von der Quellsequenz ab. Daher lassen sie sich **einmal pro Prompt** berechnen und zwischenspeichern. In unserer Funktion `reverse` läuft nur der Encoder einmal. Die Projektionen werden der Einfachheit halber in jedem Schritt neu berechnet.
 
 <!--en:cbcbbb49-->
 ::: {.slide title="Implementierung von DecoderBlock" only="jax"}
@@ -327,8 +327,8 @@ Bei der autoregressiven Inferenz hängen `enc = self.encoder(src)` und die zugeh
 <!--en:89cbcf40-2-->
 `self_attention` wendet eine kausale Maske auf das Zielpräfix an. Dagegen greift `cross_attention` auf die gesamte kodierte Quelle `enc` zu (nur mit der optionalen Padding-Maske `cross_mask` für die Quelle):
 
-<!--en:63347537-2-->
-Bei der autoregressiven Inferenz hängen `enc = self.encoder(src)` und die zugehörigen Schlüssel- und Wertprojektionen der Cross-Attention nur von der Quellsequenz ab. Daher genügt es, sie **einmal pro Prompt** zu berechnen und bei jedem Dekodierschritt wiederzuverwenden.
+<!--en:801e2e2d-2-->
+Bei der autoregressiven Inferenz hängen `enc = self.encoder(src)` und die zugehörigen Schlüssel- und Wertprojektionen der Cross-Attention nur von der Quellsequenz ab. Daher lassen sie sich **einmal pro Prompt** berechnen und zwischenspeichern. In unserer Funktion `reverse` läuft nur der Encoder einmal. Die Projektionen werden der Einfachheit halber in jedem Schritt neu berechnet.
 
 <!--en:c4cc0fbc-->
 ::: {.slide title="Training und Greedy-Dekodierung bei der Umkehrung von Zeichenketten"}
@@ -429,8 +429,8 @@ Drei Fragen zur Architektur beantworten:
 <!--en:2fc3049d-->
 1. **Vollständiger Encoder:** $6 \times 8192^2 \approx \mathbf{4.03 \times 10^8}$ Positionspaare pro Kopf. **Perceiver:** $64 \times 8192 + 6 \times 64^2 = 524{,}288 + 24{,}576 \approx \mathbf{5.49 \times 10^5}$ Positionspaare pro Kopf (**um den Faktor $734\times$ weniger**).
 
-<!--en:7eb3676e-->
-2. **Genau einmal** (unmittelbar nach dem Encoder-Durchlauf), da sich $\mathbf{H}_{\text{enc}}$ bei der Generierung der Zieltoken nie ändert.
+<!--en:8dadebd0-->
+2. **Einmal**, wenn die Projektionen unmittelbar nach dem Encoder-Durchlauf zwischengespeichert werden, da sich $\mathbf{H}_{\text{enc}}$ bei der Generierung der Zieltoken nie ändert (eine einfache Schleife wie in `reverse` berechnet die Projektionen bei jedem Schritt neu).
 
 <!--en:cad42121-->
 3. **Reiner Encoder:** Jedes Token nutzt den vollständigen bidirektionalen Kontext. Ein einziger paralleler Vorwärtsdurchlauf liefert die Einbettung jeder Beschreibung ohne autoregressive Dekodierschleife.

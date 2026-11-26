@@ -133,8 +133,8 @@ Unser erster durchgängiger Benchmark ist die $4 \times 4$ Felder große Umgebun
 <!--en:e58ddad8-->
 - **Kürzester Weg und Optimum bei Rutschgefahr:** Ohne Rutschen ist der Weg mit 6 Zügen der kürzeste. Auf glattem Eis führt er nur in **$4.5\%$** der Episoden zum Ziel, weil der Agent in benachbarte Löcher rutscht.
 
-<!--en:5160b9cf-->
-- **Risikominimierende Regelung:** Mit der optimalen Strategie $\pi^*$ erreicht der Agent in **$73.0\%$** der Episoden das Ziel. In vier Feldern weist sie vom Ziel *weg*, damit der Agent dort in kein Loch fallen kann.
+<!--en:9e23e6ba-->
+- **Risikominimierende Regelung:** Mit der optimalen Strategie $\pi^*$ erreicht der Agent in **$73.0\%$** der Episoden das Ziel. In vier Feldern weist sie vom Ziel *weg*, um das Risiko eines Sturzes in ein Loch zu minimieren.
 
 <!--en:6e4f071c-->
 ::: {.slide title="Benchmark 2: Sprachgenerierung als MDP mit Prüfprogramm"}

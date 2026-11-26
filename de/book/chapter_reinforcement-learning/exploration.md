@@ -260,8 +260,8 @@ Mehrarmige Banditen und Exploration<br>**kumulativer Regret · gierige und epsil
 <!--en:b0445376-->
 [Motivation und Grundidee]{.kicker}
 
-<!--en:cf1da1d3-->
-- **Kosten blinder Exploration auf FrozenLake:** Muss die optimale Strategie $\pi^*$ mit Wahrscheinlichkeit $\epsilon = 0.05$ zufällig handeln, sinkt ihre Erfolgsquote innerhalb von 100 Schritten von **$73.0\%$ auf $54.2\%$**.
+<!--en:6e9852ad-->
+- **Kosten blinder Exploration auf FrozenLake:** Muss die optimale Strategie $\pi^*$ mit Wahrscheinlichkeit $\epsilon = 0.05$ zufällig handeln, sinkt ihre Erfolgsquote innerhalb von 100 Schritten von **$73.0\%$ auf $53.7\%$**.
 
 <!--en:7543c642-->
 - **Blinde und gezielte Exploration:** Die $\epsilon$-gierige Regel probiert bekanntermaßen verheerende Aktionen ebenso oft zufällig aus wie vielversprechende Alternativen.
@@ -275,8 +275,8 @@ Mehrarmige Banditen und Exploration<br>**kumulativer Regret · gierige und epsil
 <!--en:9db6bd9d-->
 [Exploration in einem einzigen Zustand untersuchen]{.kicker}
 
-<!--en:037a7dfd-->
-- **Vergleichsproblem mit 10 Armen:** Bester Arm $\mu^* = \mu_2 = 0.90$ und kleinster Abstand $\Delta_{\min} = 0.90 - 0.60 = 0.30$ (Arm 6).
+<!--en:81dd77af-->
+- **Vergleichsproblem mit 10 Armen:** Bester Arm $\mu^* = \mu_3 = 0.90$ und kleinster Abstand $\Delta_{\min} = 0.90 - 0.60 = 0.30$ (Arm 7).
 
 <!--en:f7cbfcc9-->
 - **Linearer und sublinearer Regret:** Wer immer an einem Arm mit Mittelwert $0.50$ zieht, verliert $\Delta_a = 0.40$ pro Zug. Sublinearer Regret ($\textrm{Regret}(t)/t \to 0$) erfordert, dass suboptimale Arme immer seltener zum Zug kommen.
@@ -320,8 +320,8 @@ Für eine Zeile von Schätzwerten $\hat{Q}(s, \cdot) = (0.20, 0.90, 0.55, 0.10)$
 <!--en:073d6e4e-->
 - **Der erste Gewinn entscheidet:** Anfangs gilt $\hat{\mu}_0(a) = 0$. Sobald ein Arm $a$ den Wert $1$ liefert, übertrifft sein empirischer Mittelwert $\hat{\mu}(a) > 0$ dauerhaft den jedes unversuchten Arms ($0$).
 
-<!--en:9b56b62e-->
-- **Gewinnchance:** Der beste Arm $\mu_2 = 0.90$ gewinnt diese erste Auslosung in nur $0.90 / 4.87 \approx 18.5\%$ der Durchläufe.
+<!--en:9d8e4c4f-->
+- **Gewinnchance:** Der beste Arm $\mu_3 = 0.90$ gewinnt diese erste Auslosung in nur $0.90 / 4.87 \approx 18.5\%$ der Durchläufe.
 
 <!--en:20e1e6e4-->
 ::: {.slide title="Regret bei fester und abklingender Explorationsrate"}
@@ -365,8 +365,8 @@ Zur Initialisierung kommt jeder Arm einmal zum Zug, sodass $n(a) \geq 1$ gilt. D
 <!--en:8acdfd00-->
 - **Schrumpfende Unsicherheitsbalken:** In Teilbild (a) sinkt der Bonus $\kappa\sqrt{\log t / n(a)}$ mit der Anzahl der Züge wie $n(a)^{-1/2}$. Bleiben Züge aus, wächst er nur wie $\sqrt{\log t}$.
 
-<!--en:702adfa9-->
-- **Die Indizes gleichen sich aus:** In Teilbild (b) entfallen nach $2{,}000$ Zügen mit $\kappa = 0.5$ auf Arm 2 ($\mu^* = 0.90$) insgesamt $1{,}852$ Züge. Schlechte Arme kommen nicht mehr zum Zug, sobald ihre obere Konfidenzschranke unter $0.90$ fällt.
+<!--en:f157df7e-->
+- **Die Indizes gleichen sich aus:** In Teilbild (b) entfallen nach $2{,}000$ Zügen mit $\kappa = 0.5$ auf Arm 3 ($\mu^* = 0.90$) insgesamt $1{,}951$ Züge. Schlechte Arme kommen nicht mehr zum Zug, sobald ihre obere Konfidenzschranke unter $0.90$ fällt.
 
 <!--en:173d6491-->
 ::: {.slide title="Ziehen aus der A-posteriori-Verteilung (Thompson-Sampling)"}
@@ -416,8 +416,8 @@ Ein Vergleich verschiedener Werte von $\kappa \in \{0.15, 0.50, \sqrt{2}\}$ übe
 <!--en:86cd5bd4-->
 Lai und Robbins (1985) bewiesen: Jeder konsistente Banditenalgorithmus muss an jedem suboptimalen Arm $a$ mindestens proportional zu $\ln t$ geteilt durch die KL-Divergenz $D(\mu_a \,\|\, \mu^*)$ ziehen:
 
-<!--en:7b397b32-->
-- **Fast optimale Arme unterscheiden:** Für den zweitbesten Arm ($\mu_6 = 0.60$ gegenüber $\mu^* = 0.90$) gilt $D(0.60 \,\|\, 0.90) = 0.311$. Er braucht mindestens $\ln(2000)/0.311 \approx 24.4$ Züge (Regret $\approx 7.3$) bis $t = 2000$.
+<!--en:ba4859cf-->
+- **Fast optimale Arme unterscheiden:** Für den zweitbesten Arm ($\mu_7 = 0.60$ gegenüber $\mu^* = 0.90$) gilt $D(0.60 \,\|\, 0.90) = 0.311$. Er braucht mindestens $\ln(2000)/0.311 \approx 24.4$ Züge (Regret $\approx 7.3$) bis $t = 2000$.
 
 <!--en:630a2ada-->
 - **Optimale Rate:** Die Summe über $\Delta_a n_t(a)$ ergibt die nicht weiter verbesserbare Schranke $\textrm{Regret}(t) = \Omega(\ln t)$. UCB und Thompson-Sampling erreichen beide die optimale Wachstumsrate $\Theta(\ln t)$.

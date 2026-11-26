@@ -10,8 +10,8 @@ Die vorberechneten Ausgaben in den Notebooks können Sie auch ohne Deep-Learning
 <!--en:c640e612-->
 ## Wahl des Frameworks
 
-<!--en:774c75fd-->
-Wenn Sie kein bestimmtes Framework bevorzugen, empfehlen wir den Einstieg mit **PyTorch**. Nur für PyTorch gibt es Implementierungen zu jedem Kapitel. Die Buchteile zu den Grundlagen (:numref:`chap_preliminaries` bis :numref:`chap_rnn`), zu Bildmodellen (:numref:`chap_cv`), zur Mathematik für Deep Learning (:numref:`chap_mdl-linear-algebra` bis :numref:`chap_mdl-dynamics`) und zu Werkzeugen für Deep Learning (:numref:`chap_appendix_tools`) sind in allen vier Frameworks umgesetzt (PyTorch, JAX, TensorFlow und MXNet). Der weiterführende Teil (:numref:`chap_optimization` bis :numref:`chap_diffusion`) verwendet PyTorch und JAX, wobei :numref:`chap_reinforcement_learning` in PyTorch umgesetzt ist. Der Teil zu Sprachmodellen (ab :numref:`chap_lm_pretrained`) verwendet PyTorch.
+<!--en:67f9fba9-->
+Wenn Sie kein bestimmtes Framework bevorzugen, empfehlen wir den Einstieg mit **PyTorch**. Nur für PyTorch gibt es Implementierungen zu jedem Kapitel. Die Buchteile zu den Grundlagen (:numref:`chap_preliminaries` bis :numref:`chap_rnn`), zu Bildmodellen (:numref:`chap_cv`), zur Mathematik für Deep Learning (:numref:`chap_mdl-linear-algebra` bis :numref:`chap_mdl-dynamics`) und zu Werkzeugen für Deep Learning (:numref:`chap_appendix_tools`) sind in allen vier Frameworks umgesetzt (PyTorch, JAX, TensorFlow und MXNet). Der weiterführende Teil (:numref:`chap_optimization` bis :numref:`chap_diffusion`) verwendet PyTorch und JAX. Der Teil zu Sprachmodellen (ab :numref:`chap_lm_pretrained`) verwendet PyTorch.
 
 <!--en:654dccbc-->
 Für den Einstieg brauchen Sie keine spezielle Hardware. Die Beispiele der ersten Kapitel laufen problemlos auf der CPU jedes modernen Laptops. Eine GPU lohnt sich später, wenn wir größere konvolutionäre Netze, Transformer und generative Modelle trainieren.

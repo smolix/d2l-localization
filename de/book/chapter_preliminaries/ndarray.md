@@ -540,8 +540,8 @@ Jeder Tensor verbindet einen **zusammenhängenden 1D-Speicherpuffer** mit einem 
 <!--en:d6fe8036-->
 [Umformen in Verarbeitungsketten]{.kicker}
 
-<!--en:325646e8-->
-- **Abflachen mit `-1`:** `images.reshape(-1, 784)` ermittelt die Batchgröße $\textrm{size}/784 = 256$ und funktioniert auch mit kleineren letzten Batches einer Epoche.
+<!--en:89bad67a-->
+- **Abflachen mit `-1`:** `images.reshape(256, -1)` ermittelt die Zeilenlänge $\textrm{size}/256 = 784$. `reshape(-1, 784)` ermittelt dagegen die Batchgröße und funktioniert deshalb auch mit einem kleineren letzten Batch.
 
 <!--en:7f97f90a-->
 - **Achsen der Länge 1 (`None` / `squeeze`):** `None` fügt eine Achse der Länge 1 für Batches oder Broadcasting ein. `squeeze` entfernt Achsen der Länge 1.
@@ -570,8 +570,8 @@ Gegeben sei `images` mit der Form `(256, 1, 28, 28)`. Welche Ausgabeform und wel
 <!--en:ed758382-->
 1. `images[5]` im Vergleich zu `images[5:6]`
 
-<!--en:538b3d33-->
-3. `images.reshape(256, -1)` im Vergleich zu `images.reshape(-1, 784)` beim letzten Batch einer Epoche mit 96 Bildern der Form `(96, 1, 28, 28)`
+<!--en:d73dba95-->
+3. `images.reshape(256, -1)` im Vergleich zu `images.reshape(-1, 784)` beim letzten Batch einer Epoche mit 100 Bildern der Form `(100, 1, 28, 28)`
 
 <!--en:557b98b6-->
 **Antworten:**
@@ -582,8 +582,8 @@ Gegeben sei `images` mit der Form `(256, 1, 28, 28)`. Welche Ausgabeform und wel
 <!--en:d23bfc02-->
 2. **`(64, 1, 14, 14)`**: Wählt 64 Bilder und jede zweite Zeile und Spalte. Die räumlichen Strides verdoppeln sich. Das Ergebnis bleibt ein Slice mit Strides.
 
-<!--en:a0e66437-->
-3. `reshape(256, -1)` **liefert fälschlich die Form (256, 294)** ($96 \times 784$ ist durch 256 teilbar). `reshape(-1, 784)` ermittelt zuverlässig **`(96, 784)`**.
+<!--en:3e40284d-->
+3. `reshape(256, -1)` **löst einen Fehler aus** ($100 \times 784$ ist nicht durch 256 teilbar). `reshape(-1, 784)` ermittelt zuverlässig **`(100, 784)`**.
 
 <!--en:8232a43c-->
 ::: {.slide title="Ganzzahlige Indizes und boolesche Masken beim maschinellen Lernen"}

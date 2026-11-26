@@ -463,8 +463,8 @@ Bei 5 Zufallsstartwerten mit je $4{,}000$ Episoden auf dem rutschigen FrozenLake
 <!--en:ded4fb6a-->
 - **Was die Kurve misst:** Die Trainingserträge bewerten die *Verhaltensstrategie* $\pi_e$. Sie handelt im Mittel noch in einem von zwanzig Schritten zufällig ($\epsilon = 0.05$), sobald Episode $2{,}000$ erreicht ist.
 
-<!--en:562a9e43-->
-- **Kosten der Exploration:** Selbst bei der exakten optimalen Strategie $\pi^*$ sinkt bei erzwungener Zufallswahl mit Wahrscheinlichkeit $\epsilon = 0.05$ die Erfolgsquote innerhalb von 100 Schritten von **$73.0\%$ auf $54.2\%$**.
+<!--en:c3220adb-->
+- **Kosten der Exploration:** Selbst bei der exakten optimalen Strategie $\pi^*$ sinkt bei erzwungener Zufallswahl mit Wahrscheinlichkeit $\epsilon = 0.05$ die Erfolgsquote innerhalb von 100 Schritten von **$73.0\%$ auf $53.7\%$**.
 
 <!--en:0a8bd8c1-->
 ::: {.slide title="Gelernte Tabellen im Vergleich mit den exakten Werten V* und Q*"}

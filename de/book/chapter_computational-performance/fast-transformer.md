@@ -686,8 +686,8 @@ Ein auf einer GPU um den Faktor $2\times$ schnellerer Schritt ist nur dann brauc
 <!--en:3d782c87-->
 In Millisekunden pro $8{,}192$ Token aufgeschlüsselt zeigen die Kernel-Laufzeitprofile, wie sich jede Millisekunde der Baseline und des endgültigen Schritts zur idealen Rechenzeit bei Spitzenleistung der Tensor Cores verhält ($5.7\text{ ms}$ in `bf16`, $11.3\text{ ms}$ in `tf32`):
 
-<!--en:9147372d-->
-- **Warum der endgültige Schritt $\sim 50\%$ MFU erreicht ($11.5\text{--}12\text{ ms}$ gegenüber idealen $5.7\text{ ms}$):**
+<!--en:b86ac196-->
+- **Warum der endgültige Schritt $\sim 45\text{--}50\%$ MFU erreicht ($11.4\text{--}12.5\text{ ms}$ gegenüber idealen $5.7\text{ ms}$):**
   - **Matrixprodukte ($\sim 7\text{ ms}$):** Sie erreichen **$> 80\%$ der Hardware-Spitzenleistung (ideale Zeit: $5.7\text{ ms}$)** und erledigen dabei $> 99\%$ aller Rechenoperationen.
   - **Bandbreitenbegrenzte Kernel ($\sim 5\text{ ms}$):** Normalisierungen, SwiGLU, RoPE, Typumwandlungen und AdamW leisten $< 1\%$ der FLOPs. Der Datentransport durch das DRAM kostet sie jedoch **$\sim 40\%$ der Schrittzeit**.
 

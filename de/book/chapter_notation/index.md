@@ -472,8 +472,8 @@ Diese Symbole gehören zu :numref:`chap_diffusion` und folgen den Konventionen a
 <!--en:3d2c85b6-->
 * $\mathbf{u}_t$, $\mathbf{u}_{\boldsymbol{\theta}}$, $\hat{\mathbf{u}}$: das Geschwindigkeitsfeld des Wahrscheinlichkeitsflusses, das Samples entlang des Pfads transportiert, ein mit $\boldsymbol{\theta}$ parametrisiertes neuronales Netz, das dieses Feld approximieren lernt, und die vom Netz vorhergesagte Geschwindigkeit
 
-<!--en:5a664444-->
-* $\bar{\mathbf{x}} = \mathbf{x}_t / \alpha_t$, $\bar\sigma = \sigma_t / \alpha_t$: die Koordinaten, in denen jeder Gauß-Pfad die Form $\bar{\mathbf{x}} = \mathbf{x}_0 + \bar\sigma \boldsymbol{\epsilon}$ hat und die Sampling-Verfahren ihre Schritte ausführen (:numref:`sec_diffusion-integration`). Der Querstrich steht hier für die Division durch $\alpha_t$. Beim Symbol $\bar\alpha_t$ bezeichnet er dagegen das Quadrat des Signalkoeffizienten
+<!--en:1a3753de-->
+* $\bar{\mathbf{x}} = \mathbf{x}_t / \alpha_t$, $\bar\sigma = \sigma_t / \alpha_t$: die Koordinaten, in denen jeder Gauß-Pfad die Form $\bar{\mathbf{x}} = \mathbf{x}_0 + \bar\sigma \boldsymbol{\epsilon}$ hat und die Sampling-Verfahren ihre Schritte ausführen (:numref:`sec_diffusion-integration`). Der Querstrich steht hier für die Division durch $\alpha_t$. In $\bar\alpha_t = \alpha_t^2$ bezeichnet er dagegen das Quadrat des Signalkoeffizienten
 
 <!--en:90803d42-->
 * $\mathbf{v} = \alpha_t \boldsymbol{\epsilon} - \sigma_t \mathbf{x}_0$: der Zielvektor bei der $\mathbf{v}$-Vorhersage (:numref:`sec_diffusion-gaussian-paths`)

@@ -509,8 +509,8 @@ Warum lag der Score bei den Zufallsstartwerten 3 und 4 nach der ersten Zufallsep
 <!--en:f5ba1b7a-->
 - **Kurze verzweigte Trajektorien (Janner et al., 2019):** Trajektorien von $k = 3$ Schritten zweigen im Modell $\hat{f}_\phi$ von realen Pufferzuständen ab. So bleiben die synthetischen Daten nahe an der tatsächlichen Zustandsverteilung und driften nicht über einen langen Horizont ab.
 
-<!--en:055ef674-->
-- **Vergleich bei gleicher Aktualisierungsrate (Chen et al., 2021):** Bei `UTD = 10` schneiden $100\%$ reale Übergänge aus dem Puffer ebenso gut ab wie ein Anteil von $95\%$ simulierten Übergängen ($1{,}500$–$2{,}500$ reale Schritte bis $-200$), ohne das Risiko einer Modellverzerrung.
+<!--en:df39a631-->
+- **Vergleich bei gleicher Aktualisierungsrate (eigene Läufe):** Bei `UTD = 10` brauchten Batches mit $95\%$ simulierten Übergängen $1{,}500$–$3{,}000$ reale Schritte bis zum Ertrag von $-200$. Mit ausschließlich realen Übergängen aus dem Puffer waren es $1{,}500$–$2{,}500$. Das Modell sparte keine realen Schritte ein. Ein modellfreies Verfahren mit einem Ensemble von Kritikern und vielen Updates pro Schritt (REDQ, Chen et al., 2021) erreichte dieselbe Stichprobeneffizienz wie MBPO.
 
 <!--en:c0964c46-->
 ::: {.slide title="Verständnisfragen zu Horizont, Zustandsänderungen und Ensembles"}

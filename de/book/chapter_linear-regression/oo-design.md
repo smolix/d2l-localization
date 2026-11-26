@@ -444,8 +444,8 @@ Der Aufruf `data.train_dataloader()` liefert einen wiederverwendbaren Datenlader
 <!--en:967cbd68-->
 [Vergleich mit der eigenen Implementierung]{.kicker}
 
-<!--en:161331be-->
-Mit `Trainer(max_epochs=10)` und `LinearRegressionScratch(2, lr=0.03)` zeigen sich wieder dieselbe Konvergenz (der Verlust sinkt pro Epoche um den Faktor $7\times$) und Parameterschätzungen mit einem Fehler der Größenordnung $10^{-4}$:
+<!--en:d9af4fa1-->
+Mit `Trainer(max_epochs=10)` und `LinearRegressionScratch(2, lr=0.03)` zeigen sich wieder dieselbe Konvergenz (der Verlust sinkt pro Epoche um den Faktor $7\times$) und Parameterschätzungen mit einem Fehler von höchstens etwa $10^{-3}$:
 
 <!--en:800146c7-->
 - **Deckungsgleiche Trainings- und Validierungskurven:** Bei nur $3$ Parametern und $1{,}000$ Beispielen ist Auswendiglernen unmöglich. Der Validierungsverlust folgt dem Trainingsverlust bis hinunter zu $\sigma^2/2 = 5 \times 10^{-5}$.

@@ -164,8 +164,8 @@ Ein **Transformer-Block** trennt das **Mischen zwischen Token** (Multi-Head-Atte
 <!--en:a9c38797-->
 3. **QK-Norm in `TransformerBlock`.** Schreiben Sie eine Funktion `attn_factory`, die `d2l.MultiHeadAttention` kapselt und vor der Berechnung der Attention-Scores in jedem Kopf RMSNorm der Breite `d // h` auf Abfragen und Schlüssel anwendet. Multiplizieren Sie die Projektionsgewichte eines Stapels aus 16 Blöcken mit $4\times$ (oder $16\times$). Prüfen Sie, dass die Attention-Entropie durch eine positive Konstante nach unten beschränkt bleibt.
 
-<!--en:bb51fc17-->
-4. **Varianzbudget des Residualstroms über die Tiefe.** Bei Pre-Norm addiert jede Teilschicht eine Aktualisierung zum Residualstrom. Führen Sie `signal_stats(pre_norm=True, std=0.02 / math.sqrt(2 * L), num_blks=L)` für $L \in \{8, 16, 32, 64\}$ aus und vergleichen Sie die Ergebnisse mit der unskalierten Variante `std=None`. Prüfen Sie, dass die Standardabweichung des Stroms im letzten Block $L$ ohne Skalierung wie $\sqrt{L}$ wächst. Prüfen Sie auch, dass sie unabhängig von $L$ nahezu konstant bleibt, wenn Sie die Skalierungsregel mit $1/\sqrt{2L}$ anwenden.
+<!--en:9cad4238-->
+4. **Varianzbudget des Residualstroms über die Tiefe.** Bei Pre-Norm addiert jede Teilschicht eine Aktualisierung zum Residualstrom. Ändern Sie `signal_stats` so, dass die Einträge von `W_o` und `W_2` mit Standardabweichung $0.02/\sqrt{2L}$ gezogen werden und die aller anderen Matrizen mit Standardabweichung $0.02$. Vergleichen Sie das mit der Initialisierung aller Matrizen mit Standardabweichung $0.02$ für $L \in \{8, 16, 32, 64\}$. Prüfen Sie, dass das quadratische Mittel des Residualstroms am Ende ohne Skalierung mit $L$ wächst. Prüfen Sie auch, dass es mit der Skalierungsregel $1/\sqrt{2L}$ nahezu konstant bleibt.
    :exlabel:`ex_transformer-block-stream-variance`
 
 <!--en:b6f90639-->
@@ -364,8 +364,8 @@ Ohne `QK-Norm` erhöht eine Skalierung der Gewichte um den Faktor $16\times$ die
 <!--en:d1fa7d93-->
 [Mischen zwischen Kanälen]{.kicker}
 
-<!--en:0787ea63-->
-- Schreibt man das zweischichtige FFN mithilfe der Zeilen $\mathbf{w}_{1,j} \in \mathbb{R}^d$ von $\mathbf{W}_1$ und der Spalten $\mathbf{w}_{2,j} \in \mathbb{R}^d$ von $\mathbf{W}_2$, erkennt man einen inhaltsadressierten Speicher (Geva et al., 2021):
+<!--en:30ec0071-->
+- Schreibt man das zweischichtige FFN mithilfe der Spalten $\mathbf{w}_{1,j} \in \mathbb{R}^d$ von $\mathbf{W}_1$ und der Zeilen $\mathbf{w}_{2,j} \in \mathbb{R}^d$ von $\mathbf{W}_2$, erkennt man einen inhaltsadressierten Speicher (Geva et al., 2021):
   $$\mathrm{FFN}_{\mathrm{GELU}}(\mathbf{x}) = \sum_{j=1}^{4d} \mathrm{GELU}(\mathbf{x}^\top \mathbf{w}_{1,j})\, \mathbf{w}_{2,j}$$
 
 <!--en:62aa7037-->

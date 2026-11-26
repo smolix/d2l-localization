@@ -91,8 +91,8 @@ Allgemeiner wirkt $1/\sigma^2$ als inverse Temperatur. Mit ihr multiplizieren wi
 <!--en:3e3b98d5-->
 Jede Zeile der Attention-Matrix $\mathbf{A}$ ist eine Wahrscheinlichkeitsverteilung über die Schlüssel. Stellen wir $\mathbf{A}$ als Heatmap dar, erkennen wir, welche Schlüssel die einzelnen Abfragen heranziehen.
 
-<!--en:d65d34c1-->
-Bei $\sigma = 0.1$ konzentriert sich das Gewicht in einem schmalen diagonalen Band um die jeweils nächstgelegenen Trainingseingaben. Bei $\sigma = 2.0$ verteilt es sich breit über den Datensatz. Alle Gewichte weichen höchstens um einen Faktor von etwa zwei vom einheitlichen Gewicht $1/40 = 0.025$ ab. Die größten Gewichte von etwa $0.05$ treten bei Abfragen an den Rändern auf.
+<!--en:d3a79b80-->
+Bei $\sigma = 0.1$ konzentriert sich das Gewicht in einem schmalen diagonalen Band um die jeweils nächstgelegenen Trainingseingaben. Bei $\sigma = 2.0$ verteilt es sich breit über den Datensatz. Kein Gewicht übersteigt etwa das Doppelte des einheitlichen Gewichts $1/40 = 0.025$. Die größten Gewichte von etwa $0.05$ treten bei Abfragen an den Rändern auf. Deren weit entfernte Schlüssel erhalten nur etwa $0.002$.
 
 <!--en:48cfc3c4-->
 Bei der Betrachtung von Attention-Heatmaps in tiefen Netzen sind zwei Einschränkungen zu beachten:
@@ -387,8 +387,8 @@ Wie viele Schlüssel tragen effektiv zur Vorhersage für eine Abfrage bei? Für 
 <!--en:f2c95b23-->
 - **Diagonales Band bei $\sigma = 0.1$:** Bei sortierten Abfragen und Schlüsseln entsteht ein schmaler diagonaler Streifen. Jede Abfrage zieht nur $2$–$3$ benachbarte Schlüssel heran.
 
-<!--en:d2f2a66a-->
-- **Breite Verteilung bei $\sigma = 2.0$:** Die Wahrscheinlichkeitsmasse verteilt sich auf fast alle $40$ Schlüssel. Die Gewichte weichen höchstens um einen Faktor von etwa zwei vom einheitlichen Gewicht $1/40 = 0.025$ ab (Maximum $\approx 0.05$ an den Rändern).
+<!--en:97515ffb-->
+- **Breite Verteilung bei $\sigma = 2.0$:** Die Wahrscheinlichkeitsmasse verteilt sich auf fast alle $40$ Schlüssel. Die Gewichte betragen höchstens etwa das Doppelte des einheitlichen Gewichts $1/40 = 0.025$ (Maximum $\approx 0.05$ an den Rändern).
 
 <!--en:7316f363-->
 ::: {.slide title="Fallstrick 1: Abfragen außerhalb des Trainingsbereichs und Unterlauf"}

@@ -413,8 +413,8 @@ Um ein auf ImageNet vortrainiertes ResNet-50 ($\sim 25\text{M}$ Parameter, $1{,}
 <!--en:e8025b20-->
 Drei Fragen zum Checkpointing:
 
-<!--en:64e07341-->
-1. Ein MLP ($20 \to 256 \to 10$, `float32`) wird in `mlp.safetensors` gespeichert. Der JSON-Dateikopf ist $n = 280$ Byte lang. Wie viele Byte umfasst die gesamte Datei genau?
+<!--en:72bbc623-->
+1. Ein MLP ($20 \to 256 \to 10$, `float32`) wird in `mlp.safetensors` gespeichert. Der JSON-Dateikopf sei $n = 296$ Byte lang (die genaue Länge hängt davon ab, welche Tensornamen das Framework schreibt). Wie viele Byte umfasst die gesamte Datei genau?
 
 <!--en:f2885448-->
 2. Das Regressionsmodell $20 \to 64 \to 1$ hat $20 \times 64 + 64 + 64 \times 1 + 1 = 1{,}409$ Parameter. Das Training wird bei $\eta = 0.05$ mit einem neu initialisierten Adam-Optimierer ($\mathbf{m}=\mathbf{v}=\mathbf{0}$) fortgesetzt. Jede Gradientenkomponente ist ungleich null. Wie groß ist die euklidische Norm $\|\Delta \mathbf{w}\|_2$ des allerersten Parameterupdates?
@@ -425,8 +425,8 @@ Drei Fragen zum Checkpointing:
 <!--en:557b98b6-->
 **Lösungen:**
 
-<!--en:95675cfe-->
-1. **$8 + 280 + 4 \times 7{,}946 = 32{,}072$ Byte:** 8 Byte für die Längenangabe $+$ 280 Byte für den JSON-Dateikopf $+$ $31{,}784$ Byte für die $7{,}946$ Parameter in `float32`.
+<!--en:31be5ef7-->
+1. **$8 + 296 + 4 \times 7{,}946 = 32{,}088$ Byte:** 8 Byte für die Längenangabe $+$ 296 Byte für den JSON-Dateikopf $+$ $31{,}784$ Byte für die $7{,}946$ Parameter in `float32`.
 
 <!--en:4bd3b3b7-->
 2. **$\|\Delta \mathbf{w}\|_2 \approx 0.05 \sqrt{1{,}409} \approx 1.88$:** Jede Koordinate ändert sich um $\pm \eta = \pm 0.05$, gleichgültig, wie klein $\|\mathbf{g}\|_2$ ist.

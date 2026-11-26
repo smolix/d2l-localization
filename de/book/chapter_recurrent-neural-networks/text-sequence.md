@@ -418,8 +418,8 @@ Ein BPE-Vokabular mit 1024 Token ($1024 - 256 = 768$ Verschmelzungen), direkt au
 <!--en:215f957a-->
 - **Erste Verschmelzungen (`256..263`):** Häufige englische Buchstabenpaare und Wortenden mit nachgestelltem Leerzeichen (`b'e '`, `b'th'`, `b't '`, `b'in'`, `b'd '`, `b'er'`).
 
-<!--en:3be32616-->
-- **Letzte Verschmelzungen (`1016..1023`):** Stämme aus mehreren Zeichen und wiederkehrende Wörter zum Thema der Novelle (`b'imension'`, `b'Time Traveller '`, `b'little '`).
+<!--en:03b4d7c7-->
+- **Letzte Verschmelzungen (`1016..1023`):** Wortstämme und ganze Wörter mit nachgestelltem Leerzeichen (`b'ering '`, `b'door'`, `b'after '`).
 
 <!--en:8fb6d105-->
 - **Das Problem:** Das Token `[b'Time Traveller ']` vereint zwei eigenständige Wörter und ein nachgestelltes Leerzeichen in einem einzigen Vokabulareintrag.
@@ -433,8 +433,8 @@ Ein BPE-Vokabular mit 1024 Token ($1024 - 256 = 768$ Verschmelzungen), direkt au
 <!--en:e577d933-->
 BPE vergibt die IDs fortlaufend in der Reihenfolge des Trainings. Behalten wir aus einem Lauf mit 4096 Token nur die Verschmelzungen mit ID $< |\mathcal{V}|$, erhalten wir exakt den Tokenizer der Größe $|\mathcal{V}|$:
 
-<!--en:a0430876-->
-- **Kompressionsgewinn bei Verdopplung:** Tragen wir die Zahl der UTF-8-Bytes pro Token gegen $\log |\mathcal{V}|$ für den Bereich $256 \to 4{,}096$ auf, ergibt sich fast eine Gerade. Jede Verdopplung von $|\mathcal{V}|$ bringt etwa $0.5$ zusätzliche Bytes pro Token.
+<!--en:b73e8d96-->
+- **Kompressionsgewinn bei Verdopplung:** Tragen wir die Zahl der UTF-8-Bytes pro Token gegen $\log |\mathcal{V}|$ für den Bereich $256 \to 4{,}096$ auf, ergibt sich fast eine Gerade. Jede Verdopplung von $|\mathcal{V}|$ bringt etwa $0.7$–$1$ Byte mehr pro Token.
 
 <!--en:afddaa28-->
 - **Sinkende Häufigkeiten:** Verschmelzung 256 fasst Tausende Vorkommen von `b'e '` zusammen, Verschmelzung 4095 nur noch eine Handvoll.
@@ -472,8 +472,8 @@ Ohne Beschränkung auf Wortgrenzen reichen 78 der 768 gelernten Verschmelzungen 
 <!--en:6abd8e1e-->
 Übergeben wir `pattern=BPETokenizer.GPT2_PATTERN`, verschwinden alle Verbindungen über Wortgrenzen hinweg. Die frei gewordenen Vokabulareinträge stehen für ganze Wörter mit vorangestelltem Leerzeichen zur Verfügung:
 
-<!--en:d104d181-->
-- **Keine Token über Wortgrenzen hinweg:** Die Zahl der grenzüberschreitenden Token sinkt (`len(crossers)`: $78 \to 0$). An die Stelle dieser Token treten ganze Wörter wie `' Traveller'`, `' Machine'` und `' dimension'`.
+<!--en:d6fbb701-->
+- **Keine Token über Wortgrenzen hinweg:** Die Zahl der grenzüberschreitenden Token sinkt (`len(crossers)`: $78 \to 0$). An die Stelle dieser Token treten ganze Wörter wie `' Traveller'`, `' Machine'` und `' Morlocks'`.
 
 <!--en:333fda5b-->
 - **Vorangestelltes Leerzeichen:** Die ersten Verschmelzungen ergeben `b' t'`, `b' a'`, `b'he'`, `b'in'`. Der Wortanfang enthält damit das vorausgehende Leerzeichen. Beim Dekodieren braucht man keine Heuristik, um Leerzeichen einzufügen.
@@ -592,8 +592,8 @@ Wie funktionieren die BPE-Kodierung und die Vortokenisierung in der Praxis?
 <!--en:6eb2bee8-2-->
 | Tokenisierung | Grundalphabet | Vokabulargröße $|\mathcal{V}|$ (*Time Machine*) | Sequenzlänge $T$ | Verhalten außerhalb des Vokabulars (OOV) | Zielkonflikt beim Modellentwurf |
 
-<!--en:1441f284-->
-| **Unbeschränktes BPE** | UTF-8-Bytes + gierige Paarverschmelzungen | Frei gewählter Hyperparameter (z. B. $1{,}024$) | $\sim 61{,}000$ | **Keine OOV-Fälle** (unbekannte Stämme bleiben als Bytes erhalten) | Verschmilzt auch über Leerzeichen hinweg (`'of the '`) und verteilt so die Statistik einzelner Wörter auf mehrere Token |
+<!--en:fcd4993c-->
+| **Unbeschränktes BPE** | UTF-8-Bytes + gierige Paarverschmelzungen | Frei gewählter Hyperparameter (z. B. $1{,}024$) | $\sim 62{,}000$ | **Keine OOV-Fälle** (unbekannte Stämme bleiben als Bytes erhalten) | Verschmilzt auch über Leerzeichen hinweg (`'of the '`) und verteilt so die Statistik einzelner Wörter auf mehrere Token |
 
 <!--en:913d123b-->
 | **BPE mit Vortokenisierung (GPT-2 / Llama 3)** | Textstücke aus regulärem Ausdruck + BPE auf Byteebene + Sondertoken mit hohen IDs | $1{,}024 + 3$ (hier) oder $50\textrm{k}\text{--}200\textrm{k}$ (in der Praxis) | $65{,}741$ ($2.72$ Bytes/Token) | **Keine OOV-Fälle** + gegen Prompt-Injection geschützte Sondertoken | Industriestandard als Kompromiss zwischen Sequenzkompression, Kosten der Softmax-Funktion und offenem Vokabular |

@@ -64,8 +64,8 @@ Mischen wir die Patches im $6 \times 6$-Gitter, sinkt die Validierungsgenauigkei
 <!--en:72056fdd-->
 Lernt die unstrukturierte 1D-Positionstabelle `pos_embedding` ($36 \times d$) tatsächlich die 2D-Geometrie des $6 \times 6$-Bildgitters? Dazu berechnen wir die mittlere Kosinusähnlichkeit der Positionsvektoren von Patch-Paaren als Funktion ihres Gitterabstands $\max(|r - r'|, |c - c'|)$ im $6 \times 6$-Gitter (`grid_similarity`). Als Vergleich berechnen wir dieselbe Kurve für eine sinusförmige 2D-Kodierung, die das Gitter konstruktionsbedingt abbildet, und für Zufallsvektoren, denen diese Struktur fehlt:
 
-<!--en:8c504088-->
-Nach zehn Epochen ist die Gitterstruktur kaum zu erkennen. Nur benachbarte Patches (Abstand 1) sind einander etwas ähnlicher als Zufallsvektoren. Ihre mittlere Kosinusähnlichkeit liegt unter 0.1, bei Zufallsvektoren beträgt sie etwa $-0.03$. Bei größeren Abständen verläuft die Kurve der gelernten Vektoren flach nahe null. Erst bei Abstand 5 wird der Beitrag des Trainings gegenüber dem anfänglichen Rauschen wieder positiv. Dann liegen die beiden Patches an gegenüberliegenden Bildrändern. Bei der sinusförmigen 2D-Kodierung fällt die Ähnlichkeit dagegen von etwa $0.75$ bei Abstand 1 auf deutlich unter null. Die klare 2D-Struktur, die :citet:`Dosovitskiy.Beyer.Kolesnikov.ea.2021` in den Positionseinbettungen des ViT finden, entsteht durch wesentlich längeres Training auf wesentlich größeren Datensätzen.
+<!--en:bdde23ef-->
+Nach zehn Epochen ist die Gitterstruktur kaum zu erkennen. Benachbarte Patches (Abstand 1) und Patches an gegenüberliegenden Bildrändern (Abstand 5) sind einander etwas ähnlicher als Zufallsvektoren. Ihre mittlere Kosinusähnlichkeit liegt bei etwa $+0.05$ gegenüber $-0.03$ bei Zufallsvektoren. Bei den Abständen dazwischen verläuft die Kurve der gelernten Vektoren knapp unter null. Gegenüber dem anfänglichen Rauschen ist der Beitrag des Trainings bei Abstand 5 am größten. Bei der sinusförmigen 2D-Kodierung fällt die Ähnlichkeit dagegen von etwa $0.75$ bei Abstand 1 auf deutlich unter null. Die klare 2D-Struktur, die :citet:`Dosovitskiy.Beyer.Kolesnikov.ea.2021` in den Positionseinbettungen des ViT finden, entsteht durch wesentlich längeres Training auf wesentlich größeren Datensätzen.
 
 <!--en:03bd98aa-->
 ## Vergleich mit einem konvolutionären Netz gleicher Parameteranzahl
@@ -198,8 +198,8 @@ Transformer für die Bildverarbeitung (ViT)<br>**Patches als Token · Faltung mi
 <!--en:afff07f5-->
 Nach Dosovitskiy et al. (2021) konfiguriert `ViTBlock` unseren `d2l.TransformerBlock` (§{sec_transformer-block}) mit vorgeschalteter `LayerNorm`, unmaskierter Multi-Head-Self-Attention und einem zweischichtigen MLP mit exakter `GELU`-Aktivierung:
 
-<!--en:ea95b201-->
-Warum verwendet ViT `LayerNorm` und `GELU` anstelle von `RMSNorm` und `SwiGLU`? Damit folgt das Modell der ViT-Originalarbeit von 2020. Moderne Grundnetze für die Bildverarbeitung wie SigLIP 2, DINOv2 und AIMv2 verwenden wie LLMs auch `RMSNorm`, `SwiGLU` und zweidimensionales `RoPE`.
+<!--en:0ca42c37-->
+Warum verwendet ViT `LayerNorm` und `GELU` anstelle von `RMSNorm` und `SwiGLU`? Damit folgt das Modell der ViT-Originalarbeit von 2020. Moderne Grundnetze für die Bildverarbeitung übernehmen Komponenten aus LLMs. AIMv2 verwendet `RMSNorm` und `SwiGLU`, DINOv3 zweidimensionales `RoPE`.
 
 <!--en:a1032097-->
 ::: {.slide title="Das Auslesen des `<cls>`-Tokens und der Vorwärtsdurchlauf im ViT" only="pytorch"}
@@ -237,8 +237,8 @@ Global-Average-Pooling über die $m$ Patch-Ausgaben (`X[:, 1:].mean(axis=1)`) fu
 <!--en:d64d0b17-->
 - **Sinusförmige 2D-Kodierung:** Verkettet die $d/2$-dimensionale Zeilenkodierung $\mathbf{s}_r$ mit der $d/2$-dimensionalen Spaltenkodierung $\mathbf{s}_c$.
 
-<!--en:e0268631-->
-- **Axiales 2D-RoPE:** Rotiert die Hälfte der Kanäle von Abfragen und Schlüsseln gemäß Zeile $r$, die andere Hälfte gemäß Spalte $c$ (in DINOv2 und SigLIP 2).
+<!--en:f5dedde4-->
+- **Axiales 2D-RoPE:** Rotiert die Hälfte der Kanäle von Abfragen und Schlüsseln gemäß Zeile $r$, die andere Hälfte gemäß Spalte $c$ (in DINOv3).
 
 <!--en:b93b7db6-->
 ::: {.slide title="Wahl des Optimierers: Warum ViTs AdamW benötigen"}
@@ -288,8 +288,8 @@ Wie stark hängt der trainierte `ViT` von der räumlichen Anordnung im 2D-Gitter
 <!--en:8fe65723-->
 - **Kosinusähnlichkeit nach Chebyshev-Abstand $k = \max(|r - r'|, |c - c'|)$ im Gitter:** Als Vergleich für die gelernte Positionstabelle der Größe $36 \times 512$ dienen ein fest vorgegebenes sinusförmiges 2D-Gitter und Zufallsvektoren.
 
-<!--en:731a05c5-->
-- **Schwache lokale Struktur nach 10 Epochen:** Nur benachbarte Patches ($k = 1$) zeigen eine erhöhte Ähnlichkeit ($+0.05$ gegenüber $-0.03$ bei Zufallsrauschen). Bei der sinusförmigen 2D-Kodierung fällt die Ähnlichkeit deutlich von $+0.76$ auf $-0.46$.
+<!--en:39b3df14-->
+- **Schwache lokale Struktur nach 10 Epochen:** Nur bei $k = 1$ und $k = 5$ (gegenüberliegende Bildränder) zeigt sich eine erhöhte Ähnlichkeit ($\approx +0.05$ gegenüber $-0.03$ bei Zufallsrauschen). Bei der sinusförmigen 2D-Kodierung fällt die Ähnlichkeit deutlich von $+0.76$ auf $-0.46$.
 
 <!--en:a39b3e9f-->
 - **Warum?** Um die gesamte Topologie des 2D-Gitters aus 1D-Rasterindizes zu lernen, braucht das Modell große Datensätze und Hunderte von Epochen (Dosovitskiy et al., 2021).
@@ -318,8 +318,8 @@ Wie stark hängt der trainierte `ViT` von der räumlichen Anordnung im 2D-Gitter
 <!--en:436d3895-->
 [Ergebnisse für ViT und CNN]{.kicker}
 
-<!--en:4194623b-->
-- **Stabiler Vorsprung des CNN um 5 Prozentpunkte:** In unabhängigen Läufen (Streuung über Zufallsstartwerte $\le 0.1\%$) erreicht `CompactResNet` eine Validierungsgenauigkeit von **$\approx 94\%$**, gegenüber **$\approx 89\%$** für `ViT`.
+<!--en:9111f2fe-->
+- **Stabiler Vorsprung des CNN um 5 Prozentpunkte:** In je zwei Läufen (Streuung über Zufallsstartwerte höchstens etwa ein halber Prozentpunkt) erreicht `CompactResNet` eine Validierungsgenauigkeit von **$\approx 94\%$**, gegenüber **$\approx 89\%$** für `ViT`.
 
 <!--en:d180e70b-->
 - **Schnellere Konvergenz zu Beginn:** Durch seine eingebaute 2D-Lokalität und Translationsäquivarianz liegt das CNN schon in Epoche 1 mehrere Prozentpunkte vorn. Der Vorsprung hält bis Epoche 10 an.

@@ -369,8 +369,8 @@ Direkt im Code lassen sich `max` (größter endlicher Wert), `tiny` (kleinste po
 <!--en:1500c236-->
 [Wenn kleine Parameterupdates durch Rundung verschwinden]{.kicker}
 
-<!--en:f6099678-->
-- **Faustregel für Hauptgewichte:** Unmittelbar oberhalb von $w = 1.0$ beträgt der Rasterabstand in `bf16` genau $2^{-7} \approx 0.0078$. Eine Erhöhung mit $|\Delta w| < 0.0039$ rundet wieder auf $1.0$, sofern die Updates nicht in `fp32` aufsummiert werden.
+<!--en:8ed7d580-->
+- **Faustregel für Hauptgewichte:** Unmittelbar oberhalb von $w = 1.0$ beträgt der Rasterabstand in `bf16` genau $2^{-7} \approx 0.0078$. Unterhalb von 1 ist der Abstand halb so groß. Bei einer Erhöhung um weniger als $0.0039$ (oder einer Verringerung um weniger als rund $0.0020$) wird das Gewicht wieder auf $1.0$ gerundet, sofern die Updates nicht in `fp32` aufsummiert werden.
 
 <!--en:1f640abd-->
 ::: {.slide title="Regeln für die automatische Typumwandlung bei unterschiedlichen Operanden" except="tensorflow"}

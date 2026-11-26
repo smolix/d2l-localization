@@ -450,8 +450,8 @@ Bei globaler Batchgröße $B = 256$ dauert ein Schritt auf zwei GPUs **fast $2\t
 <!--en:389de016-->
 Wächst die Batchgröße $b$ pro GPU gemäß $256 \to 4{,}096 \to 32{,}768$, übersteigt die Ausführungszeit $t_{\textrm{dev}}(b)$ auf dem Gerät schließlich sowohl $2h_{\textrm{step}}$ als auch die Zeit $\alpha + S\beta_{\textrm{link}}$ für den Gradientenaustausch.
 
-<!--en:411872f5-->
-- **Drei Bereiche:** Bei $b = 256$ gilt $t_{\textrm{dev}} \ll h_{\textrm{step}}$ (kein Gewinn). Bei $b = 4{,}096$ beginnt $t_{\textrm{dev}}$, die Zeit $h_{\textrm{step}}$ zu übersteigen. Bei $b = 32{,}768$ dauert die Berechnung auf dem Gerät deutlich länger als die Kernel-Starts durch den Host und der Allreduce für $247\text{ KB}$. So erreichen zwei GPUs bei schwacher Skalierung eine **Beschleunigung um den Faktor $\sim 1.9\times$**.
+<!--en:7d12281b-->
+- **Drei Bereiche:** Bei $b = 256$ gilt $t_{\textrm{dev}} \ll h_{\textrm{step}}$ (kein Gewinn). Bei $b = 4{,}096$ beginnt $t_{\textrm{dev}}$, die Zeit $h_{\textrm{step}}$ zu übersteigen. Bei $b = 32{,}768$ dauert die Berechnung auf dem Gerät deutlich länger als die Kernel-Starts durch den Host und der Allreduce für $247\text{ KB}$. So erreichen zwei GPUs bei schwacher Skalierung eine **Beschleunigung um den Faktor $\sim 2\times$ ($1.97\text{--}1.98\times$)**.
 
 <!--en:692ecd07-->
 ::: {.slide title="Verständnisfragen zu Allreduce-Datenverkehr und Beschleunigung mit mehreren GPUs"}

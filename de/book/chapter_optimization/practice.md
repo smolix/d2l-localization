@@ -391,8 +391,8 @@ Konfiguration für einen Trainingslauf über $3{,}000$ Schritte für ein neues M
 <!--en:d3df39b0-->
 [Kalibrierung über 10% der Trainingsdauer]{.kicker}
 
-<!--en:f25b1c6a-->
-- Vor dem Lauf über $3{,}000$ Schritte stehen drei Probeläufe mit je $300$ Schritten (insgesamt $900$ Schritte, $<30\%$ eines vollständigen Laufs) für die Lernraten $\eta \in \{10^{-3}, 3{\times}10^{-3}, 10^{-2}\}$:
+<!--en:e567b1b3-->
+- Vor dem Lauf über $3{,}000$ Schritte stehen drei Probeläufe mit je $300$ Schritten (insgesamt $900$ Schritte, $30\%$ eines vollständigen Laufs) für die Lernraten $\eta \in \{10^{-3}, 3{\times}10^{-3}, 10^{-2}\}$:
   - **$\eta = 10^{-3}$:** Langsam ($\approx 1.88$ Nat, Clipping bei $2\text{--}3\%$ der Schritte).
   - **$\eta = 3 \times 10^{-3}$:** **Optimal ($\approx 1.75$ Nat, Clipping bei $3\%$ der Schritte, also wirksamer Schutz)**.
   - **$\eta = 10^{-2}$:** Der Verlust stagniert bei $\approx 2.5$ Nat (Clipping bei $6\%$ der Schritte).
@@ -466,8 +466,8 @@ Für jedes Trainingsszenario eine Diagnose stellen und eine Lösung angeben:
 <!--en:e3fe1f97-->
 | **Mittelung der Gewichte (EMA)** | $\bar{\mathbf{x}}_t = \alpha\bar{\mathbf{x}}_{t-1} + (1-\alpha)\mathbf{x}_t$ ($\alpha \in [0.995, 0.9999]$) | Fensterlänge $\frac{1}{1-\alpha} > \frac{1}{\eta\lambda_{\text{curv}}}$. Nach dem anfänglichen Abstieg beginnen | Erreicht bei konstanter Lernrate die Genauigkeit eines Laufs mit Kosinus-Abfall |
 
-<!--en:4d2489f1-->
-| **Kalibrierung in Probeläufen** | $\eta_0$ über $10\%$ der Trainingsdauer variieren ($300$ von $3{,}000$ Schritten) | $\eta_0$ um den Faktor $3\times$ unter der Stagnationsschwelle wählen und $b_{\text{noise}}$ prüfen | Kalibriert die maximale Lernrate mit $<30\%$ des Aufwands eines vollständigen Trainingslaufs |
+<!--en:298f512f-->
+| **Kalibrierung in Probeläufen** | $\eta_0$ über $10\%$ der Trainingsdauer variieren ($300$ von $3{,}000$ Schritten) | $\eta_0$ um den Faktor $3\times$ unter der Stagnationsschwelle wählen und $b_{\text{noise}}$ prüfen | Kalibriert die maximale Lernrate mit $30\%$ des Aufwands eines vollständigen Trainingslaufs |
 
 <!--en:c2525580-->
 | **Bewährte Standardkonfiguration** | AdamW $(0.9, 0.95)$, $\lambda = 0.1$ nur für Matrizen, Clipping bei $1.0$ | $1\text{--}5\%$ lineare Aufwärmphase, dann Kosinus- oder WSD-Abfall auf $\le 0.1\eta_0$ | Zuverlässige Baseline für Transformer und moderne tiefe Netze |

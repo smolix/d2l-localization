@@ -269,8 +269,8 @@ Bestärkendes Offline-Lernen: Verteilungsverschiebung und Pessimismus<br>**Feste
 <!--en:2b5ccfa1-->
 - **Reines Offline-Lernen:** Klinikdaten, Empfehlungssysteme und Protokolle ferngesteuerter Roboter liefern einen festen Datensatz $\mathcal{D}$ **ohne weitere Interaktion mit der Umgebung**.
 
-<!--en:dd37904f-->
-- **Unkorrigierte Maximierungsverzerrung:** Nach 100 FrozenLake-Episoden mit enger Abdeckung ($V^*(s_0) = 0.180$) sagt naives Offline-Q-Learning **$0.25$** vorher und erzielt nur **$0.10$**. Kein Rollout widerlegt die zufällig hohen Werte selten erprobter Aktionen.
+<!--en:8ebf5f4e-->
+- **Unkorrigierte Maximierungsverzerrung:** Nach 100 FrozenLake-Episoden mit enger Abdeckung ($V^*(s_0) = 0.180$) sagt naives Offline-Q-Learning **$0.25$** vorher und erzielt nur **$0.11$**. Kein Rollout widerlegt die zufällig hohen Werte selten erprobter Aktionen.
 
 <!--en:7434d8f9-->
 ::: {.slide title="Drei Arten der Datennutzung: On-Policy, Off-Policy und offline"}
@@ -325,8 +325,8 @@ Da jeder Durchlauf dieselben protokollierten Übergänge nutzt, konvergiert inkr
 <!--en:634596ab-2-->
 [Der empirische Fixpunkt]{.kicker}
 
-<!--en:2a783b90-->
-Bei einem Protokoll mit 500 Episoden der Gleichverteilungsstrategie stimmen die inkrementellen Durchläufe und die direkte Lösung gut überein:
+<!--en:119ffd2d-->
+Bei einem Protokoll mit 500 Episoden (etwa 4000 Übergängen) der Gleichverteilungsstrategie stimmen die inkrementellen Durchläufe und die direkte Lösung gut überein:
 
 <!--en:5c02a558-->
 ::: {.slide title="Verhaltensklonen und Verknüpfen von Teiltrajektorien"}
@@ -352,8 +352,8 @@ Welche **Vorhersage** macht jeder lernende Agent für das Startfeld ($\max_a \ha
 <!--en:146425cf-->
 - **Teiltrajektorien aus Protokollen der Gleichverteilungsstrategie verknüpfen:** Verhaltensklonen kopiert eine Irrfahrt und erzielt **$0.01$**. Naives Q-Learning verbindet gute Teilstücke verschiedener zufälliger Episoden und erzielt **$0.14$**. Damit übertrifft es den Klon bei $40/40$ Protokollen.
 
-<!--en:5ddf38cd-->
-- **Überschätzung bei engen Protokollen:** Naives Q-Learning sagt **$0.25 > V^* = 0.18$** bei $39/40$ engen Protokollen vorher, erzielt aber nur **$0.10$**. Den Ertrag des Klons von $0.09$ übertrifft es bei $27/40$ Protokollen knapp.
+<!--en:c67f6ffc-->
+- **Überschätzung bei engen Protokollen:** Naives Q-Learning sagt **$0.25 > V^* = 0.18$** bei $39/40$ engen Protokollen vorher, erzielt aber nur **$0.11$**. Den Ertrag des Klons von $0.09$ übertrifft es bei $27/40$ Protokollen knapp.
 
 <!--en:bd1aa539-->
 ::: {.slide title="Woher kommen die überhöhten Vorhersagen?"}
@@ -513,8 +513,8 @@ Grundlagen des bestärkenden Offline-Lernens überprüfen:
 <!--en:4944aef5-->
 | **Offline-SARSA** | On-Policy-TD mit $r + \gamma Q(s', a'_{\textrm{log}})$ | **Keines** | Bewertet nur $Q^{\pi_e}$ | Konvergiert ohne Verbesserung gegen den Wert der Verhaltensstrategie |
 
-<!--en:7501f83b-->
-| **Naives Offline-Q-Learning** | Empirisches Bellman-Maximum $\max_{a'} \hat{Q}(s', a')$ | **Gut** | **Keiner** (wählt selten erprobte Paare mit Glückstreffern) | Gut bei gleichmäßiger Abdeckung ($0.14$), Überschätzung bei enger Abdeckung ($0.25$ gegenüber $0.10$) |
+<!--en:da9fc920-->
+| **Naives Offline-Q-Learning** | Empirisches Bellman-Maximum $\max_{a'} \hat{Q}(s', a')$ | **Gut** | **Keiner** (wählt selten erprobte Paare mit Glückstreffern) | Gut bei gleichmäßiger Abdeckung ($0.14$), Überschätzung bei enger Abdeckung ($0.25$ gegenüber $0.11$) |
 
 <!--en:626dd8a7-->
 | **Pessimistisches Q-Learning / CQL** | Strafterm im Backup mit $-\kappa/\sqrt{n}$ oder Log-Sum-Exp | **Gut** | **Stark** (unterdrückt selten erprobte Paare) | Überlegen bei engen Protokollen ($0.14$, übertrifft BC bei $39/40$), schadet bei zu starkem Abzug |

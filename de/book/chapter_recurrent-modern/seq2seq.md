@@ -301,8 +301,8 @@ Die Tabelle zur Zustandskapazität bei der Umkehraufgabe zeigt drei quantitative
 <!--en:d3534d8c-->
 Prüfen Sie Ihr Verständnis anhand dieser drei Fragen:
 
-<!--en:fd827085-->
-1. Warum ergibt BLEU auf Satzebene bei fest vorgegebener Ordnung $k = 4$ für jede Übersetzung aus 3 Wörtern genau $0.0$, selbst wenn alle 3 Wörter mit einer Referenz aus 3 Wörtern exakt übereinstimmen?
+<!--en:eaae61c9-->
+1. Warum ergibt BLEU auf Satzebene bei fest vorgegebener Ordnung $k = 4$ für die fast richtige Übersetzung aus sechs Wörtern *we will visits our grandparents tomorrow* genau $0.0$, obwohl fünf der sechs Wörter stimmen?
 
 <!--en:0786d398-->
 2. Warum bestimmen wir die Genauigkeit beim Umkehren von Zeichenketten mit Teacher-Forcing, wenn wir die Kapazität des Encoder-Zustands $\mathbf{c}$ messen?
@@ -313,8 +313,8 @@ Prüfen Sie Ihr Verständnis anhand dieser drei Fragen:
 <!--en:557b98b6-->
 **Antworten:**
 
-<!--en:c7277ffa-->
-1. Ein Satz aus 3 Wörtern enthält kein Wort-4-Gramm. (Im Code endet die Schleife wegen `min(k, len_pred)` bei $n=3$. Erzwingt man $k=4$ ohne Begrenzung auf `len_pred`, gilt $p_4 = 0$. Auch mit Begrenzung gibt es bei einem Kandidaten mit mindestens 4 Wörtern Fälle ohne übereinstimmendes 4-Gramm: Weicht bei 6 Wörtern das Wort an Position 3 ab, gilt $p_4 = 0$.)
+<!--en:a282c88f-->
+1. In einem Satz aus sechs Wörtern enthält jedes Wort-4-Gramm das Wort an Position 3. Wegen des falschen *visits* stimmt daher kein 4-Gramm mit der Referenz überein. Damit gilt $p_4 = 0$ und das Produkt ist null.
 
 <!--en:3a57eec0-->
 2. Beim freien Dekodieren verändert ein einziges falsches Token im Schritt $t'=1$ die rekurrente Trajektorie des Decoders und verfälscht spätere Schritte. Da die zufälligen Buchstaben unabhängig sind, verrät Teacher-Forcing nichts über $y_{t'}$. So messen wir isoliert, welche Information $\mathbf{c}$ enthält.

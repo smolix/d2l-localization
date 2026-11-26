@@ -203,8 +203,8 @@ Der **KV-Cache** speichert die Schlüssel nach der RoPE-Rotation und die Werte f
 3. **Gemeinsames Präfix für $K$ Fortsetzungen.** Angenommen, $K = 16$ Sequenzen in einem Batch teilen sich einen System-Prompt aus $n_{\textrm{shared}} = 4096$ Token und jede Sequenz hat $n_{\textrm{unique}} = 256$ eigene Token erzeugt. Passen Sie den Nenner von :eqref:`eq_kv-cache-batch-throughput` für den Fall an, dass der KV-Cache des gemeinsamen Präfixes pro Schritt nur **einmal** für alle $K$ Sequenzen gespeichert und gelesen wird. Berechnen Sie den daraus folgenden Durchsatzgewinn bei $K = 16$ für das 70B-Modell mit GQA.
    :exlabel:`ex_kv-cache-shared-reads`
 
-<!--en:1a8799aa-->
-4. **INT8-/FP8-Quantisierung des KV-Caches.** Speichern Sie in `forward_blocks` die Schlüssel und Werte von GPT-2 mit symmetrischer 8-Bit-Ganzzahlquantisierung pro Token. Berechnen Sie für jeden Tokenvektor $\mathbf{u} \in \mathbb{R}^d$ den Skalierungsfaktor $s = \max_j |u_j| / 127$, quantisieren Sie mit $\tilde{\mathbf{u}} = s \cdot \textrm{round}(\mathbf{u} / s)$ und verwenden Sie $\tilde{\mathbf{u}}$ in der Attention. Messen Sie die Änderung von `tail_loss` auf `x` bei Quantisierung der Schlüssel und Werte auf 8 Bit (Cache-Speicherbedarf um den Faktor $2\times$ kleiner) und auf 4 Bit (`max / 7`, Verringerung um den Faktor $4\times$).
+<!--en:84ebd5d7-->
+4. **INT8-/FP8-Quantisierung des KV-Caches.** Speichern Sie in `forward_blocks` die Schlüssel und Werte von GPT-2 mit symmetrischer 8-Bit-Ganzzahlquantisierung pro Token. Berechnen Sie für jeden Tokenvektor $\mathbf{u} \in \mathbb{R}^d$ den Skalierungsfaktor $s = \max_j |u_j| / 127$, quantisieren Sie mit $\tilde{\mathbf{u}} = s \cdot \textrm{round}(\mathbf{u} / s)$ und verwenden Sie $\tilde{\mathbf{u}}$ in der Attention. Messen Sie die Änderung von `tail_loss` auf `x` bei Quantisierung der Schlüssel und Werte auf 8 Bit (Cache-Speicherbedarf um den Faktor $4\times$ kleiner als bei unserem FP32-Cache und um den Faktor $2\times$ kleiner als bei BF16) und auf 4 Bit (`max / 7`, Verringerung um den Faktor $8\times$ gegenüber FP32 und $4\times$ gegenüber BF16).
    :exlabel:`ex_kv-cache-quantization`
 
 <!--en:0bdb69b2-->
@@ -301,8 +301,8 @@ In `forward_cached` projiziert jeder Block mit Vornormierung nur die neuen Token
 <!--en:8cd49386-->
 [Korrektheitsprüfung]{.kicker}
 
-<!--en:47ed7dfd-->
-Der KV-Cache liefert **keine Näherung**. Ein Prefill mit $16$ Token und anschließende Einzelschritte für $32$ weitere Token liefern **dieselben Logits** wie ein Durchlauf ohne Cache über alle $48$ Token (bis auf Rundung, $\sim 10^{-7}$). Das gilt für rotierende wie für erlernte Positionseinbettungen.
+<!--en:f630b905-->
+Der KV-Cache liefert **keine Näherung**. Ein Prefill mit $16$ Token und anschließende Einzelschritte für $32$ weitere Token liefern **dieselben Logits** wie ein Durchlauf ohne Cache über alle $48$ Token (bis auf Rundung, $\sim 10^{-6}$). Das gilt für rotierende wie für erlernte Positionseinbettungen.
 
 <!--en:bd7b7215-->
 ::: {.slide title="Gemessene Beschleunigung bei 4000 Token um mehr als 20×"}
@@ -338,8 +338,8 @@ Der KV-Cache liefert **keine Näherung**. Ein Prefill mit $16$ Token und anschli
 <!--en:e7761e84-->
 - **Rechenzeit und Datentransfer.** Bei GPT-2 Small ($B = 1$) benötigen $2N \approx 2.5 \times 10^8\text{ FLOPs}$ nur $0.003\text{ ms}$ bei $83\text{ TFLOP/s}$. Das Lesen von $498\text{ MB}$ an FP32-Gewichten aus dem HBM mit $1\text{ TB/s}$ dauert dagegen mindestens **$0.50\text{ ms/token}$**.
 
-<!--en:b50dc764-->
-- **Gemessene Latenz ($0.8\text{--}1.3\text{ ms/token}$).** Sie liegt nur um den Faktor $1.6\text{--}2\times$ über dem physikalischen Minimum bei gegebener HBM-Bandbreite.
+<!--en:6de07444-->
+- **Gemessene Latenz ($0.8\text{--}1.3\text{ ms/token}$).** Sie ist etwa $1.6\text{--}2.6\times$ so hoch wie die Mindestzeit zum Laden der Gewichte. Rechnet man bei langen Kontexten die Cache-Bytes mit, fällt der Faktor kleiner aus.
 
 <!--en:efcc2cae-->
 ::: {.slide title="Prefill und Dekodierung auf der Hardware-Roofline"}

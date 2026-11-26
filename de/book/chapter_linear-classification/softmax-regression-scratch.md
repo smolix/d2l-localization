@@ -163,13 +163,13 @@ Warum endet `SoftmaxRegression.forward` bei den Logits, statt Wahrscheinlichkeit
 <!--en:3063a6b6-->
 1. **Überlauf:** $\exp(o)$ läuft über und ergibt `inf`, sobald $o > 88.7$ gilt. Ziehen wir $o_{\max} = \max_k o_k$ von jedem Logit ab, ist ein Überlauf ausgeschlossen, denn jeder verschobene Exponent $o_k - o_{\max}$ ist $\leq 0$.
 
-<!--en:64c9a5b0-->
-2. **Unterlauf:** Auch nach der Verschiebung um $o_{\max}$ bleibt ein Problem: Liegt das Logit einer Klasse mehr als $104$ unter $o_{\max}$ (wie bei Klasse 1 in $\mathbf{o} = (0, -200, 0)$), so ergibt $\exp(o_y - o_{\max})$ in float32 durch Unterlauf exakt `0.0`. Dann liefert $\log(0.0)$ den Wert `-inf`. Die Untergrenze `1e-12` unserer eigenen Implementierung begrenzt den Verlust in diesem Fall auf $27.6$ und **setzt den Gradienten auf null**. Aus einer mit hoher Sicherheit getroffenen Fehlentscheidung kann das Modell dann nicht lernen.
+<!--en:313d4476-->
+2. **Unterlauf:** Auch nach der Verschiebung um $o_{\max}$ bleibt ein Problem: Liegt das Logit einer Klasse mehr als $104$ unter $o_{\max}$ (wie bei der zweiten Klasse, die im Code das Label 1 trägt, in $\mathbf{o} = (0, -200, 0)$), so ergibt $\exp(o_y - o_{\max})$ in float32 durch Unterlauf exakt `0.0`. Dann liefert $\log(0.0)$ den Wert `-inf`. Die Untergrenze `1e-12` unserer eigenen Implementierung begrenzt den Verlust in diesem Fall auf $27.6$ und **setzt den Gradienten auf null**. Aus einer mit hoher Sicherheit getroffenen Fehlentscheidung kann das Modell dann nicht lernen.
 
 <!--en:1dbe5d34-->
 Wir vermeiden sowohl Überlauf als auch Unterlauf, indem wir *Wahrscheinlichkeiten gar nicht erst als Zwischenergebnis berechnen*. Mit dem *Log-Sum-Exp-Trick* fassen wir den Logarithmus und die verschobene Softmax-Funktion algebraisch zusammen. So wird aus der Division eine Subtraktion:
 
-<!--en:5a8ebda0-->
+<!--en:01c1bb48-->
 Jeder verschobene Exponent $o_k - o_{\max}$ ist $\leq 0$ und mindestens einer ist gleich $0$. Daher liegt die Summe im Logarithmus im Intervall $[1, q]$ und ihr Logarithmus im Intervall $[0, \log q]$. Weder ein Überlauf noch $\log 0$ können auftreten. Automatisches Differenzieren (engl. automatic differentiation) liefert den endlichen Gradienten $\mathrm{softmax}(\mathbf{o}) - \mathbf{y}$.
 
 <!--en:30b339cb-->
@@ -402,8 +402,8 @@ Das Training von `SoftmaxRegressionScratch` läuft über $10$ Epochen auf Fashio
 <!--en:637372a8-->
 [Qualitative Fehleranalyse]{.kicker}
 
-<!--en:a0dc6fb9-->
-Im ersten Validierungsminibatch mit $256$ Bildern klassifiziert das Modell etwa $40$ Kleidungsstücke falsch. Bei den ersten acht Fehlern (`true → predicted`) fällt ein Muster auf:
+<!--en:76a05556-->
+Im ersten Validierungsminibatch mit $256$ Bildern klassifiziert das Modell etwa $35$ bis $40$ Kleidungsstücke falsch. Bei den ersten acht Fehlern (`true → predicted`) fällt ein Muster auf:
 
 <!--en:10c68a4f-->
 - **Ähnliche Silhouetten:** Bei fast jedem Fehler verwechselt das Modell zwei Oberteile (Hemd, Pullover, Mantel, T-Shirt) oder zwei Schuhe, deren Pixel ähnliche Umrisse bilden.

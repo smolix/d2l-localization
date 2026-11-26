@@ -203,8 +203,8 @@ Warum belegt die naive Attention $8n^2$ Byte temporären Speicher pro Kopf in `f
 <!--en:05c5a477-->
 [Empirische Messungen]{.kicker}
 
-<!--en:127ad23d-->
-Wir messen den maximalen temporären Speicherbedarf (`d2l.peak_memory`) und die verstrichene Zeit (`d2l.Benchmark`) für einen einzelnen Kopf in `float32` ($d_h = 64$). Die Messung bestätigt den Bedarf von genau $8n^2$ Byte und den Anstieg der Laufzeit um den Faktor $4\times$ bei jeder Verdopplung von $n$:
+<!--en:25e85e8e-->
+Wir messen den maximalen temporären Speicherbedarf (`d2l.peak_memory`) und die verstrichene Zeit (`d2l.Benchmark`) für einen einzelnen Kopf in `float32` ($d_h = 64$). Die Messung bestätigt den Bedarf von genau $8n^2$ Byte und den Anstieg der Laufzeit um den Faktor $4\times$ bei jeder Verdopplung von $n$, sobald $n \ge 8{,}192$ gilt:
 
 <!--en:8f6533fb-->
 ::: {.slide title="Warum die naive Softmax-Berechnung zwei Durchläufe zu erfordern scheint"}
@@ -437,8 +437,8 @@ Bearbeiten Sie diese drei Fragen zu Hardware und Algorithmen:
 <!--en:ac9cb8c1-->
 2. **Sofortiger Überlauf zu `inf`**, gefolgt von `inf / inf = NaN` bei der Normierung der Ausgabe. Führen wir $m$ mit, gilt stets $a_j - m' \le 0$. Damit liegt jeder Exponentialwert in $(0, 1]$.
 
-<!--en:837d27ce-->
-3. **Die maximale Kachelgröße $b \le M / (4d_h)$ halbiert sich.** Daher sind doppelt so viele Durchläufe über $\mathbf{K}, \mathbf{V}$ nötig. Der quadratische HBM-Verkehr steigt (bei fester Gesamtbreite insgesamt um den Faktor $2\times$, bei fester Kopfzahl um den Faktor $4\times$).
+<!--en:d023f6f7-->
+3. **Die maximale Kachelgröße $b \le M / (4d_h)$ halbiert sich.** Daher sind doppelt so viele Durchläufe über $\mathbf{K}, \mathbf{V}$ nötig. Der quadratische HBM-Verkehr steigt pro Kopf um den Faktor $4\times$. Bei fester Gesamtbreite $d$ halbiert sich die Zahl der Köpfe, sodass sich der gesamte Verkehr verdoppelt.
 
 <!--en:9ef04be0-->
 ::: {.slide title="Zusammenfassung: Rechenkosten der Attention"}

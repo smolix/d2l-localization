@@ -97,8 +97,8 @@ Der Kern der Trainingsschleife umfasst nur ein Dutzend Codezeilen. Mit denselben
 <!--en:8504ecd2-->
 Wie klein sollte der Verlust bei erfolgreichem Training werden? Selbst bei den wahren Parametern $(\mathbf{w}^*, b^*)$ entsprechen die Residuen dem gaußschen Rauschen $\hat{y}^{(i)} - y^{(i)} = -\epsilon^{(i)} \sim \mathcal{N}(0, \sigma^2)$. Der erwartete Verlust erreicht hier also die *durch das Rauschen gesetzte Untergrenze* (engl. irreducible noise floor):
 
-<!--en:f771cbb8-->
-Bei der Initialisierung ($\mathbf{w} \approx \mathbf{0}, b = 0$) bestimmt dagegen das Label $y = \mathbf{x}^\top\mathbf{w}^* + b^* + \epsilon$ die Größe des Residuums. Es hat den Mittelwert $b^* = 4.2$ und die Varianz $\|\mathbf{w}^*\|_2^2 + \sigma^2 = 2^2 + (-3.4)^2 + 0.01^2 = 15.5601$. Damit beträgt der erwartete Anfangsverlust
+<!--en:bac96f95-->
+Bei der Initialisierung ($\mathbf{w} \approx \mathbf{0}, b = 0$) ist das Residuum dagegen näherungsweise $-y = -(\mathbf{x}^\top\mathbf{w}^* + b^* + \epsilon)$. Unter dieser Näherung hat es den Mittelwert $-b^* = -4.2$ und die Varianz $\|\mathbf{w}^*\|_2^2 + \sigma^2 = 2^2 + (-3.4)^2 + 0.01^2 = 15.5601$. Damit beträgt der erwartete Anfangsverlust
 
 <!--en:151e1dda-->
 Im Laufe des Trainings sollte der Verlust demnach um fünf Größenordnungen fallen, von rund $16.6$ bis zur rauschbedingten Untergrenze $0.00005$.

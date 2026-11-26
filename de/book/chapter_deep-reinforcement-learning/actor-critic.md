@@ -575,8 +575,8 @@ Wegen $\hat{A}^{\textrm{GAE}}_t = \delta_t + \gamma\lambda\, \hat{A}^{\textrm{GA
 <!--en:b5a93611-->
 - Bei knappem Budget (50 Updates zu je 4 Episoden, 5 Zufallsstartwerte) stagnieren Schätzer mit hohem Bootstrap-Anteil ($\lambda = 0$ und $\lambda = 0.5$) bei einem Median des Ertrags von $150$ bis $250$.
 
-<!--en:ddbb3bf7-->
-- Mischungen mit längerem Horizont ($\lambda \in \{0.9, 0.95, 1.0\}$) erreichen fast $500$. Die geringere Gewichtung der Verzerrung des noch ungenauen Kritikers wiegt schwerer als das zusätzliche Belohnungsrauschen.
+<!--en:3264577c-->
+- Mischungen mit längerem Horizont ($\lambda \in \{0.9, 0.95, 1.0\}$) erreichen etwa doppelt so hohe Erträge (Mediane von rund $350$–$450$). Die geringere Gewichtung der Verzerrung des noch ungenauen Kritikers wiegt schwerer als das zusätzliche Belohnungsrauschen.
 
 <!--en:3de8713a-->
 ::: {.slide title="Verzerrung und Varianz des Gradienten bei festen Strategien"}

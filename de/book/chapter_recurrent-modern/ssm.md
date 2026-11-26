@@ -195,8 +195,8 @@ Strukturierte Zustandsraummodelle (S4D)<br>**zeitkontinuierliche Dynamik · Disk
 <!--en:a8b45d49-->
 - **Unterlauf bei Bias null:** Gatter mit $\sigma(0) = 0.5$ schwächen ein Signal über 1000 Schritte um den Faktor $2^{-1000} = 0$ ab. Das Ergebnis ist in `float32` null.
 
-<!--en:63d7c0e6-->
-- **Strukturierte Zustände:** In einem zeitkontinuierlichen SSM hat jeder Kanal $N$ auf logarithmischer Skala verteilte Abklingraten $\lambda_1, \ldots, \lambda_N$, skaliert mit $\Delta$.
+<!--en:2b72389f-->
+- **Strukturierte Zustände:** In einem zeitkontinuierlichen SSM hat jeder Kanal $N$ Abklingraten $\lambda_n = -n$, skaliert mit einer logarithmisch gleichverteilten Schrittweite $\Delta$.
 
 <!--en:18322994-->
 ::: {.slide title="Zeitkontinuierliche lineare Zustandsraummodelle als Differentialgleichungen"}
@@ -373,8 +373,8 @@ Testgenauigkeit (Zufallsniveau $= 0.125$) und längste Halbwertszeit nach dem Tr
 <!--en:56026645-->
 Die unteren Zeilen der Ausgabetabelle betrachten (`slowest half-life after training`):
 
-<!--en:5b39bf14-->
-- **Bei $T = 100$ (`S4D, short timescales` lernt):** Mit der langsamsten anfänglichen Rate $\Delta|\lambda_1| = 0.1$ bleibt nach $99$ Füllschritten der Signalanteil $e^{-0.1 \times 99} = e^{-9.9} \approx \mathbf{5 \times 10^{-5}}$ erhalten. Da $5 \times 10^{-5}$ deutlich über der relativen Genauigkeitsgrenze von `float32` ($\sim 10^{-7}$) liegt, erhält Adam einen Gradienten ungleich null. Die längste Halbwertszeit steigt von **$7$ Schritten auf $107$ bis $170$ Schritte**.
+<!--en:f90ef5bc-->
+- **Bei $T = 100$ (`S4D, short timescales` lernt):** Mit der langsamsten anfänglichen Rate $\Delta|\lambda_1| = 0.1$ bleibt nach $99$ Füllschritten der Signalanteil $e^{-0.1 \times 99} = e^{-9.9} \approx \mathbf{5 \times 10^{-5}}$ erhalten. Da $5 \times 10^{-5}$ deutlich über der relativen Genauigkeitsgrenze von `float32` ($\sim 10^{-7}$) liegt, erhält Adam einen Gradienten ungleich null. Die längste Halbwertszeit steigt von **$7$ Schritten auf etwa $100$–$200$ Schritte**.
 
 <!--en:20ffc36d-->
 - **Bei $T = 1{,}000$ (`S4D, short timescales` stagniert):** Nach $999$ Schritten bleibt vom Signal anfangs nur der Anteil $e^{-0.1 \times 999} \approx \mathbf{4 \times 10^{-44}}$. Bei der Gradientenakkumulation in `float32` geht das Signal durch Unterlauf ganz verloren. Die längste Halbwertszeit bleibt bei **$7$ Schritten**.

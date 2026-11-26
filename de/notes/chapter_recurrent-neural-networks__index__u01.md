@@ -1,3 +1,3 @@
-# Notes on chapter_recurrent-neural-networks/index.md#u01 (Codex Astra (medium), 2026-11-26 18:26 UTC)
+# Notes on chapter_recurrent-neural-networks/index.md#u01 (Codex Sol (medium), 2026-11-26 21:26 UTC)
 
-- 1940ee51: Der englische Beispielsatz bleibt im Original, da seine neunzehn vorausgehenden Wörter und das zu erratende Schlusswort Gegenstand der Aufgabe sind.
+- ae1ca8a4: The source calls 2.12 and 2.09 bpb a tie. The translation expresses a near tie.

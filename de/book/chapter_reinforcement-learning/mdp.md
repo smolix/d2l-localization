@@ -469,8 +469,8 @@ Der Befehl *unten* (`1`) in Zustand 9 hat drei gleich wahrscheinliche Ergebnisse
 <!--en:aa23fb87-->
 Zwei Eigenschaften bestätigen die Konstruktion der Arrays. Für jedes $(s, a)$ summiert sich der zugehörige Ausschnitt von `P` zu $1$, und `r[s, a]` ist nur dort von null verschieden, wo ein Schritt in die Zielzelle 15 führen kann:
 
-<!--en:04143f09-->
-- **Abprallen am Rand:** In einer Ecke können Bewegungen in zwei zueinander senkrechten Richtungen an einer Wand enden. Der Agent bleibt dann mit Wahrscheinlichkeit $2/3$ in der aktuellen Zelle.
+<!--en:c3056e1d-->
+- **Abprallen am Rand:** In einer Ecke können sowohl ein Befehl in Richtung einer Wand als auch eine der zugehörigen Rutschbewegungen den Agenten gegen eine Wand führen. Der Agent bleibt dann mit Wahrscheinlichkeit $2/3$ in der aktuellen Zelle.
 
 <!--en:d7d8225f-->
 - **Erwartete Belohnung in Zelle 14:** Bei *unten*, *rechts* oder *oben* erreicht der Agent von Zelle 14 aus die Zielzelle 15 mit Wahrscheinlichkeit $1/3$. Damit ist die erwartete Belohnung $r(14, a) = 1/3$. Bei *links* erreicht er das Ziel nie in einem Schritt.
@@ -556,8 +556,8 @@ Eine einheitliche Darstellung der Endzustände sorgt dafür, dass Matrixgleichun
 <!--en:d41c86f0-->
 - **Absorbierende Zustände:** `TabularMDP` modelliert jedes Loch und das Ziel als Übergang in denselben Zustand ($P(s \mid s, a) = 1$) mit $r(s, a) = 0$. Damit summiert sich jede Zeile von $P$ zu $1$, und die Erträge der Trajektorien bleiben erhalten.
 
-<!--en:eedd215c-->
-- **Wann $\gamma = 1$ zulässig ist:** Endet jede Strategie nach endlich vielen Schritten oder ist die Gesamtbelohnung nach oben beschränkt (bei FrozenLake höchstens $1$ pro Episode), bleiben die undiskontierten Erträge endlich.
+<!--en:15083e60-->
+- **Wann $\gamma = 1$ zulässig ist:** Endet jede Strategie nach endlich vielen Schritten oder sind die Belohnungen nichtnegativ und ist ihre Summe auf jeder Trajektorie nach oben beschränkt (bei FrozenLake höchstens $1$ pro Episode), bleiben die undiskontierten Erträge endlich.
 
 <!--en:612ed16c-->
 - **Wann der Ertrag bei $\gamma = 1$ divergiert:** Mit einem Überlebensbonus von $+0.05$ pro Schritt erzielt die Strategie, stets *oben* zu wählen, einen unendlichen undiskontierten Ertrag. Für solche fortlaufenden Aufgaben braucht man $\gamma < 1$.

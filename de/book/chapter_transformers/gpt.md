@@ -88,14 +88,14 @@ Mit 500 Aufwärmschritten bleiben die Ausgaben der Teilschichten kleiner als der
 <!--en:64302a93-->
 ### Vergleich mit einem rekurrenten Modell gleicher Größe
 
-<!--en:5c60bc23-->
-Wie schneidet unser `GPT` mit 6 Blöcken gegenüber dem rekurrenten Sprachmodell (`d2l.RNNLM`, :numref:`sec_rnn-scratch`) ab, wenn beide **dieselbe Parameteranzahl** ($d_{\textrm{rnn}} = 1920$, $\approx 4.7\textrm{M}$ Parameter) und gleich viele Trainingsschritte haben? Wir variieren die Lernrate des RNN über $\{10^{-3}, 2\times 10^{-3}, 4\times 10^{-3}\}$ und vergleichen den Validierungsverlust als Funktion der Fensterposition $t \in \{1, \dots, 128\}$ (`loss_by_position`):
+<!--en:b3e05a88-->
+Wie schneidet unser `GPT` mit 6 Blöcken gegenüber dem rekurrenten Sprachmodell (`d2l.RNNLM`, :numref:`sec_rnn-scratch`) ab, wenn beide **dieselbe Parameteranzahl** ($d_{\textrm{rnn}} = 1920$, $\approx 4.7\textrm{M}$ Parameter) und gleich viele Trainingsschritte haben? Wir variieren die Lernrate des RNN über $\{10^{-3}, 2\times 10^{-3}, 4\times 10^{-3}\}$ und vergleichen den Validierungsverlust als Funktion der Fensterposition $t \in \{0, \dots, 127\}$ (`loss_by_position`):
 
 <!--en:ce65c29b-->
 Wir trainieren `RNNLM` für jede der maximalen Lernraten $\{10^{-3}, 2\times 10^{-3}, 4\times 10^{-3}\}$ mit zwei Zufallsstartwerten. Dann vergleichen wir den besten rekurrenten Lauf mit `GPT` an den Fensterpositionen $t \in \{0, 1, 4, 16, 64, 127\}$:
 
-<!--en:383dff70-->
-An Position $t = 1$, an der nur ein Byte Kontext vorliegt, beginnen `GPT` und `RNNLM` mit nahezu demselben Verlust. Mit längerem Präfix ($t \to 128$) sinkt der Validierungsverlust des Transformers steiler als der des RNN. Die Self-Attention greift in $O(1)$ Schritten auf jedes frühere Byte zu. Das RNN muss dagegen die Vorgeschichte über $t$ aufeinanderfolgende rekurrente Schritte verdichten.
+<!--en:ff339a19-->
+An Position $t = 0$, an der nur ein Byte Kontext vorliegt, beginnen `GPT` und `RNNLM` mit nahezu demselben Verlust. Mit längerem Präfix ($t \to 127$) sinkt der Validierungsverlust des Transformers steiler als der des RNN. Die Self-Attention greift in $O(1)$ Schritten auf jedes frühere Byte zu. Das RNN muss dagegen die Vorgeschichte über $t$ aufeinanderfolgende rekurrente Schritte verdichten.
 
 <!--en:dd17b6a9-->
 ## Sampling aus dem Sprachmodell

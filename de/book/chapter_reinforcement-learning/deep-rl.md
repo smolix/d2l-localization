@@ -545,8 +545,8 @@ Ein eindimensionaler Schnitt durch die Wertfunktion vor und nach einer einzelnen
 <!--en:0eb726c9-->
 - **Generalisierung (der positive Buckel um $x_0$):** Erfahrung bei $x_0$ verbessert sofort die Informationsgrundlage für benachbarte Zustände, auch ohne sie zu besuchen.
 
-<!--en:2c880a51-->
-- **Interferenz und die tödliche Triade:** Das Training mit Batches aus aufrechten CartPole-Zuständen verändert $\hat{V}_w(s)$ bei großen Neigungswinkeln. Zusammen mit Bootstrapping und Off-Policy-Daten (der **tödlichen Triade** von Tsitsiklis & Van Roy, 1997) kann die globale Kopplung durch gemeinsame Parameter die Wertiteration zur Divergenz bringen.
+<!--en:527fd6a1-->
+- **Interferenz und die tödliche Triade:** Das Training mit Batches aus aufrechten CartPole-Zuständen verändert $\hat{V}_w(s)$ bei großen Neigungswinkeln. Zusammen mit Bootstrapping und Off-Policy-Daten (der **tödlichen Triade** aus §{sec_dqn}) kann die globale Kopplung durch gemeinsame Parameter das Lernen von Werten mit Bootstrapping zur Divergenz bringen. Tsitsiklis & Van Roy (1997) zeigten diese Divergenz.
 
 <!--en:787fd309-->
 ::: {.slide title="Überblick über Kapitel §{num:chap_reinforcement_learning} und Kapitel §{num:chap_deep_rl}"}

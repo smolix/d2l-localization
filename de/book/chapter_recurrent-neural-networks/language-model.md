@@ -402,8 +402,8 @@ Die **Laplace-Glättung (Add-$\alpha$)** beseitigt Nullwahrscheinlichkeiten. Sie
 <!--en:b3eb89a2-->
 - **Flüssiger Text trotz hoher Perplexität:** Bei Laplace-Glättung ($\alpha = 0.01$) liefert das Trigrammmodell die Samples, die am ehesten nach Wells klingen. Dennoch hat es die **schlechteste Perplexität auf zurückgehaltenem Text ($2{,}481.4$ gegenüber $753.6$ beim Bigrammmodell)**.
 
-<!--en:e9a3e8f7-->
-- **Warum die Laplace-Glättung bei $n = 3$ versagt:** $87\%$ der Validierungstrigramme fehlen im Training. Die Laplace-Glättung liefert die Gleichverteilung $1/|\mathcal{V}|$ für unbekannte Kontexte. Bei den $87\%$ unbekannten Testtrigrammen nutzt sie weder die allgemeine Worthäufigkeit noch den beobachteten Bigrammkontext $(x_{t-1})$ für den Rückgriff auf kürzere Kontexte.
+<!--en:df1412c7-->
+- **Warum die Laplace-Glättung bei $n = 3$ versagt:** $87\%$ der Validierungstrigramme fehlen im Training. Deshalb liefert die Laplace-Glättung an den meisten Testpositionen eine Vorhersage nahe der Gleichverteilung. Ist der Kontext aus zwei Wörtern selbst unbekannt, gilt genau $1/|\mathcal{V}|$. Das trifft auf etwa die Hälfte der Testpositionen zu. Dabei nutzt die Glättung weder die allgemeine Worthäufigkeit noch den beobachteten Bigrammkontext $(x_{t-1})$ für den Rückgriff auf kürzere Kontexte.
 
 <!--en:f4873a7b-->
 ::: {.slide title="Interpolierte Kneser-Ney-Glättung mit Diskontierung und Rückgriff auf kürzere Kontexte"}
@@ -468,8 +468,8 @@ Derselbe zurückgehaltene Text liefert einen gemeinsamen Maßstab für die Trigr
 <!--en:284cbfea-->
 - **Vom Faktor $400\times$ bei der Perplexität zu $0.2$ bpb Differenz:** Bei Laplace-Glättung reicht die Perplexität von $6.4$ bis $2{,}481.4$, die Werte in Bit pro Byte liegen dagegen im Bereich $2.58\text{--}2.81$ bpb.
 
-<!--en:47596190-->
-- **Warum BPE-1024 gewinnt ($1.90$ bpb mit Kneser-Ney):** Zwei BPE-Token umfassen $\sim 5.6$ Zeichen (gegenüber 2 beim Zeichentrigramm). Dabei entstehen **keine Zusatzkosten für das Ausschreiben von `<unk>`** (beim Worttrigramm sind das $\approx 0.6$ bpb).
+<!--en:7515a26d-->
+- **Warum BPE-1024 gewinnt ($1.90$ bpb mit Kneser-Ney):** Zwei BPE-Token umfassen $\sim 6$ Zeichen (gegenüber 2 beim Zeichentrigramm). Dabei entstehen **keine Zusatzkosten für das Ausschreiben von `<unk>`** (beim Worttrigramm sind das $\approx 0.6$ bpb).
 
 <!--en:3b75e339-->
 ::: {.slide title="Gleitende Eingabe- und Zielfenster für das Training neuronaler Modelle"}

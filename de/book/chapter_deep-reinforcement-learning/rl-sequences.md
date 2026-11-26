@@ -325,8 +325,8 @@ Damit die Strategie nicht ihre ganze Wahrscheinlichkeit auf das Schlupfloch legt
 <!--en:48306428-->
 - **Wahrscheinlichkeitsverhältnis unter der Referenz:** Unter $\pi_{\textrm{ref}}$ hat die Ausweichantwort das Logit $-4$, gewöhnliche Antworten haben das Logit $0$ ($e^{-4} \approx 0.018$).
 
-<!--en:af320e7f-->
-- **Kritischer Schwellenwert ($\beta = 1/4 = 0.25$):** Bei unlösbaren Prompts ist die Ausweichantwort für $\beta < 0.25$ am wahrscheinlichsten. Für **$\beta > 0.25$** wird sie unterdrückt.
+<!--en:8fb7e482-->
+- **Kritischer Schwellenwert ($\beta = 1/4$):** Bei unlösbaren Prompts ist die Ausweichantwort für $\beta < 0.25$ wahrscheinlicher als jede gewöhnliche Antwort. Mehr als die Hälfte der Wahrscheinlichkeitsmasse entfällt erst unterhalb von $\beta \approx 0.16$ auf die Ausweichantwort. Für **$\beta > 0.25$** ist sie weniger wahrscheinlich als jede gewöhnliche Antwort.
 
 <!--en:0c5a952c-->
 ::: {.slide title="Beta im Experiment und die exakten umgewichteten Optima"}

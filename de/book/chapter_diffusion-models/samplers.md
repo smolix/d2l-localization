@@ -650,8 +650,8 @@ Fragen zu schnellen Diffusionslösern und zur deterministischen Inversion:
 <!--en:2749fff8-->
 | Verfahren / Werkzeug | Aktualisierungsregel in $(\bar{\mathbf{x}}, \bar\sigma) = (\mathbf{x}/\alpha, \sigma/\alpha)$ | Ordnung und Kosten pro Schritt | Wichtigstes empirisches Ergebnis und Einsatz |
 
-<!--en:1f42dc49-->
-| **DDIM ($\eta = 0$)** | $\bar{\mathbf{x}}_s = \bar{\mathbf{x}}_t + (\bar\sigma_s - \bar\sigma_t)\hat{\boldsymbol\epsilon}_t$ | 1. Ordnung ($O(h)$), 1 NFE | Entspricht genau Euler für die Wahrscheinlichkeitsfluss-ODE und erreicht das Plateau in $50$ NFE |
+<!--en:3b9db009-->
+| **DDIM ($\eta = 0$)** | $\bar{\mathbf{x}}_s = \bar{\mathbf{x}}_t + (\bar\sigma_s - \bar\sigma_t)\hat{\boldsymbol\epsilon}_t$ | 1. Ordnung ($O(h)$), 1 NFE | Entspricht genau Euler für die Wahrscheinlichkeitsfluss-ODE und benötigt $50$–$100$ NFE bis zum Plateau |
 
 <!--en:b2f79ceb-->
 | **Stochastisches DDIM ($\eta > 0$)** | $\mathbf{x}_s = \alpha_s\hat{\mathbf{x}}_0 + \sqrt{\sigma_s^2 - \tilde\sigma^2}\hat{\boldsymbol\epsilon} + \tilde\sigma\boldsymbol\xi$ | SDE-Verfahren 1. Ordnung, 1 NFE | $\eta = 1$ verwendet die A-posteriori-Varianz und schneidet schlechter ab als $\eta = 0$ bei $\le 200$ Schritten |

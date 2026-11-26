@@ -52,7 +52,7 @@ Die Rekursion läuft ausgehend von $\mathbf{P}_H = \mathbf{Q}_H$ einmal rückwä
 <!--en:f92e6997-->
 Drei Eigenschaften von :eqref:`eq_lqr_gain` und :eqref:`eq_riccati_recursion` sind besonders wichtig:
 
-<!--en:2a5e40b4-->
+<!--en:b3867507-->
 1. **Kein Fluch der Dimensionalität:** Jedes Bellman-Backup ersetzt die Minimierung über einen unendlichen Aktionsraum $\mathbb{R}^m$ für alle Zustände in $\mathbb{R}^d$ durch $O(d^3 + m^3)$ Matrixoperationen mit $\mathbf{P}_{t+1}$.
 
 <!--en:984fbcb8-->

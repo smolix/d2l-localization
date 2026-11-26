@@ -343,8 +343,8 @@ Der Vergleich von `mlp_backward` mit `autograd` aus dem jeweiligen Framework in 
 <!--en:27d97f97-->
 - **Einfluss der Batchgröße:** Schon bei einem MLP mit 1 versteckten Schicht und $n = 256$ belegen die gespeicherten Aktivierungen ($1.08\textrm{ MB}$) mehr Speicher als die Modellparameter ($0.81\textrm{ MB}$).
 
-<!--en:b9c77197-->
-::: {.slide title="Rechenkosten – warum der Rückwärtsdurchlauf rund 2× so teuer ist wie der Vorwärtsdurchlauf"}
+<!--en:c5d73f20-->
+::: {.slide title="Rechenkosten – warum der Rückwärtsdurchlauf in tiefen Netzen rund 2× so teuer ist wie der Vorwärtsdurchlauf"}
 
 <!--en:1848d3ca-->
 [Rechen- und Speicheraufwand · FLOPs]{.kicker}
@@ -355,8 +355,8 @@ Der Vergleich von `mlp_backward` mit `autograd` aus dem jeweiligen Framework in 
 <!--en:92762c7a-->
 - **Rückwärtsdurchlauf ($205{,}824$ MACs pro Bild):** Jedes Matrixprodukt $\mathbf{H}^{(k-1)}\mathbf{W}^{(k)}$ im Inneren des Netzes erfordert rückwärts **zwei** Matrixprodukte mit jeweils derselben Anzahl an FLOPs ($\mathbf{H}^{(k-1)\top}\mathbf{G}$ und $\mathbf{G}\mathbf{W}^{(k)\top}$).
 
-<!--en:957f7980-->
-- **3× als Faustregel:** Der Rückwärtsdurchlauf benötigt $\approx 2\times$ so viele FLOPs wie der Vorwärtsdurchlauf. Ein vollständiger Trainingsschritt benötigt also $\approx 3\times$ so viele FLOPs wie die Inferenz.
+<!--en:799c3afa-->
+- **3× als Faustregel:** Beim gezeigten MLP mit 2 Schichten benötigen Rückwärts- und Vorwärtsdurchlauf etwa gleich viele FLOPs (in der ersten Schicht entfällt $\partial J/\partial \mathbf{X}$). In tiefen Netzen liegen fast alle Schichten im Inneren. Daher benötigt der Rückwärtsdurchlauf $\approx 2\times$ so viele FLOPs wie der Vorwärtsdurchlauf. Ein vollständiger Trainingsschritt benötigt also $\approx 3\times$ so viele FLOPs wie die Inferenz.
 
 <!--en:043907fd-->
 ::: {.slide title="Rückwärtsmodus, Vorwärtsmodus und endliche Differenzen im Vergleich"}

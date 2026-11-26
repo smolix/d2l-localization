@@ -543,11 +543,11 @@ Dieselben $40$ Realisierungen des Anfangsrauschens bei $\gamma = 0$ (links) und 
 <!--en:6ba71050-->
 Warum ist der unbedingte FD ($\gamma = 0$, $\mathrm{FD} \approx 2.75$) mehr als dreimal so hoch wie der bedingte FD ($\gamma = 1$, $\mathrm{FD} \approx 0.82$)? Erklären verschobene Klassenanteile die Differenz?
 
-<!--en:3fe38215-->
-- **Verschobene Klassenanteile erklären $< 15\%$ der Differenz:** Bei $\gamma = 0$ entstehen zu viele Pullover ($13\%$–$14\%$) und zu wenige Sandalen ($6\%$–$7\%$). Werden $5{,}000$ reale Bilder mit genau diesen Klassenhäufigkeiten gezogen, steigt ihr FD nur um $0.2$–$0.3$ (von $0.19$ auf $0.4$–$0.5$).
+<!--en:c773f584-->
+- **Verschobene Klassenanteile erklären weniger als ein Sechstel der Differenz:** Bei $\gamma = 0$ entstehen zu viele Pullover ($13\%$–$14\%$) und zu wenige Sandalen ($6\%$–$7\%$). Werden $5{,}000$ reale Bilder mit genau diesen Klassenhäufigkeiten gezogen, steigt ihr FD nur um $0.2$–$0.3$ (von $0.19$ auf $0.4$–$0.5$).
 
-<!--en:9ad89b60-->
-- **Hauptursache ($> 85\%$ der Differenz):** Nur $10\%$ der Beispiele in den Minibatches dienen dem Training ohne Klassenhinweis. Daher erzeugt $\mathbf{u}_{\boldsymbol\theta}(\mathbf{x}_t, t, \varnothing)$ mehr mehrdeutige Mischformen von Kleidungsstücken. Seine Fehler gehen mit Gewicht $(1 - \gamma)$ in jeden gesteuerten Schritt ein.
+<!--en:4d2c2f69-->
+- **Hauptursache (mehr als fünf Sechstel der Differenz):** Nur $10\%$ der Beispiele in den Minibatches dienen dem Training ohne Klassenhinweis. Daher erzeugt $\mathbf{u}_{\boldsymbol\theta}(\mathbf{x}_t, t, \varnothing)$ mehr mehrdeutige Mischformen von Kleidungsstücken. Seine Fehler gehen mit Gewicht $(1 - \gamma)$ in jeden gesteuerten Schritt ein.
 
 <!--en:e7b6226a-->
 ::: {.slide title="Warum gesteuerte ODE-Trajektorien über die Umgewichtung hinausschießen"}
@@ -617,8 +617,8 @@ Fragen zur Architektur des U-Nets, zur Kalibrierung des Fréchet-Abstands und zu
 <!--en:335f1564-->
 | **U-Net zur Entrauschung** | Encoder und Decoder mit $28 \to 14 \to 7$ und Skip-Verbindungen | $80\%$ der Parameter bei niedriger Auflösung, $57\%$ der MACs bei $28 \times 28$ | Viele Kanäle bei niedriger Auflösung vorsehen und GroupNorm verwenden |
 
-<!--en:7c0f4187-->
-| **EMA der Gewichte** | $\bar{\boldsymbol\theta} \leftarrow \bar{\boldsymbol\theta} + (1 - 2^{-1/n_{1/2}})(\boldsymbol\theta - \bar{\boldsymbol\theta})$ | FD um **$0.45$–$0.55$** niedriger als mit der letzten Iterierten | Zum Sampling stets EMA-Gewichte verwenden ($n_{1/2} \approx 10^3$–$10^4$) |
+<!--en:01ea7032-->
+| **EMA der Gewichte** | $\bar{\boldsymbol\theta} \leftarrow \bar{\boldsymbol\theta} + (1 - 2^{-1/n_{1/2}})(\boldsymbol\theta - \bar{\boldsymbol\theta})$ | FD um **$0.4$–$0.6$** niedriger als mit der letzten Iterierten | Zum Sampling stets EMA-Gewichte verwenden ($n_{1/2} \approx 10^3$–$10^4$) |
 
 <!--en:b4ea6e86-->
 | **Fréchet-Abstand (FD)** | $\|\boldsymbol\mu_p - \boldsymbol\mu_q\|^2 + \operatorname{tr}(\boldsymbol\Sigma_p + \boldsymbol\Sigma_q - 2(\boldsymbol\Sigma_p^{1/2}\boldsymbol\Sigma_q\boldsymbol\Sigma_p^{1/2})^{1/2})$ | Realer Referenzwert sinkt um den Faktor $5\times$ von $0.87$ ($1\text{k}$) auf $0.17$ ($5\text{k}$) | Immer Stichprobengröße $n$ und Referenzwert zwischen realen Mengen angeben |

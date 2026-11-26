@@ -351,8 +351,8 @@ Reproduzierbarkeit, Fehlersuche und Modellinspektion<br>**PRNG-Startwerte und Sc
 <!--en:cd7f5dd4-->
 - **Zufall bei Daten und Arbeitsprozessen:** Mischen der Minibatches pro Epoche, zuf채llige Datenaugmentierungen und per Fork erzeugte Arbeitsprozesse des Datenladers. Ohne eigene Startwerte erben diese identische Kopien des NumPy-Generatorzustands.
 
-<!--en:56c6fd6b-->
-::: {.slide title="Mit festen Startwerten eine Trainingstrajektorie bitgenau wiederholen"}
+<!--en:84402ff4-->
+::: {.slide title="Mit festen Startwerten eine Trainingstrajektorie bitgenau wiederholen" except="tensorflow"}
 
 <!--en:82b483f9-->
 [Globale Startwerte und explizite Schl체ssel]{.kicker}
@@ -362,6 +362,18 @@ Setzen wir den Startwert jedes PRNG, den die Schleife verwendet, liefern zwei L�
 
 <!--en:466a80ed-->
 - **Geltungsbereich beachten:** Ein Framework-Startwert setzt die Startwerte von `random` aus Python und `np.random` aus NumPy **nicht** automatisch. Nutzt Ihr Datensatz NumPy, setzen Sie auch dort explizit den Startwert.
+
+<!--en:18e48e18-->
+::: {.slide title="Mit festen Startwerten eine Trainingstrajektorie bitgenau wiederholen" only="tensorflow"}
+
+<!--en:82b483f9-2-->
+[Globale Startwerte und explizite Schl체ssel]{.kicker}
+
+<!--en:3fce1fb4-2-->
+Mit einem gesetzten Startwert f체r jeden PRNG in der Schleife liefern zwei L채ufe mit `seed=0` bis ins letzte Bit identische Verluste und Gewichte:
+
+<!--en:e7c619d6-->
+- **Geltungsbereich beachten:** `tf.keras.utils.set_random_seed` setzt die Startwerte f체r `random` aus Python, `np.random` aus NumPy und TensorFlow gemeinsam. `tf.random.set_seed` allein deckt nur TensorFlow ab.
 
 <!--en:b5aa835d-->
 ::: {.slide title="Private Generatorobjekte entkoppeln Zufallsfolgen"}

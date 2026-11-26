@@ -134,8 +134,8 @@ In der Standardeinstellung beschleunigt `torch.compile` den Schritt um weniger a
 <!--en:f58957fb-->
 ## Wiedergabe von Kernelstarts
 
-<!--en:97c4a0df-->
-Matrizenmultiplikationen lassen sich durch Fusion nicht zusammenfassen. Laufen die verbleibenden Kernel nur kurz, bestimmen die einzelnen Kernel-Starts durch den Host die Schrittdauer. Betrachten wir eine Folge von 60 linearen Schichten der Breite 256 ohne Bias mit $\tanh$-Aktivierungen für einen Batch mit 64 Beispielen (120 Operationen pro Aufruf). Jede Schicht benötigt nur $8.4 \times 10^6$ FLOPs und überträgt 384 KiB (< 0.5 µs nach der Roofline, tatsächlich etwa 1–3 µs auf dem Gerät unter Berücksichtigung der hardwarebedingten Mindestzeit für den Kernelstart). Bei sofortiger Ausführung fällt dagegen pro Operation $h$ an (insgesamt $120\,h$).
+<!--en:769fb216-->
+Matrizenmultiplikationen lassen sich durch Fusion nicht zusammenfassen. Laufen die verbleibenden Kernel nur kurz, bestimmen die einzelnen Kernel-Starts durch den Host die Schrittdauer. Betrachten wir eine Folge von 60 linearen Schichten der Breite 256 ohne Bias mit $\tanh$-Aktivierungen für einen Batch mit 64 Beispielen (120 Operationen pro Aufruf). Jede Schicht benötigt nur $8.4 \times 10^6$ FLOPs und überträgt 384 KiB (< 0.5 µs nach der Roofline, tatsächlich etwa 4–5 µs auf dem Gerät, wobei jeder Kernel etwa 1–3 µs über der hardwarebedingten Mindestzeit für den Kernelstart liegt). Bei sofortiger Ausführung fällt dagegen pro Operation $h$ an (insgesamt $120\,h$).
 
 <!--en:a6caae63-->
 NVIDIA-GPUs unterstützen *CUDA-Graphen*, mit denen die einzelnen Kernel-Starts durch den Host entfallen. Das Laufzeitsystem zeichnet die Folge von Kernelstarts samt festen Pufferadressen einmal auf. Danach gibt es die gesamte Folge mit einem einzigen Start durch den Host wieder. Da Pufferadressen und Formen in der Aufzeichnung feststehen, werden die Eingaben vor der Wiedergabe in feste Puffer kopiert. Die nächste Wiedergabe überschreibt die Ausgaben.
@@ -499,11 +499,11 @@ Grapherfassung, Optimierung und Codeerzeugung für die Kernel kosten beim ersten
 <!--en:1bd5f11e-->
 Operatorfusion kann aufeinanderfolgende Matrizenmultiplikationen nicht zusammenfassen. Als Beispiel dient ein Netz mit 60 linearen $256 \times 256$-Schichten und $\tanh$-Aktivierungen für einen Batch der Größe $B = 64$ ($120$ Operationen pro Vorwärtsdurchlauf):
 
-<!--en:c155121c-->
-- **Arbeit auf dem Gerät pro Schicht ($< 2\,\mu\text{s}$):** Jede Schicht benötigt $2 \cdot 64 \cdot 256^2 = 8.4 \times 10^6\text{ FLOPs}$ und überträgt $384\text{ KiB}$ ($< 0.5\,\mu\text{s}$ nach der Roofline bzw. $\sim 1\text{--}2\,\mu\text{s}$ unter Berücksichtigung der hardwarebedingten Mindestzeit für den Kernelstart).
+<!--en:2a0089e8-->
+- **Arbeit auf dem Gerät pro Schicht ($\sim 4\text{--}5\,\mu\text{s}$):** Jede Schicht benötigt $2 \cdot 64 \cdot 256^2 = 8.4 \times 10^6\text{ FLOPs}$ und überträgt $384\text{ KiB}$ ($< 0.5\,\mu\text{s}$ nach der Roofline, aber $\sim 1\text{--}3\,\mu\text{s}$ pro Kernel über der hardwarebedingten Mindestzeit für den Kernelstart, bei $2\text{--}3$ Kerneln pro Schicht).
 
-<!--en:8579a314-->
-- **Startkosten auf dem Host ($120\,h$):** Selbst für $60$ fusionierte Kernel kosten die Einzelstarts aus Python $60 \times 13\,\mu\text{s} \approx 0.8\text{ ms}$ auf der CPU. Dem stehen $\sim 0.15\text{ ms}$ Arbeit auf der GPU gegenüber. Die GPU bleibt während $> 80\%$ der Zeit untätig.
+<!--en:2482d0b0-->
+- **Startkosten auf dem Host ($120\,h$):** Die $120\text{--}180$ Kernel einzeln aus Python zu starten, kostet $\gtrsim 2\text{ ms}$ auf dem Host. Dem stehen $\sim 0.3\text{ ms}$ Arbeit auf der GPU gegenüber. Die GPU bleibt während $\sim 85\%$ der Zeit untätig.
 
 <!--en:3a052097-->
 ::: {.slide title="CUDA-Graphen einmal aufzeichnen und mit einem Host-Aufruf wiedergeben"}

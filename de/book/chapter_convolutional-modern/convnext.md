@@ -413,11 +413,11 @@ Bei festem `ModernRecipe` wird aus einem `CompactResNet18` mit angeglichener Par
 <!--en:c3a556f1-->
 | **Blockverteilung und Eingangsteil** | $(3, 4, 6, 3)$ Blöcke pro Stufe, $7\times 7_{s2}$-Faltung und Max-Pooling | $(3, 3, 9, 3)$ Blöcke pro Stufe, $4\times 4_{s4}$-Faltung zur Patch-Bildung | **$+0.7\%$** bei $224^2$ auf ImageNet (aber mit $4\times 4_{s4}$ sinkt die Genauigkeit um $\approx 2\%$ bei $64^2$-Miniaturbildern) |
 
-<!--en:589a8165-->
-| **Räumliche und kanalübergreifende Mischung** | Dichte $3\times 3$-Faltung im um den Faktor $4\times$ komprimierten Flaschenhals | Tiefenweise $7\times 7$-Faltung am Anfang und invertierter Flaschenhals mit Erweiterungsfaktor $4\times$ | **$+1.1\%$**. Die Kosten $49c$ der tiefenweisen Faltung betragen $<6\%$ der Kosten $8c^2$ des punktweisen MLP. |
+<!--en:7cb7faf6-->
+| **Räumliche und kanalübergreifende Mischung** | Dichte $3\times 3$-Faltung im um den Faktor $4\times$ komprimierten Flaschenhals | Tiefenweise $7\times 7$-Faltung am Anfang und invertierter Flaschenhals mit Erweiterungsfaktor $4\times$ | **$+1.1\%$**. Die $49c$ MACs der tiefenweisen Faltung machen $\approx 6\%$ der insgesamt $49c + 8c^2$ MACs des Blocks bei $c=96$ aus. |
 
 <!--en:d29f0747-->
 | **Aktivierungen und Normalisierungen** | 3 ReLUs und 3 Batchnormalisierungen pro Block | **1 GELU** und **1 Schichtnormalisierung pro Pixel** je Block | **$+0.9\%$**. Allein das Entfernen von 2 Nichtlinearitäten pro Block bringt $+0.7\%$. |
 
-<!--en:fb999889-->
-| **Downsampling und Skalierung** | Faltung mit Stride 2 in Block 1 der Stufe | Separate Schichten: $\textrm{LN} + 2\times 2_{s2}$-Faltung, Schichtskalierung $\boldsymbol{\gamma}=10^{-6}$ | **$+0.6\%$** (ohne Attention **$82.0\%$** gegenüber $81.3\%$ für Swin-T) |
+<!--en:9cdffe32-->
+| **Downsampling und Skalierung** | Faltung mit Stride 2 in Block 1 der Stufe | Separate Schichten: $\textrm{LN} + 2\times 2_{s2}$-Faltung, Schichtskalierung $\boldsymbol{\gamma}=10^{-6}$ | **$+0.5\%$** (ohne Attention **$82.0\%$** gegenüber $81.3\%$ für Swin-T) |

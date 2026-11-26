@@ -334,8 +334,8 @@ Nach der Lagrange-Dualität ist die Minimierung von $L(\mathbf{w}) + \frac{\lamb
 <!--en:e83f8235-->
 - **$\ell_2$-Ridge (glatte Kreisscheibe $\|\mathbf{w}\|_2 \leq r$):** Die elliptischen Niveaulinien von $L(\mathbf{w})$ um $\hat{\mathbf{w}}$ berühren den Kreis beim Anwachsen abseits der Achsen. Alle Koordinaten bleiben ungleich null, $(1, 1)^\top$ wird gegenüber $(2, 0)^\top$ bevorzugt.
 
-<!--en:b2d90ce3-->
-- **$\ell_1$-Lasso (Raute mit spitzen Ecken $\|\mathbf{w}\|_1 \leq r$):** Die $\ell_1$-Kugel $\sum_j |w_j| \leq r$ hat spitze Ecken auf den Koordinatenachsen. Die Niveaulinien des Verlusts treffen häufig zuerst eine Ecke, sodass $w_1 = 0$ gilt (**Sparsität** / Merkmalsauswahl).
+<!--en:2a112d62-->
+- **$\ell_1$-Lasso (Raute mit spitzen Ecken $\|\mathbf{w}\|_1 \leq r$):** Die $\ell_1$-Kugel $\sum_j |w_j| \leq r$ hat spitze Ecken auf den Koordinatenachsen. Die Niveaulinien des Verlusts treffen häufig zuerst eine Ecke, sodass $w_2 = 0$ gilt (**Sparsität** / Merkmalsauswahl).
 
 <!--en:01998736-->
 ::: {.slide title="Bayessche Sicht auf die MAP-Schätzung mit Gauß-Prior"}
@@ -367,8 +367,8 @@ Für $\sigma = 1.0, n = 300, \tau = 0.1$ ergibt die Formel des Gauß-Priors $\la
 <!--en:75036030-->
 - **Ohne Strafterm ($\lambda = 0$):** Der Trainingsverlust fällt auf $\sim 0.25$ (weit unter die Rauschgrenze von $0.50$). Der Validierungsverlust steigt auf $1.1$–$1.9$ und ist oft ebenso hoch wie beim konstanten Prädiktor mit $1.50$.
 
-<!--en:bf43ddd6-->
-- **Mit Strafterm ($\lambda = 1/3$):** Der Validierungsverlust stabilisiert sich bei $0.8$–$1.0$, und die Gewichtsnorm bleibt klein ($\|\hat{\mathbf{w}}\|_2 \approx 1.2$).
+<!--en:0c756b35-->
+- **Mit Strafterm ($\lambda = 1/3$):** Der Validierungsverlust stabilisiert sich bei etwa $0.75$–$1.05$, und die Gewichtsnorm bleibt klein ($\|\hat{\mathbf{w}}\|_2 \approx 1.2$).
 
 <!--en:993f4194-->
 ::: {.slide title="Spektrale Schrumpfung in der Eigenbasis von XᵀX/n"}
@@ -436,8 +436,8 @@ Beim mittleren quadratischen Fehler des Frameworks fehlt der Faktor $\frac{1}{2}
 <!--en:357f75db-->
 - **`lr` halbieren, `wd` verdoppeln:** Der Gradientenschritt auf den Daten $-\eta \nabla L$ und der multiplikative Zerfallsfaktor je Schritt $(1 - \eta\lambda) = 1 - 0.05 \times \frac{1}{3} = 1 - \frac{1}{60}$ bleiben bei `lr = 0.025` ($\eta/2$) und `wd = 2 * lambd` ($2/3$) erhalten.
 
-<!--en:797efa52-->
-- **Identische Lösung:** Die kompakte Implementierung erreicht dieselbe Gewichtsnorm $\|\hat{\mathbf{w}}\|_2 \approx 1.2$ und dieselbe Genauigkeit auf den Validierungsdaten.
+<!--en:cc7c8950-->
+- **Gleiche Lösung:** Die kompakte Implementierung erreicht dieselbe Gewichtsnorm $\|\hat{\mathbf{w}}\|_2 \approx 1.2$. Ihr mittlerer quadratischer Fehler auf den Validierungsdaten ist doppelt so hoch wie der Verlust der eigenen Implementierung, weil der Faktor $\frac{1}{2}$ fehlt.
 
 <!--en:7dbe50c1-->
 ::: {.slide title="Verständnisfragen zu Prior, Schrumpfung und adaptivem Gewichtszerfall"}

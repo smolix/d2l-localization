@@ -327,8 +327,8 @@ Wählt der trainierte Klon seine Aktionen gierig ($\mathrm{argmax}_a \pi_{\textr
 <!--en:cf2ae308-->
 - **Warum die gierige Wahl zu $100\%$ gelingt:** Auf jedem Feld des 6 Züge langen Weges hat die Expertenaktion die höchste Wahrscheinlichkeit ($0.818 > 0.061$). Mit `argmax` bleibt der Klon daher immer im Korridor.
 
-<!--en:2728f5e4-->
-- **Warum die Erfolgsrate mit Sampling auf $66.0\%$ fällt:** Bei $\varepsilon = 0.182$ pro Schritt beträgt die Wahrscheinlichkeit für 6 fehlerfreie Züge in Folge nur $0.818^6 \approx 0.300$. Abseits des Weges sind alle Aktionen mit Wahrscheinlichkeit $1/4$ gleich wahrscheinlich.
+<!--en:3c8ae140-->
+- **Warum die Erfolgsrate mit Sampling auf $66.0\%$ fällt:** Eine falsche Aktion ($\varepsilon = 0.182$ pro Schritt) führt auf dem Weg nur neben den Löchern 5 und 12 direkt zum Scheitern. Sonst stößt der Klon gegen eine Wand, geht einen Schritt auf dem Weg zurück oder gelangt auf Feld 1 oder 10. Dort hat jede Aktion die Wahrscheinlichkeit $1/4$.
 
 <!--en:f3ee12e5-->
 ::: {.slide title="Verteilungsverschiebung durch die eigene Strategie erkennen"}
@@ -438,8 +438,8 @@ Sind die Felder abseits des Weges absorbierend, zerfällt der Verlust von $34.0$
 <!--en:2def91f0-->
 In 4 DAgger-Runden (10 Episoden des lernenden Agenten pro Runde, 10 Zufallsstartwerte) schließt sich die Lücke durch die Verteilungsverschiebung. Die Erfolgsrate steigt von $0.660$ auf $0.735$, den Grenzwert bei vollständiger Abdeckung.
 
-<!--en:670727a6-->
-- **Warum DAgger bei $0.735$ stehen bleibt:** Sobald der Agent die Felder 1, 2, 6 und 10 besucht und dort Expertenlabels erhält, gilt für jeden erreichbaren Zustand $\varepsilon = 0.182$. Die verbleibende Lücke ($0.735$ gegenüber $1.000$) entsteht durch den Klassifikationsfehler $\varepsilon$ pro Schritt.
+<!--en:90efa0ec-->
+- **Warum DAgger bei $0.735$ stehen bleibt:** Sobald der Agent die Felder 1, 2, 3, 6 und 10 besucht und dort Expertenlabels erhält, gilt für jeden erreichbaren Zustand $\varepsilon = 0.182$. Die verbleibende Lücke ($0.735$ gegenüber $1.000$) entsteht durch den Klassifikationsfehler $\varepsilon$ pro Schritt.
 
 <!--en:a02cd973-->
 ::: {.slide title="Überwachtes Fine-Tuning und On-Policy-Destillation"}

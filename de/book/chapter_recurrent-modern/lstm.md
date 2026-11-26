@@ -169,8 +169,8 @@ Die Ergebnisse bestätigen die Analyse für die GRU sowie für alle Verzögerung
 <!--en:7c259aa7-->
 ### Netze mit Gattern für Text
 
-<!--en:ca2dfd8c-->
-In :numref:`subsec_gpt-rnn-baseline` fiel ein einzelnes breites, einfaches RNN nach den ersten 16 Kontextbytes hinter ein GPT mit mehreren Blöcken zurück. Um die Sequenzmischer fair zu vergleichen, müssen wir den Einfluss der Rekurrenz von dem der Anzahl der Residualblöcke und der positionsweisen MLPs trennen. Dazu setzen wir in diesem Kapitel jeden Mischer in dieselbe Residualarchitektur mit vorgelagerter Normalisierung (`SeqLM`) ein. Ihr Aufbau entspricht :numref:`sec_transformer-block`: Auf eine Tokeneinbettung folgt ein Stapel von Blöcken. Jeder Block berechnet zunächst `H = H + mixer(norm(H))` und anschließend mit einem zweischichtigen GELU-MLP `H = H + mlp(H)`. Den Abschluss bilden eine Schichtnormalisierung und ein linearer Ausgabekopf (:numref:`fig_seqlm_backbone`).
+<!--en:2975b648-->
+In :numref:`subsec_gpt-rnn-baseline` fiel ein einzelnes breites, einfaches RNN nach den ersten wenigen Kontextbytes hinter ein GPT mit mehreren Blöcken zurück und holte es nicht mehr ein. Um die Sequenzmischer fair zu vergleichen, müssen wir den Einfluss der Rekurrenz von dem der Anzahl der Residualblöcke und der positionsweisen MLPs trennen. Dazu setzen wir in diesem Kapitel jeden Mischer in dieselbe Residualarchitektur mit vorgelagerter Normalisierung (`SeqLM`) ein. Ihr Aufbau entspricht :numref:`sec_transformer-block`: Auf eine Tokeneinbettung folgt ein Stapel von Blöcken. Jeder Block berechnet zunächst `H = H + mixer(norm(H))` und anschließend mit einem zweischichtigen GELU-MLP `H = H + mlp(H)`. Den Abschluss bilden eine Schichtnormalisierung und ein linearer Ausgabekopf (:numref:`fig_seqlm_backbone`).
 
 <!--en:5d939266-->
 ![Die gemeinsame Grundarchitektur `SeqLM`. Jeder Block addiert erst die Ausgabe eines Mischers und dann die eines MLP zum Residualstrom. Beiden geht jeweils eine eigene Schichtnormalisierung voraus. Von Modell zu Modell wechselt in diesem Kapitel nur der Mischer. Die Sprachmodelle bestehen aus $L = 4$ aufeinandergestapelten Blöcken.](../img/mdl-modernrnn-seqlm-backbone.svg)

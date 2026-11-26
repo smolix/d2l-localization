@@ -387,9 +387,9 @@ Datenlader ziehen Minibatches in der Praxis ohne Zurücklegen. In jeder Epoche m
 <!--en:90a213a1-->
 - Jedes Update des Optimierers verursacht unabhängig von $b$ feste Kosten für die Aufrufsteuerung in Python, den Autograd-Graphen, die Kernelstarts und das Lesen der Gewichte aus dem Speicher.
 
-<!--en:08e44e36-->
+<!--en:af3a9895-->
 - Auf dem Airfoil-Datensatz mit $1{,}500$ Beispielen bei festem $\eta / b = 0.005$ gilt:
-  - Für $b = 1$ ($1{,}500$ Updates/Epoche) und $b = 100$ ($15$ Updates/Epoche) sind die Laufzeiten *pro Update* vergleichbar und liegen unter einer Millisekunde. Mit $b = 100$ läuft das Training **pro Epoche $50\text{--}100\times$ so schnell**.
+  - Für $b = 1$ ($1{,}500$ Updates/Epoche) und $b = 100$ ($15$ Updates/Epoche) beträgt die Laufzeit jeweils etwa eine Millisekunde *pro Update*. Mit $b = 100$ läuft das Training **pro Epoche $50\text{--}100\times$ so schnell**.
 
 <!--en:7298dff2-->
 ::: {.slide title="Dateneffizienz und Grenzen der linearen Skalierung η ∝ b"}

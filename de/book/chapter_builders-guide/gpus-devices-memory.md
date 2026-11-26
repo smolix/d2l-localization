@@ -1,8 +1,8 @@
 <!--en:a74121a0-->
 # GPUs, Geräte und Speicher
 
-<!--en:add43822-->
-Seit :numref:`sec_oo-design` nimmt unser `Trainer` das Argument `num_gpus` entgegen und ignoriert es höflich. Bei den winzigen Modellen der früheren Kapitel fiel das kaum ins Gewicht, denn auf der CPU dauerte das Training nur Sekunden. Bei größeren Modellen entscheidet die Gerätezuordnung (engl. device placement) jedoch darüber, ob wir Sekunden oder Stunden warten. Eine moderne Desktop-GPU multipliziert zwei $4096 \times 4096$-Matrizen in weniger als 2 Millisekunden. Eine CPU braucht dafür mindestens eine Fünftelsekunde, wie wir in :numref:`subsec_async_dispatch` messen. Diese Rechenleistung hat eine technische Voraussetzung. Die GPU verfügt über eigenen Speicher (bei einer Desktop-Karte etwa 24 GB), und jeder Tensor, mit dem sie rechnet, muss dort liegen.
+<!--en:916eade1-->
+Seit :numref:`sec_oo-design` nimmt unser `Trainer` das Argument `num_gpus` entgegen und ignoriert es höflich. Bei den winzigen Modellen der früheren Kapitel fiel das kaum ins Gewicht, denn auf der CPU dauerte das Training nur Sekunden. Bei größeren Modellen entscheidet die Gerätezuordnung (engl. device placement) jedoch darüber, ob wir Sekunden oder Stunden warten. Eine moderne Desktop-GPU multipliziert zwei $4096 \times 4096$-Matrizen in weniger als 2 Millisekunden. Eine CPU braucht dafür mindestens eine Zehntelsekunde, wie wir in :numref:`subsec_async_dispatch` messen. Diese Rechenleistung hat eine technische Voraussetzung. Die GPU verfügt über eigenen Speicher (bei einer Desktop-Karte etwa 24 GB), und jeder Tensor, mit dem sie rechnet, muss dort liegen.
 
 <!--en:50553a47-->
 Passt das gewünschte Modell überhaupt in den Speicher? Unser Beispielmodell mit 8 Milliarden Parametern braucht 16 GB für seine Gewichte in bf16. Für die Inferenz reicht der Speicher also gut aus. Beim Training mit Adam in fp32 belegt jedoch schon der statische Zustand 128 GB (:numref:`sec_parameters`), bevor wir auch nur eine Aktivierung speichern. Das übersteigt die Kapazität einer einzelnen Karte mit 24 GB oder 80 GB bei Weitem. Ob ein Modell auf ein Gerät passt und ob die GPU durchgehend rechnet oder auf Daten wartet, hängt davon ab, wo jeder Tensor liegt und wie viele Bytes er belegt.
@@ -265,8 +265,8 @@ Jetzt können wir `num_gpus` in `d2l.Trainer` nutzen. Um unsere Regeln umzusetze
 <!--en:dd8b2c31-->
 Mit `min(num_gpus, d2l.num_gpus())` ist `num_gpus` eine Obergrenze. Auf Rechnern ohne GPU bleibt `self.gpus` leer, und das Training läuft automatisch auf der CPU. Darauf beruht jeder Aufruf von `Trainer(num_gpus=1)` im weiteren Verlauf des Buchs.
 
-<!--en:152bb847-->
-Wie viel schneller trainiert eine GPU ein kleines Modell tatsächlich? Unser $4096 \times 4096$-Matrixprodukt lief auf der GPU über $100\times$ so schnell. Eine vollständige Trainingsschleife umfasst aber auch das Laden der Daten, das Anstoßen der Operationen durch Python und kleinere Schichten. Wir messen die Trainingszeit eines Fashion-MNIST-Klassifikators aus zwei Residualblöcken der Breite 256 (:numref:`subsec_activation_checkpointing`). Wir initialisieren die Gewichte aus $\mathcal{N}(0, 0.01^2)$ und die Bias-Terme mit null.
+<!--en:d2aef107-->
+Wie viel schneller trainiert eine GPU ein kleines Modell tatsächlich? Unser $4096 \times 4096$-Matrixprodukt lief auf der GPU etwa $100\times$ so schnell oder schneller. Eine vollständige Trainingsschleife umfasst aber auch das Laden der Daten, das Anstoßen der Operationen durch Python und kleinere Schichten. Wir messen die Trainingszeit eines Fashion-MNIST-Klassifikators aus zwei Residualblöcken der Breite 256 (:numref:`subsec_activation_checkpointing`). Wir initialisieren die Gewichte aus $\mathcal{N}(0, 0.01^2)$ und die Bias-Terme mit null.
 
 <!--en:e49206c6-->
 Da der Abschnitt zum Checkpointing keinen MXNet-Code enthält, definiert die Zelle die Gluon-Variante des Residualblocks aus :numref:`sec_model_construction`. Die Methode `initialize` des Modells zieht alle Gewichte aus $\mathcal{N}(0, 0.01^2)$.

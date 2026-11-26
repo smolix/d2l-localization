@@ -127,7 +127,7 @@ Nun wenden wir `shuffle_pixels` mit derselben Permutation `perm` auf jedes Bild 
 <!--en:fa4a499d-->
 Betrachten wir einen Validierungsminibatch aus `data_shuffled`, sehen wir, dass durch die Permutation der 784 Pixelkoordinaten alle erkennbaren Konturen der Kleidungsstücke verschwinden. Für das menschliche Auge sehen die verbleibenden Muster wie reines Bildrauschen aus.
 
-<!--en:d50b5121-->
+<!--en:ab4a5b04-->
 Für das MLP spielt diese Permutation keine Rolle. Warum das so ist, lässt sich sogar ohne erneutes Training zeigen. Eine Permutation der Eingabekoordinaten entspricht einer Umordnung der Zeilen der ersten Gewichtsmatrix $\mathbf{W}^{(1)}$. Da wir alle Gewichte unabhängig voneinander aus derselben Verteilung initialisieren, ist das Training mit permutierten Pixeln statistisch identisch mit dem Training auf den ursprünglichen Bildern. Es ergibt dieselbe Genauigkeit von rund 87%. Für LeNet geht durch die Permutation jedoch die räumliche Lokalität verloren. Jeder $5\times5$-Faltungskern erfasst nun 25 Pixel, die im ursprünglichen Bild zufällig über das Kleidungsstück verstreut liegen. Trainieren wir LeNet mit genau denselben Einstellungen auf dem Datensatz mit permutierten Pixeln erneut und stellen wir die beiden Validierungskurven einander gegenüber.
 
 <!--en:8e6425cd-->
@@ -298,8 +298,8 @@ Alle Gewichte nach Xavier initialisieren, Encoder und vollständig verbundenen K
 <!--en:07c0ec53-->
 [30 Epochen Minibatch-SGD (Batchgröße 128, Lernrate 2.0)]{.kicker}
 
-<!--en:2c3d92d5-->
-- **Trainingsverlauf:** Nach einem sigmoidbedingten Plateau von 1–3 Epochen bei $\mathcal{L} \approx 2.30$ erreicht die Validierungsgenauigkeit **$\approx 88\text{--}90\%$** (um den Faktor $3.3\times$ weniger Parameter als beim MLP).
+<!--en:7679eaff-->
+- **Trainingsverlauf:** Je nach Initialisierung dauert das Plateau bei $\mathcal{L} \approx 2.30$ wenige Epochen oder entfällt ganz. Die Validierungsgenauigkeit erreicht **$\approx 88\text{--}90\%$** (um den Faktor $3.3\times$ weniger Parameter als beim MLP).
 
 <!--en:57cf3c2b-->
 ::: {.slide title="Faltungskerne und Merkmalskarten der ersten Schicht"}

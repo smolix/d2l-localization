@@ -396,8 +396,8 @@ Die folgenden Fragen zum Entwurf von Lernratenplänen rechnerisch beantworten:
 <!--en:6d793563-->
 | **Risiko bei exponentiellem Abfall** | $\eta_t = \eta_0\gamma^t,\quad R_s \approx \frac{\eta_s}{1-\gamma}$ | Rauschen friert bei $\frac{(1-\gamma)\sigma^2}{4\lambda^2}$ ein, sobald $\eta_s \lesssim \frac{1-\gamma}{2\lambda}$ gilt | Schnellen geometrischen Abfall ohne Untergrenze oder polynomial auslaufende Endphase vermeiden |
 
-<!--en:33f7a53c-->
-| **Lineare Aufwärmphase** | $\eta_t = \eta_0\min\!\left(1, \frac{t+1}{W}\right)$ | Verhindert bei AdamW den Gewichtssprung um $67\%$ im ersten Schritt | Lernrate über $W \sim 1\%\text{--}5\%$ der Schritte erhöhen (stets $> \frac{1}{1-\beta_1} = 10$ Schritte) |
+<!--en:6c3f84c5-->
+| **Lineare Aufwärmphase** | $\eta_t = \eta_0\min\!\left(1, \frac{t+1}{W}\right)$ | Verhindert bei AdamW den Gewichtssprung um $67\%$ im ersten Schritt | Lernrate über $W \sim 1\%\text{--}5\%$ der Schritte erhöhen (stets $\ge \frac{2}{1-\beta_1} = 20$ Schritte) |
 
 <!--en:03f95063-->
 | **Kosinus-Abfall** | $\eta_t = \eta_T + \frac{\eta_0-\eta_T}{2}\left(1 + \cos\frac{\pi t}{T}\right)$ | Budget $B_T = 0.5\,\eta_0 T$ (für $\eta_T = 0$) | Standard bei festem Trainingsende, wenn $T$ im Voraus bekannt ist |

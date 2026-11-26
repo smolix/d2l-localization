@@ -142,8 +142,8 @@ Als Nächstes definieren wir $f(x) = x\cos(0.15\pi x)$ sowie die Funktionen `f_c
 <!--en:daa4da53-->
 Wir werten `f_cos_hess` an den beiden lokalen Minima aus und starten `gd` bei $x = 10$ mit $\eta \in \{0.5, 2\}$. So sehen wir, wie die Stabilitätsgrenze $2/\eta$ zwischen dem tiefen, scharfen Minimum und dem weniger tiefen, flachen Minimum auswählt:
 
-<!--en:5b8f9590-->
-Vom Startpunkt $x = 10$ aus konvergiert das Verfahren mit $\eta = 0.5$ ($2/\eta = 4 > 1.81$) rasch zum tiefen Minimum bei $x = 7.269$. Bei $\eta = 2$ ($2/\eta = 1 < 1.81$) ist das tiefe Minimum instabil ($1 - \eta f'' = -2.62$). Die Iterierte nähert sich stattdessen dem flacheren Minimum bei $x = -1.821$, wo $f'' = 0.98 < 2/\eta$ gilt.
+<!--en:65595e50-->
+Vom Startpunkt $x = 10$ aus konvergiert das Verfahren mit $\eta = 0.5$ ($2/\eta = 4 > 1.81$) rasch zum tiefen Minimum bei $x = 7.269$. Bei $\eta = 2$ ($2/\eta = 1 < 1.81$) ist das tiefe Minimum instabil ($1 - \eta f'' = -2.62$). Die Iterierte nähert sich stattdessen dem flacheren Minimum nahe $x = -1.83$, wo $f'' = 0.98 < 2/\eta$ gilt.
 
 <!--en:bcc1ee4c-->
 ## Am Rand der Stabilität
@@ -172,8 +172,8 @@ In diesem Experiment haben wir den Gradientenabstieg auf dem gesamten Trainingss
 <!--en:ec1d3e77-->
 ### Schritte zweiter Ordnung und Newton-Verfahren
 
-<!--en:368f1237-->
-Warum kommt der Gradientenabstieg im Tal :eqref:`eq_opt-intro-valley` nur mühsam voran? Am Punkt $(-5, -2)$ zeigt der negative Gradient $(1, 8)$ fast quer zur steilen Talwand und damit kaum in Richtung des Ursprungs $(0, 0)$. Für die steile Koordinate $x_2$ muss die Lernrate $\eta \le 0.25$ erfüllen, damit ein Schritt nicht über die Talsohle hinausführt. Die flache Koordinate $x_1$ erreicht ihr Ziel in einem Schritt erst bei $\eta = 1/0.2 = 5$.
+<!--en:f517e9d9-->
+Warum kommt der Gradientenabstieg im Tal :eqref:`eq_opt-intro-valley` nur mühsam voran? Am Punkt $(-5, -2)$ zeigt der negative Gradient $(1, 8)$ fast quer zur steilen Talwand und damit kaum in Richtung des Ursprungs $(0, 0)$. Für die steile Koordinate $x_2$ führt nur die Lernrate $\eta = 1/4 = 0.25$ in einem Schritt auf die Talsohle. Die flache Koordinate $x_1$ erreicht ihr Ziel in einem Schritt erst bei $\eta = 1/0.2 = 5$.
 
 <!--en:1e595d30-->
 Das **Newton-Verfahren** (engl. Newton's method) skaliert jede Eigenrichtung mit dem Kehrwert ihrer lokalen Krümmung. Dazu minimiert es die Taylor-Näherung zweiter Ordnung um $\mathbf{x}$:
@@ -315,8 +315,8 @@ Gegeben ist das achsenparallele Tal $f(\mathbf{x}) = 0.1x_1^2 + 2x_2^2$ mit Grad
   - **Steile Talwand ($x_2$):** Durch den Faktor $1 - 4(0.45) = -0.80$ wechselt die Koordinate bei jedem Schritt das Vorzeichen. Sie schießt über die Talsohle hinaus, ihr Betrag sinkt dabei um $20\%$ pro Schritt.
   - **Flache Talsohle ($x_1$):** Mit dem Faktor $1 - 0.2(0.45) = 0.91$ nähert sich die Koordinate langsam und ohne Vorzeichenwechsel der Null. Nach $30$ Schritten gilt $x_1 \approx -5 \times 0.91^{30} \approx -0.30$.
 
-<!--en:9fc58776-->
-- Der Gradient $(-1, -8)$ am Punkt $(-5, -2)$ steht fast senkrecht zur Richtung zum Ursprung.
+<!--en:231a1261-->
+- Der negative Gradient $(1, 8)$ am Punkt $(-5, -2)$ weist fast genau quer über die steile Talflanke und am Ursprung vorbei.
 
 <!--en:cddce95a-->
 ::: {.slide title="Ausgleich zwischen beiden Achsen bei der optimalen Schrittweite η* = 0.476"}
@@ -437,10 +437,10 @@ An jedem kritischen Punkt ($\nabla f(\mathbf{x}) = \mathbf{0}$) lässt sich die 
 <!--en:acde40e1-->
 [Experiment]{.kicker}
 
-<!--en:297add7e-->
+<!--en:d7a6b308-->
 - Start bei $x_0 = 10$ für die Funktion $f(x) = x\cos(0.15\pi x)$:
   - **$\eta = 0.5$ ($2/\eta = 4 > 1.81$):** Das Verfahren konvergiert rasch zum tiefen, schärferen Minimum bei $x = 7.269$.
-  - **$\eta = 2.0$ ($2/\eta = 1 < 1.81$):** Das tiefe Minimum ist instabil ($1 - \eta f'' = -2.62$). Die Iterierte springt aus seinem Einzugsgebiet und nähert sich dem weniger tiefen, flacheren Minimum bei $x = -1.821$ ($f'' = 0.98 < 1$).
+  - **$\eta = 2.0$ ($2/\eta = 1 < 1.81$):** Das tiefe Minimum ist instabil ($1 - \eta f'' = -2.62$). Die Iterierte springt aus seinem Einzugsgebiet und nähert sich dem weniger tiefen, flacheren Minimum nahe $x = -1.83$ ($f'' = 0.98 < 1$).
 
 <!--en:998dde88-->
 - **Grundprinzip:** Die Lernrate $\eta$ wählt Lösungen nach ihrer **Krümmung ($\lambda_{\max} \le 2/\eta$)** aus. Der Verlustwert im Minimum ist dafür unerheblich.

@@ -187,8 +187,8 @@ Beide Architekturen erreichen am Ende eine Validierungsgenauigkeit von rund 94% 
 <!--en:30ac03ff-->
 ## Zusammenfassung
 
-<!--en:b2600bbb-->
-Beim Vergleich von *Entwurfsräumen* untersuchen wir Architekturen anhand von Fehlerverteilungen ganzer Populationen. Dazu ziehen wir Netze aus einem parametrisierten Schema (`AnyNet`), statt uns auf einzelne Punktschätzungen zu stützen. Für jeden Raum wurden 500 Netze kurz auf ImageNet trainiert. Ein gemeinsames Flaschenhalsverhältnis $b = 1$ und eine gemeinsame Gruppenbreite $g$ für alle Stufen kosten keine Genauigkeit. Fordern wir außerdem monoton wachsende Stufenbreiten ($u_j = u_0 + a j$, zu einer Treppe quantisiert) und Stufentiefen, sinkt der mittlere Fehler der Population von 49% auf 43%. So ergibt sich die RegNetX-Familie. Auf Fashion-MNIST erreicht `RegNetX32` wie ResNet-18 rund 94% Genauigkeit, benötigt dafür aber weniger als 5% seiner Parameter und ein Drittel seiner Multiplikationsadditionen. Das gesamte Kapitel zeigt, worauf moderne Grundnetze für die Bildverarbeitung aufbauen: auf wenigen strukturellen Bausteinen (wiederholbaren Blöcken, Normalisierung der Aktivierungen und Sprungverbindungen in Residualblöcken) und auf der konsequenten Unterscheidung zwischen Verbesserungen durch die Architektur und Verbesserungen durch das Trainingsrezept.
+<!--en:8710da22-->
+Beim Vergleich von *Entwurfsräumen* untersuchen wir Architekturen anhand von Fehlerverteilungen ganzer Populationen. Dazu ziehen wir Netze aus einem parametrisierten Schema (`AnyNet`), statt uns auf einzelne Punktschätzungen zu stützen. Für jeden Raum wurden 500 Netze kurz auf ImageNet trainiert. Ein gemeinsames Flaschenhalsverhältnis $b$ und eine gemeinsame Gruppenbreite $g$ für alle Stufen kosten keine Genauigkeit. Fordern wir außerdem monoton wachsende Stufenbreiten ($u_j = u_0 + a j$, zu einer Treppe quantisiert) und Stufentiefen, sinkt der mittlere Fehler der Population von 49% auf 43%. So ergibt sich die RegNetX-Familie. Auf Fashion-MNIST erreicht `RegNetX32` wie ResNet-18 rund 94% Genauigkeit, benötigt dafür aber weniger als 5% seiner Parameter und ein Drittel seiner Multiplikationsadditionen. Das gesamte Kapitel zeigt, worauf moderne Grundnetze für die Bildverarbeitung aufbauen: auf wenigen strukturellen Bausteinen (wiederholbaren Blöcken, Normalisierung der Aktivierungen und Sprungverbindungen in Residualblöcken) und auf der konsequenten Unterscheidung zwischen Verbesserungen durch die Architektur und Verbesserungen durch das Trainingsrezept.
 
 <!--en:2294243a-->
 ## Übungen
@@ -297,17 +297,17 @@ In `AnyNet` beschreibt ein 4-Tupel `(depth, num_channels, groups, bot_mul)` jede
 <!--en:1dcfb984-->
 Pro Raum $n = 500$ Modelle mit je $\approx 400\text{M}$ Multiplikationsadditionen ziehen und 10 Epochen auf ImageNet trainieren. Daraus ergeben sich vier Strukturregeln:
 
-<!--en:08a48b52-->
-- **$\text{AnyNetX}_A \to \text{AnyNetX}_B$ (gemeinsames $b_i = b$):** Ein einheitliches Flaschenhalsverhältnis für alle Stufen erhält die Verteilungsfunktion ($49.3\% \to 49.1\%$ mittlerer Fehler). 3 freie Parameter entfallen.
+<!--en:11e7c4b7-->
+- **$\text{AnyNetX}_A \to \text{AnyNetX}_B$ (gemeinsames $b_i = b$):** Ein einheitliches Flaschenhalsverhältnis für alle Stufen erhält die Verteilungsfunktion ($49.0\% \to 49.2\%$ mittlerer Fehler). 3 freie Parameter entfallen.
 
-<!--en:7dc469ae-->
-- **$\text{AnyNetX}_B \to \text{AnyNetX}_C$ (gemeinsames $g_i = g$):** Eine einheitliche Gruppenbreite erhält die Verteilungsfunktion ebenfalls ($49.1\%$ mittlerer Fehler, 3 weitere freie Parameter entfallen).
+<!--en:6b19ae37-->
+- **$\text{AnyNetX}_B \to \text{AnyNetX}_C$ (gemeinsames $g_i = g$):** Eine einheitliche Gruppenbreite erhält die Verteilungsfunktion ebenfalls ($49.4\%$ mittlerer Fehler, 3 weitere freie Parameter entfallen).
 
-<!--en:8e995ab5-->
-- **$\text{AnyNetX}_C \to \text{AnyNetX}_D$ (wachsende Breiten $c_{i+1} \ge c_i$):** Der mittlere Fehler sinkt um **6 Prozentpunkte auf $43.3\%$**. Bei abnehmenden Breiten $c_{i+1} < c_i$ steigt er auf $63.0\%$.
+<!--en:f07e0462-->
+- **$\text{AnyNetX}_C \to \text{AnyNetX}_D$ (wachsende Breiten $c_{i+1} \ge c_i$):** Der mittlere Fehler sinkt um **6 Prozentpunkte auf $43.2\%$**. Bei abnehmenden Breiten $c_{i+1} < c_i$ steigt er auf $63.2\%$.
 
-<!--en:3f72cb01-->
-- **$\text{AnyNetX}_D \to \text{AnyNetX}_E$ (wachsende Tiefen $d_{i+1} \ge d_i$):** Der mittlere Fehler sinkt auf **$42.8\%$**. Unter diesen Nebenbedingungen bleiben weniger freie Stufenparameter ($16 \to 10$).
+<!--en:2817b177-->
+- **$\text{AnyNetX}_D \to \text{AnyNetX}_E$ (wachsende Tiefen $d_{i+1} \ge d_i$):** Der mittlere Fehler sinkt auf **$42.7\%$**. Unter diesen Nebenbedingungen bleiben weniger freie Stufenparameter ($16 \to 10$).
 
 <!--en:ced90e17-->
 ::: {.slide title="Multiplikationsadditionen eines AnyNet-Modells zählen"}
@@ -381,8 +381,8 @@ Nach den RegNetX-Regeln ($b = 1$, gemeinsame Gruppenbreite $g = 16$, zunehmende 
 <!--en:a83336e5-->
 | **RegNetX32** (2 Stufen) | **$0.52\text{M}$** | **$112\text{M}$** | **$\approx 94.0\%$** |
 
-<!--en:91274339-->
-| **RegNetX-400MF..1.6GF** | $4.8\text{--}8.3\text{M}$ | $150\text{--}600\text{M}$ | $93\text{--}94\%$ |
+<!--en:bb08ea48-->
+| **RegNetX-400MF..1.6GF** | $4.8\text{--}8.3\text{M}$ | $70\text{--}290\text{M}$ | $93\text{--}94\%$ |
 
 <!--en:8eb721d8-->
 - **$21\times$ weniger Gewichte, $3\times$ weniger Multiplikationsadditionen:** `RegNetX32` erreicht dieselbe Genauigkeit wie ResNet-18 ($\approx 94\%$) mit $<5\%$ von dessen Parametern.
@@ -456,17 +456,17 @@ Fragen zu Entwurfsräumen und zur Parametrisierung von RegNet:
 <!--en:d819240e-->
 | Entwurfsraum oder Begriff | Nebenbedingung oder mathematische Regel | Wirkung auf die Population und Schlussfolgerung |
 
-<!--en:2e83bd1e-->
-| **AnyNet ($\text{AnyNetX}_A$)** | 4 Stufen $\times$ 4 freie Größen $(d_i, c_i, b_i, g_i) \implies 16$ freie Parameter | Umfasst $\sim 1.8 \times 10^{18}$ Netze nach dem Vorbild von ResNeXt. Mittlerer Fehler nach 10 Epochen auf ImageNet: $49.3\%$ |
+<!--en:e0e705a5-->
+| **AnyNet ($\text{AnyNetX}_A$)** | 4 Stufen $\times$ 4 freie Größen $(d_i, c_i, b_i, g_i) \implies 16$ freie Parameter | Umfasst $\sim 1.8 \times 10^{18}$ Netze nach dem Vorbild von ResNeXt. Mittlerer Fehler nach 10 Epochen auf ImageNet: $49.0\%$ |
 
 <!--en:f30c9ab7-->
 | **Empirische Verteilungsfunktion der Fehler** | $\hat{F}(e) = \frac{1}{n}\sum_{j=1}^n \mathbf{1}(e_j \le e)$ für $n=500$ Modelle mit vergleichbaren FLOPs | Bewertet ganze Verteilungen von Architekturen. Das beste Einzelmodell unterliegt Zufallsschwankungen |
 
-<!--en:eda9ef52-->
-| **Gemeinsame Werte für $b$ und $g$ ($\text{AnyNetX}_C$)** | $b_i = b$ und $g_i = g$ für alle 4 Stufen ($16 \to 10$ freie Parameter) | **Keine Einbuße an Genauigkeit** ($49.1\%$ mittlerer Fehler), halbiert die Komplexität der Hyperparametersuche |
+<!--en:d75d9eb7-->
+| **Gemeinsame Werte für $b$ und $g$ ($\text{AnyNetX}_C$)** | $b_i = b$ und $g_i = g$ für alle 4 Stufen ($16 \to 10$ freie Parameter) | **Keine Einbuße an Genauigkeit** ($49.4\%$ mittlerer Fehler), halbiert die Komplexität der Hyperparametersuche |
 
-<!--en:b7fbd2a1-->
-| **Monotone Stufen ($\text{AnyNetX}_E$)** | Monoton wachsende Breiten $c_{i+1} \ge c_i$ und Tiefen $d_{i+1} \ge d_i$ | Änderung des mittleren ImageNet-Fehlers um **$-6.5$ Prozentpunkte** ($49.3\% \to 42.8\%$), Gewinn auf dem einfachen Fashion-MNIST-Datensatz $<1$ Prozentpunkt |
+<!--en:218037fe-->
+| **Monotone Stufen ($\text{AnyNetX}_E$)** | Monoton wachsende Breiten $c_{i+1} \ge c_i$ und Tiefen $d_{i+1} \ge d_i$ | Senkung des mittleren ImageNet-Fehlers um **rund 6 Prozentpunkte** ($49\% \to 43\%$), Gewinn auf dem einfachen Fashion-MNIST-Datensatz $<1$ Prozentpunkt |
 
 <!--en:f40fbf15-->
 | **RegNetX-Familie** | $b = 1$ (kein Flaschenhals) und quantisierter linearer Anstieg $u_j = u_0 + a j$ | Reduziert 16 Stufenparameter auf $(d, u_0, a, m, g)$. `RegNetX32` erreicht die Genauigkeit von ResNet-18 ($\approx 94\%$) mit $21\times$ weniger Gewichten |

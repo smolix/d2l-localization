@@ -287,8 +287,8 @@ Lernt ein Netz, gaußsches Rauschen $\tilde{\mathbf{x}} = \mathbf{x}_0 + \sigma\
 <!--en:e12220ce-->
 - **Projektion auf eine nichtlineare Mannigfaltigkeit:** Bei Rauschpegel $\sigma = 0.5$ ($\textrm{MSE} = 0.25$ je Pixel) senkt ein konvolutionäres Netz mit 4 Schichten den Testfehler auf Fashion-MNIST auf **$0.031$**. Damit unterbietet es das optimale lineare $784 \times 784$-Wiener-Filter ($0.045$) um $30\%$.
 
-<!--en:8af27e22-->
-- **Entrauschung $\iff$ Score-Schätzung:** Nach Tweedies Formel ist die Korrektur des optimalen Entrauschers $\mathbb{E}[\mathbf{x}_0 \mid \tilde{\mathbf{x}}]$ gegenüber seiner Eingabe direkt proportional zum Gradienten der Log-Dichte $\nabla_{\tilde{\mathbf{x}}} \log p_\sigma(\tilde{\mathbf{x}})$.
+<!--en:78c0e6f9-->
+- **Entrauschung $\iff$ Score-Schätzung:** Nach Tweedies Formel ist der optimale Entrauscher im Sinne der kleinsten Quadrate $\mathbb{E}[\mathbf{x}_0 \mid \tilde{\mathbf{x}}]$ gleich $\tilde{\mathbf{x}} + \sigma^2\nabla_{\tilde{\mathbf{x}}} \log p_\sigma(\tilde{\mathbf{x}})$. Die Korrektur gegenüber $\tilde{\mathbf{x}}$ beträgt also das $\sigma^2$-Fache des Scores.
 
 <!--en:351dd1ce-->
 - **Die Frage bei festem Pegel:** Ein Entrauscher lernt implizit das Score-Feld $\nabla \log p_\sigma$. Können wir neue Bilder erzeugen, indem wir beim Rauschen beginnen und diesem Feld bergauf folgen?
@@ -464,11 +464,11 @@ Ein energiebasiertes Modell (EBM) definiert eine Dichte $p_{\boldsymbol\theta}(\
 <!--en:a7878d09-->
 Wir trainieren `TimeMLP`-Modelle bei sieben Rauschpegeln $\sigma \in [0.05, 1.0]$ und bestimmen ihre Fisher-Divergenz zum unverrauschten Score $\nabla \log p$. Es ergibt sich die typische U-Kurve:
 
-<!--en:e55d4885-->
-- **Verzerrung dominiert ($\sigma \ge 0.3$):** In beiden Trainingsläufen mit unterschiedlichen Zufallsstartwerten folgt der Fehler eng der theoretischen Kurve für die Verzerrung durch Glättung. Das Netz lernt $\nabla \log p_\sigma$ genau, doch es gilt $p_\sigma \neq p$.
+<!--en:8d45cc92-->
+- **Verzerrung dominiert ($\sigma \ge 0.5$):** In beiden Trainingsläufen mit unterschiedlichen Zufallsstartwerten weicht der Fehler um höchstens etwa $0.1$ von der theoretischen Kurve für die Verzerrung durch Glättung ab. Das Netz lernt $\nabla \log p_\sigma$ genau, doch es gilt $p_\sigma \neq p$.
 
-<!--en:f2d4afd0-->
-- **Varianz dominiert ($\sigma \le 0.1$):** Die Verzerrung durch Glättung verschwindet. Das Rauschen der Zielgröße von der Ordnung $1/\sigma$ lässt den Testfehler jedoch wieder stark steigen und zwischen den Startwerten deutlich schwanken.
+<!--en:c4305295-->
+- **Varianz dominiert ($\sigma < 0.1$):** Die Verzerrung durch Glättung verschwindet. Das Rauschen der Zielgröße von der Ordnung $1/\sigma$ lässt den Testfehler jedoch wieder stark steigen und zwischen den Startwerten deutlich schwanken.
 
 <!--en:faa58119-->
 - **Günstigster Einzelpegel:** Der Fehler erreicht sein Minimum nahe $\sigma \approx s/3 \in [0.1, 0.2]$ (Fehler etwa $0.15$ bis $0.25$).

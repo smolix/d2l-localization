@@ -502,8 +502,8 @@ Die Auswertung von $10{,}000$ Samples bei Schritt $10{,}000$ zeigt den Beitrag d
 <!--en:e6a19a5a-->
 Der Vergleich des Anteils modusnaher Samples mit dem Kritikerverlust an allen $8$ Checkpoints (alle $1{,}250$ Schritte) zeigt, wie leicht der Verlustverlauf in die Irre führen kann:
 
-<!--en:dc9cde6b-->
-**Warum der Gleichgewichtswert des Kritikerverlusts keine Konvergenz belegt:** In allen Läufen mit Strafterm liegt der Kritikerverlust beim exakten Gleichgewichtswert ($2\log 2 \approx 1.38$ für `NS`, $\log 2 \approx 0.69$ für `pairing`), und zwar schon am ersten Checkpoint bei Schritt $1{,}250$. Zu diesem Zeitpunkt liegen nur **$1\text{--}3\%$** der generierten Samples in der Nähe eines Modus. Da $R_1 + R_2$ die Funktion $D(x)$ überall nahezu flach hält, bestätigt der Gleichgewichtswert des Verlusts nur die Dämpfung des Kritikers. Er belegt nicht, dass $q$ mit $p$ übereinstimmt.
+<!--en:e67e6383-->
+**Warum der Gleichgewichtswert des Kritikerverlusts keine Konvergenz belegt:** In allen Läufen mit Strafterm liegt der Kritikerverlust beim exakten Gleichgewichtswert ($2\log 2 \approx 1.39$ für `NS`, $\log 2 \approx 0.69$ für `pairing`), und zwar schon am ersten Checkpoint bei Schritt $1{,}250$. Zu diesem Zeitpunkt liegen nur **$1\text{--}3\%$** der generierten Samples in der Nähe eines Modus. Da $R_1 + R_2$ die Funktion $D(x)$ überall nahezu flach hält, bestätigt der Gleichgewichtswert des Verlusts nur die Dämpfung des Kritikers. Er belegt nicht, dass $q$ mit $p$ übereinstimmt.
 
 <!--en:2df0d67b-->
 ::: {.slide title="Verständnisfragen zu Minimax-Dynamik und Straftermen"}

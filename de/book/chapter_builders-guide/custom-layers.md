@@ -166,8 +166,8 @@ Die mit `@tf.custom_gradient` dekorierte Funktion gibt `(output, grad_fn)` zurü
 <!--en:03a6e364-->
 Um unsere eigene Rückwärtsregel zu prüfen, multiplizieren wir die gerundeten Gewichte elementweise mit $(1, 2, 3)$ und summieren die Produkte. Der Straight-Through-Schätzer sollte unmittelbar $(1, 2, 3)$ als Gradienten bezüglich $\mathbf{w}$ liefern:
 
-<!--en:889e36ac-->
-Der Gradient gelangt unverändert zurück zu $\mathbf{w}$, als wäre die Rundung die Identität. Der Vorwärtsdurchlauf rechnet weiterhin mit ganzzahlig gerundeten Gewichten. Kann der Gradientenabstieg mit dieser Ersatzableitung tatsächlich lernen? Wir trainieren ein lineares Modell mit acht Gewichten, die wir im Vorwärtsdurchlauf auf ganze Zahlen runden. Die synthetischen Daten erzeugen wir mit Gewichten aus der Gleichverteilung auf $[-7, 7]$ (dem symmetrischen Bereich für 4 Bit mit Vorzeichen). Ausgehend von $\mathbf{w} = \mathbf{0}$ vergleichen wir gewöhnliches Runden mit dem Straight-Through-Schätzer. Zum Vergleich betrachten wir auch den Anfangsverlust und den unvermeidlichen Rundungsverlust, den wir durch direktes Runden der wahren Gewichte erhalten:
+<!--en:0f66e764-->
+Der Gradient gelangt unverändert zurück zu $\mathbf{w}$, als wäre die Rundung die Identität. Der Vorwärtsdurchlauf rechnet weiterhin mit ganzzahlig gerundeten Gewichten. Kann der Gradientenabstieg mit dieser Ersatzableitung tatsächlich lernen? Wir trainieren ein lineares Modell mit acht Gewichten, die wir im Vorwärtsdurchlauf auf ganze Zahlen runden. Die synthetischen Daten erzeugen wir mit Gewichten aus der Gleichverteilung auf $[-7, 7]$ (dem symmetrischen Teil des vorzeichenbehafteten 4-Bit-Bereichs $[-8, 7]$). Ausgehend von $\mathbf{w} = \mathbf{0}$ vergleichen wir gewöhnliches Runden mit dem Straight-Through-Schätzer. Zum Vergleich betrachten wir auch den Anfangsverlust und den Verlust bei gerundeten wahren Gewichten. Letzterer dient als Referenzwert, denn das separate Runden jedes Gewichts liefert keine optimale Anpassung mit ganzzahligen Gewichten:
 
 <!--en:14b58c45-->
 Beim gewöhnlichen Runden ist jeder Gradient null, und der Verlust bleibt auf seinem Anfangswert. Mit dem Straight-Through-Schätzer sinkt der Verlust von einigen Dutzend oder Hundert auf 1 oder 2. Damit liegt er nur um einen kleinen Faktor über dem Verlust bei gerundeten wahren Gewichten. Mit einem bewusst nur näherungsweise bestimmten Ersatzgradienten lässt sich also ein quantisiertes Modell trainieren.
@@ -348,9 +348,9 @@ Eigene Schichten und Funktionen<br>**Zustandslose Module · RMSNorm · RandomFea
 <!--en:ff2af144-2-->
 [Numerische Plausibilitätsprüfung]{.kicker}
 
-<!--en:1a13c62d-->
+<!--en:c8f365f4-->
 - **Drei Prüfungen für jede neue Schicht:**
-  1. **Von Hand nachrechnen:** Skaleninvarianz für $(3, 4)$ und $(300, 400) \mapsto (0.849, 1.131)$ prüfen. Bei Verstärkungsfaktoren ungleich eins das Ergebnis entsprechend skalieren.
+  1. **Von Hand nachrechnen:** Skaleninvarianz für $(3, 4)$ und $(300, 400) \mapsto (0.849, 1.131)$ bei einem Verstärkungsfaktor von eins prüfen.
   2. **Gradientenfluss:** Prüfen, ob 1 Optimierungsschritt jeden registrierten Parameter gegenüber seinem Anfangswert verändert.
   3. **Serialisierung:** Zustand speichern, in eine neue Kopie laden und prüfen, ob die Ausgaben exakt übereinstimmen.
 
@@ -433,8 +433,8 @@ Weicht die Rückwärtsregel von der Ableitung des Vorwärtsdurchlaufs ab, beide 
 <!--en:e50ed8dc-->
 [Optimierung unter Berücksichtigung der Quantisierung]{.kicker}
 
-<!--en:c01749ec-->
-Ein lineares Modell mit 8 Gewichten rundet diese bei jedem Vorwärtsdurchlauf auf ganze Zahlen (`w_true` gleichverteilt auf $[-7, 7]$). Beim Training senkt der STE den Verlust bis auf einen kleinen Faktor an die Quantisierungsgrenze heran. Bei gewöhnlicher Rundung bleibt er auf dem Wert aus Schritt 0:
+<!--en:3513c4f8-->
+Ein lineares Modell mit 8 Gewichten rundet diese bei jedem Vorwärtsdurchlauf auf ganze Zahlen (`w_true` gleichverteilt auf $[-7, 7]$). Beim Training senkt der STE den Verlust auf einen Wert nahe dem Verlust bei gerundeten wahren Gewichten. Bei gewöhnlicher Rundung bleibt er auf dem Wert aus Schritt 0:
 
 <!--en:1b9fa3bd-->
 - **Gradientenstopp in einer Zeile:** Dient die Identität als Ersatz, ergibt `X + stop_gradient(round(X) - X)` vorwärts den Wert `round(X)`. Rückwärts läuft die Ableitung über `X`. Eine eigene Klasse entfällt.

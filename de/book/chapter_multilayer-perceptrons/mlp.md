@@ -258,8 +258,8 @@ Ein MLP überwindet die Linearität durch eine oder mehrere *versteckte Schichte
 <!--en:0c358352-->
 - **Niedriger Rang als Flaschenhals:** Aus $h_k < \min(d, q)$ folgt $\mathrm{rank}(\mathbf{W}) \le h_k$. Die lineare Modellklasse wird dadurch *echt kleiner*.
 
-<!--en:47606e0b-->
-- **Grenze der Assoziativität:** Bei einer elementweisen Aktivierung $\mathrm{ReLU}(z) = \max(z, 0)$ zwischen den Matrixprodukten lässt sich $(\mathbf{X}\mathbf{W}^{(1)})\mathbf{W}^{(2)}$ nicht mehr zu $\mathbf{X}(\mathbf{W}^{(1)}\mathbf{W}^{(2)})$ umklammern.
+<!--en:2c1b984d-->
+- **Grenze der Assoziativität:** Bei einer elementweisen Aktivierung $\mathrm{ReLU}(z) = \max(z, 0)$ zwischen den Matrixprodukten lässt sich $\mathrm{ReLU}(\mathbf{X}\mathbf{W}^{(1)})\mathbf{W}^{(2)}$ nicht mehr zu $\mathbf{X}(\mathbf{W}^{(1)}\mathbf{W}^{(2)})$ umklammern.
 
 <!--en:37bf730c-->
 ::: {.slide title="Explizite Lösung des XOR-Problems mit zwei versteckten ReLU-Einheiten"}

@@ -115,8 +115,8 @@ Wenn sich die Tensorformen von Schritt zu Schritt ändern, kann die Speicherverw
 <!--en:850e4cd9-->
 ### Kollektive Algorithmen jenseits des Rings
 
-<!--en:be199326-->
-Der Ring-Allreduce (:numref:`subsec_mg-ring`) minimiert die Gesamtzahl übertragener Bytes, benötigt aber $2(k-1)$ aufeinanderfolgende Übertragungsschritte. Bei Baumalgorithmen wächst die Anzahl dieser Schritte wie $\log_2 k$. NCCL kombiniert zwei komplementäre Binärbäume, sodass jedes Gerät in einem Baum ein Blatt und im anderen ein innerer Knoten ist. Ist $k$ eine Zweierpotenz, übertragen rekursive Halbierung und Verdopplung in $\log_2 k$ Schritten ebenso viele Bytes wie der Ring :cite:`Thakur.Rabenseifner.Gropp.2005`.
+<!--en:7e0cc107-->
+Der Ring-Allreduce (:numref:`subsec_mg-ring`) minimiert die Gesamtzahl übertragener Bytes, benötigt aber $2(k-1)$ aufeinanderfolgende Übertragungsschritte. Bei Baumalgorithmen wächst die Anzahl dieser Schritte wie $\log_2 k$. NCCL kombiniert zwei komplementäre Binärbäume, sodass jedes Gerät in einem Baum ein Blatt und im anderen ein innerer Knoten ist. Ist $k$ eine Zweierpotenz, übertragen rekursive Halbierung und Verdopplung in $2\log_2 k$ Schritten ebenso viele Bytes wie der Ring :cite:`Thakur.Rabenseifner.Gropp.2005`.
 
 <!--en:5f7128b4-->
 ### Parameterserver und asynchrone Aktualisierungen

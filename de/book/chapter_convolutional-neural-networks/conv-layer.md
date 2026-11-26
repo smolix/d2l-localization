@@ -332,14 +332,14 @@ Die Kreuzkorrelation von `X` mit dem $1 \times 2$-Faltungskern $\mathbf{K} = \be
 <!--en:2489ce6e-->
 ::: {.slide title="Die gelernten Gewichte des Faltungskerns"}
 
-<!--en:7e4ef44b-->
+<!--en:e49eaf11-->
 [Warum der Verlust bei 12 beginnt und die Gewichte gegen [1, -1] konvergieren]{.kicker}
 
 <!--en:9cd1c645-->
 - **Warum der Verlust bei $12.0$ beginnt:** Gewichte nahe null liefern die Vorhersage $\hat{Y} \approx 0$. Bei den zwölf Kantenpixeln mit den Werten $\pm 1$ in `Y` liegen sie daher daneben ($12 \times 1^2 = 12$).
 
-<!--en:456670c5-->
-- **Konvergenz in 9 Schritten:** SGD lernt $[0.99, -0.99]$ automatisch aus den Daten.
+<!--en:04d69b68-->
+- **Konvergenz in 10 Schritten:** Der Gradientenabstieg lernt $[0.99, -0.99]$ automatisch aus den Daten.
 
 <!--en:3ba929d2-->
 ::: {.slide title="Schnelle Berechnung der Faltung durch Matrizenmultiplikation"}
@@ -447,8 +447,8 @@ Fragen zu Ausgabeformen, `im2col` und zur Berechnung rezeptiver Felder:
 <!--en:ce12e85f-->
 [Überblick über den Abschnitt]{.kicker}
 
-<!--en:00011fb7-->
-- **2D-Kreuzkorrelation und Lernen eines Kantendetektors:** $\mathbf{K}$ durchläuft alle gültigen Fenster ($(n_\textrm{h}-k_\textrm{h}+1)\times(n_\textrm{w}-k_\textrm{w}+1)$). SGD lernt $[1, -1]$ in 9 Schritten.
+<!--en:ebc1b04f-->
+- **2D-Kreuzkorrelation und Lernen eines Kantendetektors:** $\mathbf{K}$ durchläuft alle gültigen Fenster ($(n_\textrm{h}-k_\textrm{h}+1)\times(n_\textrm{w}-k_\textrm{w}+1)$). Der Gradientenabstieg lernt $[1, -1]$ in 10 Schritten.
 
 <!--en:09efe4f0-->
 - **Matrizenmultiplikation mit im2col:** Die bis zu $k_\textrm{h} k_\textrm{w}\times$ wiederholte Speicherung der Pixel in den Ausschnitten ermöglicht maximalen GEMM-Durchsatz auf der GPU.

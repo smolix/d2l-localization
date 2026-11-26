@@ -121,8 +121,8 @@ Nun bleiben wir weit unterhalb des Knickpunkts und variieren die Rechnung pro El
 <!--en:5e2a1a99-->
 Alle vier Operationen dauern rund 0.6 ms und erreichen damit eine effektive Speicherbandbreite von rund 0.9 TB/s. Da der Speicherverkehr die Laufzeit bestimmt, kosten transzendente Funktionen (`sin`, `sigmoid`) nicht mehr Zeit als `x + 1`.
 
-<!--en:5c939ca9-->
-Bei sofortiger Ausführung vervielfacht die Verkettung elementweiser Operationen den Speicherverkehr. Die folgende tanh-Näherung für GELU (`gelu_ish`) verkettet 8 elementweise Operationen. Sechs einstellige Operationen lesen und schreiben je einen Tensor (12 Tensorübertragungen). Zwei zweistellige Operationen (`x + 0.04 * x**3` und die abschließende Multiplikation mit `x`) lesen je zwei Tensoren und schreiben einen (6 Tensorübertragungen). Insgesamt werden 18 Tensoren zu je 256 MiB übertragen. Gegenüber einer einzelnen Addition steigt die Datenmenge um den Faktor $9\times$.
+<!--en:50f8c537-->
+Bei sofortiger Ausführung vervielfacht die Verkettung elementweiser Operationen den Speicherverkehr. Die folgende tanh-Näherung für GELU (`gelu_ish`) verkettet 8 elementweise Operationen. Sechs einstellige Operationen lesen und schreiben je einen Tensor (12 Tensorübertragungen). Zwei zweistellige Operationen (`x + 0.04 * x**3` und die abschließende Multiplikation mit `0.5 * x`) lesen je zwei Tensoren und schreiben einen (6 Tensorübertragungen). Insgesamt werden 18 Tensoren zu je 256 MiB übertragen. Gegenüber einer einzelnen Addition steigt die Datenmenge um den Faktor $9\times$.
 
 <!--en:a6250733-->
 Wie vorhergesagt dauert die Kette aus einzelnen Kerneln um den Faktor $8\times$ bis $9\times$ länger als `x + 1`. Die *Kernel-Fusion* (:numref:`sec_compilation`) fasst die Kette zu einem einzigen Kernel zusammen. Dieser liest `x` einmal und schreibt die Ausgabe einmal.
@@ -223,8 +223,8 @@ Die gemessene Schrittdauer weicht um höchstens etwa 10% von den vorhergesagten 
 <!--en:24b833bb-->
 Die drei `gemm`-Zeilen fassen die fünf großen Matrixprodukte zusammen. `multi_tensor_apply_kernel` führt die SGD-Aktualisierung im Batch in den vorhergesagten 0.4 ms aus.
 
-<!--en:7f9d5880-->
-Beachten Sie, dass eine separate Aktualisierung durch den Optimierer unabhängig von der Batchgröße eine feste Zeit benötigt. Bei Batchgröße 128 sinkt die Laufzeit der fünf Produkte auf jeweils ein Achtel, rund 0.07 ms. Damit dauert die Aktualisierung mit 0.4 ms länger als alle fünf Produkte zusammen.
+<!--en:39fb1ca7-->
+Beachten Sie, dass eine separate Aktualisierung durch den Optimierer unabhängig von der Batchgröße eine feste Zeit benötigt. Bei Batchgröße 128 sinkt die Laufzeit der fünf Produkte auf jeweils rund 0.07 ms (die Produkte sind dann bandbreitenbegrenzt). Damit dauert die Aktualisierung mit 0.4 ms länger als alle fünf Produkte zusammen.
 
 <!--en:844ba5af-->
 XLA integriert die SGD-Aktualisierung direkt in die Produkte für die Gewichtsgradienten (`gemm_fusion_dot`). Vor dem Schreiben des aktualisierten Gewichts zieht XLA den skalierten Gradienten ab. Damit entfallen das separate Schreiben und erneute Lesen des Gradienten.
@@ -460,8 +460,8 @@ Sechs einstellige Operationen übertragen $6 \times 2 = 12$ Tensoren, zwei zweis
 <!--en:da8ed78c-->
 - Bei $n = 4096$ und $8192$ nähert sich der gemessene Durchsatz der Grenze von $165\text{ TFLOP/s}$.
 
-<!--en:794ff195-->
-- Für $n \le 1024$ liegt der Durchsatz dagegen weit unter der Bandbreitengrenze. Er steigt **in doppelt logarithmischer Darstellung mit Steigung $3$**. Das ist typisch für eine konstante Zeit pro Aufruf, während die FLOPs proportional zu $2n^3$ zunehmen.
+<!--en:15b862de-->
+- Bei kleinem $n$ liegt der Durchsatz dagegen weit unter der Roofline. Er steigt **in doppelt logarithmischer Darstellung mit Steigung $3$**. Das ist typisch für eine konstante Zeit pro Aufruf, während die FLOPs proportional zu $2n^3$ zunehmen.
 
 <!--en:baeee84b-->
 ::: {.slide title="Bei kleinen Operationen dominiert die Startlatenz auf dem Host"}

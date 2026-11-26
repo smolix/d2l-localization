@@ -70,8 +70,8 @@ Moderne konvolutionäre Netze<br>**AlexNet · Blöcke · Normalisierung · Sprun
 <!--en:e8dd206b-->
 - **AlexNet $\to$ Quarter-VGG / ResNet-18:** Die Genauigkeit steigt von $91\%$ auf $93\text{--}94\%$. Die Parameteranzahl sinkt von $46.8\textrm{M}$ auf $11.2\textrm{M}$ (mit GAP auf $0.6\textrm{M}$).
 
-<!--en:ed81d7af-->
-- **BNLeNet und ResNet-56:** BatchNorm erweitert den nutzbaren Lernratenbereich um den Faktor $100\times$ ($\eta_0 \in [0.03, 10]$). Sprungverbindungen kehren die Verschlechterung bei 56 Schichten um.
+<!--en:9616121d-->
+- **BNLeNet und ResNet-56:** BatchNorm erweitert den nutzbaren Lernratenbereich um den Faktor $300\times$ ($\eta_0 \in [0.03, 10]$). Sprungverbindungen kehren die Verschlechterung bei 56 Schichten um.
 
 <!--en:684beff0-->
 - **ConvNeXt und RegNetX32:** Beide erreichen die Genauigkeit von ResNet-18 ($\approx 94\%$) mit $3.38\textrm{M}$ bzw. $0.52\textrm{M}$ Parametern (bei RegNetX32 also $21\times$ weniger).

@@ -113,8 +113,8 @@ Beim Training mit gemischter Genauigkeit (:numref:`sec_numerics`) bleiben Hauptg
 <!--en:a4c55054-->
 Die beiden Eingaben aus dem Residualstrom für die Normalisierungen eines Blocks bleiben in fp32 (4 Byte pro Wert). Von den rund $20d$ gespeicherten Werten pro Block wechseln die übrigen 18 Vektoren der Blockbreite zu bf16 (2 Byte pro Wert). Damit sinkt der Speicherbedarf der Aktivierungen eines Blocks auf etwa das $(2 \cdot 4 + 18 \cdot 2) / (20 \cdot 4) = 0.55$-Fache des fp32-Bedarfs:
 
-<!--en:ab3fc123-->
-Der Aktivierungsspeicher eines Blocks sinkt auf das $0.58\text{--}0.60$-Fache des fp32-Werts. Während des Schritts halten wir jedoch bf16-Kopien der Gewichte im Speicher. Dadurch steigt der feste Parameterspeicher von $16N = 15.1$ GiB auf $18N = 17.0$ GiB. Für Aktivierungen bleiben nur 7.0 GiB. Die Einsparung bei den Aktivierungen und der Mehrbedarf für die Gewichtskopien heben sich weitgehend auf. Auf eine Karte mit 24 GiB passen so nur 15–25% mehr Token.
+<!--en:1b9e8559-->
+Der Aktivierungsspeicher eines Blocks sinkt auf das $0.58\text{--}0.60$-Fache des fp32-Werts. Während des Schritts halten wir jedoch bf16-Kopien der Gewichte im Speicher. Dadurch steigt der feste Parameterspeicher von $16N = 15.1$ GiB auf $18N = 17.0$ GiB. Für Aktivierungen bleiben nur 7.0 GiB. Die Einsparung bei den Aktivierungen und der Mehrbedarf für die Gewichtskopien heben sich weitgehend auf. Auf eine Karte mit 24 GiB passen so nur 15–27% mehr Token.
 
 <!--en:e4019812-->
 Gemischte Genauigkeit mit bf16 verbessert vor allem die Geschwindigkeit. Auf der RTX 4090 erreichen die Tensor Cores mit bf16 einen Durchsatz von 165 TFLOP/s, doppelt so viel wie die 82.6 TFLOP/s mit tf32 und fp32. Wir untersuchen getrennt, was die Tensor Cores bewirken (tf32 gegenüber skalarem fp32) und was die 16-Bit-Operanden bewirken (bf16 gegenüber tf32). Dazu vermessen wir einen SGD-Schritt eines rechenbegrenzten dreischichtigen MLP der Breite 8192 mit einem Batch aus 2048 Beispielen. Bei $1.1 \times 10^{12}$ FLOPs pro Schritt ergibt das Roofline-Modell eine Mindestdauer von 13.3 ms bei 82.6 TFLOP/s und 6.7 ms bei 165 TFLOP/s. Hinzu kommen rund 1.3 ms für die bandbreitenbegrenzte SGD-Aktualisierung.
@@ -137,8 +137,8 @@ Damit ein Vielfaches der bisherigen Tokenanzahl auf die Karte passt, muss der Sc
 <!--en:7bc14ba6-->
 Dabei bezeichnet $a$ den Aktivierungsspeicher des einen Blocks, den wir gerade neu berechnen. $\Delta$ gibt an, um wie viel der gemessene Spitzenbedarf den errechneten Wert übersteigt (:numref:`subsec_mp-measuring`).
 
-<!--en:c69ad1b9-->
-Beim blockweisen Checkpointing speichern die 18 Blöcke zusammen nur $18 \times 8 = 144$ KiB/Token, weniger als Ausgabeschicht und Verlust allein. Damit steigt das Tokenbudget auf mehr als das Dreifache (10 000–15 000 Token). Mit Checkpointing passen in bf16 sogar etwas *weniger* Token in den Speicher als in fp32. Die zusätzlichen $2N$ Byte für bf16-Gewichtskopien überwiegen die Einsparung bei den Aktivierungen des einzigen neu berechneten Blocks. Nun beanspruchen die Ausgabe-Logits und der Kreuzentropieverlust den größten Teil des Speichers pro Token. Berechnen wir die Ausgabeprojektion und den Verlust abschnittsweise für Gruppen von Token in einem eigenen Checkpoint, entfällt dieser Engpass bei nur $2dV / (6N) \approx 3\%$ zusätzlichen FLOPs (Aufgabe :exref:`ex_mp-chunked-loss`).
+<!--en:02e06fd9-->
+Beim blockweisen Checkpointing speichern die 18 Blöcke zusammen nur $18 \times 8 = 144$ KiB/Token, weniger als Ausgabeschicht und Verlust allein. Damit steigt das Tokenbudget auf mehr als das Dreifache (10 000–15 000 Token). Mit Checkpointing passen in bf16 sogar *weniger* Token in den Speicher als in fp32. Die zusätzlichen $2N$ Byte für bf16-Gewichtskopien überwiegen zusammen mit dem in PyTorch höheren Speicherbedarf für die bf16-Ausgabeschicht und den Verlust die Einsparung bei den Aktivierungen des einzigen neu berechneten Blocks. Nun beanspruchen die Ausgabe-Logits und der Kreuzentropieverlust den größten Teil des Speichers pro Token. Berechnen wir die Ausgabeprojektion und den Verlust abschnittsweise für Gruppen von Token in einem eigenen Checkpoint, entfällt dieser Engpass bei nur $2dV / (6N) \approx 3\%$ zusätzlichen FLOPs (Aufgabe :exref:`ex_mp-chunked-loss`).
 
 <!--en:3c1a4739-->
 Vermessen wir das blockweise Checkpointing für 4 aufeinanderfolgende Blöcke mit zwei Sequenzen zu je 1024 Token. Für die vier Blockeingaben und die abschließende Ausgabe erwarten wir zusammen $5 \times 4d = 40$ KiB/Token:
@@ -444,8 +444,8 @@ Alle Ereignisse des CUDA-Caching-Allocators während eines Adam-Schritts mit $4{
 <!--en:d75918ce-->
 Bei gemischter Genauigkeit mit `bfloat16` bleiben die beiden Eingaben aus dem Residualstrom pro Block in `float32` ($4\text{ B}$). Die übrigen $18$ Vektoren der Blockbreite, die zu den $\sim 20d$ gespeicherten Werten beitragen, wechseln zu `bfloat16` ($2\text{ B}$). Für die Blockaktivierungen ergibt sich daher das $(2 \cdot 4 + 18 \cdot 2) / (20 \cdot 4) = 0.55$-Fache ihres Speicherbedarfs in `float32`:
 
-<!--en:52d8a3bc-->
-- **Warum die Tokenkapazität kaum wächst ($\sim 15\text{--}25\%$):** Die zwischengespeicherten `bfloat16`-Gewichtskopien erhöhen den festen Parameterspeicher von $16N = 15.1\text{ GiB}$ auf $18N = 17.0\text{ GiB}$. Damit sinkt der Platz für Aktivierungen ($8.9 \to 7.0\text{ GiB}$). Die vielen logarithmierten Wahrscheinlichkeiten des Verlusts in `float32` ($a_{\textrm{out}}$) beanspruchen weiterhin genauso viel Speicher.
+<!--en:3bad8630-->
+- **Warum die Tokenkapazität kaum wächst ($\sim 15\text{--}27\%$):** Die zwischengespeicherten `bfloat16`-Gewichtskopien erhöhen den festen Parameterspeicher von $16N = 15.1\text{ GiB}$ auf $18N = 17.0\text{ GiB}$. Damit sinkt der Platz für Aktivierungen ($8.9 \to 7.0\text{ GiB}$). Die vielen logarithmierten Wahrscheinlichkeiten des Verlusts in `float32` ($a_{\textrm{out}}$) beanspruchen weiterhin genauso viel Speicher.
 
 <!--en:58b27eb4-->
 ::: {.slide title="Beschleunigung durch Tensor Cores: skalares fp32, tf32 und bf16"}
@@ -456,8 +456,8 @@ Bei gemischter Genauigkeit mit `bfloat16` bleiben die beiden Eingaben aus dem Re
 <!--en:c78cfbc1-->
 Gemischte Genauigkeit verbessert vor allem die **Geschwindigkeit**. Ein Benchmark misst einen SGD-Schritt eines rechenbegrenzten MLP mit 3 Schichten der Breite 8192 ($1.1 \times 10^{12}\text{ FLOPs/step}$, mindestens $13.3\text{ ms}$ bei $82.6\text{ TFLOP/s}$ und $6.7\text{ ms}$ bei $165.2\text{ TFLOP/s}$, dazu $1.3\text{ ms}$ für die SGD-Aktualisierung in `fp32`). So lässt sich getrennt messen, was die Tensor Cores und was die 16-Bit-Operanden bewirken:
 
-<!--en:3ea05093-->
-- **Skalares `fp32` $\to$ `tf32` auf Tensor Cores ($1.45\times$):** Gleiche theoretische Obergrenze von $82.6\text{ TFLOP/s}$ und weiterhin 32 Bit pro gespeichertem Wert. Die Kachelbefehle der Tensor Cores erreichen jedoch $\sim 90\%$ Auslastung gegenüber $\sim 60\%$ auf skalaren ALUs.
+<!--en:46c13e10-->
+- **Skalares `fp32` $\to$ `tf32` auf Tensor Cores ($\sim 1.5\times$):** Gleiche theoretische Obergrenze von $82.6\text{ TFLOP/s}$ und weiterhin 32 Bit pro gespeichertem Wert. Die Kachelbefehle der Tensor Cores erreichen jedoch $\sim 90\%$ Auslastung gegenüber $\sim 60\%$ auf skalaren ALUs.
 
 <!--en:7b5ae469-->
 - **Tensor Cores mit `tf32` $\to$ `bf16` ($1.5\text{--}1.75\times$):** Die Zeit für die Matrixmultiplikationen halbiert sich auf $\sim 6.7\text{ ms}$. Die bandbreitenbegrenzte SGD-Aktualisierung in `fp32` ($1.3\text{ ms}$) und die Typumwandlungen der Gewichte dauern gleich lange.
@@ -486,8 +486,8 @@ Für unser GPT mit 18 Blöcken und 1 Mrd. Parametern zeigt die Auswertung von $M
 <!--en:fc2624b9-->
 - **Mehr als $3\times$ so große Mikrobatches:** Blockweises Checkpointing erhöht die Kapazität von $\sim 2{,}800$ Token auf **$\sim 10{,}000\text{--}15{,}000$ Token**.
 
-<!--en:c076d340-->
-- **Überraschendes Zusammenspiel:** Bei vollständigem blockweisem Checkpointing passen mit `bf16` etwas *weniger* Token in den Speicher als mit `fp32`. Die zusätzlichen $2N = 1.9\text{ GiB}$ für `bf16`-Gewichtskopien wiegen schwerer als die $60\text{ KiB/token}$, die beim einzigen gerade neu berechneten Block frei werden.
+<!--en:77c1f35c-->
+- **Überraschendes Zusammenspiel:** Bei vollständigem blockweisem Checkpointing passen mit `bf16` *weniger* Token in den Speicher als mit `fp32`. Die zusätzlichen $2N = 1.9\text{ GiB}$ für `bf16`-Gewichtskopien und der in PyTorch höhere Speicherbedarf für die Ausgabeschicht und den Verlust überwiegen die Einsparung beim einzigen neu berechneten Block.
 
 <!--en:74dda592-->
 ::: {.slide title="Checkpointing in der Messung: 40 KiB/Token und 25% mehr Zeit"}

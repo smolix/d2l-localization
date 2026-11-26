@@ -130,8 +130,8 @@ Das MoE-Modell liegt anfangs hinter dem dichten Modell und überholt es innerhal
 <!--en:8ddbd8ab-->
 Neuere MoE-Spitzenmodelle (:numref:`tab_moe-experts`) verfeinern das grobe Top-2-Routing von Mixtral 8x7B mit seinen 8 Experten auf zweierlei Weise (:numref:`fig_moe-fine-grained`):
 
-<!--en:97def07d-->
-1. **Feingranulare Unterteilung der Experten** (engl. fine-grained expert segmentation). Wir teilen jeden Experten voller Breite in $m$ schmalere Experten der Breite $w / m$. Damit steigt die Gesamtzahl der Experten auf $m E \in [128, 256]$ und die Zahl der aktiven Experten auf $m k \in [4, 8]$. Die Anzahl der gespeicherten und der aktiven Parameter bleibt jeweils gleich. Die Zahl der möglichen Kombinationen aktiver Experten steigt dagegen von $\binom{8}{2} = 28$ auf $\binom{256}{8} \approx 4 \times 10^{14}$.
+<!--en:0bb64234-->
+1. **Feingranulare Unterteilung der Experten** (engl. fine-grained expert segmentation). Wir teilen jeden der $E$ Experten voller Breite in $m$ Experten der Breite $w / m$. Der Router weist jedes Token $m k$ der insgesamt $m E$ Experten zu. Die Anzahl der gespeicherten und der aktiven Parameter bleibt jeweils gleich. Die Zahl der möglichen Kombinationen aktiver Experten steigt dagegen zum Beispiel von $\binom{16}{2} = 120$ auf $\binom{64}{8} \approx 4.4 \times 10^9$ bei $m = 4$. Veröffentlichte Modelle gehen weiter. Sie verwenden $128$–$256$ Experten, von denen $4$–$8$ aktiv sind. Dadurch sinkt auch der Anteil aktiver Experten.
 
 <!--en:173fe92a-->
 2. **Gemeinsame Experten** :cite:`Dai.Deng.Zhao.ea.2024`. Wir reservieren $E_{\textrm{shared}} \ge 1$ schmale Experten, die ohne Routing *jedes* Token verarbeiten. Sie übernehmen häufig benötigte Transformationen für Grammatik und Formatierung. So können sich die vom Router ausgewählten Experten spezialisieren, ohne dieselben Transformationen mehrfach zu erlernen.
@@ -352,8 +352,8 @@ Ein bytebasiertes GPT mit 2 Blöcken, 8 Experten und Top-1-Routing ($d = 128, \g
 <!--en:060e7293-->
 - **Ungleichgewicht zu Beginn und ohne Lastausgleich:** Bei `initialization` und `no balancing` erhält der am stärksten ausgelastete Experte $2.4\text{--}3.9\times$ so viele Token wie bei gleichmäßiger Verteilung ($30\%\text{--}49\%$ aller Token). **$20\%\text{--}36\%$** der Zuweisungen entfallen.
 
-<!--en:5fbe6d07-->
-- **Beide Verfahren verhindern den Kollaps:** Mit `auxiliary loss` ($\alpha = 0.01$) oder `bias controller` ($\eta_b = 0.01$) ist die höchste Expertenlast nur $1.1\text{--}1.4\times$ so groß wie der Idealanteil. Der Anteil verworfener Zuweisungen sinkt auf $\le 1\%$, der Validierungsverlust um **$\sim 0.10\text{--}0.15\text{ nats/byte}$**.
+<!--en:acd2e83c-->
+- **Beide Verfahren verhindern den Kollaps:** Mit `auxiliary loss` ($\alpha = 0.01$) oder `bias controller` ($\eta_b = 0.01$) erreicht kein Experte eine Last von $2\times$ seines Idealanteils. Höchstens wenige Prozent der Zuweisungen werden verworfen. Der Validierungsverlust sinkt um etwa **$0.1\text{--}0.25\text{ nats/byte}$**.
 
 <!--en:83d09c9d-->
 ::: {.slide title="Tokenanteile der Experten nach Verfahren"}

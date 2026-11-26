@@ -82,11 +82,11 @@ Tiefes bestärkendes Lernen: Dateneffizienz und Funktionsapproximation<br>**Krit
 <!--en:f83b166d-->
 [Versuchsreihe]{.kicker}
 
-<!--en:3bca6bf9-->
-- **Kontinuierliches Pendulum-v1 (Ziel: $\ge -200$):** Der Datenbedarf sinkt von $\sim 300\text{k}$ Schritten (REINFORCE) auf $2.4\text{k}$–$11\text{k}$ (SAC, §{sec_sac}) und schließlich auf $200$–$600$ Schritte (MPC mit Weltmodell, §{sec_model_based}).
+<!--en:09d2058f-->
+- **Kontinuierliches Pendulum-v1 (Ziel: $\ge -200$):** Der Datenbedarf sinkt von $\sim 300\text{k}$ Schritten (REINFORCE) auf $2.4\text{k}$–$11\text{k}$ (SAC, §{sec_sac}) und schließlich auf $200$–$800$ Schritte (MPC mit Weltmodell, §{sec_model_based}).
 
-<!--en:469c250b-->
-- **Diskretes CartPole-v1 (Höchstwert $500$):** PPO über mehrere Epochen (§{sec_ppo}) halbiert den Datenbedarf gegenüber dem 1-Schritt-Actor-Critic-Verfahren ($\sim 60\text{k} \to \sim 25\text{k}$ Schritte). DQN (§{sec_dqn}) löst die Aufgabe in $\sim 40\text{k}$ Schritten.
+<!--en:4f979d80-->
+- **Diskretes CartPole-v1 (Höchstwert $500$):** PPO über mehrere Epochen (§{sec_ppo}) halbiert den Datenbedarf gegenüber Updates über eine einzige Epoche ($\gtrsim 50\text{k} \to \sim 25\text{k}$ Schritte). DQN (§{sec_dqn}) löst die Aufgabe in $\sim 40\text{k}$ Schritten.
 
 <!--en:03895502-->
 - **Exakte Prüfung mit Tabellen und Prüfprogramm:** Der Vergleich mit Optima in geschlossener Form zeigt Reward-Hacking (§{sec_regularized}, §{sec_rl_sequences}) und Überschätzung beim Offline-Lernen (§{sec_offline}).

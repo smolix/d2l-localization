@@ -551,8 +551,8 @@ In jeder Iteration sammeln wir Trajektorien, halten Vorteile und alte Log-Wahrsc
 <!--en:0979ecb9-->
 - Da der Strategiegradienten-Verlust unabhängig vom Ertrag nahe null bleibt, verfolgen wir den **Anteil außerhalb des Bands** und die **geschätzte KL-Divergenz** über die 20 Epochen eines Batchs.
 
-<!--en:9c2d058d-->
-- In Epoche 1 gilt $\rho_t = 1$, also sind beide Kennzahlen $0$. Mit Clipping erreicht der Anteil außerhalb des Bands um Epoche 5 bis 6 seinen Höchstwert ($\sim 7\%$) und **sinkt bis Epoche 20 wieder auf die Hälfte**.
+<!--en:8d528925-->
+- In Epoche 1 gilt $\rho_t = 1$, also sind beide Kennzahlen $0$. Mit Clipping erreicht der Anteil außerhalb des Bands um Epoche 5 bis 6 seinen Höchstwert ($\sim 8$–$10\%$) und **sinkt bis Epoche 20 wieder auf die Hälfte**.
 
 <!--en:d4b5f38f-->
 - **Warum sinkt er?** Bei Beobachtungen jenseits der *ungünstigen* Bandgrenze ($\rho < 0.8$ für $\hat{A} > 0$) bleibt der Gradient ohne Clipping erhalten und zieht die Verhältnisse zurück ins Band.

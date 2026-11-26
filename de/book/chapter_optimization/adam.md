@@ -335,10 +335,10 @@ Jeder trainierbare Parametertensor benötigt einen Schrittzähler $t$ und zwei P
 <!--en:529d752a-->
 [Gittervergleich mit 3 Zufallsstartwerten]{.kicker}
 
-<!--en:4c50be20-->
+<!--en:2cf95604-->
 - Die Lernratensuche umfasst für SGD mit Momentum ($\beta = 0.9$) die Werte $\eta \in \{0.1, 0.3, 0.5, 1.0\}$ und für Adam die Werte $\eta \in \{3{\times}10^{-4}, 10^{-3}, 3{\times}10^{-3}, 10^{-2}, 3{\times}10^{-2}\}$. Jeder Versuch nutzt $3$ Zufallsstartwerte ($2{,}000$ Schritte auf `TinyLM`):
   - **Faktor 100× bei der nominellen Lernrate:** Die beste Lernrate beträgt für SGD $\eta = 0.3$ und für Adam $\eta = 3 \times 10^{-3}$ ($\approx 0.1 \times \frac{0.3}{\text{scale}}$).
-  - **Stabilität bei hohen Lernraten:** SGD divergiert gegen `inf` bei $\eta = 0.5$ (Faktor unter $2\times$ gegenüber dem Optimum). Bei Adam bleibt der Verlust selbst bei $\eta = 3 \times 10^{-2}$ endlich (Faktor $10\times$ über dem Optimum), da $\eta$ die Schrittlänge im Versuch begrenzt.
+  - **Stabilität bei hohen Lernraten:** SGD divergiert meist gegen `inf` bei $\eta = 0.5$ (Faktor unter $2\times$ gegenüber dem Optimum). Bei Adam bleibt der Verlust selbst bei $\eta = 3 \times 10^{-2}$ endlich (Faktor $10\times$ über dem Optimum), da $\eta$ die Schrittlänge im Versuch begrenzt.
 
 <!--en:4c7a976b-->
 ::: {.slide title="Adam erreicht den Zielverlust in halb so vielen Schritten wie SGD"}
@@ -346,11 +346,11 @@ Jeder trainierbare Parametertensor benötigt einen Schrittzähler $t$ und zwei P
 <!--en:511a36d4-->
 [Geschwindigkeit, Lernratenbereich und Stabilität]{.kicker}
 
-<!--en:578b1421-->
+<!--en:9a0443fd-->
 - Der Vergleich der $3$ Läufe bei der jeweils besten Lernrate zeigt drei entscheidende Vorteile von Adam auf `TinyLM`:
   1. **Konvergenzgeschwindigkeit:** Adam erreicht $1.8$ Nat in **$650\text{--}775$ Schritten**, SGD mit Momentum benötigt $1{,}125\text{--}1{,}550+$ Schritte.
-  2. **Nutzbarer Lernratenbereich (bis $+0.15$ Nat über dem Optimum):** **Faktor $10\times$** ($10^{-3}$ bis $10^{-2}$) gegenüber nur einem empfindlichen Gitterpunkt ($0.3$) für SGD.
-  3. **Robustheit gegen Verlustspitzen:** Der größte Verlustanstieg in einem Schritt beträgt $<0.20$ Nat bei Adam gegenüber $>0.4\text{--}1.0$ Nat bei SGD.
+  2. **Nutzbarer Lernratenbereich (bis $+0.15$ Nat über dem Optimum):** **Faktor $10\times$** ($10^{-3}$ bis $10^{-2}$) gegenüber einem oder zwei Gitterpunkten ($0.1$--$0.3$) für SGD.
+  3. **Robustheit gegen Verlustspitzen:** Der größte Verlustanstieg in einem Schritt beträgt bei Adam in jedem Lauf etwa $0.2$ Nat. Bei SGD erreicht er bis zu $1\text{--}1.7$ Nat.
 
 <!--en:9003682e-->
 ::: {.slide title="Vorzeichenabstieg, die Rolle von ε und Probleme bei kleinem β₂"}

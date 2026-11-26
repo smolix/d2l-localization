@@ -164,8 +164,8 @@ Prüfen Sie die Rechnung direkt: $2 x_1^{(1)} - 3.4 x_2^{(1)} + 4.2$ stimmt mit 
 <!--en:458d70d1-->
 Warum ergeben sich trotz des winzigen Rauschpegels $\sigma = 0.01$ beim Auftragen von $y$ gegen $x_1$ und $x_2$ senkrecht mehrere Einheiten breite Punktwolken statt hauchdünner Linien?
 
-<!--en:e585e3f3-->
-- **Projektion ohne eine Variable:** Im 3D-Raum $(x_1, x_2, y)$ liegen von den $1{,}000$ Punkten typischerweise fast alle innerhalb von $\pm 0.03$ um die geneigte Ebene $y = 2x_1 - 3.4x_2 + 4.2$.
+<!--en:149b790b-->
+- **Projektion ohne eine Variable:** Im 3D-Raum $(x_1, x_2, y)$ liegen von den $1{,}000$ Punkten bis auf wenige alle innerhalb von $\pm 0.03$ ($3\sigma$) um die geneigte Ebene $y = 2x_1 - 3.4x_2 + 4.2$.
 
 <!--en:7c7cd578-->
 - **Varianz des nicht dargestellten Merkmals:** Bei der Projektion auf $(x_2, y)$ geht die nicht dargestellte Koordinate $2x_1 \sim \mathcal{N}(0, 4)$ jedes Punkts in die vertikale Streuung ein ($\textrm{std} = 2.0$). Bei der Projektion auf $(x_1, y)$ übernimmt $-3.4x_2$ diese Rolle ($\textrm{std} = 3.4$).

@@ -406,8 +406,8 @@ Ein Trainingsschritt des GPT mit 36 Blöcken und $1.92\text{B}$ Parametern auf z
 <!--en:92c65c19-->
 - **PCIe 4.0 über den Host-Speicher ($\sim 2.2\text{ GB/s}$):** Die Übertragung von $1.5\,S = 11.5\text{ GB}$ dauert $\sim 5.0\text{ s}$, die Berechnung nur $0.40\text{ s}$. Die Verbindung begrenzt die Schrittdauer (Anteil der Rechenzeit: $\sim 7\%$).
 
-<!--en:4c4420fa-->
-- **NVLink 4/5 ($450\text{--}900\text{ GB/s}$):** Die Übertragung derselben $11.5\text{ GB}$ dauert $13\text{--}26\text{ ms}$. Damit ist sie etwa so schnell wie die Berechnung eines Blocks ($14\text{--}32\text{ ms}$) oder schneller.
+<!--en:580b942d-->
+- **NVLink 4/5 ($450\text{--}900\text{ GB/s}$):** Die Übertragung derselben $11.5\text{ GB}$ dauert $13\text{--}26\text{ ms}$. Das ist kürzer als die Rechenzeit für den gesamten Schritt auf diesen GPUs ($14\text{--}32\text{ ms}$ bei maximaler `bf16`-Rechenleistung von B200/H100).
 
 <!--en:5f61af62-->
 - **Blöcke vorausladen:** Läuft das All-Gather für Block $\ell+1$ parallel zur Berechnung von Block $\ell$, lässt sich die Kommunikationszeit bei $g \le c$ vollständig verdecken.

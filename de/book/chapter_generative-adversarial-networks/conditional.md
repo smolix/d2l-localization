@@ -431,8 +431,8 @@ Der CIFAR-10-Klassifikator `FeatureCNN` mit 3 Blöcken dient nach einem Training
 <!--en:9614ffd7-->
 Die $10{,}000$ CIFAR-10-Testbilder liefern $5{,}000$ Referenzbilder (`f_real`, $500$ je Klasse) und $5{,}000$ echte Bilder als Vergleichsgruppe (`f_real2`, $500$ je Klasse). Damit lassen sich die $5{,}000$ generierten Bilder im 128-dimensionalen Merkmalsraum des Prüfklassifikators bewerten:
 
-<!--en:8a08ba3c-->
-- Die generierten Bilder erreichen $\mathrm{FD} \approx 1.6\text{--}2.0$ ($10\text{--}12\times$ so viel wie der Vergleichswert von $0.16$ für eine endliche Stichprobe echter Bilder) und $\mathrm{MMD}^2 \approx 0.11$. Eine zweite Ziehung latenter Vektoren verändert die FD um $< 0.1$. Vor der Begrenzung liegen weniger als $1\%$ der rohen Ausgabewerte des Generators außerhalb von $[-1, 1]$.
+<!--en:1742ec37-->
+- Die generierten Bilder erreichen $\mathrm{FD} \approx 1.6\text{--}2.0$ ($10\text{--}12\times$ so viel wie der Vergleichswert von $\approx 0.15$ für eine endliche Stichprobe echter Bilder) und $\mathrm{MMD}^2 \approx 0.11$. Eine zweite Ziehung latenter Vektoren verändert die FD um $< 0.1$. Vor der Begrenzung liegen weniger als $1\%$ der rohen Ausgabewerte des Generators außerhalb von $[-1, 1]$.
 
 <!--en:4d55e56d-->
 ::: {.slide title="Klassenweise Präzision und Trefferquote auf CIFAR-10"}

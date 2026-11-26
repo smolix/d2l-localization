@@ -442,7 +442,7 @@ Alle drei Schülervarianten durchlaufen den Test für $201$ Eingaben $c$ und $64
 <!--en:4b844a0e-->
 | **RpGAN (§{sec_gan_relativistic})** | $\log(p/q) + c$ | Paarweises Bradley-Terry-Ranking | Ohne Nebenbedingung | Sättigt ($d_{\mathrm{Rp}} = \log 2$) |
 
-<!--en:59df14aa-->
+<!--en:7be209f3-->
 | **R3GAN (§{sec_gan_convergence}–§{num:sec_gan_conditional})** | $\log(p/q)$, gefiltert oberhalb der Grenzfrequenz zur Längenskala $2\sqrt{\gamma}$ | Paarweises Bradley-Terry-Ranking | Um null zentrierter Strafterm $R_1 + R_2$ auf $p, q$ | Glatte Interpolation durch gedämpften Kritiker |
 
 <!--en:e7534d5d-->

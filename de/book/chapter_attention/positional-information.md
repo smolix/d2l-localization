@@ -295,8 +295,8 @@ Eine **kausale Maske** bricht die Permutationssymmetrie selbst ohne Positionsvek
   $$p_{i, 2m} = \sin(i\,\omega_m)$$
   $$p_{i, 2m+1} = \cos(i\,\omega_m)$$
 
-<!--en:a3fce575-->
-- **Geometrisch gestaffelte Wellenlängen:** Die Perioden $2\pi / \omega_m$ reichen von $2\pi \approx 6.28$ Token ($m = 0$) bis $2\pi \times 10^4 \approx 62{,}832$ Token ($m = d/2 - 1$).
+<!--en:a76addc7-->
+- **Geometrisch gestaffelte Wellenlängen:** Die Perioden $2\pi / \omega_m$ wachsen von $2\pi \approx 6.28$ Token ($m = 0$) in Richtung $2\pi \times 10^4$ Token (etwa $35{,}000$ bei $m = d/2 - 1$ für $d = 32$).
 
 <!--en:a9bd3a1d-->
 ::: {.slide title="Sinusschwingungen als kontinuierlicher Binärzähler"}
@@ -385,8 +385,8 @@ Statt $\mathbf{p}_i$ zu $\mathbf{x}_i$ zu addieren, transformieren **Rotary Posi
 <!--en:a2f437e0-->
 - `rope` trennt Koordinaten mit geraden (`0::2`) und ungeraden (`1::2`) Indizes. Für die $2 \times 2$-Drehung wandelt die Funktion die `float32`-Winkel in `x.dtype` um. Anschließend fügt sie die Koordinaten der Paare wieder abwechselnd zusammen.
 
-<!--en:194c7850-->
-- Eine Verschiebung aller $32$ Positionen um $1$, $17$ oder $480$ ändert die RoPE-Scores höchstens um den `float32`-Rundungsfehler ($\sim 10^{-6}$). Die Scores der additiven sinusförmigen Kodierung ändern sich dagegen um $2.7$.
+<!--en:60825335-->
+- Eine Verschiebung aller $32$ Positionen um $1$, $17$ oder $480$ ändert die RoPE-Scores nur um den `float32`-Rundungsfehler ($\sim 10^{-6}$ bis $10^{-5}$). Die Scores der additiven sinusförmigen Kodierung ändern sich dagegen um $2.7$.
 
 <!--en:12c12710-->
 ::: {.slide title="Abstandsstrafe (ALiBi) und kausale Maske allein (NoPE)"}

@@ -281,8 +281,8 @@ Die Übersicht zeigt für jeden Parametertensor Form und Größe, anschließend 
 <!--en:f3b6b203-->
 [Versuchsaufbau]{.kicker}
 
-<!--en:307cf8f2-->
-- **Kontrollierte Lernratensuche und Trainingsschleife (`lr_sweep`, `train_steps`):** Für jeden Wert des logarithmischen $\eta$-Gitters starten wir mit denselben Anfangsgewichten (Zufallsstartwert 0) und verarbeiten $T = 2{,}000$ Minibatches.
+<!--en:4713b686-->
+- **Kontrollierte Lernratensuche und Trainingsschleife (`lr_sweep`, `train_steps`):** Für jeden Wert des logarithmischen $\eta$-Gitters starten wir mit denselben zufällig initialisierten Gewichten und verarbeiten $T = 2{,}000$ Minibatches.
 
 <!--en:366e23cb-->
 - **Kennzahlen für den geglätteten Verlustverlauf (`final_loss`, `steps_to_reach`):** Mittelwert über die letzten $k = 100$ Schritte und erster Block von $25$ Schritten, dessen Mittelwert die Zielschwelle erreicht.
@@ -358,8 +358,8 @@ Die Übersicht zeigt für jeden Parametertensor Form und Größe, anschließend 
 <!--en:48de5ec1-->
 - **Warum Vergleiche mit festem $\eta$ scheitern:** Einfacher SGD skaliert die unveränderten Gradienten ($\eta^\star \approx 0.5$), AdamW hingegen normalisiert die Schrittlängen ($\eta^\star \approx 3 \times 10^{-3}$).
 
-<!--en:fbe9ac10-->
-- **Abstimmung von Störhyperparametern (Godbole et al., 2023):** Für jeden Optimierer testen wir $\eta$ unabhängig auf einem logarithmischen Gitter mit denselben Anfangsgewichten (Zufallsstartwert 0).
+<!--en:4f06b001-->
+- **Abstimmung von Störhyperparametern (Godbole et al., 2023):** Für jeden Optimierer testen wir $\eta$ unabhängig auf einem logarithmischen Gitter mit denselben Anfangsgewichten.
 
 <!--en:00643857-->
 - **Bestwert und Breite angeben:** Ergebnis bei der besten Lernrate $\eta^\star$ *und* nutzbarer Lernratenbereich mit einem Endverlust von höchstens $+0.15$ Nat über dem Wert bei $\eta^\star$.

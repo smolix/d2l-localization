@@ -205,8 +205,8 @@ Zählt die gemeinsam genutzte Matrix einmal oder zweimal? Wir vergleichen das Mo
 <!--en:fdb45b9a-->
 Das Modell mit Gewichtsbindung enthält $1600 + 272 = 1872$ Parameter (eine Einbettungstabelle und die Schicht im Hauptzweig). In der Variante ohne Bindung kommt eine zweite Tabelle der Größe $100 \times 16$ hinzu, sodass es insgesamt 3472 Parameter sind.
 
-<!--en:e1a08ae6-->
-Sowohl `collect_params()` als auch `state_dict()` behalten beide Schlüssel (`emb.weight` und `head.weight`). Diese verweisen auf denselben Speicher:
+<!--en:e6c3ce55-->
+Sowohl `collect_params()` als auch `state_dict()` behalten beide Schlüssel (`emb.weight` und `head.weight`). Diese verweisen auf denselben Speicher. Die folgende Ausgabe von `named_parameters()` in PyTorch listet den gemeinsam genutzten Tensor nur einmal auf:
 
 <!--en:be63bf18-->
 Was geschieht bei der Backpropagation, wenn ein Tensor zweimal zum Einsatz kommt? Nach der Kettenregel für mehrere Variablen trägt jede Aufrufstelle einen eigenen Gradiententerm bei. Die Summe beider Terme ergibt den Gradienten des gemeinsam genutzten Tensors. Bezeichnen wir die beiden Tabellen des Modells ohne Gewichtsbindung mit $\mathbf{W}_\textrm{emb}$ und $\mathbf{W}_\textrm{head}$. Initialisieren wir beide mit denselben Werten wie die gebundene Matrix $\mathbf{W}$, so berechnen beide Modelle genau dieselbe Funktion. Es gilt

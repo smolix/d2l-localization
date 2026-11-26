@@ -261,8 +261,8 @@ Selektive Zustandsraummodelle (Mamba)<br>**Selektives Kopieren · eingabeabhäng
 <!--en:3653a55f-->
 - **Was `MinGRU` (§{sec_linear-recurrence}) bietet:** ein eingabeabhängiges Gate $\mathbf{z}_t(\mathbf{x}_t)$, aber nur $N = 1$ Skalar pro Kanal mit anfänglich $\tau_{1/2} = 1$.
 
-<!--en:01ffa86d-->
-- **Was `S4D` (§{sec_ssm}) bietet:** $N = 16$ Abklingmoden pro Kanal in logarithmisch gleichen Abständen ($\tau_{1/2} \in [0.4, 693]$), aber eine feste LTI-Schrittweite $\Delta_c$.
+<!--en:6dc38fc1-->
+- **Was `S4D` (§{sec_ssm}) bietet:** $N = 16$ Abklingraten $-1, \ldots, -16$ pro Kanal mit logarithmisch gleichverteilten Schrittweiten (Halbwertszeiten über alle Kanäle von $0.4$ bis $693$), aber eine feste LTI-Schrittweite $\Delta_c$.
 
 <!--en:3eed9347-->
 - **Was `Mamba` (§{sec_mamba}) verbindet:** tokenabhängige $(\boldsymbol{\Delta}_t, \mathbf{B}_t, \mathbf{C}_t)$ für einen Zustand der Form $H \times N$ mit mehreren Zeitskalen. Das Training nutzt parallele und adjungierte Scans.

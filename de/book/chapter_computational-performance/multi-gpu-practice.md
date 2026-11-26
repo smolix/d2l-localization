@@ -4,8 +4,8 @@
 <!--en:0ee7f281-->
 In :numref:`sec_multi_gpu` verlangsamte unsere selbst geschriebene datenparallele Schleife LeNet auf zwei GPUs aus zwei Gründen. Ein einzelner Python-Thread startete die Kernel auf beiden GPUs nacheinander. Außerdem wartete der Allreduce auf das Ende des gesamten Rückwärtsdurchlaufs (engl. backward pass), obwohl die Gradienten der letzten Schichten schon viel früher vorlagen.
 
-<!--en:34458d1e-->
-Werkzeuge für datenparalleles Training im Produktivbetrieb beseitigen beide Engpässe. Sie starten entweder einen Host-Prozess pro GPU oder kompilieren ein einziges Programm, das sie auf alle GPUs verteilen. Außerdem fassen sie Gradienten zu *Bündeln* (engl. buckets) zusammen. Sobald ein Bündel im Rückwärtsdurchlauf voll ist, startet sein Allreduce. Wie viel vom Gradientenaustausch lässt sich so durch Berechnung überdecken? Um das zu testen, wechseln wir von LeNet zu ResNet-18 und verwenden Fashion-MNIST-Bilder der Größe $64 \times 64$. Pro Bild fallen 2.2 Milliarden Multiplikationsadditionen an, also rund 50 FLOPs pro Byte des 45 MB großen Gradienten. Ein Schritt mit 256 Bildern lastet eine RTX 4090 damit rund 100 ms lang aus. Anhand eines einzelnen Schritts prüfen wir, was der parallele Trainingsschritt berechnet. Wir messen die schwache und die starke Skalierung (engl. weak scaling und strong scaling) auf einer, zwei und vier GPUs und vergleichen die Ergebnisse mit unserem Kostenmodell.
+<!--en:b84b4541-->
+Werkzeuge für datenparalleles Training im Produktivbetrieb beseitigen beide Engpässe. Sie starten entweder einen Host-Prozess pro GPU oder kompilieren ein einziges Programm, das sie auf alle GPUs verteilen. Außerdem fassen sie Gradienten zu *Bündeln* (engl. buckets) zusammen. Sobald ein Bündel im Rückwärtsdurchlauf voll ist, startet sein Allreduce. Wie viel vom Gradientenaustausch lässt sich so durch Berechnung überdecken? Um das zu testen, wechseln wir von LeNet zu ResNet-18 und verwenden Fashion-MNIST-Bilder der Größe $64 \times 64$. Pro Bild fallen 2.2 Milliarden Multiplikationsadditionen an, also rund 300 Trainings-FLOPs pro Byte des 45 MB großen Gradienten. Ein Schritt mit 256 Bildern lastet eine RTX 4090 damit rund 100 ms lang aus. Anhand eines einzelnen Schritts prüfen wir, was der parallele Trainingsschritt berechnet. Wir messen die schwache und die starke Skalierung (engl. weak scaling und strong scaling) auf einer, zwei und vier GPUs und vergleichen die Ergebnisse mit unserem Kostenmodell.
 
 <!--en:607aceb6-->
 ## Datenparallelität im Produktivbetrieb
@@ -326,11 +326,11 @@ In JAX genügt ein `train_step` wie für eine einzelne GPU. Das Modell wird repl
 <!--en:1a6f49c1-->
 PyTorch DDP schließt das erste Bündel bei $1\text{ MiB}$, damit die Kommunikation fast sofort beginnt. Für alle weiteren gilt `bucket_cap_mb = 25` ($25\text{ MiB} = 26.2\text{ MB}$):
 
-<!--en:654afe78-->
-- **Bündel von ResNet-18 (insgesamt $S = 44.7\text{ MB}$):** Beim Durchlaufen von `reversed(list(net.parameters()))` entstehen drei Bündel mit **$9.4\text{ MB}$, $26.2\text{ MB}$ und $9.0\text{ MB}$**. Schon ein einzelner $9.4\text{ MB}$ großer Gewichtstensor einer späten `Conv2d`-Schicht überschreitet die erste Schwelle von $1\text{ MiB}$.
+<!--en:d6d59017-->
+- **Bündel von ResNet-18 (insgesamt $S = 44.7\text{ MB}$):** Beim Durchlaufen von `reversed(list(net.parameters()))` entstehen drei Bündel mit **$9.5\text{ MB}$, $26.5\text{ MB}$ und $8.7\text{ MB}$**. Schon ein einzelner $9.4\text{ MB}$ großer Gewichtstensor einer späten `Conv2d`-Schicht überschreitet die erste Schwelle von $1\text{ MiB}$.
 
-<!--en:ba768dda-->
-- **Vorhersage bei idealer Überlappung:** Enden die Allreduces der ersten beiden Bündel ($9.4$ und $26.2\text{ MB}$) während der Backpropagation, bleibt nur das letzte Bündel mit **$S_{\textrm{last}} = 9.0\text{ MB}$** übrig. Es enthält die zuletzt berechneten Gradienten der frühesten Schichten. Die nicht überdeckte Kommunikation sinkt um den Faktor **$5\times$**.
+<!--en:713a9638-->
+- **Vorhersage bei idealer Überlappung:** Enden die Allreduces der ersten beiden Bündel ($9.5$ und $26.5\text{ MB}$) während der Backpropagation, bleibt nur das letzte Bündel mit **$S_{\textrm{last}} = 8.7\text{ MB}$** übrig. Es enthält die zuletzt berechneten Gradienten der frühesten Schichten. Die nicht überdeckte Kommunikation sinkt um den Faktor **$5\times$**.
 
 <!--en:d6ce97df-->
 ::: {.slide title="Asynchrone Bündelung von Allreduces in XLA (30 MiB)" only="jax"}

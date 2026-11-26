@@ -531,8 +531,8 @@ Drei Fragen zum Entwurf der Verfahren:
 <!--en:9347ea17-->
 2. Bei $n = 49$ Synchronisationen gilt $(1 - 0.99^{49}) / 0.01 \approx \mathbf{38.9}$. Sehr seltene Synchronisationen stabilisieren die Regression, bremsen aber die Ausbreitung der Werte.
 
-<!--en:a7205f8d-->
-3. Das erwartete Maximum von $m = 10^5$ unabhängigen standardnormalverteilten Rauschvariablen beträgt $\approx \sqrt{2 \ln 10^5} \approx \mathbf{4.4\sigma}$. Zudem bleibt $Q_{w^-}$ stark mit $Q_w$ korreliert. Das führt bei $10^5$ Ausgabeköpfen zu einer erheblichen Maximierungsverzerrung.
+<!--en:9dc336cb-->
+3. Das erwartete Maximum von $m = 10^5$ unabhängigen standardnormalverteilten Rauschvariablen beträgt $\approx \mathbf{4.4\sigma}$. Die Obergrenze liegt bei $\sqrt{2 \ln 10^5} \approx 4.8\sigma$. Zudem bleibt $Q_{w^-}$ stark mit $Q_w$ korreliert. Das führt bei $10^5$ Ausgabeköpfen zu einer erheblichen Maximierungsverzerrung.
 
 <!--en:c5f03741-->
 ::: {.slide title="Zusammenfassung: stabiles Off-Policy-Lernen mit tiefen Wertnetzen"}

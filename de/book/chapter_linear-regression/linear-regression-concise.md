@@ -198,8 +198,8 @@ Kompakte Implementierung der linearen Regression<br>
 <!--en:ad59a9d8-->
 [Die kompakte Implementierung im Einsatz]{.kicker}
 
-<!--en:63965467-->
-Das Training von `LinearRegression(lr=0.015)` mit `d2l.Trainer(max_epochs=10)` reproduziert die Konvergenz (Fehler pro Epoche $7\times$ kleiner) und rekonstruiert die Parameter mit einem Fehler der Größenordnung $O(10^{-4})$:
+<!--en:1ec8b0dd-->
+Das Training von `LinearRegression(lr=0.015)` mit `d2l.Trainer(max_epochs=10)` reproduziert die Konvergenz (Fehler pro Epoche $7\times$ kleiner) und rekonstruiert die Parameter mit einem Fehler von höchstens etwa $10^{-3}$:
 
 <!--en:32f65357-->
 - **Rauschgrenze bei $\sigma^2 = 10^{-4}$:** Beim MSE des Frameworks entfällt der Faktor $\frac{1}{2}$. Der Verlust pendelt sich daher bei $\sigma^2 = 10^{-4}$ ein. Die Quadratwurzel $\sqrt{10^{-4}} = 0.01 = \sigma$ ergibt das quadratische Mittel der Vorhersagefehler in den Einheiten der Labels.

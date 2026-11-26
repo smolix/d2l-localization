@@ -52,11 +52,11 @@ Sequenzmodelle und rekurrente neuronale Netze<br>**Autoregression · Subwort-Tok
 <!--en:4ed205ed-->
 [Messergebnisse]{.kicker}
 
-<!--en:7bf03136-->
-- **Drift bei wiederholter Vorhersage und Subwort-Kompression (§§{sec_sequence}–§{num:sec_text-sequence}):** Ein lineares AR($4$)-Modell erzielt auf einer verrauschten Sinuskurve einen mittleren quadratischen Fehler von $0.05$ für 1 Schritt. Über 64 Schritte steigt er auf das Fünffache ($5\times$), also auf $0.25$. BPE-1024 komprimiert *The Time Machine* auf $2.78$ Byte pro Token, ohne ein einziges Token außerhalb des Vokabulars.
+<!--en:de6cf1d0-->
+- **Drift bei wiederholter Vorhersage und Subwort-Kompression (§§{sec_sequence}–§{num:sec_text-sequence}):** Ein lineares AR($4$)-Modell erzielt auf einer verrauschten Sinuskurve einen mittleren quadratischen Fehler von $0.05$ für 1 Schritt. Über 64 Schritte steigt er auf das Fünffache ($5\times$), also auf $0.25$. BPE-1024 komprimiert *The Time Machine* auf $2.72$ Byte pro Token, ohne ein einziges Token außerhalb des Vokabulars.
 
-<!--en:f3e7b7f3-->
-- **Häufigkeitsbasierte und neuronale Sprachmodelle (§§{sec_language-model}–§{num:sec_rnn}):** Kneser–Ney senkt die Perplexität von Worttrigrammen ($2{,}481 \to 300$) und erzielt mit BPE-1024 $1.90$ bpb. Mit Gradienten-Clipping erreicht `RNNLMScratch` (Zustand von $512$ Byte, $89\%$ der Parameter in den Vokabularschichten) $2.12$ bpb.
+<!--en:ae1ca8a4-->
+- **Häufigkeitsbasierte und neuronale Sprachmodelle (§§{sec_language-model}–§{num:sec_rnn}):** Kneser–Ney senkt die Perplexität von Worttrigrammen ($2{,}481 \to 300$) und erzielt mit BPE-1024 auf kleingeschriebenem Text $1.90$ bpb. Auf unverändertem Text erreicht `RNNLMScratch` (Zustand von $512$ Byte, $89\%$ der Parameter in den Vokabularschichten) mit Gradienten-Clipping $2.12$ bpb und liegt damit praktisch gleichauf mit einem Kneser–Ney-Trigrammmodell ($2.09$).
 
 <!--en:fc45e067-->
 - **Reichweite des Gradienten und Texterzeugung (§§{sec_bptt}–§{num:sec_decoding}):** Trotz $\rho(\mathbf{W}_{\textrm{hh}}) \approx 1.80$ lässt die Kontraktion durch $\tanh'$ ($\approx 0.27$) die Gradienten auf unter $1\%$ sinken, und das innerhalb von $8$ Schritten. Mit Sampling aus abgeschnittenen Verteilungen erreicht `distinct-3` wieder $\approx 0.99$.

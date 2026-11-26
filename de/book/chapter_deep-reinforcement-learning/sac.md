@@ -537,8 +537,8 @@ In `float32` rundet $\tanh(u)$ auf $1.000000$ für $|u| \ge 10$. Damit gilt $\lo
 <!--en:61ab2693-->
 [Der Update-Schritt]{.kicker}
 
-<!--en:82f47387-->
-Jeder Aufruf von `sac_step` passt beide Kritiker durch Regression an das gemeinsame entropieregularisierte Ziel $y$ mit dem Minimum beider Schätzungen an. Dann folgen das Akteurupdate mit dem pfadweisen Gradienten von $\beta \log \pi_\theta - \min_j Q_{w_j}$, die Anpassung von $\log \beta$ für die Zielentropie $\bar{H} = -1$ und die Mittelung der Zielnetze mit $\nu = 0.005$:
+<!--en:51b6823b-->
+Jeder Aufruf von `sac_step` passt beide Kritiker durch Regression an das gemeinsame entropieregularisierte Ziel $y$ mit dem Minimum beider Schätzungen an. Dann folgen das Akteurupdate mit dem pfadweisen Gradienten von $\beta \log \pi_\theta - \min_j Q_{w_j}$, die Anpassung von $\log \beta$ zur Regelung der Strategieentropie auf $\bar{H} = -1$ und die Mittelung der Zielnetze mit $\nu = 0.005$:
 
 <!--en:291e231e-->
 ::: {.slide title="Ein vollständiges SAC-Update (Fortsetzung)" layout="tight" only="pytorch"}
@@ -546,7 +546,7 @@ Jeder Aufruf von `sac_step` passt beide Kritiker durch Regression an das gemeins
 <!--en:61ab2693-2-->
 [Der Update-Schritt]{.kicker}
 
-<!--en:962132e4-->
+<!--en:c495f3c8-->
 Der Temperaturschritt passt $\log \beta$ an, damit sich die Entropie ihrem Zielwert nähert. Die Polyak-Mittelung verschiebt die Zielkritiker:
 
 <!--en:2dd30582-->
@@ -555,8 +555,8 @@ Der Temperaturschritt passt $\log \beta$ an, damit sich die Entropie ihrem Zielw
 <!--en:61ab2693-3-->
 [Der Update-Schritt]{.kicker}
 
-<!--en:82f47387-2-->
-Jeder Aufruf von `sac_step` passt beide Kritiker durch Regression an das gemeinsame entropieregularisierte Ziel $y$ mit dem Minimum beider Schätzungen an. Dann folgen das Akteurupdate mit dem pfadweisen Gradienten von $\beta \log \pi_\theta - \min_j Q_{w_j}$, die Anpassung von $\log \beta$ für die Zielentropie $\bar{H} = -1$ und die Mittelung der Zielnetze mit $\nu = 0.005$:
+<!--en:51b6823b-2-->
+Jeder Aufruf von `sac_step` passt beide Kritiker durch Regression an das gemeinsame entropieregularisierte Ziel $y$ mit dem Minimum beider Schätzungen an. Dann folgen das Akteurupdate mit dem pfadweisen Gradienten von $\beta \log \pi_\theta - \min_j Q_{w_j}$, die Anpassung von $\log \beta$ zur Regelung der Strategieentropie auf $\bar{H} = -1$ und die Mittelung der Zielnetze mit $\nu = 0.005$:
 
 <!--en:31bd7697-->
 ::: {.slide title="Ein vollständiges SAC-Update (Fortsetzung)" layout="tight" only="jax"}
@@ -564,7 +564,7 @@ Jeder Aufruf von `sac_step` passt beide Kritiker durch Regression an das gemeins
 <!--en:61ab2693-4-->
 [Der Update-Schritt]{.kicker}
 
-<!--en:962132e4-2-->
+<!--en:c495f3c8-2-->
 Der Temperaturschritt passt $\log \beta$ an, damit sich die Entropie ihrem Zielwert nähert. Die Polyak-Mittelung verschiebt die Zielkritiker:
 
 <!--en:1b95cb3b-->
@@ -615,11 +615,11 @@ Warum sinken die Erträge zunächst von $-1{,}200$ bei der Zufallsstrategie auf 
 <!--en:9e35e966-->
 [Entropieverlauf]{.kicker}
 
-<!--en:ec7ce1c3-->
-- **Gelernte Temperatur $\beta$ (blau):** Die Entropie der Strategie sinkt gleichmäßig von $+1.1\text{ nats}$ auf den Zielwert $\bar{H} = -1.0\text{ nat}$ und bleibt ab $15{,}000$ Schritten dort.
+<!--en:ff697da5-->
+- **Gelernte Temperatur $\beta$ (blau):** Die Entropie der Strategie sinkt gleichmäßig von etwa $+1.3\text{ nats}$ auf den Zielwert $\bar{H} = -1.0\text{ nat}$ und bleibt ab $15{,}000$ Schritten dort.
 
-<!--en:88f7c4b1-->
-- **Feste Temperatur $\beta = 0.2$ (orange):** Beim Erlernen des Aufschwingens sinkt die Entropie auf $-1.3\text{ nats}$. Sobald der Agent balancieren kann, **steigt sie wieder**. Beim Balancieren hat der Kritiker eine geringe Krümmung $h$. Für einen quadratischen Kritiker gilt für die optimale Gauß-Varianz $\sigma^2 = \beta / h$.
+<!--en:9c5bcf97-->
+- **Feste Temperatur $\beta = 0.2$ (orange):** Beim Erlernen des Aufschwingens sinkt die Entropie auf einige Zehntel Nat unter null. Sobald der Agent balancieren kann, **steigt sie wieder**. Beim Balancieren hat der Kritiker eine geringe Krümmung $h$. Für einen quadratischen Kritiker gilt für die optimale Gauß-Varianz $\sigma^2 = \beta / h$.
 
 <!--en:24f4b275-->
 ::: {.slide title="Verlauf der dualen Temperatur und Kosten der zufälligen Aktionswahl" layout="tight"}
@@ -648,8 +648,8 @@ Warum sinken die Erträge zunächst von $-1{,}200$ bei der Zufallsstrategie auf 
 <!--en:6d78db23-->
 Der Vergleich der Vorhersage $\min_j Q_{w_j}(s_0, a_0)$ im Anfangszustand mit dem tatsächlich erzielten diskontierten entropieregularisierten Ertrag $\sum_{t=0}^{199} \gamma^t (r_t - \beta \log \pi_\theta(a_t \mid s_t))$ über 200 Schritte zeigt, was das Minimum zweier Kritiker verhindert:
 
-<!--en:e6ec7571-->
-Beide Varianten erreichen auf Pendulum $-200$. Bei fast jedem Zufallsstartwert **überschätzt der einzelne Kritiker systematisch** den wahren entropieregularisierten Ertrag. Das **Minimum der beiden Kritiker** liefert eine konservative untere Schätzung.
+<!--en:2ef729ed-->
+Beide Varianten erreichen auf Pendulum $-200$. Bei fast jedem Zufallsstartwert **überschätzt der einzelne Kritiker systematisch** den wahren entropieregularisierten Ertrag. Das **Minimum der beiden Kritiker** liegt in fast jedem Lauf unter dem erzielten Ertrag und sonst höchstens wenige Punkte darüber.
 
 <!--en:b104f0fc-->
 ::: {.slide title="Verständnisfragen zu Grenzfällen, Krümmung und Rückstellkraft des Jacobi-Terms"}
@@ -699,8 +699,8 @@ Prüfen Sie Ihr Verständnis der mathematischen Grundlagen von SAC:
 <!--en:cb175832-->
 | **Logarithmierte Jacobi-Determinante der tanh-Transformation** | $-2\big(\log 2 - u - \operatorname{softplus}(-2u)\big) - \log c$ | Undefinierte Dichte und verschwindende Gradienten bei hartem Clipping | Das Integral der Dichte beträgt $1.000000$ ohne Unterlauf in `float32` |
 
-<!--en:7d3b271c-->
-| **Zwei Kritiker mit Polyak-Mittelung** | $\min(Q_{w_1^-}, Q_{w_2^-})$, $w_j^- \leftarrow 0.005 w_j + 0.995 w_j^-$ | Maximierungsverzerrung beim Aufstieg des Akteurs entlang $Q$ im kontinuierlichen Aktionsraum | Die vorhergesagten entropieregularisierten Werte liegen konservativ unter den erzielten Erträgen |
+<!--en:3cf2f648-->
+| **Zwei Kritiker mit Polyak-Mittelung** | $\min(Q_{w_1^-}, Q_{w_2^-})$, $w_j^- \leftarrow 0.005 w_j + 0.995 w_j^-$ | Maximierungsverzerrung beim Aufstieg des Akteurs entlang $Q$ im kontinuierlichen Aktionsraum | Die vorhergesagten entropieregularisierten Werte liegen in fast jedem Lauf bei oder unter den erzielten Erträgen |
 
 <!--en:55257f7e-->
 | **Duale Temperatur ($\beta$)** | $\min_{\log\beta} -\log\beta\, \mathbb{E}[\log \pi_\theta(a \mid s) + \bar{H}]$ | Abhängigkeit einer festen Temperatur $\beta$ von Belohnungsskala und Kritikerkrümmung | Hält die Strategieentropie bei $\bar{H} = -1\text{ nat}$, während der Kritiker flacher wird |

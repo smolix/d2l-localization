@@ -106,8 +106,8 @@ Wir führen `coord_check` für das standardparametrisierte `MLP` bei sieben Brei
 <!--en:f73ce608-->
 Denselben Test mit einem Schritt führen wir mit `coord_check` für `MuMLP` bei der Lernrate `lr_base` der Basisbreite aus. Er bestätigt, dass unter $\mu\text{P}$ die Aktivierungen aller drei versteckten Schichten und die Ausgabelogits unabhängig von der Breite ihre Größenordnung beibehalten:
 
-<!--en:f0b14c52-->
-Unter SP (`MLP`) wachsen die Aktivierungen in Schicht $2$ wie $O(n)$. In Schicht $3$ verstärkt sich das Wachstum auf $O(n^2)$, und die Ausgabelogits explodieren mit $O(n^3)$ (Faktor $1{,}000\times$ zwischen Breite $128$ und Breite $8{,}192$ nach nur einem Schritt). Unter $\mu\text{P}$ (`MuMLP`) bleiben die Größenordnungen der Aktivierungen jeder Schicht und der Logits über alle sieben Breiten konstant.
+<!--en:c4ffb6a5-->
+Unter SP (`MLP`) nähert sich bei den größten Breiten das Wachstum der Aktivierungen in Schicht $2$ und Schicht $3$ sowie der Ausgabelogits den Größenordnungen $O(n)$, $O(n^2)$ beziehungsweise $O(n^3)$. Die Logits steigen nach nur einem Schritt um etwa den Faktor $1{,}000\times$ an, wenn die Breite von $128$ auf $8{,}192$ zunimmt. Unter $\mu\text{P}$ (`MuMLP`) bleiben die Größenordnungen der Aktivierungen jeder Schicht und der Logits über alle sieben Breiten konstant.
 
 <!--en:331675f0-->
 Wiederholen wir die Lernratensuche mit $400$ Schritten unter $\mu\text{P}$, so sehen wir, dass die optimale Lernrate über den gesamten Breitenbereich (Faktor $64\times$) nahezu gleich bleibt:
@@ -209,8 +209,8 @@ Parametrisierung nach Breite und μP-Skalierung<br>**Drift bei Standardparametri
 <!--en:e02fdbdc-->
 [Motivation]{.kicker}
 
-<!--en:355549f0-->
-- **Drift bei Standardparametrisierung (SP):** Wer Adam an einem schmalen Stellvertretermodell abstimmt ($n = 128$, $\eta^\star \approx 3.9 \times 10^{-3}$) und die Lernrate auf ein um den Faktor $64\times$ breiteres Netz überträgt ($n = 8{,}192$), verliert den gesamten Vorteil der um den Faktor $1{,}000\times$ höheren Parameteranzahl (Verlust $\approx 0.33$ gegenüber $\approx 0.22$ nach erneuter Abstimmung). Denn $\eta^\star$ ist um den Faktor $16\times$ gesunken.
+<!--en:0ec76e5d-->
+- **Drift bei Standardparametrisierung (SP):** Wer Adam an einem schmalen Stellvertretermodell abstimmt ($n = 128$, $\eta^\star \approx 3.9 \times 10^{-3}$) und die Lernrate auf ein um den Faktor $64\times$ breiteres Netz überträgt ($n = 8{,}192$), verliert den gesamten Vorteil der um den Faktor $1{,}000\times$ höheren Parameteranzahl (Verlust $\approx 0.34$ gegenüber $\approx 0.23$ nach erneuter Abstimmung). Denn $\eta^\star$ ist um den Faktor $16\times$ gesunken.
 
 <!--en:cb5655ed-->
 - **Maximal Update Parametrization ($\mu\text{P}$, Yang et al., 2022):** Skaliert die Lernraten der Schichten und die Ausgabefaktoren in Abhängigkeit von $m = n/n_{\text{base}}$. So lässt sich $\eta^\star$ ohne erneute Abstimmung auf andere Breiten übertragen.
@@ -321,11 +321,11 @@ Alle $n$ Terme $|h_j| > 0$ gehen mit demselben Vorzeichen in die Summe ein. Ein 
 <!--en:7387d4d7-->
 [Unterklasse des standardparametrisierten Modells]{.kicker}
 
-<!--en:e89a0a70-->
+<!--en:33500d1b-->
 - Mit `base_width=8192` ($m = 1$ bei $n = 8{,}192$) stimmt `MuMLP` beim breitesten Netz mit `MLP` überein. Beide Lernratensuchen haben somit exakt denselben Bezugspunkt bei $n = 8{,}192$:
-  - **Regel 1 (`__init__`):** Die Gewichte von `fc_out` (Anfangsstandardabweichung $1/\sqrt{n}$) mit $\sqrt{m} = \sqrt{n / n_{\text{base}}}$ multiplizieren. Damit ergibt sich die Varianz $\frac{1}{n} \cdot \frac{n}{n_{\text{base}}} = \frac{1}{n_{\text{base}}}$.
-  - **Regel 2 (`forward`):** Die Eingabemerkmale von `fc_out` durch $m$ teilen.
-  - **Regel 3 (`configure_adam`):** Die Lernrate der versteckten Gewichtsmatrizen auf `lr / self.m` setzen.
+  - **Regel 3 (`__init__`):** Die Gewichte von `fc_out` (Anfangsstandardabweichung $1/\sqrt{n}$) mit $\sqrt{m} = \sqrt{n / n_{\text{base}}}$ multiplizieren. Damit ergibt sich die Varianz $\frac{1}{n} \cdot \frac{n}{n_{\text{base}}} = \frac{1}{n_{\text{base}}}$.
+  - **Regel 3 (`forward`):** Die Eingabemerkmale von `fc_out` durch $m$ teilen.
+  - **Regel 2 (`configure_adam`):** Die Lernrate der versteckten Gewichtsmatrizen auf `lr / self.m` setzen.
 
 <!--en:0cab36e2-->
 ::: {.slide title="Koordinatentest nach einem Schritt: Unter SP wachsen die Logits wie O(n³)"}
@@ -336,12 +336,12 @@ Alle $n$ Terme $|h_j| > 0$ gehen mit demselben Vorzeichen in die Summe ein. Ein 
 <!--en:18cd5ae7-->
 - Beim **Koordinatentest** (Yang et al., 2022) machen wir **1 Adam-Schritt** mit einem einzigen Minibatch bei den Breiten $n \in \{128, 256, \ldots, 8192\}$. Für jede Schicht zeichnen wir den mittleren Betrag der Aktivierungen $\overline{|h_\ell|}$ auf.
 
-<!--en:017ace6f-->
+<!--en:d06cb3c5-->
 - **Bei Standardparametrisierung (`MLP`):**
   - **Schicht 1 (`fc_in`, Fan-in $784$):** Flache Kurve über alle Breiten ($\Theta(1)$).
   - **Schicht 2 (`fc_h1`, Fan-in $n$):** Lineares Wachstum mit der Breite gemäß **$O(n)$** (Steigung $+1$).
   - **Schicht 3 (`fc_h2`):** Das eigene Update der Größenordnung $O(n)$ verstärkt die bereits stark gewachsene Ausgabe von Schicht 2. Insgesamt ergibt sich **$O(n^2)$** (Steigung $+2$).
-  - **Ausgabelogits (`fc_out`):** Anstieg um den Faktor $1{,}000\times$ über den Breitenbereich gemäß **$O(n^3)$** (Steigung $+3$).
+  - **Ausgabelogits (`fc_out`):** Anstieg um etwa den Faktor $1{,}000\times$ über den Breitenbereich. Bei den größten Breiten nähert sich das Wachstum **$O(n^3)$** (Steigung $+3$).
 
 <!--en:9bd53b1e-->
 ::: {.slide title="Unter μP verläuft die Kurve jeder Schicht im Koordinatentest flach"}
@@ -363,10 +363,10 @@ Alle $n$ Terme $|h_j| > 0$ gehen mit demselben Vorzeichen in die Summe ein. Ein 
 <!--en:bafccee3-->
 [Übereinstimmende Optima über einen Breitenfaktor von 64×]{.kicker}
 
-<!--en:03e48a89-->
+<!--en:64f9204f-->
 - Wir wiederholen die Lernratensuche mit $400$ Schritten für $n \in \{128, 512, 2048, 8192\}$ unter $\mu\text{P}$:
   - Die U-förmigen Kurven **liegen nun mit ihren Minima senkrecht übereinander**, und zwar über den gesamten Breitenbereich (Faktor $64\times$, 135 000 bis 141 Mio. Parameter).
-  - Die Steigung von $\eta^\star(n)$ in doppelt logarithmischer Darstellung ändert sich von etwa $-0.7$ unter SP auf **nahezu $0.0$** (das Optimum liegt bei jeder Breite bei $2.4 \times 10^{-4}$ oder höchstens einen Gitterschritt davon entfernt).
+  - Die Steigung von $\eta^\star(n)$ in doppelt logarithmischer Darstellung ändert sich von etwa $-0.7$ unter SP auf **nahezu null**, höchstens etwa $0.2$ (das Optimum liegt bei jeder Breite bei $2.4 \times 10^{-4}$ oder höchstens einen Gitterschritt davon entfernt).
   - Bei exakt derselben Lernrate erzielen breitere Netze einen strikt geringeren Trainingsverlust.
 
 <!--en:857d3391-->
@@ -375,10 +375,10 @@ Alle $n$ Terme $|h_j| > 0$ gehen mit demselben Vorzeichen in die Summe ein. Ein 
 <!--en:a5e071c9-->
 [Kosten der Übertragung vom Stellvertretermodell auf das Zielmodell]{.kicker}
 
-<!--en:4c8de7a4-->
+<!--en:0ac8c2e6-->
 - Wie viel höher ist der Verlust bei Breite $8{,}192$, wenn wir die Lernrate vom um den Faktor $1{,}000\times$ kleineren Stellvertretermodell der Breite $128$ übernehmen, statt sie bei Breite $8{,}192$ neu abzustimmen?
-  - **Unter SP:** **$0.09\text{--}0.15$ Nat** zusätzlicher Verlust ($\approx 0.33$ gegenüber $\approx 0.22$), kein Vorteil gegenüber dem schmalen Stellvertretermodell der Breite $128$.
-  - **Unter $\mu\text{P}$:** **$\le 0.003$ Nat** zusätzlicher Verlust (in beiden Fällen $\approx 0.22$), von den Schwankungen zwischen Zufallsstartwerten nicht zu unterscheiden.
+  - **Unter SP:** **$0.09\text{--}0.15$ Nat** zusätzlicher Verlust ($\approx 0.34$ gegenüber $\approx 0.23$), kein Vorteil gegenüber dem schmalen Stellvertretermodell der Breite $128$.
+  - **Unter $\mu\text{P}$:** **$\le 0.003$ Nat** zusätzlicher Verlust (in beiden Fällen $\approx 0.23$), von den Schwankungen zwischen Zufallsstartwerten nicht zu unterscheiden.
 
 <!--en:5a39ad1e-->
 - Unter $\mu\text{P}$ steigen die Verlustkurven schmalerer Stellvertretermodelle rechts von $\eta^\star$ früher an. Dort erreicht die Schrittweite $\eta/m$ die anfängliche Gewichtsgröße $1/\sqrt{n}$ bei $\eta = \sqrt{n}/n_{\text{base}}$. Eine auf dem schmalen Modell stabile Lernrate ist also auch auf dem breiten Zielmodell stabil.

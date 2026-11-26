@@ -404,8 +404,8 @@ Bei `VerifierTask` (4 Prompts, 9 Antworten) besteht eine Trajektorie aus einer e
 <!--en:d781f7f7-->
 Der Vergleich von $10{,}000$ unabhängigen Gruppenschätzungen mit $K = 16$ und dem exakten Gradienten aus 9 Termen $\nabla_{\theta_x} J_x = \sum_y \pi_\theta(y \mid x)r(x, y)(\mathbf{e}_y - \pi_\theta(\cdot \mid x))$ bestätigt unsere theoretische Varianzformel:
 
-<!--en:9ac66aa2-->
-- **Exakte Übereinstimmung mit $\sqrt{(1-p)/(Kp)}$:** Bei $p \approx 1/8$ und $K = 16$ hat eine Gruppenschätzung den relativen RMS-Fehler $\sqrt{7 / 16} = 0.66$. Mitteln wir über $M$ Gruppen, sinkt der Fehler genau mit der Rate $0.66/\sqrt{M}$, ohne dass eine Verzerrung zurückbleibt.
+<!--en:a1a57a15-->
+- **Exakte Übereinstimmung mit $\sqrt{(1-p)/(Kp)}$:** Bei $p \approx 1/8$ und $K = 16$ hat eine Gruppenschätzung den relativen RMS-Fehler $\sqrt{7 / 16} = 0.66$. Bei Mittelung über $M$ Gruppen sinkt der Fehler ungefähr wie $0.66/\sqrt{M}$, ohne dass eine Verzerrung zurückbleibt. Der Fehler eines einzelnen Mittelwerts kann bis zu etwa doppelt so groß sein wie dieser Richtwert.
 
 <!--en:a534dee4-->
 - **Gradient null für unlösbare Prompts:** Bei `8*8` und `9*9` ($r = 0$ für alle möglichen Antworten) liefern $100\%$ der Gruppen $\hat{u} = \mathbf{0}$.

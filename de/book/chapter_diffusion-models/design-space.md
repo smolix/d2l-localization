@@ -493,11 +493,11 @@ Gegeben sind $1\text{D}$-Daten aus der Standardnormalverteilung $x_0 \sim \mathc
 <!--en:f730876f-->
 Der Vergleich der diskreten ELBO-Gewichte $\omega_k$ für $\nu_k = \beta_k$ und $\nu_k = \tilde\beta_k$ mit $\frac{1}{2}(\lambda_{k-1} - \lambda_k)$ auf der VP-Kette mit $T = 1{,}000$ zeigt ein extremes Übergewicht bei $k \to 0$:
 
-<!--en:551294e9-->
-- **Sehr hohe Gewichte nahe den rauschfreien Daten ($k \le 10$):** Da $\sigma_k^2$ nahe null beginnt, fällt die Log-SNR um $\approx 0.78$ bei $k = 2$ und um $\approx 0.16$ bei $k = 10$, gegenüber $\le 0.01$ für $k \ge 100$.
+<!--en:03fe670d-->
+- **Sehr hohe Gewichte nahe den rauschfreien Daten ($k \le 10$):** Da $\sigma_k^2$ nahe null beginnt, fällt die Log-SNR um $\approx 0.78$ bei $k = 2$ und um $\approx 0.16$ bei $k = 10$, gegenüber etwa $0.01$–$0.02$ für $k \ge 100$.
 
-<!--en:e9df8b37-->
-- **Warum $L_{\textrm{simple}}$ alle Gewichte auf $1$ setzt:** Bei der eigentlichen ELBO stammt der größte Teil des Gradienten aus kaum wahrnehmbaren Pixelstörungen bei schwachem Rauschen ($k \le 20$). Gleich gewichtete Schritte konzentrieren die Kapazität auf mittlere Rauschpegel, bei denen die globale Bildstruktur entsteht.
+<!--en:a030dcb4-->
+- **Warum $L_{\textrm{simple}}$ alle Gewichte auf $1$ setzt:** Bei der eigentlichen ELBO entfällt rund ein Fünftel des Gewichts auf die ersten 20 von 1000 Schritten ($k \le 20$), etwa das Zehnfache ihres Anteils bei Gleichgewichtung. Diese Schritte entsprechen kaum wahrnehmbaren Pixelstörungen bei schwachem Rauschen. Gleich gewichtete Schritte konzentrieren die Kapazität auf mittlere Rauschpegel, bei denen die globale Bildstruktur entsteht.
 
 <!--en:6a08f491-->
 ::: {.slide title="Exakte Fluss-Likelihood und kontinuierliche ELBO"}
@@ -562,8 +562,8 @@ Die numerische Berechnung von $w(\lambda) = 2\,c(t)\,|dt/d\lambda|$ durch automa
 <!--en:848fb639-->
 - **Monoton fallendes $w(\lambda)$ als Mischung von Schranken (Kingma und Gao, 2023):** Jedes $w'(\lambda) \le 0$ lässt sich als $\int w_\mu(\lambda)\,(-w'(\mu))\,d\mu$ schreiben, also als Mittelwert von ELBOs über durch Rauschen erweiterte Daten.
 
-<!--en:86d26c96-->
-- **Ziehen der Zeitpunkte aus $p(t)$ als zusätzlicher Faktor:** Das Ziehen gemäß $\operatorname{logit}(t) \sim \mathcal{N}(m, s^2)$ multipliziert $w(\lambda)$ mit einer Glockenkurve um $m$.
+<!--en:5db3897b-->
+- **Ziehen der Zeitpunkte aus $p(t)$ als zusätzlicher Faktor:** Das Ziehen gemäß $\operatorname{logit}(t) \sim \mathcal{N}(m, s^2)$ multipliziert $w(\lambda)$ mit einer Glockenkurve in $\lambda$, deren Zentrum bei $\lambda = -2m$ liegt (auf dem linearen Pfad $\lambda = -2\operatorname{logit} t$).
 
 <!--en:363d7217-->
 ::: {.slide title="Gestaltungsspielraum bei EDM und Vorkonditionierung des Netzes"}
@@ -691,8 +691,8 @@ Fragen zur Likelihood-Schranke und zu den Gestaltungsmöglichkeiten für Diffusi
 <!--en:557b98b6-->
 **Lösungen:**
 
-<!--en:b1d1308f-->
-1. $L_0 = \log(2\pi \times 10^{-4}) + \frac{1}{2}(2) \approx -7.37 + 1.00 = \mathbf{-6.37\text{ nats}}$ (ein Term der differentiellen Log-Dichte). Zusammen mit dem Integral über die Log-SNR ($\approx +8.84$ Nat) ergibt sich die Schranke $\approx \mathbf{+2.47\text{ nats}}$.
+<!--en:f58a381b-->
+1. $L_0 = \log(2\pi \times 10^{-4}) + \frac{1}{2}(2) \approx -7.37 + 1.00 = \mathbf{-6.37\text{ nats}}$ (ein Term der differentiellen Log-Dichte). Zusammen mit dem gemessenen Integral über die Log-SNR ($\approx +8.75$ Nat, beim in der Zelle tatsächlich verwendeten Wert $e^{-\lambda_{\max}} \approx 1.1 \times 10^{-4}$ betragen die Endterme $\approx -6.3$ Nat) ergibt sich die Schranke $\approx \mathbf{+2.47\text{ nats}}$.
 
 <!--en:cf754d6a-->
 2. **Der Geschwindigkeitsverlust ($w(\lambda) \propto e^{-\lambda/2}$):** Da $e^{-\lambda/2}$ in $\lambda$ **monoton fällt**, ist die Gewichtung eine positive Mischung von ELBOs mit Stufenfunktionsgewichten für durch Rauschen erweiterte Daten. Dagegen hat $\operatorname{sech}^2(\lambda/4)$ bei $\lambda = 0$ ein Maximum.
