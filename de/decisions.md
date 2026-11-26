@@ -635,3 +635,69 @@
 ## chapter_attention/what-attention-computes.md#u02 (Codex Astra (medium), 2026-11-26)
 
 - „copy matrix“ → „Kopiermatrix“, „zero ablation“ → „Nullablation“, „mean ablation“ → „Mittelwertablation“.
+
+## chapter_transformers/gpt.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „decoder-only language model“ → „Sprachmodell mit reinem Decoder“, „byte-level GPT“ → „bytebasiertes GPT“.
+- „pre-norm / post-norm“ → „vorgeschaltete / nachgeschaltete Normalisierung“, kurz „Pre-Norm / Post-Norm“.
+- „language-modeling head“ → „Ausgabekopf des Sprachmodells“.
+
+## chapter_transformers/gpt.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „subword token“ → „Subworttoken“, „nucleus sampling“ → „Nucleus-Sampling“ (das).
+
+## chapter_transformers/transformer-block.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „token spread“ → „Tokenstreuung“, „token mixing“ und „channel mixing“ → „Mischen zwischen Token“ und „Mischen zwischen Kanälen“.
+- „identity path“ → „Identitätspfad“, „gated feed-forward network“ → „Feedforward-Netz mit Gate“.
+
+## chapter_transformers/kv-cache.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „ridge point“ → „Knickpunkt“ der Roofline.
+- „single-stream decode“ → „Dekodierung einer einzelnen Sequenz“, „batched decoding“ → „Dekodierung im Batch“.
+- „low-rank key–value projections“ → „Schlüssel-Wert-Projektionen mit niedrigem Rang“.
+- „uptraining“ → „Weitertraining“ nach dem Zusammenfassen der Köpfe.
+
+## chapter_transformers/kv-cache.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „mean-pooling“ → „Mittelwert-Pooling“, hier über die Projektionsköpfe einer Gruppe.
+- „sink token“ → „Sink-Token“ (das).
+
+## chapter_transformers/vision-transformer.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „patch token“ → „Patch-Token“, „patch size“ → „Patch-Größe“.
+- „grid distance“ → „Gitterabstand“, „position table“ → „Positionstabelle“.
+
+## chapter_transformers/vision-transformer.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „mean attention distance“ → „mittlerer Attention-Abstand“.
+
+## chapter_transformers/encoders-decoders.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „encoder-only / decoder-only“ → „reiner Encoder / reiner Decoder“, „wiring“ → „Verschaltung“, „latent bottleneck“ → „latenter Flaschenhals“, „latents“ → „latente Vektoren“.
+- „greedy decoding“ → „Greedy-Dekodierung“.
+
+## chapter_transformers/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „soft-capping“ → „glatte Begrenzung“, „draft model“ → „Entwurfsmodell“.
+- „multi-head latent attention“ → „Multi-Head Latent Attention“ (die), „sparse upcycling“ → „Sparse Upcycling“ (das).
+
+## chapter_transformers/scaling-laws.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „non-embedding parameters“ → „Parameter ohne Einbettungen“.
+- „scaling grid“ → „Versuchsraster“, „constant-loss contour“ → „Niveaulinie konstanten Verlusts“.
+- „over-training for inference“ → „für die Inferenz über das Chinchilla-Optimum hinaus trainieren“.
+
+## chapter_recurrent-modern/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „sequence mixer“ → „Sequenzmischer“, „matrix memory“ → „Matrixspeicher“, „delta rule“ → „Delta-Regel“.
+- „readout“ → „Auslesefunktion“ für die Funktion, die aus dem Zustand die Ausgabe berechnet.
+
+## chapter_transformers/moe.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „routing collapse“ → „Routing-Kollaps“, „auxiliary loss“ → „Hilfsverlust“, „loss-free bias controller“ → „Bias-Regler ohne Hilfsverlust“.
+- „routed expert“ → „vom Router auswählbarer Experte“, „expert buffer“ → „Expertenpuffer“, „gating weight“ → „Gate-Gewicht“.
+
+## chapter_transformers/moe.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „fine-grained expert segmentation“ → „feingranulare Unterteilung der Experten“.
