@@ -1478,3 +1478,106 @@
 - „swap“ → „Vertauschen von Ableitung und Integral“, kurz „Vertauschen“.
 - „pathwise estimator“ → „pfadweiser Schätzer“, passend zu „pfadweiser Gradient“.
 - „integrable dominating bound“ → „integrierbare Majorante“.
+
+## chapter_mdl-optimization/mdl-curvature-methods.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „curvature methods“ → „krümmungsbasierte Verfahren“, „affine-invariant“ → „affininvariant“.
+
+## chapter_mdl-optimization/mdl-curvature-methods.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „secant pair“ → „Sekantenpaar“, „secant equation“ → „Sekantengleichung“, „curvature condition“ → „Krümmungsbedingung“.
+
+## chapter_mdl-optimization/mdl-curvature-methods.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „hereditary property“ → „Vererbungseigenschaft“ für den Erhalt früherer Sekantengleichungen.
+
+## chapter_mdl-optimization/mdl-gradient-based-optimization.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „quadratic ceiling“ → „quadratische obere Schranke“.
+
+## chapter_mdl-optimization/mdl-gradient-based-optimization.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „mode“ → „Eigenkomponente“ bei der Zerlegung in der Eigenbasis.
+- „stability ceiling“ → „Stabilitätsgrenze“.
+
+## chapter_mdl-optimization/mdl-convexity.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „tilted double well“ → „geneigtes Doppelmuldenpotential“, „chord condition“ → „Sehnenbedingung“, „tangent bound“ → „Tangentenschranke“.
+
+## chapter_mdl-optimization/mdl-convexity.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „epigraph“ → „Epigraph“, „sublevel set“ → „Subniveaumenge“, „supporting hyperplane“ → „Stützhyperebene“.
+
+## chapter_mdl-optimization/mdl-stochastic-gradient-methods.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „noise power“ → „Rauschleistung“, „transient“ → „transienter Anteil“ für den abklingenden Beitrag zum zweiten Moment.
+- „snapshot gradient“ → „Referenzgradient“, „snapshot“ → „Referenzpunkt“ bei SVRG.
+
+## chapter_mdl-optimization/mdl-adaptive-stochastic-methods.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „sign step“ → „Vorzeichenschritt“, „rotation sensitivity“ → „Drehabhängigkeit“.
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „constraint qualification“ → „Regularitätsbedingung“, „tangency condition“ → „Berührbedingung“.
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „nonexpansive“ → „nichtexpansiv“, „obtuse-angle inequality“ → „Ungleichung für den stumpfen Winkel“.
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „dead zone“ → „Totzone“, „proximal gradient descent“ → „proximaler Gradientenabstieg“.
+
+## chapter_mdl-optimization/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „performance estimation“ → „Performance Estimation“ als Name der Methode zum Nachweis von Konvergenzraten.
+- „strong growth condition“ → „starke Wachstumsbedingung“.
+- „mirror descent“ → „Mirror Descent“, „Bregman divergence“ → „Bregman-Divergenz“.
+
+## chapter_mdl-optimization/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „extragradient method“ → „Extragradientenverfahren“, „interior-point method“ → „Innere-Punkte-Verfahren“, „central path“ → „zentraler Pfad“.
+- „operator splitting“ → „Operatoraufspaltung“, „iterative refinement“ → „iterative Nachbesserung“.
+
+## chapter_mdl-probability-statistics/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „generalization bound“ → „Generalisierungsschranke“, „error bar“ → „Fehlerbalken“.
+- „Bayesian computation“ → „bayessche Rechenverfahren“, „variational inference“ → „variationelle Inferenz“.
+- „inverse-transform sampling“ → „Inversionsmethode“, „Eve's law“ → „Satz von der totalen Varianz“.
+- „benign overfitting“ → „gutartige Überanpassung“.
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „clipping problem“ → „Clipping-Problem“, „lower envelope“ → „untere Einhüllende“, „supporting line“ → „Stützgerade“.
+- „Slater's condition“ → „Slater-Bedingung“, „water-filling“ → „Water-Filling“.
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „norm budget“ → „Normbudget“, „support vector“ → „Stützvektor“, „biconjugate“ → „Bikonjugierte“.
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „convex envelope“ → „konvexe Einhüllende“, „proper function“ → „eigentliche Funktion“.
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „conditioning“ → „Kondition“ als Eigenschaft eines Problems oder einer Matrix; „preconditioning“ → „Vorkonditionierung“ für das Verfahren.
+- „max shift“ → „Verschiebung um das Maximum“; „stochastic rounding“ → „stochastische Rundung“.
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „log-sum-exp sandwich“ → „beidseitige Schranke für Log-Sum-Exp“.
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „catastrophic cancellation“ → „katastrophale Auslöschung“; „cancellation factor“ → „Auslöschungsfaktor“.
+- „pairwise summation“ → „paarweise Summation“; „compensated summation“ → „kompensierte Summation“.
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „forward error“ → „Vorwärtsfehler“; „backward error“ → „Rückwärtsfehler“; „backward stable“ → „rückwärtsstabil“.
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „iterative refinement“ → „iterative Nachbesserung“.
