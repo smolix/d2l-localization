@@ -1,0 +1,15 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "url": "https://d2l.ai"
+    }
+  ],
+  "old_editions": [
+    {
+      "name": "English (old)",
+      "url": "https://en-v2.d2l.ai"
+    }
+  ]
+}
