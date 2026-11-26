@@ -170,7 +170,7 @@ class TestStringsMenu(TempRepo):
         path, _, _, todo = strings(lang, en_file=en)
         data = yaml.safe_load(path.read_text())
         ref = yaml.safe_load(self.EN)
-        self.assertEqual(set(data), set(ref))
+        self.assertEqual({k for k in data if not k.startswith('l10n.')}, set(ref))
         self.assertEqual(data['slides.readme'], ref['slides.readme'])
         self.assertEqual(data['lang'], 'ja')
         self.assertEqual(data['site.hosts'], ['ja.d2l.ai'])

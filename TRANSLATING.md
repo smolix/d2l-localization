@@ -132,6 +132,11 @@ display equations and slide placeholders are never in the unit; read them in
 the English page in CONTEXT. Keep `0.5` as written unless `style.md` says
 otherwise for prose numbers.
 
+A reference into a chapter your language does not translate yet (the
+translation scope, DESIGN.md section 13) is copied like any other: the build
+turns it into a link to the English page with an "(English)" marker. Do not
+add such a marker yourself.
+
 Never set a reference (``:numref:`…` ``, ``:eqref:`…` ``, ``:cite:`…` ``) or
 inline math `$…$` directly against a CJK letter: put a space, or full-width
 punctuation such as （）, between them (``:numref:`sec_sgd` で``, not

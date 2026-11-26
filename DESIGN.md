@@ -26,7 +26,8 @@ d2l-localization/
   DESIGN.md            # this file
   TRANSLATING.md       # instructions for any translation agent or person
   languages.yml        # per language: code, locale, names, bucket, hosts, pinned tag,
-                       #   fonts, direction, forum rule, old edition
+                       #   fonts, direction, forum rule, old edition; the translation
+                       #   scope (section 13)
   glossary/            # concepts.jsonl + terms/<locale>.jsonl (from d2l-neu docs/multilingual)
   tools/l10n/          # the CLI (bin/l10n, or python -m l10n from tools/): status, pin, emit,
                        #   apply, check, bump, pseudo, build, deploy, menu, strings, roundtrip
@@ -199,6 +200,13 @@ with Opus, others may do better with Gemini or Codex **[ruled]**.
    `--html-only`): HTML, PDFs, slides, notebook zips. The
    outputs come from the English store (numbers and plots do not depend on the
    language); freshness stays clean because code cells are identical.
+5. With a translation scope (section 13), step 2 also writes the placeholder
+   pages and the English links, and `_book/` is post-processed after make.
+6. The tag's `tools/gen_pdf.py` gives the PDF book no `output-file`, so Quarto
+   names the `.tex` after the translated title and `build_one_pdf.sh` (which
+   looks for `Dive-into-Deep-Learning.tex`) fails; the build adds
+   `output-file: Dive-into-Deep-Learning` to the worktree's copy (until
+   d2l-neu sets it itself).
 
 `l10n deploy <lang>` uploads to bucket `d2l-<lang>` with the worktree's
 `tools/upload_r2.sh --delete` (keys in `~/.config/cloudflare/d2l-buckets.env`;
@@ -240,7 +248,8 @@ Errors (an answer with an error is rejected):
 
 - a missing or unknown marker in an answer; an anchor whose hash is not in the
   English file at the aligned revision; with `--complete` (and `--promote`),
-  any block still missing or stale;
+  any block still missing or stale in a file inside the translation scope
+  (section 13);
 - protected tokens (section 3) of a class whose multiset differs from English;
   a heading level, list marker, `![`, `|` or kicker bracket that changed; a
   table row with another cell count; a slide/callout fence changed outside its
@@ -291,6 +300,82 @@ not fail the build.
 4. Scale out to the other languages. Arabic (right-to-left PDF) and Hindi
    (Devanagari shaping) come last: they carry the most typesetting risk.
    Greek and Russian have no glossary yet.
+
+## 13. Translation scope
+
+A language need not translate the whole book. For now only the front matter
+(preface, installation, notation, introduction, landing page), Basics,
+Advanced, *Mathematics for Deep Learning* and Tools are translated
+**[ruled]**; Language Models, Image Models and the Attic stay English.
+
+**Configuration.** `scope:` at the top of `languages.yml` is the default for
+every language; an entry may set its own (`scope: all`, or another list). It
+names part directories (`chapter_basics`) or chapter directories
+(`chapter_lm-agents`) of the pinned tag's `_quarto.yml`:
+
+```yaml
+scope: [chapter_preface, chapter_basics, chapter_advanced,
+        chapter_mathematics-for-deep-learning, chapter_tools-for-deep-learning]
+```
+
+A part brings its part page and all its chapters; a chapter brings itself and
+its part page. `index.md`, top-level pages and files outside the part
+structure are always in scope. Membership is read from the parts of the tag's
+`_quarto.yml`, never from chapter numbers, so renumbering does not change it;
+a name that the tag does not have is an error. `l10n scope <lang>` prints it.
+
+**Tools.** `emit`, `status`, `pseudo`, the update units of `bump` and
+`check --complete`/`--promote` consider only in-scope files, so a release is
+complete without the skipped parts (`emit --files` of an out-of-scope file is
+an error). `check` without `--complete` still checks every translated file.
+
+**Build** (`l10n build`, tools/l10n/scope.py):
+
+- Each out-of-scope *chapter* renders as one placeholder page, its index page
+  at the same path: the English chapter number, the translated title if
+  `<lang>/book/` has one (else English), a "not yet translated" note in the
+  language, and the chapter's section list with the English numbers and
+  titles, linking to the English pages on d2l.ai (the `en` entry's URL). An
+  out-of-scope part page is a placeholder that lists its chapters. Both carry
+  `<meta name="robots" content="noindex">`.
+- The section pages of out-of-scope chapters are not built: they are dropped
+  from the worktree's `_quarto.yml`. Their sources stay on disk, so the d2l
+  library, the generated notebooks and the freshness gate are those of
+  English, and the remaining pages keep their `CHAPTER_NUMBERING` numbers
+  (Linear Algebra stays 33, Tools 39).
+- `:numref:`/`:ref:`/`:eqref:` in in-scope pages to labels defined in
+  out-of-scope pages (chapter, section, subsection, figure, table, equation)
+  become links to the English page and anchor, with the English number
+  (Quarto's words in the language, numbered by the tag's own tools) and the
+  marker, e.g. `[Abschnitt 18.4 (englisch)](https://d2l.ai/chapter_lm-pretrained/scoring.html)`.
+  A narrow no-break space joins word and number, so the tag's
+  `fix_crossref_numbers.py` does not renumber it as a local reference.
+- The sidebar keeps the out-of-scope parts and chapters at their English
+  numbers, each marked "(English)"; any other relative link to a page that is
+  not built points to d2l.ai.
+- PDFs leave the out-of-scope parts and chapters out entirely, through the
+  tag's `PDF_EXCLUDED_FILES`; `fix_latex.py` pairs `\chapter`s with
+  `PDF_CHAPTER_FILES` and sets each chapter's counter from `CHAPTER_NUMBERING`,
+  so the remaining chapters keep their English numbers (d2l-neu
+  build-system.md section 4.1). Part PDFs are built for in-scope parts only
+  (`PDF_PARTS`) and the navbar drops the others. Slides skip out-of-scope
+  chapters (`SLIDES_FILTER`), and the notebook zips are rewritten without them.
+- The language menu's `pages` list (section 8) is computed from the uploaded
+  `_book/`, so it has the placeholder pages and not the skipped section pages.
+
+The tag's tools have no scope switch, so the build edits the worktree's copies
+of `tools/d2l_preprocess.py` (adds the out-of-scope files to
+`PDF_EXCLUDED_FILES`), `tools/gen_pdf.py` (its order guard skips the unbuilt
+pages) and `tools/check_book_artifacts.py` (expects no deck or part PDF of an
+out-of-scope chapter). Each edit replaces an exact anchor; if a new tag changes
+one, the build stops and names the file (update `patches()` in scope.py).
+
+**Strings.** The note texts and the marker are localization-side keys
+(`l10n.english_marker`, `l10n.chapter_not_translated`,
+`l10n.part_not_translated`), not in the tag's `i18n/en.yml`: `scope.py` holds
+the English defaults and `l10n strings <lang>` adds them, marked TODO, at the
+end of `<lang>/strings.yml`. The build passes the tag's tools a copy without
+them (`D2L_LOCALE_FILE`), since the tag's `i18n.py` warns about unknown keys.
 
 ## First language
 

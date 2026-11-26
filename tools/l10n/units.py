@@ -222,7 +222,9 @@ def previous_unit_translation(lang, rev, u: Unit, units, blocks, entries) -> str
     if u.index > 1:
         prev = (u.path, units[u.index - 2], blocks, entries)
     else:
-        files = list(config.book_files(rev))
+        from .scope import for_language        # the previous page this language translates
+        sc = for_language(lang, rev)
+        files = [f for f in config.book_files(rev) if sc.includes(f) or f == u.path]
         k = files.index(u.path) if u.path in files else -1
         if k > 0:
             pp = files[k - 1]

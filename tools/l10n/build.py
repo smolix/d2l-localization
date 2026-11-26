@@ -6,7 +6,10 @@ Contract with d2l-neu (DESIGN.md section 7):
   * every chapter .md with a translation is overwritten by the reconstructed
     translated page (same path);
   * D2L_LANG=<code> and D2L_LOCALE_FILE=<lang>/strings.yml select the UI
-    strings; then `make all-quick` (or `make html`).
+    strings; then `make all-quick` (or `make html`);
+  * with a translation scope (scope.py, DESIGN.md section 13), the chapters
+    outside it become placeholder pages before make, and _book/ is
+    post-processed after it.
 """
 
 from __future__ import annotations
@@ -23,7 +26,7 @@ from pathlib import Path
 
 import yaml
 
-from . import config, tfile
+from . import config, scope as scopes, tfile
 from .pseudo import L as PL, R as PR
 from .protect import nbsp
 from .segment import reconstruct
@@ -35,8 +38,9 @@ BUILD_ROOT = Path(os.environ.get('L10N_BUILD_ROOT', str(config.REPO / '_build'))
 
 # ── overlay ──────────────────────────────────────────────────────────
 
-def translated_pages(lang, rev: str, stale: str = 'english') -> dict:
-    """english path -> reconstructed translated text, for files with any translation."""
+def translated_pages(lang, rev: str, stale: str = 'english', scope=None) -> dict:
+    """english path -> reconstructed translated text, for files with any translation
+    (only files inside `scope`, a scope.Scope, when one is given)."""
     out = {}
     if not lang.book.exists():
         return out
@@ -45,6 +49,8 @@ def translated_pages(lang, rev: str, stale: str = 'english') -> dict:
         rel = str(p.relative_to(lang.book))
         if rel not in book:
             raise config.L10nError(f'{lang.code}/book/{rel}: no such English file at {rev}')
+        if scope is not None and not scope.includes(rel):
+            continue
         entries = tfile.load(lang.book, rel)
         tr = tfile.translations(entries, stale)
         blocks = english_blocks(rev, rel)
@@ -91,19 +97,37 @@ def prepare_worktree(lang, rev: str, workdir: Path | None = None) -> Path:
     return wt
 
 
-def overlay(lang, rev: str, wt: Path, stale='english') -> list:
-    pages = translated_pages(lang, rev, stale)
+# Edits to the tag's tools that every translated build needs (scope.apply_patches
+# checks that each anchor occurs once). gen_pdf.py's PDF _quarto.yml gives no
+# output-file, so Quarto names the .tex after the (translated) book title and
+# build_one_pdf.sh, which looks for Dive-into-Deep-Learning.tex, finds none.
+TITLE_ANCHOR = "  title: {_yaml_str(i18n.t('book.title'))}\n"
+
+
+def fix_tag_tools(wt: Path):
+    gen_pdf = wt / 'tools' / 'gen_pdf.py'
+    if gen_pdf.exists() and 'output-file' not in gen_pdf.read_text(encoding='utf-8'):
+        scopes.apply_patches(wt, [('tools/gen_pdf.py', TITLE_ANCHOR,
+                                   TITLE_ANCHOR + '  output-file: Dive-into-Deep-Learning'
+                                   '  # l10n build\n')])
+
+
+def overlay(lang, rev: str, wt: Path, stale='english', scope=None) -> list:
+    pages = translated_pages(lang, rev, stale, scope)
     for rel, text in pages.items():
         (wt / rel).write_text(text, encoding='utf-8')
     return sorted(pages)
 
 
-def build_env(lang) -> dict:
+def build_env(lang, wt: Path | None = None) -> dict:
     env = dict(os.environ)
     env['D2L_LANG'] = lang.code
     strings = lang.root / 'strings.yml'
     if strings.exists():
-        env['D2L_LOCALE_FILE'] = str(strings.resolve())
+        # without the localization-side l10n.* keys, which the tag's i18n.py
+        # does not know (written into the worktree)
+        locale = scopes.build_locale_file(lang, wt) if wt else strings.resolve()
+        env['D2L_LOCALE_FILE'] = str(locale)
     else:
         print(f'note: no {lang.code}/strings.yml; UI strings stay English '
               f'(run l10n strings {lang.code})', file=sys.stderr)
@@ -123,18 +147,26 @@ def build(lang, rev: str | None = None, html_only=False, workdir=None, target=No
         print(f'note: building the in-progress bump target {rev} '
               f'(pinned: {lang.pinned}); stale blocks show English', file=sys.stderr)
     wt = prepare_worktree(lang, rev, workdir)
-    pages = overlay(lang, rev, wt, stale)
+    sc = scopes.for_language(lang, rev)
+    pages = overlay(lang, rev, wt, stale, sc)
     print(f'{len(pages)} translated page(s) overlaid in {wt}')
+    fix_tag_tools(wt)
+    env = build_env(lang, wt)
+    prep = None
+    if not sc.full:
+        print(sc.summary())
+        prep = scopes.prepare(lang, sc, wt, env)
     target = target or ('html' if html_only else 'all-quick')
     # build-guide 4.14: raise the process limit; nice keeps the shared box responsive
     cmd = ['bash', '-c', f'ulimit -u 8000 2>/dev/null || ulimit -u $(ulimit -Hu); '
-           f'exec nice -n 10 make {target}']
+           f'exec nice -n 10 make {target}{scopes.make_args(prep)}']
     log = wt / f'l10n-build-{lang.code}.log'
-    print(f'running: D2L_LANG={lang.code} make {target}  (in {wt}, log: {log})')
+    print(f'running: D2L_LANG={lang.code} make {target}'
+          + (' PDF_PARTS=... SLIDES_FILTER=...' if prep else '') + f'  (in {wt}, log: {log})')
     if dry_run:
         return wt
     with log.open('w') as f:
-        p = subprocess.Popen(cmd, cwd=wt, env=build_env(lang), stdout=subprocess.PIPE,
+        p = subprocess.Popen(cmd, cwd=wt, env=env, stdout=subprocess.PIPE,
                              stderr=subprocess.STDOUT, text=True)
         for line in p.stdout:
             f.write(line)
@@ -142,6 +174,8 @@ def build(lang, rev: str | None = None, html_only=False, workdir=None, target=No
         rc = p.wait()
     if rc:
         raise config.L10nError(f'make {target} failed (rc={rc}); see {log}')
+    if prep:
+        scopes.report(scopes.postprocess(lang, wt, prep), prep)
     return wt
 
 
@@ -159,7 +193,7 @@ def deploy(lang, workdir=None, delete=True, dry_run=False):
     saved = STATE / manifest
     if saved.exists():
         shutil.copy2(saved, wt / manifest)
-    env = build_env(lang)
+    env = build_env(lang, wt)
     env['R2_BUCKET'] = lang.bucket
     env['BOOK_DIR'] = '_book'
     cmd = [str(wt / 'tools' / 'upload_r2.sh')]
@@ -359,8 +393,11 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
                   and not is_setting(k)) | (_update_keys(old_text) & set(en))
     settings = language_settings(lang)
     fonts = FONT_DEFAULTS.get(lang.code, {})
-    added = [k for k in en if k not in old]
-    removed = [k for k in old if k not in en and not k.startswith('quarto.')]
+    extra = scopes.STRINGS                     # localization-side keys (scope.py)
+    changed |= set(k for k in extra if k in old and k in snap and snap[k] != extra[k]) | \
+        (_update_keys(old_text) & set(extra))
+    added = [k for k in en if k not in old] + [k for k in extra if k not in old]
+    removed = [k for k in old if k not in en and k not in extra and not k.startswith('quarto.')]
     out = [f'# UI strings and settings for {lang.name} ({lang.code}): the D2L_LOCALE_FILE of '
            f'`l10n build {lang.code}`.',
            f'# Generated from d2l-neu i18n/en.yml by `l10n strings {lang.code}`; edit the values. '
@@ -393,10 +430,30 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
             lines[0] += '  ' + TODO_UPDATE
             todo.append(key)
         out += lines
-    extra = {k: v for k, v in old.items() if k.startswith('quarto.') and k not in en}
-    if extra:
+    while out and not out[-1].strip():
+        out.pop()
+    out += ['', '# Strings of the localization side (d2l-localization tools/l10n/scope.py), '
+            'not in i18n/en.yml:', '# the placeholder pages of chapters outside the '
+            'translation scope and the "(English)" marker.']
+    for key, ev in extra.items():
+        if key in old and key not in todo_old:
+            v, mark = old[key], False
+        elif pseudo:
+            v, mark = f'{PL}{ev}{PR}', False
+        else:
+            v, mark = ev, True
+        lines = _render_value(key, v)
+        if mark:
+            lines[0] += '  ' + TODO
+            todo.append(key)
+        elif key in changed:
+            lines[0] += '  ' + TODO_UPDATE
+            todo.append(key)
+        out += lines
+    quarto_extra = {k: v for k, v in old.items() if k.startswith('quarto.') and k not in en}
+    if quarto_extra:
         out += ['', '# Quarto language overrides (keys of Quarto share/language/_language.yml)']
-        for k, v in extra.items():
+        for k, v in quarto_extra.items():
             out += _render_value(k, v)
     text = '\n'.join(out).rstrip('\n') + '\n'
     data = _flatten(yaml.safe_load(text))
@@ -405,7 +462,8 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
             raise config.L10nError(f'strings: generated file lost key {k}')
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding='utf-8')
-    snap_path.write_text(json.dumps({k: v for k, v in en.items() if not is_setting(k)},
-                                    ensure_ascii=False, indent=1, sort_keys=True) + '\n',
+    snap = {k: v for k, v in en.items() if not is_setting(k)}
+    snap.update(extra)
+    snap_path.write_text(json.dumps(snap, ensure_ascii=False, indent=1, sort_keys=True) + '\n',
                          encoding='utf-8')
     return path, added if old_text else [], removed, todo
