@@ -482,3 +482,87 @@
 
 - „temporal-difference learning“ → „Lernen aus zeitlichen Differenzen“, „Model Predictive Control“ → „modellprädiktive Regelung“.
 - „gradient penalty“ → „Gradientenstrafe“, „velocity field“ → „Geschwindigkeitsfeld“, „consistency distillation“ → „Konsistenzdestillation“.
+
+## chapter_optimization/test-models.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „learning-rate sweep“ → „Lernratensuche“, „usable learning-rate range“ → „nutzbarer Lernratenbereich“.
+- „loss landmarks“ → „Referenzwerte für den Verlust“, „nuisance hyperparameter“ → „Störhyperparameter“.
+- „shard“ → „Teildatei“ bei einem auf Dateien verteilten Korpus.
+
+## chapter_optimization/test-models.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „add-one smoothing“ → „Add-eins-Glättung“.
+
+## chapter_optimization/momentum.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „velocity“ → „Geschwindigkeit“, „memory window“ → „Gedächtnisfenster“, „critical damping“ → „kritische Dämpfung“.
+- „curvature-limited“ → „krümmungsbegrenzt“, „noise-limited“ → „rauschbegrenzt“.
+
+## chapter_optimization/momentum.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „look-ahead point“ → „vorausberechneter Punkt“, „anticipatory damping“ → „vorausschauende Dämpfung“.
+
+## chapter_optimization/sgd.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „interpolating regime“ → „interpolierendes Regime“, „noise-limited regime“ → „rauschbegrenztes Regime“.
+- „sampling without replacement“ → „Ziehen ohne Zurücklegen“, „random reshuffling“ → „zufälliges Mischen“ zu Beginn jeder Epoche.
+- „finite-population correction factor“ → „Korrekturfaktor für die endliche Grundgesamtheit“.
+
+## chapter_optimization/lr-scheduler.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „cumulative learning-rate budget“ → „kumulatives Lernratenbudget“, „terminal learning rate“ → „Endlernrate“, „remaining budget“ → „Restbudget“.
+- „cooldown“ → „Abkühlphase“, „stable–then–decay“ → „Plateau mit anschließendem Abfall“. Den Namen „Warmup–Stable–Decay“ mit dem Kürzel WSD beibehalten und die drei Phasen bei der Einführung benennen.
+
+## chapter_optimization/muon.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „steepest descent“ → „steilster Abstieg“, „sign descent“ → „Vorzeichenabstieg“.
+- „norm ball“ → „Normkugel“, „coordinate box“ → „achsenparalleler Würfel“ bei einheitlicher Schranke für alle Koordinaten.
+- „orthogonalized gradient“ → „orthogonalisierter Gradient“, „Newton–Schulz iteration“ → „Newton-Schulz-Iteration“.
+
+## chapter_optimization/muon.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „entrywise RMS“ → „quadratischer Mittelwert der Einträge“, nach Einführung auch „RMS-Wert der Einträge“.
+
+## chapter_optimization/adam.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „sign descent“ → „Vorzeichenabstieg“, „decay timescale“ → „Zeitskala des Gewichtszerfalls“, „equilibrium norm“ → „Gleichgewichtsnorm“.
+
+## chapter_optimization/adam.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „rotational equilibrium“ → „Rotationsgleichgewicht“, „relative angular step“ → „relative Winkelschrittweite“.
+
+## chapter_optimization/batch-size.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „gradient-noise scale“ → „Skala des Gradientenrauschens“, kurz „Rauschskala“.
+- „two-batch estimator“ → „Schätzer mit zwei Batchgrößen“.
+- „square-root scaling“ → „Wurzelskalierung“, „square-root rule“ → „Wurzelregel“.
+- „critical batch size“ → „kritische Batchgröße“, „Pareto frontier“ → „Pareto-Front“.
+
+## chapter_optimization/scaling.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „proxy model“ → „Stellvertretermodell“, „coordinate check“ → „Koordinatentest“.
+- „standard parametrization“ → „Standardparametrisierung“, „Maximal Update Parametrization“ bleibt als Verfahrensname im Original.
+- „base width“ → „Basisbreite“, „width multiplier“ → „Breitenfaktor“, „output readout matrix“ → „Ausgabematrix“.
+- „zero-shot learning-rate transfer“ → „Übertragung der Lernrate ohne erneute Abstimmung“.
+
+## chapter_optimization/scaling.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „decay timescale“ → „Zeitskala des Gewichtszerfalls“.
+- „spectral scaling condition“ → „spektrale Skalierungsbedingung“, kurz „Spektralbedingung“.
+
+## chapter_optimization/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „mode connectivity“ → „Verbindung zwischen Minima“, bei der Einführung mit englischer Glosse.
+- „Hessian-free optimization“ → „Hesse-freie Optimierung“, „Hessian–vector product“ → „Hesse-Vektor-Produkt“.
+- „iterate averaging“ → „Mittelung der Iterierten“, „warm restart“ → „Warmstart“.
+
+## chapter_attention/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „soft lookup“ → „weicher Zugriff“, „attention head“ → „Attention-Kopf“, „sliding window“ → „gleitendes Fenster“.
+
+## chapter_optimization/practice.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „global-norm gradient clipping“ → „Gradienten-Clipping anhand der globalen Norm“.
+- „guard“ → „Schutz“, „constant brake“ → „Dauerbremse“.
+- „live weights“ → „aktuelle Gewichte“, „weight EMA“ → „EMA der Gewichte“.
+- „proxy run“ → „Probelauf“, „clipping fraction“ → „Anteil der Schritte mit Clipping“.
