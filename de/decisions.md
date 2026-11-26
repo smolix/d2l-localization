@@ -967,3 +967,108 @@
 ## chapter_reinforcement-learning/deep-rl.md#u03 (Codex Astra (medium), 2026-11-26)
 
 - „deadly triad“ → „tödliche Triade“.
+
+## chapter_deep-reinforcement-learning/actor-critic.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „actor-critic method“ → „Akteur-Kritiker-Verfahren“, „multi-step return“ → „Mehrschrittertrag“, „one-step target“ → „Einschrittziel“.
+- „rollout“ → „der Rollout“ für eine mit der Strategie erzeugte Folge von Übergängen.
+- „bootstrap“ → „Bootstrap-Wert“ für die eingesetzte Wertschätzung, „Bootstrapping“ für das Verfahren im bestärkenden Lernen.
+
+## chapter_deep-reinforcement-learning/actor-critic.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „fitted TD“ → „Fitted TD“ für die wiederholte Regression auf neu berechnete TD-Ziele.
+
+## chapter_deep-reinforcement-learning/actor-critic.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „eligibility trace“ → „Berechtigungsspur“, „group baseline“ → „Gruppen-Baseline“.
+
+## chapter_deep-reinforcement-learning/ppo.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „surrogate objective“ → „Ersatzzielfunktion“, „performance difference lemma“ → „Lemma zur Ertragsdifferenz“, „clipping“ → „das Clipping“.
+
+## chapter_deep-reinforcement-learning/ppo.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „clip fraction“ → „Anteil außerhalb des Bands“, „approximate KL“ → „geschätzte KL-Divergenz“, „domain randomization“ → „Domänenrandomisierung“.
+
+## chapter_deep-reinforcement-learning/regularized.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „gridworld“ → „Gitterwelt“, „hazard lane“ → „Gefahrenstreifen“, „reference policy“ → „Referenzstrategie“.
+- „fitted reward“ → „geschätzte Belohnung“, „rms error“ → „RMS-Fehler“.
+
+## chapter_deep-reinforcement-learning/regularized.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „exponential tilt“ → „exponentielle Umgewichtung“, „reward-divergence frontier“ → „Grenzkurve von Belohnung und Divergenz“.
+- „point mass“ → „Punktmasse“, „fixed-reference penalty“ → „Strafterm mit fester Referenz“.
+
+## chapter_deep-reinforcement-learning/regularized.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „soft backup“ → „weiches Backup“, „soft value iteration“ → „weiche Wertiteration“, „soft value“ → „weicher Wert“.
+
+## chapter_deep-reinforcement-learning/regularized.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „trajectory divergence“ → „Divergenz von Trajektorienverteilungen“, wenn die KL-Divergenz zwischen den von zwei Strategien erzeugten Verteilungen gemeint ist.
+
+## chapter_deep-reinforcement-learning/dqn.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „online network“ → „Online-Netz“, „Q-network“ → „Q-Netz“ außerhalb des Modellnamens Deep Q-Network.
+- „sampling noise“ → „Stichprobenrauschen“.
+
+## chapter_deep-reinforcement-learning/dqn.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „single estimator“ → „Einzelschätzer“, „double estimator“ → „Doppelschätzer“.
+
+## chapter_deep-reinforcement-learning/model-based.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „dynamics model“ → „Dynamikmodell“, „compounding error“ → „Fehlerfortpflanzung“ oder verbal „der Fehler pflanzt sich fort“.
+- „random shooting“ → „Random Shooting“ (das), „policy distillation“ → „Strategiedestillation“.
+
+## chapter_deep-reinforcement-learning/model-based.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „cross-entropy method“ → „Kreuzentropiemethode“.
+
+## chapter_deep-reinforcement-learning/sac.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „soft value“, „soft policy evaluation“ und „soft policy improvement“ → „entropieregularisierter Wert“, „entropieregularisierte Strategiebewertung“ und „entropieregularisierte Strategieverbesserung“.
+- „tilted distribution“ → „exponentiell umgewichtete Verteilung“, „reverse-KL projection“ → „Projektion bezüglich der umgekehrten KL-Divergenz“.
+
+## chapter_deep-reinforcement-learning/sac.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „squashed Gaussian policy“ → „gestauchte Gauß-Strategie“, „squash“ → „Stauchung“.
+- „Jacobian term“ → „Jacobi-Term“ für den Beitrag der Jacobi-Determinante zur Log-Dichte.
+
+## chapter_deep-reinforcement-learning/sac.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „Polyak averaging“ → „Polyak-Mittelung“, „update-to-data ratio“ → „Verhältnis von Updates zu Daten“, quantitativ „Updates pro Umgebungsschritt“.
+
+## chapter_deep-reinforcement-learning/sac.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „primacy bias“ → „Übergewichtung früher Erfahrungen“ für das übermäßige Anpassen an die ersten Übergänge.
+
+## chapter_deep-reinforcement-learning/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „prioritized replay“ → „priorisiertes Experience-Replay“, „multi-step target“ → „Mehrschrittziel“.
+- „dueling network“ → „Dueling-Netz“, „dueling head“ → „Dueling-Kopf“, „clip band“ → „Clipping-Band“.
+
+## chapter_deep-reinforcement-learning/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „diffusion policy“ → „Diffusionsstrategie“, „process reward“ → „Prozessbelohnung“, „expectile“ → „Expektil“.
+- „pseudo-count“ → „Pseudo-Besuchszahl“ für eine aus einem Dichtemodell abgeleitete Besuchszahl.
+
+## chapter_deep-reinforcement-learning/further-reading.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „leave-one-out weight“ → „Leave-one-out-Gewicht“, analog zu „Leave-one-out-Baseline“.
+
+## chapter_deep-reinforcement-learning/offline-rl.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „coverage condition“ → „Abdeckungsbedingung“, „support“ bei gezählten Paaren → „Besuchszahl“.
+- „stitching“ → „Verknüpfen von Teiltrajektorien“, „narrow log“ → „enges Protokoll“.
+- „lower confidence bound“ → „untere Konfidenzschranke“, analog zur oberen Konfidenzschranke.
+
+## chapter_deep-reinforcement-learning/offline-rl.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „return conditioning“ → „Konditionierung auf den Ertrag“, adjektivisch „ertragskonditioniert“.
+
+## chapter_deep-reinforcement-learning/rl-sequences.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „response weight“ → „Antwortgewicht“, „token advantage“ → „Tokenvorteil“, „prefix value“ → „Präfixwert“.
+- „tilted optimum“ → „exponentiell umgewichtetes Optimum“ für die mit dem exponentiellen Belohnungsfaktor umgewichtete Referenzstrategie.
