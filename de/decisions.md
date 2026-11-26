@@ -1168,3 +1168,22 @@
 ## chapter_generative-adversarial-networks/adversarial-losses.md#u02 (Codex Astra (medium), 2026-11-26)
 
 - „scoring rule“ → „Bewertungsregel“.
+
+## chapter_diffusion-models/denoising.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „responsibility“ → „Zugehörigkeitswahrscheinlichkeit“ einer Mischungskomponente.
+- „mode weights“, „stray fraction“ und „spread“ → „Modusgewichte“, „Ausreißeranteil“ und „Streuung“ bei der Bewertung der Sampler.
+- „Fisher divergence“ → „Fisher-Divergenz“, „Tweedie's formula“ → „Tweedies Formel“.
+
+## chapter_diffusion-models/integration.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „mode weight“ → „Modusgewicht“, „ancestral chain/step“ → „ancestrale Kette / ancestraler Schritt“, „oracle“ → „Orakel“.
+
+## chapter_diffusion-models/integration.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „stray fraction“ → „Anteil modusferner Samples“.
+
+## chapter_diffusion-models/gaussian-paths.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „loss floor“ → „Verlustuntergrenze“, „noise ladder“ → „Stufenfolge von Rauschpegeln“, „clean point“ → „rauschfreier Punkt“.
+- „cosine path“ → „Kosinuspfad“, „target dictionary“ → „Umrechnungsregeln für die Zielgrößen“.
