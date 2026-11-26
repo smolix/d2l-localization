@@ -79,6 +79,10 @@ def prepare_worktree(lang, rev: str, workdir: Path | None = None) -> Path:
             main_lock.read_bytes() != (wt / 'uv.lock').read_bytes():
         print(f'warning: uv.lock at {rev} differs from {main_lock}; the build uses the main '
               'checkout\'s venvs as they are', file=sys.stderr)
+    lfs = subprocess.run(['git', 'lfs', 'ls-files'], cwd=wt, capture_output=True, text=True)
+    if lfs.returncode == 0 and any(l.split()[1:2] == ['-'] for l in lfs.stdout.splitlines()):
+        print('materializing Git-LFS files (git lfs pull) ...', file=sys.stderr)
+        config.git('lfs', 'pull', cwd=wt)
     return wt
 
 
@@ -117,9 +121,11 @@ def build(lang, rev: str | None = None, html_only=False, workdir=None, target=No
     pages = overlay(lang, rev, wt, stale)
     print(f'{len(pages)} translated page(s) overlaid in {wt}')
     target = target or ('html' if html_only else 'all-quick')
-    cmd = ['nice', '-n', '10', 'make', target]
+    # build-guide 4.14: raise the process limit; nice keeps the shared box responsive
+    cmd = ['bash', '-c', f'ulimit -u 8000 2>/dev/null || ulimit -u $(ulimit -Hu); '
+           f'exec nice -n 10 make {target}']
     log = wt / f'l10n-build-{lang.code}.log'
-    print(f'running: D2L_LANG={lang.code} {" ".join(cmd)}  (log: {log})')
+    print(f'running: D2L_LANG={lang.code} make {target}  (in {wt}, log: {log})')
     if dry_run:
         return wt
     with log.open('w') as f:
@@ -211,6 +217,7 @@ def upload_menu(path: Path, dry_run=False, env_file=Path.home() / '.config/cloud
 
 SETTING_PREFIXES = ('code', 'lang', 'dir', 'site.', 'forum.', 'fonts.', 'pdf.lang', 'quarto.')
 TODO = '# TODO translate'
+TODO_UPDATE = '# TODO update: English changed'
 
 FONT_DEFAULTS = {
     'ja': {'fonts.html.sans': "'Source Sans 3', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "
@@ -283,8 +290,11 @@ def _render_value(key: str, v) -> list:
 
 
 def _todo_keys(text: str) -> set:
-    return {m.group(1) for m in re.finditer(r'(?m)^([A-Za-z0-9_.\-]+):.*' + re.escape(TODO) + r'\s*$',
-                                            text)}
+    return {m.group(1) for m in re.finditer(r'(?m)^([A-Za-z0-9_.\-]+):.*# TODO translate\s*$', text)}
+
+
+def _update_keys(text: str) -> set:
+    return {m.group(1) for m in re.finditer(r'(?m)^([A-Za-z0-9_.\-]+):.*# TODO update\b.*$', text)}
 
 
 def language_settings(lang) -> dict:
@@ -312,6 +322,10 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
     old_text = path.read_text(encoding='utf-8') if path.exists() else ''
     old = _flatten(yaml.safe_load(old_text)) if old_text else {}
     todo_old = _todo_keys(old_text)
+    snap_path = lang.root / 'strings.en.json'      # the English each translation was made from
+    snap = json.loads(snap_path.read_text(encoding='utf-8')) if snap_path.exists() else {}
+    changed = set(k for k in en if k in old and k in snap and snap[k] != en[k]
+                  and not is_setting(k)) | (_update_keys(old_text) & set(en))
     settings = language_settings(lang)
     fonts = FONT_DEFAULTS.get(lang.code, {})
     added = [k for k in en if k not in old]
@@ -344,6 +358,9 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
         if mark:
             lines[0] += '  ' + TODO
             todo.append(key)
+        elif key in changed:
+            lines[0] += '  ' + TODO_UPDATE
+            todo.append(key)
         out += lines
     extra = {k: v for k, v in old.items() if k.startswith('quarto.') and k not in en}
     if extra:
@@ -357,4 +374,7 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
             raise config.L10nError(f'strings: generated file lost key {k}')
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding='utf-8')
+    snap_path.write_text(json.dumps({k: v for k, v in en.items() if not is_setting(k)},
+                                    ensure_ascii=False, indent=1, sort_keys=True) + '\n',
+                         encoding='utf-8')
     return path, added if old_text else [], removed, todo
