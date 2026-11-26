@@ -1,5 +1,5 @@
 # UI strings and settings for Deutsch (de): the D2L_LOCALE_FILE of `l10n build de`.
-# Generated from d2l-neu i18n/en.yml by `l10n strings de`; edit the values. Keys marked "# TODO translate" still hold the English text.
+# Generated from d2l-neu i18n/en.yml by `l10n strings de`; edit the values.
 
 # UI string catalog of the book: every piece of text the build emits outside
 # the chapter sources (navbar, injected HTML/JS, slide index and templates,
@@ -49,181 +49,191 @@ pdf.lang: "de"
 # English needs none.
 
 # ── Book ─────────────────────────────────────────────────────────────────────
-book.title: "Dive into Deep Learning"  # TODO translate
+book.title: "Dive into Deep Learning"
 # Headings and link texts the build finds in the chapter sources. A translated
 # source may use the English text or this one.
-book.exercises_heading: "Exercises"  # TODO translate
-book.discussions_link: "Discussions"  # TODO translate
+book.exercises_heading: "Übungen"
+book.discussions_link: "Diskussion"
 
 # ── Navbar (_quarto.yml) ─────────────────────────────────────────────────────
-nav.slides: "Slides"  # TODO translate
-nav.courses: "Courses"  # TODO translate
-nav.github: "GitHub"  # TODO translate
-nav.discuss: "Discuss"  # TODO translate
-nav.pdf: "PDF"  # TODO translate
-nav.pdf_parts: "Parts (PyTorch)"  # TODO translate
-nav.part_basics: "Basics"  # TODO translate
-nav.part_advanced: "Advanced"  # TODO translate
-nav.part_language_models: "Language Models"  # TODO translate
-nav.part_mathematics: "Mathematics for Deep Learning"  # TODO translate
-nav.notebooks: "Notebooks"  # TODO translate
-nav.language: "Language"  # TODO translate
+nav.slides: "Folien"
+nav.courses: "Kurse"
+nav.github: "GitHub"
+nav.discuss: "Diskutieren"
+nav.pdf: "PDF"
+nav.pdf_parts: "Buchteile (PyTorch)"
+nav.part_basics: "Grundlagen"
+nav.part_advanced: "Fortgeschrittene Themen"
+nav.part_language_models: "Sprachmodelle"
+nav.part_mathematics: "Mathematik für Deep Learning"
+nav.notebooks: "Notebooks"
+nav.language: "Sprache"
 
 # ── Right-sidebar Slides block (_d2l-tabs.html) ──────────────────────────────
-toc_slides.label: "Slides · {fw}"  # TODO translate
-toc_slides.label_missing: "Slides · {fw} n/a"  # TODO translate
-toc_slides.html: "HTML"  # TODO translate
-toc_slides.pdf: "PDF"  # TODO translate
-toc_slides.pptx: "PowerPoint"  # TODO translate
-toc_slides.latex: "LaTeX"  # TODO translate
-toc_slides.open_html: "Open the {fw} slides for this section"  # TODO translate
-toc_slides.open_pdf: "Open the {fw} slides as a PDF (Beamer)"  # TODO translate
-toc_slides.open_pptx: "Download the {fw} slides as an editable PowerPoint file"  # TODO translate
-toc_slides.open_latex: "Download the Beamer LaTeX source of the {fw} slides (zip)"  # TODO translate
-toc_slides.export_missing: "Not available for these slides yet"  # TODO translate
-toc_slides.deck_missing: "No {fw} deck. Available: {list}"  # TODO translate
-toc_slides.none: "No slides for this section"  # TODO translate
+toc_slides.label: "Folien · {fw}"
+toc_slides.label_missing: "Folien · {fw} nicht verfügbar"
+toc_slides.html: "HTML"
+toc_slides.pdf: "PDF"
+toc_slides.pptx: "PowerPoint"
+toc_slides.latex: "LaTeX"
+toc_slides.open_html: "{fw}-Folien zu diesem Abschnitt öffnen"
+toc_slides.open_pdf: "{fw}-Folien als PDF öffnen (Beamer)"
+toc_slides.open_pptx: "{fw}-Folien als bearbeitbare PowerPoint-Datei herunterladen"
+toc_slides.open_latex: "LaTeX-Quelldateien der {fw}-Folien für Beamer herunterladen (ZIP)"
+toc_slides.export_missing: "Für diese Folien noch nicht verfügbar"
+toc_slides.deck_missing: "Keine Folien für {fw}. Verfügbar für {list}"
+toc_slides.none: "Keine Folien zu diesem Abschnitt"
 
 # ── Share buttons (_d2l-tabs.html) ───────────────────────────────────────────
-share.label: "Share"  # TODO translate
-share.x: "Share on X (Twitter)"  # TODO translate
-share.facebook: "Share on Facebook"  # TODO translate
-share.threads: "Share on Threads"  # TODO translate
-share.linkedin: "Share on LinkedIn"  # TODO translate
+share.label: "Teilen"
+share.x: "Auf X (Twitter) teilen"
+share.facebook: "Auf Facebook teilen"
+share.threads: "Auf Threads teilen"
+share.linkedin: "Auf LinkedIn teilen"
 
 # ── Run-notebook block (_d2l-notebooks.html) ─────────────────────────────────
-notebook.label: "Run notebook · {fw}"  # TODO translate
-notebook.colab: "Colab"  # TODO translate
-notebook.kaggle: "Kaggle"  # TODO translate
-notebook.download: "Download"  # TODO translate
-notebook.unavailable: "Notebook unavailable"  # TODO translate
-notebook.unavailable_title: "No hosted notebook is available for this page"  # TODO translate
-notebook.open_colab: "Open the {fw} notebook in Colab"  # TODO translate
-notebook.open_kaggle: "Import the {fw} notebook into Kaggle"  # TODO translate
-notebook.kaggle_missing: "Kaggle import is unavailable for this notebook"  # TODO translate
-notebook.open_download: "Download the {fw} notebook"  # TODO translate
+notebook.label: "Notebook ausführen · {fw}"
+notebook.colab: "Colab"
+notebook.kaggle: "Kaggle"
+notebook.download: "Herunterladen"
+notebook.unavailable: "Notebook nicht verfügbar"
+notebook.unavailable_title: "Für diese Seite ist kein gehostetes Notebook verfügbar"
+notebook.open_colab: "{fw}-Notebook in Colab öffnen"
+notebook.open_kaggle: "{fw}-Notebook in Kaggle importieren"
+notebook.kaggle_missing: "Der Import in Kaggle ist für dieses Notebook nicht verfügbar"
+notebook.open_download: "{fw}-Notebook herunterladen"
 
 # ── Mobile navigation drawer (_d2l-mobilenav.html) ───────────────────────────
-mobilenav.open: "Open menu"  # TODO translate
-mobilenav.home: "Home"  # TODO translate
-mobilenav.home_alt: "Dive into Deep Learning — home"  # TODO translate
-mobilenav.close: "Close"  # TODO translate
-mobilenav.contents: "Contents"  # TODO translate
-mobilenav.menu: "Menu"  # TODO translate
+mobilenav.open: "Menü öffnen"
+mobilenav.home: "Startseite"
+mobilenav.home_alt: "Dive into Deep Learning – Startseite"
+mobilenav.close: "Schließen"
+mobilenav.contents: "Inhaltsverzeichnis"
+mobilenav.menu: "Menü"
 
 # ── Language menu (_d2l-languages.html) and 404 page (404.qmd) ───────────────
-languages.current: "current language"  # TODO translate
-notfound.title: "Page not found"  # TODO translate
-notfound.text: "This page does not exist in this edition of the book. Taking you to the home page."  # TODO translate
-notfound.link: "Go to the home page"  # TODO translate
+languages.current: "aktuelle Sprache"
+notfound.title: "Seite nicht gefunden"
+notfound.text: "Diese Seite gibt es in dieser Buchausgabe nicht. Sie werden zur Startseite weitergeleitet."
+notfound.link: "Zur Startseite"
 
 # ── Slide decks: chrome (_d2l-slides-overlay.html) and code cells ────────────
-deck.home_title: "Dive into Deep Learning — book home"  # TODO translate
-deck.book_chapter: "Book Chapter"  # TODO translate
-deck.fullscreen: "Fullscreen"  # TODO translate
-deck.fullscreen_title: "Toggle fullscreen view (shortcut: F)"  # TODO translate
-deck.fullscreen_aria: "Toggle fullscreen"  # TODO translate
-deck.fullscreen_exit_title: "Exit fullscreen view (Esc)"  # TODO translate
-deck.fullscreen_mobile_title: "Toggle fullscreen view for mobile, iPad, or projector (shortcut: F)"  # TODO translate
-deck.fullscreen_mobile_aria: "Toggle fullscreen view"  # TODO translate
-deck.presenter_title: "Open speaker / presenter view in a second window (shortcut: S)"  # TODO translate
-deck.presenter_aria: "Presenter view"  # TODO translate
+deck.home_title: "Dive into Deep Learning – Startseite des Buches"
+deck.book_chapter: "Buchkapitel"
+deck.fullscreen: "Vollbild"
+deck.fullscreen_title: "Vollbild ein- oder ausschalten (Taste F)"
+deck.fullscreen_aria: "Vollbild ein- oder ausschalten"
+deck.fullscreen_exit_title: "Vollbild verlassen (Esc)"
+deck.fullscreen_mobile_title: "Vollbild für Mobilgeräte, iPad oder Projektor ein- oder ausschalten (Taste F)"
+deck.fullscreen_mobile_aria: "Vollbild ein- oder ausschalten"
+deck.presenter_title: "Referentenansicht in einem zweiten Fenster öffnen (Taste S)"
+deck.presenter_aria: "Referentenansicht"
 # The tags on code cells and their outputs (web decks).
-slides.code_label: "In"  # TODO translate
-slides.output_label: "Out"  # TODO translate
+slides.code_label: "Eingabe"
+slides.output_label: "Ausgabe"
 # PowerPoint / Beamer: cover line, footer, LaTeX-bundle README.
-slides.cover: "{book}  ·  {sec}"  # TODO translate
-slides.footer: "{sec} {title}  ·  {host}"  # TODO translate
-slides.beamer_readme: |2  # TODO translate
+slides.cover: "{book}  ·  {sec}"
+slides.footer: "{sec} {title}  ·  {host}"
+slides.beamer_readme: |2
   {title} ({sec}), {book}, https://{host}
-  Beamer source of the slide deck; builds with XeLaTeX (TeX Live 2022 or later):
+  Der Beamer-Quelltext dieses Foliensatzes lässt sich mit XeLaTeX aus
+  TeX Live 2022 oder neuer übersetzen:
 
       xelatex {stem}.tex
 
-  Files: {stem}.tex (the deck), d2l-beamer.tex (the D2L theme), sizes.tex
-  (per-frame font sizes fitted so no frame overflows), figures/, d2l-logo.png.
-  Fonts: Source Sans 3 and Inconsolata if installed (free from Google Fonts),
-  else TeX Live's Source Sans Pro and Inconsolata (zi4), else the defaults.
-  To reuse a frame in your own Beamer deck, copy it together with the
-  \input{d2l-beamer} preamble lines; \dtlstart/\dtlend only set its size.
+  Das Paket enthält {stem}.tex (den Foliensatz), d2l-beamer.tex (die
+  D2L-Vorlage), sizes.tex (passende Schriftgrößen für jede Folie, damit
+  kein Inhalt über den Rand ragt), figures/ und d2l-logo.png.
+  Wenn Source Sans 3 und Inconsolata installiert sind, verwendet die Vorlage
+  diese Schriften. Beide sind kostenlos über Google Fonts erhältlich.
+  Andernfalls verwendet sie Source Sans Pro und Inconsolata (zi4) aus
+  TeX Live oder, wenn auch diese fehlen, die Standardschriften.
+  Um eine Folie in Ihrem eigenen Beamer-Foliensatz zu verwenden, kopieren
+  Sie diese zusammen mit den Zeilen der Präambel, die \input{d2l-beamer}
+  enthalten. \dtlstart/\dtlend legen nur die Größe der Folie fest.
 
 # ── Slides landing page (tools/build_slides_index.py) ────────────────────────
-slides_index.title: "Slides"  # TODO translate
-slides_index.page_title: "Slides – {book}"  # TODO translate
-slides_index.lead: "Each section of the book comes with a slide deck for lectures and self-study, {n} decks in all. A deck runs in the browser with the code and outputs of the framework you choose below. You can also download it as a PDF, as an editable PowerPoint file, or as Beamer LaTeX source to adapt for your own course."  # TODO translate
-slides_index.framework: "Framework"  # TODO translate
-slides_index.parts: "Parts"  # TODO translate
-slides_index.chapter_overview: "Chapter overview"  # TODO translate
-slides_index.read_chapter: "Read this chapter in the book"  # TODO translate
-slides_index.read_section: "Read this section in the book"  # TODO translate
-slides_index.pdf: "PDF"  # TODO translate
-slides_index.pptx: "PPTX"  # TODO translate
-slides_index.latex: "LaTeX"  # TODO translate
-slides_index.pdf_title: "Open this deck as a PDF"  # TODO translate
-slides_index.pptx_title: "Download this deck as an editable PowerPoint file"  # TODO translate
-slides_index.latex_title: "Download the Beamer LaTeX source of this deck (zip)"  # TODO translate
-slides_index.chapter: "Chapter {n}"  # TODO translate
-slides_index.chapters: "Chapters {first}&ndash;{last}"  # TODO translate
-slides_index.decks.one: "{n} deck"  # TODO translate
-slides_index.decks.other: "{n} decks"  # TODO translate
-slides_index.all_frameworks: "All four frameworks"  # TODO translate
-slides_index.only: "{list} only"  # TODO translate
-slides_index.list_and: "{head} and {last}"  # TODO translate
-slides_index.list_sep: ", "  # TODO translate
-slides_index.part_fallback: "This part has no {fw} decks; its decks open in {first}."  # TODO translate
+slides_index.title: "Folien"
+slides_index.page_title: "Folien – {book}"
+slides_index.lead: "Zu jedem Abschnitt des Buches gibt es einen Foliensatz für Vorlesungen und zum Selbststudium, insgesamt sind es {n}. Die Folien laufen im Browser und zeigen den Code und die Ausgaben für das unten gewählte Framework. Sie können die Folien als PDF, als bearbeitbare PowerPoint-Datei oder als LaTeX-Quelldateien für Beamer herunterladen und für Ihre eigene Lehrveranstaltung anpassen."
+slides_index.framework: "Framework"
+slides_index.parts: "Buchteile"
+slides_index.chapter_overview: "Kapitelübersicht"
+slides_index.read_chapter: "Dieses Kapitel im Buch lesen"
+slides_index.read_section: "Diesen Abschnitt im Buch lesen"
+slides_index.pdf: "PDF"
+slides_index.pptx: "PPTX"
+slides_index.latex: "LaTeX"
+slides_index.pdf_title: "Diesen Foliensatz als PDF öffnen"
+slides_index.pptx_title: "Diesen Foliensatz als bearbeitbare PowerPoint-Datei herunterladen"
+slides_index.latex_title: "LaTeX-Quelldateien dieses Foliensatzes für Beamer herunterladen (ZIP)"
+slides_index.chapter: "Kapitel {n}"
+slides_index.chapters: "Kapitel {first}&ndash;{last}"
+slides_index.decks.one: "{n} Foliensatz"
+slides_index.decks.other: "{n} Foliensätze"
+slides_index.all_frameworks: "Alle vier Frameworks"
+slides_index.only: "Nur {list}"
+slides_index.list_and: "{head} und {last}"
+slides_index.list_sep: ", "
+slides_index.part_fallback: "Für diesen Buchteil gibt es keine Folien für {fw}. Die Folien öffnen sich in der Fassung für {first}."
 
 # ── PDF books (tools/gen_pdf.py, fix_latex.py, build_part_pdfs.py) ───────────
-pdf.subtitle: "{fw} Edition"  # TODO translate
-pdf.blurb: "An interactive deep learning book with code, math, and discussions."  # TODO translate
-pdf.references: "References"  # TODO translate
-pdf.chapter: "Chapter"  # TODO translate
-pdf.section: "Section"  # TODO translate
-pdf.online_appendix: "the online appendix \"{title}\""  # TODO translate
+pdf.subtitle: "{fw}-Ausgabe"
+pdf.blurb: "Ein interaktives Buch über Deep Learning mit Code, Mathematik und Diskussionen."
+pdf.references: "Literaturverzeichnis"
+pdf.chapter: "Kapitel"
+pdf.section: "Abschnitt"
+pdf.online_appendix: "Online-Anhang „{title}“"
 # The back of the cover; {book} comes in italics.
-pdf.version: "{book}, version {date}."  # TODO translate
+pdf.version: "{book}, Stand {date}."
 
 # ── Notebook downloads (tools/build_notebook_zips.py) ────────────────────────
-notebooks.readme: |2  # TODO translate
-  # {book} — {fw} notebooks
+notebooks.readme: |2
+  # {book} – {fw}-Notebooks
 
-  These are the executed {fw} notebooks from the book. Computed outputs and the
-  figures referenced by the notebooks are included. The matching `d2l` source and
-  pinned environments are included as well.
+  Dieses Paket enthält die ausgeführten {fw}-Notebooks aus dem Buch mit den
+  berechneten Ausgaben und den Abbildungen, auf die die Notebooks verweisen.
+  Es enthält auch den passenden `d2l`-Quellcode und die festgelegten
+  Paketversionen für die Umgebungen.
 
-  The latest source is at <https://github.com/smolix/d2l-neu>.
+  Den aktuellen Quellcode finden Sie unter <https://github.com/smolix/d2l-neu>.
 
-  ## CPU setup (recommended first)
+  ## CPU-Umgebung einrichten (für den Einstieg empfohlen)
 
-  Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run:
+  Installieren Sie [uv](https://docs.astral.sh/uv/getting-started/installation/) und führen Sie folgende Befehle aus:
 
       uv venv --python 3.12
       uv pip sync pylock.cpu.toml
       uv run --no-sync jupyter lab
 
-  {cpu_note}## NVIDIA GPU setup
+  {cpu_note}## Umgebung für eine NVIDIA-GPU einrichten
 
-  On Linux/x86-64 with a compatible NVIDIA driver, replace the CPU lock above:
+  Unter Linux/x86-64 mit einem kompatiblen NVIDIA-Treiber verwenden Sie
+  anstelle der oben genannten CPU-Lockdatei die GPU-Lockdatei:
 
       uv pip sync pylock.gpu.toml
       uv run --no-sync jupyter lab
 
-  The GPU lock is framework-specific; check that `nvidia-smi` works before using
-  it. The notebooks import the backend as, e.g.:
+  Jedes Framework hat eine eigene GPU-Lockdatei. Prüfen Sie vor der
+  Verwendung, ob `nvidia-smi` funktioniert. So importieren die Notebooks
+  beispielsweise das Backend:
 
       from d2l import {mod} as d2l
 
-  Notebook outputs can be read offline. Executing notebooks that use datasets or
-  pretrained models downloads those assets on first use and therefore needs an
-  internet connection and additional disk space.
-notebooks.cpu_note_pytorch: |2+  # TODO translate
-  The Language Models chapters (`chapter_lm-*`) need Transformers and the OpenAI client
-  on top of PyTorch: for them use `pylock.lm-cpu.toml` (or `pylock.lm-gpu.toml`)
-  in a separate venv, e.g. `uv venv --python 3.12 .venv-lm`, then
+  Die Ausgaben der Notebooks können Sie offline lesen. Wenn ein Notebook
+  Datensätze oder vortrainierte Modelle verwendet, lädt es diese bei der
+  ersten Ausführung herunter. Dafür brauchen Sie eine Internetverbindung
+  und zusätzlichen Speicherplatz.
+notebooks.cpu_note_pytorch: |2+
+  Die Kapitel zu Sprachmodellen (`chapter_lm-*`) benötigen neben PyTorch
+  auch Transformers und den OpenAI-Client. Verwenden Sie dafür
+  `pylock.lm-cpu.toml` (oder `pylock.lm-gpu.toml`) in einer eigenen virtuellen
+  Umgebung, etwa mit `uv venv --python 3.12 .venv-lm` und anschließend
   `VIRTUAL_ENV=.venv-lm uv pip sync pylock.lm-cpu.toml`.
 
 
-notebooks.cpu_note_mxnet: |2+  # TODO translate
-  On Apple Silicon, use `pylock.cpu-macos.toml` instead of `pylock.cpu.toml`.
+notebooks.cpu_note_mxnet: |2+
+  Verwenden Sie auf Macs mit Apple Silicon `pylock.cpu-macos.toml` anstelle von `pylock.cpu.toml`.
 
 
 
