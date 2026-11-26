@@ -25,6 +25,7 @@ import yaml
 
 from . import config, tfile
 from .pseudo import L as PL, R as PR
+from .protect import nbsp
 from .segment import reconstruct
 from .units import english_blocks
 
@@ -51,6 +52,8 @@ def translated_pages(lang, rev: str, stale: str = 'english') -> dict:
         if unknown:
             raise config.L10nError(f'{rel}: anchors not in the English file at {rev}: '
                                    + ' '.join(unknown[:5]) + ' (run l10n check)')
+        if (lang.raw.get('typography') or {}).get('nbsp'):
+            tr = {a: nbsp(t) for a, t in tr.items()}
         out[rel] = reconstruct(blocks, tr)
     return out
 

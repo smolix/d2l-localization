@@ -259,7 +259,13 @@ NOTE, and glossary violations: a `verified_*` or `invariant` term absent where
 its English concept appears. `l10n check` also lists every locked block edited
 at the current revision, for review. A language can change the switches in
 `languages.yml` (`check: {cjk_adjacent: letters|all|off, order:
-warning|error|off, numbers: warning|off}`).
+warning|error|off, numbers: warning|off, thousands: keep|space}`; `space`
+accepts 10 000 for the English 10,000, as German writes it).
+
+`typography: {nbsp: true}` in `languages.yml` (German) makes the build put
+no-break spaces into abbreviations (z. B.), grouped numbers (10 000) and between
+a number and its unit (24 GiB), outside code and math. Translators type ordinary
+spaces; the check never sees the no-break ones.
 
 A sampled back-translation check reports meaning drift for human review; it does
 not fail the build.

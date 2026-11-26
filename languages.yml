@@ -12,7 +12,7 @@ languages:
   - {code: pt, locale: pt-BR,   name: Português,  bucket: d2l-pt, hosts: [pt.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: es, locale: es,      name: Español,    bucket: d2l-es, hosts: [es.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: fr, locale: fr,      name: Français,   bucket: d2l-fr, hosts: [fr.d2l.ai], dir: ltr, pinned: null, forum: english}
-  - {code: de, locale: de,      name: Deutsch,    bucket: d2l-de, hosts: [de.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: de, locale: de,      name: Deutsch,    bucket: d2l-de, hosts: [de.d2l.ai], dir: ltr, pinned: null, forum: english, check: {thousands: space}, typography: {nbsp: true}}
   - {code: tr, locale: tr,      name: Türkçe,     bucket: d2l-tr, hosts: [tr.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: vi, locale: vi,      name: Tiếng Việt, bucket: d2l-vi, hosts: [vi.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: ru, locale: ru,      name: Русский,    bucket: d2l-ru, hosts: [ru.d2l.ai], dir: ltr, pinned: null, forum: english}  # no glossary yet

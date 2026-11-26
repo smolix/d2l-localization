@@ -46,10 +46,16 @@ class CheckOptions:
     numbers: numerals of the English missing from the translation: 'warning'
         (default) or 'off'. `N×` and en-dash ranges count as numbers, not
         protected tokens: only their digits are compared (40–55 -> 40〜55 passes).
+    thousands: how the translation groups thousands. 'keep' (default): as in
+        the English (10,000). 'space': a space, no-break or narrow no-break
+        space (10 000, de); the English comma and the translation's space are
+        both removed before numbers are compared, so 10,000 -> 10 000 and
+        1,000 -> 1000 pass.
     """
     cjk_adjacent: str = 'letters'
     order: str = 'warning'
     numbers: str = 'warning'
+    thousands: str = 'keep'
 
     @classmethod
     def from_dict(cls, d):
@@ -243,13 +249,49 @@ def check_block(kind: str, english: str, tr: str, opts: CheckOptions | None = No
 
     if opts.numbers == 'off':
         return errors, warnings
-    ne = Counter(NUMBER_RE.findall(strip_tokens(english)))
-    nt = Counter(NUMBER_RE.findall(strip_tokens(tr)))
+    en_text, tr_text = strip_tokens(english), strip_tokens(tr)
+    if opts.thousands == 'space':
+        en_text = _GROUP_COMMA_RE.sub(r'\1', en_text)
+        tr_text = _GROUP_SPACE_RE.sub(r'\1', tr_text)
+    ne = Counter(NUMBER_RE.findall(en_text))
+    nt = Counter(NUMBER_RE.findall(tr_text))
     if ne != nt:
         miss = list((ne - nt).elements())
         if miss:
             warnings.append('numbers not found: ' + ' '.join(miss[:6]))
     return errors, warnings
+
+
+_NBSP_RULES = [
+    # z. B., d. h., u. a., i. d. R.: no break inside the abbreviation
+    (re.compile(r'(?<![\w.])([A-Za-zÄÖÜäöü]\.) (?=[A-Za-zÄÖÜäöü]\.)'), '\\1\u00a0'),
+    # 10 000: no break inside a grouped number
+    (re.compile(r'(\d) (?=\d{3}(?!\d))'), '\\1\u00a0'),
+    # 24 GiB, 92.3 %, 5 ms: no break between a number and its unit
+    (re.compile(r'(\d) (?=(?:[kMGTP]i?B|[kMGTP]?FLOPS?|[kMG]?Hz|[mµn]?s|[kM]?W|°C|%|Mio\.|Mrd\.)(?![\w]))'), '\\1\u00a0'),
+]
+
+
+def nbsp(text: str) -> str:
+    """Typography for languages with `typography: {nbsp: true}` (de): no-break
+    spaces inside abbreviations (z. B.), grouped numbers (10 000) and between a
+    number and its unit (24 GiB). Protected tokens (code, math, links, tags)
+    are left alone. Applied by the build; translators type ordinary spaces."""
+    parts, last = [], 0
+    def fix(seg):
+        for rx, rep in _NBSP_RULES:
+            seg = rx.sub(rep, seg)
+        return seg
+    for m in _TOKEN_RE.finditer(text):
+        parts.append(fix(text[last:m.start()]))
+        parts.append(m.group(0))
+        last = m.end()
+    parts.append(fix(text[last:]))
+    return ''.join(parts)
+
+
+_GROUP_COMMA_RE = re.compile(r'(?<![\w.])(\d{1,3}),(?=\d{3}(?:,\d{3})*(?![\d,]))')
+_GROUP_SPACE_RE = re.compile(r'(\d)[ \u00a0\u202f](?=\d{3}(?!\d))')
 
 
 def _short(s: str, n: int = 40) -> str:

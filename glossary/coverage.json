@@ -1498,15 +1498,15 @@
     "de": {
       "total": 1190,
       "statuses": {
-        "verified_external": 61,
-        "proposed": 1119,
+        "verified_external": 81,
+        "proposed": 1099,
         "verified_d2l": 10
       },
       "by_topic": {
         "attention": {
           "verified_d2l": 1,
-          "proposed": 53,
-          "verified_external": 2
+          "proposed": 48,
+          "verified_external": 7
         },
         "attention mechanisms": {
           "proposed": 1
@@ -1519,8 +1519,8 @@
           "verified_external": 1
         },
         "computer vision": {
-          "proposed": 56,
-          "verified_external": 3
+          "proposed": 54,
+          "verified_external": 5
         },
         "convolutional modern": {
           "proposed": 29,
@@ -1528,19 +1528,20 @@
           "verified_d2l": 1
         },
         "convolutional neural networks": {
-          "proposed": 25
+          "verified_external": 1,
+          "proposed": 24
         },
         "deep reinforcement learning": {
           "proposed": 32,
           "verified_external": 1
         },
         "diffusion models": {
-          "proposed": 104,
-          "verified_external": 1
+          "proposed": 102,
+          "verified_external": 3
         },
         "gaussian processes": {
-          "proposed": 33,
-          "verified_external": 1
+          "proposed": 32,
+          "verified_external": 2
         },
         "generative adversarial networks": {
           "proposed": 29,
@@ -1558,8 +1559,8 @@
           "verified_d2l": 1
         },
         "linear regression": {
-          "verified_external": 6,
-          "proposed": 33,
+          "verified_external": 7,
+          "proposed": 32,
           "verified_d2l": 1
         },
         "mdl calculus": {
@@ -1580,18 +1581,19 @@
           "proposed": 50
         },
         "mdl probability statistics": {
-          "proposed": 64,
-          "verified_external": 1
+          "proposed": 63,
+          "verified_external": 2
         },
         "multilayer perceptrons": {
-          "proposed": 25,
-          "verified_external": 2
+          "proposed": 24,
+          "verified_external": 3
         },
         "natural language processing applications": {
           "proposed": 11
         },
         "natural language processing pretraining": {
-          "proposed": 27
+          "verified_external": 2,
+          "proposed": 25
         },
         "notation": {
           "proposed": 1
@@ -1624,12 +1626,12 @@
           "proposed": 30
         },
         "reinforcement learning": {
-          "proposed": 57,
-          "verified_external": 7
+          "verified_external": 10,
+          "proposed": 54
         },
         "transformers": {
-          "proposed": 52,
-          "verified_external": 3,
+          "proposed": 51,
+          "verified_external": 4,
           "verified_d2l": 1
         }
       }
@@ -2064,7 +2066,6 @@
     "de/dropout: English retained; inspect loanword/name rationale",
     "de/early-stopping: English retained; inspect loanword/name rationale",
     "de/hyperparameter: English retained; inspect loanword/name rationale",
-    "de/convolutional-neural-network: English retained; inspect loanword/name rationale",
     "de/filter: English retained; inspect loanword/name rationale",
     "de/stride: English retained; inspect loanword/name rationale",
     "de/padding: English retained; inspect loanword/name rationale",
@@ -2084,6 +2085,7 @@
     "de/generator: English retained; inspect loanword/name rationale",
     "de/autoencoder: English retained; inspect loanword/name rationale",
     "de/agent: English retained; inspect loanword/name rationale",
+    "de/q-learning: English retained; inspect loanword/name rationale",
     "de/exploration: English retained; inspect loanword/name rationale",
     "de/momentum: English retained; inspect loanword/name rationale",
     "de/adam: English retained; inspect loanword/name rationale",

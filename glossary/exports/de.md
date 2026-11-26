@@ -36,7 +36,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | derivative | Ableitung | proposed | derivative: The rate of change of a function with respect to an input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L119) |
 | partial derivative | partielle Ableitung | proposed | partial-derivative: A derivative with respect to one variable while others are held fixed. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L90) |
 | chain rule | Kettenregel | proposed | chain-rule: A rule for differentiating compositions of functions. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L52) |
-| backpropagation | Backpropagation | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | review-de-809cb60b8b: page |
+| backpropagation | Backpropagation | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | review-de-809cb60b8b: page; author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | automatic differentiation | automatisches Differenzieren | verified_external | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | review-de-00818d4e62: page |
 | computational graph | Berechnungsgraph | proposed | computational-graph: A representation of a computation as connected operations and values. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L108) |
 | vector | Vektor | proposed | vector: An ordered collection of numerical components. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L24) |
@@ -97,7 +97,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | neural network | neuronales Netz | verified_external | neural-network: A model composed of interconnected parameterized transformations. | review-de-809cb60b8b: page |
 | neuron | Neuron | proposed | neuron: A computational unit that transforms inputs into an output. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L280) |
 | layer | Schicht | proposed | layer: A stage of a neural network that transforms its input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L34) |
-| hidden layer | versteckte Schicht | verified_external | hidden-layer: A network layer between the input and output layers. | review-de-809cb60b8b: page |
+| hidden layer | versteckte Schicht | verified_external | hidden-layer: A network layer between the input and output layers. | review-de-809cb60b8b: page; author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | activation function | Aktivierungsfunktion | verified_external | activation-function: A function applied to a unit's input to produce its activation. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L45) |
 | nonlinearity | Nichtlinearität | proposed | nonlinearity: A transformation that is not linear in its input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/mlp.md#L57) |
 | multilayer perceptron | mehrschichtiges Perzeptron | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/mlp.md#L22) |
@@ -106,9 +106,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | underfitting | Unteranpassung | verified_external | underfitting: Failing to capture important structure even in the training data. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#underfitting) |
 | generalization | Generalisierung | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#generalization) |
 | regularization | Regularisierung | verified_external | regularization: A method that constrains or modifies learning to improve generalization. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#regularization) |
-| weight decay | Gewichtszerfall | proposed | weight-decay: A regularization method that shrinks model weights during training. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L8) |
+| weight decay | Gewichtszerfall | verified_external | weight-decay: A regularization method that shrinks model weights during training. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L8); author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | dropout | Dropout | proposed | dropout: A training method that randomly masks activations to regularize a network. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L26) |
-| early stopping | Early Stopping | proposed | early-stopping: Stopping training based on validation performance before fitting continues too far. |  |
+| early stopping | Early Stopping | verified_external | early-stopping: Stopping training based on validation performance before fitting continues too far. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | hyperparameter | Hyperparameter | proposed | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L139) |
 | model selection | Modellauswahl | verified_d2l | model-selection: The process of choosing a model or configuration using available evidence. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L58) |
 | cross-validation | Kreuzvalidierung | proposed | cross-validation: A method for evaluating configurations across different train-validation splits. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L74) |
@@ -119,8 +119,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | batch normalization | Batchnormalisierung | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
 | layer normalization | Schichtnormalisierung | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | Faltung | proposed | convolution: An operation that combines local input values with shared kernel weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L355) |
-| convolutional neural network | Convolutional Neural Network | verified_external | convolutional-neural-network: A neural network using convolutional layers to process structured data. | review-de-a22d2567e0: page |
-| kernel | Faltungskern | proposed | kernel: A set of weights applied locally in a convolution. |  |
+| convolutional neural network | konvolutionäres neuronales Netzwerk | verified_external | convolutional-neural-network: A neural network using convolutional layers to process structured data. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| kernel | Faltungskern | verified_external | kernel: A set of weights applied locally in a convolution. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | filter | Filter | proposed | filter: A learned set of local weights used to extract a pattern. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L74) |
 | channel | Kanal | proposed | channel: A feature dimension in a structured representation such as an image. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L227) |
 | stride | Stride | proposed | stride: The spacing between successive positions of an operation on an input. |  |
@@ -135,8 +135,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | skip connection | Skip-Verbindung | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
 | image augmentation | Bildaugmentierung | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
 | transfer learning | Transferlernen | proposed | transfer-learning: Reusing knowledge learned on one task to improve learning on another. |  |
-| fine-tuning | Fine-Tuning | proposed | fine-tuning: Further training a pretrained model for a particular task or dataset. |  |
-| pretraining | Vortraining | proposed | pretraining: Training a model on an initial task or dataset before adaptation. |  |
+| fine-tuning | Fine-Tuning | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| pretraining | Pre-Training | verified_external | pretraining: Training a model on an initial task or dataset before adaptation. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | object detection | Objekterkennung | proposed | object-detection: The task of locating and classifying objects in an image. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L397) |
 | bounding box | Begrenzungsrahmen | proposed | bounding-box: A rectangle specifying the location and extent of an object. |  |
 | intersection over union | Intersection over Union | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
@@ -152,7 +152,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | token | Token | proposed | token: A unit into which text is divided for processing. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L147) |
 | tokenization | Tokenisierung | proposed | tokenization: The process of dividing text into tokens. |  |
 | vocabulary | Vokabular | proposed | vocabulary: The set of tokens available to a language model. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-scratch.md#L455) |
-| embedding | Einbettung | proposed | embedding: A learned numerical representation of a discrete item or other object. |  |
+| embedding | Einbettung | verified_external | embedding: A learned numerical representation of a discrete item or other object. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | word embedding | Worteinbettung | proposed | word-embedding: A numerical vector representing a word. |  |
 | sequence-to-sequence | Sequenz-zu-Sequenz | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | Encoder | proposed | encoder: A component that converts an input into an internal representation. |  |
@@ -162,12 +162,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | perplexity | Perplexität | verified_external | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. | [google-ml-de-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=de#perplexity) |
 | long short-term memory | Long Short-Term Memory | verified_external | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | review-de-07123de77d: page |
 | gated recurrent unit | Gated Recurrent Unit | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
-| attention | Attention | proposed | attention: A mechanism that forms a context-dependent weighted combination of values. |  |
+| attention | Attention | verified_external | attention: A mechanism that forms a context-dependent weighted combination of values. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | self-attention | Self-Attention | proposed | self-attention: Attention in which queries, keys, and values are derived from the same sequence. |  |
 | multi-head attention | Multi-Head-Attention | verified_external | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | review-de-fa0c0b9dfc: page |
-| query | Abfrage | proposed | query: A representation used to select relevant information in attention. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L211) |
-| key | Schlüssel | proposed | key: A representation compared with a query to determine attention weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L10) |
-| value | Wert | proposed | value: A representation combined according to attention weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L129) |
+| query | Abfrage | verified_external | query: A representation used to select relevant information in attention. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L211); author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| key | Schlüssel | verified_external | key: A representation compared with a query to determine attention weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L10); author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| value | Wert | verified_external | value: A representation combined according to attention weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L129); author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | positional encoding | Positionskodierung | proposed | positional-encoding: Information added to representations to communicate sequence position. |  |
 | transformer | Transformer | proposed | transformer: A neural architecture built around attention and feedforward layers. |  |
 | masked language model | maskiertes Sprachmodell | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
@@ -183,21 +183,21 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | noise schedule | Rauschplan | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
 | denoising | Entrauschung | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
 | score function | Score-Funktion | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
-| Markov chain | Markow-Kette | proposed | markov-chain: A stochastic process whose next state depends on the present state. |  |
-| Markov decision process | Markow-Entscheidungsprozess | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. |  |
-| reinforcement learning | bestärkendes Lernen | verified_external | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | review-de-c0388ea2a4: page |
+| Markov chain | Markov-Kette | verified_external | markov-chain: A stochastic process whose next state depends on the present state. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| Markov decision process | Markov-Entscheidungsprozess | verified_external | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| reinforcement learning | bestärkendes Lernen | verified_external | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | review-de-c0388ea2a4: page; author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | agent | Agent | proposed | agent: An entity that chooses actions in an environment. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L4) |
 | environment | Umgebung | proposed | environment: The external system with which an agent interacts. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L7) |
 | state | Zustand | proposed | state: A representation of the situation relevant to a sequential decision process. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L30) |
 | action | Aktion | verified_external | action: A choice made by an agent that can affect the environment. | [google-ml-de-agent](https://developers.google.com/machine-learning/glossary/agent?hl=de#action) |
 | reward | Belohnung | proposed | reward: A scalar feedback signal evaluating an outcome or transition. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L198) |
-| policy | Strategie | verified_external | policy: A rule or distribution for selecting actions from states. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L225) |
-| return | Ertrag | proposed | return: The accumulated future reward from a point in a trajectory. |  |
+| policy | Strategie | verified_external | policy: A rule or distribution for selecting actions from states. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L225); author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| return | Ertrag | verified_external | return: The accumulated future reward from a point in a trajectory. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | discount factor | Diskontierungsfaktor | verified_external | discount-factor: A factor that controls the relative weight of future rewards. | review-de-c0388ea2a4: page |
 | value function | Wertfunktion | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L237) |
 | action-value function | Aktionswertfunktion | proposed | action-value-function: A function estimating expected return from a state and action. |  |
 | value iteration | Wertiteration | proposed | value-iteration: An iterative method for computing optimal values using Bellman updates. |  |
-| Q-learning | Q-Lernen | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L291) |
+| Q-learning | Q-Learning | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | exploration | Exploration | proposed | exploration: Trying actions to acquire information about their outcomes. |  |
 | policy gradient | Policy-Gradient | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
 | convex function | konvexe Funktion | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
@@ -218,7 +218,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | stationary point | stationärer Punkt | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
 | Gaussian process | Gauß-Prozess | proposed | gaussian-process: A distribution over functions whose finite collections of values are jointly Gaussian. |  |
 | covariance function | Kovarianzfunktion | proposed | covariance-function: A function specifying covariance between values at pairs of inputs. |  |
-| kernel function | Kernfunktion | proposed | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. |  |
+| kernel function | Kernel-Funktion | verified_external | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | posterior predictive distribution | posterior-prädiktive Verteilung | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
 | Bayesian optimization | bayessche Optimierung | proposed | bayesian-optimization: An optimization method using a probabilistic surrogate to choose evaluations. |  |
 | grid search | Gittersuche | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
@@ -241,7 +241,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Neural ODE | Neural ODE | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
 | normalizing flow | normalisierender Fluss | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
 | change of variables | Variablentransformation | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
-| Markov property | Markow-Eigenschaft | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
+| Markov property | Markov-Eigenschaft | verified_external | markov-property: The property that the future is conditionally independent of the past given the present. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | stationary distribution | stationäre Verteilung | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
 | principal component analysis | Hauptkomponentenanalyse | proposed | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L277) |
 | dimensionality reduction | Dimensionsreduktion | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
@@ -361,7 +361,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sequence length | Sequenzlänge | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | Attention-Score | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
 | attention pooling | Attention-Pooling | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
-| additive attention | Additive Attention | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
+| additive attention | additive Attention | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
 | dot-product attention | Skalarprodukt-Attention | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
 | masked attention | maskierte Attention | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
 | byte pair encoding | Byte-Pair-Encoding | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
@@ -415,7 +415,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | on-policy | On-Policy | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
 | multi-armed bandit | mehrarmiger Bandit | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
 | regret | Regret | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
-| Markov reward process | Markow-Belohnungsprozess | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
+| Markov reward process | Markov-Belohnungsprozess | verified_external | markov-reward-process: A Markov process equipped with rewards and a return criterion. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | Bellman optimality equation | Bellman-Optimalitätsgleichung | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | Policy-Gradient-Theorem | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
 | deep reinforcement learning | tiefes bestärkendes Lernen | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
@@ -460,7 +460,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | exploration rate | Explorationsrate | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
 | state-action pair | Zustand-Aktion-Paar | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
 | partially observable | Teilweise beobachtbar | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
-| Markov chain Monte Carlo | Markow-Chain-Monte-Carlo | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
+| Markov chain Monte Carlo | Markov-Chain-Monte-Carlo | verified_external | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | noise ball | Rauschkugel | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
 | implicit bias | impliziter Bias | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
 | preconditioner | Vorkonditionierer | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
@@ -476,7 +476,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | heavy-ball momentum | Heavy-Ball-Momentum | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
 | trust-region method | Trust-Region-Verfahren | verified_external | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. | review-de-96c9228d7a: page |
 | soft-thresholding | weiches Schwellenwertverfahren | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
-| convex conjugate | Konvex Konjugierte | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
+| convex conjugate | konvex Konjugierte | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
 | subdifferential | Subdifferential | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
 | dual problem | duales Problem | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
 | shadow price | Schattenpreis | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
@@ -497,7 +497,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | one-hot encoding | One-Hot-Kodierung | proposed | one-hot-encoding: A representation of a category as a vector with one active component. |  |
 | concatenation | Verkettung | proposed | concatenation: The operation of joining arrays or sequences along an axis. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_notation/index.md#L36) |
 | broadcasting | Broadcasting | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
-| shape | Form | proposed | shape: The sizes of the axes of an array or tensor. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L134) |
+| shape | Form | verified_external | shape: The sizes of the axes of an array or tensor. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L134); author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | slice | Slice | proposed | slice: A selected portion of an array or sequence. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/ndarray.md#L347) |
 | forward mode | Vorwärtsmodus | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
 | reverse mode | Rückwärtsmodus | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
@@ -821,7 +821,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | aliasing | Aliasing | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
 | pooling window | Pooling-Fenster | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
 | global pooling | globales Pooling | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
-| fully convolutional network | vollständig faltendes Netz | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
+| fully convolutional network | vollständig konvolutionäres Netzwerk | verified_external | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | bilinear interpolation | bilineare Interpolation | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | Nächster-Nachbar-Interpolation | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
 | random horizontal flip | Zufällige horizontale Spiegelung | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
@@ -1054,7 +1054,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Gaussian observation noise | gaußsches Beobachtungsrauschen | proposed | gaussian-observation-noise: Observation noise modeled using a Gaussian distribution. |  |
 | posterior predictive mean | posterior-prädiktiver Mittelwert | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
 | predictive variance | prädiktive Varianz | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
-| kernel matrix | Kernmatrix | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. |  |
+| kernel matrix | Kernel-Matrix | verified_external | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | Cholesky decomposition | Cholesky-Zerlegung | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
 | Cholesky factor | Cholesky-Faktor | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
 | log marginal likelihood | log-marginale Likelihood | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |

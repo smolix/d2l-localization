@@ -1,14 +1,12 @@
 # Style guide: German (de)
 
-Draft of 2026-11-26 for the author's review. Translators read this with every
-unit (TRANSLATING.md §7–§8). Each rule has one reason and one example
-(English → German, or ✗ wrong / ✓ right). Points that need the author's ruling
-are collected in §10.
+Confirmed by the author on 2026-11-26 (§10 lists the rulings). Translators
+read this with every unit (TRANSLATING.md §7–§8). Each rule has one reason and
+one example (English → German, or ✗ wrong / ✓ right).
 
 Order of authority: the decisions log, then this guide, then the glossary. The
 glossary says *what* a term is; this guide says *how to choose and inflect*.
-Where this guide disagrees with the glossary (§8.2), the glossary form stands
-until the author rules.
+The glossary carries the author's term rulings (§8.2), so the two agree.
 
 ## 1. Register
 
@@ -71,15 +69,15 @@ Kodierung, kodieren, dekodieren (but Encoder, Decoder, Code); Perzeptron; Gauß.
 | Colon | Lower case after a colon unless a full sentence follows (then a capital). | **Kernannahme:** Die Fehler sind unabhängig. ; drei Größen: Gewicht, Bias und Lernrate |
 | Semicolon | Allowed between two main clauses; do not copy every English semicolon, a full stop is usually better. | |
 | Abbreviations | In body text write them out: zum Beispiel, das heißt, unter anderem, beziehungsweise, und so weiter. Abbreviations (z. B., d. h., u. a., bzw., usw., ca., vgl., Mio., Mrd.) only inside parentheses, captions, slides and tables, with a space inside multi-part ones. "i.e." → das heißt; "e.g." → zum Beispiel; "cf." → vgl.; "etc." → usw.; "et al." stays. | ✗ z.B., d.h. ✓ (z. B. Adam) |
-| Spaces | Type ordinary spaces in `z. B.`, `92.3 %`, `24 GiB`, `10 000`. Do not insert no-break or narrow spaces or soft hyphens (TRANSLATING.md §8, no invisible characters); the build is expected to protect these gaps (§10, point 3). | |
+| Spaces | Type ordinary spaces in `z. B.`, `24 GiB`, `10 000`; the German build turns them into no-break spaces. Do not type no-break or narrow spaces or soft hyphens yourself (TRANSLATING.md §8, no invisible characters). No space before `%` (§4). | ✓ `z. B.`, `24 GiB`, `92.3%` ✗ `92.3 %` |
 | Apostrophe | No genitive apostrophe (✗ Adam's Lernrate ✓ die Lernrate von Adam); no plural apostrophe (✗ GPU's ✓ GPUs). | |
 | Emphasis | Keep `*…*` and `**…**` on the corresponding word(s), around the whole inflected word; add none. The English gloss stays outside the markers. | "*regression* predicts …" → *Regression* sagt … vorher ; `*Überanpassung* (engl. overfitting)` |
 | Headline case | German has no title case: capitalise the first word and nouns only. | "The Model and the Loss" → Das Modell und der Verlust |
 
-**References.** The build prints the prefix (Abbildung, Tabelle, Abschnitt,
-Kapitel), so do not write it, and never put an article or a contracted
-preposition before a reference: the translator does not see which noun, and so
-which gender, will be printed.
+**References.** The German build prints the prefix: Kapitel 3, Abschnitt 5.1,
+Abbildung 4, Tabelle 2. Do not write a prefix of your own, and never put an
+article or a contracted preposition before a reference: the translator does not
+see which noun, and so which gender, will be printed.
 
 | English | German |
 |---|---|
@@ -97,9 +95,9 @@ comma or full stop, as in English.
   ✓ die Norm von $\mathbf{w}$.
 - Compounds with a symbol, code or number take a hyphen: $d$-dimensional,
   $k$-fach, `nn.Linear`-Schicht, 3-Gramm, $\ell_2$-Norm.
-- Protected math is copied even when it contains English: "the
-  $i^{\textrm{th}}$ layer" → die $i^{\textrm{th}}$ Schicht, and name the block
-  in NOTES (§10, point 16).
+- Protected math is copied as it is, even when it contains English: "the
+  $i^{\textrm{th}}$ layer" → die $i^{\textrm{th}}$ Schicht. The math stays as
+  the author wrote it; do not change it and do not report it in NOTES.
 - Token order: German main clauses rarely need a reorder; where a subordinate
   clause would move a token, restructure (two main clauses) before reordering.
   End the sentence before a display equation if the verb would otherwise have
@@ -120,9 +118,25 @@ Wikipedia or a German textbook, and record the choice in DECISIONS.
 | Case | Rule | Examples |
 |---|---|---|
 | Established German term | Use it. | Schicht (✗ Layer), Gewicht, Faltung (✗ Konvolution), Merkmal (✗ Feature), Verlust (✗ Loss), Einbettung, Lernrate, Gradientenabstieg, Überanpassung, Regularisierung, Zustand, Belohnung, Strategie, Erwartungswert, Datensatz, Genauigkeit, Schrittweite, Ableitung, Kettenregel |
-| No German term, or only a calque | English loan, capitalised, with gender (§3.3). | Dropout (✗ Aussetzen), Batch (✗ Stapel, Charge), Token, Prompt, Pooling (✗ Bündelung), Padding (✗ Auffüllung as a term), Stride, Momentum (✗ Impuls), Backpropagation (✗ Fehlerrückführung), Fine-Tuning, Attention, Logit, Checkpoint, Sampling |
-| Names of models, architectures, optimizers, libraries, datasets, metrics; acronyms; code | Leave in English; never translate a name in part. | Transformer, ResNet, BERT, Adam, AdamW, PyTorch, ImageNet, BLEU, ReLU, SGD, MLP, LSTM, GPU; Proximal Policy Optimization (✗ Proximale Policy-Optimierung); Long Short-Term Memory |
+| No German term, or only a calque | English loan, capitalised, with gender (§3.3). | Dropout (✗ Aussetzen), Batch (✗ Stapel, Charge), Token, Prompt, Pooling (✗ Bündelung), Padding (✗ Auffüllung as a term), Stride, Momentum (✗ Impuls), Backpropagation (✗ Fehlerrückführung), Fine-Tuning, Pre-Training (✗ Vortraining), Post-Training, Attention (✗ Aufmerksamkeit), Early Stopping, Logit, Checkpoint, Sampling |
+| Names of models, architectures, optimizers, libraries, datasets, metrics; acronyms; code | Leave in English; never translate a name in part. | Transformer, ResNet, BERT, Adam, AdamW, PyTorch, ImageNet, BLEU, ReLU, SGD, MLP, LSTM, GPU; Q-Learning (✗ Q-Lernen); Proximal Policy Optimization (✗ Proximale Policy-Optimierung); Long Short-Term Memory |
 | Name or loan + German noun | Hyphenated compound (§3.4). | Adam-Optimierer, ReLU-Aktivierung, Softmax-Funktion, KV-Cache, Transformer-Block, GPU-Speicher |
+
+**Convolution has two word families: the network family is *konvolutionär*;
+the operation and its parts are *Faltung*.** The network is *das
+konvolutionäre neuronale Netzwerk*, short *konvolutionäres Netzwerk*, acronym
+*CNN*; likewise *vollständig konvolutionäres Netzwerk*. The operation is *die
+Faltung*, and layers, blocks and kernels are named after it: Faltungsschicht,
+Faltungsblock, Faltungskern, transponierte Faltung. In this term the noun is
+*Netzwerk*, not *Netz*; every other network keeps *Netz* (neuronales Netz,
+rekurrentes neuronales Netz, Residualnetz, Zielnetz).
+
+| English | German | Not |
+|---|---|---|
+| "Convolutional Neural Networks" (heading) | Konvolutionäre Netzwerke | Faltungsnetze, Faltungsnetzwerke |
+| "a convolutional network", "a convnet" | ein konvolutionäres Netzwerk, ein CNN | Faltungsnetz, Convnet, konvolutionäres Netz |
+| "the convolutional layers of a CNN" | die Faltungsschichten eines CNN | konvolutionäre Schichten, Konvolutionsschichten |
+| "the convolution of $f$ and $g$" | die Faltung von $f$ und $g$ | Konvolution |
 
 ### 3.2 Frequent head words
 
@@ -146,20 +160,22 @@ A-priori-Verteilung · die Einbettung · der Erwartungswert · die Maske · die
 Schrittweite (step size) · die Batchgröße · die Klassifikation · die
 Generalisierung · die Umgebung · der Agent (weak: des Agenten, den Agenten) ·
 das Vokabular · der Vorwärtsdurchlauf, der Rückwärtsdurchlauf · der
-Gewichtszerfall · das Sprachmodell · das Vortraining · die versteckte Schicht ·
-das neuronale Netz (✗ Netzwerk) · der Parameter (die Parameter, no -s) · die
-Verlustfunktion · die Zielfunktion.
+Gewichtszerfall · das Sprachmodell · das Pre-Training · die versteckte Schicht ·
+das neuronale Netz (✗ neuronales Netzwerk) · das konvolutionäre neuronale
+Netzwerk (CNN; ✗ Faltungsnetz, §3.1) · der Parameter (die Parameter, no -s) ·
+die Verlustfunktion · die Zielfunktion.
 
 Adjectives in a term are lower case in running text (stochastischer
-Gradientenabstieg, neuronales Netz, bestärkendes Lernen) and are inflected:
-*mit dem stochastischen Gradientenabstieg*, *eines neuronalen Netzes*.
+Gradientenabstieg, neuronales Netz, konvolutionäres Netzwerk, bestärkendes
+Lernen) and are inflected: *mit dem stochastischen Gradientenabstieg*, *eines
+neuronalen Netzes*, *in konvolutionären Netzwerken*.
 
 ### 3.3 Loan nouns: gender, genitive, plural
 
 Loan nouns are capitalised and inflected as German nouns. Gender: the Duden
 entry if there is one; otherwise *-ing* → neuter, *-er* → masculine, an acronym
 takes the gender of its German head noun (die GPU ← Einheit, das LSTM, das CNN,
-das RNN, das MLP ← Netz, Perzeptron). Where Duden gives two genders (Token,
+das RNN, das MLP ← Netzwerk, Netz, Perzeptron). Where Duden gives two genders (Token,
 Batch, Bias), the one below is fixed.
 
 | Loan | Genitive, plural | Note |
@@ -168,7 +184,7 @@ Batch, Bias), the one below is fixed.
 | der Prompt | des Prompts, die Prompts | |
 | der Batch, der Minibatch | des Batchs, die Batches | ✗ das Batch |
 | der Bias | des Bias, plural via Bias-Terme, Bias-Vektoren | layer parameter only (§8.1) |
-| das Dropout, das Padding, das Pooling, das Sampling, das Fine-Tuning, das Batching, das Checkpointing, das Downsampling, das Ranking, das Retrieval, das Alignment | des Dropouts, des Poolings, des Fine-Tunings; no plural | |
+| das Dropout, das Padding, das Pooling, das Sampling, das Fine-Tuning, das Pre-Training, das Post-Training, das Q-Learning, das Batching, das Checkpointing, das Downsampling, das Ranking, das Retrieval, das Alignment | des Dropouts, des Poolings, des Fine-Tunings, des Pre-Trainings; no plural | |
 | die Attention | der Attention; no plural | die Self-Attention, die Cross-Attention, die Multi-Head-Attention |
 | die Backpropagation | der Backpropagation | |
 | der Stride | des Strides, die Strides | |
@@ -201,10 +217,10 @@ Duden D 41/D 42 leave a choice in most cases; these rules fix it.
 | Assimilated loan + German noun: closed | Only these first parts: Batch, Minibatch, Token, Label, Pixel, Tensor, Training(s), Test, Modell, Code. | Batchgröße, Tokenfolge, Labelverteilung, Trainingsverlust, Testfehler, Modellgröße |
 | Any other loan + German noun: hyphen | Also every name, acronym, symbol or number. | Attention-Gewicht, Pooling-Schicht, Dropout-Rate, Padding-Maske, Prompt-Länge, Stride-Wert, Momentum-Term, Sampling-Verfahren, Kernel-Trick, GPU-Speicher, Adam-Optimierer |
 | English noun + noun | Hyphen, both capitalised. | Score-Matching, Label-Smoothing, Teacher-Forcing, Flow-Matching, Max-Pooling |
-| English adjective + noun | Open, both capitalised; hyphen where the hyphenated form is the established one. | Deep Learning, Early Stopping, Ground Truth, Soft Actor-Critic; Fine-Tuning, Self-Attention, Cross-Attention |
-| A multi-word loan inside a compound | Hyphens throughout (Durchkopplung). | Deep-Learning-Modell, Early-Stopping-Kriterium, Fine-Tuning-Datensatz, Multi-Head-Attention, One-Hot-Kodierung, Few-Shot-Lernen, In-Context-Lernen, End-to-End-Training |
+| English adjective or prefix + noun | Open, both capitalised; hyphen where the hyphenated form is the established one, and always after a prefix or a letter. | Deep Learning, Early Stopping, Ground Truth, Soft Actor-Critic; Fine-Tuning, Pre-Training, Post-Training, Self-Attention, Cross-Attention, Q-Learning |
+| A multi-word loan inside a compound | Hyphens throughout (Durchkopplung). | Deep-Learning-Modell, Early-Stopping-Kriterium, Fine-Tuning-Datensatz, Pre-Training-Daten, Multi-Head-Attention, One-Hot-Kodierung, Few-Shot-Lernen, In-Context-Lernen, End-to-End-Training |
 | Linking element | As in the glossary; by analogy otherwise. | Merkmalsvektor, Einbettungsschicht, Faltungsschicht, Gewichtsmatrix, Trainingsdaten; Verlustfunktion, Lernrate (no -s-) |
-| German prefix + loan | Closed. | Vortraining, vortrainiert (✗ Pre-Training), Hyperparameter, Subwort |
+| German prefix + verb or noun | Closed. The training stages are not formed this way: their nouns are the loans. | vortrainieren, vortrainiert, Hyperparameter, Subwort; but das Pre-Training, das Post-Training (✗ Vortraining, ✗ Nachtraining) |
 
 ### 3.5 Verbs
 
@@ -214,7 +230,9 @@ established. Never an English participle (✗ gefinetunt, ✗ gepoolt, ✗ gesam
 
 | English | German | Not |
 |---|---|---|
-| train, pretrain | trainieren, vortrainieren (vortrainiert) | ausbilden, schulen |
+| train | trainieren | ausbilden, schulen |
+| pretrain | vortrainieren (trainiert … vor, vortrainiert: ein vortrainiertes Modell); noun *das Pre-Training* | pretrainen; *das Vortraining* as the noun |
+| post-train | no verb; use the noun *das Post-Training*: im Post-Training anpassen, nach dem Pre-Training weitertrainieren | nachtrainieren (in German usage it means to train an existing model further, that is fine-tuning or retraining, not this stage); posttrainieren |
 | fine-tune | feinabstimmen (stimmt … fein ab, feinabgestimmt); noun *das Fine-Tuning* | finetunen, feintunen |
 | sample (from a distribution) | ziehen: Wir ziehen $x$ aus $p$. | sampeln |
 | overfit, underfit | Das Modell ist überangepasst / unterangepasst; es kommt zur Überanpassung | overfitten |
@@ -239,7 +257,9 @@ an earlier unit of the page introduced the term, do not repeat it.
   (Regularisierung, Gradient, Tensor, Matrix), or school vocabulary (Ableitung,
   Wahrscheinlichkeit, Mittelwert).
 - With an acronym: *stochastischer Gradientenabstieg* (engl. stochastic
-  gradient descent, SGD); afterwards write what the English writes (SGD).
+  gradient descent, SGD), *konvolutionäres neuronales Netzwerk* (engl.
+  convolutional neural network, CNN); afterwards write what the English writes
+  (SGD, CNN).
 - Never in headings, captions, slides, exercises or table cells.
 
 Reason: readers go on to English papers, documentation and code; once per page
@@ -248,14 +268,14 @@ keeps the text clean.
 ## 4. Numbers and units
 
 **Decision: the decimal point everywhere, the space as thousands separator.**
-Numerals are copied from the English (0.5, 92.3 %), in prose as in math, code,
+Numerals are copied from the English (0.5, 92.3%), in prose as in math, code,
 code output and figures. Reason: inline and display math are protected and keep
 the point, and outputs and figure axes show it; a decimal comma in prose would
 put two conventions into one sentence (✗ mit $\eta = 0.1$ erreichen wir
-92,3 %), would need a rule for every identifier (GPT-3.5, Python 3.12), and a
-German reader of a programming book reads the point without effort. The price
-is a departure from DIN 5008/Duden in prose; this is the first question in §10.
-With the point as decimal sign, a point or comma must never group thousands.
+92,3%), would need a rule for every identifier (GPT-3.5, Python 3.12), and a
+German reader of a programming book reads the point without effort. This
+departs from DIN 5008/Duden in prose, by the author's ruling. With the point as
+decimal sign, a point or comma must never group thousands.
 
 | Item | Rule | Example |
 |---|---|---|
@@ -263,20 +283,21 @@ With the point as decimal sign, a point or comma must never group thousands.
 | Thousands | A space from five digits on; none in four-digit numbers and years. Never `10,000` or `10.000`. | "10,000 images" → 10 000 Bilder ; 2048 ; 60 000 |
 | Number words | million → Million(en), **billion → Milliarde(n)**, **trillion → Billion(en)**; Mio., Mrd. only in tables and slides. | "3 billion parameters" → 3 Milliarden Parameter ✗ 3 Billionen |
 | Digits or words | As the English: a number spelled out in English is spelled out in German; digits with units, symbols and comparisons. | "two hidden layers" → zwei versteckte Schichten ; 10 Epochen |
-| Percent | Space before `%`. Adjective: 5-prozentig. | "an accuracy of 92.3%" → eine Genauigkeit von 92.3 % |
-| Units | Symbols as in the source, with a space; time words written out become Sekunden, Minuten, Stunden, Tage. | 24 GiB, 5 ms ; "3 hours" → 3 Stunden |
-| Ranges | En dash without spaces, unit once; after *von* write *bis*. | "40–55" → 40–55 ; "45–50%" → 45–50 % ; ✗ von 40–55 ✓ von 40 bis 55 |
+| Percent | No space before `%`, as in the source (TRANSLATING.md §4). Adjective: 5-prozentig. | "an accuracy of 92.3%" → eine Genauigkeit von 92.3% ✗ 92.3 % |
+| Units | Symbols as in the source, with a space (not `%`); time words written out become Sekunden, Minuten, Stunden, Tage. | 24 GiB, 5 ms ; "3 hours" → 3 Stunden |
+| Ranges | En dash without spaces, unit once; after *von* write *bis*. | "40–55" → 40–55 ; "45–50%" → 45–50% ; ✗ von 40–55 ✓ von 40 bis 55 |
 | Multipliers | In prose *doppelt so* / *N-mal so* + adjective; keep `×` in slides, tables, captions and math. | "about 2× faster" → etwa doppelt so schnell ; "3× larger" → 3-mal so groß ; slide: 2× schneller |
-| Approximation | etwa, rund, ungefähr; *ca.* only in tables and slides; "an order of magnitude" → eine Größenordnung. | "roughly 90%" → etwa 90 % |
+| Approximation | etwa, rund, ungefähr; *ca.* only in tables and slides; "an order of magnitude" → eine Größenordnung. | "roughly 90%" → etwa 90% |
 | Ordinals | Written out up to *zwölfte*; otherwise digit + point, not at the end of a sentence. | "the third epoch" → die dritte Epoche |
 | Decades, years | "the 2010s" → die 2010er-Jahre; "in 2017" → 2017 or im Jahr 2017 (✗ in 2017). | ResNet erschien 2015. |
 | Money | Amount, space, currency, as in the source's currency. | "\$2.50" → 2.50 US-Dollar |
 
 Quantities, signs and orders of magnitude stay exact; do not round or convert
 units or currencies. TRANSLATING.md §4 lists results such as `92.3%` among the
-tokens to copy; for German the digits are copied and only the spacing (`92.3 %`,
-`10 000`) follows this section. `l10n check` compares digits, so the percent
-space passes and a regrouped thousand gives a warning (§10, point 2).
+tokens to copy; in German they are copied unchanged, and the only change to a
+numeral is the thousands grouping (`10,000` → `10 000`). `l10n check` accepts
+this for `de` (`check: {thousands: space}` in `languages.yml`) and warns if a
+German number keeps the English comma (`10,000`).
 
 ## 5. Gender-inclusive language
 
@@ -303,11 +324,13 @@ markup (`*`) and screen readers.
 - **People:** as in the English source, without title; this includes
   transliterated names (Markov, Kolmogorov, Chebyshev, Lyapunov). Reason:
   citations, searches and code use these forms, and one rule can be checked.
-  This departs from Duden and German Wikipedia (Markow, Kolmogorow,
-  Tschebyscheff) and from the glossary's *Markow-* entries (§8.2).
+  This departs from Duden and German Wikipedia (✗ Markow, Kolmogorow,
+  Tschebyscheff); the glossary has the same forms (Markov-Kette,
+  Markov-Entscheidungsprozess, Kolmogorov-Vorwärtsgleichung).
 - **Terms named after people:** name + hyphen + noun, the name unchanged:
   Gauß-Verteilung, Jacobi-Matrix, Hesse-Matrix, Lagrange-Funktion,
   Newton-Verfahren, Bellman-Gleichung, Taylor-Entwicklung, Lipschitz-stetig,
+  Markov-Kette, Chebyshev-Ungleichung,
   Cauchy-Schwarz-Ungleichung, Kullback-Leibler-Divergenz, Monte-Carlo-Schätzer.
   With *Satz*: Satz von Bayes (✗ Bayes' Theorem, ✗ Bayes-Theorem).
 - **Adjectives from names** (Duden D 91): lower case, no apostrophe, and only
@@ -349,7 +372,7 @@ build; copy it unchanged.
 | English | Sense → German | Not |
 |---|---|---|
 | bias | parameter $b$ → der Bias (Bias-Vektor); of an estimator → die Verzerrung, *unbiased* → erwartungstreu; fixed compounds as in the glossary (Bias-Varianz-Zerlegung, induktiver Bias); social → Voreingenommenheit | Vorurteil, Vorspannung; Verzerrung for $b$ |
-| kernel | convolution → der Faltungskern (Kerngröße); GPU or OS code → der Kernel; kernel methods, covariance → glossary (Kernfunktion; see §8.2); of a linear map → der Kern (null space → Nullraum) | Kernel for a convolution |
+| kernel | convolution → der Faltungskern (Kerngröße); kernel methods and covariance functions → der Kernel (Kernel-Funktion, Kernel-Matrix, Kernel-Trick, Kernel-Methode); GPU or OS code → der Kernel; of a linear map → der Kern (null space → Nullraum); fixed mathematical terms keep *Kern*: Kerndichteschätzer, Übergangskern | Kernel for a convolution; Kernfunktion, Kernmatrix for kernel methods |
 | return | RL → der Ertrag; of a function → Rückgabewert, zurückgeben | Rückkehr, Rendite, Return |
 | score | $\nabla \log p$ → die Score-Funktion, der Score; attention → der Attention-Score; a metric → der Wert (BLEU-Wert, F1-Wert) | Punktestand, Partitur |
 | sample | statistics → die Stichprobe (Stichprobenmittelwert, Zufallsstichprobe); a generated output → das Sample (Sample-Qualität); a data point → das Beispiel; to sample → ziehen | Probe, Muster; Stichprobe for a generated image |
@@ -364,12 +387,13 @@ build; copy it unchanged.
 | generalization | ML → die Generalisierung; of a theorem → die Verallgemeinerung; *generalized* linear model → verallgemeinertes lineares Modell | generalisiertes Modell |
 | normalization | of activations or data → Normalisierung (Batchnormalisierung); to unit norm → normieren; normal distribution → Normalverteilung; *regularization* → Regularisierung; *standardization* → Standardisierung | mixing them |
 | training, learning | train → trainieren, das Training; learn → lernen (Lernrate, überwachtes Lernen) | Ausbildung, Schulung |
-| network | → das Netz (neuronales Netz, Zielnetz); computer network → das Netzwerk | neuronales Netzwerk |
+| network | → das Netz (neuronales Netz, Zielnetz, Residualnetz); only the convolutional family → das Netzwerk (konvolutionäres neuronales Netzwerk, §3.1); computer network → das Netzwerk | neuronales Netzwerk; konvolutionäres Netz |
+| convolution, convolutional | the operation and its parts → die Faltung (Faltungsschicht, Faltungsblock, Faltungskern); the network family → konvolutionär (konvolutionäres Netzwerk, vollständig konvolutionäres Netzwerk) | Faltungsnetz; konvolutionäre Schicht; Konvolution |
 | step size, stride | die Schrittweite (optimization); der Stride (convolution) | Schrittweite for both |
 | mean, average | der Mittelwert; to average → mitteln; "on average" → im Mittel | Durchschnitt (also means intersection of sets) |
 | sequence | ML data → die Sequenz; in mathematics → die Folge (konvergente Folge) | Sequenz for $(x_n)$ |
 | continuous | function → stetig; random variable → stetig; time, relaxation → kontinuierlich | kontinuierliche Funktion |
-| map, mapping | → die Abbildung; but the build prints *Abbildung* for figures, so near a figure reference write Funktion or Zuordnung; feature map → Merkmalskarte | Karte, Mapping |
+| map, mapping | → die Abbildung; the build also prints *Abbildung* before figure references, so near one write Funktion or Zuordnung; feature map → Merkmalskarte | Karte, Mapping |
 | inference | running a trained model → die Inferenz; statistics → Inferenz (bayessche Inferenz); "the layer infers its input size" → bestimmt … automatisch | Schlussfolgerung |
 | translation | of an image or function → Verschiebung (but Translationsinvarianz); of language → Übersetzung | Übersetzungsinvarianz |
 | gradient, derivative | der Gradient (weak declension); die Ableitung, "with respect to $x$" → nach $x$ | Gefälle, Farbverlauf, Derivat |
@@ -384,29 +408,20 @@ build; copy it unchanged.
 | number | a count → die Anzahl; a number → die Zahl; an identifier → die Nummer | die Nummer der Parameter |
 | converge | konvergiert **gegen** $x^*$ | konvergiert zu |
 
-### 8.2 Where this guide disagrees with the glossary review
+### 8.2 Author rulings on terms
 
-The glossary form applies until the author rules (§10).
+Settled by the author on 2026-11-26; the glossary has these forms. Where an
+older text or a reference work differs, these apply.
 
-1. **Markov, not Markow** (Markov-Kette, Markov-Entscheidungsprozess). Reason:
-   §6, one rule for people's names; the review itself notes that ML literature
-   writes Markov. German Wikipedia's article is *Markow-Kette* and lists
-   *Markov-Kette* as a variant.
-2. **Kernel for kernel methods and covariance functions** (Kernel-Funktion,
-   Kernel-Matrix, Kernel-Trick), against the review's *Kernfunktion*,
-   *Kernmatrix*. Reason: *Kern* is already the kernel (null space) of a linear
-   map in the linear-algebra appendix, and German ML usage says Kernel-Trick,
-   Kernel-Methode. *Faltungskern* and *Kerndichteschätzer* stay.
-3. **Faltungsnetz for "convolutional network / convnet"** as the running term,
-   with *CNN* as the acronym and *Convolutional Neural Network* only in the
-   gloss. Reason: it is formed from the glossary's own Faltung, Faltungsschicht;
-   an English three-word name 300 times in German prose forces awkward
-   inflection.
-4. **Fine-Tuning with the verb *feinabstimmen*** (§3.5): the review fixes the
-   noun only. The alternative is *Feinabstimmung* / *feinabstimmen* throughout,
-   one word family.
-5. **Token plural *die Token*** follows the review; Duden also allows *die
-   Tokens*. Fixed here so that the two do not alternate.
+| Term | Ruling | Not |
+|---|---|---|
+| People's names | As in English: Markov-Kette, Markov-Entscheidungsprozess, Kolmogorov, Chebyshev (§6). | Markow-Kette, Tschebyscheff |
+| Kernel methods, covariance functions | Kernel: Kernel-Funktion, Kernel-Matrix, Kernel-Trick. Reason: *Kern* is the null space of a linear map in the linear-algebra appendix. *Faltungskern* and *Kerndichteschätzer* stay (§8.1). | Kernfunktion, Kernmatrix |
+| CNN | konvolutionäres neuronales Netzwerk, short konvolutionäres Netzwerk, CNN; the operation and its parts stay *Faltung* (§3.1). | Faltungsnetz, konvolutionäre Schicht |
+| Training stages | Nouns: Fine-Tuning, Pre-Training, Post-Training. Verbs: feinabstimmen, vortrainieren (vortrainiert); none for post-training (§3.5). | Vortraining, Feinabstimmung as the nouns; nachtrainieren |
+| Loans kept | Attention, Backpropagation, Early Stopping, Q-Learning. | Aufmerksamkeit, Fehlerrückführung, Q-Lernen |
+| German kept | Einbettung; versteckte Schicht; bestärkendes Lernen; Strategie (policy); Ertrag (return); Abfrage, Schlüssel, Wert; Form (shape); Gewichtszerfall; Lernratenplan; Präzision, Genauigkeit, Trefferquote; Sequenz (ML) and Folge (mathematics); Kodierung; Differentialgleichung. | Embedding; verborgen, verdeckt; Weight Decay; Lernraten-Schedule |
+| Token | das Token, plural die Token. Duden also allows *die Tokens*; fixed so that the two do not alternate. | der Token, die Tokens |
 
 ### 8.3 False friends
 
@@ -467,7 +482,7 @@ beschränkt; smooth → glatt; dot product → Skalarprodukt.
 
 ## 9. Sources
 
-Checked for this draft on 2026-11-26:
+Checked on 2026-11-26:
 
 - Duden online, entries Token (das oder der; des Tokens; die Token[s]), Batch
   (der oder das; des Batchs; die Batches), Prompt (der; des Prompts; die
@@ -500,70 +515,56 @@ Not checked:
 - Goodfellow, Bengio, Courville, *Deep Learning. Das umfassende Handbuch*
   (mitp, 2018): the catalogue record was found, the table of contents and text
   could not be retrieved. The loan decisions in §3 and the adjective for
-  "hidden" should be compared with it by the native reviewer.
-- German university course material: none was read for this draft.
+  "hidden" rest on the author's rulings (§10), not on this book.
+- German university course material: none was read.
 - DIN 5008 itself (space before %, spaces in z. B.): stated from the
   drafter's knowledge and from the Wikipedia summary above.
 - The existence of a Duden entry *feintunen* was seen in search results only.
+- *nachtrainieren*: a web search on 2026-11-26 found no dictionary entry and
+  no use for the post-training stage; German ML texts use the word for training
+  an existing model further (fine-tuning, retraining). §3.5 therefore gives
+  post-training no verb.
 
-## 10. For the author to confirm
+## 10. Author rulings
 
-1. **Decimal sign** (§4). Recommended: the point everywhere, because math,
-   code, output and figures cannot change. Alternative: decimal comma in prose
-   only (92,3 %), point in math and code; it needs a rule for identifiers
-   (GPT-3.5, Python 3.12) and a change to `l10n check`, which now warns when
-   `92.3` is missing. Which one?
-2. **Thousands with a space** (10 000), none in four-digit numbers? `l10n
-   check` will warn for each (`10,000` not found); should the check normalise
-   separators for `de`? And **a space before %** (92.3 %), although
-   TRANSLATING.md §4 shows `92.3%` as a token to copy? Recommended: yes to both.
-3. **Non-breaking spaces** (§2). Translators type ordinary spaces in `z. B.`,
-   `92.3 %`, `24 GiB`, `10 000`; should the German build turn them into
-   (narrow) no-break spaces, or should translators type U+00A0/U+202F?
-   Recommended: the build.
-4. ***Sie* for the reader, never *du*** (§1)? Recommended: Sie.
-5. **Exercises in the *Sie* imperative** (Zeigen Sie, dass …) rather than the
-   infinitive (Zeigen, dass …)? Recommended: Sie.
-6. **No gender signs; neutral forms where natural, grammatical gender
-   otherwise** (§5)? Recommended as written.
-7. **People's names as in English** (Markov, Kolmogorov, Chebyshev) rather
-   than Markow, Kolmogorow, Tschebyscheff (§6, §8.2)? Recommended: English
-   forms; the cost is *Chebyshev-Ungleichung* where German mathematics says
-   Tschebyscheff-Ungleichung.
-8. **Adjectives from names**: lower case without apostrophe (gaußsches
-   Rauschen, bayessche Inferenz), and name compounds preferred (Gauß-Verteilung,
-   Satz von Bayes)? Recommended as written.
-9. **Attention, not Aufmerksamkeit**; **Einbettung, not Embedding**;
-   **Backpropagation, not Fehlerrückführung**; **Early Stopping**; **Q-Lernen**
-   (glossary) or Q-Learning? Recommended: as in the glossary, except
-   Q-Learning, since it is an algorithm name.
-10. **Fine-Tuning + feinabstimmen**, or Feinabstimmung throughout (§8.2)?
-    **Vortraining/vortrainiert** rather than Pre-Training? Recommended:
-    Fine-Tuning, feinabstimmen, Vortraining.
-11. **Kernel vs. Kern** for kernel methods and covariance functions (§8.2)?
-    Recommended: Kernel there, Faltungskern for convolutions, Kern for the null
-    space.
-12. **Faltungsnetz** as the running term for CNN (§8.2)? Recommended: yes.
-13. **Genders and plurals of the loans in §3.3**, in particular: das Token /
-    die Token; der Batch; der Bias; der Stride; die Attention; das Sample; der
-    Score; der Kernel; die Ground Truth; die Beam-Search; das LSTM; die ReLU;
-    genitive of acronyms without -s (des LSTM).
-14. **Closed compounds only for the short list in §3.4** (Batchgröße,
-    Tokenfolge, Labelverteilung), hyphen for every other loan
-    (Prompt-Länge, Dropout-Rate)? Recommended as written.
-15. **Open glossary choices the review already raised** and this guide follows
-    for now: versteckt (not verborgen, verdeckt); bestärkendes Lernen;
-    Strategie for policy; Ertrag for return; Abfrage/Schlüssel/Wert; Form for
-    shape; Gewichtszerfall (or Weight Decay); Lernratenplan (or
-    Lernraten-Schedule); Präzision/Genauigkeit/Trefferquote; Sequenz (ML) vs.
-    Folge (mathematics); Kodierung with k; Differentialgleichung with t.
-16. **Math that contains English** (`$i^{\textrm{th}}$`): keep and report, or
-    should the English source change to a form that works in every language?
-17. **Reference prefixes**: does the German build print Abbildung, Tabelle,
-    Abschnitt, Kapitel before references, as §2 assumes? And *Abbildung* for
-    both "figure" and "mapping" (§8.1): acceptable, or *Bild* for figures?
-18. **Abbreviations written out in body text** (zum Beispiel, das heißt), with
-    z. B., d. h. only in parentheses, captions, slides and tables? Recommended:
-    yes.
-19. **English gloss as `(engl. …)`** once per page, only for German terms
-    whose English differs (§3.6)? Recommended: yes.
+Confirmed by the author on 2026-11-26. One line per ruling; the rule itself is
+in the section named.
+
+1. **Decimal sign:** the point everywhere, in prose as in math and code (§4).
+2. **Thousands and percent:** a space from five digits on, none in four-digit
+   numbers (10 000, 2048); `l10n check` accepts this for `de`. No space
+   before `%` (92.3%), as in TRANSLATING.md §4; the adjective is 5-prozentig
+   (§4).
+3. **No-break spaces:** the build makes them in `z. B.`, `10 000`, `24 GiB`;
+   translators type ordinary spaces (§2).
+4. **Reader:** *Sie*, never *du* (§1).
+5. **Exercises:** *Sie* imperative (§7).
+6. **Gender-inclusive language:** neutral forms where natural, grammatical
+   gender otherwise, no word-internal signs (§5).
+7. **People's names:** as in English: Markov, Kolmogorov, Chebyshev (§6).
+8. **Adjectives from names:** lower case without apostrophe (gaußsches
+   Rauschen); name compounds preferred (Gauß-Verteilung, Satz von Bayes) (§6).
+9. **Terms:** Attention, Einbettung, Backpropagation, Early Stopping,
+   Q-Learning (§3.1, §8.2).
+10. **Training stages:** the nouns are Fine-Tuning, Pre-Training and
+    Post-Training (not Vortraining). Verbs: feinabstimmen, vortrainieren /
+    vortrainiert; post-training has no verb and is phrased with the noun
+    (§3.4, §3.5).
+11. **Kernel:** Kernel for kernel methods and covariance functions
+    (Kernel-Funktion, Kernel-Matrix), Faltungskern for convolutions, Kern for
+    the null space (§8.1).
+12. **CNN:** konvolutionäres neuronales Netzwerk, heading "Konvolutionäre
+    Netzwerke" (not Faltungsnetz), with *Netzwerk*; the operation and its parts
+    stay Faltung, Faltungsschicht, Faltungsblock, Faltungskern (§3.1).
+13. **Loan genders and plurals:** as in the table of §3.3.
+14. **Compounds:** closed only for the short list of first parts, a hyphen for
+    every other loan (§3.4).
+15. **Open glossary choices:** all as the glossary has them; listed in §8.2.
+16. **Math that contains English** (`$i^{\textrm{th}}$`): stays as it is;
+    translators copy it and do not report it (§2).
+17. **Reference prefixes:** the German build prints Kapitel 3, Tabelle 2,
+    Abbildung 4, Abschnitt 5.1; translators write no prefix and no article (§2).
+18. **Abbreviations:** written out in body text; z. B., d. h. only in
+    parentheses, captions, slides and tables (§2).
+19. **English gloss:** `(engl. …)` once per page, only for German terms whose
+    English differs (§3.6).
