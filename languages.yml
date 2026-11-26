@@ -3,6 +3,14 @@
 # pinned: the English d2l-neu tag (en-YYYY.MM.DD) the language builds against;
 #         null until its first release.
 # forum:  english = link the English topics; own = the language's own category.
+# scope:  the parts (part directory) or chapters (chapter directory) of the pinned
+#         tag's _quarto.yml that are translated; `all` = the whole book. The default
+#         below applies to every language; an entry may set its own `scope:`.
+#         Out-of-scope chapters build as one placeholder page each, linking to English
+#         (DESIGN.md section 13).
+
+scope: [chapter_preface, chapter_basics, chapter_advanced,
+        chapter_mathematics-for-deep-learning, chapter_tools-for-deep-learning]
 
 languages:
   - {code: en, locale: en,      name: English,    bucket: d2l-en, hosts: [d2l.ai, en.d2l.ai], dir: ltr, pinned: null, forum: english}

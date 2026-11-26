@@ -24,6 +24,11 @@ def _need_rev(lang):
     return lang.aligned
 
 
+def _scope(lang, rev):
+    from .scope import for_language
+    return for_language(lang, rev)
+
+
 def _print_report(rep, quiet_warnings=False, limit=200):
     for e in rep.errors[:limit]:
         print('ERROR   ' + e)
@@ -44,7 +49,8 @@ def cmd_status(args):
     from .answers import file_status
     lang = _lang(args)
     rev = _need_rev(lang)
-    files = config.select_files(rev, args.files)
+    sc = _scope(lang, rev)
+    files = config.select_files(rev, args.files, sc)
     tot = {'blocks': 0, 'done': 0, 'stale': 0, 'missing': 0, 'orphan': 0, 'words': 0, 'words_done': 0}
     rows = []
     for f in files:
@@ -55,6 +61,7 @@ def cmd_status(args):
             rows.append((f, st))
     print(f'{lang.name} ({lang.code}) against {rev}'
           + (f' (bump from {lang.pinned} in progress)' if lang.pinned_next and lang.pinned else ''))
+    print(sc.summary())
     print(f'{"file":64} {"done":>6} {"stale":>6} {"miss":>6} {"orph":>5} {"words%":>7}')
     for f, st in rows:
         pct = 100 * st['words_done'] / st['words'] if st['words'] else 100.0
@@ -97,7 +104,7 @@ def emit_units(lang, rev, files, out: Path, limit=None, code='pytorch', include_
 def cmd_emit(args):
     lang = _lang(args)
     rev = _need_rev(lang)
-    files = config.select_files(rev, args.files)
+    files = config.select_files(rev, args.files, _scope(lang, rev))
     out = Path(args.out) if args.out else config.REPO / 'work' / lang.code
     written = emit_units(lang, rev, files, out, args.units, args.code, args.all)
     for p in written:
@@ -168,7 +175,8 @@ def cmd_bump(args):
     print(f'{lang.code}: aligned with {lang.aligned} (pinned stays {lang.pinned} until '
           f'`l10n check {lang.code} --promote`)')
     if not args.no_emit:
-        files = sorted({r.new_path for r in res if r.new_path})
+        sc = _scope(lang, lang.aligned)
+        files = sorted({r.new_path for r in res if r.new_path and sc.includes(r.new_path)})
         out = Path(args.out) if args.out else config.REPO / 'work' / lang.code
         written = emit_units(lang, lang.aligned, files, out)
         print(f'{len(written)} update work file(s) in {out}')
@@ -182,12 +190,30 @@ def cmd_pseudo(args):
         raise L10nError(f'{lang.code} is not a test language (test_languages in languages.yml)')
     rev = _need_rev(lang)
     n = 0
-    for f in config.select_files(rev, args.files):
+    for f in config.select_files(rev, args.files, _scope(lang, rev)):
         blocks = english_blocks(rev, f)
         entries = {b.anchor: tfile.Entry(pseudo(b.kind, b.content)) for b in blocks if b.translatable}
         tfile.save(lang.book, f, entries)
         n += 1
     print(f'{n} file(s) pseudo-translated into {lang.book}')
+
+
+def cmd_scope(args):
+    lang = _lang(args)
+    rev = _need_rev(lang)
+    sc = _scope(lang, rev)
+    print(f'{lang.name} ({lang.code}) against {rev}: {sc.summary()}')
+    if sc.full:
+        return
+    for p in sc.st.parts.values():
+        chs = [sc.st.chapters[d] for d in p.chapters]
+        state = ('translated' if p.dir in sc.in_parts and all(d in sc.in_chapters for d in p.chapters)
+                 else 'not translated' if p.dir not in sc.in_parts else 'partly translated')
+        print(f'  {p.dir:44} {state} ({len(chs)} chapter{"s" if len(chs) != 1 else ""})')
+        if state == 'partly translated':
+            for c in chs:
+                print(f'    {c.dir:42} {"translated" if c.dir in sc.in_chapters else "not translated"}')
+    print(f'{len(sc.placeholders)} placeholder page(s), {len(sc.unbuilt)} section page(s) not built')
 
 
 def cmd_build(args):
@@ -302,6 +328,8 @@ def main(argv=None):
     p = lang_cmd('pseudo', cmd_pseudo, 'pseudo-translate files (test languages): ⟦text⟧')
     p.add_argument('--files', nargs='*')
     p.add_argument('--force', action='store_true')
+
+    lang_cmd('scope', cmd_scope, 'show the translation scope (languages.yml `scope:`)')
 
     p = lang_cmd('build', cmd_build, 'build the language from a d2l-neu worktree')
     p.add_argument('--html-only', action='store_true', help='make html instead of make all-quick')

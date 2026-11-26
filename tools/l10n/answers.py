@@ -243,7 +243,11 @@ def check_language(lang, files=None, complete=False) -> Report:
             rep.errors.append(f'{p}: no such English file at {rev}')
     targets = config.select_files(rev, files) if files else [p for p in have if p in book]
     if complete:
-        targets = config.select_files(rev, files) if files else list(config.book_files(rev))
+        # a release needs every block of the files inside the translation scope
+        from .scope import for_language
+        sc = for_language(lang, rev)
+        targets = config.select_files(rev, files, sc) if files else \
+            [f for f in config.book_files(rev) if sc.includes(f)]
     g = load_glossary(lang.locale)
     for path in targets:
         blocks = english_blocks(rev, path)

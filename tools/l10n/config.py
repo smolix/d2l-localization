@@ -36,6 +36,7 @@ class Language:
     fonts: dict | None = None
     test: bool = False
     menu: bool | None = None
+    scope: object = 'all'           # `all` or a list of part/chapter directories (scope.py)
     raw: dict = field(default_factory=dict)
 
     @property
@@ -62,13 +63,17 @@ def load_languages(path: Path | None = None) -> dict:
     path = path or LANGUAGES_YML
     data = yaml.safe_load(path.read_text(encoding='utf-8')) or {}
     langs = {}
+    default_scope = data.get('scope', 'all')
     for entry, test in ([(e, False) for e in data.get('languages') or []]
                         + [(e, True) for e in data.get('test_languages') or []]):
         known = {k: entry[k] for k in entry if k in Language.__dataclass_fields__
                  and k not in ('raw', 'test')}
         lang = Language(**known, test=test, raw=dict(entry))
+        if 'scope' not in entry:
+            lang.scope = default_scope
         langs[lang.code] = lang
-    return {'languages': langs, 'old_editions': data.get('old_editions') or []}
+    return {'languages': langs, 'old_editions': data.get('old_editions') or [],
+            'scope': default_scope}
 
 
 def get_language(code: str) -> Language:
@@ -200,18 +205,28 @@ def book_files(rev: str) -> tuple:
     return tuple(order + rest)
 
 
-def select_files(rev: str, patterns) -> list:
-    """Book files at `rev` matching any of `patterns` (paths, globs, chapter dirs)."""
+def select_files(rev: str, patterns, scope=None) -> list:
+    """Book files at `rev` matching any of `patterns` (paths, globs, chapter dirs).
+
+    With a `scope` (scope.Scope), only the files it translates: a pattern
+    that matches nothing else is an error.
+    """
     import fnmatch
     files = list(book_files(rev))
+    if scope is not None:
+        files_all, files = files, [f for f in files if scope.includes(f)]
     if not patterns:
         return files
     out = []
     for pat in patterns:
         pat = pat.rstrip('/')
-        hits = [f for f in files if f == pat or fnmatch.fnmatch(f, pat)
-                or f.startswith(pat + '/') or f == pat + '.md']
+        match = lambda f: (f == pat or fnmatch.fnmatch(f, pat) or f.startswith(pat + '/')
+                           or f == pat + '.md')
+        hits = [f for f in files if match(f)]
         if not hits:
+            if scope is not None and any(match(f) for f in files_all):
+                raise L10nError(f'{pat!r} is outside the translation scope of {scope.code} '
+                                '(languages.yml `scope:`)')
             raise L10nError(f'no book file at {rev} matches {pat!r}')
         out += [h for h in hits if h not in out]
     return [f for f in files if f in out]
