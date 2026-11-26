@@ -25,7 +25,7 @@ large run.
 
 The agent needs this repository. The work files contain everything it
 translates from: the English page, the style guide, the glossary entries and
-the context. The format check (`l10n apply --dry-run`) and `l10n compare` also
+the context. The format check (`l10n apply --fresh`, a dry run against an untranslated page) and `l10n compare` also
 read the English page from a checkout of the English book (smolix/d2l-neu, at
 `$D2L_NEU`, default `/home/smola/d2l-neu`). An agent without that checkout
 skips the check, and the comparison runs it for every agent afterwards.
@@ -38,7 +38,7 @@ skips the check, and the comparison runs it for every agent afterwards.
    settings (the stored answers used medium effort). Start a fresh session, so
    that nothing else is in its context.
 3. **Let it finish.** It writes one answer file per work file. The prompt
-   allows it to run the format check (`bin/l10n apply ... --dry-run`) and fix
+   allows it to run the format check (`bin/l10n apply ... --fresh`) and fix
    errors; it must not edit anything else.
 4. **Compare:**
 

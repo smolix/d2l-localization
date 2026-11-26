@@ -129,8 +129,8 @@ def cmd_apply(args):
             bad += 1
             continue
         for ans in answers:
-            rep = apply_answer(lang, ans, args.agent, args.model, args.force, args.dry_run)
-            state = 'checked' if args.dry_run else ('applied' if rep.ok() or args.force else 'REJECTED')
+            rep = apply_answer(lang, ans, args.agent, args.model, args.force, args.dry_run, args.fresh)
+            state = 'checked' if args.dry_run or args.fresh else ('applied' if rep.ok() or args.force else 'REJECTED')
             print(f'{ans.path}#{ans.uid}: {state}')
             _print_report(rep, args.quiet)
             bad += 0 if rep.ok() else 1
@@ -310,6 +310,8 @@ def main(argv=None):
     p.add_argument('--model', help='model id, if not part of --agent')
     p.add_argument('--force', action='store_true', help='merge despite errors')
     p.add_argument('--dry-run', action='store_true', help='check only')
+    p.add_argument('--fresh', action='store_true',
+                   help='check as if the page had no translation yet (translation tests); implies --dry-run')
     p.add_argument('--quiet', action='store_true', help='hide warnings')
 
     p = lang_cmd('check', cmd_check, 'check every translated file')

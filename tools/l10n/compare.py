@@ -4,7 +4,7 @@
 
 The directory holds the work files (`*.md`, as `l10n emit` wrote them) and one
 `answers-<agent>/` directory per translator with that agent's answer files.
-Each agent's answers are checked like `l10n apply --dry-run`, and the page shows
+Each agent's answers are checked like `l10n apply --fresh` (a dry run against an untranslated page), and the page shows
 every English block beside each agent's translation, with the check counts,
 the DECISIONS and NOTES each agent recorded, and the check output. The page is
 one self-contained HTML file (Markdown and math are rendered in the browser).
@@ -50,7 +50,7 @@ def _check(lang_code, files, rev):
     buf = io.StringIO()
     with redirect_stdout(buf):
         try:
-            main(['apply', lang_code, *map(str, files), '--rev', rev, '--dry-run'])
+            main(['apply', lang_code, *map(str, files), '--rev', rev, '--fresh'])
         except SystemExit:
             pass
     out = buf.getvalue().strip()
