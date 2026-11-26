@@ -1,0 +1,1185 @@
+count	concept_id	en
+5344	model	model
+3550	training	training
+3176	gradient	gradient
+2671	label	label
+2508	mean	mean
+2350	layer	layer
+2349	matrix	matrix
+2117	token	token
+2112	state	state
+1986	probability	probability
+1898	variance	variance
+1826	value	value
+1708	weight	weight
+1501	attention	attention
+1350	policy	policy
+1291	vector	vector
+1195	gpu	GPU
+1097	entropy	entropy
+1068	norm	norm
+1060	softmax	softmax
+1058	kernel	kernel
+1038	accuracy	accuracy
+1037	critic-generative	critic
+1037	critic	critic
+959	statistical-bias	bias
+959	bias	bias
+845	regression	regression
+776	sequence	sequence
+776	key	key
+743	feature	feature
+680	rank	rank
+662	adam	Adam
+658	minibatch	minibatch
+653	prediction	prediction
+641	multilayer-perceptron	multilayer perceptron
+640	posterior	posterior
+640	likelihood	likelihood
+636	residual	residual
+634	shape	shape
+627	action	action
+620	dataset	dataset
+599	tensor	tensor
+591	reward	reward
+586	prompt	prompt
+574	optimization	optimization
+571	return	return
+565	sampling	sampling
+562	rectified-linear-unit	rectified linear unit
+562	precision	precision
+555	generator	generator
+538	stochastic-gradient-descent	stochastic gradient descent
+536	derivative	derivative
+511	recall	recall
+507	reinforcement-learning	reinforcement learning
+506	channel	channel
+498	activation	activation
+462	learning-rate	learning rate
+461	gradient-descent	gradient descent
+451	epoch	epoch
+448	query	query
+446	pixel	pixel
+443	ordinary-differential-equation	ordinary differential equation
+435	pooling	pooling
+431	jacobian	Jacobian
+424	convolution	convolution
+420	curvature	curvature
+419	scalar	scalar
+415	cross-entropy	cross-entropy
+400	prior	prior
+398	encoder	encoder
+396	initialization	initialization
+395	projection	projection
+369	trajectory	trajectory
+355	forward-pass	forward pass
+352	embedding	embedding
+351	recurrent-neural-network	recurrent neural network
+351	expectation	expectation
+349	mask	mask
+345	logit	logit
+336	episode	episode
+335	standard-deviation	standard deviation
+332	momentum	momentum
+332	convergence	convergence
+326	stride	stride
+321	actor	actor
+319	convolutional-neural-network	convolutional neural network
+318	step-size	step size
+314	batch-size	batch size
+305	classification	classification
+300	padding	padding
+298	transformer	transformer
+298	adamw	AdamW
+296	generalization	generalization
+295	bottleneck	bottleneck
+294	decoder	decoder
+292	hessian	Hessian
+288	orthogonal	orthogonal
+274	environment	environment
+274	covariance	covariance
+273	singular-value-decomposition	singular value decomposition
+270	minimizer	minimizer
+264	agent	agent
+262	median	median
+259	stochastic-differential-equation	stochastic differential equation
+256	trace	trace
+251	vocabulary	vocabulary
+250	backward-pass	backward pass
+246	correlation	correlation
+245	eigenvalue	eigenvalue
+237	dropout	dropout
+235	perplexity	perplexity
+235	corpus	corpus
+234	drift	drift
+232	convexity	convexity
+218	decode	decode
+215	weight-decay	weight decay
+213	language-model	language model
+212	warmup	warmup
+212	squared-error	squared error
+212	sigmoid	sigmoid
+211	constraint	constraint
+208	bootstrap	bootstrap
+199	markov-decision-process	Markov decision process
+196	throughput	throughput
+196	retrieval	retrieval
+193	span	span
+191	filter	filter
+188	duality	duality
+185	checkpointing	checkpointing
+183	chain-rule	chain rule
+182	proximal-policy-optimization	proximal policy optimization
+182	gaussian-process	Gaussian process
+179	denoising	denoising
+177	muon	Muon
+172	backpropagation	backpropagation
+171	margin	margin
+170	soft-actor-critic	soft actor-critic
+170	neural-network	neural network
+169	validation-loss	validation loss
+166	ranking	ranking
+164	deep-q-network	deep Q-network
+159	slice	slice
+159	determinant	determinant
+158	log-likelihood	log-likelihood
+157	least-squares	least squares
+155	mamba	Mamba
+151	rmsnorm	RMSNorm
+151	monte-carlo	Monte Carlo
+149	mixture-of-experts	mixture of experts
+149	latency	latency
+141	mutual-information	mutual information
+139	gated-recurrent-unit	gated recurrent unit
+136	pretraining	pretraining
+135	parallelism	parallelism
+135	calibration	calibration
+131	hypothesis	hypothesis
+129	fine-tuning	fine-tuning
+126	test-set	test set
+125	ddim	DDIM
+124	posterior-mean	posterior mean
+124	observation	observation
+123	training-loss	training loss
+123	standard-error	standard error
+123	hyperparameter	hyperparameter
+123	discriminator	discriminator
+123	bert	BERT
+121	prefill	prefill
+118	exploration	exploration
+117	independence	independence
+117	coefficient	coefficient
+116	regret	regret
+113	q-learning	Q-learning
+110	softmax-regression	softmax regression
+110	cross-entropy-loss	cross-entropy loss
+109	regularization	regularization
+109	condition-number	condition number
+108	training-set	training set
+107	kv-cache	KV cache
+107	gelu	GELU
+107	automatic-differentiation	automatic differentiation
+107	alignment	alignment
+106	self-attention	self-attention
+105	parameter-count	parameter count
+105	infonce	InfoNCE
+104	eigenvector	eigenvector
+103	feature-map	feature map
+101	long-short-term-memory	long short-term memory
+100	batch-normalization	batch normalization
+96	probability-flow-ode	probability-flow ODE
+96	gaussian-noise	Gaussian noise
+95	roofline	roofline
+95	maximum-likelihood	maximum likelihood
+94	ddpm	DDPM
+93	singular-value	singular value
+93	overfitting	overfitting
+92	lagrangian	Lagrangian
+90	log-sum-exp	log-sum-exp
+88	convolutional-layer	convolutional layer
+88	autoencoder	autoencoder
+87	receptive-field	receptive field
+86	surprisal	surprisal
+85	subspace	subspace
+83	smoothness	smoothness
+83	shrinkage	shrinkage
+83	linear-regression	linear regression
+82	flow-matching	flow matching
+81	residual-stream	residual stream
+78	value-iteration	value iteration
+78	sharpness	sharpness
+78	noise-level	noise level
+77	random-variable	random variable
+77	negative-log-likelihood	negative log-likelihood
+77	hidden-layer	hidden layer
+77	fixed-point	fixed point
+77	downsampling	downsampling
+76	overflow	overflow
+75	batching	batching
+74	state-space	state space
+74	sample-mean	sample mean
+74	reward-to-go	reward-to-go
+73	grouped-query-attention	grouped-query attention
+73	bounding-box	bounding box
+72	score-matching	score matching
+72	reflow	Reflow
+72	linear-attention	linear attention
+71	random-search	random search
+71	cross-attention	cross-attention
+70	test-error	test error
+70	newton-s-method	Newton's method
+70	log-snr	log-SNR
+69	noise-ball	noise ball
+69	average-pooling	average pooling
+68	density-ratio	density ratio
+67	underflow	underflow
+67	he-initialization	He initialization
+67	generalized-advantage-estimation	generalized advantage estimation
+66	data-distribution	data distribution
+65	off-policy	off-policy
+65	discretization	discretization
+65	adagrad	AdaGrad
+64	squared-loss	squared loss
+63	jensen-s-inequality	Jensen's inequality
+62	training-error	training error
+62	preconditioning	preconditioning
+62	dot-product	dot product
+61	softplus	softplus
+61	logistic-regression	logistic regression
+61	data-parallelism	data parallelism
+61	broadcasting	broadcasting
+60	tokenization	tokenization
+60	optimal-policy	optimal policy
+60	forward-mode	forward mode
+60	denoiser	denoiser
+59	spectral-norm	spectral norm
+59	object-detection	object detection
+59	loss-function	loss function
+59	inner-product	inner product
+59	gradient-clipping	gradient clipping
+58	total-variation	total variation
+58	subgradient	subgradient
+58	convex-function	convex function
+58	activation-memory	activation memory
+57	transpose	transpose
+57	quantization	quantization
+57	output-projection	output projection
+57	optimizer-state	optimizer state
+57	hidden-state	hidden state
+57	gradient-norm	gradient norm
+57	cosine-decay	cosine decay
+56	router	router
+56	reverse-mode	reverse mode
+54	image-augmentation	image augmentation
+54	fidelity	fidelity
+54	descent-lemma	descent lemma
+54	activation-checkpointing	activation checkpointing
+53	residual-block	residual block
+53	matrix-multiplication	matrix multiplication
+52	stochastic-gradient	stochastic gradient
+52	continuous-time	continuous-time
+52	behavior-cloning	behavior cloning
+52	anchor-box	anchor box
+51	local-minimum	local minimum
+51	greedy-policy	greedy policy
+51	diffusion-model	diffusion model
+50	validation-set	validation set
+50	mean-squared-error	mean squared error
+50	markov-chain	Markov chain
+50	logistic-loss	logistic loss
+49	linear-transformation	linear transformation
+49	cross-validation	cross-validation
+49	arithmetic-intensity	arithmetic intensity
+48	sequence-length	sequence length
+48	reproducibility	reproducibility
+48	memory-bandwidth	memory bandwidth
+48	joint-distribution	joint distribution
+48	covariance-matrix	covariance matrix
+48	brownian-motion	Brownian motion
+47	validation-error	validation error
+47	normal-equations	normal equations
+47	cross-correlation	cross-correlation
+46	positive-definite	positive definite
+46	on-policy	on-policy
+46	intercept	intercept
+46	global-average-pooling	global average pooling
+45	variance-preserving	variance-preserving
+45	mixed-precision	mixed precision
+45	layer-normalization	layer normalization
+45	dilation	dilation
+45	compute-bound	compute-bound
+45	causal-mask	causal mask
+44	symmetric-matrix	symmetric matrix
+44	nonlinearity	nonlinearity
+44	loss-scaling	loss scaling
+44	gradient-noise	gradient noise
+44	flow-map	flow map
+44	embedding-table	embedding table
+44	eigendecomposition	eigendecomposition
+43	noise-variance	noise variance
+43	marginal-velocity	marginal velocity
+43	linear-algebra	linear algebra
+42	unit-vector	unit vector
+42	union-bound	union bound
+42	optimal-transport	optimal transport
+42	distribution-shift	distribution shift
+41	stationary-point	stationary point
+41	sparsity	sparsity
+41	floating-point	floating point
+41	fisher-information	Fisher information
+41	column-space	column space
+40	spectral-radius	spectral radius
+40	exponential-family	exponential family
+40	continuity-equation	continuity equation
+39	preconditioner	preconditioner
+39	linear-system	linear system
+39	global-minimum	global minimum
+39	gaussian-distribution	Gaussian distribution
+38	synchronization	synchronization
+38	rounding-error	rounding error
+38	quantile	quantile
+38	null-space	null space
+38	hidden-unit	hidden unit
+38	greedy-decoding	greedy decoding
+37	transposed-convolution	transposed convolution
+37	successive-halving	successive halving
+37	semantic-segmentation	semantic segmentation
+37	second-derivative	second derivative
+37	power-iteration	power iteration
+37	policy-gradient	policy gradient
+37	change-of-variables	change of variables
+36	target-network	target network
+36	log-density	log density
+36	critical-point	critical point
+36	alibi	ALiBi
+35	uniform-distribution	uniform distribution
+35	uniform-convergence	uniform convergence
+35	saddle-point	saddle point
+35	rmsprop	RMSProp
+35	normalizing-constant	normalizing constant
+35	label-smoothing	label smoothing
+35	gradient-accumulation	gradient accumulation
+35	early-stopping	early stopping
+34	pseudoinverse	pseudoinverse
+34	lasso	Lasso
+34	ill-conditioned	ill-conditioned
+34	all-gather	all-gather
+33	skip-gram	skip-gram
+33	principal-component-analysis	principal component analysis
+33	pooling-layer	pooling layer
+33	image-classification	image classification
+33	convex-set	convex set
+33	concatenation	concatenation
+32	vector-field	vector field
+32	score-function	score function
+32	label-shift	label shift
+32	input-dependent	input-dependent
+32	hinge-loss	hinge loss
+32	fully-connected-layer	fully connected layer
+32	effective-sample-size	effective sample size
+32	bleu	BLEU
+31	strong-duality	strong duality
+31	second-moment	second moment
+31	output-channel	output channel
+31	hyperparameter-optimization	hyperparameter optimization
+31	frobenius-norm	Frobenius norm
+31	covariate-shift	covariate shift
+31	conditional-distribution	conditional distribution
+31	causal-attention	causal attention
+30	variational-autoencoder	variational autoencoder
+30	supervised-learning	supervised learning
+30	strong-convexity	strong convexity
+30	quadratic-form	quadratic form
+30	policy-iteration	policy iteration
+29	vc-dimension	VC dimension
+29	training-example	training example
+29	subword	subword
+29	reduce-scatter	reduce-scatter
+29	langevin-dynamics	Langevin dynamics
+29	integration-by-parts	integration by parts
+29	beam-search	beam search
+28	taylor-expansion	Taylor expansion
+28	outlier	outlier
+28	numerical-stability	numerical stability
+28	noise-prediction	noise prediction
+28	information-theory	information theory
+28	implicit-bias	implicit bias
+28	gradient-flow	gradient flow
+28	forward-process	forward process
+28	f-divergence	f-divergence
+28	expected-reward	expected reward
+28	code-length	code length
+27	recurrent-state	recurrent state
+27	probability-density	probability density
+27	minibatch-gradient	minibatch gradient
+27	marginal-likelihood	marginal likelihood
+27	long-context	long-context
+27	inductive-bias	inductive bias
+27	importance-sampling	importance sampling
+27	empirical-risk	empirical risk
+27	decoupled-weight-decay	decoupled weight decay
+27	conditional-entropy	conditional entropy
+27	central-limit-theorem	central limit theorem
+27	bayes-theorem	Bayes' theorem
+27	arithmetic-coding	arithmetic coding
+26	upsampling	upsampling
+26	transition-kernel	transition kernel
+26	style-transfer	style transfer
+26	spatial-resolution	spatial resolution
+26	probability-distribution	probability distribution
+26	positive-semidefinite	positive semidefinite
+26	law-of-large-numbers	law of large numbers
+26	latent-diffusion	latent diffusion
+26	kernel-size	kernel size
+26	ground-truth-bounding-box	ground-truth bounding box
+26	gram-matrix	Gram matrix
+26	exponential-moving-average	exponential moving average
+26	euclidean-distance	Euclidean distance
+26	dynamic-programming	dynamic programming
+26	context-length	context length
+26	bias-correction	bias correction
+25	variational-inference	variational inference
+25	vanishing-gradient	vanishing gradient
+25	trust-region	trust region
+25	truncation-error	truncation error
+25	translation-equivariance	translation equivariance
+25	transformer-block	transformer block
+25	terminal-state	terminal state
+25	region-proposal	region proposal
+25	premise	premise
+25	policy-evaluation	policy evaluation
+25	parameter-update	parameter update
+25	multi-head-attention	multi-head attention
+25	maximizer	maximizer
+25	heavy-ball-momentum	heavy-ball momentum
+25	ground-truth	ground truth
+25	critic-loss	critic loss
+25	confusion-matrix	confusion matrix
+25	behavior-policy	behavior policy
+24	value-function	value function
+24	synthetic-data	synthetic data
+24	orthonormal-basis	orthonormal basis
+24	newton-step	Newton step
+24	multi-query-attention	multi-query attention
+24	in-context-learning	in-context learning
+24	generative-model	generative model
+24	feasible-point	feasible point
+24	euclidean-norm	Euclidean norm
+24	conditional-velocity	conditional velocity
+24	computer-vision	computer vision
+24	complementary-slackness	complementary slackness
+23	variance-reduction	variance reduction
+23	subsampling	subsampling
+23	stochastic-depth	stochastic depth
+23	ridge-regression	ridge regression
+23	random-walk	random walk
+23	quasi-newton	quasi-Newton
+23	multivariate-gaussian	multivariate Gaussian
+23	model-selection	model selection
+23	mean-value-theorem	mean value theorem
+23	matrix-factorization	matrix factorization
+23	information-bottleneck	information bottleneck
+23	gaussian-prior	Gaussian prior
+23	feedforward-network	feedforward network
+23	data-augmentation	data augmentation
+23	convex-conjugate	convex conjugate
+23	computational-graph	computational graph
+23	classifier-free-guidance	classifier-free guidance
+23	bootstrapping	bootstrapping
+22	time-step	time step
+22	stop-gradient	stop-gradient
+22	soft-thresholding	soft-thresholding
+22	random-vector	random vector
+22	pairwise-ranking	pairwise ranking
+22	objective-function	objective function
+22	minibatch-noise	minibatch noise
+22	independent-samples	independent samples
+22	entropy-rate	entropy rate
+22	denoising-score-matching	denoising score matching
+22	covariance-function	covariance function
+22	cosine-similarity	cosine similarity
+22	causality	causality
+22	binary-cross-entropy	binary cross-entropy
+21	unbiased-estimator	unbiased estimator
+21	total-derivative	total derivative
+21	signal-to-noise-ratio	signal-to-noise ratio
+21	region-of-interest	region of interest
+21	recommendation	recommendation
+21	leaky-relu	leaky ReLU
+21	exponential-decay	exponential decay
+21	convergence-rate	convergence rate
+21	configuration-space	configuration space
+20	word2vec	word2vec
+20	sampling-distribution	sampling distribution
+20	one-hot-encoding	one-hot encoding
+20	non-maximum-suppression	non-maximum suppression
+20	dual-function	dual function
+20	decision-boundary	decision boundary
+20	contradiction	contradiction
+20	confidence-interval	confidence interval
+20	compute-optimal	compute-optimal
+19	underfitting	underfitting
+19	subdifferential	subdifferential
+19	sequence-to-sequence	sequence-to-sequence
+19	posterior-predictive	posterior predictive
+19	ov-circuit	OV circuit
+19	markov-property	Markov property
+19	linear-recurrence	linear recurrence
+19	ill-conditioning	ill-conditioning
+19	gaussian-path	Gaussian path
+19	function-approximation	function approximation
+19	exploding-gradient	exploding gradient
+19	data-loader	data loader
+19	conditional-expectation	conditional expectation
+19	backpropagation-through-time	backpropagation through time
+19	average-velocity	average velocity
+18	xavier-initialization	Xavier initialization
+18	simple-loss	simple loss
+18	posterior-probability	posterior probability
+18	loss-landscape	loss landscape
+18	local-maximum	local maximum
+18	line-search	line search
+18	gradient-variance	gradient variance
+18	full-gradient	full gradient
+18	conditional-variance	conditional variance
+18	classification-loss	classification loss
+17	weak-duality	weak duality
+17	softmax-attention	softmax attention
+17	shampoo	Shampoo
+17	random-initialization	random initialization
+17	projected-gradient-descent	projected gradient descent
+17	probability-simplex	probability simplex
+17	orthogonal-projection	orthogonal projection
+17	negative-sampling	negative sampling
+17	multi-scale	multi-scale
+17	maximum-entropy	maximum entropy
+17	input-channel	input channel
+17	eager-execution	eager execution
+17	directional-derivative	directional derivative
+17	diagonal-matrix	diagonal matrix
+17	descent-direction	descent direction
+17	depthwise-convolution	depthwise convolution
+17	closed-form-solution	closed-form solution
+17	autocorrelation	autocorrelation
+17	activation-function	activation function
+16	transfer-learning	transfer learning
+16	training-recipe	training recipe
+16	tensor-parallelism	tensor parallelism
+16	teacher-forcing	teacher forcing
+16	stationary-distribution	stationary distribution
+16	outer-product	outer product
+16	orthogonal-matrix	orthogonal matrix
+16	neuron	neuron
+16	mode-dropping	mode dropping
+16	missingness	missingness
+16	latent-space	latent space
+16	lagrange-multiplier	Lagrange multiplier
+16	joint-probability	joint probability
+16	fundamental-theorem-of-calculus	fundamental theorem of calculus
+16	feasible-region	feasible region
+16	double-descent	double descent
+16	bilinear-interpolation	bilinear interpolation
+16	autoregressive-decoding	autoregressive decoding
+15	weight-initialization	weight initialization
+15	state-action-pair	state-action pair
+15	selection-bias	selection bias
+15	sampling-error	sampling error
+15	representation-learning	representation learning
+15	regression-target	regression target
+15	prefix-code	prefix code
+15	predictive-distribution	predictive distribution
+15	partition-function	partition function
+15	observation-noise	observation noise
+15	length-scale	length scale
+15	held-out-data	held-out data
+15	generalization-gap	generalization gap
+15	fully-convolutional-network	fully convolutional network
+15	feature-vector	feature vector
+15	evidence-lower-bound	evidence lower bound
+15	duality-gap	duality gap
+15	dot-product-attention	dot-product attention
+15	compute-budget	compute budget
+15	class-label	class label
+15	autoregressive-generation	autoregressive generation
+15	attention-weight	attention weight
+14	triangle-inequality	triangle inequality
+14	tokens-per-second	tokens per second
+14	shannon-entropy	Shannon entropy
+14	sample-variance	sample variance
+14	reward-model	reward model
+14	proximal-operator	proximal operator
+14	probabilistic-model	probabilistic model
+14	posterior-variance	posterior variance
+14	parallel-scan	parallel scan
+14	output-gate	output gate
+14	modelability	modelability
+14	model-complexity	model complexity
+14	matrix-exponential	matrix exponential
+14	lipschitz-constant	Lipschitz constant
+14	hit-rate	hit rate
+14	gradient-penalty	gradient penalty
+14	exponential-distribution	exponential distribution
+14	convex-optimization	convex optimization
+14	conditional-probability	conditional probability
+14	bayes-risk	Bayes risk
+14	autoregressive-model	autoregressive model
+13	weight-sharing	weight sharing
+13	wasserstein-distance	Wasserstein distance
+13	training-tokens	training tokens
+13	total-variance	total variance
+13	sufficient-statistic	sufficient statistic
+13	spectral-normalization	spectral normalization
+13	reverse-time-sde	reverse-time SDE
+13	rejection-sampling	rejection sampling
+13	reconstruction-error	reconstruction error
+13	qk-circuit	QK circuit
+13	partial-derivative	partial derivative
+13	padding-mask	padding mask
+13	neural-ode	Neural ODE
+13	nesterov-momentum	Nesterov momentum
+13	natural-parameter	natural parameter
+13	ito-integral	Itô integral
+13	induction-head	induction head
+13	global-pooling	global pooling
+13	finite-difference	finite difference
+13	effective-horizon	effective horizon
+13	double-precision	double precision
+13	coordinate-descent	coordinate descent
+13	constrained-optimization	constrained optimization
+13	bellman-operator	Bellman operator
+13	aliasing	aliasing
+13	adaln-zero	adaLN-Zero
+12	zero-padding	zero padding
+12	update-gate	update gate
+12	training-compute	training compute
+12	scaling-law	scaling law
+12	residual-network	residual network
+12	n-gram	n-gram
+12	memory-hierarchy	memory hierarchy
+12	maximum-mean-discrepancy	maximum mean discrepancy
+12	machine-translation	machine translation
+12	latent-variable	latent variable
+12	inverted-dropout	inverted dropout
+12	dynamic-range	dynamic range
+12	description-length	description length
+12	conditional-flow-matching	conditional flow matching
+12	attention-score	attention score
+12	attention-head	attention head
+11	universal-approximation	universal approximation
+11	style-loss	style loss
+11	root-mean-square	root mean square
+11	robustness	robustness
+11	regularized-objective	regularized objective
+11	model-capacity	model capacity
+11	memory-footprint	memory footprint
+11	mean-function	mean function
+11	marginal-distribution	marginal distribution
+11	guidance-scale	guidance scale
+11	first-order-condition	first-order condition
+11	experience-replay	experience replay
+11	expected-calibration-error	expected calibration error
+11	empirical-distribution	empirical distribution
+11	dual-problem	dual problem
+11	cumulative-distribution-function	cumulative distribution function
+11	context-window	context window
+11	conjugate-prior	conjugate prior
+11	attention-sink	attention sink
+11	ancestral-sampling	ancestral sampling
+11	active-parameters	active parameters
+10	vision-transformer	vision transformer
+10	time-to-first-token	time to first token
+10	statistical-learning	statistical learning
+10	single-precision	single precision
+10	sequence-modeling	sequence modeling
+10	riemann-sum	Riemann sum
+10	reset-gate	reset gate
+10	privacy	privacy
+10	principal-component	principal component
+10	posterior-mode	posterior mode
+10	normalization-layer	normalization layer
+10	momentum-buffer	momentum buffer
+10	model-width	model width
+10	low-rank-approximation	low-rank approximation
+10	likelihood-ratio	likelihood ratio
+10	interpolation-threshold	interpolation threshold
+10	implicit-feedback	implicit feedback
+10	image-resolution	image resolution
+10	image-generation	image generation
+10	identifiability	identifiability
+10	hypothesis-class	hypothesis class
+10	hadamard-product	Hadamard product
+10	grid-search	grid search
+10	global-error	global error
+10	epistemic-uncertainty	epistemic uncertainty
+10	embedding-matrix	embedding matrix
+10	deep-reinforcement-learning	deep reinforcement learning
+10	cholesky-factor	Cholesky factor
+10	binary-classification	binary classification
+10	adversarial-training	adversarial training
+9	text-generation	text generation
+9	soft-maximum	soft maximum
+9	skip-connection	skip connection
+9	single-shot-multibox-detection	single shot multibox detection
+9	sample-quality	sample quality
+9	reward-hacking	reward hacking
+9	random-seed	random seed
+9	positive-definite-matrix	positive definite matrix
+9	policy-improvement	policy improvement
+9	normalizing-flow	normalizing flow
+9	next-token-prediction	next-token prediction
+9	mode-collapse	mode collapse
+9	minimax-game	minimax game
+9	mean-absolute-error	mean absolute error
+9	length-normalization	length normalization
+9	launch-overhead	launch overhead
+9	kernel-launch	kernel launch
+9	jacobian-determinant	Jacobian determinant
+9	induction-circuit	induction circuit
+9	huber-loss	Huber loss
+9	forget-gate	forget gate
+9	definite-integral	definite integral
+9	convex-combination	convex combination
+9	contrastive-loss	contrastive loss
+9	conditional-independence	conditional independence
+9	color-jitter	color jitter
+9	collaborative-filtering	collaborative filtering
+9	classifier-guidance	classifier guidance
+9	channel-capacity	channel capacity
+9	bayesian-optimization	Bayesian optimization
+9	all-reduce	all-reduce
+8	weight-tying	weight tying
+8	variance-exploding	variance-exploding
+8	type-i-error	type I error
+8	translation-invariance	translation invariance
+8	total-variation-distance	total variation distance
+8	terminal-reward	terminal reward
+8	strict-convexity	strict convexity
+8	residual-connection	residual connection
+8	region-proposal-network	region proposal network
+8	rate-distortion	rate-distortion
+8	proximal-gradient	proximal gradient
+8	prior-term	prior term
+8	population-risk	population risk
+8	policy-gradient-theorem	policy gradient theorem
+8	poisson-distribution	Poisson distribution
+8	offline-reinforcement-learning	offline reinforcement learning
+8	objective-value	objective value
+8	maximum-a-posteriori	maximum a posteriori
+8	masked-language-modeling	masked language modeling
+8	intersection-over-union	intersection over union
+8	instance-segmentation	instance segmentation
+8	identically-distributed	identically distributed
+8	global-maximum	global maximum
+8	generalization-error	generalization error
+8	forward-posterior	forward posterior
+8	false-negative	false negative
+8	discount-factor	discount factor
+8	control-variate	control variate
+8	content-loss	content loss
+8	consistency-training	consistency training
+8	causal-masking	causal masking
+8	categorical-distribution	categorical distribution
+8	byte-pair-encoding	byte pair encoding
+8	attention-pooling	attention pooling
+8	adjoint-method	adjoint method
+7	training-distribution	training distribution
+7	temporal-difference-error	temporal-difference error
+7	shared-expert	shared expert
+7	scaled-dot-product-attention	scaled dot-product attention
+7	risk-minimization	risk minimization
+7	reverse-process	reverse process
+7	pooling-window	pooling window
+7	out-of-vocabulary	out-of-vocabulary
+7	noise-schedule	noise schedule
+7	linear-independence	linear independence
+7	latent-code	latent code
+7	ito-calculus	Itô calculus
+7	importance-weight	importance weight
+7	image-classifier	image classifier
+7	identity-matrix	identity matrix
+7	first-order-optimality	first-order optimality
+7	euler-maruyama	Euler-Maruyama
+7	estimator-variance	estimator variance
+7	energy-based-model	energy-based model
+7	end-of-sequence-token	end-of-sequence token
+7	detailed-balance	detailed balance
+7	convolutional-block	convolutional block
+7	convex-objective	convex objective
+7	contrastive-learning	contrastive learning
+7	conjugacy	conjugacy
+7	cold-start	cold start
+7	co-occurrence	co-occurrence
+7	boundary-condition	boundary condition
+7	bernoulli-distribution	Bernoulli distribution
+7	basis-vector	basis vector
+7	asymptotic-normality	asymptotic normality
+7	adaptive-layer-norm	adaptive layer norm
+6	training-dynamics	training dynamics
+6	sufficient-condition	sufficient condition
+6	strided-convolution	strided convolution
+6	source-coding	source coding
+6	singular-matrix	singular matrix
+6	score-network	score network
+6	rating-prediction	rating prediction
+6	rating-matrix	rating matrix
+6	random-number-generator	random number generator
+6	quadratic-function	quadratic function
+6	probability-flow	probability flow
+6	pipeline-parallelism	pipeline parallelism
+6	pairwise-loss	pairwise loss
+6	out-of-distribution	out-of-distribution
+6	minimum-description-length	minimum description length
+6	maximum-likelihood-estimation	maximum likelihood estimation
+6	marginal-probability	marginal probability
+6	lossless-compression	lossless compression
+6	knowledge-distillation	knowledge distillation
+6	joint-entropy	joint entropy
+6	independent-and-identically-distributed	independent and identically distributed
+6	implicit-differentiation	implicit differentiation
+6	image-segmentation	image segmentation
+6	hypothesis-testing	hypothesis testing
+6	grouped-convolution	grouped convolution
+6	frechet-inception-distance	Fréchet Inception Distance
+6	floating-point-precision	floating-point precision
+6	first-moment	first moment
+6	false-positive	false positive
+6	exposure-bias	exposure bias
+6	exploration-rate	exploration rate
+6	expert-parallelism	expert parallelism
+6	empirical-risk-minimization	empirical risk minimization
+6	consistency-distillation	consistency distillation
+6	class-imbalance	class imbalance
+6	center-word	center word
+6	capacity-factor	capacity factor
+6	bottleneck-block	bottleneck block
+6	beam-width	beam width
+6	bayesian-inference	Bayesian inference
+6	backtracking-line-search	backtracking line search
+6	annealed-langevin-dynamics	annealed Langevin dynamics
+6	adaptive-overfitting	adaptive overfitting
+5	user-embedding	user embedding
+5	truncated-backpropagation-through-time	truncated backpropagation through time
+5	transition-model	transition model
+5	stochastic-process	stochastic process
+5	statistical-power	statistical power
+5	stability-region	stability region
+5	sparse-attention	sparse attention
+5	softmax-normalization	softmax normalization
+5	shadow-price	shadow price
+5	sample-diversity	sample diversity
+5	right-singular-vector	right singular vector
+5	reverse-transition	reverse transition
+5	relative-entropy	relative entropy
+5	reconstruction-term	reconstruction term
+5	random-resized-crop	random resized crop
+5	primal-problem	primal problem
+5	positive-class	positive class
+5	point-estimate	point estimate
+5	null-hypothesis	null hypothesis
+5	nearest-neighbor	nearest neighbor
+5	natural-gradient	natural gradient
+5	monte-carlo-estimate	Monte Carlo estimate
+5	maximum-likelihood-estimator	maximum likelihood estimator
+5	lipschitz-gradient	Lipschitz gradient
+5	large-language-model	large language model
+5	kernel-matrix	kernel matrix
+5	kernel-function	kernel function
+5	input-pipeline	input pipeline
+5	input-gate	input gate
+5	inference-cost	inference cost
+5	head-dimension	head dimension
+5	gaussian-process-regression	Gaussian process regression
+5	floating-point-format	floating-point format
+5	credible-interval	credible interval
+5	context-word	context word
+5	conjugate-gradient	conjugate gradient
+5	conditional-model	conditional model
+5	conditional-generation	conditional generation
+5	class-probability	class probability
+5	bayesian-personalized-ranking	Bayesian personalized ranking
+5	area-under-the-curve	area under the curve
+5	aleatoric-uncertainty	aleatoric uncertainty
+5	affine-transformation	affine transformation
+5	advantage-estimate	advantage estimate
+5	absolute-position	absolute position
+4	type-ii-error	type II error
+4	true-negative	true negative
+4	transformer-encoder	transformer encoder
+4	training-throughput	training throughput
+4	target-policy	target policy
+4	super-resolution	super-resolution
+4	subword-tokenization	subword tokenization
+4	random-sample	random sample
+4	random-crop	random crop
+4	posterior-inference	posterior inference
+4	positive-pair	positive pair
+4	planning-horizon	planning horizon
+4	pixel-space	pixel-space
+4	perceptual-compression	perceptual compression
+4	ode-solver	ODE solver
+4	network-in-network	network in network
+4	multi-armed-bandit	multi-armed bandit
+4	minibatch-gradient-descent	minibatch gradient descent
+4	memory-bound	memory-bound
+4	masked-token	masked token
+4	markov-chain-monte-carlo	Markov chain Monte Carlo
+4	long-tail	long tail
+4	least-squares-regression	least-squares regression
+4	kronecker-product	Kronecker product
+4	kraft-inequality	Kraft inequality
+4	invertible-matrix	invertible matrix
+4	interaction-matrix	interaction matrix
+4	identity-shortcut	identity shortcut
+4	hyperparameter-configuration	hyperparameter configuration
+4	hyperbolic-tangent	hyperbolic tangent
+4	hyperband	Hyperband
+4	hessian-eigenvalue	Hessian eigenvalue
+4	half-precision	half precision
+4	greedy-search	greedy search
+4	graph-compilation	graph compilation
+4	gaussian-posterior	Gaussian posterior
+4	gamma-function	gamma function
+4	fourier-transform	Fourier transform
+4	fisher-information-matrix	Fisher information matrix
+4	explicit-feedback	explicit feedback
+4	diffusion-transformer	diffusion transformer
+4	contextual-bandit	contextual bandit
+4	conditional-mutual-information	conditional mutual information
+4	brevity-penalty	brevity penalty
+4	boltzmann-distribution	Boltzmann distribution
+4	bidirectional-context	bidirectional context
+3	word-frequency	word frequency
+3	wasserstein-gan	Wasserstein GAN
+3	velocity-prediction	velocity prediction
+3	upper-confidence-bound	upper confidence bound
+3	trust-region-method	trust-region method
+3	total-expectation	total expectation
+3	test-distribution	test distribution
+3	subgradient-method	subgradient method
+3	statistical-significance	statistical significance
+3	softmax-temperature	softmax temperature
+3	sequence-transduction	sequence transduction
+3	search-space	search space
+3	reference-velocity	reference velocity
+3	recommender-system	recommender system
+3	random-horizontal-flip	random horizontal flip
+3	question-answering	question answering
+3	probability-mass-function	probability mass function
+3	prior-probability	prior probability
+3	positional-encoding	positional encoding
+3	patch-embedding	patch embedding
+3	p-value	p-value
+3	nuclear-norm	nuclear norm
+3	noise-coefficient	noise coefficient
+3	neural-collaborative-filtering	neural collaborative filtering
+3	multi-label-classification	multi-label classification
+3	mixture-of-gaussians	mixture of Gaussians
+3	mixture-model	mixture model
+3	max-pooling	max pooling
+3	masked-language-model	masked language model
+3	log-marginal-likelihood	log marginal likelihood
+3	linear-predictor	linear predictor
+3	information-content	information content
+3	generalized-linear-model	generalized linear model
+3	gaussian-process-prior	Gaussian process prior
+3	free-energy	free energy
+3	feature-extraction	feature extraction
+3	encoder-decoder	encoder-decoder
+3	embedding-layer	embedding layer
+3	discriminative-model	discriminative model
+3	convergence-guarantee	convergence guarantee
+3	continuous-normalizing-flow	continuous normalizing flow
+3	consistency-model	consistency model
+3	computational-complexity	computational complexity
+3	clean-sample	clean sample
+3	class-conditioning	class conditioning
+3	channel-coding	channel coding
+3	asynchronous-scheduling	asynchronous scheduling
+3	additive-attention	additive attention
+2	validation-metric	validation metric
+2	unknown-token	unknown token
+2	top-k-routing	top-k routing
+2	text-classification	text classification
+2	test-statistic	test statistic
+2	sequence-generation	sequence generation
+2	self-supervised-learning	self-supervised learning
+2	second-order-condition	second-order condition
+2	root-mean-squared-error	root mean squared error
+2	regularization-strength	regularization strength
+2	ranking-loss	ranking loss
+2	query-head	query head
+2	predictive-variance	predictive variance
+2	position-interpolation	position interpolation
+2	pointwise-convolution	pointwise convolution
+2	perceptual-loss	perceptual loss
+2	partially-observable	partially observable
+2	operator-norm	operator norm
+2	odds-ratio	odds ratio
+2	numerical-integration	numerical integration
+2	noisy-channel	noisy channel
+2	negative-class	negative class
+2	nearest-neighbor-interpolation	nearest-neighbor interpolation
+2	natural-language-inference	natural language inference
+2	monte-carlo-integration	Monte Carlo integration
+2	model-parameter	model parameter
+2	model-distribution	model distribution
+2	maximum-margin	maximum margin
+2	matrix-completion	matrix completion
+2	log-probability	log probability
+2	local-truncation-error	local truncation error
+2	load-balancing	load balancing
+2	linear-stability	linear stability
+2	likelihood-model	likelihood model
+2	learning-curve	learning curve
+2	latent-factor	latent factor
+2	langevin-sampling	Langevin sampling
+2	item-embedding	item embedding
+2	gibbs-sampling	Gibbs sampling
+2	gaussian-likelihood	Gaussian likelihood
+2	feature-pyramid	feature pyramid
+2	fairness	fairness
+2	factorization-machine	factorization machine
+2	f1-score	F1 score
+2	dilated-convolution	dilated convolution
+2	diffusion-coefficient	diffusion coefficient
+2	contrastive-divergence	contrastive divergence
+2	conditional-likelihood	conditional likelihood
+2	computational-efficiency	computational efficiency
+2	causal-language-model	causal language model
+2	beta-distribution	Beta distribution
+2	asynchronous-execution	asynchronous execution
+2	action-value-function	action-value function
+2	acquisition-function	acquisition function
+1	value-backup	value backup
+1	unsupervised-learning	unsupervised learning
+1	unnormalized-density	unnormalized density
+1	true-positive	true positive
+1	translation-quality	translation quality
+1	training-iteration	training iteration
+1	token-frequency	token frequency
+1	stochastic-approximation	stochastic approximation
+1	semantic-compression	semantic compression
+1	second-order-optimality	second-order optimality
+1	scheduled-sampling	scheduled sampling
+1	relative-position	relative position
+1	receiver-operating-characteristic	receiver operating characteristic
+1	proposal-distribution	proposal distribution
+1	predictive-uncertainty	predictive uncertainty
+1	posterior-predictive-mean	posterior predictive mean
+1	posterior-predictive-distribution	posterior predictive distribution
+1	position-embedding	position embedding
+1	optimization-trajectory	optimization trajectory
+1	optimization-landscape	optimization landscape
+1	numerical-solver	numerical solver
+1	normalized-discounted-cumulative-gain	normalized discounted cumulative gain
+1	nonconvex-optimization	nonconvex optimization
+1	next-item-prediction	next-item prediction
+1	network-depth	network depth
+1	negative-pair	negative pair
+1	multiclass-classification	multiclass classification
+1	monte-carlo-return	Monte Carlo return
+1	mixing-time	mixing time
+1	missing-data	missing data
+1	markov-reward-process	Markov reward process
+1	low-rank-factorization	low-rank factorization
+1	local-receptive-field	local receptive field
+1	lipschitz-continuous	Lipschitz continuous
+1	left-singular-vector	left singular vector
+1	learning-dynamics	learning dynamics
+1	kolmogorov-forward-equation	Kolmogorov forward equation
+1	item-ranking	item ranking
+1	initial-condition	initial condition
+1	indefinite-integral	indefinite integral
+1	in-distribution	in-distribution
+1	implicit-regularization	implicit regularization
+1	image-to-image-translation	image-to-image translation
+1	image-patch	image patch
+1	hyperprior	hyperprior
+1	heteroscedastic	heteroscedastic
+1	gaussian-process-posterior	Gaussian process posterior
+1	gaussian-observation-noise	Gaussian observation noise
+1	forward-transition	forward transition
+1	exploration-bonus	exploration bonus
+1	expected-improvement	expected improvement
+1	energy-function	energy function
+1	embedding-dimension	embedding dimension
+1	downstream-task	downstream task
+1	dimensionality-reduction	dimensionality reduction
+1	diffusion-process	diffusion process
+1	denoising-term	denoising term
+1	denoising-objective	denoising objective
+1	data-processing-inequality	data processing inequality
+1	cycle-consistency	cycle consistency
+1	continuous-bag-of-words	continuous bag of words
+1	confidence-level	confidence level
+1	click-through-rate	click-through rate
+1	cholesky-decomposition	Cholesky decomposition
+1	bilinear-form	bilinear form
+1	bellman-optimality-equation	Bellman optimality equation
+1	beginning-of-sequence-token	beginning-of-sequence token
+1	bayesian-linear-regression	Bayesian linear regression
+1	bayes-error	Bayes error
+1	attention-pattern	attention pattern
+1	attention-masking	attention masking
+1	adversarial-objective	adversarial objective
+1	adaptive-step-size	adaptive step size
+0	word-similarity	word similarity
+0	word-embedding	word embedding
+0	word-analogy	word analogy
+0	vector-space	vector space
+0	variational-objective	variational objective
+0	variance-schedule	variance schedule
+0	user-item-interaction	user-item interaction
+0	user-behavior	user behavior
+0	uncertainty-quantification	uncertainty quantification
+0	transformer-decoder	transformer decoder
+0	textual-entailment	textual entailment
+0	target-variable	target variable
+0	spatial-invariance	spatial invariance
+0	sequence-decoding	sequence decoding
+0	sequence-classification	sequence classification
+0	sentiment-classification	sentiment classification
+0	sentiment-analysis	sentiment analysis
+0	semantic-similarity	semantic similarity
+0	selective-state-space-model	selective state space model
+0	selective-scan	selective scan
+0	second-moment-estimate	second moment estimate
+0	score-estimate	score estimate
+0	rotary-position-embedding	rotary position embedding
+0	regularization-path	regularization path
+0	quadratic-complexity	quadratic complexity
+0	projection-operator	projection operator
+0	population-mean	population mean
+0	pointwise-loss	pointwise loss
+0	noisy-objective	noisy objective
+0	next-sentence-prediction	next sentence prediction
+0	network-width	network width
+0	negative-feedback	negative feedback
+0	named-entity-recognition	named entity recognition
+0	multi-fidelity-optimization	multi-fidelity optimization
+0	memory-access	memory access
+0	masked-attention	masked attention
+0	log-odds	log odds
+0	lipschitz-continuity	Lipschitz continuity
+0	learning-rate-schedule	learning rate schedule
+0	learning-rate-decay	learning rate decay
+0	latent-variable-model	latent variable model
+0	just-in-time-compilation	just-in-time compilation
+0	ito-process	Itô process
+0	independent-variable	independent variable
+0	image-recognition	image recognition
+0	hessian-vector-product	Hessian-vector product
+0	global-vectors	global vectors
+0	forward-diffusion	forward diffusion
+0	feedforward-block	feedforward block
+0	exponential-averaging	exponential averaging
+0	euler-method	Euler method
+0	dual-variable	dual variable
+0	distortion-measure	distortion measure
+0	decoder-state	decoder state
+0	consistent-estimator	consistent estimator
+0	conditional-denoising	conditional denoising
+0	concept-drift	concept drift
+0	click-through-rate-prediction	click-through rate prediction
+0	bias-variance-decomposition	bias-variance decomposition
+0	attention-map	attention map
