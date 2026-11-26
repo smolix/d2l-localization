@@ -16,3 +16,17 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Fable and Opus write the full نواة الالتفاف first, then the short النواة and the plurals أنوية / نوى; the glossary now accepts these forms.
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+Each model ran once in a fresh session at medium effort on the fixed work files.
+All three completed 144 blocks. Counts use the checker at `4fafcb0`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 5 | 4,402 (1.04) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 0 | 4,328 (1.02) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 3,912 (0.92) |
+
+The native-reader verdict is pending.
