@@ -1187,3 +1187,35 @@
 
 - „loss floor“ → „Verlustuntergrenze“, „noise ladder“ → „Stufenfolge von Rauschpegeln“, „clean point“ → „rauschfreier Punkt“.
 - „cosine path“ → „Kosinuspfad“, „target dictionary“ → „Umrechnungsregeln für die Zielgrößen“.
+
+## chapter_diffusion-models/image-diffusion.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Fréchet distance“ → „Fréchet-Abstand“ (FD), „reference floor“ → „Referenzwert“ aus zwei realen Stichproben.
+- „label dropout“ → „Label-Dropout“, „null label“ → „Null-Label“, „ancestral chain“ → „ancestrale Kette“.
+
+## chapter_diffusion-models/image-diffusion.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „class agreement“ → „Klassenübereinstimmung“, der Anteil der Samples, die der Klassifikator der gewünschten Klasse zuordnet.
+
+## chapter_diffusion-models/image-diffusion.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „tilted density“ → „umgewichtete Dichte“, „class typicality“ → „Klassentypizität“.
+
+## chapter_diffusion-models/design-space.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „design space“ → „Gestaltungsspielraum“, „flow likelihood“ → „Fluss-Likelihood“.
+- „noise predictor“ → „Rauschprädiktor“, „noise loss“ → „Rauschverlust“, „velocity loss“ → „Geschwindigkeitsverlust“.
+
+## chapter_diffusion-models/samplers.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „stride“ bei der numerischen Integration → „Schritt“, „grid placement“ → „Wahl der Gitterpunkte“.
+- „partial noising“ → „partielles Verrauschen“, „inpainting“ → „das Inpainting“.
+
+## chapter_diffusion-models/samplers.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „exponential integrator“ → „exponentieller Integrator“, „multistep method“ → „Mehrschrittverfahren“, „network function evaluations (NFE)“ → „Netzauswertungen (NFE)“.
+
+## chapter_diffusion-models/samplers.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „fidelity to the input“ → „Vorlagentreue“ (Bildbearbeitung), „replacement inpainting“ → „Inpainting durch Ersetzen“.
+- „round-trip error“ → „Rekonstruktionsfehler“ bei Inversion und anschließender Dekodierung.
