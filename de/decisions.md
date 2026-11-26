@@ -1364,3 +1364,117 @@
 ## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u05 (Codex Astra (medium), 2026-11-26)
 
 - „stable rank“ → „stabiler Rang“, „interlacing inequalities“ → „Verzahnungsungleichungen“.
+
+## chapter_mdl-calculus/mdl-chain-rule-graphs.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „edge derivative“ → „Kantenableitung“, „skip edge“ → „Skip-Kante“, „path product“ → „Pfadprodukt“, „path sum“ → „Pfadsumme“.
+- „parent“ und „child“ im Berechnungsgraphen → „direkter Vorgänger“ und „direkter Nachfolger“.
+
+## chapter_mdl-calculus/mdl-chain-rule-graphs.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „central difference“ → „zentraler Differenzenquotient“, wenn der Quotient zur Näherung der Ableitung gemeint ist.
+- „reverse accumulation“ → „Rückwärtsakkumulation“, „forward accumulation“ → „Vorwärtsakkumulation“.
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „single-variable calculus“ → „Differentialrechnung in einer Variablen“.
+- „difference quotient“ → „Differenzenquotient“.
+- „Lagrange remainder“ → „Lagrange-Restglied“.
+- „one-dimensional slice (function)“ → „eindimensionaler Schnitt“.
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „extreme value theorem“ → „Satz vom Maximum und Minimum“.
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „Taylor polynomial“ → „Taylor-Polynom“.
+- „base point (Taylor polynomial)“ → „Entwicklungsstelle“.
+- „damping (Newton step)“ → „Dämpfung“.
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „supporting line“ → „Stützgerade“.
+- „one-sided derivative“ → „einseitige Ableitung“.
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „forward difference“ → „Vorwärtsdifferenz“.
+- „central difference“ → „zentrale Differenz“.
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „multivariable calculus“ → „Analysis mehrerer Variablen“, „coordinate slice“ → „Koordinatenschnitt“, „level curve“ → „Niveaulinie“, „second-derivative test“ → „Kriterium der zweiten Ableitung“.
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „Gaussian orthogonal ensemble“ → „gaußsches orthogonales Ensemble“, „zero eigenvector“ → „Eigenvektor zum Eigenwert null“.
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „monkey saddle“ → „Affensattel“, „Rayleigh quotient“ → „Rayleigh-Quotient“.
+
+## chapter_mdl-calculus/mdl-matrix-calculus.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „numerator layout“ und „denominator layout“ → „Zählerkonvention“ und „Nennerkonvention“.
+
+## chapter_mdl-calculus/mdl-matrix-calculus.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „move rule“ → „Verschiebungsregel“ für das Übertragen eines Faktors auf die andere Seite des inneren Produkts.
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „left-endpoint rule“ → „linke Rechteckregel“, „left sum“ → „linke Rechtecksumme“.
+- Bei Riemann-Summen: „partition“ → „Zerlegung“, „tag“ → „Stützstelle“, „mesh“ → „Feinheit“, „slice“ → „Streifen“ oder beim Grundintervall „Teilintervall“.
+- „signed area“ → „orientierter Flächeninhalt“, „Gaussian integral“ → „Gauß-Integral“.
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „area-so-far function“ → „Integralfunktion“, „antiderivative“ → „Stammfunktion“, „evaluation rule“ → „Auswertungsformel“.
+- „left-rule bias“ → „systematischer Fehler der linken Rechteckregel“ (numerische Integration).
+- „Stein's identity“ → „Stein-Identität“.
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „zero-extension“ → „Fortsetzung mit null“, „iterated integral“ → „iteriertes Integral“, „volume factor“ → „Volumenfaktor“.
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „dual number“ → „duale Zahl“, „tangent“ → „Tangente“, „seed“ → „Startwert“, bei Vektoren „Startvektor“.
+- „tape“ → „Tape“ (das Tape), „vector–Jacobian product“ → „Vektor-Jacobi-Produkt“ (VJP).
+- „primitive“ → „Grundfunktion“ für Funktionen, „elementare Operation“ für Rechenschritte.
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „eager tape“ → „dynamisches Tape“, „tracer“ → „Tracer“, „backward closure“ → „Rückwärtsfunktion“ (bei der Einführung als Closure bezeichnet).
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „forward over reverse“ → „Vorwärts- über Rückwärtsmodus“, entsprechend „Rückwärts- über Rückwärtsmodus“.
+- „implicit function theorem“ → „Satz über implizite Funktionen“.
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „complex-step estimate“ → „Näherung mit komplexem Schritt“, „equilibrium layer“ → „Gleichgewichtsschicht“, „phantom gradient“ → „Phantomgradient“.
+
+## chapter_mdl-optimization/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „unit roundoff“ → „Rundungseinheit“, „machine epsilon“ → „Maschinenepsilon“.
+- „operator-splitting methods“ → „Verfahren zur Operatorzerlegung“.
+
+## chapter_mdl-calculus/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „conservative field“ → „konservatives Feld“, „mean value inequality“ → „Mittelwertungleichung“.
+- „recursive checkpointing“ → „rekursives Checkpointing“, „Taylor mode“ → „Taylor-Modus“, „forward gradient“ → „Vorwärtsgradient“.
+- „derivative compiler“ → „Compiler zur Ableitungsberechnung“.
+
+## chapter_mdl-calculus/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „low-discrepancy point sets“ → „Punktmengen mit geringer Diskrepanz“, „randomized quasi-Monte Carlo“ → „randomisierte Quasi-Monte-Carlo-Verfahren“.
+- „measure-valued derivatives“ → „maßwertige Ableitungen“, „pathwise estimator“ → „pfadweiser Schätzer“.
+
+## chapter_mdl-calculus/mdl-expectation-gradients.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „swap“ → „Vertauschen von Ableitung und Integral“, kurz „Vertauschen“.
+- „pathwise estimator“ → „pfadweiser Schätzer“, passend zu „pfadweiser Gradient“.
+- „integrable dominating bound“ → „integrierbare Majorante“.
