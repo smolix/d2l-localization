@@ -1581,3 +1581,167 @@
 ## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u05 (Codex Astra (medium), 2026-11-26)
 
 - „iterative refinement“ → „iterative Nachbesserung“.
+
+## chapter_mdl-probability-statistics/mdl-random-variables.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „atom“ → „Atom“, „quantile function“ → „Quantilfunktion“, „generalized inverse“ → „verallgemeinerte Inverse“.
+- „bin“ → „Intervall“ bei der Zerlegung der Zahlengeraden.
+
+## chapter_mdl-probability-statistics/mdl-random-variables.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „law of the unconscious statistician“ → „Transformationssatz für Erwartungswerte“ mit dem englischen Namen bei der Einführung.
+- „running mean“ → „fortlaufender Mittelwert“ für den Durchschnitt aller bisherigen Ziehungen.
+
+## chapter_mdl-probability-statistics/mdl-random-variables.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „tail index“ → „Randindex“, „rectified Gaussian“ → „gleichgerichtete Gauß-Verteilung“.
+
+## chapter_mdl-probability-statistics/mdl-joint-distributions.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „joint density“ → „gemeinsame Dichte“, „marginal density“ → „Randdichte“, „conditional density“ → „bedingte Dichte“.
+- „to integrate out“ → „ausintegrieren“, „tower property“ → „Turmeigenschaft“.
+- „slice“ bei einer Dichte → „Schnitt“ oder „Schnittprofil“.
+
+## chapter_mdl-probability-statistics/mdl-joint-distributions.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „four-cell example“ → „Vierfelderbeispiel“, „sample covariance“ → „Stichprobenkovarianz“.
+
+## chapter_mdl-probability-statistics/mdl-distributions.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „law of rare events“ → „Gesetz der seltenen Ereignisse“.
+- „overdispersion“ → „Überdispersion“.
+
+## chapter_mdl-probability-statistics/mdl-distributions.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „memorylessness“ → „Gedächtnislosigkeit“.
+- „inverse-transform method“ → „Inversionsmethode“.
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „log-partition function“ → „logarithmische Zustandssumme“, „base measure“ → „Basismaß“, „moment matching“ → „Momentenabgleich“, „exponential tilt“ → „exponentielle Kippung“.
+- „coin bias“ → „Kopfwahrscheinlichkeit“.
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „canonical link“ → „kanonische Linkfunktion“.
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „Gumbel-max trick“ → „Gumbel-Max-Trick“, „pseudo-counts“ → „Pseudoanzahlen“.
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „shrunk mean“ → „geschrumpfter Mittelwert“, „shrinkage factor“ → „Schrumpfungsfaktor“.
+- „plug-in variance“ → „Plug-in-Varianz“, „sample proportion“ → „Stichprobenanteil“.
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „sign-flip permutation test“ → „Permutationstest mit Vorzeichenwechsel“.
+- „false discovery rate“ → „Falschentdeckungsrate“, „null distribution“ → „Nullverteilung“.
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „bootstrap resample“ → „Bootstrap-Stichprobe“, „percentile confidence interval“ → „Perzentil-Konfidenzintervall“.
+- „cluster bootstrap“ → „Cluster-Bootstrap“ für das erneute Ziehen ganzer Gruppen.
+
+## chapter_mdl-probability-statistics/mdl-latent-em-elbo.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „coordinate ascent“ → „Koordinatenaufstieg“.
+- „mixing weight“ → „Mischungsgewicht“, „mixing fraction“ → „Mischungsanteil“.
+
+## chapter_mdl-probability-statistics/mdl-latent-em-elbo.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „label switching“ → „Labeltausch“.
+- „variance spike“ → „Dichtespitze“, da die Dichte bei schrumpfender Varianz wächst.
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „score function“ → „Score-Funktion“, ihr Wert heißt „Score“.
+- „coin’s bias“ → „Kopfwahrscheinlichkeit“.
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „Cauchy location model“ → „Cauchy-Lagemodell“.
+- „pseudo-counts“ → „Pseudohäufigkeiten“ bei einer konjugierten A-priori-Verteilung für Zähldaten.
+- „sandwich covariance“ → „Sandwich-Kovarianz“.
+- „information identity“ → „Informationsidentität“.
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „Laplace’s rule of succession“ → „Nachfolgeregel von Laplace“.
+
+## chapter_mdl-probability-statistics/mdl-concentration-generalization.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Chernoff method“ → „Chernoff-Methode“, „moment generating function“ → „momenterzeugende Funktion (MGF)“, „cumulant generating function“ → „kumulantenerzeugende Funktion“.
+- „tail bound“ → „Schranke für die Randwahrscheinlichkeit“, „failure probability“ → „Versagenswahrscheinlichkeit“, „majorant“ → „Majorante“.
+- „variance proxy“ → „Varianzproxy“, „sub-Gaussian“ → „subgaußsch“, „sub-exponential“ → „subexponentiell“.
+- „thin shell“ → „dünne Kugelschale“, „concentration of measure“ → „Maßkonzentration“.
+
+## chapter_mdl-probability-statistics/mdl-concentration-generalization.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „distance contrast“ → „Abstandskontrast“, „random sign vector“ → „zufälliger Vorzeichenvektor“.
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Laplace approximation“ → „Laplace-Approximation“, „plug-in prediction“ → „Plug-in-Vorhersage“.
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „proposal distribution“ → „Vorschlagsverteilung“, „acceptance rate“ → „Annahmerate“, „defensive mixture“ → „defensive Mischung“.
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „mixing“ → „Durchmischung“, „trace plot“ → „Verlaufsdiagramm“, „warm-up“ → „Aufwärmphase“ bei Markov-Ketten.
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „reverse KL“ und „forward KL“ → „Rückwärts-KL“ und „Vorwärts-KL“.
+
+## chapter_mdl-probability-statistics/mdl-generalization-bounds.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „ghost sample“ → „Geisterstichprobe“, „ramp loss“ → „Rampenverlust“, „margin bound“ → „Margin-Schranke“.
+
+## chapter_mdl-probability-statistics/mdl-generalization-bounds.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „capacity product“ → „Kapazitätsprodukt“, „padding argument“ → „Argument der Nullergänzung“.
+
+## chapter_mdl-probability-statistics/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „conformal prediction“ → „konforme Vorhersage“, „split conformal prediction“ → „konforme Vorhersage mit Datenteilung“.
+- „confidence sequence“ → „Konfidenzsequenz“, „exchangeability“ → „Austauschbarkeit“.
+- „stable law“ → „stabile Verteilung“, „studentized bootstrap“ → „studentisiertes Bootstrap-Verfahren“.
+
+## chapter_mdl-probability-statistics/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „covering number“ → „Überdeckungszahl“, „algorithmic stability“ → „algorithmische Stabilität“.
+- „stochastic-gradient Langevin dynamics“ → „Langevin-Dynamik mit stochastischen Gradienten“.
+- „Platt scaling“ → „Platt-Skalierung“, „isotonic regression“ → „isotone Regression“.
+
+## chapter_mdl-probability-statistics/further-reading.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- Bibliografische Titel verlinkter Bücher und Lehrmaterialien stehen im Original, beschreibende Linktexte auf Deutsch.
+
+## chapter_mdl-information-theory/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „variational critic“ → „variationeller Kritiker“, analog zu „variationelle Inferenz“ im Entscheidungsprotokoll.
+- „kernel MMD“ → „Kernel-MMD“.
+- „Gibbs' inequality“, „Kraft's inequality“, „Pinsker's inequality“ und „Fano's inequality“ → „Gibbs-Ungleichung“, „Kraft-Ungleichung“, „Pinsker-Ungleichung“ und „Fano-Ungleichung“.
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Bayes numerator“ → „Bayes-Zähler“, „class-conditional distribution“ → „klassenbedingte Verteilung“.
+- „inked or blank“ → „gesetzt oder leer“ bei binären Pixeln.
+- „odds“ → „Chancen“, „overconfidence“ → „überhöhte Konfidenz“, „Laplace smoothing“ → „Laplace-Glättung“.
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „class score“ → „Klassenscore“, „score gap“ → „Scoredifferenz“.
+- „Bernoulli naive Bayes“ → „Bernoulli-Naive-Bayes“, „Gaussian naive Bayes“ → „Gauß-Naive-Bayes“.
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „class template“ → „Klassenvorlage“, „hem pixel“ → „Saumpixel“.
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „temperature scaling“ → „Temperaturskalierung“, „duplicated evidence“ → „mehrfach gezählte Hinweise“.
