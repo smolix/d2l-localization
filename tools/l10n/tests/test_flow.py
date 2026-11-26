@@ -102,6 +102,12 @@ class TestFlow(TempRepo):
         self.assertEqual(rep.locked_edits, [first.anchor])
         self.assertEqual(check_language(lang).locked_edits[0].split('/')[-1].split(' ')[0],
                          first.anchor)
+        # --fresh: a translation test checks against an untranslated page and never merges
+        before = (lang.book / PAGE).read_text(encoding='utf-8')
+        rep = apply_answer(lang, parse_answer(edited)[0], 'c', None, fresh=True)
+        self.assertEqual(rep.locked_edits, [])
+        self.assertFalse(any('locked block' in x for x in rep.warnings))
+        self.assertEqual((lang.book / PAGE).read_text(encoding='utf-8'), before)
 
     @unittest.skipUnless(SLOW, 'L10N_SLOW_TESTS=0')
     def test_bump_real_revisions(self):

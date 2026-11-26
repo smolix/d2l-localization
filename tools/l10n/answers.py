@@ -130,7 +130,10 @@ def check_translation(lang, kind: str, english: str, tr: str, where: str, rep: R
 
 
 def apply_answer(lang, ans: Answer, agent: str | None, model: str | None,
-                 force: bool = False, dry_run: bool = False) -> Report:
+                 force: bool = False, dry_run: bool = False, fresh: bool = False) -> Report:
+    """Check an answer and, unless dry_run, merge it. fresh: check as if the
+    page had no translation yet (translation tests), never merging."""
+    dry_run = dry_run or fresh
     rep = Report()
     rev = lang.aligned
     if not rev:
@@ -147,7 +150,7 @@ def apply_answer(lang, ans: Answer, agent: str | None, model: str | None,
         return rep
     unit = units[ans.uid]
     expected = {blocks[k].anchor: blocks[k] for k in unit.blocks}
-    entries = tfile.load(lang.book, ans.path)
+    entries = {} if fresh else tfile.load(lang.book, ans.path)
     where0 = f'{ans.path}#{ans.uid}'
     missing = [a for a in expected if a not in ans.tr]
     extra = [a for a in ans.tr if a not in expected]

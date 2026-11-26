@@ -22,12 +22,12 @@ agent name (lower case, e.g. `gemini-3-pro`).
    to that checkout if it is not at `/home/smola/d2l-neu`):
 
    ```bash
-   bin/l10n apply tr evals/tr-conv-layer/answers-{NAME} --rev 370f7b3a15d0557b44a27c52e06ab7f5b30584e1 --dry-run
+   bin/l10n apply tr evals/tr-conv-layer/answers-{NAME} --rev 370f7b3a15d0557b44a27c52e06ab7f5b30584e1 --fresh
    ```
 
    Fix every error. A warning can be a false match; never change a correct
    translation only to silence a warning, but name the false match in NOTES.
-   Never run `l10n apply` without `--dry-run`. Do not edit any other file.
+   Never run `l10n apply` without `--fresh` (a dry run that ignores translations already in the repository). Do not edit any other file.
    Keep any helper scripts or drafts in a directory of your own (e.g.
    `work/{NAME}/`, which git ignores): other agents may run the same test at
    the same time.
