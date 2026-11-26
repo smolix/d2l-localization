@@ -120,6 +120,8 @@ class GlossaryPresenceTest(unittest.TestCase):
         self.assertTrue(_present('katman', 'gizli katmanları'))
         self.assertTrue(_present('convolução', 'as convoluções'))
         self.assertTrue(_present('şekil', 'tensörün şekli'))
+        self.assertTrue(_present('نواة الالتفاف', 'وبنواة الالتفاف'))
+        self.assertTrue(_present('طبقة', 'الطبقات'))
         self.assertTrue(_present('卷积', '卷积层'))
         self.assertFalse(_present('loi normale', 'une loi uniforme'))
         self.assertFalse(_present('red', 'una capa'))

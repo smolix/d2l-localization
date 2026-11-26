@@ -129,7 +129,8 @@ def _present(form: str, low: str) -> bool:
     A line break inside the term does not hide it. In scripts with spaces, an
     inflected form also counts: each word of the term may change its last
     letters (the last two, for words over four letters) and take an ending ("champ récepteur" in "champs récepteurs",
-    "matriz" in "matrices", "convolução" in "convoluções", "şekil" in "şekli", "katman" in "katmanları").
+    "matriz" in "matrices", "convolução" in "convoluções", "şekil" in "şekli",
+    Arabic with its article and prefixes, "الالتفاف" in "وبالالتفاف", "katman" in "katmanları").
     """
     f = ' '.join(form.lower().split())
     if f in low:
@@ -137,8 +138,17 @@ def _present(form: str, low: str) -> bool:
     words = f.split()
     if not all(re.fullmatch(r'[^\W\d_]+', w) for w in words):
         return False
-    stems = [re.escape(w[:-2] if len(w) > 4 else w) + r'[^\W\d_]*'
-             for w in words]
+    stems = []
+    for w in words:
+        prefix = ''
+        if re.match(r'[\u0600-\u06ff]', w):
+            # Arabic attaches the article and short particles: و ف ب ل ك + ال
+            w = re.sub(r'^(?:ال|لل)', '', w)
+            prefix = r'(?:[وفبلك]{0,2}(?:ال|لل)?)'
+            w = re.sub(r'ة$', '', w)          # feminine ending: طبقة -> طبقات
+            stems.append(prefix + re.escape(w[:-1] if len(w) > 4 else w) + r'[^\W\d_]*')
+            continue
+        stems.append(re.escape(w[:-2] if len(w) > 4 else w) + r'[^\W\d_]*')
     return re.search(r'(?<![^\W\d_])' + r'\s+'.join(stems), low) is not None
 
 

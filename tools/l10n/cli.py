@@ -319,10 +319,18 @@ def main(argv=None):
     p = sub.add_parser('compare', help='side-by-side page of several agents\' translations',
                        description='Check every answers-<agent>/ directory in DIR against the work '
                                    'files in DIR and write one HTML page that shows them side by side.')
-    p.add_argument('lang')
-    p.add_argument('dir', help='directory with the work files and answers-<agent>/ directories')
-    p.add_argument('--out', help='HTML file (default DIR/compare.html)')
-    p.set_defaults(func=lambda a: __import__('l10n.compare', fromlist=['compare']).compare(a.lang, a.dir, a.out))
+    p.add_argument('lang', help="language code, or 'all' to build every test in DIR (e.g. evals/)")
+    p.add_argument('dir', help='directory with the work files and answers-<agent>/ directories '
+                               '(with all: the directory of test directories)')
+    p.add_argument('--out', help='HTML file (default DIR/compare.html); with all, the output '
+                                 'directory (default DIR/_compare)')
+
+    def _compare(a):
+        from . import compare as c
+        if a.lang == 'all':
+            return c.compare_all(a.dir, a.out or str(Path(a.dir) / '_compare'))
+        return c.compare(a.lang, a.dir, a.out)
+    p.set_defaults(func=_compare)
 
     p = sub.add_parser('menu', help='write site/languages.json (and upload it)')
     p.add_argument('--out')

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translation Tests</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --fg: #1d2330; --muted: #5d6677; --line: #dde1e8; --chip: #eef0f4;
+  --warn: #9a6a00; --ok: #1d7a3e; --bad: #b3261e; --link: #2f5fb3;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171d; --panel: #1c2028; --fg: #e4e7ee; --muted: #9aa3b4; --line: #2e3440; --chip: #262b35;
+    --warn: #e0b04a; --ok: #5cc98a; --bad: #f07a70; --link: #8fb3ff;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171d; --panel: #1c2028; --fg: #e4e7ee; --muted: #9aa3b4; --line: #2e3440; --chip: #262b35;
+  --warn: #e0b04a; --ok: #5cc98a; --bad: #f07a70; --link: #8fb3ff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 var(--sans); }
+main { max-width: 1100px; margin: 0 auto; padding: 28px 16px 48px; }
+h1 { font: 600 1.6rem/1.2 var(--sans); margin: 0 0 6px; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0 0 20px; max-width: 78ch; }
+.lede code { font: 0.86em var(--mono); background: var(--chip); padding: 1px 5px; border-radius: 4px; }
+.wrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-variant-numeric: tabular-nums; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+thead th { font: 600 0.78rem var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+thead tr.agents th { text-transform: none; letter-spacing: 0; font-size: 0.9rem; color: var(--fg); }
+th.grp { text-align: center; border-left: 1px solid var(--line); }
+td.n, th.n { text-align: right; }
+td.first { border-left: 1px solid var(--line); }
+td.lang a { color: var(--link); font-weight: 600; text-decoration: none; }
+td.lang a:hover { text-decoration: underline; }
+td.lang small { display: block; color: var(--muted); font-weight: 400; }
+.ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); font-weight: 600; }
+.chip { display: inline-block; font-size: 0.78rem; padding: 1px 7px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+.chip.yes { color: var(--ok); }
+td.verdict { color: var(--muted); max-width: 30ch; font-size: 0.9rem; }
+.legend { color: var(--muted); font-size: 0.88rem; margin-top: 14px; max-width: 80ch; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Translation tests</h1>
+  <p class="lede" id="lede"></p>
+  <div class="wrap"><table id="t"></table></div>
+  <p class="legend">Each cell shows check errors · warnings · length against English (words, or characters for languages written without spaces). The counts are from <code>l10n apply --dry-run</code> with the current checker, re-run on every answer set. They measure rule-following, not quality: a native reader decides. Open a language for the side-by-side page.</p>
+</main>
+<script>
+const TESTS = /*DATA*/null;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const agents = [];
+TESTS.forEach(t => t.agents.forEach(a => { if (!agents.includes(a.name)) agents.push(a.name); }));
+document.getElementById('lede').innerHTML =
+  `${TESTS.length} languages, ${agents.length} translators each (${agents.map(a => `<code>${esc(a)}</code>`).join(', ')}), the same page and English revision. ` +
+  `Style guide: whether the language has one yet; without it, translators followed the general rules and recorded their own conventions.`;
+const cell = (a, t) => {
+  if (!a) return `<td class="first n" colspan="3">–</td>`;
+  const ratio = t.en ? (a.words / t.en).toFixed(2) : '–';
+  return `<td class="first n ${a.errors ? 'bad' : 'ok'}">${a.errors}</td>` +
+         `<td class="n ${a.warnings > 10 ? 'warn' : ''}">${a.warnings}</td>` +
+         `<td class="n">${ratio}×${a.missing ? ` <span class="bad">−${a.missing}</span>` : ''}</td>`;
+};
+document.getElementById('t').innerHTML =
+  `<thead><tr><th rowspan="2">Language</th><th rowspan="2">Style guide</th>` +
+  agents.map(a => `<th class="grp" colspan="3">${esc(a)}</th>`).join('') + `<th rowspan="2">Verdict</th></tr>` +
+  `<tr class="agents">` + agents.map(() => `<th class="first n">err</th><th class="n">warn</th><th class="n">length</th>`).join('') + `</tr></thead>` +
+  `<tbody>` + TESTS.map(t => `<tr>` +
+    `<td class="lang"><a href="${esc(t.page)}">${esc(t.name)}</a><small>${esc(t.lang)} · ${esc(t.test)}</small></td>` +
+    `<td><span class="chip ${t.style ? 'yes' : ''}">${t.style ? 'yes' : 'not yet'}</span></td>` +
+    agents.map(n => cell(t.agents.find(a => a.name === n), t)).join('') +
+    `<td class="verdict">${esc(t.verdict || 'pending')}</td></tr>`).join('') + `</tbody>`;
+</script>
+</body>
+</html>

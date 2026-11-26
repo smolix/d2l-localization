@@ -32,6 +32,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; max-width: 1760px; margin: 0 auto; display: grid; gap: 22px; }
 header h1 { font: 600 1.55rem/1.2 var(--sans); margin: 0; text-wrap: balance; }
 header p { margin: 6px 0 0; color: var(--muted); max-width: 75ch; }
+header p.back { margin: 0 0 8px; font: 500 0.9rem var(--sans); }
+header p.back a { color: var(--muted); text-decoration: none; }
+header p.back a:hover { color: var(--fg); text-decoration: underline; }
 header code, .meta code { font: 0.86em var(--mono); background: var(--chip); padding: 1px 5px; border-radius: 4px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
@@ -145,7 +148,7 @@ function layout() {
 }
 
 (function build(data) {
-  document.getElementById('title').textContent = 'Translations of ' + data.page;
+  document.getElementById('title').textContent = (data.name ? data.name + ': ' : '') + 'translations of ' + data.page;
   document.getElementById('lede').innerHTML = `${data.agents.length} translations into <code>${esc(data.lang)}</code> of <code>${esc(data.page)}</code> (English revision <code>${esc((data.rev || '').slice(0, 10))}</code>), from the same work files. Counts are from <code>l10n apply --dry-run</code>.`;
   document.getElementById('controls').insertAdjacentHTML('beforeend', COLS.map(c =>
     `<label class="toggle"><input type="checkbox" id="show-${esc(c.key)}" checked> ${esc(c.name)}</label>`).join(''));
@@ -156,7 +159,7 @@ function layout() {
     const head = `<div class="tag"><span><span class="mlabel" style="color:${c.color}">${esc(c.name)} · </span>${esc(b.kind)}</span><span>${c.key === 'en' ? b.unit + ' · ' + b.anchor : ''}</span></div>`;
     return t === undefined
       ? `<div class="cell missing" data-k="${esc(c.key)}">${head}No translation for this block.</div>`
-      : `<div class="cell ${c.key === 'en' ? 'en' : ''}" data-k="${esc(c.key)}" lang="${c.key === 'en' ? 'en' : esc(data.lang)}">${head}${render(t)}</div>`;
+      : `<div class="cell ${c.key === 'en' ? 'en' : ''}" data-k="${esc(c.key)}" lang="${c.key === 'en' ? 'en' : esc(data.lang)}" dir="${c.key === 'en' ? 'ltr' : esc(data.dir || 'ltr')}">${head}${render(t)}</div>`;
   }).join('') + '</section>').join('');
   try {
     const saved = JSON.parse(localStorage.getItem('l10n-compare-cols') || 'null');

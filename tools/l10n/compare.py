@@ -20,6 +20,7 @@ from pathlib import Path
 from .answers import parse_answer
 
 TEMPLATE = Path(__file__).with_name('compare.html')
+INDEX = Path(__file__).with_name('compare-index.html')
 NO_SPACES = {'ja', 'zh-Hans', 'zh-Hant', 'zh', 'th'}  # length in characters, not words
 
 
@@ -89,15 +90,25 @@ def collect(lang_code: str, evaldir: Path) -> dict:
                        'decisions': '\n\n'.join(dec), 'notes': '\n\n'.join(notes)})
     if not agents:
         raise SystemExit(f'{evaldir}: no answers-<agent>/ directories')
-    return {'lang': lang_code, 'page': page, 'rev': rev,
+    try:
+        from .config import get_language
+        L = get_language(lang_code)
+        name, direction = L.name, L.dir
+    except Exception:
+        name, direction = lang_code, 'ltr'
+    return {'lang': lang_code, 'name': name, 'dir': direction, 'page': page, 'rev': rev,
             'unit': 'characters' if lang_code in NO_SPACES else 'words',
             'en_words': sum(_length(blocks[a]['en'], lang_code) for a in order),
             'agents': agents, 'blocks': [blocks[a] for a in order]}
 
 
-def write_page(data: dict, out: Path) -> Path:
+def write_page(data: dict, out: Path, back: str | None = None) -> Path:
     payload = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')
     html = TEMPLATE.read_text(encoding='utf-8').replace('/*DATA*/null', payload)
+    html = html.replace('<title>Translation comparison</title>',
+                        f'<title>Translations: {data.get("name", data["lang"])}</title>')
+    if back:
+        html = html.replace('  <header>\n', f'  <header>\n    <p class="back"><a href="{back}">← All languages</a></p>\n', 1)
     out.write_text(html, encoding='utf-8')
     return out
 
@@ -112,3 +123,34 @@ def compare(lang_code: str, evaldir: str, out: str | None = None) -> Path:
               + (f", {a['missing']} block(s) missing" if a['missing'] else ''))
     print(f'wrote {path}')
     return path
+
+
+def compare_all(evals: str, out: str) -> Path:
+    """One page per test directory (<lang>-<name>/) plus an index that summarises them."""
+    ev, od = Path(evals), Path(out)
+    od.mkdir(parents=True, exist_ok=True)
+    tests = []
+    for d in sorted(p for p in ev.iterdir() if p.is_dir() and '-' in p.name):
+        lang = d.name.split('-', 1)[0]
+        if not any(d.glob('answers-*')):
+            continue
+        data = collect(lang, d)
+        page = f'{d.name}.html'
+        write_page(data, od / page, back='index.html')
+        results = d / 'RESULTS.md'
+        verdict = ''
+        if results.exists():
+            m = re.search(r'\*\*Verdict[^*]*\*\*\s*(.+)', results.read_text(encoding='utf-8'))
+            verdict = m.group(1).strip() if m else ''
+        tests.append({'test': d.name, 'page': page, 'lang': lang, 'name': data['name'],
+                      'unit': data['unit'], 'en': data['en_words'], 'verdict': verdict,
+                      'style': (Path(__file__).resolve().parents[2] / lang / 'style.md').exists(),
+                      'agents': [{k: a[k] for k in ('name', 'errors', 'warnings', 'words', 'missing')}
+                                 for a in data['agents']]})
+        print(f'{d.name}: ' + ', '.join(f"{a['name']} {a['errors']}/{a['warnings']}" for a in data['agents']))
+    payload = json.dumps(tests, ensure_ascii=False).replace('</', '<\\/')
+    html = INDEX.read_text(encoding='utf-8').replace('/*DATA*/null', payload)
+    (od / 'index.html').write_text(html, encoding='utf-8')
+    print(f'wrote {od / "index.html"} and {len(tests)} page(s)')
+    return od / 'index.html'
+
