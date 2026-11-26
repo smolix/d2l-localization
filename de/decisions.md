@@ -453,3 +453,11 @@
 ## chapter_recurrent-neural-networks/decoding.md#u02 (Codex Astra (medium), 2026-11-26)
 
 - „unreliable tail“ → „unzuverlässiger Rand“, „support set“ → „Trägermenge“.
+
+## chapter_recurrent-neural-networks/rnn.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „input projection“ → „Eingabeprojektion“, „recurrent cell“ → „rekurrente Zelle“, „embedding lookup“ → „Einbettungen nachschlagen“.
+
+## chapter_recurrent-neural-networks/rnn.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „effective context horizon“ → „effektive Kontextlänge“, „validation perplexity“ → „Validierungsperplexität“.
