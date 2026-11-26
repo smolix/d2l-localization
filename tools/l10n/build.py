@@ -16,6 +16,8 @@ import os
 import re
 import shutil
 import subprocess
+import urllib.error
+import urllib.request
 import sys
 from pathlib import Path
 
@@ -172,15 +174,41 @@ def deploy(lang, workdir=None, delete=True, dry_run=False):
 
 # ── language menu ────────────────────────────────────────────────────
 
+LANGUAGES_URL = 'https://d2l-data.smola.org/site/languages.json'
+
+
+def live_pages() -> dict:
+    """{code: pages} from the published languages.json. Each language's
+    `pages` list is written by d2l-neu's tools/update_language_pages.py when
+    that language's site is uploaded; the menu links to the same page in
+    another language only if its list has the page (no 404 rule exists)."""
+    try:
+        req = urllib.request.Request(LANGUAGES_URL, headers={'User-Agent': 'd2l-l10n',
+                                                             'Cache-Control': 'no-cache'})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            live = json.load(r)
+    except (urllib.error.URLError, ValueError, OSError):
+        return {}
+    return {l['code']: l['pages'] for l in live.get('languages', [])
+            if isinstance(l, dict) and l.get('code') and isinstance(l.get('pages'), list)}
+
+
 def menu_data(include_unpublished=False) -> dict:
+    """languages.json: the language list from languages.yml, keeping each
+    language's `pages` from the published file (a language without a list
+    links to its home page)."""
     data = config.load_languages()
+    pages = live_pages()
     langs = []
     for lang in data['languages'].values():
         if lang.test:
             continue
         show = lang.menu if lang.menu is not None else (lang.code == 'en' or lang.pinned)
         if show or include_unpublished:
-            langs.append({'code': lang.code, 'name': lang.name, 'url': lang.url})
+            entry = {'code': lang.code, 'name': lang.name, 'url': lang.url}
+            if lang.code in pages:
+                entry['pages'] = pages[lang.code]
+            langs.append(entry)
     old = [{'name': o['name'], 'url': o['url']} for o in data['old_editions']]
     return {'languages': langs, 'old_editions': old}
 

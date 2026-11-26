@@ -214,8 +214,15 @@ through the `DATA_HUB` URLs and for the language menu.
   as fallback. Adding a language does not require rebuilding the others.
 - Order: current languages, a divider, then old editions ("English (old)" at
   en-v2.d2l.ai, later "中文 (old)" and others).
-- A menu entry links to the same page in the other language when that
-  language's pinned tag has it, otherwise to that language's home page.
+- Each language in `languages.json` carries `pages`, the list of HTML pages
+  its site serves. Every real upload to a language bucket rewrites that
+  language's list from the uploaded build (d2l-neu
+  `tools/update_language_pages.py`, called by `upload_r2.sh` for `d2l-<code>`
+  buckets, so `l10n deploy` and English deploys both update it); `l10n menu`
+  keeps the published lists. A menu entry links to the same page in the other
+  language when its list has the page, otherwise to that language's home
+  page **[ruled]**. Nothing relies on a 404 page: the zone's Free plan has no
+  error rule.
 
 ## 9. Discussions
 
