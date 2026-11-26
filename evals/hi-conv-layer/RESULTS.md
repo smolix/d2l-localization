@@ -15,3 +15,18 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Sonnet reached 0 warnings by rewording every flagged sentence, including word-order ones (against TRANSLATING.md §9); Fable reordered one sentence for the same reason.
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `4fafcb0`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 0 | 5,373 (1.27) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 0 | 5,309 (1.25) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 4,779 (1.13) |
+
+The native-reader verdict is pending.
