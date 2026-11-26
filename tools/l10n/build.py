@@ -68,6 +68,17 @@ def prepare_worktree(lang, rev: str, workdir: Path | None = None) -> Path:
         src, dst = config.D2L_NEU / name, wt / name
         if src.exists() and not dst.exists() and not dst.is_symlink():
             dst.symlink_to(src)
+    # The venvs are the main checkout's. A fresh checkout's pyproject.toml/uv.lock
+    # are newer than their .synced stamps, so make would `uv sync` the shared
+    # venvs to this revision's lock; date the files back so it does not.
+    for name in ('pyproject.toml', 'uv.lock', 'tools/check_runtime_deps.py'):
+        if (wt / name).exists():
+            os.utime(wt / name, (0, 0))
+    main_lock = config.D2L_NEU / 'uv.lock'
+    if main_lock.exists() and (wt / 'uv.lock').exists() and \
+            main_lock.read_bytes() != (wt / 'uv.lock').read_bytes():
+        print(f'warning: uv.lock at {rev} differs from {main_lock}; the build uses the main '
+              'checkout\'s venvs as they are', file=sys.stderr)
     return wt
 
 
@@ -99,7 +110,7 @@ def build(lang, rev: str | None = None, html_only=False, workdir=None, target=No
     rev = rev or lang.aligned
     if not rev:
         raise config.L10nError(f'{lang.code} has no pinned revision')
-    if lang.pinned_next and rev == lang.pinned_next:
+    if lang.pinned and lang.pinned_next and rev == lang.pinned_next:
         print(f'note: building the in-progress bump target {rev} '
               f'(pinned: {lang.pinned}); stale blocks show English', file=sys.stderr)
     wt = prepare_worktree(lang, rev, workdir)

@@ -71,8 +71,16 @@ def pseudo(kind: str, content: str) -> str:
             last = k + 1
         return ''.join(out)
     if kind == 'html':
-        return re.sub(r'>([^<>]+)<', lambda m: '>' + _wrap_text(m.group(1)) + '<', content) \
-            if '>' in content else _wrap_text(content)
+        cov = _covered(content)
+        out, k = [], 0
+        while k < len(content):
+            j = k
+            while j < len(content) and cov[j] == cov[k]:
+                j += 1
+            seg = content[k:j]
+            out.append(seg if cov[k] or not seg.strip() else _wrap_text(seg))
+            k = j
+        return ''.join(out)
     if kind == 'kicker' or (kind in ('caption', 'slide_text') and content.startswith('![')):
         start = 1 if content.startswith('![') else 0
         end = _bracket_end(content, start)

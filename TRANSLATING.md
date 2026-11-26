@@ -24,6 +24,8 @@ with three parts.
 (the chapter outline, the whole English page, the translation of the previous section)
 
 === UNIT ===
+<!--unit:chapter_optimization/sgd.md#u02 lang=ja rev=en-2026.12.01-->
+
 <!--en:3f2a91c0 kind=heading-->
 ## Stochastic Gradient Descent
 <!--tr:3f2a91c0-->
@@ -38,6 +40,7 @@ English text of a block that did not change.
 Its existing translation.
 ```
 
+- The `<!--unit:…-->` line names the page, the unit and the English release.
 - Each English block sits under an `<!--en:…-->` marker; its translation goes
   under the matching `<!--tr:…-->` marker. In a new unit the translation slots
   are empty.
@@ -54,6 +57,8 @@ Return the UNIT part only, with every marker line copied exactly and each
 translation slot filled:
 
 ```
+<!--unit:chapter_optimization/sgd.md#u02 lang=ja rev=en-2026.12.01-->
+
 <!--en:3f2a91c0 kind=heading-->
 ## Stochastic Gradient Descent
 <!--tr:3f2a91c0-->
@@ -101,7 +106,8 @@ Then, after the unit, two optional sections:
 ## 4. Never change these (protected tokens)
 
 The tools check every block against its English and reject the unit if any of
-these differ. Copy them byte for byte, in the same order:
+these differ. Copy them byte for byte; keep their order unless your
+language's word order requires another (then name the block in NOTES):
 
 | Construct | Example |
 |---|---|
@@ -109,7 +115,6 @@ these differ. Copy them byte for byte, in the same order:
 | Inline code | `` `torch.Tensor` ``, `` `num_epochs` `` |
 | Cross-references and labels | ``:numref:`sec_sgd` ``, ``:eqref:`eq_loss` ``, ``:label:`fig_x` ``, ``:eqlabel:`…` ``, ``:exlabel:`…` ``, ``:exref:`…` ``, ``:cite:`…` ``, ``:citet:`…` `` |
 | Section references | `§{sec_sgd}`, `§{num:sec_sgd}` |
-| Code and slide placeholders | `@cell sgd-update-1`, `@sgd-update-1`, `@!sgd-update-1[out=2]` |
 | Quarto div fences and attributes | `::: {.cols .vc}`, `::: {.col .fig}`, `::: {.d2l-note .warn}`, `{.kicker}`, `{.unnumbered}` |
 | Framework tab markers | ``:begin_tab:`pytorch` ``, `:end_tab:` |
 | Image paths, URLs, link targets | `![…](../img/sgd.svg)`, `[…](https://…)` |
@@ -122,9 +127,15 @@ kicker (`[this text]{.kicker}`), and a slide title attribute
 (`::: {.slide title="This Text"}`), keeping its quotes and the rest of the
 attribute list unchanged.
 
-Inline code stays English even when it reads like a word (`` `loss` ``). Code is
-never in the unit; it appears only as an `@cell` reference. Keep `0.5` as
-written unless `style.md` says otherwise for prose numbers.
+Inline code stays English even when it reads like a word (`` `loss` ``). Code,
+display equations and slide placeholders are never in the unit; read them in
+the English page in CONTEXT. Keep `0.5` as written unless `style.md` says
+otherwise for prose numbers.
+
+Never set a reference (``:numref:`…` ``, ``:eqref:`…` ``, ``:cite:`…` ``) or
+inline math `$…$` directly against a CJK letter: put a space, or full-width
+punctuation such as （）, between them (``:numref:`sec_sgd` で``, not
+``:numref:`sec_sgd`で``); otherwise the build does not recognise the reference.
 
 ## 5. Update units
 
@@ -207,7 +218,7 @@ parentheses, numbers and units. Follow it. In general:
 
 1. Every marker line is present and unchanged; every slot is filled.
 2. Every protected token of each English block appears in its translation,
-   unchanged and in the same order.
+   unchanged (reordered only where grammar requires it, and then named in NOTES).
 3. Nothing added or dropped; connectives, quantities and negations intact.
 4. Terms follow the glossary and the decisions log; new choices are in
    DECISIONS.

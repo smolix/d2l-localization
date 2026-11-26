@@ -18,6 +18,7 @@ _TOKEN_RE = re.compile(r'''
 | (?P<target>\]\((?:[^()\s]|\([^()\s]*\))*(?:\s+"[^"]*")?\))
 | (?P<attr>\{[.#][^{}\n]*\}|\{=\w+\})
 | (?P<autolink><https?://[^>\s]+>)
+| (?P<filled><span\ class="d2l-(?:build-date|site-url)">[^<]*</span>)
 | (?P<tag></?[A-Za-z][\w:-]*(?:\s+[^<>]*?)?/?>)
 | (?P<url>https?://[^\s)<>\]]+)
 ''', re.X | re.S)
@@ -99,6 +100,8 @@ def tokens(text: str) -> list:
         t = m.group(0)
         if g == 'dmath':
             g = 'math'
+        elif g == 'filled':
+            g = 'tag'
         elif g in ('autolink', 'url'):
             g = 'link'
         elif g == 'tag':

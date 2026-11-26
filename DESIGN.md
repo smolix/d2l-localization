@@ -28,14 +28,21 @@ d2l-localization/
   languages.yml        # per language: code, locale, names, bucket, hosts, pinned tag,
                        #   fonts, direction, forum rule, old edition
   glossary/            # concepts.jsonl + terms/<locale>.jsonl (from d2l-neu docs/multilingual)
-  tools/l10n/          # CLI: status, extract, bump, translate, check, build, deploy
+  tools/l10n/          # the CLI (bin/l10n, or python -m l10n from tools/): status, pin, emit,
+                       #   apply, check, bump, pseudo, build, deploy, menu, strings, roundtrip
+  bin/l10n             # wrapper: bin/l10n <command> ...
   templates/style.md   # starting point for a language's style guide
+  site/languages.json  # the language menu, written by `l10n menu`
   <lang>/
-    book/              # translated .md files at the English paths (chapter_*/...)
-    strings.yml        # UI strings (menu, buttons, template text)
+    book/              # translated blocks, one file per English path (chapter_*/..., section 3)
+    strings.yml        # UI strings and language settings: the build's D2L_LOCALE_FILE
     style.md           # this language's style guide (register, punctuation, spacing)
     decisions.md       # running log of translation choices, read by every later unit
-    agents.md          # which agent translated what, and review notes (section 6)
+    notes/             # NOTES returned with each unit, one file per unit
+    units.jsonl        # one record per applied unit: time, unit, revision, agent, model, edits
+    agents.md          # bake-off results and the chosen agent (section 6)
+  work/<lang>/         # work files written by `l10n emit` (gitignored)
+  _build/<lang>/       # the build worktree of d2l-neu (gitignored)
 ```
 
 Language codes are ISO 639-1 (`ja`, not `jp`); the bucket is `d2l-<code>` and
@@ -43,30 +50,52 @@ the host `<code>.d2l.ai`. English is also served at `d2l.ai`.
 
 ## 3. What a translated file looks like
 
-A translated file mirrors its English file block for block. A block is a
-heading, paragraph, list item, table row, figure caption, exercise item, or the
-text of a slide. Before each translated block sits an anchor with a hash of the
-English block it translates:
+A block is a heading, paragraph, list item (an exercise with its sub-items and
+indented equations is one block), table row, figure or table caption, kicker,
+the text of a slide, a slide or callout title, or a text-bearing line of the
+landing page's raw HTML. `l10n` segments every English page into blocks; the
+blocks partition the file, so concatenating them gives the file back byte for
+byte (`l10n roundtrip` checks this over the whole book). Everything else is
+structure: code fences, display math that stands alone, HTML comments
+(including build directives such as `<!-- execution: locked; ... -->`), Quarto
+div fences, `:begin_tab:`/`:end_tab:` lines, `:label:`/`:eqlabel:`/`:width:`
+lines, slide placeholders (`@cell-id`, `@fig:name`), table separator rows, the
+cover kicker `[Dive into Deep Learning · §N.M]{.kicker}` (rewritten by
+`gen_slides.py`), and generated regions (`<!-- @x-begin -->` … `<!-- @x-end -->`).
+
+**The translated file holds only translated blocks**, in English order, each
+under an anchor with the hash of the English block it translates:
 
 ```
 <!--en:3f2a91c0-->
 ## 損失関数
+
+<!--en:8c11d0e4-->
+損失は*確率的勾配降下法*（:numref:`sec_sgd`）で最小化します。
+
+<!--en:a90f13c2 was=1b77a2f9 from=en-2026.11.01-->
+A stale translation: it translates English block 1b77a2f9 of en-2026.11.01.
 ```
 
-- The anchor is an HTML comment, stripped at render time.
 - The hash is the first 8 hex digits of SHA-256 over the English block after
-  whitespace normalisation. Together with the pinned tag it identifies the exact
-  English text, so the English/translation pairs need no separate database.
-- **Code is not stored.** A Python cell appears only as a reference by its
-  English cell ID, e.g. `@cell rcnn-fast-r-cnn-1`; the build inserts the code
-  from the tag. Other fences (shell, plain text) are copied by the tools, never
-  edited by translators. Code comments stay English **[ruled]**.
+  whitespace normalisation; a text that repeats in a file gets `-2`, `-3`, ...
+  Together with the aligned revision it identifies the exact English text, so
+  the English/translation pairs need no separate database.
+- `l10n build` reconstructs each page from the English file at the aligned
+  revision: translated blocks replace their English text, untranslated and
+  stale blocks stay English, and all structure is copied. **Code, display
+  math, comments and structure are never stored or edited in this
+  repository**, so there is nothing to keep in sync and no cell IDs to
+  reference. Code comments stay English **[ruled]**.
+- `was=`/`from=` (and `src=` when the English file was renamed) mark a stale
+  translation left by `l10n bump`; an update unit refreshes it.
 - Math, labels (`:label:`), references (`:numref:`, `:ref:`, `:cite:`,
-  `§{sec_x}`), slide placeholders (`@id`, `@!id[out=1]`), image paths, URLs and
-  HTML/Quarto attributes are byte-identical to English. `l10n check` enforces
-  this.
+  `§{sec_x}`), inline code, image paths, URLs and HTML/Quarto attributes inside
+  a block are byte-identical to English. `l10n check` enforces this.
 - Figures stay English **[ruled]**. Their captions are in the `.md` files and
   are translated.
+- `l10n status <lang>` reports per file the translated, stale and missing
+  blocks and the share of English words covered.
 
 ## 4. Updating to a new English tag
 
@@ -81,9 +110,15 @@ English file:
 | Deleted | dropped |
 | Code | nothing to do (inserted from the tag) |
 
-Renamed or moved files are followed through their section labels. The result
-is a small diff per language, as surgical as the English change, reviewed as
-one PR. The pin in `languages.yml` moves only after `l10n check` passes.
+Blocks are aligned with `difflib` over the block sequence, keyed by text hash
+for prose, cell ID for code and label for `:label:` lines; inside a changed
+region, old and new prose blocks are paired by word-level similarity (≥ 0.3,
+same kind). Renamed or moved files are followed by git rename detection, then
+by their `:label:`s. The result is a small diff per language, as surgical as
+the English change, reviewed as one PR. `bump` writes the target to
+`pinned_next` in `languages.yml` (all tools then work against it) and emits
+the update work files; the pin moves only when `l10n check <lang> --promote`
+finds every block translated and clean.
 
 ## 5. Work units: whole sections, not isolated blocks
 
@@ -95,7 +130,7 @@ translator always works on a whole section and sees more around it.
 
 - **Unit.** One `##` section of a page (or the whole page when it is short),
   typically 1,000-5,000 words, including the section's slides and exercises.
-- **Work file.** `l10n translate --emit` writes one Markdown work file per unit
+- **Work file.** `l10n emit <lang>` writes one Markdown work file per unit
   (format in `TRANSLATING.md`). It holds, in order:
   1. a brief: the language's `style.md`, the language's running decisions log
      (below), and the glossary entries for every concept in the unit;
@@ -124,9 +159,15 @@ translator always works on a whole section and sees more around it.
   neighbour to change (a connective, a now-ambiguous "this"), it may edit that
   block and must say so; `l10n check` lists such edits for review.
 
-`l10n translate --apply` checks each answer (section 10) and merges it. Each
-unit records the agent and model that produced it, so quality can be compared
-across agents and languages.
+Slides go to the unit whose section holds the code cells they show (the
+`@cell-id` placeholders); a slide without cells follows the previous one.
+Sections are merged until a unit has about 1,000 words (at most 5,000); a page
+of at most 2,000 words is one unit.
+
+`l10n apply <lang> <answers> --agent <who>` checks each answer (section 10) and
+merges it; a unit with errors is rejected as a whole. Each unit records the
+agent and model that produced it in `<lang>/units.jsonl`, so quality can be
+compared across agents and languages.
 
 ## 6. Agents per language
 
@@ -143,26 +184,33 @@ with Opus, others may do better with Gemini or Codex **[ruled]**.
 
 ## 7. Building and deploying one language
 
-`l10n build <lang>`:
+`l10n build <lang> [--html-only]`:
 
-1. Check out d2l-neu at the pinned tag into a scratch directory (git worktree).
-2. Overlay `<lang>/book/`, inserting code by cell ID and dropping anchors.
-3. Apply `<lang>/strings.yml` and the language settings from `languages.yml`:
+1. Check out d2l-neu at the pinned tag into `_build/<lang>` (a git worktree),
+   with `.venv-*`, `.env` and `data` symlinked to the main checkout's.
+2. Overwrite each translated chapter `.md` with the page reconstructed from
+   the English file and `<lang>/book/` (section 3).
+3. Set `D2L_LANG=<code>` and `D2L_LOCALE_FILE=<lang>/strings.yml` (created and
+   updated from the tag's `i18n/en.yml` by `l10n strings <lang>`), which carry
+   the language settings from `languages.yml`:
    Quarto `lang:` (localises Quarto's own UI and search), fonts (Noto Sans/Serif
    CJK, Devanagari, Arabic), `dir: rtl` for Arabic, the PDF preamble per script.
-4. Run d2l-neu's no-execution pipeline: HTML, PDFs, slides, notebook zips. The
+4. Run d2l-neu's no-execution pipeline (`make all-quick`; `make html` with
+   `--html-only`): HTML, PDFs, slides, notebook zips. The
    outputs come from the English store (numbers and plots do not depend on the
    language); freshness stays clean because code cells are identical.
 
-`l10n deploy <lang>` uploads to bucket `d2l-<lang>` with d2l-neu's
-`tools/upload_r2.sh` (keys in `~/.config/cloudflare/d2l-buckets.env`, one
-manifest per bucket). The only shared resource is the `d2l-data` bucket, used
+`l10n deploy <lang>` uploads to bucket `d2l-<lang>` with the worktree's
+`tools/upload_r2.sh --delete` (keys in `~/.config/cloudflare/d2l-buckets.env`;
+the upload manifest is kept in `_state/` between builds). The only shared resource is the `d2l-data` bucket, used
 through the `DATA_HUB` URLs and for the language menu.
 
 ## 8. Language menu and old editions
 
 - The menu is loaded at runtime from `languages.json` in the `d2l-data` bucket
-  **[ruled]**, generated from `languages.yml`; each build carries a static copy
+  **[ruled]**, generated from `languages.yml` by `l10n menu` (`--upload` puts it
+  at `site/languages.json`): English, every language with a pinned tag, then
+  the old editions. Each build carries a static copy
   as fallback. Adding a language does not require rebuilding the others.
 - Order: current languages, a divider, then old editions ("English (old)" at
   en-v2.d2l.ai, later "中文 (old)" and others).
@@ -180,16 +228,31 @@ through the `DATA_HUB` URLs and for the language menu.
 
 ## 10. Checks
 
-`l10n check <lang>` fails on:
+`l10n apply` checks every answer and `l10n check <lang>` every translated file.
+Errors (an answer with an error is rejected):
 
-- a block without an anchor, an anchor whose hash is not in the pinned English
-  file, or a block count that differs from English;
-- any change to protected tokens (section 3);
-- unbalanced Markdown emphasis, links or Quarto divs;
-- glossary violations: a verified or invariant term not used where its English
-  concept appears;
-- characters that break the PDF build (bidi control characters, a `$` followed
-  by a digit).
+- a missing or unknown marker in an answer; an anchor whose hash is not in the
+  English file at the aligned revision; with `--complete` (and `--promote`),
+  any block still missing or stale;
+- protected tokens (section 3) of a class whose multiset differs from English;
+  a heading level, list marker, `![`, `|` or kicker bracket that changed; a
+  table row with another cell count; a slide/callout fence changed outside its
+  `title` attribute;
+- unbalanced `*`/`**` emphasis or brackets (where the English is balanced);
+- a reference role or inline math set directly against a CJK letter
+  (``:numref:`x`で``: pandoc does not recognise the role; full-width
+  punctuation such as （） is fine);
+- bidi control characters, a closing `$` followed by a digit.
+
+Warnings: protected tokens in a different order (Japanese is verb-final; a NOTE
+that names the block acknowledges it), numbers of the English missing from the
+translation (digits only, so `2×` → 2 倍 and `40–55` → 40〜55 pass), list items
+re-wrapped into a different marker count, an edited locked block without a
+NOTE, and glossary violations: a `verified_*` or `invariant` term absent where
+its English concept appears. `l10n check` also lists every locked block edited
+at the current revision, for review. A language can change the switches in
+`languages.yml` (`check: {cjk_adjacent: letters|all|off, order:
+warning|error|off, numbers: warning|off}`).
 
 A sampled back-translation check reports meaning drift for human review; it does
 not fail the build.
@@ -203,7 +266,7 @@ not fail the build.
    checkout itself.
 3. `make release TAG=en-YYYY.MM.DD` with the checks of section 1.
 4. The language menu from `languages.json` (runtime, with fallback).
-5. Move the glossary (`docs/multilingual/`) to this repository.
+5. Move the glossary (`docs/multilingual/`) to this repository (done: `glossary/`).
 
 ## 12. Rollout
 
