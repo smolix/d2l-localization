@@ -44,3 +44,18 @@ with the current checker.
   *Область* (which still passes with 0 warnings).
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `c95293c`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 2 | 4,401 (1.04) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 1 | 4,313 (1.02) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 4,074 (0.96) |
+
+The native-reader verdict is pending.
