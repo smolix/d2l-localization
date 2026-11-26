@@ -105,9 +105,22 @@ class Glossary:
             if not any(c.binding and c.check for c in cands):
                 continue
             forms = [f for c in cands for f in c.forms()]
+            if _kept_english(surface, translation):
+                continue
             if forms and not any(_present(f, low) for f in forms):
                 out.append(f'{surface!r} -> {" / ".join(c.preferred for c in cands if c.preferred)}')
         return sorted(set(out))
+
+
+def _kept_english(surface: str, translation: str) -> bool:
+    """The translation keeps the English as written: an acronym the English uses
+    ("CNNs" -> "CNN", "SGD") or a capitalised name or title ("Tensor Core",
+    "Neural Networks and Deep Learning"). Lower-case English left in the
+    translation is still reported."""
+    keep = re.sub(r'(?<=[A-Z])s$', '', surface)
+    if not ((keep.isupper() and len(keep) > 1) or surface.istitle()):
+        return False
+    return re.search(rf'(?<![A-Za-z]){re.escape(keep)}(?![a-z])', translation) is not None
 
 
 def _present(form: str, low: str) -> bool:

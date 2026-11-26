@@ -103,6 +103,15 @@ class TestCheck(unittest.TestCase):
 
 
 class GlossaryPresenceTest(unittest.TestCase):
+    def test_kept_acronym(self):
+        from l10n.glossary import load
+        g = load('vi')
+        self.assertEqual(g.violations('We train CNNs with SGD.', 'Ta huấn luyện các CNN bằng SGD.'), [])
+        self.assertTrue(g.violations('We train CNNs with SGD.', 'Ta huấn luyện các mô hình.'))
+        self.assertEqual(g.violations('See *Neural Networks and Deep Learning*.',
+                                      'Xem *Neural Networks and Deep Learning*.'), [])
+        self.assertTrue(g.violations('Deep neural networks learn.', 'Deep neural networks học.'))
+
     def test_inflection_and_line_breaks(self):
         from l10n.glossary import _present
         self.assertTrue(_present('champ récepteur', 'les champs récepteurs'))
