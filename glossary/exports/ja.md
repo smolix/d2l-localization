@@ -9,7 +9,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | linear regression | 線形回帰 | verified_external | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L129) |
 | regression | 回帰 | verified_d2l | regression: The task of predicting a numerical outcome. | [east-ja-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression.md#L4) |
 | classification | 分類 | verified_d2l | classification: The task of assigning an input to a category. | [east-ja-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_introduction/index.md#L136) |
-| feature | 特徴 | verified_d2l | feature: An observed input variable used by a model. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L20) |
+| feature | 特徴量 | verified_external | feature: An observed input variable used by a model. | review-ja-3786611ff7: page |
 | label | ラベル | verified_external | label: The target value associated with an example. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#label) |
 | training example | 訓練例 | proposed | training-example: An observation used to fit a model. |  |
 | dataset | データセット | verified_d2l | dataset: A collection of examples used for analysis or learning. | [east-ja-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression-concise.md#L4) |
@@ -24,18 +24,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | objective function | 目的関数 | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [east-google-ml-ja-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ja#objective-function) |
 | squared error | 二乗誤差 | verified_d2l | squared-error: The square of the difference between a prediction and its target. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L88) |
 | mean squared error | 平均二乗誤差 | verified_d2l | mean-squared-error: The average squared difference between predictions and targets. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L111) |
-| empirical risk | 経験的リスク | verified_d2l | empirical-risk: The average loss measured on a finite dataset. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L95) |
+| empirical risk | 経験リスク | proposed | empirical-risk: The average loss measured on a finite dataset. |  |
 | minibatch | ミニバッチ | verified_d2l | minibatch: A subset of examples processed together in an update. | [east-ja-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression-concise.md#L109) |
 | batch size | バッチサイズ | verified_external | batch-size: The number of examples processed in a batch. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#batch-size) |
 | epoch | エポック | verified_external | epoch: A pass through the training dataset. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L147) |
 | gradient descent | 勾配降下法 | verified_external | gradient-descent: An optimization method that moves parameters against the objective gradient. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L93) |
-| stochastic gradient descent | 確率的勾配降下 | verified_d2l | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | [east-ja-chapter-optimization-sgd-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/sgd.md#L5) |
+| stochastic gradient descent | 確率的勾配降下法 | verified_external | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | review-ja-26aa165792: page |
 | learning rate | 学習率 | verified_external | learning-rate: The step-size setting used in an optimization update. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L274) |
 | optimization | 最適化 | verified_d2l | optimization: The process of finding values that improve an objective. | [east-ja-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression-concise.md#L109) |
 | gradient | 勾配 | verified_d2l | gradient: The vector of partial derivatives of a scalar function. | [east-ja-chapter-optimization-sgd-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/sgd.md#L37) |
 | derivative | 導関数 | proposed | derivative: The rate of change of a function with respect to an input. |  |
 | partial derivative | 偏微分 | verified_d2l | partial-derivative: A derivative with respect to one variable while others are held fixed. | [east-ja-chapter-appendix-mathematics-for-deep-learning-multivariable-calculus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/multivariable-calculus.md#L11) |
-| chain rule | チェーンルール | verified_d2l | chain-rule: A rule for differentiating compositions of functions. | [east-ja-chapter-multilayer-perceptrons-backprop-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/backprop.md#L52) |
+| chain rule | 連鎖律 | verified_external | chain-rule: A rule for differentiating compositions of functions. | review-ja-934bd53684: page |
 | backpropagation | 誤差逆伝播法 | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L182) |
 | automatic differentiation | 自動微分 | verified_d2l | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | [east-ja-chapter-linear-networks-linear-regression-scratch-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression-scratch.md#L157) |
 | computational graph | 計算グラフ | verified_d2l | computational-graph: A representation of a computation as connected operations and values. | [east-ja-chapter-multilayer-perceptrons-backprop-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/backprop.md#L44) |
@@ -45,7 +45,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | scalar | スカラー | verified_d2l | scalar: A single numerical quantity. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L20) |
 | transpose | 転置 | verified_external | transpose: An operation that exchanges the row and column axes of a matrix. | [east-stanford-ja-cs-229-linear-algebra-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-linear-algebra.md#L130) |
 | dot product | ドット積 | verified_d2l | dot-product: The sum of componentwise products of two vectors. | [east-ja-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression.md#L36) |
-| matrix multiplication | 行列の乗算 | proposed | matrix-multiplication: A product combining rows of one matrix with columns of another. |  |
+| matrix multiplication | 行列積 | proposed | matrix-multiplication: A product combining rows of one matrix with columns of another. |  |
 | eigenvalue | 固有値 | proposed | eigenvalue: A scaling factor associated with an eigenvector of a linear map. |  |
 | eigenvector | 固有ベクトル | verified_d2l | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. | [east-ja-chapter-recurrent-neural-networks-bptt-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/bptt.md#L164) |
 | singular value decomposition | 特異値分解 | verified_d2l | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. | [east-ja-chapter-appendix-mathematics-for-deep-learning-eigendecomposition-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L158) |
@@ -56,7 +56,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | identity matrix | 単位行列 | verified_external | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. | [east-stanford-ja-cs-229-linear-algebra-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-linear-algebra.md#L46) |
 | determinant | 行列式 | verified_external | determinant: A scalar associated with a square matrix that describes signed volume scaling. | [east-stanford-ja-cs-229-linear-algebra-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-linear-algebra.md#L166) |
 | rank | ランク | verified_d2l | rank: The dimension of the span of a matrix's columns or rows. | [east-ja-chapter-appendix-mathematics-for-deep-learning-geometry-linear-algebraic-ops-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L394) |
-| trace | 跡 | verified_external | trace: The sum of the diagonal entries of a square matrix. | [east-stanford-ja-cs-229-linear-algebra-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-linear-algebra.md#L154) |
+| trace | トレース | verified_external | trace: The sum of the diagonal entries of a square matrix. | review-ja-fb73195fa6: page |
 | orthogonal | 直交 | verified_d2l | orthogonal: Having zero inner product, or preserving inner products for a transformation. | [east-ja-chapter-appendix-mathematics-for-deep-learning-geometry-linear-algebraic-ops-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L132) |
 | positive definite | 正定値 | verified_d2l | positive-definite: Having a strictly positive quadratic form for every nonzero vector. | [east-ja-chapter-optimization-momentum-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/momentum.md#L252) |
 | probability | 確率 | proposed | probability: A numerical measure of the likelihood of an event. |  |
@@ -67,11 +67,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | joint distribution | 同時分布 | proposed | joint-distribution: A probability distribution over multiple random variables together. |  |
 | marginal distribution | 周辺分布 | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
 | independence | 独立性 | verified_external | independence: A property where knowing one event or variable does not change the distribution of another. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L105) |
-| expectation | 期待 | proposed | expectation: The probability-weighted average of a random quantity. |  |
-| variance | バリアンス | verified_external | variance: The expected squared deviation from the mean. | [east-stanford-ja-cs-229-machine-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-machine-learning-tips-and-tricks.md#L219) |
+| expectation | 期待値 | verified_external | expectation: The probability-weighted average of a random quantity. | review-ja-875a2548d9: page |
+| variance | 分散 | verified_external | variance: The expected squared deviation from the mean. | review-ja-d55ca17dad: page |
 | standard deviation | 標準偏差 | verified_external | standard-deviation: The square root of variance. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L171) |
 | covariance | 共分散 | verified_external | covariance: A measure of how two random variables vary together. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L243) |
-| correlation | 相関係数 | verified_external | correlation: A normalized measure of association between variables. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L249) |
+| correlation | 相関 | verified_external | correlation: A normalized measure of association between variables. | review-ja-7c41214e50: page |
 | Gaussian distribution | ガウス分布 | verified_d2l | gaussian-distribution: A continuous distribution characterized by a mean and variance. | [east-ja-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression.md#L14) |
 | Bernoulli distribution | ベルヌーイ分布 | verified_d2l | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [east-ja-chapter-appendix-mathematics-for-deep-learning-information-theory-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L609) |
 | Poisson distribution | ポアソン分布 | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
@@ -85,26 +85,26 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Monte Carlo | モンテカルロ | verified_d2l | monte-carlo: A family of methods that use random samples to estimate quantities. | [east-ja-chapter-recurrent-modern-bi-rnn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/bi-rnn.md#L70) |
 | entropy | エントロピー | verified_external | entropy: A measure of uncertainty in a probability distribution. | [east-google-ml-ja-df](https://developers.google.com/machine-learning/glossary/df?hl=ja#entropy) |
 | cross-entropy | 交差エントロピー | verified_external | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [east-google-ml-ja-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ja#cross-entropy) |
-| mutual information | 相互情報 | verified_d2l | mutual-information: A measure of statistical dependence between random variables. | [east-ja-chapter-appendix-mathematics-for-deep-learning-information-theory-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L293) |
+| mutual information | 相互情報量 | verified_external | mutual-information: A measure of statistical dependence between random variables. | review-ja-15ca3c8945: page |
 | softmax | ソフトマックス | verified_external | softmax: A function converting real-valued scores into a probability distribution. | [east-stanford-ja-cs-230-convolutional-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-convolutional-neural-networks.md#L330) |
 | logistic regression | ロジスティック回帰 | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L177) |
 | sigmoid | シグモイド | verified_d2l | sigmoid: A bounded nonlinear function often used to map real values to probabilities. | [east-ja-chapter-multilayer-perceptrons-numerical-stability-and-init-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L22) |
-| cross-entropy loss | 交差エントロピー誤差 | verified_external | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L168) |
+| cross-entropy loss | 交差エントロピー損失 | proposed | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. |  |
 | accuracy | 正解率 | verified_external | accuracy: The proportion of predictions that are correct. | east-external-ja-atmarkit-itmedia-co-jp-news020-html: section 正解率 |
 | precision | 適合率 | verified_external | precision: The fraction of predicted positives that are true positives. | [east-external-ja-atmarkit-itmedia-co-jp-news020-html](https://atmarkit.itmedia.co.jp/ait/articles/2010/27/news020.html###%20%E9%81%A9%E5%90%88%E7%8E%87%EF%BC%88Precision%EF%BC%89) |
 | recall | 再現率 | verified_external | recall: The fraction of actual positives that are correctly identified. | east-external-ja-atmarkit-itmedia-co-jp-news020-html: section 再現率 |
 | confusion matrix | 混同行列 | verified_external | confusion-matrix: A table comparing predicted and actual class counts. | [east-stanford-ja-cs-229-machine-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-machine-learning-tips-and-tricks.md#L21) |
 | neural network | ニューラルネットワーク | proposed | neural-network: A model composed of interconnected parameterized transformations. |  |
 | neuron | ニューロン | verified_external | neuron: A computational unit that transforms inputs into an output. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#neuron) |
-| layer | レイヤ | verified_external | layer: A stage of a neural network that transforms its input. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#layer) |
+| layer | 層 | verified_external | layer: A stage of a neural network that transforms its input. | review-ja-8e056769be: page |
 | hidden layer | 隠れ層 | verified_external | hidden-layer: A network layer between the input and output layers. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L27) |
 | activation function | 活性化関数 | verified_external | activation-function: A function applied to a unit's input to produce its activation. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#activation-function) |
 | nonlinearity | 非線形性 | verified_d2l | nonlinearity: A transformation that is not linear in its input. | [east-ja-chapter-multilayer-perceptrons-mlp-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/mlp.md#L59) |
-| multilayer perceptron | マルチレイヤパーセプトロン | verified_d2l | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [east-ja-chapter-multilayer-perceptrons-mlp-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/mlp.md#L22) |
+| multilayer perceptron | 多層パーセプトロン | verified_external | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | review-ja-67e8b11446: page |
 | rectified linear unit | ReLU | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L51) |
 | overfitting | 過学習 | verified_external | overfitting: Fitting training data so closely that performance on unseen data suffers. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#overfitting) |
 | underfitting | 学習不足 | verified_external | underfitting: Failing to capture important structure even in the training data. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#underfitting) |
-| generalization | 一般化 | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#generalization) |
+| generalization | 汎化 | proposed | generalization: The ability of a learned model to perform well on unseen examples. |  |
 | regularization | 正則化 | verified_external | regularization: A method that constrains or modifies learning to improve generalization. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L323) |
 | weight decay | 重み減衰 | verified_d2l | weight-decay: A regularization method that shrinks model weights during training. | [east-ja-chapter-multilayer-perceptrons-weight-decay-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/weight-decay.md#L240) |
 | dropout | ドロップアウト | verified_external | dropout: A training method that randomly masks activations to regularize a network. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L330) |
@@ -113,14 +113,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | model selection | モデル選択 | verified_external | model-selection: The process of choosing a model or configuration using available evidence. | [east-stanford-ja-cs-229-machine-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-machine-learning-tips-and-tricks.md#L129) |
 | cross-validation | 交差検証 | verified_external | cross-validation: A method for evaluating configurations across different train-validation splits. | [east-stanford-ja-cs-229-machine-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-machine-learning-tips-and-tricks.md#L171) |
 | initialization | 初期化 | verified_d2l | initialization: The choice of initial parameter values before training. | [east-ja-chapter-linear-networks-linear-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression-concise.md#L130) |
-| vanishing gradient | 消失するグラデーション | verified_d2l | vanishing-gradient: A gradient that becomes very small as it propagates through a network. | [east-ja-chapter-recurrent-neural-networks-bptt-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/bptt.md#L6) |
-| exploding gradient | グラデーションの爆発 | verified_d2l | exploding-gradient: A gradient that grows excessively large during propagation. | [east-ja-chapter-recurrent-neural-networks-bptt-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/bptt.md#L5) |
+| vanishing gradient | 勾配消失 | verified_external | vanishing-gradient: A gradient that becomes very small as it propagates through a network. | review-ja-6ada51914e: page |
+| exploding gradient | 勾配爆発 | verified_external | exploding-gradient: A gradient that grows excessively large during propagation. | review-ja-6ada51914e: page |
 | gradient clipping | 勾配クリッピング | verified_external | gradient-clipping: Limiting gradient magnitude to stabilize optimization. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L196) |
 | batch normalization | バッチ正規化 | verified_d2l | batch-normalization: A normalization method using statistics of activations in a batch. | [east-ja-chapter-convolutional-modern-batch-norm-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/batch-norm.md#L1) |
-| layer normalization | レイヤー正規化 | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
+| layer normalization | 層正規化 | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | 畳み込み | verified_d2l | convolution: An operation that combines local input values with shared kernel weights. | [east-ja-chapter-convolutional-neural-networks-conv-layer-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/conv-layer.md#L271) |
-| convolutional neural network | 畳み込みニューラル ネットワーク | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
-| kernel | 畳み込みカーネル | verified_d2l | kernel: A set of weights applied locally in a convolution. | [east-ja-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/why-conv.md#L55) |
+| convolutional neural network | 畳み込みニューラルネットワーク | verified_external | convolutional-neural-network: A neural network using convolutional layers to process structured data. | review-ja-53066d13f9: page |
+| kernel | カーネル | verified_external | kernel: A set of weights applied locally in a convolution. | review-ja-53066d13f9: page |
 | filter | フィルタ | verified_external | filter: A learned set of local weights used to extract a pattern. | [east-stanford-ja-cs-230-convolutional-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-convolutional-neural-networks.md#L183) |
 | channel | チャネル | verified_d2l | channel: A feature dimension in a structured representation such as an image. | [east-ja-chapter-convolutional-neural-networks-channels-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/channels.md#L6) |
 | stride | ストライド | verified_external | stride: The spacing between successive positions of an operation on an input. | [east-stanford-ja-cs-230-convolutional-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-convolutional-neural-networks.md#L197) |
@@ -133,17 +133,17 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | residual connection | 残差接続 | verified_d2l | residual-connection: A connection that adds an earlier representation to a later transformation. | [east-ja-chapter-convolutional-modern-resnet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/resnet.md#L23) |
 | residual network | 残差ネットワーク | proposed | residual-network: A neural network built using residual connections. |  |
 | skip connection | スキップ接続 | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
-| image augmentation | 画像拡張 | verified_d2l | image-augmentation: A technique that creates varied training images through transformations. | [east-ja-chapter-computer-vision-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/index.md#L6) |
+| image augmentation | 画像データ拡張 | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
 | transfer learning | 転移学習 | verified_external | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [east-stanford-ja-cs-230-deep-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-deep-learning-tips-and-tricks.md#L238) |
 | fine-tuning | ファインチューニング | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | [east-google-ml-ja-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ja#fine-tuning) |
 | pretraining | 事前学習 | proposed | pretraining: Training a model on an initial task or dataset before adaptation. |  |
 | object detection | 物体検出 | verified_external | object-detection: The task of locating and classifying objects in an image. | [east-stanford-ja-cs-230-convolutional-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-convolutional-neural-networks.md#L344) |
-| bounding box | 境界ボックス | verified_d2l | bounding-box: A rectangle specifying the location and extent of an object. | [east-ja-chapter-computer-vision-bounding-box-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/bounding-box.md#L49) |
-| intersection over union | IoU（共通部分と和集合の比） | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
+| bounding box | バウンディングボックス | verified_external | bounding-box: A rectangle specifying the location and extent of an object. | review-ja-04fb99b2d0: page |
+| intersection over union | IoU | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
 | semantic segmentation | セマンティックセグメンテーション | verified_d2l | semantic-segmentation: The task of assigning a semantic class to each image pixel. | [east-ja-chapter-computer-vision-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/index.md#L6) |
 | instance segmentation | インスタンスセグメンテーション | verified_d2l | instance-segmentation: The task of identifying individual object instances at pixel level. | [east-ja-chapter-computer-vision-semantic-segmentation-and-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/semantic-segmentation-and-dataset.md#L14) |
 | image classification | 画像分類 | verified_d2l | image-classification: The task of assigning a class to an image. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L20) |
-| computer vision | コンピュータービジョン | verified_d2l | computer-vision: The study of extracting information and making predictions from visual data. | [east-ja-chapter-computer-vision-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/index.md#L1) |
+| computer vision | コンピュータビジョン | verified_external | computer-vision: The study of extracting information and making predictions from visual data. | review-ja-fdadcd0283: page |
 | recurrent neural network | リカレントニューラルネットワーク | verified_d2l | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. | [east-ja-chapter-recurrent-neural-networks-rnn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/rnn.md#L144) |
 | hidden state | 隠れ状態 | verified_d2l | hidden-state: An internal representation carried between steps of a sequential model. | [east-ja-chapter-recurrent-neural-networks-rnn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/rnn.md#L8) |
 | time step | タイムステップ | verified_d2l | time-step: A position in a sequential or temporal computation. | [east-ja-chapter-recurrent-neural-networks-sequence-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/sequence.md#L29) |
@@ -151,30 +151,30 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | language model | 言語モデル | verified_external | language-model: A model assigning probabilities to sequences of language tokens. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L463) |
 | token | トークン | verified_d2l | token: A unit into which text is divided for processing. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L154) |
 | tokenization | トークン化 | verified_d2l | tokenization: The process of dividing text into tokens. | [east-ja-chapter-recurrent-neural-networks-text-preprocessing-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/text-preprocessing.md#L53) |
-| vocabulary | ボキャブラリー | verified_d2l | vocabulary: The set of tokens available to a language model. | [east-ja-chapter-recurrent-neural-networks-text-preprocessing-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/text-preprocessing.md#L73) |
+| vocabulary | 語彙 | verified_external | vocabulary: The set of tokens available to a language model. | review-ja-7b82ad2be8: page |
 | embedding | 埋め込み | verified_d2l | embedding: A learned numerical representation of a discrete item or other object. | [east-ja-chapter-recommender-systems-mf-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/mf.md#L45) |
 | word embedding | 単語埋め込み | verified_d2l | word-embedding: A numerical vector representing a word. | [east-ja-chapter-natural-language-processing-pretraining-word2vec-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/word2vec.md#L6) |
 | sequence-to-sequence | 系列対系列モデル | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | エンコーダ | verified_d2l | encoder: A component that converts an input into an internal representation. | [east-ja-chapter-attention-mechanisms-transformer-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/transformer.md#L216) |
 | decoder | デコーダ | verified_d2l | decoder: A component that produces an output from an internal representation or context. | [east-ja-chapter-attention-mechanisms-transformer-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/transformer.md#L423) |
 | teacher forcing | 教師強制 | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
-| beam search | ビーム検索 | verified_external | beam-search: A decoding method that retains a limited number of candidate sequences at each step. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L513) |
+| beam search | ビームサーチ | verified_external | beam-search: A decoding method that retains a limited number of candidate sequences at each step. | review-ja-6d7bd7b5a8: page |
 | perplexity | パープレキシティ | verified_external | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L484) |
-| long short-term memory | 長期短期記憶 | verified_d2l | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | [east-ja-chapter-recurrent-modern-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/index.md#L6) |
-| gated recurrent unit | ゲート付き回帰ユニット | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
+| long short-term memory | 長・短期記憶 | verified_external | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | review-ja-421b53130c: page |
+| gated recurrent unit | ゲート付きリカレントユニット | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
 | attention | アテンション | verified_external | attention: A mechanism that forms a context-dependent weighted combination of values. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L597) |
-| self-attention | 自己注意 | verified_d2l | self-attention: Attention in which queries, keys, and values are derived from the same sequence. | [east-ja-chapter-attention-mechanisms-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/index.md#L12) |
+| self-attention | 自己アテンション | verified_external | self-attention: Attention in which queries, keys, and values are derived from the same sequence. | review-ja-8588bff27f: page |
 | multi-head attention | マルチヘッドアテンション | verified_d2l | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | [east-ja-chapter-attention-mechanisms-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/index.md#L11) |
 | query | クエリ | verified_d2l | query: A representation used to select relevant information in attention. | [east-ja-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/attention-cues.md#L26) |
 | key | キー | verified_d2l | key: A representation compared with a query to determine attention weights. | [east-ja-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/attention-cues.md#L26) |
 | value | 値 | verified_d2l | value: A representation combined according to attention weights. | [east-ja-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/attention-cues.md#L26) |
 | positional encoding | 位置エンコーディング | verified_d2l | positional-encoding: Information added to representations to communicate sequence position. | [east-ja-chapter-attention-mechanisms-transformer-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/transformer.md#L8) |
-| transformer | トランスフォーマー | verified_d2l | transformer: A neural architecture built around attention and feedforward layers. | [east-ja-chapter-attention-mechanisms-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/index.md#L12) |
+| transformer | Transformer | verified_external | transformer: A neural architecture built around attention and feedforward layers. | review-ja-7b82ad2be8: page |
 | masked language model | マスク言語モデル | verified_d2l | masked-language-model: A language model trained to predict hidden tokens from context. | [east-ja-chapter-natural-language-processing-pretraining-bert-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/bert.md#L178) |
-| BERT | BERTモデル | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
+| BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
 | generative model | 生成モデル | verified_d2l | generative-model: A model that describes or generates samples from a data distribution. | [east-ja-chapter-generative-adversarial-networks-gan-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_generative-adversarial-networks/gan.md#L8) |
 | discriminative model | 識別モデル | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. |  |
-| generator | ジェネレータ | verified_d2l | generator: A model component that produces synthetic samples. | [east-ja-chapter-generative-adversarial-networks-gan-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_generative-adversarial-networks/gan.md#L101) |
+| generator | 生成器 | proposed | generator: A model component that produces synthetic samples. |  |
 | discriminator | 識別器 | proposed | discriminator: A model component trained to distinguish classes of samples, often real and generated. |  |
 | autoencoder | オートエンコーダ | verified_d2l | autoencoder: A model trained to reconstruct inputs through an encoded representation. | [east-ja-chapter-recommender-systems-autorec-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/autorec.md#L3) |
 | latent variable | 潜在変数 | verified_d2l | latent-variable: An unobserved variable used to explain or generate observed data. | [east-ja-chapter-recurrent-neural-networks-rnn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/rnn.md#L4) |
@@ -184,15 +184,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | denoising | ノイズ除去 | verified_d2l | denoising: Recovering a cleaner signal from a noisy observation. | [east-ja-chapter-computer-vision-neural-style-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/neural-style.md#L227) |
 | score function | スコア関数 | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | マルコフ連鎖 | proposed | markov-chain: A stochastic process whose next state depends on the present state. |  |
-| Markov decision process | マルコフ決定プロセス | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. |  |
+| Markov decision process | マルコフ決定過程 | verified_external | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. | review-ja-8d0b511a1d: page |
 | reinforcement learning | 強化学習 | verified_d2l | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L220) |
 | agent | エージェント | verified_external | agent: An entity that chooses actions in an environment. | [east-google-ml-ja-agent](https://developers.google.com/machine-learning/glossary/agent?hl=ja#agent) |
 | environment | 環境 | proposed | environment: The external system with which an agent interacts. |  |
 | state | 状態 | verified_d2l | state: A representation of the situation relevant to a sequential decision process. | [east-ja-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_introduction/index.md#L293) |
-| action | アクション | verified_external | action: A choice made by an agent that can affect the environment. | [east-google-ml-ja-agent](https://developers.google.com/machine-learning/glossary/agent?hl=ja#action) |
+| action | 行動 | verified_external | action: A choice made by an agent that can affect the environment. | review-ja-ea7d4737f7: page |
 | reward | 報酬 | verified_d2l | reward: A scalar feedback signal evaluating an outcome or transition. | [east-ja-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_introduction/index.md#L282) |
 | policy | 方策 | verified_external | policy: A rule or distribution for selecting actions from states. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L225) |
-| return | リターン | proposed | return: The accumulated future reward from a point in a trajectory. |  |
+| return | 収益 | verified_external | return: The accumulated future reward from a point in a trajectory. | review-ja-ea7d4737f7: page |
 | discount factor | 割引率 | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
 | value function | 価値関数 | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L237) |
 | action-value function | 行動価値関数 | proposed | action-value-function: A function estimating expected return from a state and action. |  |
@@ -205,14 +205,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convexity | 凸性 | verified_d2l | convexity: A geometric property governing line segments in sets or functions. | [east-ja-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/convexity.md#L1) |
 | local minimum | 極小値 | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. |  |
 | global minimum | 大域的最小値 | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
-| saddle point | サドルポイント | proposed | saddle-point: A stationary point that is not a local extremum in all directions. |  |
+| saddle point | 鞍点 | verified_external | saddle-point: A stationary point that is not a local extremum in all directions. | review-ja-b85096f07d: page |
 | Hessian | ヘッセ行列 | verified_external | hessian: The matrix of second partial derivatives of a scalar function. | [east-stanford-ja-cs-229-linear-algebra-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-linear-algebra.md#L306) |
-| Jacobian | ヤコビアン | verified_d2l | jacobian: The matrix of first partial derivatives of a vector-valued function. | [east-ja-chapter-appendix-mathematics-for-deep-learning-integral-calculus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/integral-calculus.md#L474) |
+| Jacobian | ヤコビ行列 | verified_external | jacobian: The matrix of first partial derivatives of a vector-valued function. | review-ja-f83d8eb4de: page |
 | momentum | モメンタム | verified_d2l | momentum: An optimization technique that accumulates past gradients in an update direction. | [east-ja-chapter-optimization-momentum-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/momentum.md#L1) |
 | learning rate schedule | 学習率スケジュール | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
-| Adam | アダム | verified_d2l | adam: An optimization algorithm using adaptive estimates of gradient moments. | [east-ja-chapter-optimization-adam-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/adam.md#L1) |
-| AdaGrad | アダグラッド | verified_d2l | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. | [east-ja-chapter-optimization-adagrad-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/adagrad.md#L1) |
-| RMSProp | RMSProp最適化アルゴリズム | proposed | rmsprop: An adaptive gradient method using a moving average of squared gradients. |  |
+| Adam | Adam | verified_external | adam: An optimization algorithm using adaptive estimates of gradient moments. | review-ja-26aa165792: page |
+| AdaGrad | AdaGrad | verified_external | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. | review-ja-26aa165792: page |
+| RMSProp | RMSProp | proposed | rmsprop: An adaptive gradient method using a moving average of squared gradients. |  |
 | Lagrange multiplier | ラグランジュ乗数 | proposed | lagrange-multiplier: A variable used to incorporate a constraint into an optimization problem. |  |
 | constraint | 制約 | proposed | constraint: A condition that feasible solutions to an optimization problem must satisfy. |  |
 | stationary point | 停留点 | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
@@ -224,15 +224,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | grid search | グリッド探索 | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
 | random search | ランダム探索 | proposed | random-search: A search that samples hyperparameter configurations at random. |  |
 | recommender system | 推薦システム | verified_d2l | recommender-system: A system that predicts or ranks items for users. | [east-ja-chapter-recommender-systems-movielens-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/movielens.md#L3) |
-| collaborative filtering | 協調的フィルタリング | verified_d2l | collaborative-filtering: A recommendation approach using patterns of user-item interactions. | [east-ja-chapter-recommender-systems-recsys-intro-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/recsys-intro.md#L7) |
-| matrix factorization | 行列因数分解 | verified_d2l | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. | [east-ja-chapter-recommender-systems-mf-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/mf.md#L1) |
-| implicit feedback | 暗黙的なフィードバック | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. |  |
-| word2vec | word2vec単語ベクトル手法 | proposed | word2vec: A family of methods for learning word vectors from context. |  |
+| collaborative filtering | 協調フィルタリング | verified_external | collaborative-filtering: A recommendation approach using patterns of user-item interactions. | review-ja-808ee5f372: page |
+| matrix factorization | 行列因子分解 | verified_external | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. | review-ja-55251a4e2d: page; review-ja-169fb41feb: page |
+| implicit feedback | 暗黙的フィードバック | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. |  |
+| word2vec | word2vec | proposed | word2vec: A family of methods for learning word vectors from context. |  |
 | negative sampling | ネガティブサンプリング | verified_external | negative-sampling: A training technique contrasting observed examples with sampled negative examples. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L392) |
-| sentiment analysis | センチメント分析 | verified_d2l | sentiment-analysis: The task of identifying sentiment expressed in text. | [east-ja-chapter-natural-language-processing-applications-sentiment-analysis-and-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-applications/sentiment-analysis-and-dataset.md#L5) |
+| sentiment analysis | 感情分析 | verified_external | sentiment-analysis: The task of identifying sentiment expressed in text. | review-ja-5566d9c238: page |
 | natural language inference | 自然言語推論 | verified_d2l | natural-language-inference: The task of determining a logical relationship between text statements. | [east-ja-chapter-natural-language-processing-applications-natural-language-inference-and-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L6) |
 | machine translation | 機械翻訳 | verified_external | machine-translation: The automatic conversion of text from one language to another. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L499) |
-| BLEU | Bleuスコア | verified_external | bleu: A metric comparing generated translations with reference translations using n-gram overlap. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L576) |
+| BLEU | BLEU | proposed | bleu: A metric comparing generated translations with reference translations using n-gram overlap. |  |
 | state space | 状態空間 | verified_d2l | state-space: The set or representation of possible states of a system. | [east-ja-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_introduction/index.md#L367) |
 | ordinary differential equation | 常微分方程式 | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
 | stochastic differential equation | 確率微分方程式 | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
@@ -240,7 +240,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Euler method | オイラー法 | proposed | euler-method: A numerical method that advances a differential equation using local slopes. |  |
 | Neural ODE | ニューラルODE | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
 | normalizing flow | 正規化フロー | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
-| change of variables | 変数の変更 | verified_d2l | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. | [east-ja-chapter-appendix-mathematics-for-deep-learning-integral-calculus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/integral-calculus.md#L284) |
+| change of variables | 変数変換 | verified_external | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. | review-ja-efe75b3489: page |
 | Markov property | マルコフ性 | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
 | stationary distribution | 定常分布 | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
 | principal component analysis | 主成分分析 | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [east-stanford-ja-cs-229-unsupervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-unsupervised-learning.md#L177) |
@@ -255,7 +255,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | bootstrap | ブートストラップ法 | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
 | central limit theorem | 中心極限定理 | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L321) |
 | law of large numbers | 大数の法則 | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. |  |
-| variance reduction | 分散の削減 | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
+| variance reduction | 分散低減 | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
 | causality | 因果関係 | verified_d2l | causality: The relationship in which changes to one variable bring about changes in another. | [east-ja-chapter-recurrent-neural-networks-sequence-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/sequence.md#L68) |
 | distribution shift | 分布シフト | verified_d2l | distribution-shift: A change in the data distribution between settings such as training and deployment. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L21) |
 | out-of-distribution | 分布外 | proposed | out-of-distribution: Describing inputs or data that differ from the distribution used for training. |  |
@@ -263,11 +263,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | privacy | プライバシー | proposed | privacy: Protection against unwanted disclosure of information about individuals. |  |
 | fairness | 公平性 | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
 | parallelism | 並列性 | proposed | parallelism: Executing multiple computations concurrently. |  |
-| data parallelism | データ並列処理 | verified_d2l | data-parallelism: Parallel computation in which workers process different data with replicated models. | [east-ja-chapter-computational-performance-multiple-gpus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computational-performance/multiple-gpus.md#L28) |
-| GPU | グラフィックス処理装置 | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
+| data parallelism | データ並列 | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
+| GPU | GPU | verified_external | gpu: A processor designed for highly parallel numerical computation. | review-ja-ccd9c3a801: page |
 | memory bandwidth | メモリ帯域幅 | verified_d2l | memory-bandwidth: The rate at which data can be transferred to or from memory. | [east-ja-chapter-appendix-tools-for-deep-learning-selecting-servers-gpus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L35) |
 | throughput | スループット | verified_d2l | throughput: The amount of work completed per unit time. | [east-ja-chapter-convolutional-modern-alexnet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/alexnet.md#L48) |
-| latency | 遅延 | verified_external | latency: The elapsed time required to complete a task or operation. | [east-google-ml-ja-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ja#latency) |
+| latency | レイテンシ | verified_external | latency: The elapsed time required to complete a task or operation. | review-ja-ce3f67c2ef: page |
 | quantization | 量子化 | verified_d2l | quantization: Representing numerical values using a reduced set of discrete values. | [east-ja-chapter-deep-learning-computation-custom-layer-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_deep-learning-computation/custom-layer.md#L85) |
 | knowledge distillation | 知識蒸留 | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
 | probability mass function | 確率質量関数 | verified_d2l | probability-mass-function: A function assigning probabilities to individual discrete outcomes. | [east-ja-chapter-appendix-mathematics-for-deep-learning-information-theory-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L102) |
@@ -275,16 +275,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | conditional distribution | 条件付き分布 | verified_d2l | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L21) |
 | log-likelihood | 対数尤度 | verified_d2l | log-likelihood: The logarithm of a likelihood function. | [east-ja-chapter-appendix-mathematics-for-deep-learning-maximum-likelihood-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/maximum-likelihood.md#L108) |
 | negative log-likelihood | 負の対数尤度 | verified_d2l | negative-log-likelihood: The negative logarithm of the likelihood of observed data. | [east-ja-chapter-appendix-mathematics-for-deep-learning-maximum-likelihood-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/maximum-likelihood.md#L116) |
-| maximum a posteriori | 最大事後推定 | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
+| maximum a posteriori | 最大事後確率推定 | verified_external | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. | review-ja-0e7bbd8384: page |
 | conjugate prior | 共役事前分布 | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
 | Beta distribution | ベータ分布 | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
-| categorical distribution | カテゴリ分布 | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
+| categorical distribution | カテゴリカル分布 | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
 | exponential distribution | 指数分布 | verified_d2l | exponential-distribution: A continuous distribution often used to model waiting times. | [east-ja-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression.md#L319) |
 | uniform distribution | 一様分布 | verified_d2l | uniform-distribution: A distribution assigning equal density or probability across its support. | [east-ja-chapter-multilayer-perceptrons-dropout-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/dropout.md#L61) |
 | random seed | 乱数シード | proposed | random-seed: An initial value controlling a pseudorandom number generator. |  |
-| independent and identically distributed | 独立で同一分布 | verified_d2l | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L458) |
+| independent and identically distributed | 独立同分布 | verified_external | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. | review-ja-1cd0ab7ca3: page |
 | sufficient statistic | 十分統計量 | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
-| Fisher information | フィッシャー情報 | verified_d2l | fisher-information: A measure of how much an observation reveals about a parameter. | [east-ja-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_introduction/index.md#L313) |
+| Fisher information | フィッシャー情報量 | verified_external | fisher-information: A measure of how much an observation reveals about a parameter. | review-ja-e8e753805b: page |
 | point estimate | 点推定 | proposed | point-estimate: A single value used to estimate an unknown quantity. |  |
 | bias-variance decomposition | バイアス・分散分解 | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
 | mean | 平均 | verified_d2l | mean: A measure of central tendency given by an average or expectation. | [east-ja-chapter-appendix-mathematics-for-deep-learning-random-variables-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/random-variables.md#L225) |
@@ -304,12 +304,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | variational inference | 変分推論 | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
 | evidence lower bound | エビデンス下界 | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
 | log probability | 対数確率 | proposed | log-probability: The logarithm of a probability or probability density. |  |
-| log-sum-exp | ログサムエクスプ | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
+| log-sum-exp | log-sum-exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
 | numerical stability | 数値安定性 | verified_d2l | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [east-ja-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression-concise.md#L81) |
 | floating point | 浮動小数点 | verified_d2l | floating-point: A finite-precision numerical representation using a significand and exponent. | [east-ja-chapter-appendix-tools-for-deep-learning-selecting-servers-gpus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L33) |
 | underflow | アンダーフロー | verified_d2l | underflow: A numerical condition in which a magnitude is too small to represent accurately. | [east-ja-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression-concise.md#L79) |
 | overflow | オーバーフロー | verified_d2l | overflow: A numerical condition in which a magnitude exceeds the representable range. | [east-ja-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression-concise.md#L68) |
-| condition number | 条件番号 | verified_d2l | condition-number: A measure of how sensitive a mathematical problem is to perturbations. | [east-ja-chapter-optimization-lr-scheduler-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/lr-scheduler.md#L6) |
+| condition number | 条件数 | verified_external | condition-number: A measure of how sensitive a mathematical problem is to perturbations. | review-ja-c9692acc95: page |
 | convergence rate | 収束率 | proposed | convergence-rate: The speed at which an iterative procedure approaches a limit or solution. |  |
 | line search | 直線探索 | proposed | line-search: A method that chooses a step size along a search direction. |  |
 | Newton's method | ニュートン法 | verified_d2l | newton-s-method: An iterative method using derivatives or curvature to find a root or optimum. | [east-ja-chapter-optimization-gd-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/gd.md#L194) |
@@ -330,10 +330,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | weight sharing | 重み共有 | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | パラメータ数 | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | 計算量 | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
-| backward pass | 逆方向の計算過程 | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
-| forward pass | フォワードパス | verified_d2l | forward-pass: The computation that evaluates a model from inputs to outputs. | [east-ja-chapter-multilayer-perceptrons-backprop-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/backprop.md#L12) |
+| backward pass | 逆伝播 | verified_external | backward-pass: The computation that propagates derivatives from outputs toward inputs. | review-ja-50b343bbef: page |
+| forward pass | 順伝播 | verified_external | forward-pass: The computation that evaluates a model from inputs to outputs. | review-ja-50b343bbef: page |
 | computational efficiency | 計算効率 | verified_d2l | computational-efficiency: The effectiveness with which computation uses time or resources. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L79) |
-| loss landscape | 損失関数の地形 | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
+| loss landscape | 損失ランドスケープ | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
 | inductive bias | 帰納バイアス | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
 | universal approximation | 万能近似 | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
 | feature extraction | 特徴抽出 | verified_d2l | feature-extraction: The process of deriving informative representations from raw inputs. | [east-ja-chapter-convolutional-modern-alexnet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/alexnet.md#L6) |
@@ -343,13 +343,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | unsupervised learning | 教師なし学習 | verified_d2l | unsupervised-learning: Learning structure from data without task labels. | [east-ja-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_introduction/index.md#L240) |
 | in-context learning | コンテキスト内学習 | verified_external | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. | [east-google-ml-ja-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ja#in-context-learning) |
 | prompt | プロンプト | verified_external | prompt: An input that guides a model's response or behavior. | [east-google-ml-ja-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ja#prompt) |
-| context window | コンテキスト ウィンドウ | verified_external | context-window: The amount of context a model can process in a single input. | [east-google-ml-ja-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ja#context-window) |
+| context window | コンテキストウィンドウ | verified_external | context-window: The amount of context a model can process in a single input. | review-ja-3e8c11860b: page |
 | next-token prediction | 次トークン予測 | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
 | autoregressive model | 自己回帰モデル | verified_d2l | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. | [east-ja-chapter-recurrent-neural-networks-rnn-concise-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/rnn-concise.md#L262) |
 | autoregressive generation | 自己回帰生成 | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
 | causal attention | 因果アテンション | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
 | cross-attention | クロスアテンション | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
-| scaled dot-product attention | スケールドドット積アテンション | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
+| scaled dot-product attention | スケール化ドット積アテンション | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | ソフトマックスアテンション | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
 | position embedding | 位置埋め込み | proposed | position-embedding: A representation of position used in a sequence model. |  |
 | rotary position embedding | 回転位置埋め込み | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
@@ -357,7 +357,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | residual block | 残差ブロック | verified_d2l | residual-block: A network block combining a transformation with a shortcut connection. | [east-ja-chapter-convolutional-modern-resnet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/resnet.md#L23) |
 | normalization layer | 正規化層 | verified_d2l | normalization-layer: A layer that rescales or centers activations according to specified statistics. | [east-ja-chapter-convolutional-modern-batch-norm-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/batch-norm.md#L356) |
 | root mean square | 二乗平均平方根 | proposed | root-mean-square: The square root of the mean of squared values. |  |
-| encoder-decoder | エンコーダ-デコーダ | verified_d2l | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. | [east-ja-chapter-recurrent-modern-encoder-decoder-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/encoder-decoder.md#L4) |
+| encoder-decoder | エンコーダ・デコーダ | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | 系列長 | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | アテンションスコア | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
 | attention pooling | アテンションプーリング | verified_d2l | attention-pooling: Combining values using weights determined by an attention mechanism. | [east-ja-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_attention-mechanisms/attention-cues.md#L32) |
@@ -368,32 +368,32 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | subword | サブワード | verified_d2l | subword: A token unit that can represent part of a word. | [east-ja-chapter-natural-language-processing-pretraining-subword-embedding-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/subword-embedding.md#L8) |
 | n-gram | nグラム | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
 | corpus | コーパス | verified_d2l | corpus: A collection of texts used for language analysis or model training. | [east-ja-chapter-recurrent-neural-networks-language-models-and-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/language-models-and-dataset.md#L24) |
-| word frequency | 単語の頻度 | verified_d2l | word-frequency: The number or rate of occurrences of a word in a corpus. | [east-ja-chapter-recurrent-neural-networks-language-models-and-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-neural-networks/language-models-and-dataset.md#L91) |
+| word frequency | 単語頻度 | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
 | embedding matrix | 埋め込み行列 | verified_external | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L336) |
 | cosine similarity | コサイン類似度 | verified_external | cosine-similarity: A similarity measure based on the angle between vectors. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L435) |
-| nearest neighbor | 最近隣 | verified_d2l | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. | [east-ja-chapter-recommender-systems-recsys-intro-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/recsys-intro.md#L11) |
+| nearest neighbor | 最近傍 | verified_external | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. | review-ja-c2037c739d: page |
 | word analogy | 単語アナロジー | verified_d2l | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. | [east-ja-chapter-natural-language-processing-pretraining-similarity-analogy-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/similarity-analogy.md#L163) |
-| skip-gram | スキップグラム | verified_external | skip-gram: A word embedding model and objective that predict context words from a center word. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L378) |
-| continuous bag of words | 連続単語袋モデル | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
+| skip-gram | skip-gram | proposed | skip-gram: A word embedding model and objective that predict context words from a center word. |  |
+| continuous bag of words | CBOW | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
 | masked language modeling | マスク言語モデリング | proposed | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. |  |
-| next sentence prediction | 次の文の予測 | verified_d2l | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. | [east-ja-chapter-natural-language-processing-pretraining-bert-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/bert.md#L280) |
-| question answering | 質問回答 | verified_d2l | question-answering: The task of producing an answer to a question, often using a supplied context. | [east-ja-chapter-natural-language-processing-applications-finetuning-bert-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-applications/finetuning-bert.md#L49) |
+| next sentence prediction | 次文予測 | proposed | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. |  |
+| question answering | 質問応答 | verified_external | question-answering: The task of producing an answer to a question, often using a supplied context. | review-ja-b8ccfbad20: page |
 | text classification | テキスト分類 | verified_d2l | text-classification: The task of assigning categories to text. | [east-ja-chapter-natural-language-processing-pretraining-bert-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/bert.md#L27) |
 | named entity recognition | 固有表現抽出 | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. |  |
 | semantic similarity | 意味的類似度 | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
 | convolutional layer | 畳み込み層 | verified_d2l | convolutional-layer: A layer that applies learned convolutional filters to its input. | [east-ja-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/why-conv.md#L53) |
 | feature map | 特徴マップ | verified_d2l | feature-map: An array of activations representing features across positions. | [east-ja-chapter-convolutional-neural-networks-conv-layer-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/conv-layer.md#L281) |
 | pooling layer | プーリング層 | verified_d2l | pooling-layer: A layer that aggregates local groups of activations. | [east-ja-chapter-convolutional-modern-resnet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/resnet.md#L173) |
-| strided convolution | ストライド畳み込み | verified_d2l | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. | [east-ja-chapter-computer-vision-transposed-conv-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/transposed-conv.md#L7) |
+| strided convolution | ストライド付き畳み込み | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | 転置畳み込み | verified_d2l | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [east-ja-chapter-computer-vision-transposed-conv-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/transposed-conv.md#L7) |
-| dilated convolution | 拡張畳み込み | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
-| depthwise convolution | 深さ方向畳み込み | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
-| pointwise convolution | 点ごとの畳み込み | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
+| dilated convolution | ダイレーション畳み込み | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
+| depthwise convolution | デプスワイズ畳み込み | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
+| pointwise convolution | ポイントワイズ畳み込み | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
 | image resolution | 画像解像度 | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
 | pixel | ピクセル | verified_d2l | pixel: An individual sample in a digital image. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L20) |
 | image recognition | 画像認識 | verified_d2l | image-recognition: The task of identifying visual content in images. | [east-ja-chapter-convolutional-modern-alexnet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/alexnet.md#L17) |
-| image segmentation | イメージセグメンテーション | verified_d2l | image-segmentation: Partitioning an image into regions or pixel-level categories. | [east-ja-chapter-computer-vision-semantic-segmentation-and-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/semantic-segmentation-and-dataset.md#L13) |
-| region proposal | 領域候補 | proposed | region-proposal: A candidate image region that may contain an object. |  |
+| image segmentation | 画像セグメンテーション | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
+| region proposal | 領域提案 | verified_external | region-proposal: A candidate image region that may contain an object. | review-ja-04fb99b2d0: page |
 | anchor box | アンカーボックス | verified_d2l | anchor-box: A reference bounding box used to formulate object localization predictions. | [east-ja-chapter-computer-vision-anchor-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/anchor.md#L253) |
 | non-maximum suppression | 非極大値抑制 | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
 | data augmentation | データ拡張 | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
@@ -408,7 +408,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | episode | エピソード | proposed | episode: A sequence of interactions ending at a terminal condition. |  |
 | terminal state | 終端状態 | proposed | terminal-state: A state marking the end of an episode. |  |
 | optimal policy | 最適方策 | proposed | optimal-policy: A policy achieving the best expected return under a specified criterion. |  |
-| policy iteration | 方策反復 | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
+| policy iteration | 方策反復法 | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
 | policy evaluation | 方策評価 | proposed | policy-evaluation: Computing or estimating the value of a policy. |  |
 | policy improvement | 方策改善 | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
 | off-policy | オフポリシー | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
@@ -422,7 +422,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | target network | ターゲットネットワーク | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
 | experience replay | 経験再生 | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
 | diffusion process | 拡散過程 | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
-| forward process | 順方向過程 | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
+| forward process | 順過程 | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
 | reverse process | 逆過程 | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
 | score matching | スコアマッチング | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | ランジュバン動力学 | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
@@ -434,13 +434,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | continuous-time | 連続時間 | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
 | discretization | 離散化 | verified_d2l | discretization: Approximation of a continuous object or process using discrete steps or values. | [east-ja-chapter-appendix-mathematics-for-deep-learning-integral-calculus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/integral-calculus.md#L423) |
 | Euler-Maruyama | オイラー・丸山法 | proposed | euler-maruyama: A numerical method for approximating solutions of stochastic differential equations. |  |
-| Itô calculus | 伊藤計算 | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
-| ODE solver | 常微分方程式ソルバー | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
+| Itô calculus | 伊藤解析 | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
+| ODE solver | ODEソルバー | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
 | adjoint method | 随伴法 | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | 行列指数関数 | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | フーリエ変換 | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
 | bias | 統計的バイアス | verified_d2l | statistical-bias: The difference between an estimator’s expected value and the true parameter. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L124) |
-| mixture of experts | 混合専門家モデル | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
+| mixture of experts | 混合エキスパート | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
 | transition kernel | 遷移カーネル | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | 期待報酬 | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
 | effective horizon | 実効ホライズン | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
@@ -448,7 +448,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | target policy | ターゲット方策 | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
 | temporal-difference error | 時間差分誤差 | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
 | reward-to-go | 残りの累積報酬 | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
-| dynamic programming | 動的プログラミング | verified_d2l | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [east-ja-chapter-recurrent-modern-bi-rnn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/bi-rnn.md#L26) |
+| dynamic programming | 動的計画法 | verified_external | dynamic-programming: A family of methods solving a problem through recursive subproblems. | review-ja-9b6044cde6: page |
 | contextual bandit | 文脈付きバンディット | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
 | control variate | 制御変量 | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
 | function approximation | 関数近似 | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
@@ -460,27 +460,27 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | exploration rate | 探索率 | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
 | state-action pair | 状態行動対 | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
 | partially observable | 部分観測可能 | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
-| Markov chain Monte Carlo | マルコフ連鎖モンテカルロ | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
+| Markov chain Monte Carlo | マルコフ連鎖モンテカルロ法 | verified_external | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. | review-ja-58254d1f0d: page |
 | noise ball | ノイズ球 | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
-| implicit bias | 最適化の暗黙的バイアス | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
+| implicit bias | 暗黙的バイアス | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
 | preconditioner | 前処理行列 | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
 | sharpness | 鋭さ | proposed | sharpness: A measure of how rapidly an objective rises around a point. |  |
 | step size | ステップサイズ | proposed | step-size: The magnitude of a step taken by an iterative method. |  |
-| soft maximum | ソフトマックス近似 | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
+| soft maximum | ソフト最大値 | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
 | proximal gradient | 近接勾配 | proposed | proximal-gradient: An optimization method combining a gradient step with a proximal operation. |  |
 | cosine decay | コサイン減衰 | proposed | cosine-decay: A schedule that reduces a quantity according to a cosine-shaped curve. |  |
-| AdamW | AdamW最適化アルゴリズム | proposed | adamw: An adaptive optimizer that decouples weight decay from gradient-based updates. |  |
+| AdamW | AdamW | proposed | adamw: An adaptive optimizer that decouples weight decay from gradient-based updates. |  |
 | natural gradient | 自然勾配 | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
-| Shampoo | Shampoo最適化アルゴリズム | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
-| Muon | Muon最適化アルゴリズム | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
-| heavy-ball momentum | ヘビーボール運動量 | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
+| Shampoo | Shampoo | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
+| Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
+| heavy-ball momentum | ヘビーボールモメンタム | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
 | trust-region method | 信頼領域法 | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
 | soft-thresholding | ソフト閾値処理 | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
 | convex conjugate | 凸共役 | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
 | subdifferential | 劣微分 | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
 | dual problem | 双対問題 | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
 | shadow price | シャドープライス | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
-| Lasso | Lasso回帰 | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. |  |
+| Lasso | Lasso | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. |  |
 | ridge regression | リッジ回帰 | verified_d2l | ridge-regression: A regression method using a squared-weight penalty. | [east-ja-chapter-multilayer-perceptrons-weight-decay-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/weight-decay.md#L28) |
 | Gram matrix | グラム行列 | verified_d2l | gram-matrix: A matrix of inner products or kernel evaluations between pairs of objects. | [east-ja-chapter-computer-vision-neural-style-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/neural-style.md#L201) |
 | column space | 列空間 | proposed | column-space: The set of all linear combinations of a matrix's columns. |  |
@@ -488,27 +488,27 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | spectral radius | スペクトル半径 | proposed | spectral-radius: The largest absolute value among a matrix's eigenvalues. |  |
 | spectral norm | スペクトルノルム | proposed | spectral-norm: The largest singular value of a matrix. |  |
 | nuclear norm | 核ノルム | proposed | nuclear-norm: The sum of a matrix's singular values. |  |
-| power iteration | べき乗反復法 | proposed | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. |  |
-| projection | 投影 | verified_d2l | projection: A mapping that sends a point onto a specified subspace or set. | [east-ja-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/convexity.md#L229) |
+| power iteration | べき乗法 | verified_external | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. | review-ja-cd0d619d86: page |
+| projection | 射影 | verified_external | projection: A mapping that sends a point onto a specified subspace or set. | review-ja-90b95e346b: page |
 | span | 張る空間 | proposed | span: The set of all linear combinations of a collection of vectors. |  |
 | linear independence | 線形独立 | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
 | covariance matrix | 共分散行列 | verified_d2l | covariance-matrix: A matrix containing covariances between pairs of random variables. | [east-ja-chapter-recommender-systems-ranking-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recommender-systems/ranking.md#L29) |
 | normal equations | 正規方程式 | verified_external | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L141) |
-| one-hot encoding | ワンホット エンコード | verified_external | one-hot-encoding: A representation of a category as a vector with one active component. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#one-hot-encoding) |
+| one-hot encoding | ワンホットエンコーディング | proposed | one-hot-encoding: A representation of a category as a vector with one active component. |  |
 | concatenation | 連結 | proposed | concatenation: The operation of joining arrays or sequences along an axis. |  |
 | broadcasting | ブロードキャスト | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
 | shape | 形状 | proposed | shape: The sizes of the axes of an array or tensor. |  |
 | slice | スライス | proposed | slice: A selected portion of an array or sequence. |  |
-| forward mode | 順伝播モード | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
-| reverse mode | 逆伝播モード | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
+| forward mode | フォワードモード | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
+| reverse mode | リバースモード | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
 | truncation error | 打ち切り誤差 | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
 | finite difference | 有限差分 | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
-| mean value theorem | 平均値定理 | verified_d2l | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. | [east-ja-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/convexity.md#L156) |
+| mean value theorem | 平均値の定理 | verified_external | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. | review-ja-2bcf8a870b: page |
 | Taylor expansion | テイラー展開 | verified_d2l | taylor-expansion: A local approximation to a function expressed in powers of displacement from a point. | [east-ja-chapter-convolutional-modern-densenet-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/densenet.md#L7) |
 | conditional entropy | 条件付きエントロピー | verified_d2l | conditional-entropy: The uncertainty remaining in one random variable after another is known. | [east-ja-chapter-appendix-mathematics-for-deep-learning-information-theory-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L233) |
 | surprisal | サプライザル | verified_d2l | surprisal: The negative logarithm of the probability assigned to an outcome. | [east-ja-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/softmax-regression.md#L152) |
 | effective sample size | 有効標本サイズ | proposed | effective-sample-size: A measure of the amount of information in a weighted or dependent sample relative to independent samples. |  |
-| union bound | 和集合上界 | verified_external | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L453) |
+| union bound | ユニオンバウンド | proposed | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. |  |
 | gamma function | ガンマ関数 | proposed | gamma-function: A function extending the factorial to a broader domain. |  |
 | maximum entropy | 最大エントロピー | verified_d2l | maximum-entropy: A principle choosing the highest-entropy distribution subject to specified constraints. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L124) |
 | empirical distribution | 経験分布 | proposed | empirical-distribution: A distribution that assigns probability mass to observed sample values. |  |
@@ -518,7 +518,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | variance-exploding | 分散爆発 | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
 | classifier guidance | 分類器ガイダンス | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
 | classifier-free guidance | 分類器なしガイダンス | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
-| probability-flow ODE | 確率フロー常微分方程式 | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
+| probability-flow ODE | 確率フローODE | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
 | optimal transport | 最適輸送 | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
 | Wasserstein distance | ワッサースタイン距離 | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
 | mode collapse | モード崩壊 | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
@@ -542,7 +542,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mixed precision | 混合精度 | verified_d2l | mixed-precision: Using more than one numerical precision within a computation. | [east-ja-chapter-computational-performance-hardware-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computational-performance/hardware.md#L107) |
 | eager execution | 即時実行 | proposed | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. |  |
 | activation checkpointing | 活性化チェックポイント | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
-| data loader | データローダー | proposed | data-loader: A component that prepares and supplies batches of data to a training process. |  |
+| data loader | データローダ | proposed | data-loader: A component that prepares and supplies batches of data to a training process. |  |
 | input pipeline | 入力パイプライン | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
 | stochastic depth | 確率的深さ | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
 | global average pooling | グローバル平均プーリング | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
@@ -550,8 +550,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | exponential moving average | 指数移動平均 | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
 | inverted dropout | 逆ドロップアウト | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
 | He initialization | He初期化 | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
-| GELU | GELU活性化関数 | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
-| generalization gap | 一般化ギャップ | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
+| GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
+| generalization gap | 汎化ギャップ | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
 | hypothesis class | 仮説クラス | proposed | hypothesis-class: The set of candidate functions or models considered by a learning method. |  |
 | uniform convergence | 一様収束 | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
 | VC dimension | VC次元 | verified_external | vc-dimension: A measure of the capacity of a class of binary classifiers. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L507) |
@@ -570,21 +570,21 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | forget gate | 忘却ゲート | verified_external | forget-gate: A gate that controls how much of a previous state is retained. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L153) |
 | input gate | 入力ゲート | verified_external | input-gate: A gate that controls how much new information enters a recurrent state. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L153) |
 | output gate | 出力ゲート | verified_external | output-gate: A gate that controls how a recurrent state contributes to the output. | [east-stanford-ja-cs-229-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-deep-learning.md#L153) |
-| update gate | アップデートゲート | verified_d2l | update-gate: A gate that controls the blend of previous state and candidate state in a recurrent model. | [east-ja-chapter-recurrent-modern-gru-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/gru.md#L18) |
+| update gate | 更新ゲート | verified_external | update-gate: A gate that controls the blend of previous state and candidate state in a recurrent model. | review-ja-44579da57f: page |
 | reset gate | リセットゲート | verified_d2l | reset-gate: A gate that controls how previous state influences a candidate recurrent update. | [east-ja-chapter-recurrent-modern-gru-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/gru.md#L18) |
-| backpropagation through time | 時間軸での誤差逆伝播法 | verified_external | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L161) |
-| truncated backpropagation through time | 切り詰めた時間逆伝播 | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
+| backpropagation through time | 通時的誤差逆伝播法 | verified_external | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. | review-ja-1b611aed47: page |
+| truncated backpropagation through time | 打ち切り型通時的誤差逆伝播法 | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
 | sequence transduction | 系列変換 | proposed | sequence-transduction: The task of converting an input sequence into an output sequence. |  |
 | sequence modeling | 系列モデリング | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. |  |
 | beam width | ビーム幅 | verified_external | beam-width: The number of candidate sequences retained at each step of beam search. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L534) |
 | greedy decoding | 貪欲デコーディング | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
 | causal language model | 因果言語モデル | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
 | masked token | マスクトークン | proposed | masked-token: A token hidden or replaced so a model must infer it from context. |  |
-| context length | 文脈長 | proposed | context-length: The number of input tokens available to a sequence model. |  |
+| context length | コンテキスト長 | proposed | context-length: The number of input tokens available to a sequence model. |  |
 | attention head | アテンションヘッド | proposed | attention-head: One independently parameterized attention operation in multi-head attention. |  |
 | attention map | アテンションマップ | proposed | attention-map: A matrix or array of attention weights between queries and keys. |  |
 | causal mask | 因果マスク | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
-| router | ルーター | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
+| router | ルータ | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
 | load balancing | 負荷分散 | proposed | load-balancing: Distributing work across resources or experts to avoid disproportionate assignment. |  |
 | capacity factor | 容量係数 | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
 | scaling law | スケーリング則 | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
@@ -599,8 +599,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | just-in-time compilation | 実行時コンパイル | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
 | asynchronous execution | 非同期実行 | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | 同期 | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. |  |
-| all-reduce | 全還元 | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
-| gradient accumulation | 勾配蓄積 | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
+| all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
+| gradient accumulation | 勾配累積 | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
 | pipeline parallelism | パイプライン並列 | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
 | tensor parallelism | テンソル並列 | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
 | checkpointing | チェックポイント保存 | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
@@ -608,13 +608,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | random number generator | 乱数生成器 | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
 | rounding error | 丸め誤差 | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
 | dynamic range | ダイナミックレンジ | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
-| training throughput | 学習スループット | proposed | training-throughput: The amount of training work completed per unit time. |  |
+| training throughput | 訓練スループット | proposed | training-throughput: The amount of training work completed per unit time. |  |
 | soft actor-critic | ソフトアクタークリティック | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | 深層Qネットワーク | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
 | proximal policy optimization | 近接方策最適化 | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
 | trust region | 信頼領域 | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
 | offline reinforcement learning | オフライン強化学習 | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
-| behavior cloning | 行動模倣 | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
+| behavior cloning | 行動クローニング | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
 | importance weight | 重要度重み | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. |  |
 | advantage estimate | アドバンテージ推定 | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |
 | generalized advantage estimation | 一般化アドバンテージ推定 | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
@@ -622,8 +622,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reward hacking | 報酬ハッキング | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
 | planning horizon | 計画ホライズン | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | ベルマン作用素 | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
-| bootstrapping | ブートストラップ法 | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
-| Monte Carlo return | モンテカルロリターン | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
+| bootstrapping | ブートストラップ | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
+| Monte Carlo return | モンテカルロ収益 | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
 | terminal reward | 終端報酬 | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
 | exploration bonus | 探索ボーナス | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
 | upper confidence bound | 信頼上限 | proposed | upper-confidence-bound: A decision criterion combining an estimate with an uncertainty-based optimism term. |  |
@@ -647,7 +647,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | ill-conditioned | 悪条件 | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. |  |
 | singular matrix | 特異行列 | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
 | invertible matrix | 可逆行列 | proposed | invertible-matrix: A square matrix with an inverse. |  |
-| pseudoinverse | 疑似逆行列 | proposed | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. |  |
+| pseudoinverse | 擬似逆行列 | verified_external | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. | review-ja-b0697274fe: page |
 | orthonormal basis | 正規直交基底 | proposed | orthonormal-basis: A basis whose vectors have unit norm and are mutually orthogonal. |  |
 | basis vector | 基底ベクトル | proposed | basis-vector: A vector belonging to a basis of a vector space. |  |
 | eigendecomposition | 固有値分解 | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. |  |
@@ -675,7 +675,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | indefinite integral | 不定積分 | proposed | indefinite-integral: A family of antiderivatives of a function. |  |
 | definite integral | 定積分 | proposed | definite-integral: An integral over a specified domain, representing accumulated quantity. |  |
 | integration by parts | 部分積分 | proposed | integration-by-parts: An integration rule derived from the product rule for derivatives. |  |
-| fundamental theorem of calculus | 微積分の基本定理 | verified_d2l | fundamental-theorem-of-calculus: A result connecting differentiation and integration. | [east-ja-chapter-appendix-mathematics-for-deep-learning-integral-calculus-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/integral-calculus.md#L185) |
+| fundamental theorem of calculus | 微分積分学の基本定理 | verified_external | fundamental-theorem-of-calculus: A result connecting differentiation and integration. | review-ja-dfa7b2f58b: page |
 | implicit differentiation | 陰関数微分 | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
 | Lipschitz constant | リプシッツ定数 | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
 | Lipschitz continuous | リプシッツ連続 | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
@@ -691,7 +691,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | posterior variance | 事後分散 | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
 | independent samples | 独立標本 | proposed | independent-samples: Samples whose values do not provide information about each other under the model. |  |
 | identically distributed | 同一分布 | proposed | identically-distributed: Having the same probability distribution. |  |
-| random sample | 確率標本 | verified_external | random-sample: A collection of observations drawn according to a sampling procedure. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L279) |
+| random sample | 無作為標本 | proposed | random-sample: A collection of observations drawn according to a sampling procedure. |  |
 | sample mean | 標本平均 | verified_external | sample-mean: The arithmetic average of observed sample values. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L309) |
 | sample variance | 標本分散 | verified_external | sample-variance: A statistic measuring dispersion of observed values around their sample mean. | [east-stanford-ja-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-probability.md#L333) |
 | population mean | 母平均 | proposed | population-mean: The expected value of a variable in the population under study. |  |
@@ -701,8 +701,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | consistent estimator | 一致推定量 | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
 | maximum likelihood estimator | 最尤推定量 | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
 | test statistic | 検定統計量 | verified_d2l | test-statistic: A quantity computed from data and used by a statistical test. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L299) |
-| type I error | 第1種の過誤 | verified_d2l | type-i-error: Rejecting a true null hypothesis. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L289) |
-| type II error | 第II種の過誤 | verified_d2l | type-ii-error: Failing to reject a false null hypothesis. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L289) |
+| type I error | 第一種の過誤 | verified_external | type-i-error: Rejecting a true null hypothesis. | review-ja-c39ba51be7: page |
+| type II error | 第二種の過誤 | verified_external | type-ii-error: Failing to reject a false null hypothesis. | review-ja-c39ba51be7: page |
 | Monte Carlo estimate | モンテカルロ推定 | proposed | monte-carlo-estimate: An estimate computed using randomly sampled quantities. |  |
 | proposal distribution | 提案分布 | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
 | rejection sampling | 棄却サンプリング | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
@@ -721,13 +721,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | simple loss | 単純損失 | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
 | flow map | フロー写像 | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
 | average velocity | 平均速度 | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
-| consistency model | 整合性モデル | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
-| consistency distillation | 整合性蒸留 | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
-| adaptive layer norm | 適応的レイヤー正規化 | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
-| adaLN-Zero | ゼロ初期化適応的レイヤー正規化 | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
+| consistency model | 一貫性モデル | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
+| consistency distillation | 一貫性蒸留 | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
+| adaptive layer norm | 適応的層正規化 | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
+| adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | モデル化のしやすさ | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
-| forward posterior | 順方向事後分布 | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
-| binary classification | バイナリ分類 | verified_external | binary-classification: The task of assigning each input to one of two classes. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#binary-classification) |
+| forward posterior | 順事後分布 | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
+| binary classification | 二値分類 | verified_external | binary-classification: The task of assigning each input to one of two classes. | review-ja-20063164f9: page |
 | multiclass classification | 多クラス分類 | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
 | multi-label classification | マルチラベル分類 | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
 | binary cross-entropy | 二値交差エントロピー | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. |  |
@@ -735,7 +735,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | logistic loss | ロジスティック損失 | proposed | logistic-loss: A loss derived from the logistic model for classification. |  |
 | decision boundary | 決定境界 | proposed | decision-boundary: A boundary separating regions assigned different predictions by a classifier. |  |
 | true positive | 真陽性 | proposed | true-positive: A positive example correctly classified as positive. |  |
-| false positive | 誤検出 | verified_d2l | false-positive: A negative example incorrectly classified as positive. | [east-ja-chapter-appendix-mathematics-for-deep-learning-statistics-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_appendix-mathematics-for-deep-learning/statistics.md#L276) |
+| false positive | 偽陽性 | verified_external | false-positive: A negative example incorrectly classified as positive. | review-ja-c39ba51be7: page |
 | true negative | 真陰性 | proposed | true-negative: A negative example correctly classified as negative. |  |
 | false negative | 偽陰性 | proposed | false-negative: A positive example incorrectly classified as negative. |  |
 | F1 score | F1スコア | proposed | f1-score: The harmonic mean of precision and recall. |  |
@@ -746,10 +746,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | class imbalance | クラス不均衡 | proposed | class-imbalance: Unequal representation of classes in a dataset. |  |
 | positive class | 陽性クラス | verified_external | positive-class: The class treated as positive when evaluating a binary classification problem. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#positive-class) |
 | negative class | 陰性クラス | verified_external | negative-class: The class treated as negative when evaluating a binary classification problem. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#negative-class) |
-| training loss | トレーニングの損失 | verified_external | training-loss: The loss measured on training examples. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#training-loss) |
+| training loss | 訓練損失 | proposed | training-loss: The loss measured on training examples. |  |
 | validation loss | 検証損失 | verified_external | validation-loss: The loss measured on validation examples. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#validation-loss) |
 | test error | テスト誤差 | proposed | test-error: The prediction error measured on a held-out test set. |  |
-| training error | 学習誤差 | verified_external | training-error: The prediction error measured on the training set. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L471) |
+| training error | 訓練誤差 | proposed | training-error: The prediction error measured on the training set. |  |
 | population risk | 母集団リスク | proposed | population-risk: Expected loss under the population data distribution. |  |
 | generalization error | 汎化誤差 | proposed | generalization-error: The expected prediction error on examples from a target distribution. |  |
 | regularization strength | 正則化強度 | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
@@ -761,14 +761,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | validation error | 検証誤差 | proposed | validation-error: The prediction error measured on validation data. |  |
 | held-out data | ホールドアウトデータ | proposed | held-out-data: Data set aside from fitting for evaluation or model selection. |  |
 | covariate shift | 共変量シフト | verified_d2l | covariate-shift: A change in the distribution of inputs while the conditional target distribution is assumed unchanged. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L21) |
-| label shift | ラベル shift | verified_d2l | label-shift: A change in class proportions under an assumption of stable class-conditional input distributions. | [east-ja-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/environment.md#L37) |
+| label shift | ラベルシフト | proposed | label-shift: A change in class proportions under an assumption of stable class-conditional input distributions. |  |
 | concept drift | 概念ドリフト | proposed | concept-drift: A change over time in the relationship between inputs and targets or in the data-generating process. |  |
 | in-distribution | 分布内 | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
 | Bayes error | ベイズ誤差 | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
 | regression target | 回帰目標 | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
 | feature vector | 特徴ベクトル | verified_external | feature-vector: A vector containing the input features of an example. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#feature-vector) |
 | target variable | 目的変数 | proposed | target-variable: The quantity a model is intended to predict. |  |
-| intercept | インターセプト | verified_d2l | intercept: The additive constant in a regression or other linear model. | [east-ja-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression.md#L28) |
+| intercept | 切片 | verified_external | intercept: The additive constant in a regression or other linear model. | review-ja-cc08dcbcc9: page |
 | coefficient | 係数 | proposed | coefficient: A numerical factor multiplying a variable or term. |  |
 | least-squares regression | 最小二乗回帰 | proposed | least-squares-regression: A regression method that minimizes squared residuals. |  |
 | linear predictor | 線形予測器 | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
@@ -779,7 +779,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | noise variance | ノイズ分散 | proposed | noise-variance: The variance of the random perturbation in a model. |  |
 | heteroscedastic | 不均一分散の | proposed | heteroscedastic: Describing noise whose variance varies across observations or inputs. |  |
 | mean absolute error | 平均絶対誤差 | verified_d2l | mean-absolute-error: The average absolute difference between predictions and targets. | [east-ja-chapter-computer-vision-ssd-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/ssd.md#L392) |
-| root mean squared error | 平均二乗平方根誤差 | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
+| root mean squared error | 二乗平均平方根誤差 | verified_external | root-mean-squared-error: The square root of the average squared prediction error. | review-ja-8a39bb85e4: page |
 | classification loss | 分類損失 | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
 | hinge loss | ヒンジ損失 | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L279) |
 | squared loss | 二乗損失 | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#squared-loss) |
@@ -787,20 +787,20 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | regularized objective | 正則化目的関数 | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | ランダム初期化 | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | 勾配ノルム | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
-| leaky ReLU | リーキーReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
+| leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
 | hyperbolic tangent | 双曲線正接 | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
 | fully connected layer | 全結合層 | proposed | fully-connected-layer: A layer in which each output unit receives a learned connection from every input unit. |  |
 | hidden unit | 隠れユニット | proposed | hidden-unit: A computational unit in a network layer between input and output. |  |
 | network depth | ネットワークの深さ | proposed | network-depth: The number of successive computational layers in a network. |  |
 | network width | ネットワークの幅 | proposed | network-width: The number of units or features in a network layer. |  |
-| training dynamics | 学習ダイナミクス | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
+| training dynamics | 訓練ダイナミクス | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
 | parameter update | パラメータ更新 | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
 | optimizer state | オプティマイザ状態 | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
 | minibatch gradient | ミニバッチ勾配 | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
 | full gradient | 全勾配 | proposed | full-gradient: The gradient of an objective computed over the full dataset. |  |
 | gradient noise | 勾配ノイズ | proposed | gradient-noise: The deviation of a stochastic gradient estimate from the full gradient. |  |
 | stochastic approximation | 確率近似 | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
-| training iteration | 学習反復 | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. |  |
+| training iteration | 訓練反復 | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. |  |
 | exponential decay | 指数減衰 | proposed | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. |  |
 | decoupled weight decay | 分離型重み減衰 | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
 | second moment | 二次モーメント | proposed | second-moment: The expectation or average of the square of a quantity. |  |
@@ -812,38 +812,38 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | output channel | 出力チャネル | proposed | output-channel: A channel produced by an operation or network layer. |  |
 | spatial resolution | 空間解像度 | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
 | local receptive field | 局所受容野 | proposed | local-receptive-field: The local input region influencing a particular network activation. |  |
-| translation invariance | 翻訳不変性 | verified_d2l | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. | [east-ja-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/why-conv.md#L22) |
+| translation invariance | 平行移動不変性 | proposed | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. |  |
 | spatial invariance | 空間不変性 | verified_d2l | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. | [east-ja-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/why-conv.md#L14) |
 | zero padding | ゼロパディング | proposed | zero-padding: Padding an input with zeros around its boundary. |  |
-| dilation | 拡張率 | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
+| dilation | ダイレーション | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
 | downsampling | ダウンサンプリング | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | アップサンプリング | verified_d2l | upsampling: Increasing the spatial or temporal resolution of a representation. | [east-ja-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/fcn.md#L90) |
 | aliasing | エイリアシング | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
 | pooling window | プーリングウィンドウ | verified_d2l | pooling-window: The local region over which a pooling operation aggregates values. | [east-ja-chapter-convolutional-neural-networks-pooling-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-neural-networks/pooling.md#L14) |
 | global pooling | グローバルプーリング | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
-| fully convolutional network | 全畳み込みネットワーク | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
-| bilinear interpolation | 共一次内挿法 | verified_d2l | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. | [east-ja-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/fcn.md#L91) |
+| fully convolutional network | 完全畳み込みネットワーク | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
+| bilinear interpolation | 双線形補間 | verified_external | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. | review-ja-6bf69ffcaa: page |
 | nearest-neighbor interpolation | 最近傍補間 | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
 | random horizontal flip | ランダム水平反転 | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
 | random resized crop | ランダムリサイズクロップ | proposed | random-resized-crop: An augmentation that crops a randomly selected region and resizes it. |  |
 | color jitter | 色ジッター | proposed | color-jitter: An augmentation that randomly changes image color properties. |  |
 | synthetic data | 合成データ | proposed | synthetic-data: Artificially generated examples used for training, testing, or analysis. |  |
-| training recipe | 学習レシピ | proposed | training-recipe: A combination of training choices such as optimization, augmentation, and schedules. |  |
+| training recipe | 訓練レシピ | proposed | training-recipe: A combination of training choices such as optimization, augmentation, and schedules. |  |
 | identity shortcut | 恒等ショートカット | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
 | bottleneck block | ボトルネックブロック | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
 | convolutional block | 畳み込みブロック | proposed | convolutional-block: A network component grouping convolutional and often other operations. |  |
-| network in network | ネットワーク | verified_d2l | network-in-network: An architecture using learned channelwise transformations within convolutional networks. | [east-ja-chapter-convolutional-modern-nin-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_convolutional-modern/nin.md#L5) |
+| network in network | Network in Network（NiN） | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
 | image patch | 画像パッチ | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
 | patch embedding | パッチ埋め込み | proposed | patch-embedding: A vector representation computed from an image patch. |  |
 | image classifier | 画像分類器 | proposed | image-classifier: A model that assigns categories to images. |  |
-| ground truth | グラウンド トゥルース | verified_external | ground-truth: Observed or reference annotations treated as targets for a task. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#ground-truth) |
-| ground-truth bounding box | 正解境界ボックス | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
+| ground truth | 正解 | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
+| ground-truth bounding box | 正解バウンディングボックス | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
 | region of interest | 関心領域 | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
-| region proposal network | 地域提案ネットワーク | verified_d2l | region-proposal-network: A network that generates candidate regions for object detection. | [east-ja-chapter-computer-vision-rcnn-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/rcnn.md#L89) |
-| single shot multibox detection | シングルショットマルチボックス検出 | verified_d2l | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. | [east-ja-chapter-computer-vision-ssd-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/ssd.md#L1) |
-| style transfer | スタイル転送 | verified_d2l | style-transfer: Generating an image that combines the content of one image with the style of another. | [east-ja-chapter-computer-vision-index-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/index.md#L6) |
-| content loss | コンテンツロス | verified_d2l | content-loss: A loss measuring differences in content representations between images. | [east-ja-chapter-computer-vision-neural-style-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/neural-style.md#L179) |
-| style loss | スタイルロス | verified_d2l | style-loss: A loss measuring differences in style representations between images. | [east-ja-chapter-computer-vision-neural-style-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_computer-vision/neural-style.md#L197) |
+| region proposal network | 領域提案ネットワーク | verified_external | region-proposal-network: A network that generates candidate regions for object detection. | review-ja-04fb99b2d0: page |
+| single shot multibox detection | SSD（Single Shot MultiBox Detector） | proposed | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. |  |
+| style transfer | スタイル変換 | proposed | style-transfer: Generating an image that combines the content of one image with the style of another. |  |
+| content loss | コンテンツ損失 | proposed | content-loss: A loss measuring differences in content representations between images. |  |
+| style loss | スタイル損失 | proposed | style-loss: A loss measuring differences in style representations between images. |  |
 | total variation | 全変動 | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
 | perceptual loss | 知覚損失 | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
 | latent diffusion | 潜在拡散 | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
@@ -863,25 +863,25 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayesian personalized ranking | ベイズ個人化ランキング | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
 | cold start | コールドスタート | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
 | sparsity | スパース性 | verified_external | sparsity: The condition in which most entries or interactions in a representation are absent or zero. | [east-google-ml-ja-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ja#sparsity) |
-| subword tokenization | サブワード分割 | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
+| subword tokenization | サブワードトークン化 | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
 | token frequency | トークン頻度 | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
 | out-of-vocabulary | 語彙外 | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
 | unknown token | 未知トークン | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
 | beginning-of-sequence token | 系列開始トークン | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
 | end-of-sequence token | 系列終了トークン | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
-| embedding layer | エンベディング レイヤ | verified_external | embedding-layer: A layer mapping discrete indices to learned vector representations. | [east-google-ml-ja-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ja#embedding-layer) |
+| embedding layer | 埋め込み層 | proposed | embedding-layer: A layer mapping discrete indices to learned vector representations. |  |
 | embedding dimension | 埋め込み次元 | proposed | embedding-dimension: The number of components in each embedding vector. |  |
 | center word | 中心語 | verified_d2l | center-word: The word used as the central item in a word-context training example. | [east-ja-chapter-natural-language-processing-pretraining-subword-embedding-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/subword-embedding.md#L8) |
 | context word | 文脈語 | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
 | co-occurrence | 共起 | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
-| global vectors | グローバルベクトル | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
+| global vectors | GloVe | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
 | subsampling | サブサンプリング | verified_d2l | subsampling: Selecting a subset of observations according to a sampling rule. | [east-ja-chapter-natural-language-processing-pretraining-word-embedding-dataset-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L54) |
-| word similarity | 単語の類似性 | verified_d2l | word-similarity: A measure of how closely related two words are in meaning or representation. | [east-ja-chapter-natural-language-processing-pretraining-similarity-analogy-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_natural-language-processing-pretraining/similarity-analogy.md#L110) |
+| word similarity | 単語類似度 | proposed | word-similarity: A measure of how closely related two words are in meaning or representation. |  |
 | decoder state | デコーダ状態 | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
-| alignment | アラインメント | proposed | alignment: A relationship linking positions or elements across two sequences. |  |
+| alignment | アライメント | proposed | alignment: A relationship linking positions or elements across two sequences. |  |
 | sequence decoding | 系列デコーディング | proposed | sequence-decoding: The process of selecting an output sequence from a model's predictions. |  |
-| greedy search | 欲張り検索 | verified_d2l | greedy-search: A search procedure selecting the locally best choice at each step. | [east-ja-chapter-recurrent-modern-beam-search-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_recurrent-modern/beam-search.md#L9) |
-| length normalization | 文章の長さの正規化 | verified_external | length-normalization: Adjusting a sequence score to reduce systematic preference for particular sequence lengths. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L541) |
+| greedy search | 貪欲探索 | proposed | greedy-search: A search procedure selecting the locally best choice at each step. |  |
+| length normalization | 長さ正規化 | proposed | length-normalization: Adjusting a sequence score to reduce systematic preference for particular sequence lengths. |  |
 | exposure bias | 露出バイアス | proposed | exposure-bias: A mismatch between sequence-model training with observed context and generation using model-produced context. |  |
 | scheduled sampling | スケジュールドサンプリング | proposed | scheduled-sampling: A training method that varies between observed and model-generated previous tokens. |  |
 | translation quality | 翻訳品質 | proposed | translation-quality: The degree to which a translation preserves meaning and satisfies linguistic criteria. |  |
@@ -894,7 +894,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | premise | 前提 | proposed | premise: A statement given as the basis for assessing another statement in natural language inference. |  |
 | hypothesis | 仮説 | verified_external | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L63) |
 | contradiction | 矛盾 | proposed | contradiction: A relationship in which one statement is incompatible with another. |  |
-| attention weight | アテンションの重み | verified_external | attention-weight: A coefficient controlling a value's contribution to an attention output. | [east-stanford-ja-cs-230-recurrent-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-230-recurrent-neural-networks.md#L632) |
+| attention weight | アテンション重み | proposed | attention-weight: A coefficient controlling a value's contribution to an attention output. |  |
 | softmax temperature | ソフトマックス温度 | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
 | attention masking | アテンションマスキング | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
 | causal masking | 因果マスキング | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
@@ -910,7 +910,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | label smoothing | ラベル平滑化 | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. |  |
 | expected calibration error | 期待較正誤差 | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
 | maximum margin | 最大マージン | proposed | maximum-margin: The largest achievable separation between decision boundary and relevant examples under specified constraints. |  |
-| training distribution | 学習分布 | proposed | training-distribution: The data distribution from which training examples are drawn. |  |
+| training distribution | 訓練分布 | proposed | training-distribution: The data distribution from which training examples are drawn. |  |
 | test distribution | テスト分布 | proposed | test-distribution: The data distribution used to assess a model after training. |  |
 | data distribution | データ分布 | proposed | data-distribution: The probability distribution describing observed or target data. |  |
 | model distribution | モデル分布 | proposed | model-distribution: The probability distribution specified by a model. |  |
@@ -944,20 +944,20 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | unnormalized density | 未正規化密度 | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
 | log density | 対数密度 | proposed | log-density: The logarithm of a probability density. |  |
 | denoising score matching | ノイズ除去スコアマッチング | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
-| contrastive divergence | 対比的ダイバージェンス | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
+| contrastive divergence | コントラスティブダイバージェンス | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
 | Langevin sampling | ランジュバンサンプリング | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
 | annealed Langevin dynamics | アニーリング付きランジュバン動力学 | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
 | score network | スコアネットワーク | proposed | score-network: A neural network trained to estimate a score function. |  |
 | noise level | ノイズレベル | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
 | signal-to-noise ratio | 信号対雑音比 | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
 | clean sample | クリーンサンプル | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
-| forward diffusion | 順方向拡散 | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
-| reverse-time SDE | 逆時間確率微分方程式 | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
+| forward diffusion | 順拡散 | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
+| reverse-time SDE | 逆時間SDE | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
 | reverse transition | 逆遷移 | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
 | forward transition | 順遷移 | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
 | ancestral sampling | 祖先サンプリング | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
-| DDPM | ノイズ除去拡散確率モデル | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
-| DDIM | ノイズ除去拡散陰的モデル | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
+| DDPM | DDPM | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
+| DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
 | variance schedule | 分散スケジュール | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
 | velocity prediction | 速度予測 | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
 | score estimate | スコア推定 | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
@@ -974,18 +974,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mode dropping | モード欠落 | proposed | mode-dropping: Failure of a generative model to represent some modes of a target distribution. |  |
 | sample quality | サンプル品質 | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
 | sample diversity | サンプル多様性 | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
-| Fréchet Inception Distance | Fréchet Inception距離 | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
+| Fréchet Inception Distance | Fréchet Inception Distance（FID） | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
 | maximum mean discrepancy | 最大平均値差異 | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
-| adversarial training | 敵対的学習 | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
+| adversarial training | 敵対的訓練 | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
 | adversarial objective | 敵対的目的関数 | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | ミニマックスゲーム | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
-| Wasserstein GAN | ワッサースタインGAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
+| Wasserstein GAN | Wasserstein GAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
 | gradient penalty | 勾配ペナルティ | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
 | spectral normalization | スペクトル正規化 | proposed | spectral-normalization: A normalization method controlling a weight matrix's spectral norm. |  |
 | pixel-space | ピクセル空間 | proposed | pixel-space: The representation domain consisting of image pixel values. |  |
 | critical point | 臨界点 | proposed | critical-point: A point at which a derivative is zero or otherwise fails to define a regular direction. |  |
-| local maximum | 局所最大値 | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. |  |
-| global maximum | 大域最大値 | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
+| local maximum | 極大値 | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. |  |
+| global maximum | 大域的最大値 | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
 | strict convexity | 狭義凸性 | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
 | smoothness | 滑らかさ | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
 | convex objective | 凸目的関数 | proposed | convex-objective: An optimization objective that is a convex function. |  |
@@ -1011,7 +1011,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | curvature | 曲率 | verified_d2l | curvature: A description of how the slope or gradient of a function changes. | [east-ja-chapter-optimization-gd-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/gd.md#L192) |
 | Hessian eigenvalue | ヘッセ行列の固有値 | proposed | hessian-eigenvalue: An eigenvalue of a Hessian matrix describing curvature along an associated direction. |  |
 | ill-conditioning | 悪条件性 | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
-| preconditioning | 学習 | verified_d2l | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. | [east-ja-chapter-optimization-adagrad-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_optimization/adagrad.md#L8) |
+| preconditioning | 前処理 | verified_external | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. | review-ja-1b70f0e6d3: page |
 | second moment estimate | 二次モーメント推定 | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. |  |
 | exponential averaging | 指数平均 | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
 | momentum buffer | モメンタムバッファ | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
@@ -1020,19 +1020,19 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | minibatch gradient descent | ミニバッチ勾配降下法 | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
 | gradient variance | 勾配の分散 | proposed | gradient-variance: The variance of a stochastic gradient estimator. |  |
 | convergence guarantee | 収束保証 | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
-| optimization landscape | 最適化地形 | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
+| optimization landscape | 最適化ランドスケープ | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
 | gradient flow | 勾配フロー | proposed | gradient-flow: A continuous-time dynamical system that moves along the negative gradient of an objective. |  |
-| implicit regularization | 暗黙の正則化 | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
+| implicit regularization | 暗黙的正則化 | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
 | Lipschitz gradient | リプシッツ勾配 | proposed | lipschitz-gradient: A gradient whose change is bounded by a constant times the change in its input. |  |
 | minibatch noise | ミニバッチノイズ | proposed | minibatch-noise: Random variation in an update caused by using a finite minibatch. |  |
 | learning dynamics | 学習ダイナミクス | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
 | optimization trajectory | 最適化軌道 | proposed | optimization-trajectory: The sequence or path of parameter values generated by an optimization method. |  |
 | objective value | 目的関数値 | proposed | objective-value: The numerical value of an optimization objective at a point. |  |
-| minimizer | 最小化点 | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
-| maximizer | 最大化点 | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
+| minimizer | 最小点 | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
+| maximizer | 最大点 | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
 | risk minimization | リスク最小化 | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. |  |
 | nonconvex optimization | 非凸最適化 | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
-| shrinkage | 収縮 | verified_external | shrinkage: Pulling estimates or parameters toward a reference value, often zero. | [east-google-ml-ja-df](https://developers.google.com/machine-learning/glossary/df?hl=ja#shrinkage) |
+| shrinkage | 縮小 | verified_external | shrinkage: Pulling estimates or parameters toward a reference value, often zero. | review-ja-4e30dc7fcf: page |
 | outlier | 外れ値 | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
 | generalized linear model | 一般化線形モデル | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
 | exponential family | 指数分布族 | verified_external | exponential-family: A family of probability distributions with a common exponential-form representation. | [east-stanford-ja-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ja/cs-229-supervised-learning.md#L201) |
@@ -1067,7 +1067,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | multi-fidelity optimization | 多忠実度最適化 | proposed | multi-fidelity-optimization: Optimization that uses evaluations at different costs and levels of accuracy. |  |
 | fidelity | 忠実度 | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
 | successive halving | 逐次半減 | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
-| Hyperband | Hyperbandによるハイパーパラメータ最適化 | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
+| Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
 | noisy objective | ノイズのある目的関数 | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
 | hyperparameter configuration | ハイパーパラメータ設定 | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
 | asynchronous scheduling | 非同期スケジューリング | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
@@ -1095,7 +1095,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | lossless compression | 可逆圧縮 | proposed | lossless-compression: Compression that permits exact reconstruction of the original data. |  |
 | source coding | 情報源符号化 | proposed | source-coding: Representing information from a source using a code. |  |
 | code length | 符号長 | proposed | code-length: The number of symbols or bits used to encode a message. |  |
-| prefix code | 接頭語符号 | proposed | prefix-code: A code in which no codeword is a prefix of another codeword. |  |
+| prefix code | 接頭符号 | verified_external | prefix-code: A code in which no codeword is a prefix of another codeword. | review-ja-c5f15e39c1: page |
 | Kraft inequality | クラフト不等式 | proposed | kraft-inequality: A condition relating the lengths of codewords in a prefix code. |  |
 | arithmetic coding | 算術符号化 | proposed | arithmetic-coding: A compression method encoding a sequence as an interval determined by symbol probabilities. |  |
 | minimum description length | 最小記述長 | proposed | minimum-description-length: A principle selecting models using the combined description length of model and data. |  |
@@ -1110,7 +1110,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | channel coding | 通信路符号化 | proposed | channel-coding: Encoding messages to support reliable communication through a channel. |  |
 | contrastive learning | 対照学習 | proposed | contrastive-learning: Learning representations by distinguishing related examples from alternatives. |  |
 | contrastive loss | 対照損失 | proposed | contrastive-loss: A loss encouraging specified examples to be similar or different in representation. |  |
-| InfoNCE | InfoNCE対照損失 | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
+| InfoNCE | InfoNCE | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
 | negative pair | 負のペア | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
 | positive pair | 正のペア | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
 | natural parameter | 自然パラメータ | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
@@ -1128,12 +1128,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | noise coefficient | ノイズ係数 | proposed | noise-coefficient: A coefficient controlling the magnitude of stochastic forcing. |  |
 | local truncation error | 局所打ち切り誤差 | proposed | local-truncation-error: The error incurred in one numerical step when starting from an exact state. |  |
 | global error | 大域誤差 | proposed | global-error: The accumulated difference between a numerical solution and the exact solution over an interval. |  |
-| adaptive step size | 適応的ステップ幅 | proposed | adaptive-step-size: A step size adjusted during computation according to an error or performance criterion. |  |
+| adaptive step size | 適応的ステップサイズ | proposed | adaptive-step-size: A step size adjusted during computation according to an error or performance criterion. |  |
 | stability region | 安定領域 | proposed | stability-region: The set of step and problem parameters for which a numerical method remains stable. |  |
 | numerical solver | 数値ソルバー | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
 | linear stability | 線形安定性 | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
 | continuous normalizing flow | 連続正規化フロー | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
-| Jacobian determinant | ヤコビアン行列式 | proposed | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. |  |
+| Jacobian determinant | ヤコビ行列式 | verified_external | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. | review-ja-f83d8eb4de: page |
 | continuity equation | 連続の式 | proposed | continuity-equation: An equation describing conservation of probability or mass as it flows through space. |  |
 | Kolmogorov forward equation | コルモゴロフ前進方程式 | proposed | kolmogorov-forward-equation: An equation describing the evolution of a stochastic process's probability distribution. |  |
 | multi-query attention | マルチクエリアテンション | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
@@ -1142,15 +1142,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | QK circuit | QK回路 | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
 | OV circuit | OV回路 | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
 | feedforward block | フィードフォワードブロック | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
-| RMSNorm | 二乗平均平方根正規化 | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
-| ALiBi | 線形バイアス付きアテンション | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
-| sparse attention | 疎アテンション | proposed | sparse-attention: Attention in which only a subset of query-key pairs is computed or used. |  |
+| RMSNorm | RMSNorm | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
+| ALiBi | ALiBi | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
+| sparse attention | スパースアテンション | proposed | sparse-attention: Attention in which only a subset of query-key pairs is computed or used. |  |
 | linear attention | 線形アテンション | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
 | quadratic complexity | 二乗計算量 | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
 | tokens per second | 毎秒トークン数 | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
 | head dimension | ヘッド次元 | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
-| weight tying | 重みの共有 | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
-| embedding table | 埋め込み表 | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
+| weight tying | 重み結合 | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
+| embedding table | 埋め込みテーブル | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | 出力射影 | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | 誘導回路 | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
 | attention pattern | アテンションパターン | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
@@ -1159,10 +1159,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | expert parallelism | エキスパート並列 | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
 | shared expert | 共有エキスパート | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | 計算予算 | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
-| training compute | 学習計算量 | proposed | training-compute: The amount of computation used to train a model. |  |
-| active parameters | 有効パラメータ数 | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
+| training compute | 訓練計算量 | proposed | training-compute: The amount of computation used to train a model. |  |
+| active parameters | アクティブパラメータ数 | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
 | model width | モデル幅 | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
-| training tokens | 学習トークン数 | proposed | training-tokens: Tokens processed as part of model training. |  |
+| training tokens | 訓練トークン数 | proposed | training-tokens: Tokens processed as part of model training. |  |
 | inference cost | 推論コスト | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
 | kernel launch | カーネル起動 | proposed | kernel-launch: Starting an operation or kernel for execution on a device. |  |
 | launch overhead | 起動オーバーヘッド | proposed | launch-overhead: Time or resources spent initiating a computational operation. |  |
@@ -1172,21 +1172,27 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | floating-point format | 浮動小数点形式 | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
 | loss scaling | 損失スケーリング | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
 | activation memory | 活性化メモリ | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
-| all-gather | オールギャザー | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
-| reduce-scatter | リデューススキャッター | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
+| all-gather | all-gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
+| reduce-scatter | reduce-scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
 | batching | バッチ化 | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
 | perceptual compression | 知覚圧縮 | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
 | semantic compression | 意味圧縮 | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
-| Reflow | Reflowによる軌道の再学習 | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
-| consistency training | 整合性学習 | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
+| Reflow | Reflow | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
+| consistency training | 一貫性訓練 | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
 | reference velocity | 参照速度 | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
 | stop-gradient | 勾配停止 | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
 | prior term | 事前項 | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
 | denoising term | ノイズ除去項 | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
 | reconstruction term | 再構成項 | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
-| Mamba | Mamba選択的状態空間モデル | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | 生成モデルのクリティック | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
+| critic | クリティック | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
 | model | モデル | verified_d2l | model: A mathematical or computational representation used to describe data or make predictions. | [east-ja-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_linear-networks/linear-regression.md#L16) |
-| training | 学習 | verified_d2l | training: The process of fitting a model using data and a learning objective. | [east-ja-chapter-multilayer-perceptrons-mlp-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/mlp.md#L18) |
+| training | 訓練 | verified_external | training: The process of fitting a model using data and a learning objective. | review-ja-8d0a10bc15: page |
 | activation | 活性化値 | proposed | activation: The output of a neural network unit or activation function for a given input. |  |
 | mask | マスク | verified_d2l | mask: A pattern of values specifying which entries are retained or suppressed in a computation. | [east-ja-chapter-multilayer-perceptrons-dropout-md](https://github.com/d2l-ai/d2l-ja/blob/f84fb229198b49f2dc532ca72ce72b5611a124cb/chapter_multilayer-perceptrons/dropout.md#L57) |
+| sample | サンプル | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
+| loss | 損失 | verified_external | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. | review-ja-ed5734d9ae: page |
+| score | スコア | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
+| batch | バッチ | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
+| advantage | アドバンテージ | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
+| cost | コスト | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |

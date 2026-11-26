@@ -13,12 +13,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | label | étiquette | proposed | label: The target value associated with an example. |  |
 | training example | exemple d'entraînement | proposed | training-example: An observation used to fit a model. |  |
 | dataset | jeu de données | verified_external | dataset: A collection of examples used for analysis or learning. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L315) |
-| training set | ensemble d'entraînement | verified_external | training-set: The portion of data used to fit model parameters. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#training-set) |
-| validation set | ensemble de validation | verified_external | validation-set: Data used to select models or tune settings during development. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#validation-set) |
-| test set | ensemble de test | proposed | test-set: Data held out to assess a fitted model. |  |
+| training set | jeu d'entraînement | verified_external | training-set: The portion of data used to fit model parameters. | review-fr-93372b598c: page |
+| validation set | jeu de validation | proposed | validation-set: Data used to select models or tune settings during development. |  |
+| test set | jeu de test | proposed | test-set: Data held out to assess a fitted model. |  |
 | model parameter | paramètre du modèle | proposed | model-parameter: A value learned or fitted as part of a model. |  |
 | weight | poids | proposed | weight: A coefficient that scales an input or connection in a model. |  |
-| bias | terme de biais | proposed | bias: An additive offset in a model or prediction. |  |
+| bias | biais | verified_external | bias: An additive offset in a model or prediction. | review-fr-42e89a2535: page |
 | prediction | prédiction | verified_external | prediction: A model's estimate of an outcome for an input. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#prediction) |
 | loss function | fonction de perte | verified_external | loss-function: A function measuring the error of a prediction or model. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#loss-function) |
 | objective function | fonction objectif | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [google-ml-metrics-fr](https://developers.google.com/machine-learning/glossary/metrics?hl=fr#objective-function) |
@@ -29,7 +29,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | batch size | taille du lot | verified_external | batch-size: The number of examples processed in a batch. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#batch-size) |
 | epoch | époque | proposed | epoch: A pass through the training dataset. |  |
 | gradient descent | descente de gradient | verified_external | gradient-descent: An optimization method that moves parameters against the objective gradient. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#gradient-descent) |
-| stochastic gradient descent | algorithme du gradient stochastique | verified_external | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L196) |
+| stochastic gradient descent | descente de gradient stochastique | verified_external | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | review-fr-42e89a2535: page; review-fr-616bc439b2: page |
 | learning rate | taux d'apprentissage | verified_external | learning-rate: The step-size setting used in an optimization update. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#learning-rate) |
 | optimization | optimisation | proposed | optimization: The process of finding values that improve an objective. |  |
 | gradient | gradient | proposed | gradient: The vector of partial derivatives of a scalar function. |  |
@@ -67,7 +67,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | joint distribution | distribution jointe | proposed | joint-distribution: A probability distribution over multiple random variables together. |  |
 | marginal distribution | distribution marginale | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
 | independence | indépendance | verified_external | independence: A property where knowing one event or variable does not change the distribution of another. | [stanford-paired-fr-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-probability.md#L105) |
-| expectation | espérance mathématique | proposed | expectation: The probability-weighted average of a random quantity. |  |
+| expectation | espérance | proposed | expectation: The probability-weighted average of a random quantity. |  |
 | variance | variance | proposed | variance: The expected squared deviation from the mean. |  |
 | standard deviation | écart-type | verified_external | standard-deviation: The square root of variance. | [stanford-paired-fr-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-probability.md#L171) |
 | covariance | covariance | proposed | covariance: A measure of how two random variables vary together. |  |
@@ -89,7 +89,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | softmax | softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
 | logistic regression | régression logistique | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#logistic-regression) |
 | sigmoid | sigmoïde | verified_external | sigmoid: A bounded nonlinear function often used to map real values to probabilities. | [stanford-paired-fr-cs-230-recurrent-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-recurrent-neural-networks.md#L182) |
-| cross-entropy loss | entropie croisée | verified_external | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. | [stanford-paired-fr-cs-230-deep-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-deep-learning-tips-and-tricks.md#L168) |
+| cross-entropy loss | perte d'entropie croisée | proposed | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. |  |
 | accuracy | exactitude | proposed | accuracy: The proportion of predictions that are correct. |  |
 | precision | précision | proposed | precision: The fraction of predicted positives that are true positives. |  |
 | recall | rappel | proposed | recall: The fraction of actual positives that are correctly identified. |  |
@@ -107,7 +107,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | generalization | généralisation | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#generalization) |
 | regularization | régularisation | verified_external | regularization: A method that constrains or modifies learning to improve generalization. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#regularization) |
 | weight decay | décroissance des poids | proposed | weight-decay: A regularization method that shrinks model weights during training. |  |
-| dropout | abandon aléatoire | proposed | dropout: A training method that randomly masks activations to regularize a network. |  |
+| dropout | dropout | verified_external | dropout: A training method that randomly masks activations to regularize a network. | review-fr-42e89a2535: page; review-fr-ee7341c6c1: page |
 | early stopping | arrêt anticipé | proposed | early-stopping: Stopping training based on validation performance before fitting continues too far. |  |
 | hyperparameter | hyperparamètre | verified_external | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [google-ml-fundamentals-fr](https://developers.google.com/machine-learning/glossary/fundamentals?hl=fr#hyperparameter) |
 | model selection | sélection de modèle | verified_external | model-selection: The process of choosing a model or configuration using available evidence. | [stanford-paired-fr-cs-229-machine-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-machine-learning-tips-and-tricks.md#L129) |
@@ -116,18 +116,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | vanishing gradient | disparition du gradient | proposed | vanishing-gradient: A gradient that becomes very small as it propagates through a network. |  |
 | exploding gradient | explosion du gradient | proposed | exploding-gradient: A gradient that grows excessively large during propagation. |  |
 | gradient clipping | écrêtage du gradient | proposed | gradient-clipping: Limiting gradient magnitude to stabilize optimization. |  |
-| batch normalization | normalisation de lot | verified_external | batch-normalization: A normalization method using statistics of activations in a batch. | [stanford-paired-fr-cs-230-deep-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-deep-learning-tips-and-tricks.md#L28) |
+| batch normalization | normalisation par lots | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
 | layer normalization | normalisation de couche | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | convolution | proposed | convolution: An operation that combines local input values with shared kernel weights. |  |
 | convolutional neural network | réseau de neurones convolutif | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
-| kernel | noyau de convolution | proposed | kernel: A set of weights applied locally in a convolution. |  |
+| kernel | noyau | verified_external | kernel: A set of weights applied locally in a convolution. | review-fr-f6ccaaf99d: page |
 | filter | filtre | proposed | filter: A learned set of local weights used to extract a pattern. |  |
 | channel | canal | proposed | channel: A feature dimension in a structured representation such as an image. |  |
 | stride | pas | proposed | stride: The spacing between successive positions of an operation on an input. |  |
 | padding | remplissage | proposed | padding: Extra values added around an input to control an operation's boundary or output size. |  |
-| pooling | regroupement | proposed | pooling: An operation that aggregates values over local regions. |  |
-| max pooling | regroupement par maximum | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
-| average pooling | regroupement par moyenne | proposed | average-pooling: Pooling that averages values in each region. |  |
+| pooling | pooling | verified_external | pooling: An operation that aggregates values over local regions. | review-fr-2134541636: page; review-fr-f6ccaaf99d: page; stanford-paired-fr-cs-230-convolutional-neural-networks: page |
+| max pooling | max-pooling | verified_external | max-pooling: Pooling that selects the maximum value in each region. | review-fr-f6ccaaf99d: page; stanford-paired-fr-cs-230-convolutional-neural-networks: page |
+| average pooling | pooling par moyenne | proposed | average-pooling: Pooling that averages values in each region. |  |
 | receptive field | champ récepteur | verified_external | receptive-field: The region of an input that can influence a particular activation. | [stanford-paired-fr-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-convolutional-neural-networks.md#L287) |
 | translation equivariance | équivariance par translation | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | connexion résiduelle | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
@@ -135,14 +135,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | skip connection | connexion de saut | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
 | image augmentation | augmentation d'images | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
 | transfer learning | apprentissage par transfert | proposed | transfer-learning: Reusing knowledge learned on one task to improve learning on another. |  |
-| fine-tuning | ajustement fin | proposed | fine-tuning: Further training a pretrained model for a particular task or dataset. |  |
+| fine-tuning | réglage fin | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | review-fr-0e93342f56: page; review-fr-249a08fd5e: page |
 | pretraining | préentraînement | proposed | pretraining: Training a model on an initial task or dataset before adaptation. |  |
-| object detection | détection d'objet | verified_external | object-detection: The task of locating and classifying objects in an image. | [stanford-paired-fr-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-convolutional-neural-networks.md#L343) |
+| object detection | détection d'objets | proposed | object-detection: The task of locating and classifying objects in an image. |  |
 | bounding box | boîte englobante | proposed | bounding-box: A rectangle specifying the location and extent of an object. |  |
-| intersection over union | intersection sur Union | verified_external | intersection-over-union: The ratio of the overlap area to the union area of two regions. | [stanford-paired-fr-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-convolutional-neural-networks.md#L413) |
+| intersection over union | intersection sur union | verified_external | intersection-over-union: The ratio of the overlap area to the union area of two regions. | stanford-paired-fr-cs-230-convolutional-neural-networks: page |
 | semantic segmentation | segmentation sémantique | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
 | instance segmentation | segmentation d'instances | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
-| image classification | classification d'image | verified_external | image-classification: The task of assigning a class to an image. | [stanford-paired-fr-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-convolutional-neural-networks.md#L357) |
+| image classification | classification d'images | proposed | image-classification: The task of assigning a class to an image. |  |
 | computer vision | vision par ordinateur | proposed | computer-vision: The study of extracting information and making predictions from visual data. |  |
 | recurrent neural network | réseau de neurones récurrent | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
 | hidden state | état caché | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
@@ -152,8 +152,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | token | jeton | proposed | token: A unit into which text is divided for processing. |  |
 | tokenization | segmentation en jetons | proposed | tokenization: The process of dividing text into tokens. |  |
 | vocabulary | vocabulaire | proposed | vocabulary: The set of tokens available to a language model. |  |
-| embedding | plongement vectoriel | proposed | embedding: A learned numerical representation of a discrete item or other object. |  |
-| word embedding | plongement de mots | proposed | word-embedding: A numerical vector representing a word. |  |
+| embedding | plongement | verified_external | embedding: A learned numerical representation of a discrete item or other object. | review-fr-61edd7053f: page |
+| word embedding | plongement lexical | verified_external | word-embedding: A numerical vector representing a word. | review-fr-3699d77c78: page |
 | sequence-to-sequence | séquence à séquence | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | encodeur | proposed | encoder: A component that converts an input into an internal representation. |  |
 | decoder | décodeur | proposed | decoder: A component that produces an output from an internal representation or context. |  |
@@ -182,9 +182,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | diffusion model | modèle de diffusion | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
 | noise schedule | calendrier de bruit | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
 | denoising | débruitage | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
-| score function | fonction de score de densité | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
+| score function | fonction de score | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | chaîne de Markov | proposed | markov-chain: A stochastic process whose next state depends on the present state. |  |
-| Markov decision process | processus de décision de Markov | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. |  |
+| Markov decision process | processus de décision markovien | verified_external | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. | review-fr-9aaeb3d961: page; stanford-paired-fr-cs-221-states-models: page |
 | reinforcement learning | apprentissage par renforcement | proposed | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. |  |
 | agent | agent | proposed | agent: An entity that chooses actions in an environment. |  |
 | environment | environnement | proposed | environment: The external system with which an agent interacts. |  |
@@ -192,12 +192,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | action | action | proposed | action: A choice made by an agent that can affect the environment. |  |
 | reward | récompense | proposed | reward: A scalar feedback signal evaluating an outcome or transition. |  |
 | policy | politique | verified_external | policy: A rule or distribution for selecting actions from states. | [stanford-paired-fr-cs-221-states-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-states-models.md#L455) |
-| return | retour cumulé | proposed | return: The accumulated future reward from a point in a trajectory. |  |
+| return | retour | proposed | return: The accumulated future reward from a point in a trajectory. |  |
 | discount factor | facteur d'actualisation | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
-| value function | fonction de valeurs | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [stanford-paired-fr-cs-229-deep-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-deep-learning.md#L237) |
-| action-value function | fonction de valeur d'action | proposed | action-value-function: A function estimating expected return from a state and action. |  |
-| value iteration | itération sur la valeur | verified_external | value-iteration: An iterative method for computing optimal values using Bellman updates. | [stanford-paired-fr-cs-221-states-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-states-models.md#L546) |
-| Q-learning | apprentissage Q | proposed | q-learning: An off-policy temporal-difference method for learning action values. |  |
+| value function | fonction de valeur | verified_external | value-function: A function estimating expected return from a state or state-action pair. | review-fr-63ceda7db5: page; stanford-paired-fr-cs-221-states-models: page |
+| action-value function | fonction de valeur état-action | proposed | action-value-function: A function estimating expected return from a state and action. |  |
+| value iteration | itération sur les valeurs | verified_external | value-iteration: An iterative method for computing optimal values using Bellman updates. | review-fr-63ceda7db5: page |
+| Q-learning | Q-learning | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | review-fr-8ff4d48954: page; stanford-paired-fr-cs-221-states-models: page |
 | exploration | exploration | proposed | exploration: Trying actions to acquire information about their outcomes. |  |
 | policy gradient | gradient de politique | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
 | convex function | fonction convexe | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
@@ -243,7 +243,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | change of variables | changement de variables | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
 | Markov property | propriété de Markov | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
 | stationary distribution | distribution stationnaire | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
-| principal component analysis | analyse des composantes principales | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L385) |
+| principal component analysis | analyse en composantes principales | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | review-fr-b5f20b3fd2: page |
 | dimensionality reduction | réduction de dimension | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
 | principal component | composante principale | proposed | principal-component: A direction capturing variance under the constraints of principal component analysis. |  |
 | convergence | convergence | proposed | convergence: The approach of a sequence or process toward a limiting value or behavior. |  |
@@ -253,7 +253,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | confidence interval | intervalle de confiance | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. |  |
 | hypothesis testing | test d'hypothèse | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. |  |
 | bootstrap | rééchantillonnage bootstrap | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
-| central limit theorem | théorème de la limite centrale | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | [stanford-paired-fr-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-probability.md#L321) |
+| central limit theorem | théorème central limite | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | review-fr-d48f898dc7: page |
 | law of large numbers | loi des grands nombres | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. |  |
 | variance reduction | réduction de variance | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
 | causality | causalité | proposed | causality: The relationship in which changes to one variable bring about changes in another. |  |
@@ -264,7 +264,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fairness | équité | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
 | parallelism | parallélisme | proposed | parallelism: Executing multiple computations concurrently. |  |
 | data parallelism | parallélisme de données | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
-| GPU | processeur graphique | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
+| GPU | GPU | verified_external | gpu: A processor designed for highly parallel numerical computation. | review-fr-249a08fd5e: page; review-fr-4defeb1a62: page |
 | memory bandwidth | bande passante mémoire | proposed | memory-bandwidth: The rate at which data can be transferred to or from memory. |  |
 | throughput | débit | proposed | throughput: The amount of work completed per unit time. |  |
 | latency | latence | verified_external | latency: The elapsed time required to complete a task or operation. | [google-ml-generative-fr](https://developers.google.com/machine-learning/glossary/generative?hl=fr#latency) |
@@ -303,11 +303,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mixture of Gaussians | mélange de gaussiennes | proposed | mixture-of-gaussians: A probability distribution formed as a weighted combination of Gaussian components. |  |
 | variational inference | inférence variationnelle | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
 | evidence lower bound | borne inférieure de l'évidence | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
-| log probability | logarithme de probabilité | proposed | log-probability: The logarithm of a probability or probability density. |  |
-| log-sum-exp | logarithme de somme d'exponentielles | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
+| log probability | log-probabilité | proposed | log-probability: The logarithm of a probability or probability density. |  |
+| log-sum-exp | log-sum-exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
 | numerical stability | stabilité numérique | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. |  |
 | floating point | virgule flottante | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
-| underflow | sous-dépassement | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
+| underflow | soupassement | verified_external | underflow: A numerical condition in which a magnitude is too small to represent accurately. | review-fr-4114c73b2d: page |
 | overflow | dépassement de capacité | proposed | overflow: A numerical condition in which a magnitude exceeds the representable range. |  |
 | condition number | nombre de conditionnement | proposed | condition-number: A measure of how sensitive a mathematical problem is to perturbations. |  |
 | convergence rate | taux de convergence | proposed | convergence-rate: The speed at which an iterative procedure approaches a limit or solution. |  |
@@ -324,25 +324,25 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Lagrangian | lagrangien | verified_external | lagrangian: A function combining an objective with weighted constraint terms. | [stanford-paired-fr-cs-229-supervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-supervised-learning.md#L309) |
 | coordinate descent | descente de coordonnées | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
 | learning rate decay | décroissance du taux d'apprentissage | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
-| warmup | phase de montée progressive du taux d'apprentissage | proposed | warmup: A training phase in which a setting such as learning rate is gradually increased. |  |
+| warmup | échauffement | proposed | warmup: A training phase in which a setting such as learning rate is gradually increased. |  |
 | weight initialization | initialisation des poids | proposed | weight-initialization: The choice of starting values for model weights. |  |
 | Xavier initialization | initialisation de Xavier | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
 | weight sharing | partage des poids | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | nombre de paramètres | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | complexité de calcul | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
-| backward pass | passage arrière | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
-| forward pass | passage avant | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
+| backward pass | passe arrière | verified_external | backward-pass: The computation that propagates derivatives from outputs toward inputs. | review-fr-42e89a2535: page |
+| forward pass | passe avant | verified_external | forward-pass: The computation that evaluates a model from inputs to outputs. | review-fr-42e89a2535: page |
 | computational efficiency | efficacité de calcul | proposed | computational-efficiency: The effectiveness with which computation uses time or resources. |  |
 | loss landscape | paysage de la fonction de perte | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
 | inductive bias | biais inductif | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
 | universal approximation | approximation universelle | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
 | feature extraction | extraction de caractéristiques | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
 | representation learning | apprentissage de représentations | proposed | representation-learning: Learning useful features or representations from data. |  |
-| self-supervised learning | apprentissage auto-supervisé | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
+| self-supervised learning | apprentissage autosupervisé | verified_external | self-supervised-learning: Learning from supervisory signals constructed from the data itself. | review-fr-93372b598c: page |
 | supervised learning | apprentissage supervisé | proposed | supervised-learning: Learning a mapping from inputs to observed targets. |  |
 | unsupervised learning | apprentissage non supervisé | verified_external | unsupervised-learning: Learning structure from data without task labels. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L329) |
 | in-context learning | apprentissage en contexte | proposed | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. |  |
-| prompt | invite | proposed | prompt: An input that guides a model's response or behavior. |  |
+| prompt | prompt | verified_external | prompt: An input that guides a model's response or behavior. | review-fr-93372b598c: page; review-fr-c2aa8906d2: page |
 | context window | fenêtre de contexte | verified_external | context-window: The amount of context a model can process in a single input. | [google-ml-generative-fr](https://developers.google.com/machine-learning/glossary/generative?hl=fr#context-window) |
 | next-token prediction | prédiction du jeton suivant | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
 | autoregressive model | modèle autorégressif | verified_external | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. | [google-ml-generative-fr](https://developers.google.com/machine-learning/glossary/generative?hl=fr#auto-regressive-model) |
@@ -356,11 +356,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | feedforward network | réseau à propagation avant | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
 | residual block | bloc résiduel | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | couche de normalisation | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
-| root mean square | racine carrée moyenne | proposed | root-mean-square: The square root of the mean of squared values. |  |
+| root mean square | moyenne quadratique | verified_external | root-mean-square: The square root of the mean of squared values. | review-fr-8a738ac7d6: page |
 | encoder-decoder | encodeur-décodeur | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | longueur de séquence | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | score d'attention | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
-| attention pooling | agrégation par attention | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
+| attention pooling | pooling par attention | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
 | additive attention | attention additive | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
 | dot-product attention | attention par produit scalaire | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
 | masked attention | attention masquée | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
@@ -374,7 +374,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | nearest neighbor | plus proche voisin | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. |  |
 | word analogy | analogie de mots | proposed | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. |  |
 | skip-gram | skip-gram | proposed | skip-gram: A word embedding model and objective that predict context words from a center word. |  |
-| continuous bag of words | sac continu de mots | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
+| continuous bag of words | sac de mots continu | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
 | masked language modeling | modélisation de langage masqué | proposed | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. |  |
 | next sentence prediction | prédiction de la phrase suivante | proposed | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. |  |
 | question answering | réponse aux questions | proposed | question-answering: The task of producing an answer to a question, often using a supplied context. |  |
@@ -383,8 +383,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | semantic similarity | similarité sémantique | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
 | convolutional layer | couche convolutive | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | carte de caractéristiques | proposed | feature-map: An array of activations representing features across positions. |  |
-| pooling layer | couche de regroupement | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
-| strided convolution | convolution à pas | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
+| pooling layer | couche de pooling | verified_external | pooling-layer: A layer that aggregates local groups of activations. | review-fr-f6ccaaf99d: page; stanford-paired-fr-cs-230-convolutional-neural-networks: page |
+| strided convolution | convolution à pas supérieur à un | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | convolution transposée | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. |  |
 | dilated convolution | convolution dilatée | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
 | depthwise convolution | convolution par canal | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
@@ -396,7 +396,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | region proposal | proposition de région | proposed | region-proposal: A candidate image region that may contain an object. |  |
 | anchor box | boîte d'ancrage | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
 | non-maximum suppression | suppression des non-maxima | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
-| data augmentation | augmentation des données | verified_external | data-augmentation: Creating varied training examples by transforming existing data. | [stanford-paired-fr-cs-230-deep-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-deep-learning-tips-and-tricks.md#L28) |
+| data augmentation | augmentation de données | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
 | random crop | recadrage aléatoire | verified_external | random-crop: A data augmentation that selects a random subregion of an input. | [stanford-paired-fr-cs-230-deep-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-230-deep-learning-tips-and-tricks.md#L84) |
 | super-resolution | super-résolution | proposed | super-resolution: The task of producing a higher-resolution image from a lower-resolution input. |  |
 | image generation | génération d'images | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
@@ -408,14 +408,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | episode | épisode | proposed | episode: A sequence of interactions ending at a terminal condition. |  |
 | terminal state | état terminal | proposed | terminal-state: A state marking the end of an episode. |  |
 | optimal policy | politique optimale | verified_external | optimal-policy: A policy achieving the best expected return under a specified criterion. | [stanford-paired-fr-cs-221-states-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-states-models.md#L539) |
-| policy iteration | itération de politiques | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
-| policy evaluation | évaluation d'une politique | verified_external | policy-evaluation: Computing or estimating the value of a policy. | [stanford-paired-fr-cs-221-states-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-states-models.md#L504) |
+| policy iteration | itération sur les politiques | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
+| policy evaluation | évaluation de politique | proposed | policy-evaluation: Computing or estimating the value of a policy. |  |
 | policy improvement | amélioration de politique | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
 | off-policy | hors politique | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
 | on-policy | sur politique | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
-| multi-armed bandit | bandit à plusieurs bras | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
+| multi-armed bandit | bandit manchot | verified_external | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. | review-fr-e61203340c: page |
 | regret | regret | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
-| Markov reward process | processus de récompense de Markov | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
+| Markov reward process | processus de récompense markovien | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
 | Bellman optimality equation | équation d'optimalité de Bellman | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | théorème du gradient de politique | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
 | deep reinforcement learning | apprentissage profond par renforcement | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
@@ -424,11 +424,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | diffusion process | processus de diffusion | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
 | forward process | processus direct | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
 | reverse process | processus inverse | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
-| score matching | ajustement du score | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
+| score matching | score matching | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | dynamique de Langevin | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
 | noise prediction | prédiction du bruit | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
 | Gaussian noise | bruit gaussien | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. |  |
-| flow matching | ajustement de flot | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
+| flow matching | flow matching | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
 | probability flow | flot de probabilité | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
 | vector field | champ vectoriel | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
 | continuous-time | temps continu | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
@@ -436,10 +436,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Euler-Maruyama | méthode d'Euler-Maruyama | proposed | euler-maruyama: A numerical method for approximating solutions of stochastic differential equations. |  |
 | Itô calculus | calcul d'Itô | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
 | ODE solver | solveur d'équations différentielles ordinaires | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
-| adjoint method | méthode adjointe | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
+| adjoint method | méthode de l'adjoint | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | exponentielle matricielle | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | transformée de Fourier | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
-| bias | biais statistique | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
+| bias | biais | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
 | mixture of experts | mélange d'experts | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
 | transition kernel | noyau de transition | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | récompense espérée | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
@@ -453,14 +453,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | control variate | variable de contrôle | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
 | function approximation | approximation de fonctions | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
 | actor | acteur | proposed | actor: The policy component of an actor-critic method. |  |
-| critic | critique de valeur | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
+| critic | critique | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
 | fixed point | point fixe | proposed | fixed-point: A point unchanged by applying a given mapping. |  |
 | value backup | mise à jour de valeur | proposed | value-backup: A computation updating a value estimate using rewards and successor values. |  |
 | greedy policy | politique gloutonne | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. |  |
 | exploration rate | taux d'exploration | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
 | state-action pair | paire état-action | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
 | partially observable | partiellement observable | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
-| Markov chain Monte Carlo | Monte Carlo par chaînes de Markov | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
+| Markov chain Monte Carlo | Monte-Carlo par chaînes de Markov | verified_external | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. | review-fr-74e4694661: page |
 | noise ball | boule de bruit | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
 | implicit bias | biais implicite | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
 | preconditioner | préconditionneur | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
@@ -473,7 +473,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | natural gradient | gradient naturel | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
 | Shampoo | Shampoo | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
 | Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
-| heavy-ball momentum | momentum de balle lourde | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
+| heavy-ball momentum | momentum de la boule pesante | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
 | trust-region method | méthode des régions de confiance | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
 | soft-thresholding | seuillage doux | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
 | convex conjugate | conjuguée convexe | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
@@ -488,7 +488,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | spectral radius | rayon spectral | proposed | spectral-radius: The largest absolute value among a matrix's eigenvalues. |  |
 | spectral norm | norme spectrale | proposed | spectral-norm: The largest singular value of a matrix. |  |
 | nuclear norm | norme nucléaire | proposed | nuclear-norm: The sum of a matrix's singular values. |  |
-| power iteration | itération de la puissance | proposed | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. |  |
+| power iteration | méthode de la puissance itérée | verified_external | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. | review-fr-7bd31b6e19: page |
 | projection | projection | proposed | projection: A mapping that sends a point onto a specified subspace or set. |  |
 | span | espace engendré | proposed | span: The set of all linear combinations of a collection of vectors. |  |
 | linear independence | indépendance linéaire | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
@@ -496,10 +496,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | normal equations | équations normales | verified_external | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. | [stanford-paired-fr-cs-229-supervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-supervised-learning.md#L141) |
 | one-hot encoding | encodage one-hot | proposed | one-hot-encoding: A representation of a category as a vector with one active component. |  |
 | concatenation | concaténation | proposed | concatenation: The operation of joining arrays or sequences along an axis. |  |
-| broadcasting | diffusion des dimensions | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
+| broadcasting | broadcasting | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
 | shape | forme | proposed | shape: The sizes of the axes of an array or tensor. |  |
 | slice | tranche | proposed | slice: A selected portion of an array or sequence. |  |
-| forward mode | mode avant | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
+| forward mode | mode direct | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
 | reverse mode | mode inverse | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
 | truncation error | erreur de troncature | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
 | finite difference | différence finie | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
@@ -526,7 +526,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | image-to-image translation | traduction d'image à image | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
 | cycle consistency | cohérence cyclique | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
 | critic loss | perte du critique | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
-| KV cache | cache de clés et de valeurs | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
+| KV cache | cache KV | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
 | grouped-query attention | attention à requêtes groupées | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
 | attention sink | puits d'attention | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
 | transformer block | bloc transformeur | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
@@ -534,10 +534,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | vision transformer | transformeur de vision | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
 | position interpolation | interpolation positionnelle | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
 | relative position | position relative | proposed | relative-position: The displacement between positions in a sequence. |  |
-| prefill | traitement initial du contexte | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
+| prefill | préremplissage | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
 | decode | décodage | proposed | decode: The stage of generating output tokens from a model one step at a time. |  |
 | time to first token | délai jusqu'au premier jeton | proposed | time-to-first-token: The elapsed time from a generation request until its first output token. |  |
-| roofline | modèle de plafond de performance | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
+| roofline | modèle roofline | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
 | arithmetic intensity | intensité arithmétique | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
 | mixed precision | précision mixte | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
 | eager execution | exécution immédiate | proposed | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. |  |
@@ -545,10 +545,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | data loader | chargeur de données | proposed | data-loader: A component that prepares and supplies batches of data to a training process. |  |
 | input pipeline | pipeline d'entrée | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
 | stochastic depth | profondeur stochastique | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | regroupement global par moyenne | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
+| global average pooling | pooling global par moyenne | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
 | grouped convolution | convolution groupée | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | moyenne mobile exponentielle | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
-| inverted dropout | abandon aléatoire inversé | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
+| inverted dropout | dropout inversé | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
 | He initialization | initialisation de He | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
 | GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
 | generalization gap | écart de généralisation | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
@@ -599,7 +599,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | just-in-time compilation | compilation à la volée | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
 | asynchronous execution | exécution asynchrone | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | synchronisation | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. |  |
-| all-reduce | réduction collective | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
+| all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | accumulation de gradients | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
 | pipeline parallelism | parallélisme de pipeline | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
 | tensor parallelism | parallélisme de tenseurs | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
@@ -622,7 +622,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reward hacking | détournement de la récompense | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
 | planning horizon | horizon de planification | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | opérateur de Bellman | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
-| bootstrapping | mise à jour par estimations | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
+| bootstrapping | bootstrapping | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
 | Monte Carlo return | retour de Monte-Carlo | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
 | terminal reward | récompense terminale | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
 | exploration bonus | bonus d'exploration | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
@@ -637,8 +637,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | unit vector | vecteur unitaire | proposed | unit-vector: A vector whose norm equals one. |  |
 | vector space | espace vectoriel | proposed | vector-space: A set of vectors closed under addition and scalar multiplication. |  |
 | subspace | sous-espace | proposed | subspace: A subset that is itself a vector space under the inherited operations. |  |
-| inner product | produit intérieur | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. |  |
-| outer product | produit extérieur | proposed | outer-product: A matrix formed by multiplying each component of one vector by each component of another. |  |
+| inner product | produit scalaire | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. |  |
+| outer product | produit dyadique | verified_external | outer-product: A matrix formed by multiplying each component of one vector by each component of another. | review-fr-4ee3fa9d03: page; review-fr-5a6699467a: page |
 | quadratic form | forme quadratique | proposed | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. |  |
 | quadratic function | fonction quadratique | proposed | quadratic-function: A function containing terms of degree at most two. |  |
 | linear system | système linéaire | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
@@ -652,8 +652,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | basis vector | vecteur de base | proposed | basis-vector: A vector belonging to a basis of a vector space. |  |
 | eigendecomposition | décomposition spectrale | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. |  |
 | singular value | valeur singulière | proposed | singular-value: A nonnegative scaling factor in a matrix's singular value decomposition. |  |
-| left singular vector | vecteur singulier gauche | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
-| right singular vector | vecteur singulier droit | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
+| left singular vector | vecteur singulier à gauche | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
+| right singular vector | vecteur singulier à droite | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
 | low-rank approximation | approximation de bas rang | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
 | orthogonal projection | projection orthogonale | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
 | Euclidean norm | norme euclidienne | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
@@ -701,8 +701,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | consistent estimator | estimateur convergent | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
 | maximum likelihood estimator | estimateur du maximum de vraisemblance | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
 | test statistic | statistique de test | proposed | test-statistic: A quantity computed from data and used by a statistical test. |  |
-| type I error | erreur de type I | proposed | type-i-error: Rejecting a true null hypothesis. |  |
-| type II error | erreur de type II | proposed | type-ii-error: Failing to reject a false null hypothesis. |  |
+| type I error | erreur de première espèce | proposed | type-i-error: Rejecting a true null hypothesis. |  |
+| type II error | erreur de seconde espèce | proposed | type-ii-error: Failing to reject a false null hypothesis. |  |
 | Monte Carlo estimate | estimation de Monte-Carlo | proposed | monte-carlo-estimate: An estimate computed using randomly sampled quantities. |  |
 | proposal distribution | distribution de proposition | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
 | rejection sampling | échantillonnage par rejet | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
@@ -713,11 +713,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | conditional mutual information | information mutuelle conditionnelle | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
 | data processing inequality | inégalité de traitement des données | proposed | data-processing-inequality: A bound stating that processing cannot increase information about an original variable under a Markov relationship. |  |
 | relative entropy | entropie relative | proposed | relative-entropy: Another name for Kullback-Leibler divergence between distributions. |  |
-| Gaussian path | trajectoire gaussienne | proposed | gaussian-path: A family of noisy distributions formed by combining a scaled data point with Gaussian noise. |  |
-| log-SNR | logarithme du rapport signal sur bruit | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
+| Gaussian path | chemin gaussien | proposed | gaussian-path: A family of noisy distributions formed by combining a scaled data point with Gaussian noise. |  |
+| log-SNR | log-SNR | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
 | conditional velocity | vitesse conditionnelle | proposed | conditional-velocity: The velocity of an individual noisy path conditioned on its clean data point. |  |
 | marginal velocity | vitesse marginale | proposed | marginal-velocity: The average path velocity conditioned on a point at a given time. |  |
-| conditional flow matching | ajustement conditionnel de flot | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
+| conditional flow matching | flow matching conditionnel | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
 | simple loss | perte simple | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
 | flow map | application de flot | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
 | average velocity | vitesse moyenne | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
@@ -726,7 +726,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adaptive layer norm | normalisation adaptative de couche | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
 | adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | modélisabilité | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
-| forward posterior | postérieure du processus direct | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
+| forward posterior | distribution a posteriori du processus direct | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
 | binary classification | classification binaire | proposed | binary-classification: The task of assigning each input to one of two classes. |  |
 | multiclass classification | classification multiclasse | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
 | multi-label classification | classification multi-étiquette | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
@@ -739,7 +739,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | true negative | vrai négatif | proposed | true-negative: A negative example correctly classified as negative. |  |
 | false negative | faux négatif | proposed | false-negative: A positive example incorrectly classified as negative. |  |
 | F1 score | score F1 | proposed | f1-score: The harmonic mean of precision and recall. |  |
-| receiver operating characteristic | courbe caractéristique de fonctionnement du récepteur | proposed | receiver-operating-characteristic: A curve showing true-positive rate against false-positive rate across thresholds. |  |
+| receiver operating characteristic | courbe ROC | verified_external | receiver-operating-characteristic: A curve showing true-positive rate against false-positive rate across thresholds. | review-fr-55ded7d635: page |
 | area under the curve | aire sous la courbe | proposed | area-under-the-curve: A scalar summary obtained by integrating a performance curve. |  |
 | class probability | probabilité de classe | proposed | class-probability: The probability assigned to a class for an input. |  |
 | class label | étiquette de classe | proposed | class-label: A category used as the target for a classification example. |  |
@@ -749,7 +749,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | training loss | perte d'entraînement | proposed | training-loss: The loss measured on training examples. |  |
 | validation loss | perte de validation | proposed | validation-loss: The loss measured on validation examples. |  |
 | test error | erreur de test | proposed | test-error: The prediction error measured on a held-out test set. |  |
-| training error | erreur d'apprentissage | verified_external | training-error: The prediction error measured on the training set. | [stanford-paired-fr-cs-229-supervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-supervised-learning.md#L471) |
+| training error | erreur d'entraînement | proposed | training-error: The prediction error measured on the training set. |  |
 | population risk | risque de population | proposed | population-risk: Expected loss under the population data distribution. |  |
 | generalization error | erreur de généralisation | proposed | generalization-error: The expected prediction error on examples from a target distribution. |  |
 | regularization strength | intensité de régularisation | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
@@ -766,13 +766,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | in-distribution | dans la distribution | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
 | Bayes error | erreur de Bayes | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
 | regression target | cible de régression | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
-| feature vector | vecteur caractéristique | verified_external | feature-vector: A vector containing the input features of an example. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L28) |
+| feature vector | vecteur de caractéristiques | proposed | feature-vector: A vector containing the input features of an example. |  |
 | target variable | variable cible | proposed | target-variable: The quantity a model is intended to predict. |  |
 | intercept | ordonnée à l'origine | proposed | intercept: The additive constant in a regression or other linear model. |  |
 | coefficient | coefficient | proposed | coefficient: A numerical factor multiplying a variable or term. |  |
 | least-squares regression | régression par moindres carrés | proposed | least-squares-regression: A regression method that minimizes squared residuals. |  |
 | linear predictor | prédicteur linéaire | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
-| closed-form solution | solution en forme fermée | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. |  |
+| closed-form solution | solution analytique | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. |  |
 | log odds | logarithme des cotes | proposed | log-odds: The logarithm of the ratio of an event's probability to the probability of its complement. |  |
 | odds ratio | rapport des cotes | proposed | odds-ratio: A ratio comparing the odds of an event under two conditions. |  |
 | independent variable | variable indépendante | proposed | independent-variable: A variable treated as an input or explanatory quantity. |  |
@@ -781,8 +781,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mean absolute error | erreur absolue moyenne | proposed | mean-absolute-error: The average absolute difference between predictions and targets. |  |
 | root mean squared error | racine de l'erreur quadratique moyenne | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
 | classification loss | perte de classification | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
-| hinge loss | fonction objectif de Hinge | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L112) |
-| squared loss | erreur quadratique | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [stanford-paired-fr-cs-221-reflex-models](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-221-reflex-models.md#L126) |
+| hinge loss | perte hinge | proposed | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. |  |
+| squared loss | perte quadratique | proposed | squared-loss: A loss proportional to the square of a prediction error. |  |
 | Huber loss | perte de Huber | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
 | regularized objective | objectif régularisé | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | initialisation aléatoire | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
@@ -819,8 +819,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | downsampling | sous-échantillonnage | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | suréchantillonnage | proposed | upsampling: Increasing the spatial or temporal resolution of a representation. |  |
 | aliasing | repliement spectral | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
-| pooling window | fenêtre de regroupement | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
-| global pooling | regroupement global | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| pooling window | fenêtre de pooling | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
+| global pooling | pooling global | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
 | fully convolutional network | réseau entièrement convolutif | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
 | bilinear interpolation | interpolation bilinéaire | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | interpolation par plus proche voisin | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
@@ -832,7 +832,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | identity shortcut | raccourci identité | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
 | bottleneck block | bloc goulot d'étranglement | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
 | convolutional block | bloc convolutif | proposed | convolutional-block: A network component grouping convolutional and often other operations. |  |
-| network in network | réseau dans le réseau | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
+| network in network | Network in Network | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
 | image patch | patch d'image | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
 | patch embedding | plongement de patch | proposed | patch-embedding: A vector representation computed from an image patch. |  |
 | image classifier | classifieur d'images | proposed | image-classifier: A model that assigns categories to images. |  |
@@ -840,7 +840,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | ground-truth bounding box | boîte englobante de référence | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
 | region of interest | région d'intérêt | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
 | region proposal network | réseau de propositions de régions | proposed | region-proposal-network: A network that generates candidate regions for object detection. |  |
-| single shot multibox detection | détection multiboîte en une passe | proposed | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. |  |
+| single shot multibox detection | Single Shot MultiBox Detector | proposed | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. |  |
 | style transfer | transfert de style | proposed | style-transfer: Generating an image that combines the content of one image with the style of another. |  |
 | content loss | perte de contenu | proposed | content-loss: A loss measuring differences in content representations between images. |  |
 | style loss | perte de style | proposed | style-loss: A loss measuring differences in style representations between images. |  |
@@ -857,7 +857,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | ranking | classement | proposed | ranking: Ordering items according to a relevance or preference score. |  |
 | click-through rate | taux de clics | proposed | click-through-rate: The fraction of impressions that lead to a click. |  |
 | click-through rate prediction | prédiction du taux de clics | proposed | click-through-rate-prediction: Estimating the probability that a displayed item will be clicked. |  |
-| factorization machine | machine de factorisation | proposed | factorization-machine: A model that represents pairwise feature interactions using low-dimensional factors. |  |
+| factorization machine | machine à factorisation | proposed | factorization-machine: A model that represents pairwise feature interactions using low-dimensional factors. |  |
 | neural collaborative filtering | filtrage collaboratif neuronal | proposed | neural-collaborative-filtering: Collaborative filtering using a neural network to model user-item interactions. |  |
 | pairwise ranking | classement par paires | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
 | Bayesian personalized ranking | classement bayésien personnalisé | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
@@ -874,7 +874,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | center word | mot central | proposed | center-word: The word used as the central item in a word-context training example. |  |
 | context word | mot de contexte | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
 | co-occurrence | cooccurrence | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
-| global vectors | vecteurs globaux | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
+| global vectors | GloVe | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
 | subsampling | sous-échantillonnage | proposed | subsampling: Selecting a subset of observations according to a sampling rule. |  |
 | word similarity | similarité entre mots | proposed | word-similarity: A measure of how closely related two words are in meaning or representation. |  |
 | decoder state | état du décodeur | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
@@ -908,7 +908,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | large language model | grand modèle de langage | proposed | large-language-model: A language model with substantial capacity trained on broad text data. |  |
 | long-context | contexte long | proposed | long-context: Describing a model or task involving unusually long input sequences. |  |
 | label smoothing | lissage des étiquettes | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. |  |
-| expected calibration error | erreur de calibration attendue | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
+| expected calibration error | erreur de calibration espérée | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
 | maximum margin | marge maximale | proposed | maximum-margin: The largest achievable separation between decision boundary and relevant examples under specified constraints. |  |
 | training distribution | distribution d'entraînement | proposed | training-distribution: The data distribution from which training examples are drawn. |  |
 | test distribution | distribution de test | proposed | test-distribution: The data distribution used to assess a model after training. |  |
@@ -942,8 +942,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | partition function | fonction de partition | proposed | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. |  |
 | normalizing constant | constante de normalisation | proposed | normalizing-constant: A factor that makes a nonnegative function sum or integrate to one. |  |
 | unnormalized density | densité non normalisée | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
-| log density | logarithme de densité | proposed | log-density: The logarithm of a probability density. |  |
-| denoising score matching | ajustement du score par débruitage | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
+| log density | log-densité | proposed | log-density: The logarithm of a probability density. |  |
+| denoising score matching | score matching par débruitage | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
 | contrastive divergence | divergence contrastive | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
 | Langevin sampling | échantillonnage de Langevin | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
 | annealed Langevin dynamics | dynamique de Langevin avec recuit | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
@@ -960,7 +960,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
 | variance schedule | calendrier de variance | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
 | velocity prediction | prédiction de vitesse | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
-| score estimate | estimation du score de densité | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
+| score estimate | estimation du score | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
 | denoiser | modèle de débruitage | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
 | denoising objective | objectif de débruitage | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
 | conditional denoising | débruitage conditionnel | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
@@ -976,8 +976,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sample diversity | diversité des échantillons | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
 | Fréchet Inception Distance | distance de Fréchet Inception | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
 | maximum mean discrepancy | écart maximal des moyennes | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
-| adversarial training | entraînement adversarial | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
-| adversarial objective | objectif adversarial | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
+| adversarial training | entraînement antagoniste | verified_external | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. | review-fr-93372b598c: page; review-fr-01afa52cff: page |
+| adversarial objective | objectif antagoniste | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | jeu minimax | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
 | Wasserstein GAN | GAN de Wasserstein | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
 | gradient penalty | pénalité de gradient | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
@@ -1010,7 +1010,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | conjugate gradient | gradient conjugué | proposed | conjugate-gradient: An iterative method for solving suitable linear systems or optimization problems using conjugate directions. |  |
 | curvature | courbure | proposed | curvature: A description of how the slope or gradient of a function changes. |  |
 | Hessian eigenvalue | valeur propre de la hessienne | proposed | hessian-eigenvalue: An eigenvalue of a Hessian matrix describing curvature along an associated direction. |  |
-| ill-conditioning | mau conditionnement | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
+| ill-conditioning | mauvais conditionnement | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
 | preconditioning | préconditionnement | proposed | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. |  |
 | second moment estimate | estimation du moment d'ordre deux | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. |  |
 | exponential averaging | moyennage exponentiel | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
@@ -1080,7 +1080,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pointwise loss | perte ponctuelle | proposed | pointwise-loss: A loss evaluated individually on examples or items. |  |
 | negative feedback | rétroaction négative | proposed | negative-feedback: An observation indicating dislike or lack of preference under a specified interpretation. |  |
 | item ranking | classement d'éléments | proposed | item-ranking: Ordering items by predicted relevance or preference. |  |
-| retrieval | recherche | proposed | retrieval: Selecting candidate items or documents for further ranking or presentation. |  |
+| retrieval | récupération | proposed | retrieval: Selecting candidate items or documents for further ranking or presentation. |  |
 | user behavior | comportement utilisateur | proposed | user-behavior: Actions or interactions performed by a user in a system. |  |
 | next-item prediction | prédiction du prochain élément | proposed | next-item-prediction: Predicting the next item a user will interact with based on available context. |  |
 | selection bias | biais de sélection | proposed | selection-bias: Systematic distortion caused by the process selecting observations into a dataset. |  |
@@ -1090,7 +1090,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | information theory | théorie de l'information | proposed | information-theory: The study of quantifying information, uncertainty, compression, and communication. |  |
 | information content | contenu informationnel | proposed | information-content: A measure of the information associated with an outcome or message. |  |
 | Shannon entropy | entropie de Shannon | proposed | shannon-entropy: The expected self-information of a random variable. |  |
-| joint entropy | entropie jointe | proposed | joint-entropy: The entropy of a joint probability distribution. |  |
+| joint entropy | entropie conjointe | verified_external | joint-entropy: The entropy of a joint probability distribution. | review-fr-a03cc3e9fb: page |
 | information bottleneck | goulot d'étranglement informationnel | proposed | information-bottleneck: A framework that balances compression of an input against retention of information about a target. |  |
 | lossless compression | compression sans perte | proposed | lossless-compression: Compression that permits exact reconstruction of the original data. |  |
 | source coding | codage de source | proposed | source-coding: Representing information from a source using a code. |  |
@@ -1116,7 +1116,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | natural parameter | paramètre naturel | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
 | free energy | énergie libre | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
 | importance sampling | échantillonnage préférentiel | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
-| detailed balance | équilibre détaillé | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
+| detailed balance | bilan détaillé | verified_external | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. | review-fr-7f0dedc103: page |
 | mixing time | temps de mélange | proposed | mixing-time: A measure of how long a Markov chain takes to approach its stationary distribution. |  |
 | autocorrelation | autocorrélation | proposed | autocorrelation: Correlation of a random process or sequence with a shifted version of itself. |  |
 | Monte Carlo integration | intégration de Monte-Carlo | proposed | monte-carlo-integration: Estimating an integral using random samples. |  |
@@ -1139,8 +1139,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | multi-query attention | attention multi-requêtes | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
 | query head | tête de requête | proposed | query-head: An attention head that produces queries used to weight values. |  |
 | induction head | tête d'induction | proposed | induction-head: An attention head associated with continuing a repeated token pattern from earlier context. |  |
-| QK circuit | circuit requête-clé | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
-| OV circuit | circuit valeur-sortie | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
+| QK circuit | circuit QK | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
+| OV circuit | circuit OV | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
 | feedforward block | bloc à propagation avant | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
 | RMSNorm | RMSNorm | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
 | ALiBi | ALiBi | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
@@ -1149,7 +1149,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | quadratic complexity | complexité quadratique | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
 | tokens per second | jetons par seconde | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
 | head dimension | dimension de la tête | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
-| weight tying | partage des poids | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
+| weight tying | liaison des poids | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
 | embedding table | table de plongements | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | projection de sortie | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | circuit d'induction | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
@@ -1172,8 +1172,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | floating-point format | format en virgule flottante | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
 | loss scaling | mise à l'échelle de la perte | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
 | activation memory | mémoire des activations | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
-| all-gather | collecte collective | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
-| reduce-scatter | réduction avec répartition | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
+| all-gather | all-gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
+| reduce-scatter | reduce-scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
 | batching | traitement par lots | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
 | perceptual compression | compression perceptuelle | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
 | semantic compression | compression sémantique | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
@@ -1185,8 +1185,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | denoising term | terme de débruitage | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
 | reconstruction term | terme de reconstruction | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
 | Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | critique génératif | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| critic | critique | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
 | model | modèle | proposed | model: A mathematical or computational representation used to describe data or make predictions. |  |
 | training | entraînement | proposed | training: The process of fitting a model using data and a learning objective. |  |
 | activation | activation | proposed | activation: The output of a neural network unit or activation function for a given input. |  |
 | mask | masque | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. |  |
+| sample | échantillon | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
+| loss | perte | proposed | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. |  |
+| score | score | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
+| batch | lot | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
+| advantage | avantage | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
+| cost | coût | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |

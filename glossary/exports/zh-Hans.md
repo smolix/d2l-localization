@@ -35,7 +35,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | gradient | 梯度 | verified_d2l | gradient: The vector of partial derivatives of a scalar function. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L205) |
 | derivative | 导数 | verified_d2l | derivative: The rate of change of a function with respect to an input. | [east-zh-chapter-preliminaries-calculus-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/calculus.md#L39) |
 | partial derivative | 偏导数 | verified_d2l | partial-derivative: A derivative with respect to one variable while others are held fixed. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L147) |
-| chain rule | 链式规则 | verified_d2l | chain-rule: A rule for differentiating compositions of functions. | [east-zh-chapter-multilayer-perceptrons-backprop-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/backprop.md#L70) |
+| chain rule | 链式法则 | verified_external | chain-rule: A rule for differentiating compositions of functions. | review-zh-Hans-8eb0bdad65: page; review-zh-Hans-2eff62a82e: page |
 | backpropagation | 反向传播 | verified_d2l | backpropagation: An algorithm that propagates derivatives backward through a computation. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L604) |
 | automatic differentiation | 自动微分 | verified_d2l | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | [east-zh-chapter-preliminaries-autograd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/autograd.md#L8) |
 | computational graph | 计算图 | verified_d2l | computational-graph: A representation of a computation as connected operations and values. | [east-zh-chapter-preliminaries-autograd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/autograd.md#L9) |
@@ -56,7 +56,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | identity matrix | 单位矩阵 | verified_d2l | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. | [east-zh-chapter-notation-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_notation/index.md#L12) |
 | determinant | 行列式 | proposed | determinant: A scalar associated with a square matrix that describes signed volume scaling. |  |
 | rank | 秩 | proposed | rank: The dimension of the span of a matrix's columns or rows. |  |
-| trace | 矩阵的迹 | proposed | trace: The sum of the diagonal entries of a square matrix. |  |
+| trace | 迹 | proposed | trace: The sum of the diagonal entries of a square matrix. |  |
 | orthogonal | 正交 | proposed | orthogonal: Having zero inner product, or preserving inner products for a transformation. |  |
 | positive definite | 正定 | proposed | positive-definite: Having a strictly positive quadratic form for every nonzero vector. |  |
 | probability | 概率 | verified_d2l | probability: A numerical measure of the likelihood of an event. | [east-zh-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/probability.md#L261) |
@@ -75,23 +75,23 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Gaussian distribution | 高斯分布 | verified_d2l | gaussian-distribution: A continuous distribution characterized by a mean and variance. | [east-zh-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/linear-regression.md#L356) |
 | Bernoulli distribution | 伯努利分布 | verified_d2l | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L565) |
 | Poisson distribution | 泊松分布 | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
-| Bayes' theorem | Bayes定理 | verified_d2l | bayes-theorem: A rule relating conditional probabilities through prior and evidence. | [east-zh-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/probability.md#L336) |
+| Bayes' theorem | 贝叶斯定理 | verified_external | bayes-theorem: A rule relating conditional probabilities through prior and evidence. | review-zh-Hans-ac02b4b143: page |
 | prior | 先验分布 | proposed | prior: A probability distribution expressing uncertainty before observing data. |  |
 | posterior | 后验分布 | proposed | posterior: A probability distribution updated after observing data. |  |
 | likelihood | 似然 | verified_external | likelihood: The probability or density of observed data viewed as a function of model parameters. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L105) |
 | maximum likelihood | 最大似然 | verified_d2l | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. | [east-zh-chapter-natural-language-processing-pretraining-word2vec-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/word2vec.md#L97) |
 | maximum likelihood estimation | 最大似然估计 | verified_d2l | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. | [east-zh-chapter-natural-language-processing-pretraining-word2vec-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/word2vec.md#L97) |
-| sampling | 抽样 | verified_d2l | sampling: The process of drawing observations from a distribution or population. | [east-zh-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/probability.md#L96) |
-| Monte Carlo | 蒙特卡洛方法 | proposed | monte-carlo: A family of methods that use random samples to estimate quantities. |  |
+| sampling | 采样 | verified_external | sampling: The process of drawing observations from a distribution or population. | review-zh-Hans-539f1869d2: page; review-zh-Hans-ac02b4b143: page |
+| Monte Carlo | 蒙特卡罗 | proposed | monte-carlo: A family of methods that use random samples to estimate quantities. |  |
 | entropy | 熵 | verified_d2l | entropy: A measure of uncertainty in a probability distribution. | [east-zh-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression.md#L258) |
 | cross-entropy | 交叉熵 | verified_d2l | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L131) |
 | mutual information | 互信息 | proposed | mutual-information: A measure of statistical dependence between random variables. |  |
-| softmax | softmax函数 | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
+| softmax | softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
 | logistic regression | 逻辑回归 | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L177) |
-| sigmoid | sigmoid函数 | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. |  |
+| sigmoid | sigmoid | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. |  |
 | cross-entropy loss | 交叉熵损失 | verified_d2l | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. | [east-zh-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression.md#L197) |
 | accuracy | 准确率 | verified_d2l | accuracy: The proportion of predictions that are correct. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L277) |
-| precision | 查准率 | verified_d2l | precision: The fraction of predicted positives that are true positives. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L21) |
+| precision | 精确率 | verified_external | precision: The fraction of predicted positives that are true positives. | review-zh-Hans-74ef070688: page |
 | recall | 召回率 | verified_external | recall: The fraction of actual positives that are correctly identified. | east-external-zh-developers-google-com-accuracy-precision-recall-hl-zh: section 召回率 |
 | confusion matrix | 混淆矩阵 | verified_external | confusion-matrix: A table comparing predicted and actual class counts. | [east-google-ml-zh-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=zh-cn#confusion-matrix) |
 | neural network | 神经网络 | verified_d2l | neural-network: A model composed of interconnected parameterized transformations. | [east-zh-chapter-multilayer-perceptrons-mlp-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/mlp.md#L12) |
@@ -101,7 +101,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | activation function | 激活函数 | verified_d2l | activation-function: A function applied to a unit's input to produce its activation. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L99) |
 | nonlinearity | 非线性 | verified_d2l | nonlinearity: A transformation that is not linear in its input. | [east-zh-chapter-convolutional-modern-nin-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-modern/nin.md#L214) |
 | multilayer perceptron | 多层感知机 | verified_d2l | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L55) |
-| rectified linear unit | 线性整流单元 | proposed | rectified-linear-unit: An activation function that outputs the larger of zero and its input. |  |
+| rectified linear unit | 修正线性单元 | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | review-zh-Hans-e0cf80a8b9: page; review-zh-Hans-07fc54bd08: page |
 | overfitting | 过拟合 | verified_d2l | overfitting: Fitting training data so closely that performance on unseen data suffers. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L89) |
 | underfitting | 欠拟合 | verified_d2l | underfitting: Failing to capture important structure even in the training data. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L155) |
 | generalization | 泛化 | verified_d2l | generalization: The ability of a learned model to perform well on unseen examples. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L67) |
@@ -116,8 +116,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | vanishing gradient | 梯度消失 | verified_d2l | vanishing-gradient: A gradient that becomes very small as it propagates through a network. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L209) |
 | exploding gradient | 梯度爆炸 | verified_d2l | exploding-gradient: A gradient that grows excessively large during propagation. | [east-zh-chapter-recurrent-neural-networks-bptt-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-neural-networks/bptt.md#L4) |
 | gradient clipping | 梯度裁剪 | verified_d2l | gradient-clipping: Limiting gradient magnitude to stabilize optimization. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L207) |
-| batch normalization | 批量规范化 | verified_d2l | batch-normalization: A normalization method using statistics of activations in a batch. | [east-zh-chapter-convolutional-modern-batch-norm-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-modern/batch-norm.md#L5) |
-| layer normalization | 层规范化 | verified_d2l | layer-normalization: A normalization method using activation statistics within an example. | [east-zh-chapter-attention-mechanisms-transformer-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/transformer.md#L14) |
+| batch normalization | 批量归一化 | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
+| layer normalization | 层归一化 | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | 卷积 | verified_d2l | convolution: An operation that combines local input values with shared kernel weights. | [east-zh-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/why-conv.md#L66) |
 | convolutional neural network | 卷积神经网络 | verified_d2l | convolutional-neural-network: A neural network using convolutional layers to process structured data. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L111) |
 | kernel | 卷积核 | verified_d2l | kernel: A set of weights applied locally in a convolution. | [east-zh-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/why-conv.md#L77) |
@@ -125,9 +125,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | channel | 通道 | verified_d2l | channel: A feature dimension in a structured representation such as an image. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L219) |
 | stride | 步幅 | verified_d2l | stride: The spacing between successive positions of an operation on an input. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L11) |
 | padding | 填充 | verified_d2l | padding: Extra values added around an input to control an operation's boundary or output size. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L211) |
-| pooling | 汇聚 | verified_d2l | pooling: An operation that aggregates values over local regions. | [east-zh-chapter-convolutional-neural-networks-pooling-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/pooling.md#L10) |
+| pooling | 池化 | verified_external | pooling: An operation that aggregates values over local regions. | review-zh-Hans-2eff62a82e: page |
 | max pooling | 最大池化 | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
-| average pooling | 平均汇聚层 | verified_d2l | average-pooling: Pooling that averages values in each region. | [east-zh-chapter-convolutional-neural-networks-pooling-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/pooling.md#L16) |
+| average pooling | 平均池化 | proposed | average-pooling: Pooling that averages values in each region. |  |
 | receptive field | 感受野 | verified_d2l | receptive-field: The region of an input that can influence a particular activation. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L79) |
 | translation equivariance | 平移等变性 | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | 残差连接 | verified_d2l | residual-connection: A connection that adds an earlier representation to a later transformation. | [east-zh-chapter-attention-mechanisms-transformer-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/transformer.md#L14) |
@@ -154,7 +154,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | vocabulary | 词表 | verified_d2l | vocabulary: The set of tokens available to a language model. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L25) |
 | embedding | 嵌入 | verified_d2l | embedding: A learned numerical representation of a discrete item or other object. | [east-zh-chapter-attention-mechanisms-transformer-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/transformer.md#L8) |
 | word embedding | 词嵌入 | verified_d2l | word-embedding: A numerical vector representing a word. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L27) |
-| sequence-to-sequence | 序列到序列模型 | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
+| sequence-to-sequence | 序列到序列 | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | 编码器 | verified_d2l | encoder: A component that converts an input into an internal representation. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L7) |
 | decoder | 解码器 | verified_d2l | decoder: A component that produces an output from an internal representation or context. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L101) |
 | teacher forcing | 教师强制 | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
@@ -169,20 +169,20 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | key | 键 | verified_d2l | key: A representation compared with a query to determine attention weights. | [east-zh-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/attention-cues.md#L79) |
 | value | 值 | verified_d2l | value: A representation combined according to attention weights. | [east-zh-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/attention-cues.md#L78) |
 | positional encoding | 位置编码 | verified_d2l | positional-encoding: Information added to representations to communicate sequence position. | [east-zh-chapter-attention-mechanisms-self-attention-and-positional-encoding-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/self-attention-and-positional-encoding.md#L148) |
-| transformer | Transformer架构 | proposed | transformer: A neural architecture built around attention and feedforward layers. |  |
+| transformer | Transformer | proposed | transformer: A neural architecture built around attention and feedforward layers. |  |
 | masked language model | 掩码语言模型 | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
-| BERT | BERT模型 | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
+| BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
 | generative model | 生成模型 | verified_d2l | generative-model: A model that describes or generates samples from a data distribution. | [east-zh-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/convexity.md#L151) |
 | discriminative model | 判别模型 | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. |  |
 | generator | 生成器 | proposed | generator: A model component that produces synthetic samples. |  |
 | discriminator | 判别器 | proposed | discriminator: A model component trained to distinguish classes of samples, often real and generated. |  |
-| autoencoder | 自动编码器 | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
+| autoencoder | 自编码器 | verified_external | autoencoder: A model trained to reconstruct inputs through an encoded representation. | review-zh-Hans-2eff62a82e: page; review-zh-Hans-18b1c481e7: page |
 | latent variable | 潜变量 | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
-| latent space | 潜在空间 | proposed | latent-space: A space of unobserved representations used by a model. |  |
+| latent space | 潜空间 | proposed | latent-space: A space of unobserved representations used by a model. |  |
 | diffusion model | 扩散模型 | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
 | noise schedule | 噪声调度 | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
 | denoising | 去噪 | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
-| score function | 得分函数 | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
+| score function | 分数函数 | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | 马尔可夫链 | verified_d2l | markov-chain: A stochastic process whose next state depends on the present state. | [east-zh-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/probability.md#L497) |
 | Markov decision process | 马尔可夫决策过程 | verified_d2l | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L555) |
 | reinforcement learning | 强化学习 | verified_d2l | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L507) |
@@ -193,7 +193,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reward | 奖励 | verified_d2l | reward: A scalar feedback signal evaluating an outcome or transition. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L514) |
 | policy | 策略 | verified_d2l | policy: A rule or distribution for selecting actions from states. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L517) |
 | return | 回报 | verified_d2l | return: The accumulated future reward from a point in a trajectory. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L547) |
-| discount factor | 贴现系数 | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
+| discount factor | 折扣因子 | verified_external | discount-factor: A factor that controls the relative weight of future rewards. | review-zh-Hans-157f0808a8: page |
 | value function | 价值函数 | proposed | value-function: A function estimating expected return from a state or state-action pair. |  |
 | action-value function | 动作价值函数 | proposed | action-value-function: A function estimating expected return from a state and action. |  |
 | value iteration | 价值迭代 | proposed | value-iteration: An iterative method for computing optimal values using Bellman updates. |  |
@@ -208,11 +208,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | saddle point | 鞍点 | verified_d2l | saddle-point: A stationary point that is not a local extremum in all directions. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L3) |
 | Hessian | 海森矩阵 | proposed | hessian: The matrix of second partial derivatives of a scalar function. |  |
 | Jacobian | 雅可比矩阵 | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
-| momentum | 动量法 | verified_d2l | momentum: An optimization technique that accumulates past gradients in an update direction. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L49) |
+| momentum | 动量 | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. |  |
 | learning rate schedule | 学习率调度 | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
-| Adam | Adam算法 | verified_d2l | adam: An optimization algorithm using adaptive estimates of gradient moments. | [east-zh-chapter-optimization-adam-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/adam.md#L1) |
-| AdaGrad | AdaGrad算法 | verified_d2l | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. | [east-zh-chapter-optimization-adagrad-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/adagrad.md#L1) |
-| RMSProp | RMSProp算法 | verified_d2l | rmsprop: An adaptive gradient method using a moving average of squared gradients. | [east-zh-chapter-optimization-rmsprop-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/rmsprop.md#L1) |
+| Adam | Adam | proposed | adam: An optimization algorithm using adaptive estimates of gradient moments. |  |
+| AdaGrad | AdaGrad | proposed | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. |  |
+| RMSProp | RMSProp | proposed | rmsprop: An adaptive gradient method using a moving average of squared gradients. |  |
 | Lagrange multiplier | 拉格朗日乘子 | proposed | lagrange-multiplier: A variable used to incorporate a constraint into an optimization problem. |  |
 | constraint | 约束 | proposed | constraint: A condition that feasible solutions to an optimization problem must satisfy. |  |
 | stationary point | 驻点 | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
@@ -227,19 +227,19 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | collaborative filtering | 协同过滤 | verified_d2l | collaborative-filtering: A recommendation approach using patterns of user-item interactions. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L239) |
 | matrix factorization | 矩阵分解 | proposed | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. |  |
 | implicit feedback | 隐式反馈 | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. |  |
-| word2vec | word2vec词向量方法 | proposed | word2vec: A family of methods for learning word vectors from context. |  |
+| word2vec | word2vec | proposed | word2vec: A family of methods for learning word vectors from context. |  |
 | negative sampling | 负采样 | verified_d2l | negative-sampling: A training technique contrasting observed examples with sampled negative examples. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L77) |
 | sentiment analysis | 情感分析 | verified_d2l | sentiment-analysis: The task of identifying sentiment expressed in text. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L157) |
 | natural language inference | 自然语言推断 | verified_d2l | natural-language-inference: The task of determining a logical relationship between text statements. | [east-zh-chapter-natural-language-processing-applications-natural-language-inference-and-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L8) |
 | machine translation | 机器翻译 | verified_d2l | machine-translation: The automatic conversion of text from one language to another. | [east-zh-chapter-recurrent-modern-machine-translation-and-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-modern/machine-translation-and-dataset.md#L12) |
-| BLEU | BLEU翻译评价指标 | proposed | bleu: A metric comparing generated translations with reference translations using n-gram overlap. |  |
+| BLEU | BLEU | proposed | bleu: A metric comparing generated translations with reference translations using n-gram overlap. |  |
 | state space | 状态空间 | verified_d2l | state-space: The set or representation of possible states of a system. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L671) |
 | ordinary differential equation | 常微分方程 | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
 | stochastic differential equation | 随机微分方程 | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
 | Brownian motion | 布朗运动 | proposed | brownian-motion: A continuous-time stochastic process with independent Gaussian increments. |  |
 | Euler method | 欧拉法 | proposed | euler-method: A numerical method that advances a differential equation using local slopes. |  |
 | Neural ODE | 神经常微分方程 | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
-| normalizing flow | 归一化流 | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
+| normalizing flow | 标准化流 | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
 | change of variables | 变量替换 | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
 | Markov property | 马尔可夫性质 | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
 | stationary distribution | 平稳分布 | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
@@ -252,7 +252,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayesian inference | 贝叶斯推断 | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
 | confidence interval | 置信区间 | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. |  |
 | hypothesis testing | 假设检验 | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. |  |
-| bootstrap | 自助采样法 | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
+| bootstrap | 自助法 | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
 | central limit theorem | 中心极限定理 | proposed | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. |  |
 | law of large numbers | 大数定律 | verified_d2l | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. | [east-zh-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/probability.md#L54) |
 | variance reduction | 方差缩减 | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
@@ -264,7 +264,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fairness | 公平性 | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
 | parallelism | 并行性 | verified_d2l | parallelism: Executing multiple computations concurrently. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L671) |
 | data parallelism | 数据并行 | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
-| GPU | 图形处理器 | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
+| GPU | GPU | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
 | memory bandwidth | 内存带宽 | verified_d2l | memory-bandwidth: The rate at which data can be transferred to or from memory. | [east-zh-chapter-appendix-tools-for-deep-learning-selecting-servers-gpus-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L35) |
 | throughput | 吞吐量 | verified_d2l | throughput: The amount of work completed per unit time. | [east-zh-chapter-computational-performance-hardware-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computational-performance/hardware.md#L4) |
 | latency | 延迟 | verified_d2l | latency: The elapsed time required to complete a task or operation. | [east-zh-chapter-computational-performance-hardware-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computational-performance/hardware.md#L40) |
@@ -284,16 +284,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | random seed | 随机种子 | proposed | random-seed: An initial value controlling a pseudorandom number generator. |  |
 | independent and identically distributed | 独立同分布 | verified_d2l | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L51) |
 | sufficient statistic | 充分统计量 | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
-| Fisher information | 费舍尔信息 | verified_d2l | fisher-information: A measure of how much an observation reveals about a parameter. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L585) |
+| Fisher information | 费希尔信息 | verified_external | fisher-information: A measure of how much an observation reveals about a parameter. | review-zh-Hans-91b02f956e: page |
 | point estimate | 点估计 | proposed | point-estimate: A single value used to estimate an unknown quantity. |  |
 | bias-variance decomposition | 偏差方差分解 | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
 | mean | 均值 | verified_d2l | mean: A measure of central tendency given by an average or expectation. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L115) |
 | median | 中位数 | proposed | median: A value that divides a distribution or ordered sample into two halves. |  |
 | quantile | 分位数 | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
-| standard error | 标准误差 | proposed | standard-error: The standard deviation of a sampling distribution of an estimator. |  |
+| standard error | 标准误 | proposed | standard-error: The standard deviation of a sampling distribution of an estimator. |  |
 | sampling distribution | 抽样分布 | proposed | sampling-distribution: The probability distribution of a statistic across repeated samples. |  |
 | statistical significance | 统计显著性 | proposed | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. |  |
-| p-value | p 值 | proposed | p-value: The probability under a null model of a result at least as extreme as the observed result according to a test statistic. |  |
+| p-value | p值 | proposed | p-value: The probability under a null model of a result at least as extreme as the observed result according to a test statistic. |  |
 | null hypothesis | 零假设 | proposed | null-hypothesis: The reference hypothesis assessed by a statistical test. |  |
 | credible interval | 可信区间 | proposed | credible-interval: An interval containing a specified posterior probability of an unknown quantity. |  |
 | posterior predictive | 后验预测 | proposed | posterior-predictive: A prediction obtained by averaging over posterior uncertainty. |  |
@@ -304,7 +304,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | variational inference | 变分推断 | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
 | evidence lower bound | 证据下界 | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
 | log probability | 对数概率 | proposed | log-probability: The logarithm of a probability or probability density. |  |
-| log-sum-exp | 对数和指数 | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
+| log-sum-exp | log-sum-exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
 | numerical stability | 数值稳定性 | verified_d2l | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [east-zh-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression-concise.md#L101) |
 | floating point | 浮点数 | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
 | underflow | 下溢 | verified_d2l | underflow: A numerical condition in which a magnitude is too small to represent accurately. | [east-zh-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression-concise.md#L125) |
@@ -321,7 +321,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convex set | 凸集 | verified_d2l | convex-set: A set containing every line segment between any two of its points. | [east-zh-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/convexity.md#L55) |
 | feasible region | 可行域 | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
 | duality | 对偶性 | proposed | duality: A relationship between an optimization problem and an associated dual problem. |  |
-| Lagrangian | 拉格朗日 | verified_external | lagrangian: A function combining an objective with weighted constraint terms. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L309) |
+| Lagrangian | 拉格朗日函数 | proposed | lagrangian: A function combining an objective with weighted constraint terms. |  |
 | coordinate descent | 坐标下降法 | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
 | learning rate decay | 学习率衰减 | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
 | warmup | 预热 | verified_d2l | warmup: A training phase in which a setting such as learning rate is gradually increased. | [east-zh-chapter-optimization-lr-scheduler-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/lr-scheduler.md#L9) |
@@ -330,7 +330,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | weight sharing | 权重共享 | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | 参数量 | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | 计算复杂度 | verified_d2l | computational-complexity: A characterization of how computational cost scales with problem size. | [east-zh-chapter-natural-language-processing-pretraining-subword-embedding-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/subword-embedding.md#L19) |
-| backward pass | 反向传播过程 | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
+| backward pass | 反向传播 | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
 | forward pass | 前向传播 | verified_d2l | forward-pass: The computation that evaluates a model from inputs to outputs. | [east-zh-chapter-multilayer-perceptrons-backprop-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/backprop.md#L5) |
 | computational efficiency | 计算效率 | verified_d2l | computational-efficiency: The effectiveness with which computation uses time or resources. | [east-zh-chapter-natural-language-processing-pretraining-word-embedding-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L387) |
 | loss landscape | 损失函数地形 | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
@@ -350,7 +350,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | causal attention | 因果注意力 | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
 | cross-attention | 交叉注意力 | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
 | scaled dot-product attention | 缩放点积注意力 | verified_d2l | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. | [east-zh-chapter-attention-mechanisms-attention-scoring-functions-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/attention-scoring-functions.md#L426) |
-| softmax attention | Softmax注意力 | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
+| softmax attention | softmax注意力 | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
 | position embedding | 位置嵌入 | proposed | position-embedding: A representation of position used in a sequence model. |  |
 | rotary position embedding | 旋转位置嵌入 | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
 | feedforward network | 前馈网络 | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
@@ -360,7 +360,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | encoder-decoder | 编码器-解码器 | verified_d2l | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. | [east-zh-chapter-recurrent-modern-encoder-decoder-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-modern/encoder-decoder.md#L14) |
 | sequence length | 序列长度 | verified_d2l | sequence-length: The number of elements in a sequence. | [east-zh-chapter-attention-mechanisms-self-attention-and-positional-encoding-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/self-attention-and-positional-encoding.md#L114) |
 | attention score | 注意力分数 | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
-| attention pooling | 注意力汇聚 | verified_d2l | attention-pooling: Combining values using weights determined by an attention mechanism. | [east-zh-chapter-attention-mechanisms-attention-cues-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/attention-cues.md#L76) |
+| attention pooling | 注意力池化 | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
 | additive attention | 加性注意力 | verified_d2l | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. | [east-zh-chapter-attention-mechanisms-attention-scoring-functions-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/attention-scoring-functions.md#L220) |
 | dot-product attention | 点积注意力 | verified_d2l | dot-product-attention: Attention based on dot products between queries and keys. | [east-zh-chapter-attention-mechanisms-multihead-attention-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/multihead-attention.md#L44) |
 | masked attention | 掩码注意力 | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
@@ -383,7 +383,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | semantic similarity | 语义相似度 | verified_d2l | semantic-similarity: The degree to which expressions have similar meanings. | [east-zh-chapter-natural-language-processing-applications-finetuning-bert-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-applications/finetuning-bert.md#L23) |
 | convolutional layer | 卷积层 | verified_d2l | convolutional-layer: A layer that applies learned convolutional filters to its input. | [east-zh-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/why-conv.md#L76) |
 | feature map | 特征图 | verified_d2l | feature-map: An array of activations representing features across positions. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L201) |
-| pooling layer | 汇聚层 | verified_d2l | pooling-layer: A layer that aggregates local groups of activations. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L37) |
+| pooling layer | 池化层 | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
 | strided convolution | 步幅卷积 | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | 转置卷积 | verified_d2l | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [east-zh-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/fcn.md#L6) |
 | dilated convolution | 空洞卷积 | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
@@ -393,7 +393,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pixel | 像素 | proposed | pixel: An individual sample in a digital image. |  |
 | image recognition | 图像识别 | verified_d2l | image-recognition: The task of identifying visual content in images. | [east-zh-chapter-convolutional-neural-networks-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/index.md#L12) |
 | image segmentation | 图像分割 | verified_d2l | image-segmentation: Partitioning an image into regions or pixel-level categories. | [east-zh-chapter-computer-vision-semantic-segmentation-and-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/semantic-segmentation-and-dataset.md#L15) |
-| region proposal | 候选区域 | proposed | region-proposal: A candidate image region that may contain an object. |  |
+| region proposal | 提议区域 | proposed | region-proposal: A candidate image region that may contain an object. |  |
 | anchor box | 锚框 | verified_d2l | anchor-box: A reference bounding box used to formulate object localization predictions. | [east-zh-chapter-computer-vision-anchor-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/anchor.md#L7) |
 | non-maximum suppression | 非极大值抑制 | verified_d2l | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. | [east-zh-chapter-computer-vision-anchor-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/anchor.md#L732) |
 | data augmentation | 数据增强 | verified_d2l | data-augmentation: Creating varied training examples by transforming existing data. | [east-zh-chapter-computer-vision-object-detection-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/object-detection-dataset.md#L267) |
@@ -403,7 +403,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | feature pyramid | 特征金字塔 | proposed | feature-pyramid: A collection of feature representations at multiple spatial scales. |  |
 | multi-scale | 多尺度 | proposed | multi-scale: Using or representing information at multiple resolutions or sizes. |  |
 | transition model | 转移模型 | proposed | transition-model: A model describing how a system changes state. |  |
-| observation | 观察 | verified_d2l | observation: A measured or perceived value available to a learning system. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L514) |
+| observation | 观测 | verified_external | observation: A measured or perceived value available to a learning system. | review-zh-Hans-97cf6bc05a: page |
 | trajectory | 轨迹 | proposed | trajectory: A sequence of states, actions, or observations generated over time. |  |
 | episode | 回合 | proposed | episode: A sequence of interactions ending at a terminal condition. |  |
 | terminal state | 终止状态 | proposed | terminal-state: A state marking the end of an episode. |  |
@@ -411,10 +411,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | policy iteration | 策略迭代 | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
 | policy evaluation | 策略评估 | proposed | policy-evaluation: Computing or estimating the value of a policy. |  |
 | policy improvement | 策略改进 | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
-| off-policy | 离策略 | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
+| off-policy | 异策略 | verified_external | off-policy: Describing learning about one policy from data generated by another. | review-zh-Hans-86f65210f5: page |
 | on-policy | 同策略 | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
-| multi-armed bandit | 多臂老虎机问题 | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
-| regret | 遗憾值 | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
+| multi-armed bandit | 多臂老虎机 | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
+| regret | 遗憾 | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
 | Markov reward process | 马尔可夫奖励过程 | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
 | Bellman optimality equation | 贝尔曼最优方程 | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | 策略梯度定理 | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
@@ -439,7 +439,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adjoint method | 伴随方法 | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | 矩阵指数 | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | 傅里叶变换 | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
-| bias | 统计偏差 | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
+| bias | 偏差 | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
 | mixture of experts | 混合专家 | verified_external | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. | [east-google-ml-zh-generative](https://developers.google.com/machine-learning/glossary/generative?hl=zh-cn#mixture-of-experts) |
 | transition kernel | 转移核 | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | 期望奖励 | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
@@ -452,8 +452,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | contextual bandit | 情境老虎机 | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
 | control variate | 控制变量 | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
 | function approximation | 函数逼近 | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
-| actor | 行动者 | proposed | actor: The policy component of an actor-critic method. |  |
-| critic | 评价器 | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
+| actor | 演员 | verified_external | actor: The policy component of an actor-critic method. | review-zh-Hans-157f0808a8: page |
+| critic | 评论员 | verified_external | critic: The component of an actor-critic method that estimates value or evaluates the policy. | review-zh-Hans-157f0808a8: page |
 | fixed point | 不动点 | proposed | fixed-point: A point unchanged by applying a given mapping. |  |
 | value backup | 价值回传 | proposed | value-backup: A computation updating a value estimate using rewards and successor values. |  |
 | greedy policy | 贪心策略 | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. |  |
@@ -462,17 +462,17 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | partially observable | 部分可观测 | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
 | Markov chain Monte Carlo | 马尔可夫链蒙特卡罗 | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
 | noise ball | 噪声球 | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
-| implicit bias | 隐式归纳偏置 | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
+| implicit bias | 隐式偏置 | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
 | preconditioner | 预条件子 | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
 | sharpness | 尖锐度 | proposed | sharpness: A measure of how rapidly an objective rises around a point. |  |
 | step size | 步长 | proposed | step-size: The magnitude of a step taken by an iterative method. |  |
 | soft maximum | 软最大值 | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
 | proximal gradient | 近端梯度 | proposed | proximal-gradient: An optimization method combining a gradient step with a proximal operation. |  |
 | cosine decay | 余弦衰减 | proposed | cosine-decay: A schedule that reduces a quantity according to a cosine-shaped curve. |  |
-| AdamW | AdamW优化算法 | proposed | adamw: An adaptive optimizer that decouples weight decay from gradient-based updates. |  |
+| AdamW | AdamW | proposed | adamw: An adaptive optimizer that decouples weight decay from gradient-based updates. |  |
 | natural gradient | 自然梯度 | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
-| Shampoo | Shampoo优化算法 | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
-| Muon | Muon优化算法 | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
+| Shampoo | Shampoo | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
+| Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
 | heavy-ball momentum | 重球动量 | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
 | trust-region method | 信赖域方法 | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
 | soft-thresholding | 软阈值化 | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
@@ -480,7 +480,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | subdifferential | 次微分 | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
 | dual problem | 对偶问题 | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
 | shadow price | 影子价格 | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
-| Lasso | Lasso回归 | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. |  |
+| Lasso | Lasso | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. |  |
 | ridge regression | 岭回归 | verified_d2l | ridge-regression: A regression method using a squared-weight penalty. | [east-zh-chapter-multilayer-perceptrons-weight-decay-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/weight-decay.md#L79) |
 | Gram matrix | 格拉姆矩阵 | verified_d2l | gram-matrix: A matrix of inner products or kernel evaluations between pairs of objects. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L81) |
 | column space | 列空间 | proposed | column-space: The set of all linear combinations of a matrix's columns. |  |
@@ -491,7 +491,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | power iteration | 幂迭代 | proposed | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. |  |
 | projection | 投影 | verified_d2l | projection: A mapping that sends a point onto a specified subspace or set. | [east-zh-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/convexity.md#L338) |
 | span | 张成空间 | proposed | span: The set of all linear combinations of a collection of vectors. |  |
-| linear independence | 线性独立性 | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
+| linear independence | 线性无关 | verified_external | linear-independence: The property that no vector in a collection is a linear combination of the others. | review-zh-Hans-2eff62a82e: page; review-zh-Hans-18c6765dba: page |
 | covariance matrix | 协方差矩阵 | proposed | covariance-matrix: A matrix containing covariances between pairs of random variables. |  |
 | normal equations | 正规方程 | verified_external | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L141) |
 | one-hot encoding | 独热编码 | verified_d2l | one-hot-encoding: A representation of a category as a vector with one active component. | [east-zh-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression.md#L40) |
@@ -504,11 +504,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | truncation error | 截断误差 | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
 | finite difference | 有限差分 | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
 | mean value theorem | 中值定理 | proposed | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. |  |
-| Taylor expansion | 泰勒展开式 | verified_d2l | taylor-expansion: A local approximation to a function expressed in powers of displacement from a point. | [east-zh-chapter-optimization-gd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/gd.md#L24) |
+| Taylor expansion | 泰勒展开 | proposed | taylor-expansion: A local approximation to a function expressed in powers of displacement from a point. |  |
 | conditional entropy | 条件熵 | proposed | conditional-entropy: The uncertainty remaining in one random variable after another is known. |  |
 | surprisal | 自信息量 | proposed | surprisal: The negative logarithm of the probability assigned to an outcome. |  |
 | effective sample size | 有效样本量 | proposed | effective-sample-size: A measure of the amount of information in a weighted or dependent sample relative to independent samples. |  |
-| union bound | 联盟 | verified_external | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L453) |
+| union bound | 联合界 | proposed | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. |  |
 | gamma function | 伽马函数 | proposed | gamma-function: A function extending the factorial to a broader domain. |  |
 | maximum entropy | 最大熵 | verified_d2l | maximum-entropy: A principle choosing the highest-entropy distribution subject to specified constraints. | [east-zh-chapter-multilayer-perceptrons-environment-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/environment.md#L226) |
 | empirical distribution | 经验分布 | proposed | empirical-distribution: A distribution that assigns probability mass to observed sample values. |  |
@@ -520,21 +520,21 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | classifier-free guidance | 无分类器引导 | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
 | probability-flow ODE | 概率流常微分方程 | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
 | optimal transport | 最优传输 | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
-| Wasserstein distance | 瓦瑟斯坦距离 | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
+| Wasserstein distance | Wasserstein距离 | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
 | mode collapse | 模式崩溃 | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
 | conditional generation | 条件生成 | proposed | conditional-generation: Generating samples conditioned on specified information. |  |
 | image-to-image translation | 图像到图像转换 | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
 | cycle consistency | 循环一致性 | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
-| critic loss | 评价器损失 | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
+| critic loss | 评论员损失 | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
 | KV cache | 键值缓存 | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
 | grouped-query attention | 分组查询注意力 | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
-| attention sink | 注意力汇聚点 | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
+| attention sink | 注意力汇点 | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
 | transformer block | Transformer块 | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
 | residual stream | 残差流 | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
 | vision transformer | 视觉Transformer | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
 | position interpolation | 位置插值 | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
 | relative position | 相对位置 | verified_d2l | relative-position: The displacement between positions in a sequence. | [east-zh-chapter-computer-vision-anchor-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/anchor.md#L499) |
-| prefill | 预填充阶段 | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
+| prefill | 预填充 | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
 | decode | 解码 | proposed | decode: The stage of generating output tokens from a model one step at a time. |  |
 | time to first token | 首词元延迟 | proposed | time-to-first-token: The elapsed time from a generation request until its first output token. |  |
 | roofline | 屋顶线模型 | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
@@ -545,22 +545,22 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | data loader | 数据加载器 | proposed | data-loader: A component that prepares and supplies batches of data to a training process. |  |
 | input pipeline | 输入流水线 | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
 | stochastic depth | 随机深度 | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | 全局平均汇聚 | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
+| global average pooling | 全局平均池化 | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
 | grouped convolution | 分组卷积 | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | 指数移动平均 | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
 | inverted dropout | 反向暂退法 | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
 | He initialization | He初始化 | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
-| GELU | GELU激活函数 | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
+| GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
 | generalization gap | 泛化差距 | verified_d2l | generalization-gap: The difference between a model's training performance and its performance on unseen data. | [east-zh-chapter-multilayer-perceptrons-dropout-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/dropout.md#L34) |
 | hypothesis class | 假设类 | proposed | hypothesis-class: The set of candidate functions or models considered by a learning method. |  |
 | uniform convergence | 一致收敛 | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
 | VC dimension | VC维 | verified_external | vc-dimension: A measure of the capacity of a class of binary classifiers. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L507) |
 | adaptive overfitting | 自适应过拟合 | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
 | interpolation threshold | 插值阈值 | proposed | interpolation-threshold: A model-capacity threshold at which a model can fit the training data exactly. |  |
-| logit | 未规范化的预测 | verified_d2l | logit: An unnormalized score used as an input to a probability transformation. | [east-zh-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression.md#L56) |
+| logit | logit | proposed | logit: An unnormalized score used as an input to a probability transformation. |  |
 | margin | 间隔 | proposed | margin: A measure of separation between a prediction and a decision boundary or competing class. |  |
 | calibration | 校准 | verified_d2l | calibration: Agreement between predicted probabilities and observed frequencies. | [east-zh-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/softmax-regression.md#L115) |
-| softplus | Softplus函数 | proposed | softplus: A smooth function commonly used as an approximation to the rectified linear unit. |  |
+| softplus | softplus | proposed | softplus: A smooth function commonly used as an approximation to the rectified linear unit. |  |
 | selective state space model | 选择性状态空间模型 | proposed | selective-state-space-model: A state space model whose parameters depend on the current input. |  |
 | linear recurrence | 线性递推 | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
 | input-dependent | 依赖输入 | proposed | input-dependent: Describing a quantity whose value changes with the input. |  |
@@ -574,7 +574,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reset gate | 重置门 | verified_d2l | reset-gate: A gate that controls how previous state influences a candidate recurrent update. | [east-zh-chapter-recurrent-modern-gru-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-modern/gru.md#L50) |
 | backpropagation through time | 通过时间反向传播 | verified_d2l | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. | [east-zh-chapter-recurrent-neural-networks-bptt-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-neural-networks/bptt.md#L22) |
 | truncated backpropagation through time | 截断的通过时间反向传播 | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
-| sequence transduction | 序列转换模型 | verified_d2l | sequence-transduction: The task of converting an input sequence into an output sequence. | [east-zh-chapter-recurrent-modern-machine-translation-and-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-modern/machine-translation-and-dataset.md#L7) |
+| sequence transduction | 序列转换 | proposed | sequence-transduction: The task of converting an input sequence into an output sequence. |  |
 | sequence modeling | 序列建模 | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. |  |
 | beam width | 束宽 | proposed | beam-width: The number of candidate sequences retained at each step of beam search. |  |
 | greedy decoding | 贪心解码 | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
@@ -590,16 +590,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | scaling law | 缩放定律 | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
 | compute-optimal | 计算最优 | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
 | floating-point precision | 浮点精度 | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
-| memory footprint | 显存 | verified_d2l | memory-footprint: The amount of memory occupied by data or a computation. | [east-zh-chapter-computational-performance-multiple-gpus-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computational-performance/multiple-gpus.md#L23) |
+| memory footprint | 内存占用 | proposed | memory-footprint: The amount of memory occupied by data or a computation. |  |
 | memory hierarchy | 存储层次结构 | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
 | memory access | 内存访问 | proposed | memory-access: A read from or write to a memory location. |  |
-| memory-bound | 受内存带宽限制 | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
-| compute-bound | 受计算能力限制 | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
+| memory-bound | 内存受限 | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
+| compute-bound | 计算受限 | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
 | graph compilation | 计算图编译 | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
 | just-in-time compilation | 即时编译 | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
 | asynchronous execution | 异步执行 | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | 同步 | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. |  |
-| all-reduce | 全规约 | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
+| all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | 梯度累积 | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
 | pipeline parallelism | 流水线并行 | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
 | tensor parallelism | 张量并行 | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
@@ -609,7 +609,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | rounding error | 舍入误差 | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
 | dynamic range | 动态范围 | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | 训练吞吐量 | proposed | training-throughput: The amount of training work completed per unit time. |  |
-| soft actor-critic | 软行动者评价器 | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
+| soft actor-critic | 软演员-评论员 | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | 深度Q网络 | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
 | proximal policy optimization | 近端策略优化 | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
 | trust region | 信赖域 | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
@@ -622,7 +622,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reward hacking | 奖励欺骗 | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
 | planning horizon | 规划时域 | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | 贝尔曼算子 | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
-| bootstrapping | 自举估计 | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
+| bootstrapping | 自举 | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
 | Monte Carlo return | 蒙特卡罗回报 | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
 | terminal reward | 终止奖励 | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
 | exploration bonus | 探索奖励 | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
@@ -644,7 +644,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | linear system | 线性方程组 | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
 | least squares | 最小二乘法 | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. |  |
 | residual | 残差 | proposed | residual: The difference between an observed value and its fitted or predicted value. |  |
-| ill-conditioned | 病态的 | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. |  |
+| ill-conditioned | 病态 | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. |  |
 | singular matrix | 奇异矩阵 | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
 | invertible matrix | 可逆矩阵 | proposed | invertible-matrix: A square matrix with an inverse. |  |
 | pseudoinverse | 伪逆 | proposed | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. |  |
@@ -656,7 +656,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | right singular vector | 右奇异向量 | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
 | low-rank approximation | 低秩近似 | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
 | orthogonal projection | 正交投影 | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
-| Euclidean norm | 欧几里得范数 | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
+| Euclidean norm | 欧氏范数 | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
 | Frobenius norm | Frobenius范数 | verified_d2l | frobenius-norm: The square root of the sum of squares of all matrix entries. | [east-zh-chapter-preliminaries-linear-algebra-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_preliminaries/linear-algebra.md#L1029) |
 | operator norm | 算子范数 | proposed | operator-norm: The maximum factor by which a linear operator can stretch vectors under chosen norms. |  |
 | triangle inequality | 三角不等式 | proposed | triangle-inequality: An inequality stating that the size of a sum is at most the sum of the sizes of its parts. |  |
@@ -678,9 +678,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fundamental theorem of calculus | 微积分基本定理 | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
 | implicit differentiation | 隐式微分 | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
 | Lipschitz constant | 利普希茨常数 | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
-| Lipschitz continuous | 利普希茨连续的 | verified_d2l | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. | [east-zh-chapter-recurrent-neural-networks-rnn-scratch-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_recurrent-neural-networks/rnn-scratch.md#L552) |
+| Lipschitz continuous | 利普希茨连续 | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
 | convex combination | 凸组合 | proposed | convex-combination: A weighted sum with nonnegative weights that sum to one. |  |
-| Jensen's inequality | 詹森不等式 | verified_d2l | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. | [east-zh-chapter-optimization-convexity-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/convexity.md#L134) |
+| Jensen's inequality | Jensen不等式 | proposed | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. |  |
 | first-order condition | 一阶条件 | proposed | first-order-condition: A condition on first derivatives used to characterize candidate optima. |  |
 | second-order condition | 二阶条件 | proposed | second-order-condition: A condition involving second derivatives used to characterize candidate optima. |  |
 | feasible point | 可行点 | proposed | feasible-point: A point satisfying all constraints of an optimization problem. |  |
@@ -724,11 +724,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | consistency model | 一致性模型 | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
 | consistency distillation | 一致性蒸馏 | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
 | adaptive layer norm | 自适应层归一化 | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
-| adaLN-Zero | 零初始化自适应层归一化 | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
+| adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | 可建模性 | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
 | forward posterior | 前向后验 | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
 | binary classification | 二元分类 | verified_d2l | binary-classification: The task of assigning each input to one of two classes. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L59) |
-| multiclass classification | 多项分类 | verified_d2l | multiclass-classification: The task of choosing one class from more than two possible classes. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L288) |
+| multiclass classification | 多分类 | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
 | multi-label classification | 多标签分类 | verified_d2l | multi-label-classification: The task of assigning any subset of multiple labels to an input. | [east-zh-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_introduction/index.md#L334) |
 | binary cross-entropy | 二元交叉熵 | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. |  |
 | softmax regression | softmax回归 | verified_d2l | softmax-regression: A classification model that applies softmax to linear class scores. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L191) |
@@ -744,8 +744,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | class probability | 类别概率 | proposed | class-probability: The probability assigned to a class for an input. |  |
 | class label | 类别标签 | proposed | class-label: A category used as the target for a classification example. |  |
 | class imbalance | 类别不平衡 | proposed | class-imbalance: Unequal representation of classes in a dataset. |  |
-| positive class | 正类别 | verified_external | positive-class: The class treated as positive when evaluating a binary classification problem. | [east-google-ml-zh-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=zh-cn#positive-class) |
-| negative class | 负类别 | verified_external | negative-class: The class treated as negative when evaluating a binary classification problem. | [east-google-ml-zh-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=zh-cn#negative-class) |
+| positive class | 正类 | proposed | positive-class: The class treated as positive when evaluating a binary classification problem. |  |
+| negative class | 负类 | proposed | negative-class: The class treated as negative when evaluating a binary classification problem. |  |
 | training loss | 训练损失 | verified_external | training-loss: The loss measured on training examples. | [east-google-ml-zh-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=zh-cn#training-loss) |
 | validation loss | 验证损失 | verified_external | validation-loss: The loss measured on validation examples. | [east-google-ml-zh-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=zh-cn#validation-loss) |
 | test error | 测试误差 | proposed | test-error: The prediction error measured on a held-out test set. |  |
@@ -753,7 +753,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | population risk | 总体风险 | proposed | population-risk: Expected loss under the population data distribution. |  |
 | generalization error | 泛化误差 | verified_d2l | generalization-error: The expected prediction error on examples from a target distribution. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L69) |
 | regularization strength | 正则化强度 | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
-| model capacity | 模型能力 | verified_external | model-capacity: The expressive or fitting ability of a model class. | [east-google-ml-zh-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=zh-cn#model-capacity) |
+| model capacity | 模型容量 | proposed | model-capacity: The expressive or fitting ability of a model class. |  |
 | model complexity | 模型复杂度 | proposed | model-complexity: A measure of the flexibility or structural richness of a model. |  |
 | regularization path | 正则化路径 | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
 | learning curve | 学习曲线 | proposed | learning-curve: A plot of model performance or loss as training or data size changes. |  |
@@ -777,17 +777,17 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | odds ratio | 优势比 | proposed | odds-ratio: A ratio comparing the odds of an event under two conditions. |  |
 | independent variable | 自变量 | proposed | independent-variable: A variable treated as an input or explanatory quantity. |  |
 | noise variance | 噪声方差 | proposed | noise-variance: The variance of the random perturbation in a model. |  |
-| heteroscedastic | 异方差的 | proposed | heteroscedastic: Describing noise whose variance varies across observations or inputs. |  |
+| heteroscedastic | 异方差 | proposed | heteroscedastic: Describing noise whose variance varies across observations or inputs. |  |
 | mean absolute error | 平均绝对误差 | verified_d2l | mean-absolute-error: The average absolute difference between predictions and targets. | [east-zh-chapter-computer-vision-ssd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/ssd.md#L594) |
 | root mean squared error | 均方根误差 | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
 | classification loss | 分类损失 | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
 | hinge loss | 合页损失 | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L279) |
-| squared loss | 平方损失函数 | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [east-google-ml-zh-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=zh-cn#squared-loss) |
+| squared loss | 平方损失 | proposed | squared-loss: A loss proportional to the square of a prediction error. |  |
 | Huber loss | Huber损失 | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
 | regularized objective | 正则化目标函数 | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | 随机初始化 | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | 梯度范数 | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
-| leaky ReLU | 带泄漏的ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
+| leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
 | hyperbolic tangent | 双曲正切 | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
 | fully connected layer | 全连接层 | proposed | fully-connected-layer: A layer in which each output unit receives a learned connection from every input unit. |  |
 | hidden unit | 隐藏单元 | proposed | hidden-unit: A computational unit in a network layer between input and output. |  |
@@ -815,12 +815,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | translation invariance | 平移不变性 | verified_d2l | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. | [east-zh-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/why-conv.md#L37) |
 | spatial invariance | 空间不变性 | verified_d2l | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. | [east-zh-chapter-convolutional-neural-networks-why-conv-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_convolutional-neural-networks/why-conv.md#L29) |
 | zero padding | 零填充 | proposed | zero-padding: Padding an input with zeros around its boundary. |  |
-| dilation | 膨胀率 | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
+| dilation | 空洞率 | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
 | downsampling | 下采样 | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | 上采样 | verified_d2l | upsampling: Increasing the spatial or temporal resolution of a representation. | [east-zh-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/fcn.md#L133) |
 | aliasing | 混叠 | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
-| pooling window | 汇聚窗口 | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
-| global pooling | 全局汇聚 | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| pooling window | 池化窗口 | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
+| global pooling | 全局池化 | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
 | fully convolutional network | 全卷积网络 | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
 | bilinear interpolation | 双线性插值 | verified_d2l | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. | [east-zh-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/fcn.md#L134) |
 | nearest-neighbor interpolation | 最近邻插值 | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
@@ -840,8 +840,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | ground-truth bounding box | 真实边界框 | verified_d2l | ground-truth-bounding-box: A reference bounding box describing an annotated object. | [east-zh-chapter-computer-vision-anchor-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/anchor.md#L4) |
 | region of interest | 感兴趣区域 | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
 | region proposal network | 区域提议网络 | verified_d2l | region-proposal-network: A network that generates candidate regions for object detection. | [east-zh-chapter-computer-vision-rcnn-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/rcnn.md#L129) |
-| single shot multibox detection | 单发多框检测（SSD） | verified_d2l | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. | [east-zh-chapter-computer-vision-ssd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/ssd.md#L1) |
-| style transfer | 样式迁移 | verified_d2l | style-transfer: Generating an image that combines the content of one image with the style of another. | [east-zh-chapter-computer-vision-index-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/index.md#L11) |
+| single shot multibox detection | 单发多框检测 | proposed | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. |  |
+| style transfer | 风格迁移 | verified_external | style-transfer: Generating an image that combines the content of one image with the style of another. | review-zh-Hans-4c516565ab: page |
 | content loss | 内容损失 | verified_d2l | content-loss: A loss measuring differences in content representations between images. | [east-zh-chapter-computer-vision-neural-style-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/neural-style.md#L29) |
 | style loss | 风格损失 | verified_d2l | style-loss: A loss measuring differences in style representations between images. | [east-zh-chapter-computer-vision-neural-style-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_computer-vision/neural-style.md#L30) |
 | total variation | 全变差 | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
@@ -852,7 +852,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | explicit feedback | 显式反馈 | proposed | explicit-feedback: Directly supplied preference information such as a rating. |  |
 | user embedding | 用户嵌入 | proposed | user-embedding: A learned vector representation of a user. |  |
 | item embedding | 物品嵌入 | proposed | item-embedding: A learned vector representation of an item. |  |
-| latent factor | 潜在因子 | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
+| latent factor | 潜因子 | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
 | rating prediction | 评分预测 | proposed | rating-prediction: Estimating a user's numerical rating for an item. |  |
 | ranking | 排序 | proposed | ranking: Ordering items according to a relevance or preference score. |  |
 | click-through rate | 点击率 | proposed | click-through-rate: The fraction of impressions that lead to a click. |  |
@@ -874,8 +874,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | center word | 中心词 | verified_d2l | center-word: The word used as the central item in a word-context training example. | [east-zh-chapter-natural-language-processing-pretraining-subword-embedding-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/subword-embedding.md#L8) |
 | context word | 上下文词 | verified_d2l | context-word: A word appearing near a selected center word in a corpus. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L171) |
 | co-occurrence | 共现 | verified_d2l | co-occurrence: The occurrence of two items within a defined context or window. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L83) |
-| global vectors | 全局词向量 | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
-| subsampling | 下采样 | verified_d2l | subsampling: Selecting a subset of observations according to a sampling rule. | [east-zh-chapter-natural-language-processing-pretraining-word-embedding-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L65) |
+| global vectors | GloVe | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
+| subsampling | 子采样 | verified_external | subsampling: Selecting a subset of observations according to a sampling rule. | review-zh-Hans-539f1869d2: page; review-zh-Hans-2eff62a82e: page |
 | word similarity | 词相似度 | verified_d2l | word-similarity: A measure of how closely related two words are in meaning or representation. | [east-zh-chapter-natural-language-processing-pretraining-similarity-analogy-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-pretraining/similarity-analogy.md#L120) |
 | decoder state | 解码器状态 | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
 | alignment | 对齐 | proposed | alignment: A relationship linking positions or elements across two sequences. |  |
@@ -895,7 +895,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | hypothesis | 假设 | verified_d2l | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. | [east-zh-terminology-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/TERMINOLOGY.md#L95) |
 | contradiction | 矛盾 | verified_d2l | contradiction: A relationship in which one statement is incompatible with another. | [east-zh-chapter-natural-language-processing-applications-natural-language-inference-and-dataset-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L14) |
 | attention weight | 注意力权重 | verified_d2l | attention-weight: A coefficient controlling a value's contribution to an attention output. | [east-zh-chapter-attention-mechanisms-nadaraya-waston-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_attention-mechanisms/nadaraya-waston.md#L201) |
-| softmax temperature | Softmax温度 | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
+| softmax temperature | softmax温度 | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
 | attention masking | 注意力掩码 | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
 | causal masking | 因果掩码 | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
 | padding mask | 填充掩码 | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
@@ -956,8 +956,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reverse transition | 逆向转移 | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
 | forward transition | 前向转移 | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
 | ancestral sampling | 祖先采样 | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
-| DDPM | 去噪扩散概率模型 | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
-| DDIM | 去噪扩散隐式模型 | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
+| DDPM | DDPM | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
+| DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
 | variance schedule | 方差调度 | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
 | velocity prediction | 速度预测 | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
 | score estimate | 分数估计 | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
@@ -970,16 +970,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | variational autoencoder | 变分自编码器 | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
 | reconstruction error | 重建误差 | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
 | bottleneck | 瓶颈 | proposed | bottleneck: A constrained intermediate representation that limits information or computation. |  |
-| latent code | 潜在编码 | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
+| latent code | 潜编码 | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
 | mode dropping | 模式遗漏 | proposed | mode-dropping: Failure of a generative model to represent some modes of a target distribution. |  |
 | sample quality | 样本质量 | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
 | sample diversity | 样本多样性 | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
-| Fréchet Inception Distance | 弗雷歇Inception距离 | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
+| Fréchet Inception Distance | Fréchet Inception距离（FID） | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
 | maximum mean discrepancy | 最大均值差异 | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
 | adversarial training | 对抗训练 | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
 | adversarial objective | 对抗目标 | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | 极小极大博弈 | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
-| Wasserstein GAN | 瓦瑟斯坦生成对抗网络 | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
+| Wasserstein GAN | Wasserstein GAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
 | gradient penalty | 梯度惩罚 | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
 | spectral normalization | 谱归一化 | proposed | spectral-normalization: A normalization method controlling a weight matrix's spectral norm. |  |
 | pixel-space | 像素空间 | proposed | pixel-space: The representation domain consisting of image pixel values. |  |
@@ -1011,13 +1011,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | curvature | 曲率 | proposed | curvature: A description of how the slope or gradient of a function changes. |  |
 | Hessian eigenvalue | 海森矩阵特征值 | proposed | hessian-eigenvalue: An eigenvalue of a Hessian matrix describing curvature along an associated direction. |  |
 | ill-conditioning | 病态性 | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
-| preconditioning | 预处理 | verified_d2l | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. | [east-zh-chapter-optimization-gd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/gd.md#L7) |
+| preconditioning | 预条件 | proposed | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. |  |
 | second moment estimate | 二阶矩估计 | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. |  |
 | exponential averaging | 指数平均 | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
 | momentum buffer | 动量缓冲区 | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
-| Nesterov momentum | 内斯特罗夫动量 | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
+| Nesterov momentum | Nesterov动量 | verified_external | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. | review-zh-Hans-2eff62a82e: page |
 | stochastic gradient | 随机梯度 | proposed | stochastic-gradient: A random estimate of an objective's gradient. |  |
-| minibatch gradient descent | 小批量随机梯度下降 | verified_d2l | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. | [east-zh-chapter-optimization-minibatch-sgd-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_optimization/minibatch-sgd.md#L9) |
+| minibatch gradient descent | 小批量梯度下降 | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
 | gradient variance | 梯度方差 | proposed | gradient-variance: The variance of a stochastic gradient estimator. |  |
 | convergence guarantee | 收敛保证 | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
 | optimization landscape | 优化景观 | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
@@ -1028,15 +1028,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | learning dynamics | 学习动力学 | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
 | optimization trajectory | 优化轨迹 | proposed | optimization-trajectory: The sequence or path of parameter values generated by an optimization method. |  |
 | objective value | 目标函数值 | proposed | objective-value: The numerical value of an optimization objective at a point. |  |
-| minimizer | 极小化点 | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
-| maximizer | 极大化点 | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
+| minimizer | 极小点 | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
+| maximizer | 极大点 | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
 | risk minimization | 风险最小化 | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. |  |
 | nonconvex optimization | 非凸优化 | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
 | shrinkage | 收缩 | verified_external | shrinkage: Pulling estimates or parameters toward a reference value, often zero. | [east-google-ml-zh-df](https://developers.google.com/machine-learning/glossary/df?hl=zh-cn#shrinkage) |
 | outlier | 离群点 | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
 | generalized linear model | 广义线性模型 | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
 | exponential family | 指数分布族 | verified_external | exponential-family: A family of probability distributions with a common exponential-form representation. | [east-stanford-zh-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/zh/cs-229-supervised-learning.md#L201) |
-| Fisher information matrix | 费舍尔信息矩阵 | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. |  |
+| Fisher information matrix | 费希尔信息矩阵 | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. |  |
 | asymptotic normality | 渐近正态性 | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
 | identifiability | 可辨识性 | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
 | posterior mode | 后验众数 | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
@@ -1055,8 +1055,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | posterior predictive mean | 后验预测均值 | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
 | predictive variance | 预测方差 | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
 | kernel matrix | 核矩阵 | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. |  |
-| Cholesky decomposition | 乔列斯基分解 | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
-| Cholesky factor | 乔列斯基因子 | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
+| Cholesky decomposition | Cholesky分解 | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
+| Cholesky factor | Cholesky因子 | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
 | log marginal likelihood | 对数边际似然 | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
 | hyperparameter optimization | 超参数优化 | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. |  |
 | search space | 搜索空间 | proposed | search-space: The set of configurations or solutions considered by a search procedure. |  |
@@ -1067,7 +1067,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | multi-fidelity optimization | 多保真优化 | proposed | multi-fidelity-optimization: Optimization that uses evaluations at different costs and levels of accuracy. |  |
 | fidelity | 保真度 | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
 | successive halving | 逐次减半 | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
-| Hyperband | Hyperband超参数优化 | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
+| Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
 | noisy objective | 含噪目标函数 | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
 | hyperparameter configuration | 超参数配置 | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
 | asynchronous scheduling | 异步调度 | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
@@ -1110,7 +1110,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | channel coding | 信道编码 | proposed | channel-coding: Encoding messages to support reliable communication through a channel. |  |
 | contrastive learning | 对比学习 | proposed | contrastive-learning: Learning representations by distinguishing related examples from alternatives. |  |
 | contrastive loss | 对比损失 | proposed | contrastive-loss: A loss encouraging specified examples to be similar or different in representation. |  |
-| InfoNCE | InfoNCE对比损失 | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
+| InfoNCE | InfoNCE | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
 | negative pair | 负样本对 | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
 | positive pair | 正样本对 | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
 | natural parameter | 自然参数 | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
@@ -1132,7 +1132,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | stability region | 稳定域 | proposed | stability-region: The set of step and problem parameters for which a numerical method remains stable. |  |
 | numerical solver | 数值求解器 | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
 | linear stability | 线性稳定性 | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
-| continuous normalizing flow | 连续归一化流 | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
+| continuous normalizing flow | 连续标准化流 | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
 | Jacobian determinant | 雅可比行列式 | proposed | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. |  |
 | continuity equation | 连续性方程 | proposed | continuity-equation: An equation describing conservation of probability or mass as it flows through space. |  |
 | Kolmogorov forward equation | 柯尔莫哥洛夫前向方程 | proposed | kolmogorov-forward-equation: An equation describing the evolution of a stochastic process's probability distribution. |  |
@@ -1142,8 +1142,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | QK circuit | QK电路 | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
 | OV circuit | OV电路 | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
 | feedforward block | 前馈块 | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
-| RMSNorm | 均方根归一化 | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
-| ALiBi | 线性偏置注意力 | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
+| RMSNorm | RMSNorm | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
+| ALiBi | ALiBi | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
 | sparse attention | 稀疏注意力 | proposed | sparse-attention: Attention in which only a subset of query-key pairs is computed or used. |  |
 | linear attention | 线性注意力 | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
 | quadratic complexity | 二次复杂度 | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
@@ -1154,13 +1154,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | output projection | 输出投影 | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | 归纳电路 | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
 | attention pattern | 注意力模式 | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
-| softmax normalization | Softmax归一化 | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
+| softmax normalization | softmax归一化 | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
 | top-k routing | Top-k路由 | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
 | expert parallelism | 专家并行 | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
 | shared expert | 共享专家 | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | 计算预算 | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
 | training compute | 训练计算量 | proposed | training-compute: The amount of computation used to train a model. |  |
-| active parameters | 激活参数量 | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
+| active parameters | 活跃参数量 | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
 | model width | 模型宽度 | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
 | training tokens | 训练词元数 | proposed | training-tokens: Tokens processed as part of model training. |  |
 | inference cost | 推理成本 | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
@@ -1172,21 +1172,27 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | floating-point format | 浮点格式 | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
 | loss scaling | 损失缩放 | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
 | activation memory | 激活内存 | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
-| all-gather | 全收集 | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
-| reduce-scatter | 规约散射 | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
+| all-gather | all-gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
+| reduce-scatter | reduce-scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
 | batching | 批处理 | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
 | perceptual compression | 感知压缩 | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
 | semantic compression | 语义压缩 | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
-| Reflow | Reflow轨迹校正 | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
+| Reflow | Reflow | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
 | consistency training | 一致性训练 | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
 | reference velocity | 参考速度 | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
-| stop-gradient | 梯度停止 | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
+| stop-gradient | 停止梯度 | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
 | prior term | 先验项 | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
 | denoising term | 去噪项 | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
 | reconstruction term | 重建项 | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
-| Mamba | Mamba选择性状态空间模型 | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | 生成模型评价器 | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
+| critic | 评论器 | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
 | model | 模型 | verified_d2l | model: A mathematical or computational representation used to describe data or make predictions. | [east-zh-chapter-linear-networks-linear-regression-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_linear-networks/linear-regression.md#L25) |
 | training | 训练 | verified_d2l | training: The process of fitting a model using data and a learning objective. | [east-zh-chapter-multilayer-perceptrons-mlp-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/mlp.md#L8) |
 | activation | 激活值 | verified_d2l | activation: The output of a neural network unit or activation function for a given input. | [east-zh-chapter-multilayer-perceptrons-dropout-md](https://github.com/d2l-ai/d2l-zh/blob/e6b18ccea71451a55fcd861d7b96fddf2587b09a/chapter_multilayer-perceptrons/dropout.md#L67) |
 | mask | 掩码 | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. |  |
+| sample | 样本 | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
+| loss | 损失 | verified_external | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. | review-zh-Hans-23cb9747bc: page |
+| score | 分数 | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
+| batch | 批量 | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
+| advantage | 优势 | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
+| cost | 成本 | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |

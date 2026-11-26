@@ -6,1187 +6,1193 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 
 | English | Preferred | Status | Concept / sense | Evidence |
 | --- | --- | --- | --- | --- |
-| linear regression | Doğrusal Bağlanım (Regresyon) | verified_d2l | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L1) |
+| linear regression | doğrusal regresyon | proposed | linear-regression: A model that predicts a continuous target using a linear combination of inputs. |  |
 | regression | regresyon | verified_d2l | regression: The task of predicting a numerical outcome. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L268) |
-| classification | Sınıflandırma | verified_d2l | classification: The task of assigning an input to a category. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L279) |
+| classification | sınıflandırma | verified_d2l | classification: The task of assigning an input to a category. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L279) |
 | feature | öznitelik | verified_d2l | feature: An observed input variable used by a model. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L122) |
 | label | etiket | verified_external | label: The target value associated with an example. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#label) |
-| training example | Eğitim örneği | proposed | training-example: An observation used to fit a model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-scratch.md#L217) |
-| dataset | Veri kümesi | proposed | dataset: A collection of examples used for analysis or learning. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L12) |
-| training set | eğitim seti | verified_external | training-set: The portion of data used to fit model parameters. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#training-set) |
-| validation set | geçerleme kümesi | verified_d2l | validation-set: Data used to select models or tune settings during development. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L360) |
+| training example | eğitim örneği | proposed | training-example: An observation used to fit a model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-scratch.md#L217) |
+| dataset | veri kümesi | proposed | dataset: A collection of examples used for analysis or learning. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L12) |
+| training set | eğitim kümesi | proposed | training-set: The portion of data used to fit model parameters. |  |
+| validation set | doğrulama kümesi | proposed | validation-set: Data used to select models or tune settings during development. |  |
 | test set | test kümesi | verified_d2l | test-set: Data held out to assess a fitted model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/image-classification-dataset.md#L63) |
-| model parameter | Model parametresi | proposed | model-parameter: A value learned or fitted as part of a model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-concise.md#L133) |
+| model parameter | model parametresi | proposed | model-parameter: A value learned or fitted as part of a model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-concise.md#L133) |
 | weight | ağırlık | verified_external | weight: A coefficient that scales an input or connection in a model. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#weight) |
 | bias | ek girdi | verified_d2l | bias: An additive offset in a model or prediction. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L34) |
-| prediction | Tahminleme | verified_d2l | prediction: A model's estimate of an outcome for an input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L433) |
+| prediction | tahmin | proposed | prediction: A model's estimate of an outcome for an input. |  |
 | loss function | kayıp fonksiyonu | verified_d2l | loss-function: A function measuring the error of a prediction or model. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L200) |
 | objective function | amaç fonksiyonu | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [google-ml-tr-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=tr#objective-function) |
-| squared error | Kare hata | proposed | squared-error: The square of the difference between a prediction and its target. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/kaggle-house-price.md#L316) |
-| mean squared error | Ortalama Hata Karesi | verified_d2l | mean-squared-error: The average squared difference between predictions and targets. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L111) |
-| empirical risk | Ampirik risk | proposed | empirical-risk: The average loss measured on a finite dataset. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L471) |
-| minibatch | minigrup | verified_d2l | minibatch: A subset of examples processed together in an update. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L210) |
-| batch size | grup boyutu | verified_external | batch-size: The number of examples processed in a batch. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#batch-size) |
+| squared error | karesel hata | proposed | squared-error: The square of the difference between a prediction and its target. |  |
+| mean squared error | ortalama karesel hata | proposed | mean-squared-error: The average squared difference between predictions and targets. |  |
+| empirical risk | ampirik risk | proposed | empirical-risk: The average loss measured on a finite dataset. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L471) |
+| minibatch | mini yığın | proposed | minibatch: A subset of examples processed together in an update. |  |
+| batch size | yığın boyutu | proposed | batch-size: The number of examples processed in a batch. |  |
 | epoch | dönem | verified_d2l | epoch: A pass through the training dataset. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L114) |
-| gradient descent | Gradyan İnişi | verified_d2l | gradient-descent: An optimization method that moves parameters against the objective gradient. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L1) |
-| stochastic gradient descent | Rasgele Gradyan İnişi | verified_d2l | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/sgd.md#L1) |
-| learning rate | Öğrenme Oranı | verified_d2l | learning-rate: The step-size setting used in an optimization update. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L92) |
-| optimization | Eniyileme | verified_d2l | optimization: The process of finding values that improve an objective. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/calculus.md#L22) |
+| gradient descent | gradyan inişi | verified_d2l | gradient-descent: An optimization method that moves parameters against the objective gradient. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L1) |
+| stochastic gradient descent | stokastik gradyan inişi | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. |  |
+| learning rate | öğrenme oranı | verified_d2l | learning-rate: The step-size setting used in an optimization update. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L92) |
+| optimization | optimizasyon | verified_external | optimization: The process of finding values that improve an objective. | review-tr-25db9ca9eb: page; d2l-tr-source: page |
 | gradient | gradyan | verified_d2l | gradient: The vector of partial derivatives of a scalar function. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L146) |
 | derivative | türev | verified_d2l | derivative: The rate of change of a function with respect to an input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/calculus.md#L34) |
 | partial derivative | kısmi türev | verified_d2l | partial-derivative: A derivative with respect to one variable while others are held fixed. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/calculus.md#L220) |
-| chain rule | Zincir kuralı | verified_d2l | chain-rule: A rule for differentiating compositions of functions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/calculus.md#L249) |
-| backpropagation | geri yayma | verified_d2l | backpropagation: An algorithm that propagates derivatives backward through a computation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L28) |
-| automatic differentiation | Otomatik Türev Alma | verified_d2l | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/autograd.md#L1) |
-| computational graph | hesaplama grafiği (çizgesi) | verified_d2l | computational-graph: A representation of a computation as connected operations and values. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/autograd.md#L8) |
-| vector | Vektör | verified_external | vector: An ordered collection of numerical components. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L21) |
-| matrix | Matris | verified_external | matrix: A rectangular array of numerical entries. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L27) |
-| tensor | Tensör | proposed | tensor: A multidimensional array generalizing scalars, vectors, and matrices. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L71) |
-| scalar | Skaler | proposed | scalar: A single numerical quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L20) |
+| chain rule | zincir kuralı | verified_d2l | chain-rule: A rule for differentiating compositions of functions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/calculus.md#L249) |
+| backpropagation | geri yayılım | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | review-tr-92c1bae9fb: page; review-tr-c9e4bb95e5: page; review-tr-2cb3f8a343: page |
+| automatic differentiation | otomatik türev alma | verified_d2l | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/autograd.md#L1) |
+| computational graph | hesaplama çizgesi | proposed | computational-graph: A representation of a computation as connected operations and values. |  |
+| vector | vektör | verified_external | vector: An ordered collection of numerical components. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L21) |
+| matrix | matris | verified_external | matrix: A rectangular array of numerical entries. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L27) |
+| tensor | tensör | proposed | tensor: A multidimensional array generalizing scalars, vectors, and matrices. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L71) |
+| scalar | skaler | proposed | scalar: A single numerical quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L20) |
 | transpose | devrik | verified_d2l | transpose: An operation that exchanges the row and column axes of a matrix. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L348) |
-| dot product | Nokta çarpımı | proposed | dot-product: The sum of componentwise products of two vectors. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L602) |
-| matrix multiplication | Matris çarpımı | proposed | matrix-multiplication: A product combining rows of one matrix with columns of another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L74) |
-| eigenvalue | Özdeğer | proposed | eigenvalue: A scaling factor associated with an eigenvector of a linear map. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L54) |
-| eigenvector | Özvektör | proposed | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L30) |
-| singular value decomposition | Tekil değer ayrışımı | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
-| norm | Norm | proposed | norm: A function measuring the size of a vector or other mathematical object. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L129) |
+| dot product | nokta çarpımı | proposed | dot-product: The sum of componentwise products of two vectors. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L602) |
+| matrix multiplication | matris çarpımı | proposed | matrix-multiplication: A product combining rows of one matrix with columns of another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L74) |
+| eigenvalue | özdeğer | proposed | eigenvalue: A scaling factor associated with an eigenvector of a linear map. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L54) |
+| eigenvector | özvektör | proposed | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L30) |
+| singular value decomposition | tekil değer ayrışımı | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
+| norm | norm | proposed | norm: A function measuring the size of a vector or other mathematical object. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L129) |
 | Euclidean distance | Öklid uzaklığı | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
-| linear algebra | Doğrusal Cebir | verified_d2l | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L1) |
-| linear transformation | Doğrusal dönüşüm | proposed | linear-transformation: A mapping that preserves vector addition and scalar multiplication. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L272) |
-| identity matrix | Birim matris | verified_external | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L45) |
-| determinant | Determinant | proposed | determinant: A scalar associated with a square matrix that describes signed volume scaling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L508) |
-| rank | Kerte (Rank) | verified_d2l | rank: The dimension of the span of a matrix's columns or rows. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L454) |
-| trace | İz | verified_external | trace: The sum of the diagonal entries of a square matrix. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L153) |
+| linear algebra | doğrusal cebir | verified_d2l | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L1) |
+| linear transformation | doğrusal dönüşüm | proposed | linear-transformation: A mapping that preserves vector addition and scalar multiplication. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L272) |
+| identity matrix | birim matris | verified_external | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L45) |
+| determinant | determinant | proposed | determinant: A scalar associated with a square matrix that describes signed volume scaling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L508) |
+| rank | kerte | verified_external | rank: The dimension of the span of a matrix's columns or rows. | review-tr-12adeb2ce3: page |
+| trace | iz | verified_external | trace: The sum of the diagonal entries of a square matrix. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L153) |
 | orthogonal | dik | verified_d2l | orthogonal: Having zero inner product, or preserving inner products for a transformation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L148) |
-| positive definite | Pozitif tanımlı | proposed | positive-definite: Having a strictly positive quadratic form for every nonzero vector. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L255) |
+| positive definite | pozitif tanımlı | proposed | positive-definite: Having a strictly positive quadratic form for every nonzero vector. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L255) |
 | probability | olasılık | verified_d2l | probability: A numerical measure of the likelihood of an event. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L1) |
-| random variable | Rastgele değişken | verified_external | random-variable: A quantity whose value is determined by a random outcome. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L123) |
-| probability distribution | Olasılık dağılımı | proposed | probability-distribution: A specification of probabilities for possible outcomes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L69) |
-| probability density | Olasılık yoğunluğu | proposed | probability-density: A function whose integral over a region gives its probability. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L217) |
-| conditional probability | Koşullu Olasılık | verified_d2l | conditional-probability: The probability of an event given another event. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L223) |
+| random variable | rastgele değişken | verified_external | random-variable: A quantity whose value is determined by a random outcome. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L123) |
+| probability distribution | olasılık dağılımı | proposed | probability-distribution: A specification of probabilities for possible outcomes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L69) |
+| probability density | olasılık yoğunluğu | proposed | probability-density: A function whose integral over a region gives its probability. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L217) |
+| conditional probability | koşullu olasılık | verified_d2l | conditional-probability: The probability of an event given another event. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L223) |
 | joint distribution | bileşik dağılım | verified_d2l | joint-distribution: A probability distribution over multiple random variables together. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L235) |
-| marginal distribution | marjinal (tümsel) dağılım | verified_d2l | marginal-distribution: A distribution obtained by summing or integrating out other variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L245) |
-| independence | Bağımsızlık | verified_d2l | independence: A property where knowing one event or variable does not change the distribution of another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L247) |
+| marginal distribution | marjinal dağılım | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
+| independence | bağımsızlık | verified_d2l | independence: A property where knowing one event or variable does not change the distribution of another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L247) |
 | expectation | beklenti | verified_d2l | expectation: The probability-weighted average of a random quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L341) |
-| variance | değişinti | verified_d2l | variance: The expected squared deviation from the mean. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L362) |
-| standard deviation | Standart sapma | verified_external | standard-deviation: The square root of variance. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L171) |
-| covariance | Kovaryans (Eşdeğişirlik) | verified_d2l | covariance: A measure of how two random variables vary together. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/random-variables.md#L621) |
-| correlation | Korelasyon | verified_d2l | correlation: A normalized measure of association between variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/random-variables.md#L733) |
+| variance | varyans | verified_external | variance: The expected squared deviation from the mean. | review-tr-1fe556936f: page; d2l-tr-source: page |
+| standard deviation | standart sapma | verified_external | standard-deviation: The square root of variance. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L171) |
+| covariance | kovaryans | verified_external | covariance: A measure of how two random variables vary together. | review-tr-5984e81ac4: page |
+| correlation | korelasyon | verified_d2l | correlation: A normalized measure of association between variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/random-variables.md#L733) |
 | Gaussian distribution | Gauss dağılımı | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L10) |
 | Bernoulli distribution | Bernoulli dağılımı | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L592) |
 | Poisson distribution | Poisson dağılımı | proposed | poisson-distribution: A discrete distribution often used to model event counts. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/distributions.md#L422) |
-| Bayes' theorem | Bayes Kuramı (Teoremi) | verified_d2l | bayes-theorem: A rule relating conditional probabilities through prior and evidence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L227) |
-| prior | önsel olasılık | verified_d2l | prior: A probability distribution expressing uncertainty before observing data. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L256) |
-| posterior | sonsal olasılık | verified_d2l | posterior: A probability distribution updated after observing data. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L246) |
+| Bayes' theorem | Bayes teoremi | verified_external | bayes-theorem: A rule relating conditional probabilities through prior and evidence. | review-tr-33b6527a63: page |
+| prior | önsel | verified_external | prior: A probability distribution expressing uncertainty before observing data. | review-tr-92c1bae9fb: page |
+| posterior | sonsal | proposed | posterior: A probability distribution updated after observing data. |  |
 | likelihood | olabilirlik | verified_d2l | likelihood: The probability or density of observed data viewed as a function of model parameters. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L196) |
-| maximum likelihood | Maksimum (Azami) Olabilirlik | verified_d2l | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/maximum-likelihood.md#L1) |
-| maximum likelihood estimation | Maksimum olabilirlik tahmini | proposed | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec.md#L51) |
-| sampling | Örnekleme | proposed | sampling: The process of drawing observations from a distribution or population. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/aws.md#L55) |
+| maximum likelihood | maksimum olabilirlik | proposed | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. |  |
+| maximum likelihood estimation | maksimum olabilirlik tahmini | proposed | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec.md#L51) |
+| sampling | örnekleme | proposed | sampling: The process of drawing observations from a distribution or population. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/aws.md#L55) |
 | Monte Carlo | Monte Carlo | proposed | monte-carlo: A family of methods that use random samples to estimate quantities. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/bi-rnn.md#L70) |
-| entropy | Entropi | verified_d2l | entropy: A measure of uncertainty in a probability distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L142) |
-| cross-entropy | Çapraz Entropi | verified_d2l | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L501) |
-| mutual information | Ortak Bilgi | verified_d2l | mutual-information: A measure of statistical dependence between random variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L166) |
-| softmax | softmaks | verified_d2l | softmax: A function converting real-valued scores into a probability distribution. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L308) |
-| logistic regression | Lojistik regresyon | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L177) |
-| sigmoid | Sigmoid fonksiyonu | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L171) |
-| cross-entropy loss | Çapraz Entropi Kaybı | verified_d2l | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L133) |
+| entropy | entropi | verified_d2l | entropy: A measure of uncertainty in a probability distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L142) |
+| cross-entropy | çapraz entropi | verified_d2l | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L501) |
+| mutual information | karşılıklı bilgi | proposed | mutual-information: A measure of statistical dependence between random variables. |  |
+| softmax | softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
+| logistic regression | lojistik regresyon | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L177) |
+| sigmoid | sigmoid | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. |  |
+| cross-entropy loss | çapraz entropi kaybı | verified_d2l | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L133) |
 | accuracy | doğruluk | verified_external | accuracy: The proportion of predictions that are correct. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#accuracy) |
-| precision | Kesinlik | proposed | precision: The fraction of predicted positives that are true positives. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L61) |
-| recall | Duyarlılık | proposed | recall: The fraction of actual positives that are correctly identified. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L285) |
-| confusion matrix | Karışıklık matrisi | verified_external | confusion-matrix: A table comparing predicted and actual class counts. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L21) |
-| neural network | nöral ağ | verified_external | neural-network: A model composed of interconnected parameterized transformations. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#neural-network) |
+| precision | kesinlik | proposed | precision: The fraction of predicted positives that are true positives. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L61) |
+| recall | duyarlılık | proposed | recall: The fraction of actual positives that are correctly identified. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L285) |
+| confusion matrix | karışıklık matrisi | verified_external | confusion-matrix: A table comparing predicted and actual class counts. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L21) |
+| neural network | sinir ağı | verified_external | neural-network: A model composed of interconnected parameterized transformations. | review-tr-a422463262: page; review-tr-92c1bae9fb: page; d2l-tr-source: page |
 | neuron | nöron | verified_external | neuron: A computational unit that transforms inputs into an output. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#neuron) |
 | layer | katman | verified_external | layer: A stage of a neural network that transforms its input. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#layer) |
 | hidden layer | gizli katman | verified_external | hidden-layer: A network layer between the input and output layers. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#hidden-layer) |
-| activation function | Etkinleştirme Fonksiyonu | verified_d2l | activation-function: A function applied to a unit's input to produce its activation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp-scratch.md#L78) |
-| nonlinearity | Doğrusal olmama | proposed | nonlinearity: A transformation that is not linear in its input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp.md#L65) |
-| multilayer perceptron | Çok katmanlı algılayıcı | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp.md#L25) |
-| rectified linear unit | Düzeltilmiş Doğrusal Birim | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L304) |
+| activation function | aktivasyon fonksiyonu | verified_external | activation-function: A function applied to a unit's input to produce its activation. | review-tr-782d2effb0: page; review-tr-2cb3f8a343: page |
+| nonlinearity | doğrusal olmama | proposed | nonlinearity: A transformation that is not linear in its input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp.md#L65) |
+| multilayer perceptron | çok katmanlı algılayıcı | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp.md#L25) |
+| rectified linear unit | düzeltilmiş doğrusal birim | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L304) |
 | overfitting | aşırı öğrenme | verified_d2l | overfitting: Fitting training data so closely that performance on unseen data suffers. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L226) |
-| underfitting | eksik uyum | verified_external | underfitting: Failing to capture important structure even in the training data. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#underfitting) |
-| generalization | genelleştirme | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#generalization) |
+| underfitting | eksik öğrenme | verified_external | underfitting: Failing to capture important structure even in the training data. | review-tr-92c1bae9fb: page; d2l-tr-source: page |
+| generalization | genelleme | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | review-tr-92c1bae9fb: page; d2l-tr-source: page |
 | regularization | düzenlileştirme | verified_d2l | regularization: A method that constrains or modifies learning to improve generalization. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L272) |
 | weight decay | ağırlık sönümü | verified_d2l | weight-decay: A regularization method that shrinks model weights during training. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L368) |
 | dropout | seyreltme | verified_external | dropout: A training method that randomly masks activations to regularize a network. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L324); [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L102) |
 | early stopping | erken durdurma | verified_d2l | early-stopping: Stopping training based on validation performance before fitting continues too far. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L104) |
 | hyperparameter | hiperparametre | verified_external | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#hyperparameter) |
-| model selection | Model Seçimi | verified_d2l | model-selection: The process of choosing a model or configuration using available evidence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L56) |
-| cross-validation | Çapraz doğrulama | verified_external | cross-validation: A method for evaluating configurations across different train-validation splits. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L171) |
+| model selection | model seçimi | verified_d2l | model-selection: The process of choosing a model or configuration using available evidence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L56) |
+| cross-validation | çapraz doğrulama | verified_external | cross-validation: A method for evaluating configurations across different train-validation splits. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L171) |
 | initialization | ilkleme | verified_d2l | initialization: The choice of initial parameter values before training. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L170) |
 | vanishing gradient | kaybolan gradyan | verified_d2l | vanishing-gradient: A gradient that becomes very small as it propagates through a network. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L21) |
 | exploding gradient | patlayan gradyan | verified_d2l | exploding-gradient: A gradient that grows excessively large during propagation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L21) |
-| gradient clipping | Gradyan kırpma | verified_external | gradient-clipping: Limiting gradient magnitude to stabilize optimization. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L192) |
-| batch normalization | Toplu Normalleştirme | verified_d2l | batch-normalization: A normalization method using statistics of activations in a batch. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/batch-norm.md#L1) |
-| layer normalization | Katman normalizasyonu | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
+| gradient clipping | gradyan kırpma | verified_external | gradient-clipping: Limiting gradient magnitude to stabilize optimization. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L192) |
+| batch normalization | yığın normalleştirme | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
+| layer normalization | katman normalleştirme | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | evrişim | verified_d2l | convolution: An operation that combines local input values with shared kernel weights. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/conv-layer.md#L271) |
-| convolutional neural network | Evrişimli sinir ağı | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L87) |
+| convolutional neural network | evrişimli sinir ağı | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L87) |
 | kernel | çekirdek | verified_d2l | kernel: A set of weights applied locally in a convolution. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L186) |
-| filter | Filtre | verified_external | filter: A learned set of local weights used to extract a pattern. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L178) |
+| filter | filtre | verified_external | filter: A learned set of local weights used to extract a pattern. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L178) |
 | channel | kanal | verified_d2l | channel: A feature dimension in a structured representation such as an image. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/channels.md#L6) |
-| stride | uzun adım | verified_d2l | stride: The spacing between successive positions of an operation on an input. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L314) |
+| stride | adım aralığı | verified_external | stride: The spacing between successive positions of an operation on an input. | review-tr-bcdb094f00: page |
 | padding | dolgu | verified_d2l | padding: Extra values added around an input to control an operation's boundary or output size. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L228) |
 | pooling | ortaklama | verified_d2l | pooling: An operation that aggregates values over local regions. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L242) |
-| max pooling | Maksimum ortaklama | proposed | max-pooling: Pooling that selects the maximum value in each region. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L173) |
-| average pooling | Ortalama Ortaklama | verified_d2l | average-pooling: Pooling that averages values in each region. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/nadaraya-watson.md#L100) |
-| receptive field | alım alanı | verified_d2l | receptive-field: The region of an input that can influence a particular activation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L258) |
-| translation equivariance | Ötelemeye eşdeğişim | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
+| max pooling | maksimum ortaklama | proposed | max-pooling: Pooling that selects the maximum value in each region. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L173) |
+| average pooling | ortalama ortaklama | verified_d2l | average-pooling: Pooling that averages values in each region. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/nadaraya-watson.md#L100) |
+| receptive field | alıcı alan | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
+| translation equivariance | ötelemeye eşdeğişim | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | artık bağlantı | verified_d2l | residual-connection: A connection that adds an earlier representation to a later transformation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L23) |
 | residual network | artık ağ | verified_d2l | residual-network: A neural network built using residual connections. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L19) |
-| skip connection | Atlama bağlantısı | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
-| image augmentation | İmge Artırması | verified_d2l | image-augmentation: A technique that creates varied training images through transformations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/image-augmentation.md#L1) |
-| transfer learning | Transfer öğrenme | verified_external | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L234) |
-| fine-tuning | İnce Ayar | verified_d2l | fine-tuning: Further training a pretrained model for a particular task or dataset. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fine-tuning.md#L1) |
+| skip connection | atlama bağlantısı | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
+| image augmentation | görüntü artırma | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
+| transfer learning | transfer öğrenme | verified_external | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L234) |
+| fine-tuning | ince ayar | verified_d2l | fine-tuning: Further training a pretrained model for a particular task or dataset. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fine-tuning.md#L1) |
 | pretraining | ön eğitim | verified_d2l | pretraining: Training a model on an initial task or dataset before adaptation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L254) |
-| object detection | Nesne algılama | verified_external | object-detection: The task of locating and classifying objects in an image. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L339) |
-| bounding box | kuşatan kutu | verified_d2l | bounding-box: A rectangle specifying the location and extent of an object. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L44) |
-| intersection over union | Kesiştirilmiş Bölgeler | verified_external | intersection-over-union: The ratio of the overlap area to the union area of two regions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L409) |
-| semantic segmentation | anlamsal bölünme | verified_d2l | semantic-segmentation: The task of assigning a semantic class to each image pixel. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L296) |
-| instance segmentation | Örnek bölümleme | verified_d2l | instance-segmentation: The task of identifying individual object instances at pixel level. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/semantic-segmentation-and-dataset.md#L14) |
-| image classification | Görüntü sınıflandırması | proposed | image-classification: The task of assigning a class to an image. |  |
+| object detection | nesne algılama | verified_external | object-detection: The task of locating and classifying objects in an image. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L339) |
+| bounding box | sınırlayıcı kutu | verified_external | bounding-box: A rectangle specifying the location and extent of an object. | review-tr-92c1bae9fb: page; review-tr-bcdb094f00: page |
+| intersection over union | birleşim üzerinden kesişim (IoU) | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
+| semantic segmentation | anlamsal bölütleme | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
+| instance segmentation | örnek bölütleme | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
+| image classification | görüntü sınıflandırması | proposed | image-classification: The task of assigning a class to an image. |  |
 | computer vision | bilgisayarla görme | verified_d2l | computer-vision: The study of extracting information and making predictions from visual data. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L60) |
 | recurrent neural network | yinelemeli sinir ağı | verified_d2l | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L262) |
-| hidden state | Gizli Durum | verified_d2l | hidden-state: An internal representation carried between steps of a sequential model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/gru.md#L52) |
-| time step | Zaman adımı | proposed | time-step: A position in a sequential or temporal computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L9) |
+| hidden state | gizli durum | verified_d2l | hidden-state: An internal representation carried between steps of a sequential model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/gru.md#L52) |
+| time step | zaman adımı | proposed | time-step: A position in a sequential or temporal computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L9) |
 | sequence | dizi | verified_d2l | sequence: An ordered collection of elements. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L300) |
-| language model | Dil modeli | verified_external | language-model: A model assigning probabilities to sequences of language tokens. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L460) |
+| language model | dil modeli | verified_external | language-model: A model assigning probabilities to sequences of language tokens. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L460) |
 | token | belirteç | verified_d2l | token: A unit into which text is divided for processing. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L342) |
-| tokenization | Andıçlama | verified_d2l | tokenization: The process of dividing text into tokens. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-neural-networks/text-preprocessing.md#L53) |
-| vocabulary | kelime dağarcığı | verified_d2l | vocabulary: The set of tokens available to a language model. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L364) |
-| embedding | Gömme | proposed | embedding: A learned numerical representation of a discrete item or other object. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L50) |
-| word embedding | sözcük gömme | verified_d2l | word-embedding: A numerical vector representing a word. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec.md#L6) |
-| sequence-to-sequence | Diziden diziye | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/seq2seq.md#L1) |
+| tokenization | belirteçleme | proposed | tokenization: The process of dividing text into tokens. |  |
+| vocabulary | sözcük dağarcığı | proposed | vocabulary: The set of tokens available to a language model. |  |
+| embedding | gömme | proposed | embedding: A learned numerical representation of a discrete item or other object. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L50) |
+| word embedding | sözcük gömmesi | proposed | word-embedding: A numerical vector representing a word. |  |
+| sequence-to-sequence | diziden diziye | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/seq2seq.md#L1) |
 | encoder | kodlayıcı | verified_d2l | encoder: A component that converts an input into an internal representation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L108) |
-| decoder | kodçözücü | verified_d2l | decoder: A component that produces an output from an internal representation or context. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L82) |
+| decoder | kod çözücü | proposed | decoder: A component that produces an output from an internal representation or context. |  |
 | teacher forcing | öğretici zorlama | verified_d2l | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L334) |
 | beam search | ışın arama | verified_d2l | beam-search: A decoding method that retains a limited number of candidate sequences at each step. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L32) |
 | perplexity | şaşkınlık | verified_d2l | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L234) |
-| long short-term memory | uzun ömürlü kısa-dönem belleği | verified_d2l | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L198) |
-| gated recurrent unit | Geçitli yinelemeli birim | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/gru.md#L10) |
-| attention | Dikkat | verified_external | attention: A mechanism that forms a context-dependent weighted combination of values. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L593) |
+| long short-term memory | uzun kısa süreli bellek | verified_external | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | review-tr-7be472774c: page |
+| gated recurrent unit | geçitli yinelemeli birim | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/gru.md#L10) |
+| attention | dikkat | verified_external | attention: A mechanism that forms a context-dependent weighted combination of values. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L593) |
 | self-attention | özdikkat | verified_d2l | self-attention: Attention in which queries, keys, and values are derived from the same sequence. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L294) |
-| multi-head attention | Çoklu-Kafalı Dikkat | verified_d2l | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/multihead-attention.md#L1) |
-| query | Sorgu | proposed | query: A representation used to select relevant information in attention. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/transformer.md#L426) |
+| multi-head attention | çok başlı dikkat | verified_external | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | review-tr-115b9b1a5d: page |
+| query | sorgu | proposed | query: A representation used to select relevant information in attention. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/transformer.md#L426) |
 | key | anahtar | verified_d2l | key: A representation compared with a query to determine attention weights. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/attention-cues.md#L32) |
-| value | Değer | proposed | value: A representation combined according to attention weights. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L185) |
+| value | değer | proposed | value: A representation combined according to attention weights. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L185) |
 | positional encoding | konumsal kodlama | verified_d2l | positional-encoding: Information added to representations to communicate sequence position. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/self-attention-and-positional-encoding.md#L94) |
-| transformer | dönüştürücü | verified_d2l | transformer: A neural architecture built around attention and feedforward layers. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L346) |
+| transformer | transformer | verified_external | transformer: A neural architecture built around attention and feedforward layers. | review-tr-115b9b1a5d: page |
 | masked language model | maskeli dil modeli | verified_d2l | masked-language-model: A language model trained to predict hidden tokens from context. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L179) |
 | BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L1) |
-| generative model | Üretici model | proposed | generative-model: A model that describes or generates samples from a data distribution. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L45) |
-| discriminative model | Ayırt edici model | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L45) |
-| generator | Üretici | verified_d2l | generator: A model component that produces synthetic samples. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_generative-adversarial-networks/gan.md#L102) |
-| discriminator | ayrımcı | verified_d2l | discriminator: A model component trained to distinguish classes of samples, often real and generated. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L92) |
-| autoencoder | Otokodlayıcı | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
-| latent variable | Gizli değişken | proposed | latent-variable: An unobserved variable used to explain or generate observed data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L128) |
-| latent space | Gizli uzay | proposed | latent-space: A space of unobserved representations used by a model. |  |
-| diffusion model | Difüzyon modeli | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
-| noise schedule | Gürültü takvimi | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
-| denoising | gürültü arındırma | verified_d2l | denoising: Recovering a cleaner signal from a noisy observation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L84) |
-| score function | Yoğunluk skor fonksiyonu | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
+| generative model | üretici model | proposed | generative-model: A model that describes or generates samples from a data distribution. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L45) |
+| discriminative model | ayırt edici model | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L45) |
+| generator | üretici | verified_d2l | generator: A model component that produces synthetic samples. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_generative-adversarial-networks/gan.md#L102) |
+| discriminator | ayırt edici | proposed | discriminator: A model component trained to distinguish classes of samples, often real and generated. |  |
+| autoencoder | otokodlayıcı | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
+| latent variable | gizil değişken | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
+| latent space | gizil uzay | proposed | latent-space: A space of unobserved representations used by a model. |  |
+| diffusion model | difüzyon modeli | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
+| noise schedule | gürültü çizelgesi | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
+| denoising | gürültü giderme | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
+| score function | skor fonksiyonu | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | Markov zinciri | proposed | markov-chain: A stochastic process whose next state depends on the present state. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L372) |
 | Markov decision process | Markov karar süreci | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L582) |
 | reinforcement learning | pekiştirmeli öğrenme | verified_d2l | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L274) |
 | agent | etmen | verified_d2l | agent: An entity that chooses actions in an environment. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L6) |
 | environment | ortam | verified_d2l | environment: The external system with which an agent interacts. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L112) |
-| state | Durum | verified_external | state: A representation of the situation relevant to a sequential decision process. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L140) |
-| action | Eylem | proposed | action: A choice made by an agent that can affect the environment. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L224) |
-| reward | Ödül | proposed | reward: A scalar feedback signal evaluating an outcome or transition. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L210) |
-| policy | Politika | verified_external | policy: A rule or distribution for selecting actions from states. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L455) |
-| return | Getiri | proposed | return: The accumulated future reward from a point in a trajectory. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L46) |
-| discount factor | İskonto faktörü | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
-| value function | Değer fonksiyonu | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-deep-learning.md#L237) |
-| action-value function | Eylem-değer fonksiyonu | proposed | action-value-function: A function estimating expected return from a state and action. |  |
-| value iteration | Değer tekrarı | verified_external | value-iteration: An iterative method for computing optimal values using Bellman updates. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L546) |
+| state | durum | verified_external | state: A representation of the situation relevant to a sequential decision process. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L140) |
+| action | eylem | proposed | action: A choice made by an agent that can affect the environment. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L224) |
+| reward | ödül | proposed | reward: A scalar feedback signal evaluating an outcome or transition. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L210) |
+| policy | politika | verified_external | policy: A rule or distribution for selecting actions from states. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L455) |
+| return | getiri | proposed | return: The accumulated future reward from a point in a trajectory. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L46) |
+| discount factor | iskonto faktörü | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
+| value function | değer fonksiyonu | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-deep-learning.md#L237) |
+| action-value function | eylem-değer fonksiyonu | proposed | action-value-function: A function estimating expected return from a state and action. |  |
+| value iteration | değer yinelemesi | proposed | value-iteration: An iterative method for computing optimal values using Bellman updates. |  |
 | Q-learning | Q-öğrenme | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L658) |
-| exploration | Keşif | proposed | exploration: Trying actions to acquire information about their outcomes. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L812) |
-| policy gradient | Politika gradyanı | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
-| convex function | Dışbükey fonksiyon | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L104) |
-| convex optimization | Dışbükey optimizasyon | proposed | convex-optimization: Optimization of a convex objective over a convex feasible set. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adagrad.md#L18) |
-| convexity | Dışbükeylik | verified_d2l | convexity: A geometric property governing line segments in sets or functions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L1) |
-| local minimum | Yerel minimum | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L65) |
-| global minimum | Küresel minimum | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L75) |
-| saddle point | Eyer noktası | proposed | saddle-point: A stationary point that is not a local extremum in all directions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L89) |
+| exploration | keşif | proposed | exploration: Trying actions to acquire information about their outcomes. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L812) |
+| policy gradient | politika gradyanı | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
+| convex function | dışbükey fonksiyon | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L104) |
+| convex optimization | dışbükey optimizasyon | proposed | convex-optimization: Optimization of a convex objective over a convex feasible set. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adagrad.md#L18) |
+| convexity | dışbükeylik | verified_d2l | convexity: A geometric property governing line segments in sets or functions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L1) |
+| local minimum | yerel minimum | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L65) |
+| global minimum | küresel minimum | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L75) |
+| saddle point | eyer noktası | proposed | saddle-point: A stationary point that is not a local extremum in all directions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L89) |
 | Hessian | Hessian matrisi | proposed | hessian: The matrix of second partial derivatives of a scalar function. |  |
 | Jacobian | Jakobiyen | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
-| momentum | Momentum | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L23) |
-| learning rate schedule | Öğrenme oranı çizelgesi | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
+| momentum | momentum | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L23) |
+| learning rate schedule | öğrenme oranı çizelgesi | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
 | Adam | Adam | proposed | adam: An optimization algorithm using adaptive estimates of gradient moments. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/kaggle-house-price.md#L349) |
 | AdaGrad | AdaGrad | proposed | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adagrad.md#L1) |
 | RMSProp | RMSProp | proposed | rmsprop: An adaptive gradient method using a moving average of squared gradients. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L27) |
 | Lagrange multiplier | Lagrange çarpanı | proposed | lagrange-multiplier: A variable used to incorporate a constraint into an optimization problem. |  |
-| constraint | Kısıt | proposed | constraint: A condition that feasible solutions to an optimization problem must satisfy. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-variables-models.md#L14) |
-| stationary point | Durağan nokta | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
+| constraint | kısıt | proposed | constraint: A condition that feasible solutions to an optimization problem must satisfy. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-variables-models.md#L14) |
+| stationary point | durağan nokta | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
 | Gaussian process | Gauss süreci | proposed | gaussian-process: A distribution over functions whose finite collections of values are jointly Gaussian. |  |
-| covariance function | Kovaryans fonksiyonu | proposed | covariance-function: A function specifying covariance between values at pairs of inputs. |  |
-| kernel function | Çekirdek fonksiyonu | proposed | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. |  |
-| posterior predictive distribution | Sonsal öngörü dağılımı | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
+| covariance function | kovaryans fonksiyonu | proposed | covariance-function: A function specifying covariance between values at pairs of inputs. |  |
+| kernel function | çekirdek fonksiyonu | proposed | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. |  |
+| posterior predictive distribution | sonsal öngörü dağılımı | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
 | Bayesian optimization | Bayes optimizasyonu | proposed | bayesian-optimization: An optimization method using a probabilistic surrogate to choose evaluations. |  |
-| grid search | Izgara araması | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
-| random search | Rastgele arama | proposed | random-search: A search that samples hyperparameter configurations at random. |  |
-| recommender system | Öneri sistemi | proposed | recommender-system: A system that predicts or ranks items for users. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L78) |
-| collaborative filtering | İşbirlikçi Filtreleme | verified_d2l | collaborative-filtering: A recommendation approach using patterns of user-item interactions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L7) |
-| matrix factorization | Matrisi Çarpanlarına Ayırma | verified_d2l | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/mf.md#L1) |
-| implicit feedback | Örtük geri bildirim | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L384) |
-| word2vec | Word2Vec | proposed | word2vec: A family of methods for learning word vectors from context. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L4) |
-| negative sampling | Negatif Örnekleme | verified_d2l | negative-sampling: A training technique contrasting observed examples with sampled negative examples. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L163) |
-| sentiment analysis | Duygu analizi | verified_d2l | sentiment-analysis: The task of identifying sentiment expressed in text. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/sentiment-analysis-and-dataset.md#L5) |
-| natural language inference | Doğal Dil Çıkarımı | verified_d2l | natural-language-inference: The task of determining a logical relationship between text statements. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L6) |
-| machine translation | Makine çevirisi | verified_external | machine-translation: The automatic conversion of text from one language to another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L495) |
-| BLEU | Bleu puanı | verified_external | bleu: A metric comparing generated translations with reference translations using n-gram overlap. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L572) |
-| state space | Durum uzayı | proposed | state-space: The set or representation of possible states of a system. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L698) |
-| ordinary differential equation | Adi diferansiyel denklem | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
-| stochastic differential equation | Stokastik diferansiyel denklem | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
+| grid search | ızgara araması | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
+| random search | rastgele arama | proposed | random-search: A search that samples hyperparameter configurations at random. |  |
+| recommender system | öneri sistemi | proposed | recommender-system: A system that predicts or ranks items for users. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L78) |
+| collaborative filtering | işbirlikçi filtreleme | verified_d2l | collaborative-filtering: A recommendation approach using patterns of user-item interactions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L7) |
+| matrix factorization | matris ayrıştırma | proposed | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. |  |
+| implicit feedback | örtük geri bildirim | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L384) |
+| word2vec | word2vec | proposed | word2vec: A family of methods for learning word vectors from context. |  |
+| negative sampling | negatif örnekleme | verified_d2l | negative-sampling: A training technique contrasting observed examples with sampled negative examples. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L163) |
+| sentiment analysis | duygu analizi | verified_d2l | sentiment-analysis: The task of identifying sentiment expressed in text. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/sentiment-analysis-and-dataset.md#L5) |
+| natural language inference | doğal dil çıkarımı | verified_d2l | natural-language-inference: The task of determining a logical relationship between text statements. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L6) |
+| machine translation | makine çevirisi | verified_external | machine-translation: The automatic conversion of text from one language to another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L495) |
+| BLEU | BLEU | proposed | bleu: A metric comparing generated translations with reference translations using n-gram overlap. |  |
+| state space | durum uzayı | proposed | state-space: The set or representation of possible states of a system. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L698) |
+| ordinary differential equation | adi diferansiyel denklem | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
+| stochastic differential equation | stokastik diferansiyel denklem | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
 | Brownian motion | Brown hareketi | proposed | brownian-motion: A continuous-time stochastic process with independent Gaussian increments. |  |
 | Euler method | Euler yöntemi | proposed | euler-method: A numerical method that advances a differential equation using local slopes. |  |
-| Neural ODE | Nöral adi diferansiyel denklem | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
-| normalizing flow | Normalleştiren akış | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
-| change of variables | Değişkenlerin Değişimi | verified_d2l | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/integral-calculus.md#L253) |
+| Neural ODE | sinirsel adi diferansiyel denklem (Neural ODE) | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
+| normalizing flow | normalleştirici akış | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
+| change of variables | değişken değiştirme | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
 | Markov property | Markov özelliği | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
-| stationary distribution | Durağan dağılım | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
-| principal component analysis | Temel Bileşenler Analizi | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L384) |
-| dimensionality reduction | Boyut indirgeme | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
-| principal component | Temel bileşen | proposed | principal-component: A direction capturing variance under the constraints of principal component analysis. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-unsupervised-learning.md#L214) |
+| stationary distribution | durağan dağılım | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
+| principal component analysis | temel bileşenler analizi | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L384) |
+| dimensionality reduction | boyut indirgeme | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
+| principal component | temel bileşen | proposed | principal-component: A direction capturing variance under the constraints of principal component analysis. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-unsupervised-learning.md#L214) |
 | convergence | yakınsama | verified_external | convergence: The approach of a sequence or process toward a limiting value or behavior. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#convergence) |
-| empirical risk minimization | Ampirik risk minimizasyonu | proposed | empirical-risk-minimization: The principle of minimizing average loss over observed training examples. |  |
-| statistical learning | İstatistiksel öğrenme | proposed | statistical-learning: Learning models from data using statistical principles. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/index.md#L7) |
+| empirical risk minimization | ampirik risk minimizasyonu | proposed | empirical-risk-minimization: The principle of minimizing average loss over observed training examples. |  |
+| statistical learning | istatistiksel öğrenme | proposed | statistical-learning: Learning models from data using statistical principles. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/index.md#L7) |
 | Bayesian inference | Bayesçi çıkarım | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
 | confidence interval | güven aralığı | verified_d2l | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L337) |
-| hypothesis testing | Hipotez testi | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L254) |
-| bootstrap | Bootstrap | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
-| central limit theorem | Merkezi Limit Teoremi | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L321) |
-| law of large numbers | Büyük sayılar yasası | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L30) |
-| variance reduction | Varyans azaltma | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
-| causality | Nedensellik | verified_d2l | causality: The relationship in which changes to one variable bring about changes in another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-neural-networks/sequence.md#L67) |
+| hypothesis testing | hipotez testi | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L254) |
+| bootstrap | bootstrap | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
+| central limit theorem | merkezi limit teoremi | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L321) |
+| law of large numbers | büyük sayılar yasası | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L30) |
+| variance reduction | varyans azaltma | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
+| causality | nedensellik | verified_d2l | causality: The relationship in which changes to one variable bring about changes in another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-neural-networks/sequence.md#L67) |
 | distribution shift | dağılım kayması | verified_d2l | distribution-shift: A change in the data distribution between settings such as training and deployment. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L94) |
-| out-of-distribution | Dağılım dışı | proposed | out-of-distribution: Describing inputs or data that differ from the distribution used for training. |  |
-| robustness | Gürbüzlük | proposed | robustness: The ability of a system to maintain performance under perturbations or changes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/dropout.md#L19) |
-| privacy | Gizlilik | proposed | privacy: Protection against unwanted disclosure of information about individuals. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ctr.md#L20) |
-| fairness | Adalet | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
-| parallelism | Paralellik | proposed | parallelism: Executing multiple computations concurrently. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computational-performance/multiple-gpus-concise.md#L4) |
-| data parallelism | Veri Paralelleştirme | verified_d2l | data-parallelism: Parallel computation in which workers process different data with replicated models. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computational-performance/multiple-gpus.md#L28) |
-| GPU | grafik işleme birimi | verified_d2l | gpu: A processor designed for highly parallel numerical computation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L144) |
-| memory bandwidth | Bellek bant genişliği | proposed | memory-bandwidth: The rate at which data can be transferred to or from memory. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L35) |
-| throughput | Verim | proposed | throughput: The amount of work completed per unit time. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/alexnet.md#L45) |
+| out-of-distribution | dağılım dışı | proposed | out-of-distribution: Describing inputs or data that differ from the distribution used for training. |  |
+| robustness | gürbüzlük | proposed | robustness: The ability of a system to maintain performance under perturbations or changes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/dropout.md#L19) |
+| privacy | gizlilik | proposed | privacy: Protection against unwanted disclosure of information about individuals. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ctr.md#L20) |
+| fairness | adalet | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
+| parallelism | paralellik | proposed | parallelism: Executing multiple computations concurrently. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computational-performance/multiple-gpus-concise.md#L4) |
+| data parallelism | veri paralelliği | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
+| GPU | GPU | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
+| memory bandwidth | bellek bant genişliği | proposed | memory-bandwidth: The rate at which data can be transferred to or from memory. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L35) |
+| throughput | iş hacmi | proposed | throughput: The amount of work completed per unit time. |  |
 | latency | gecikme | verified_external | latency: The elapsed time required to complete a task or operation. | [google-ml-tr-generative](https://developers.google.com/machine-learning/glossary/generative?hl=tr#latency) |
 | quantization | nicemleme | verified_d2l | quantization: Representing numerical values using a reduced set of discrete values. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L284) |
-| knowledge distillation | Bilgi damıtımı | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
-| probability mass function | Olasılık kütle fonksiyonu | proposed | probability-mass-function: A function assigning probabilities to individual discrete outcomes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L102) |
-| cumulative distribution function | birikimli dağılım işlevi | verified_d2l | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/random-variables.md#L196) |
+| knowledge distillation | bilgi damıtımı | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
+| probability mass function | olasılık kütle fonksiyonu | proposed | probability-mass-function: A function assigning probabilities to individual discrete outcomes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L102) |
+| cumulative distribution function | birikimli dağılım fonksiyonu | verified_external | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. | review-tr-e14ef7c35a: page |
 | conditional distribution | koşullu dağılım | verified_d2l | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L235) |
-| log-likelihood | Log-Olabilirlik | verified_d2l | log-likelihood: The logarithm of a likelihood function. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L90) |
+| log-likelihood | log-olabilirlik | verified_d2l | log-likelihood: The logarithm of a likelihood function. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L90) |
 | negative log-likelihood | negatif log-olabilirlik | verified_d2l | negative-log-likelihood: The negative logarithm of the likelihood of observed data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L269) |
-| maximum a posteriori | Maksimum sonsal tahmin | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
-| conjugate prior | Eşlenik önsel | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
+| maximum a posteriori | maksimum sonsal tahmin | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
+| conjugate prior | eşlenik önsel | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
 | Beta distribution | Beta dağılımı | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
-| categorical distribution | Kategorik dağılım | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
-| exponential distribution | Üstel dağılım | proposed | exponential-distribution: A continuous distribution often used to model waiting times. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L320) |
-| uniform distribution | Tekdüze dağılım | proposed | uniform-distribution: A distribution assigning equal density or probability across its support. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/lookup-api.md#L35) |
-| random seed | Rastgele tohum | proposed | random-seed: An initial value controlling a pseudorandom number generator. |  |
-| independent and identically distributed | bağımsız ve özdeşçe dağılmış | verified_d2l | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L164) |
-| sufficient statistic | Yeterli istatistik | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
+| categorical distribution | kategorik dağılım | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
+| exponential distribution | üstel dağılım | proposed | exponential-distribution: A continuous distribution often used to model waiting times. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L320) |
+| uniform distribution | tekdüze dağılım | proposed | uniform-distribution: A distribution assigning equal density or probability across its support. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/lookup-api.md#L35) |
+| random seed | rastgele tohum | proposed | random-seed: An initial value controlling a pseudorandom number generator. |  |
+| independent and identically distributed | bağımsız ve özdeş dağılımlı | proposed | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. |  |
+| sufficient statistic | yeterli istatistik | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
 | Fisher information | Fisher bilgisi | proposed | fisher-information: A measure of how much an observation reveals about a parameter. |  |
-| point estimate | Nokta tahmini | proposed | point-estimate: A single value used to estimate an unknown quantity. |  |
-| bias-variance decomposition | Yanlılık-varyans ayrışımı | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
+| point estimate | nokta tahmini | proposed | point-estimate: A single value used to estimate an unknown quantity. |  |
+| bias-variance decomposition | yanlılık-varyans ayrışımı | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
 | mean | ortalama | verified_d2l | mean: A measure of central tendency given by an average or expectation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/random-variables.md#L225) |
-| median | Medyan | proposed | median: A value that divides a distribution or ordered sample into two halves. |  |
-| quantile | Kantil | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
+| median | medyan | proposed | median: A value that divides a distribution or ordered sample into two halves. |  |
+| quantile | kantil | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
 | standard error | standart hata | verified_d2l | standard-error: The standard deviation of a sampling distribution of an estimator. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L135) |
-| sampling distribution | Örnekleme dağılımı | proposed | sampling-distribution: The probability distribution of a statistic across repeated samples. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L165) |
-| statistical significance | İstatistiksel Anlamlılık | verified_d2l | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L270) |
+| sampling distribution | örnekleme dağılımı | proposed | sampling-distribution: The probability distribution of a statistic across repeated samples. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L165) |
+| statistical significance | istatistiksel anlamlılık | verified_d2l | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L270) |
 | p-value | p-değeri | proposed | p-value: The probability under a null model of a result at least as extreme as the observed result according to a test statistic. |  |
 | null hypothesis | sıfır hipotezi | verified_d2l | null-hypothesis: The reference hypothesis assessed by a statistical test. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L256) |
-| credible interval | Güvenilirlik aralığı | proposed | credible-interval: An interval containing a specified posterior probability of an unknown quantity. |  |
-| posterior predictive | Sonsal öngörü | proposed | posterior-predictive: A prediction obtained by averaging over posterior uncertainty. |  |
-| probabilistic model | Olasılıksal model | proposed | probabilistic-model: A model that represents uncertainty using probability distributions. |  |
-| latent variable model | Gizli değişken modeli | proposed | latent-variable-model: A probabilistic model incorporating unobserved variables. |  |
-| mixture model | Karışım modeli | proposed | mixture-model: A probability model combining multiple component distributions. |  |
+| credible interval | güvenilirlik aralığı | proposed | credible-interval: An interval containing a specified posterior probability of an unknown quantity. |  |
+| posterior predictive | sonsal öngörü | proposed | posterior-predictive: A prediction obtained by averaging over posterior uncertainty. |  |
+| probabilistic model | olasılıksal model | proposed | probabilistic-model: A model that represents uncertainty using probability distributions. |  |
+| latent variable model | gizil değişken modeli | proposed | latent-variable-model: A probabilistic model incorporating unobserved variables. |  |
+| mixture model | karışım modeli | proposed | mixture-model: A probability model combining multiple component distributions. |  |
 | mixture of Gaussians | Gauss karışımı | proposed | mixture-of-gaussians: A probability distribution formed as a weighted combination of Gaussian components. |  |
-| variational inference | Varyasyonel çıkarım | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
-| evidence lower bound | Kanıt alt sınırı | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
-| log probability | Log-olasılık | proposed | log-probability: The logarithm of a probability or probability density. |  |
-| log-sum-exp | Log-toplam-üstel | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
-| numerical stability | Sayısal kararlılık | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L67) |
-| floating point | Kayan nokta | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
-| underflow | Alt taşma | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
+| variational inference | varyasyonel çıkarım | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
+| evidence lower bound | kanıt alt sınırı | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
+| log probability | log-olasılık | proposed | log-probability: The logarithm of a probability or probability density. |  |
+| log-sum-exp | log-sum-exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
+| numerical stability | sayısal kararlılık | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L67) |
+| floating point | kayan nokta | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
+| underflow | alt taşma | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
 | overflow | taşma | verified_d2l | overflow: A numerical condition in which a magnitude exceeds the representable range. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L69) |
-| condition number | (matrisin) sağlamlık sayısı | verified_d2l | condition-number: A measure of how sensitive a mathematical problem is to perturbations. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L64) |
-| convergence rate | Yakınsama hızı | proposed | convergence-rate: The speed at which an iterative procedure approaches a limit or solution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/sgd.md#L206) |
-| line search | Doğrusal arama | proposed | line-search: A method that chooses a step size along a search direction. |  |
-| Newton's method | Newton Yöntemi | verified_d2l | newton-s-method: An iterative method using derivatives or curvature to find a root or optimum. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L194) |
-| quasi-Newton | Yarı-Newton | proposed | quasi-newton: An optimization approach that approximates curvature rather than computing the full Hessian. |  |
-| subgradient | Alt gradyan | proposed | subgradient: A generalization of a gradient applicable to certain nondifferentiable functions. |  |
-| proximal operator | Proksimal operatör | proposed | proximal-operator: An optimization operator balancing a function value with distance from an input point. |  |
+| condition number | koşul sayısı | verified_external | condition-number: A measure of how sensitive a mathematical problem is to perturbations. | review-tr-80855428ec: page |
+| convergence rate | yakınsama hızı | proposed | convergence-rate: The speed at which an iterative procedure approaches a limit or solution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/sgd.md#L206) |
+| line search | çizgi araması | proposed | line-search: A method that chooses a step size along a search direction. |  |
+| Newton's method | Newton yöntemi | verified_d2l | newton-s-method: An iterative method using derivatives or curvature to find a root or optimum. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L194) |
+| quasi-Newton | Newton benzeri (quasi-Newton) | proposed | quasi-newton: An optimization approach that approximates curvature rather than computing the full Hessian. |  |
+| subgradient | alt gradyan | proposed | subgradient: A generalization of a gradient applicable to certain nondifferentiable functions. |  |
+| proximal operator | proksimal operatör | proposed | proximal-operator: An optimization operator balancing a function value with distance from an input point. |  |
 | Lipschitz continuity | Lipschitz sürekliliği | proposed | lipschitz-continuity: A bound on how rapidly a function can change relative to its input. |  |
-| strong convexity | Güçlü dışbükeylik | proposed | strong-convexity: A strengthened form of convexity with a positive quadratic lower bound. |  |
-| convex set | Dışbükey küme | proposed | convex-set: A set containing every line segment between any two of its points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L104) |
-| feasible region | Uygun bölge | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
-| duality | İkilik | proposed | duality: A relationship between an optimization problem and an associated dual problem. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L135) |
-| Lagrangian | Lagranj | verified_external | lagrangian: A function combining an objective with weighted constraint terms. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L308) |
-| coordinate descent | Koordinat inişi | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
-| learning rate decay | Öğrenme oranı azalması | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
-| warmup | Isınma | verified_d2l | warmup: A training phase in which a setting such as learning rate is gradually increased. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/lr-scheduler.md#L431) |
-| weight initialization | Ağırlık ilkleme | proposed | weight-initialization: The choice of starting values for model weights. |  |
-| Xavier initialization | Xavier İlkletmesi | verified_d2l | xavier-initialization: An initialization method that scales weights to control activation variance across layers. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L125) |
-| weight sharing | Ağırlık paylaşımı | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
-| parameter count | Parametre sayısı | proposed | parameter-count: The number of parameters in a model. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L255) |
-| computational complexity | Hesaplama karmaşıklığı | proposed | computational-complexity: A characterization of how computational cost scales with problem size. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/googlenet.md#L321) |
-| backward pass | Geri geçiş | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
+| strong convexity | güçlü dışbükeylik | proposed | strong-convexity: A strengthened form of convexity with a positive quadratic lower bound. |  |
+| convex set | dışbükey küme | proposed | convex-set: A set containing every line segment between any two of its points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L104) |
+| feasible region | olurlu bölge | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
+| duality | dualite | proposed | duality: A relationship between an optimization problem and an associated dual problem. |  |
+| Lagrangian | Lagrange fonksiyonu | proposed | lagrangian: A function combining an objective with weighted constraint terms. |  |
+| coordinate descent | koordinat inişi | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
+| learning rate decay | öğrenme oranı azalması | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
+| warmup | ısınma | verified_d2l | warmup: A training phase in which a setting such as learning rate is gradually increased. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/lr-scheduler.md#L431) |
+| weight initialization | ağırlık ilkleme | proposed | weight-initialization: The choice of starting values for model weights. |  |
+| Xavier initialization | Xavier ilklemesi | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
+| weight sharing | ağırlık paylaşımı | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
+| parameter count | parametre sayısı | proposed | parameter-count: The number of parameters in a model. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L255) |
+| computational complexity | hesaplama karmaşıklığı | proposed | computational-complexity: A characterization of how computational cost scales with problem size. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/googlenet.md#L321) |
+| backward pass | geri geçiş | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
 | forward pass | ileri geçiş | verified_d2l | forward-pass: The computation that evaluates a model from inputs to outputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/multivariable-calculus.md#L392) |
-| computational efficiency | Hesaplama verimliliği | proposed | computational-efficiency: The effectiveness with which computation uses time or resources. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L337) |
-| loss landscape | Kayıp manzarası | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
-| inductive bias | Tümevarımsal önyargı | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
-| universal approximation | Evrensel yaklaşım | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
-| feature extraction | Öznitelik çıkarımı | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
-| representation learning | Temsil öğrenimi | proposed | representation-learning: Learning useful features or representations from data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L723) |
+| computational efficiency | hesaplama verimliliği | proposed | computational-efficiency: The effectiveness with which computation uses time or resources. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L337) |
+| loss landscape | kayıp yüzeyi | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
+| inductive bias | tümevarımsal yanlılık | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
+| universal approximation | evrensel yaklaşıklama | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
+| feature extraction | öznitelik çıkarımı | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
+| representation learning | temsil öğrenme | proposed | representation-learning: Learning useful features or representations from data. |  |
 | self-supervised learning | öz gözetimli öğrenme | verified_d2l | self-supervised-learning: Learning from supervisory signals constructed from the data itself. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/index.md#L10) |
-| supervised learning | Gözetimli Öğrenme | verified_d2l | supervised-learning: Learning a mapping from inputs to observed targets. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L202) |
-| unsupervised learning | Gözetimsiz Öğrenme | verified_external | unsupervised-learning: Learning structure from data without task labels. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L328) |
+| supervised learning | gözetimli öğrenme | verified_d2l | supervised-learning: Learning a mapping from inputs to observed targets. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L202) |
+| unsupervised learning | gözetimsiz öğrenme | verified_external | unsupervised-learning: Learning structure from data without task labels. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L328) |
 | in-context learning | bağlam içinde öğrenme | verified_external | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. | [google-ml-tr-generative](https://developers.google.com/machine-learning/glossary/generative?hl=tr#in-context-learning) |
-| prompt | İstem | proposed | prompt: An input that guides a model's response or behavior. |  |
+| prompt | istem | proposed | prompt: An input that guides a model's response or behavior. |  |
 | context window | bağlam penceresi | verified_external | context-window: The amount of context a model can process in a single input. | [google-ml-tr-generative](https://developers.google.com/machine-learning/glossary/generative?hl=tr#context-window) |
-| next-token prediction | Sonraki belirteç tahmini | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
-| autoregressive model | Otoregresif model | proposed | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. |  |
-| autoregressive generation | Otoregresif üretim | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
-| causal attention | Nedensel dikkat | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
-| cross-attention | Çapraz dikkat | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
+| next-token prediction | sonraki belirteç tahmini | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
+| autoregressive model | otoregresif model | proposed | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. |  |
+| autoregressive generation | otoregresif üretim | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
+| causal attention | nedensel dikkat | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
+| cross-attention | çapraz dikkat | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
 | scaled dot-product attention | ölçeklendirilmiş nokta çarpımı dikkati | verified_d2l | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/attention-scoring-functions.md#L298) |
-| softmax attention | Softmax dikkati | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
-| position embedding | Konum gömme | proposed | position-embedding: A representation of position used in a sequence model. |  |
-| rotary position embedding | Döner konum gömme | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
-| feedforward network | İleri beslemeli ağ | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
+| softmax attention | softmax dikkati | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
+| position embedding | konum gömmesi | proposed | position-embedding: A representation of position used in a sequence model. |  |
+| rotary position embedding | döner konum gömmesi (RoPE) | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
+| feedforward network | ileri beslemeli ağ | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
 | residual block | artık blok | verified_d2l | residual-block: A network block combining a transformation with a shortcut connection. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L19) |
-| normalization layer | Normalleştirme katmanı | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L28) |
-| root mean square | Kök ortalama kare | proposed | root-mean-square: The square root of the mean of squared values. |  |
-| encoder-decoder | kodlayıcı-kodçözücü | verified_d2l | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/encoder-decoder.md#L4) |
-| sequence length | Dizi uzunluğu | proposed | sequence-length: The number of elements in a sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/transformer.md#L48) |
-| attention score | Dikkat skoru | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
+| normalization layer | normalleştirme katmanı | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L28) |
+| root mean square | kök ortalama kare | proposed | root-mean-square: The square root of the mean of squared values. |  |
+| encoder-decoder | kodlayıcı-kod çözücü | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
+| sequence length | dizi uzunluğu | proposed | sequence-length: The number of elements in a sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/transformer.md#L48) |
+| attention score | dikkat puanı | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
 | attention pooling | dikkat ortaklama | verified_d2l | attention-pooling: Combining values using weights determined by an attention mechanism. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/attention-cues.md#L32) |
-| additive attention | toplayıcı dikkat | verified_d2l | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/attention-scoring-functions.md#L147) |
-| dot-product attention | Nokta çarpımı dikkati | proposed | dot-product-attention: Attention based on dot products between queries and keys. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/attention-scoring-functions.md#L296) |
-| masked attention | Maskeli dikkat | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
-| byte pair encoding | Bayt çifti kodlaması | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
-| subword | Alt sözcük | proposed | subword: A token unit that can represent part of a word. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/subword-embedding.md#L1) |
-| n-gram | n-gramm | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
-| corpus | külliyat | verified_d2l | corpus: A collection of texts used for language analysis or model training. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L74) |
-| word frequency | Sözcük sıklığı | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
-| embedding matrix | Gömme matrisi | verified_external | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L332) |
-| cosine similarity | Kosinüs Benzerliği | verified_d2l | cosine-similarity: A similarity measure based on the angle between vectors. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L167) |
-| nearest neighbor | En yakın komşu | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L11) |
-| word analogy | Kelime Benzeşimi | verified_d2l | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/similarity-analogy.md#L163) |
-| skip-gram | Atlamalı sözcük | proposed | skip-gram: A word embedding model and objective that predict context words from a center word. |  |
+| additive attention | toplamsal dikkat | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
+| dot-product attention | nokta çarpımı dikkati | proposed | dot-product-attention: Attention based on dot products between queries and keys. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/attention-scoring-functions.md#L296) |
+| masked attention | maskeli dikkat | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
+| byte pair encoding | bayt çifti kodlaması | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
+| subword | alt sözcük | proposed | subword: A token unit that can represent part of a word. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/subword-embedding.md#L1) |
+| n-gram | n-gram | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
+| corpus | derlem | verified_external | corpus: A collection of texts used for language analysis or model training. | review-tr-c5cb3f27d1: page |
+| word frequency | sözcük sıklığı | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
+| embedding matrix | gömme matrisi | verified_external | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L332) |
+| cosine similarity | kosinüs benzerliği | verified_d2l | cosine-similarity: A similarity measure based on the angle between vectors. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md#L167) |
+| nearest neighbor | en yakın komşu | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L11) |
+| word analogy | sözcük benzeşimi | proposed | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. |  |
+| skip-gram | skip-gram | proposed | skip-gram: A word embedding model and objective that predict context words from a center word. |  |
 | continuous bag of words | sürekli sözcük torbası | verified_d2l | continuous-bag-of-words: A word embedding method that predicts a center word from its context. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec.md#L20) |
-| masked language modeling | Maskeli Dil Modelleme | verified_d2l | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L176) |
-| next sentence prediction | Sonraki Cümle Tahmini | verified_d2l | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L278) |
-| question answering | Soru Yanıtlama | verified_d2l | question-answering: The task of producing an answer to a question, often using a supplied context. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/finetuning-bert.md#L43) |
-| text classification | Metin sınıflandırması | proposed | text-classification: The task of assigning categories to text. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L27) |
-| named entity recognition | Adlandırılmış varlık tanıma | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L12) |
-| semantic similarity | Anlamsal benzerlik | proposed | semantic-similarity: The degree to which expressions have similar meanings. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/natural-language-inference-attention.md#L36) |
-| convolutional layer | Evrişim katmanı | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fcn.md#L71) |
-| feature map | Özellik haritası | proposed | feature-map: An array of activations representing features across positions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L285) |
-| pooling layer | Ortaklama katmanı | proposed | pooling-layer: A layer that aggregates local groups of activations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L173) |
-| strided convolution | Adımlı evrişim | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/transposed-conv.md#L6) |
-| transposed convolution | Devrik Evrişim | verified_d2l | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/transposed-conv.md#L1) |
-| dilated convolution | Genişletilmiş evrişim | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
-| depthwise convolution | Derinlik bazlı evrişim | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
-| pointwise convolution | Noktasal evrişim | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
-| image resolution | Görüntü çözünürlüğü | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
-| pixel | Piksel | proposed | pixel: An individual sample in a digital image. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L20) |
-| image recognition | Görüntü tanıma | proposed | image-recognition: The task of identifying visual content in images. |  |
-| image segmentation | İmge bölümleme | verified_d2l | image-segmentation: Partitioning an image into regions or pixel-level categories. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/semantic-segmentation-and-dataset.md#L13) |
-| region proposal | Bölge önerisi | proposed | region-proposal: A candidate image region that may contain an object. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L8) |
+| masked language modeling | maskeli dil modelleme | verified_d2l | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L176) |
+| next sentence prediction | sonraki cümle tahmini | verified_d2l | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L278) |
+| question answering | soru yanıtlama | verified_d2l | question-answering: The task of producing an answer to a question, often using a supplied context. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/finetuning-bert.md#L43) |
+| text classification | metin sınıflandırması | proposed | text-classification: The task of assigning categories to text. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L27) |
+| named entity recognition | adlandırılmış varlık tanıma | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L12) |
+| semantic similarity | anlamsal benzerlik | proposed | semantic-similarity: The degree to which expressions have similar meanings. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/natural-language-inference-attention.md#L36) |
+| convolutional layer | evrişim katmanı | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fcn.md#L71) |
+| feature map | öznitelik haritası | proposed | feature-map: An array of activations representing features across positions. |  |
+| pooling layer | ortaklama katmanı | proposed | pooling-layer: A layer that aggregates local groups of activations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L173) |
+| strided convolution | adım aralıklı evrişim | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
+| transposed convolution | devrik evrişim | verified_d2l | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/transposed-conv.md#L1) |
+| dilated convolution | genişletilmiş evrişim | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
+| depthwise convolution | derinlik bazlı evrişim | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
+| pointwise convolution | noktasal evrişim | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
+| image resolution | görüntü çözünürlüğü | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
+| pixel | piksel | proposed | pixel: An individual sample in a digital image. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L20) |
+| image recognition | görüntü tanıma | proposed | image-recognition: The task of identifying visual content in images. |  |
+| image segmentation | görüntü bölütleme | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
+| region proposal | bölge önerisi | proposed | region-proposal: A candidate image region that may contain an object. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L8) |
 | anchor box | çapa kutusu | verified_d2l | anchor-box: A reference bounding box used to formulate object localization predictions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/anchor.md#L257) |
-| non-maximum suppression | maksimum olmayanı bastırma (non-maximum suppression) | verified_d2l | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/anchor.md#L503) |
-| data augmentation | Veri artırma | verified_external | data-augmentation: Creating varied training examples by transforming existing data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L72) |
-| random crop | Rastgele kırpma | proposed | random-crop: A data augmentation that selects a random subregion of an input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/object-detection-dataset.md#L185) |
-| super-resolution | Süper çözünürlük | proposed | super-resolution: The task of producing a higher-resolution image from a lower-resolution input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L163) |
-| image generation | Görüntü üretimi | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
-| feature pyramid | Öznitelik piramidi | proposed | feature-pyramid: A collection of feature representations at multiple spatial scales. |  |
-| multi-scale | Çok ölçekli | proposed | multi-scale: Using or representing information at multiple resolutions or sizes. |  |
-| transition model | Geçiş modeli | proposed | transition-model: A model describing how a system changes state. |  |
-| observation | Gözlem | proposed | observation: A measured or perceived value available to a learning system. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L217) |
-| trajectory | Yörünge | proposed | trajectory: A sequence of states, actions, or observations generated over time. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/momentum.md#L222) |
-| episode | Bölüm | proposed | episode: A sequence of interactions ending at a terminal condition. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/sagemaker.md#L22) |
-| terminal state | Son durum | proposed | terminal-state: A state marking the end of an episode. |  |
-| optimal policy | En iyi politika | verified_external | optimal-policy: A policy achieving the best expected return under a specified criterion. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L539) |
-| policy iteration | Politika yinelemesi | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
-| policy evaluation | Politika değerlendirme | verified_external | policy-evaluation: Computing or estimating the value of a policy. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L504) |
-| policy improvement | Politika iyileştirme | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
-| off-policy | Politika dışı | proposed | off-policy: Describing learning about one policy from data generated by another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L595) |
-| on-policy | Politika içi | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
-| multi-armed bandit | Çok kollu haydut | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
-| regret | Pişmanlık | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
+| non-maximum suppression | maksimum olmayanı bastırma | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
+| data augmentation | veri artırma | verified_external | data-augmentation: Creating varied training examples by transforming existing data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L72) |
+| random crop | rastgele kırpma | proposed | random-crop: A data augmentation that selects a random subregion of an input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/object-detection-dataset.md#L185) |
+| super-resolution | süper çözünürlük | proposed | super-resolution: The task of producing a higher-resolution image from a lower-resolution input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L163) |
+| image generation | görüntü üretimi | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
+| feature pyramid | öznitelik piramidi | proposed | feature-pyramid: A collection of feature representations at multiple spatial scales. |  |
+| multi-scale | çok ölçekli | proposed | multi-scale: Using or representing information at multiple resolutions or sizes. |  |
+| transition model | geçiş modeli | proposed | transition-model: A model describing how a system changes state. |  |
+| observation | gözlem | proposed | observation: A measured or perceived value available to a learning system. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L217) |
+| trajectory | yörünge | proposed | trajectory: A sequence of states, actions, or observations generated over time. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/momentum.md#L222) |
+| episode | epizot | proposed | episode: A sequence of interactions ending at a terminal condition. |  |
+| terminal state | terminal durum | proposed | terminal-state: A state marking the end of an episode. |  |
+| optimal policy | en iyi politika | verified_external | optimal-policy: A policy achieving the best expected return under a specified criterion. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L539) |
+| policy iteration | politika yinelemesi | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
+| policy evaluation | politika değerlendirme | verified_external | policy-evaluation: Computing or estimating the value of a policy. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L504) |
+| policy improvement | politika iyileştirme | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
+| off-policy | politika dışı | proposed | off-policy: Describing learning about one policy from data generated by another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L595) |
+| on-policy | politika içi | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
+| multi-armed bandit | çok kollu haydut | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
+| regret | pişmanlık | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
 | Markov reward process | Markov ödül süreci | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
 | Bellman optimality equation | Bellman optimalite denklemi | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
-| policy gradient theorem | Politika gradyanı teoremi | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
-| deep reinforcement learning | Derin pekiştirmeli öğrenme | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L532) |
-| target network | Hedef ağ | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
-| experience replay | Deneyim tekrar oynatma | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
-| diffusion process | Difüzyon süreci | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
-| forward process | İleri süreç | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
-| reverse process | Ters süreç | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
-| score matching | Skor eşleştirme | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
+| policy gradient theorem | politika gradyanı teoremi | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
+| deep reinforcement learning | derin pekiştirmeli öğrenme | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L532) |
+| target network | hedef ağ | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
+| experience replay | deneyim tekrarı | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
+| diffusion process | difüzyon süreci | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
+| forward process | ileri süreç | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
+| reverse process | ters süreç | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
+| score matching | skor eşleştirme | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | Langevin dinamikleri | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
-| noise prediction | Gürültü tahmini | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
+| noise prediction | gürültü tahmini | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
 | Gaussian noise | Gauss gürültüsü | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L273) |
-| flow matching | Akış eşleştirme | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
-| probability flow | Olasılık akışı | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
-| vector field | Vektör alanı | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
-| continuous-time | Sürekli zaman | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
-| discretization | Ayrıklaştırma | proposed | discretization: Approximation of a continuous object or process using discrete steps or values. |  |
+| flow matching | akış eşleştirme | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
+| probability flow | olasılık akışı | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
+| vector field | vektör alanı | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
+| continuous-time | sürekli zaman | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
+| discretization | ayrıklaştırma | proposed | discretization: Approximation of a continuous object or process using discrete steps or values. |  |
 | Euler-Maruyama | Euler-Maruyama | proposed | euler-maruyama: A numerical method for approximating solutions of stochastic differential equations. |  |
 | Itô calculus | Itô hesabı | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
-| ODE solver | Adi diferansiyel denklem çözücüsü | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
-| adjoint method | Eşlenik yöntem | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
-| matrix exponential | Matris üsteli | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
+| ODE solver | adi diferansiyel denklem çözücüsü | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
+| adjoint method | adjoint yöntemi | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
+| matrix exponential | matris üsteli | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | Fourier dönüşümü | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
 | bias | yanlılık | verified_d2l | statistical-bias: The difference between an estimator’s expected value and the true parameter. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L36) |
 | mixture of experts | uzman karışımı | verified_external | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. | [google-ml-tr-generative](https://developers.google.com/machine-learning/glossary/generative?hl=tr#mixture-of-experts) |
-| transition kernel | Geçiş çekirdeği | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
-| expected reward | Beklenen ödül | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
-| effective horizon | Etkin ufuk | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
-| behavior policy | Davranış politikası | proposed | behavior-policy: The policy that generates the data used by a learning algorithm. |  |
-| target policy | Hedef politika | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
-| temporal-difference error | Zamansal fark hatası | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
-| reward-to-go | Gelecek ödül toplamı | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
-| dynamic programming | Dinamik programlama | verified_external | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L147) |
-| contextual bandit | Bağlamsal çok kollu haydut | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
-| control variate | Kontrol değişkeni | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
-| function approximation | Fonksiyon yaklaşımı | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
-| actor | Aktör | proposed | actor: The policy component of an actor-critic method. |  |
-| critic | Eleştirmen | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
-| fixed point | Sabit nokta | proposed | fixed-point: A point unchanged by applying a given mapping. |  |
-| value backup | Değer yedekleme | proposed | value-backup: A computation updating a value estimate using rewards and successor values. |  |
-| greedy policy | Açgözlü politika | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L665) |
-| exploration rate | Keşif oranı | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
-| state-action pair | Durum-eylem çifti | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
-| partially observable | Kısmen gözlemlenebilir | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L577) |
+| transition kernel | geçiş çekirdeği | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
+| expected reward | beklenen ödül | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
+| effective horizon | etkin ufuk | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
+| behavior policy | davranış politikası | proposed | behavior-policy: The policy that generates the data used by a learning algorithm. |  |
+| target policy | hedef politika | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
+| temporal-difference error | zamansal fark hatası | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
+| reward-to-go | gelecek ödül toplamı | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
+| dynamic programming | dinamik programlama | verified_external | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L147) |
+| contextual bandit | bağlamsal çok kollu haydut | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
+| control variate | kontrol değişkeni | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
+| function approximation | fonksiyon yaklaşıklama | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
+| actor | aktör | proposed | actor: The policy component of an actor-critic method. |  |
+| critic | eleştirmen | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
+| fixed point | sabit nokta | proposed | fixed-point: A point unchanged by applying a given mapping. |  |
+| value backup | değer geri aktarımı | proposed | value-backup: A computation updating a value estimate using rewards and successor values. |  |
+| greedy policy | açgözlü politika | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L665) |
+| exploration rate | keşif oranı | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
+| state-action pair | durum-eylem çifti | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
+| partially observable | kısmen gözlemlenebilir | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L577) |
 | Markov chain Monte Carlo | Markov zinciri Monte Carlo | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
-| noise ball | Gürültü topu | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
-| implicit bias | Örtük yanlılık | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
-| preconditioner | Önkoşullayıcı | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
-| sharpness | Keskinlik | proposed | sharpness: A measure of how rapidly an objective rises around a point. |  |
-| step size | Adım büyüklüğü | proposed | step-size: The magnitude of a step taken by an iterative method. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L279) |
-| soft maximum | Yumuşak maksimum | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
-| proximal gradient | Proksimal gradyan | proposed | proximal-gradient: An optimization method combining a gradient step with a proximal operation. |  |
-| cosine decay | Kosinüs azalması | proposed | cosine-decay: A schedule that reduces a quantity according to a cosine-shaped curve. |  |
+| noise ball | gürültü topu | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
+| implicit bias | örtük yanlılık | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
+| preconditioner | önkoşullayıcı | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
+| sharpness | keskinlik | proposed | sharpness: A measure of how rapidly an objective rises around a point. |  |
+| step size | adım büyüklüğü | proposed | step-size: The magnitude of a step taken by an iterative method. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L279) |
+| soft maximum | yumuşak maksimum | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
+| proximal gradient | proksimal gradyan | proposed | proximal-gradient: An optimization method combining a gradient step with a proximal operation. |  |
+| cosine decay | kosinüs azalması | proposed | cosine-decay: A schedule that reduces a quantity according to a cosine-shaped curve. |  |
 | AdamW | AdamW | proposed | adamw: An adaptive optimizer that decouples weight decay from gradient-based updates. |  |
-| natural gradient | Doğal gradyan | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
+| natural gradient | doğal gradyan | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
 | Shampoo | Shampoo | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
 | Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
-| heavy-ball momentum | Ağır top momentumu | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
-| trust-region method | Güven bölgesi yöntemi | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
-| soft-thresholding | Yumuşak eşikleme | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
-| convex conjugate | Dışbükey eşlenik | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
-| subdifferential | Alttürev | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
-| dual problem | İkili problem | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
-| shadow price | Gölge fiyat | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
+| heavy-ball momentum | ağır top momentumu | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
+| trust-region method | güven bölgesi yöntemi | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
+| soft-thresholding | yumuşak eşikleme | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
+| convex conjugate | dışbükey eşlenik | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
+| subdifferential | alt diferansiyel | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
+| dual problem | dual problem | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
+| shadow price | gölge fiyat | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
 | Lasso | Lasso | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L345) |
-| ridge regression | sırt regresyon | verified_d2l | ridge-regression: A regression method using a squared-weight penalty. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L278) |
+| ridge regression | ridge regresyonu | proposed | ridge-regression: A regression method using a squared-weight penalty. |  |
 | Gram matrix | Gram matrisi | verified_d2l | gram-matrix: A matrix of inner products or kernel evaluations between pairs of objects. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L201) |
-| column space | Sütun uzayı | proposed | column-space: The set of all linear combinations of a matrix's columns. |  |
-| null space | Sıfır uzay | proposed | null-space: The set of vectors mapped to zero by a linear transformation. |  |
-| spectral radius | Spektral yarıçap | proposed | spectral-radius: The largest absolute value among a matrix's eigenvalues. |  |
-| spectral norm | Spektral norm | proposed | spectral-norm: The largest singular value of a matrix. |  |
-| nuclear norm | Çekirdek normu | proposed | nuclear-norm: The sum of a matrix's singular values. |  |
+| column space | sütun uzayı | proposed | column-space: The set of all linear combinations of a matrix's columns. |  |
+| null space | sıfır uzayı | proposed | null-space: The set of vectors mapped to zero by a linear transformation. |  |
+| spectral radius | spektral yarıçap | proposed | spectral-radius: The largest absolute value among a matrix's eigenvalues. |  |
+| spectral norm | spektral norm | proposed | spectral-norm: The largest singular value of a matrix. |  |
+| nuclear norm | nükleer norm | proposed | nuclear-norm: The sum of a matrix's singular values. |  |
 | power iteration | kuvvet yinelemesi | verified_d2l | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L436) |
 | projection | izdüşüm | verified_d2l | projection: A mapping that sends a point onto a specified subspace or set. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L228) |
-| span | Germe | proposed | span: The set of all linear combinations of a collection of vectors. |  |
-| linear independence | Doğrusal bağımsızlık | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
-| covariance matrix | Kovaryans matrisi | proposed | covariance-matrix: A matrix containing covariances between pairs of random variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L29) |
-| normal equations | Normal denklemler | verified_external | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L141) |
-| one-hot encoding | birebir kodlama | verified_d2l | one-hot-encoding: A representation of a category as a vector with one active component. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L593) |
+| span | germe | proposed | span: The set of all linear combinations of a collection of vectors. |  |
+| linear independence | doğrusal bağımsızlık | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
+| covariance matrix | kovaryans matrisi | proposed | covariance-matrix: A matrix containing covariances between pairs of random variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L29) |
+| normal equations | normal denklemler | verified_external | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L141) |
+| one-hot encoding | one-hot kodlama | proposed | one-hot-encoding: A representation of a category as a vector with one active component. |  |
 | concatenation | bitiştirme | verified_d2l | concatenation: The operation of joining arrays or sequences along an axis. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L62) |
-| broadcasting | Yayınlama | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/ndarray.md#L548) |
+| broadcasting | yayınlama | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/ndarray.md#L548) |
 | shape | şekil | verified_d2l | shape: The sizes of the axes of an array or tensor. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/distributions.md#L448) |
-| slice | Dilim | proposed | slice: A selected portion of an array or sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/ndarray.md#L432) |
-| forward mode | İleri mod | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
-| reverse mode | Ters mod | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
-| truncation error | Kesme hatası | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
-| finite difference | Sonlu fark | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
-| mean value theorem | Ortalama değer teoremi | proposed | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. |  |
+| slice | dilim | proposed | slice: A selected portion of an array or sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/ndarray.md#L432) |
+| forward mode | ileri mod | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
+| reverse mode | ters mod | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
+| truncation error | kesme hatası | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
+| finite difference | sonlu fark | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
+| mean value theorem | ortalama değer teoremi | proposed | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. |  |
 | Taylor expansion | Taylor açılımı | proposed | taylor-expansion: A local approximation to a function expressed in powers of displacement from a point. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L8) |
-| conditional entropy | Koşullu Entropi | verified_d2l | conditional-entropy: The uncertainty remaining in one random variable after another is known. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L229) |
-| surprisal | Şaşırtıcılık | verified_d2l | surprisal: The negative logarithm of the probability assigned to an outcome. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L151) |
-| effective sample size | Etkin örneklem büyüklüğü | proposed | effective-sample-size: A measure of the amount of information in a weighted or dependent sample relative to independent samples. |  |
-| union bound | Birleşim sınırı | verified_external | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L453) |
-| gamma function | Gama fonksiyonu | proposed | gamma-function: A function extending the factorial to a broader domain. |  |
-| maximum entropy | Maksimum entropi | proposed | maximum-entropy: A principle choosing the highest-entropy distribution subject to specified constraints. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L129) |
-| empirical distribution | Ampirik dağılım | proposed | empirical-distribution: A distribution that assigns probability mass to observed sample values. |  |
+| conditional entropy | koşullu entropi | verified_d2l | conditional-entropy: The uncertainty remaining in one random variable after another is known. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L229) |
+| surprisal | şaşırtıcılık | verified_d2l | surprisal: The negative logarithm of the probability assigned to an outcome. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L151) |
+| effective sample size | etkin örneklem büyüklüğü | proposed | effective-sample-size: A measure of the amount of information in a weighted or dependent sample relative to independent samples. |  |
+| union bound | birleşim sınırı | verified_external | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L453) |
+| gamma function | gama fonksiyonu | proposed | gamma-function: A function extending the factorial to a broader domain. |  |
+| maximum entropy | maksimum entropi | proposed | maximum-entropy: A principle choosing the highest-entropy distribution subject to specified constraints. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L129) |
+| empirical distribution | ampirik dağılım | proposed | empirical-distribution: A distribution that assigns probability mass to observed sample values. |  |
 | confidence level | güven düzeyi | verified_d2l | confidence-level: The long-run coverage probability associated with a confidence interval procedure. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L342) |
-| statistical power | İstatistiksel Güç | verified_d2l | statistical-power: The probability that a statistical test rejects a false null hypothesis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L283) |
-| variance-preserving | Varyansı koruyan | proposed | variance-preserving: Describing a diffusion process designed to keep the marginal variance controlled. |  |
-| variance-exploding | Varyansı patlatan | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
-| classifier guidance | Sınıflandırıcı yönlendirmesi | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
-| classifier-free guidance | Sınıflandırıcısız yönlendirme | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
-| probability-flow ODE | Olasılık akışı diferansiyel denklemi | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
-| optimal transport | Optimal taşıma | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
+| statistical power | istatistiksel güç | verified_d2l | statistical-power: The probability that a statistical test rejects a false null hypothesis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L283) |
+| variance-preserving | varyansı koruyan | proposed | variance-preserving: Describing a diffusion process designed to keep the marginal variance controlled. |  |
+| variance-exploding | varyansı patlatan | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
+| classifier guidance | sınıflandırıcı kılavuzlaması | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
+| classifier-free guidance | sınıflandırıcısız kılavuzlama | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
+| probability-flow ODE | olasılık akışı diferansiyel denklemi | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
+| optimal transport | optimal taşıma | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
 | Wasserstein distance | Wasserstein uzaklığı | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
-| mode collapse | Mod çökmesi | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
-| conditional generation | Koşullu üretim | proposed | conditional-generation: Generating samples conditioned on specified information. |  |
-| image-to-image translation | Görüntüden görüntüye çeviri | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
-| cycle consistency | Döngü tutarlılığı | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
-| critic loss | Eleştirmen kaybı | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
-| KV cache | Anahtar-değer önbelleği | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
-| grouped-query attention | Gruplu sorgu dikkati | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
-| attention sink | Dikkat yutağı | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
-| transformer block | Dönüştürücü bloğu | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
-| residual stream | Artık akış | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
-| vision transformer | Görsel dönüştürücü | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
-| position interpolation | Konum enterpolasyonu | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
-| relative position | Göreli konum | proposed | relative-position: The displacement between positions in a sequence. |  |
-| prefill | Ön doldurma | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
-| decode | Kod çözme | proposed | decode: The stage of generating output tokens from a model one step at a time. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L140) |
-| time to first token | İlk belirtece kadar süre | proposed | time-to-first-token: The elapsed time from a generation request until its first output token. |  |
-| roofline | Çatı çizgisi | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
-| arithmetic intensity | Aritmetik yoğunluk | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
-| mixed precision | Karma hassasiyet | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
+| mode collapse | mod çökmesi | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
+| conditional generation | koşullu üretim | proposed | conditional-generation: Generating samples conditioned on specified information. |  |
+| image-to-image translation | görüntüden görüntüye çeviri | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
+| cycle consistency | döngü tutarlılığı | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
+| critic loss | eleştirmen kaybı | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
+| KV cache | KV önbelleği | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
+| grouped-query attention | gruplu sorgu dikkati | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
+| attention sink | dikkat yutağı | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
+| transformer block | transformer bloğu | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
+| residual stream | artık akış | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
+| vision transformer | görü Transformer'ı (ViT) | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
+| position interpolation | konum aradeğerlemesi | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
+| relative position | göreli konum | proposed | relative-position: The displacement between positions in a sequence. |  |
+| prefill | ön doldurma | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
+| decode | kod çözme | proposed | decode: The stage of generating output tokens from a model one step at a time. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L140) |
+| time to first token | ilk belirtece kadar süre | proposed | time-to-first-token: The elapsed time from a generation request until its first output token. |  |
+| roofline | çatı çizgisi | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
+| arithmetic intensity | aritmetik yoğunluk | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
+| mixed precision | karma hassasiyet | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
 | eager execution | anında yürütme | verified_external | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. | [google-ml-tr-tensorflow](https://developers.google.com/machine-learning/glossary/tensorflow?hl=tr#eager-execution) |
-| activation checkpointing | Aktivasyon kontrol noktası | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
-| data loader | Veri yükleyici | proposed | data-loader: A component that prepares and supplies batches of data to a training process. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L167) |
-| input pipeline | Girdi işlem hattı | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
-| stochastic depth | Stokastik derinlik | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | Küresel ortalama ortaklama | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L315) |
-| grouped convolution | Gruplu evrişim | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
-| exponential moving average | Üstel hareketli ortalama | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
-| inverted dropout | Ters seyreltme | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
-| He initialization | He başlatması | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
+| activation checkpointing | aktivasyon kontrol noktası | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
+| data loader | veri yükleyici | proposed | data-loader: A component that prepares and supplies batches of data to a training process. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L167) |
+| input pipeline | girdi işlem hattı | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
+| stochastic depth | stokastik derinlik | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
+| global average pooling | küresel ortalama ortaklama | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L315) |
+| grouped convolution | gruplu evrişim | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
+| exponential moving average | üstel hareketli ortalama | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
+| inverted dropout | ters seyreltme | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
+| He initialization | He ilklemesi | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
 | GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L423) |
-| generalization gap | Genelleme farkı | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
-| hypothesis class | Hipotez sınıfı | verified_external | hypothesis-class: The set of candidate functions or models considered by a learning method. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L231) |
-| uniform convergence | Düzgün yakınsama | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
+| generalization gap | genelleme farkı | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
+| hypothesis class | hipotez sınıfı | verified_external | hypothesis-class: The set of candidate functions or models considered by a learning method. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L231) |
+| uniform convergence | düzgün yakınsama | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
 | VC dimension | VC boyutu | verified_external | vc-dimension: A measure of the capacity of a class of binary classifiers. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L507) |
-| adaptive overfitting | Uyarlamalı aşırı öğrenme | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
-| interpolation threshold | İnterpolasyon eşiği | proposed | interpolation-threshold: A model-capacity threshold at which a model can fit the training data exactly. |  |
-| logit | Logit | proposed | logit: An unnormalized score used as an input to a probability transformation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L30) |
-| margin | Marj | verified_external | margin: A measure of separation between a prediction and a decision boundary or competing class. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L63) |
-| calibration | Kalibrasyon | proposed | calibration: Agreement between predicted probabilities and observed frequencies. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L61) |
-| softplus | Softplus | proposed | softplus: A smooth function commonly used as an approximation to the rectified linear unit. |  |
-| selective state space model | Seçici durum uzayı modeli | proposed | selective-state-space-model: A state space model whose parameters depend on the current input. |  |
-| linear recurrence | Doğrusal özyineleme | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
-| input-dependent | Girdiye bağlı | proposed | input-dependent: Describing a quantity whose value changes with the input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L313) |
-| selective scan | Seçici tarama | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
-| parallel scan | Paralel tarama | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
-| recurrent state | Yinelemeli durum | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
+| adaptive overfitting | uyarlamalı aşırı öğrenme | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
+| interpolation threshold | aradeğerleme eşiği | proposed | interpolation-threshold: A model-capacity threshold at which a model can fit the training data exactly. |  |
+| logit | logit | proposed | logit: An unnormalized score used as an input to a probability transformation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L30) |
+| margin | marj | verified_external | margin: A measure of separation between a prediction and a decision boundary or competing class. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L63) |
+| calibration | kalibrasyon | proposed | calibration: Agreement between predicted probabilities and observed frequencies. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L61) |
+| softplus | softplus | proposed | softplus: A smooth function commonly used as an approximation to the rectified linear unit. |  |
+| selective state space model | seçici durum uzayı modeli | proposed | selective-state-space-model: A state space model whose parameters depend on the current input. |  |
+| linear recurrence | doğrusal yineleme | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
+| input-dependent | girdiye bağlı | proposed | input-dependent: Describing a quantity whose value changes with the input. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L313) |
+| selective scan | seçici tarama | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
+| parallel scan | paralel tarama | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
+| recurrent state | yinelemeli durum | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
 | forget gate | unutma geçidi | verified_d2l | forget-gate: A gate that controls how much of a previous state is retained. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/lstm.md#L8) |
 | input gate | girdi geçidi | verified_d2l | input-gate: A gate that controls how much new information enters a recurrent state. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/lstm.md#L8) |
 | output gate | çıktı geçidi | verified_d2l | output-gate: A gate that controls how a recurrent state contributes to the output. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/lstm.md#L8) |
 | update gate | güncelleme geçidi | verified_d2l | update-gate: A gate that controls the blend of previous state and candidate state in a recurrent model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/gru.md#L18) |
 | reset gate | sıfırlama geçidi | verified_d2l | reset-gate: A gate that controls how previous state influences a candidate recurrent update. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/gru.md#L18) |
-| backpropagation through time | Zamanda Geri Yayma | verified_d2l | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-neural-networks/bptt.md#L1) |
-| truncated backpropagation through time | Kısaltılmış zamanda geri yayılım | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
-| sequence transduction | Dizi dönüşümü | proposed | sequence-transduction: The task of converting an input sequence into an output sequence. |  |
-| sequence modeling | Dizi modelleme | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. |  |
-| beam width | Işın genişliği | verified_external | beam-width: The number of candidate sequences retained at each step of beam search. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L530) |
-| greedy decoding | Açgözlü kod çözme | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
-| causal language model | Nedensel dil modeli | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
-| masked token | Maskeli belirteç | proposed | masked-token: A token hidden or replaced so a model must infer it from context. |  |
-| context length | Bağlam uzunluğu | proposed | context-length: The number of input tokens available to a sequence model. |  |
-| attention head | Dikkat başı | proposed | attention-head: One independently parameterized attention operation in multi-head attention. |  |
-| attention map | Dikkat haritası | proposed | attention-map: A matrix or array of attention weights between queries and keys. |  |
-| causal mask | Nedensel maske | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
-| router | Yönlendirici | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
-| load balancing | Yük dengeleme | proposed | load-balancing: Distributing work across resources or experts to avoid disproportionate assignment. |  |
-| capacity factor | Kapasite faktörü | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
-| scaling law | Ölçekleme yasası | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
-| compute-optimal | Hesaplama açısından en uygun | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
-| floating-point precision | Kayan nokta hassasiyeti | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
-| memory footprint | Bellek ayak izi | proposed | memory-footprint: The amount of memory occupied by data or a computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/channels.md#L156) |
-| memory hierarchy | Bellek hiyerarşisi | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
-| memory access | Bellek erişimi | proposed | memory-access: A read from or write to a memory location. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-scratch.md#L129) |
-| memory-bound | Bellek sınırlı | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
-| compute-bound | Hesaplama sınırlı | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
-| graph compilation | Graf derleme | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
-| just-in-time compilation | Tam zamanında derleme | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
-| asynchronous execution | Asenkron yürütme | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
-| synchronization | Eşzamanlama | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computational-performance/multiple-gpus-concise.md#L4) |
-| all-reduce | All-Reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
-| gradient accumulation | Gradyan biriktirme | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
-| pipeline parallelism | İşlem hattı paralelliği | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
-| tensor parallelism | Tensör paralelliği | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
-| checkpointing | Kontrol noktası alma | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
-| reproducibility | Yeniden üretilebilirlik | proposed | reproducibility: The ability to obtain consistent results when repeating an experiment under specified conditions. |  |
-| random number generator | Rastgele sayı üreteci | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
-| rounding error | Yuvarlama hatası | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
-| dynamic range | Dinamik aralık | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
-| training throughput | Eğitim iş hacmi | proposed | training-throughput: The amount of training work completed per unit time. |  |
-| soft actor-critic | Yumuşak aktör-eleştirmen | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
-| deep Q-network | Derin Q ağı | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
-| proximal policy optimization | Yakınsal politika optimizasyonu | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
-| trust region | Güven bölgesi | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
-| offline reinforcement learning | Çevrimdışı pekiştirmeli öğrenme | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
-| behavior cloning | Davranış klonlama | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
-| importance weight | Önem ağırlığı | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L152) |
-| advantage estimate | Avantaj tahmini | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |
-| generalized advantage estimation | Genelleştirilmiş avantaj tahmini | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
-| reward model | Ödül modeli | proposed | reward-model: A learned model that predicts a reward or preference signal. |  |
-| reward hacking | Ödül hilesi | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
-| planning horizon | Planlama ufku | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
+| backpropagation through time | zamanda geri yayılım | proposed | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. |  |
+| truncated backpropagation through time | kısaltılmış zamanda geri yayılım | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
+| sequence transduction | dizi dönüşümü | proposed | sequence-transduction: The task of converting an input sequence into an output sequence. |  |
+| sequence modeling | dizi modelleme | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. |  |
+| beam width | ışın genişliği | verified_external | beam-width: The number of candidate sequences retained at each step of beam search. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L530) |
+| greedy decoding | açgözlü kod çözme | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
+| causal language model | nedensel dil modeli | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
+| masked token | maskeli belirteç | proposed | masked-token: A token hidden or replaced so a model must infer it from context. |  |
+| context length | bağlam uzunluğu | proposed | context-length: The number of input tokens available to a sequence model. |  |
+| attention head | dikkat başı | proposed | attention-head: One independently parameterized attention operation in multi-head attention. |  |
+| attention map | dikkat haritası | proposed | attention-map: A matrix or array of attention weights between queries and keys. |  |
+| causal mask | nedensel maske | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
+| router | yönlendirici | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
+| load balancing | yük dengeleme | proposed | load-balancing: Distributing work across resources or experts to avoid disproportionate assignment. |  |
+| capacity factor | kapasite faktörü | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
+| scaling law | ölçekleme yasası | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
+| compute-optimal | hesaplama açısından en uygun | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
+| floating-point precision | kayan nokta hassasiyeti | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
+| memory footprint | bellek ayak izi | proposed | memory-footprint: The amount of memory occupied by data or a computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/channels.md#L156) |
+| memory hierarchy | bellek hiyerarşisi | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
+| memory access | bellek erişimi | proposed | memory-access: A read from or write to a memory location. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-scratch.md#L129) |
+| memory-bound | bellek sınırlı | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
+| compute-bound | hesaplama sınırlı | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
+| graph compilation | graf derleme | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
+| just-in-time compilation | tam zamanında derleme | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
+| asynchronous execution | asenkron yürütme | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
+| synchronization | eşzamanlama | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computational-performance/multiple-gpus-concise.md#L4) |
+| all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
+| gradient accumulation | gradyan biriktirme | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
+| pipeline parallelism | işlem hattı paralelliği | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
+| tensor parallelism | tensör paralelliği | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
+| checkpointing | kontrol noktası alma | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
+| reproducibility | yeniden üretilebilirlik | proposed | reproducibility: The ability to obtain consistent results when repeating an experiment under specified conditions. |  |
+| random number generator | rastgele sayı üreteci | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
+| rounding error | yuvarlama hatası | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
+| dynamic range | dinamik aralık | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
+| training throughput | eğitim iş hacmi | proposed | training-throughput: The amount of training work completed per unit time. |  |
+| soft actor-critic | yumuşak aktör-eleştirmen | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
+| deep Q-network | derin Q ağı | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
+| proximal policy optimization | yakınsal politika optimizasyonu | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
+| trust region | güven bölgesi | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
+| offline reinforcement learning | çevrimdışı pekiştirmeli öğrenme | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
+| behavior cloning | davranış klonlama | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
+| importance weight | önem ağırlığı | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L152) |
+| advantage estimate | avantaj tahmini | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |
+| generalized advantage estimation | genelleştirilmiş avantaj tahmini | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
+| reward model | ödül modeli | proposed | reward-model: A learned model that predicts a reward or preference signal. |  |
+| reward hacking | ödül hilesi | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
+| planning horizon | planlama ufku | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | Bellman operatörü | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
-| bootstrapping | Önyükleme | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
+| bootstrapping | özyükleme | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
 | Monte Carlo return | Monte Carlo getirisi | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
-| terminal reward | Son ödül | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
-| exploration bonus | Keşif bonusu | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
-| upper confidence bound | Üst güven sınırı | proposed | upper-confidence-bound: A decision criterion combining an estimate with an uncertainty-based optimism term. |  |
-| random vector | Rastgele vektör | proposed | random-vector: A vector whose components are random variables. |  |
-| multivariate Gaussian | Çok değişkenli Gauss dağılımı | proposed | multivariate-gaussian: A Gaussian probability distribution over vectors. |  |
-| positive semidefinite | Pozitif yarı tanımlı | proposed | positive-semidefinite: Having a nonnegative quadratic form for every vector. |  |
-| positive definite matrix | Pozitif tanımlı matris | proposed | positive-definite-matrix: A symmetric matrix with a strictly positive quadratic form for every nonzero vector. |  |
-| symmetric matrix | Simetrik matris | proposed | symmetric-matrix: A matrix equal to its transpose. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L228) |
-| diagonal matrix | Köşegen matris | verified_external | diagonal-matrix: A matrix whose entries outside the main diagonal are zero. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L57) |
-| orthogonal matrix | dikgen (ortogonal) matris | verified_d2l | orthogonal-matrix: A square matrix whose columns form an orthonormal set. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L186) |
-| unit vector | Birim vektör | proposed | unit-vector: A vector whose norm equals one. |  |
-| vector space | Vektör uzayı | proposed | vector-space: A set of vectors closed under addition and scalar multiplication. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L201) |
-| subspace | Alt uzay | proposed | subspace: A subset that is itself a vector space under the inherited operations. |  |
-| inner product | İç çarpım | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L32) |
-| outer product | Dış çarpım | proposed | outer-product: A matrix formed by multiplying each component of one vector by each component of another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L93) |
-| quadratic form | Karesel biçim | proposed | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. |  |
-| quadratic function | Karesel fonksiyon | proposed | quadratic-function: A function containing terms of degree at most two. |  |
-| linear system | Doğrusal sistem | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
-| least squares | En küçük kareler | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L75) |
-| residual | Artık | verified_external | residual: The difference between an observed value and its fitted or predicted value. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L84) |
-| ill-conditioned | Kötü koşullu | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/momentum.md#L30) |
-| singular matrix | Tekil matris | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
-| invertible matrix | Tersinir matris | proposed | invertible-matrix: A square matrix with an inverse. |  |
-| pseudoinverse | Sözde ters | proposed | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. |  |
-| orthonormal basis | Ortonormal baz | proposed | orthonormal-basis: A basis whose vectors have unit norm and are mutually orthogonal. |  |
-| basis vector | Baz vektörü | proposed | basis-vector: A vector belonging to a basis of a vector space. |  |
-| eigendecomposition | Özayrışım | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. |  |
-| singular value | Tekil değer | proposed | singular-value: A nonnegative scaling factor in a matrix's singular value decomposition. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L182) |
-| left singular vector | Sol tekil vektör | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
-| right singular vector | Sağ tekil vektör | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
-| low-rank approximation | Düşük rütbeli yaklaşım | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
-| orthogonal projection | Dik izdüşüm | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
+| terminal reward | terminal ödül | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
+| exploration bonus | keşif bonusu | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
+| upper confidence bound | üst güven sınırı | proposed | upper-confidence-bound: A decision criterion combining an estimate with an uncertainty-based optimism term. |  |
+| random vector | rastgele vektör | proposed | random-vector: A vector whose components are random variables. |  |
+| multivariate Gaussian | çok değişkenli Gauss dağılımı | proposed | multivariate-gaussian: A Gaussian probability distribution over vectors. |  |
+| positive semidefinite | pozitif yarı tanımlı | proposed | positive-semidefinite: Having a nonnegative quadratic form for every vector. |  |
+| positive definite matrix | pozitif tanımlı matris | proposed | positive-definite-matrix: A symmetric matrix with a strictly positive quadratic form for every nonzero vector. |  |
+| symmetric matrix | simetrik matris | proposed | symmetric-matrix: A matrix equal to its transpose. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L228) |
+| diagonal matrix | köşegen matris | verified_external | diagonal-matrix: A matrix whose entries outside the main diagonal are zero. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L57) |
+| orthogonal matrix | ortogonal matris | proposed | orthogonal-matrix: A square matrix whose columns form an orthonormal set. |  |
+| unit vector | birim vektör | proposed | unit-vector: A vector whose norm equals one. |  |
+| vector space | vektör uzayı | proposed | vector-space: A set of vectors closed under addition and scalar multiplication. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L201) |
+| subspace | alt uzay | proposed | subspace: A subset that is itself a vector space under the inherited operations. |  |
+| inner product | iç çarpım | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L32) |
+| outer product | dış çarpım | proposed | outer-product: A matrix formed by multiplying each component of one vector by each component of another. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-linear-algebra.md#L93) |
+| quadratic form | karesel biçim | proposed | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. |  |
+| quadratic function | karesel fonksiyon | proposed | quadratic-function: A function containing terms of degree at most two. |  |
+| linear system | doğrusal sistem | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
+| least squares | en küçük kareler | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L75) |
+| residual | artık | verified_external | residual: The difference between an observed value and its fitted or predicted value. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L84) |
+| ill-conditioned | kötü koşullu | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/momentum.md#L30) |
+| singular matrix | tekil matris | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
+| invertible matrix | tersinir matris | proposed | invertible-matrix: A square matrix with an inverse. |  |
+| pseudoinverse | sözde ters | proposed | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. |  |
+| orthonormal basis | ortonormal baz | proposed | orthonormal-basis: A basis whose vectors have unit norm and are mutually orthogonal. |  |
+| basis vector | baz vektörü | proposed | basis-vector: A vector belonging to a basis of a vector space. |  |
+| eigendecomposition | özayrışım | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. |  |
+| singular value | tekil değer | proposed | singular-value: A nonnegative scaling factor in a matrix's singular value decomposition. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L182) |
+| left singular vector | sol tekil vektör | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
+| right singular vector | sağ tekil vektör | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
+| low-rank approximation | düşük kerteli yaklaşıklama | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
+| orthogonal projection | dik izdüşüm | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
 | Euclidean norm | Öklid normu | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
 | Frobenius norm | Frobenius normu | proposed | frobenius-norm: The square root of the sum of squares of all matrix entries. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/backprop.md#L36) |
-| operator norm | Operatör normu | proposed | operator-norm: The maximum factor by which a linear operator can stretch vectors under chosen norms. |  |
-| triangle inequality | Üçgen eşitsizliği | proposed | triangle-inequality: An inequality stating that the size of a sum is at most the sum of the sizes of its parts. |  |
+| operator norm | operatör normu | proposed | operator-norm: The maximum factor by which a linear operator can stretch vectors under chosen norms. |  |
+| triangle inequality | üçgen eşitsizliği | proposed | triangle-inequality: An inequality stating that the size of a sum is at most the sum of the sizes of its parts. |  |
 | Kronecker product | Kronecker çarpımı | proposed | kronecker-product: A matrix product forming blocks by multiplying one matrix's entries by another matrix. |  |
 | Hadamard product | Hadamard çarpımı | proposed | hadamard-product: The elementwise product of two arrays of the same shape. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/linear-algebra.md#L324) |
-| bilinear form | İki doğrusal biçim | proposed | bilinear-form: A scalar-valued function that is linear in each of two arguments separately. |  |
-| affine transformation | Afin dönüşüm | proposed | affine-transformation: A linear transformation followed by a translation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/batch-norm.md#L12) |
+| bilinear form | çift doğrusal biçim | proposed | bilinear-form: A scalar-valued function that is linear in each of two arguments separately. |  |
+| affine transformation | afin dönüşüm | proposed | affine-transformation: A linear transformation followed by a translation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/batch-norm.md#L12) |
 | Hessian-vector product | Hessian-vektör çarpımı | proposed | hessian-vector-product: The product of a Hessian matrix with a vector, often computed without forming the full matrix. |  |
-| directional derivative | Yönlü türev | proposed | directional-derivative: The rate of change of a function in a specified direction. |  |
-| total derivative | Toplam türev | proposed | total-derivative: The derivative accounting for dependence through all relevant variables. |  |
-| second derivative | İkinci türev | proposed | second-derivative: The derivative of a first derivative, measuring how a slope changes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/conv-layer.md#L302) |
-| initial condition | Başlangıç koşulu | proposed | initial-condition: A value specified at the starting point of a differential equation or recurrence. |  |
-| boundary condition | Sınır koşulu | proposed | boundary-condition: A constraint on a solution at the boundary of its domain. |  |
-| numerical integration | Sayısal integrasyon | proposed | numerical-integration: Approximation of an integral using numerical computations. |  |
+| directional derivative | yönlü türev | proposed | directional-derivative: The rate of change of a function in a specified direction. |  |
+| total derivative | toplam türev | proposed | total-derivative: The derivative accounting for dependence through all relevant variables. |  |
+| second derivative | ikinci türev | proposed | second-derivative: The derivative of a first derivative, measuring how a slope changes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/conv-layer.md#L302) |
+| initial condition | başlangıç koşulu | proposed | initial-condition: A value specified at the starting point of a differential equation or recurrence. |  |
+| boundary condition | sınır koşulu | proposed | boundary-condition: A constraint on a solution at the boundary of its domain. |  |
+| numerical integration | sayısal integrasyon | proposed | numerical-integration: Approximation of an integral using numerical computations. |  |
 | Riemann sum | Riemann toplamı | proposed | riemann-sum: A sum approximating an integral by adding contributions from subintervals. |  |
-| indefinite integral | Belirsiz integral | proposed | indefinite-integral: A family of antiderivatives of a function. |  |
-| definite integral | Belirli integral | proposed | definite-integral: An integral over a specified domain, representing accumulated quantity. |  |
-| integration by parts | Kısmi integrasyon | proposed | integration-by-parts: An integration rule derived from the product rule for derivatives. |  |
-| fundamental theorem of calculus | Analizin temel teoremi | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
-| implicit differentiation | Örtük türev alma | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
+| indefinite integral | belirsiz integral | proposed | indefinite-integral: A family of antiderivatives of a function. |  |
+| definite integral | belirli integral | proposed | definite-integral: An integral over a specified domain, representing accumulated quantity. |  |
+| integration by parts | kısmi integrasyon | proposed | integration-by-parts: An integration rule derived from the product rule for derivatives. |  |
+| fundamental theorem of calculus | analizin temel teoremi | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
+| implicit differentiation | örtük türev alma | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
 | Lipschitz constant | Lipschitz sabiti | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
 | Lipschitz continuous | Lipschitz sürekli | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-neural-networks/rnn-scratch.md#L381) |
-| convex combination | Dışbükey birleşim | proposed | convex-combination: A weighted sum with nonnegative weights that sum to one. |  |
-| Jensen's inequality | Jensen'ın Eşitsizliği | verified_d2l | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L81) |
-| first-order condition | Birinci mertebe koşulu | proposed | first-order-condition: A condition on first derivatives used to characterize candidate optima. |  |
-| second-order condition | İkinci mertebe koşulu | proposed | second-order-condition: A condition involving second derivatives used to characterize candidate optima. |  |
-| feasible point | Uygun nokta | proposed | feasible-point: A point satisfying all constraints of an optimization problem. |  |
-| probability simplex | Olasılık simpleksi | proposed | probability-simplex: The set of nonnegative vectors whose components sum to one. |  |
-| stochastic process | Stokastik süreç | proposed | stochastic-process: A collection of random variables indexed by time or another parameter. |  |
-| conditional independence | 35. Koşullu bağımsızlık | verified_external | conditional-independence: Independence of variables after conditioning on another variable or set of variables. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-variables-models.md#L245) |
-| posterior mean | Sonsal ortalama | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
-| posterior variance | Sonsal varyans | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
-| independent samples | Bağımsız örneklemler | proposed | independent-samples: Samples whose values do not provide information about each other under the model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L82) |
-| identically distributed | Özdeş dağılımlı | proposed | identically-distributed: Having the same probability distribution. |  |
-| random sample | Rastgele örnek | verified_external | random-sample: A collection of observations drawn according to a sampling procedure. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L279) |
-| sample mean | Örnek ortalaması | verified_external | sample-mean: The arithmetic average of observed sample values. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L309) |
-| sample variance | Örnek varyansı | verified_external | sample-variance: A statistic measuring dispersion of observed values around their sample mean. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-probability.md#L333) |
-| population mean | Anakütle ortalaması | proposed | population-mean: The expected value of a variable in the population under study. |  |
-| sampling error | Örnekleme hatası | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
-| estimator variance | Tahmin edici varyansı | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
-| unbiased estimator | Yansız tahmin edici | proposed | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. |  |
-| consistent estimator | Tutarlı tahmin edici | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
-| maximum likelihood estimator | Maksimum ihtimal tahmini | verified_external | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-deep-learning.md#L273) |
-| test statistic | Test İstatistiği | verified_d2l | test-statistic: A quantity computed from data and used by a statistical test. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L297) |
+| convex combination | dışbükey kombinasyon | proposed | convex-combination: A weighted sum with nonnegative weights that sum to one. |  |
+| Jensen's inequality | Jensen eşitsizliği | proposed | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. |  |
+| first-order condition | birinci mertebe koşulu | proposed | first-order-condition: A condition on first derivatives used to characterize candidate optima. |  |
+| second-order condition | ikinci mertebe koşulu | proposed | second-order-condition: A condition involving second derivatives used to characterize candidate optima. |  |
+| feasible point | olurlu nokta | proposed | feasible-point: A point satisfying all constraints of an optimization problem. |  |
+| probability simplex | olasılık simpleksi | proposed | probability-simplex: The set of nonnegative vectors whose components sum to one. |  |
+| stochastic process | stokastik süreç | proposed | stochastic-process: A collection of random variables indexed by time or another parameter. |  |
+| conditional independence | koşullu bağımsızlık | verified_external | conditional-independence: Independence of variables after conditioning on another variable or set of variables. | amidi-tr-teaching: page |
+| posterior mean | sonsal ortalama | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
+| posterior variance | sonsal varyans | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
+| independent samples | bağımsız örneklemler | proposed | independent-samples: Samples whose values do not provide information about each other under the model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L82) |
+| identically distributed | özdeş dağılımlı | proposed | identically-distributed: Having the same probability distribution. |  |
+| random sample | rastgele örneklem | proposed | random-sample: A collection of observations drawn according to a sampling procedure. |  |
+| sample mean | örneklem ortalaması | proposed | sample-mean: The arithmetic average of observed sample values. |  |
+| sample variance | örneklem varyansı | proposed | sample-variance: A statistic measuring dispersion of observed values around their sample mean. |  |
+| population mean | anakütle ortalaması | proposed | population-mean: The expected value of a variable in the population under study. |  |
+| sampling error | örnekleme hatası | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
+| estimator variance | tahmin edici varyansı | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
+| unbiased estimator | yansız tahmin edici | proposed | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. |  |
+| consistent estimator | tutarlı tahmin edici | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
+| maximum likelihood estimator | maksimum olabilirlik tahmin edicisi | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
+| test statistic | test istatistiği | verified_d2l | test-statistic: A quantity computed from data and used by a statistical test. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L297) |
 | type I error | 1. tür hata | verified_d2l | type-i-error: Rejecting a true null hypothesis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L276) |
 | type II error | 2. tür hata | verified_d2l | type-ii-error: Failing to reject a false null hypothesis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L289) |
 | Monte Carlo estimate | Monte Carlo tahmini | proposed | monte-carlo-estimate: An estimate computed using randomly sampled quantities. |  |
-| proposal distribution | Öneri dağılımı | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
-| rejection sampling | Ret örneklemesi | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
-| Gibbs sampling | 30. [Gibbs örneklemesi | verified_external | gibbs-sampling: A Markov chain Monte Carlo method that repeatedly samples conditional distributions. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-variables-models.md#L210) |
-| variational objective | Varyasyonel amaç | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
-| marginal likelihood | Marjinal olabilirlik | proposed | marginal-likelihood: The probability or density of observed data after integrating out latent variables or parameters. |  |
-| entropy rate | Entropi oranı | proposed | entropy-rate: The rate at which a stochastic process produces uncertainty or information. |  |
-| conditional mutual information | Koşullu karşılıklı bilgi | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
-| data processing inequality | Veri işleme eşitsizliği | proposed | data-processing-inequality: A bound stating that processing cannot increase information about an original variable under a Markov relationship. |  |
-| relative entropy | göreceli entropi | verified_d2l | relative-entropy: Another name for Kullback-Leibler divergence between distributions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L389) |
+| proposal distribution | öneri dağılımı | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
+| rejection sampling | ret örneklemesi | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
+| Gibbs sampling | Gibbs örneklemesi | verified_external | gibbs-sampling: A Markov chain Monte Carlo method that repeatedly samples conditional distributions. | amidi-tr-teaching: page |
+| variational objective | varyasyonel amaç | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
+| marginal likelihood | marjinal olabilirlik | proposed | marginal-likelihood: The probability or density of observed data after integrating out latent variables or parameters. |  |
+| entropy rate | entropi oranı | proposed | entropy-rate: The rate at which a stochastic process produces uncertainty or information. |  |
+| conditional mutual information | koşullu karşılıklı bilgi | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
+| data processing inequality | veri işleme eşitsizliği | proposed | data-processing-inequality: A bound stating that processing cannot increase information about an original variable under a Markov relationship. |  |
+| relative entropy | göreli entropi | proposed | relative-entropy: Another name for Kullback-Leibler divergence between distributions. |  |
 | Gaussian path | Gauss yolu | proposed | gaussian-path: A family of noisy distributions formed by combining a scaled data point with Gaussian noise. |  |
-| log-SNR | Log-SNR | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
-| conditional velocity | Koşullu hız | proposed | conditional-velocity: The velocity of an individual noisy path conditioned on its clean data point. |  |
-| marginal velocity | Marjinal hız | proposed | marginal-velocity: The average path velocity conditioned on a point at a given time. |  |
-| conditional flow matching | Koşullu akış eşleştirme | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
-| simple loss | Basit kayıp | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
-| flow map | Akış haritası | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
-| average velocity | Ortalama hız | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
-| consistency model | Tutarlılık modeli | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
-| consistency distillation | Tutarlılık damıtma | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
-| adaptive layer norm | Uyarlamalı katman normu | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
+| log-SNR | log-SNR | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
+| conditional velocity | koşullu hız | proposed | conditional-velocity: The velocity of an individual noisy path conditioned on its clean data point. |  |
+| marginal velocity | marjinal hız | proposed | marginal-velocity: The average path velocity conditioned on a point at a given time. |  |
+| conditional flow matching | koşullu akış eşleştirme | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
+| simple loss | basit kayıp | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
+| flow map | akış haritası | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
+| average velocity | ortalama hız | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
+| consistency model | tutarlılık modeli | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
+| consistency distillation | tutarlılık damıtımı | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
+| adaptive layer norm | uyarlamalı katman normu | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
 | adaLN-Zero | AdaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
-| modelability | Modellenebilirlik | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
-| forward posterior | İleri sonsal dağılım | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
+| modelability | modellenebilirlik | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
+| forward posterior | ileri sonsal dağılım | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
 | binary classification | ikili sınıflandırma | verified_external | binary-classification: The task of assigning each input to one of two classes. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#binary-classification) |
-| multiclass classification | Çok sınıflı sınıflandırma | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L454) |
-| multi-label classification | Çok etiketli sınıflandırma | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
-| binary cross-entropy | İkili çapraz entropi | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec-pretraining.md#L96) |
-| softmax regression | Eşiksiz En Büyük İşlev Bağlanımı (Softmaks Regresyon) | verified_d2l | softmax-regression: A classification model that applies softmax to linear class scores. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L1) |
-| logistic loss | Lojistik kayıp | proposed | logistic-loss: A loss derived from the logistic model for classification. |  |
-| decision boundary | Karar sınırı | proposed | decision-boundary: A boundary separating regions assigned different predictions by a classifier. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L51) |
-| true positive | Doğru pozitif | proposed | true-positive: A positive example correctly classified as positive. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L75) |
+| multiclass classification | çok sınıflı sınıflandırma | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L454) |
+| multi-label classification | çok etiketli sınıflandırma | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
+| binary cross-entropy | ikili çapraz entropi | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec-pretraining.md#L96) |
+| softmax regression | softmax regresyonu | proposed | softmax-regression: A classification model that applies softmax to linear class scores. |  |
+| logistic loss | lojistik kayıp | proposed | logistic-loss: A loss derived from the logistic model for classification. |  |
+| decision boundary | karar sınırı | proposed | decision-boundary: A boundary separating regions assigned different predictions by a classifier. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L51) |
+| true positive | doğru pozitif | proposed | true-positive: A positive example correctly classified as positive. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L75) |
 | false positive | yanlış pozitif | verified_d2l | false-positive: A negative example incorrectly classified as positive. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/statistics.md#L276) |
-| true negative | Doğru negatif | proposed | true-negative: A negative example correctly classified as negative. |  |
-| false negative | Yanlış negatif | proposed | false-negative: A positive example incorrectly classified as negative. |  |
+| true negative | doğru negatif | proposed | true-negative: A negative example correctly classified as negative. |  |
+| false negative | yanlış negatif | proposed | false-negative: A positive example incorrectly classified as negative. |  |
 | F1 score | F1 puanı | proposed | f1-score: The harmonic mean of precision and recall. |  |
-| receiver operating characteristic | Alıcı işletim karakteristiği | proposed | receiver-operating-characteristic: A curve showing true-positive rate against false-positive rate across thresholds. |  |
-| area under the curve | Eğri altında kalan alan | proposed | area-under-the-curve: A scalar summary obtained by integrating a performance curve. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L87) |
-| class probability | Sınıf olasılığı | proposed | class-probability: The probability assigned to a class for an input. |  |
-| class label | Sınıf etiketi | proposed | class-label: A category used as the target for a classification example. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/fm.md#L7) |
-| class imbalance | Sınıf dengesizliği | proposed | class-imbalance: Unequal representation of classes in a dataset. |  |
+| receiver operating characteristic | alıcı işletim karakteristiği | proposed | receiver-operating-characteristic: A curve showing true-positive rate against false-positive rate across thresholds. |  |
+| area under the curve | eğri altında kalan alan | proposed | area-under-the-curve: A scalar summary obtained by integrating a performance curve. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L87) |
+| class probability | sınıf olasılığı | proposed | class-probability: The probability assigned to a class for an input. |  |
+| class label | sınıf etiketi | proposed | class-label: A category used as the target for a classification example. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/fm.md#L7) |
+| class imbalance | sınıf dengesizliği | proposed | class-imbalance: Unequal representation of classes in a dataset. |  |
 | positive class | pozitif sınıf | verified_external | positive-class: The class treated as positive when evaluating a binary classification problem. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#positive-class) |
 | negative class | negatif sınıf | verified_external | negative-class: The class treated as negative when evaluating a binary classification problem. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#negative-class) |
 | training loss | eğitim kaybı | verified_external | training-loss: The loss measured on training examples. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#training-loss) |
 | validation loss | doğrulama kaybı | verified_external | validation-loss: The loss measured on validation examples. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#validation-loss) |
-| test error | Test hatası | proposed | test-error: The prediction error measured on a held-out test set. |  |
-| training error | Eğitim hatası | verified_external | training-error: The prediction error measured on the training set. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L471) |
-| population risk | Anakütle riski | proposed | population-risk: Expected loss under the population data distribution. |  |
-| generalization error | Genelleme hatası | proposed | generalization-error: The expected prediction error on examples from a target distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L15) |
-| regularization strength | Düzenlileştirme gücü | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
+| test error | test hatası | proposed | test-error: The prediction error measured on a held-out test set. |  |
+| training error | eğitim hatası | verified_external | training-error: The prediction error measured on the training set. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L471) |
+| population risk | anakütle riski | proposed | population-risk: Expected loss under the population data distribution. |  |
+| generalization error | genelleme hatası | proposed | generalization-error: The expected prediction error on examples from a target distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L15) |
+| regularization strength | düzenlileştirme gücü | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
 | model capacity | model kapasitesi | verified_external | model-capacity: The expressive or fitting ability of a model class. | [google-ml-tr-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=tr#model-capacity) |
-| model complexity | Model Karmaşıklığı | verified_d2l | model-complexity: A measure of the flexibility or structural richness of a model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L44) |
-| regularization path | Düzenlileştirme yolu | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
-| learning curve | Öğrenme eğrisi | proposed | learning-curve: A plot of model performance or loss as training or data size changes. |  |
-| double descent | Çift iniş | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
-| validation error | Doğrulama hatası | proposed | validation-error: The prediction error measured on validation data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L189) |
-| held-out data | Ayrılmış veri | proposed | held-out-data: Data set aside from fitting for evaluation or model selection. |  |
-| covariate shift | Ortak Değişken Kayması | verified_d2l | covariate-shift: A change in the distribution of inputs while the conditional target distribution is assumed unchanged. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L21) |
-| label shift | Etiket Kayması | verified_d2l | label-shift: A change in class proportions under an assumption of stable class-conditional input distributions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L37) |
-| concept drift | Kavram kayması | proposed | concept-drift: A change over time in the relationship between inputs and targets or in the data-generating process. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L42) |
-| in-distribution | Dağılım içi | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
+| model complexity | model karmaşıklığı | verified_d2l | model-complexity: A measure of the flexibility or structural richness of a model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L44) |
+| regularization path | düzenlileştirme yolu | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
+| learning curve | öğrenme eğrisi | proposed | learning-curve: A plot of model performance or loss as training or data size changes. |  |
+| double descent | çift iniş | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
+| validation error | doğrulama hatası | proposed | validation-error: The prediction error measured on validation data. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-machine-learning-tips-and-tricks.md#L189) |
+| held-out data | ayrılmış veri | proposed | held-out-data: Data set aside from fitting for evaluation or model selection. |  |
+| covariate shift | ortak değişken kayması | verified_d2l | covariate-shift: A change in the distribution of inputs while the conditional target distribution is assumed unchanged. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L21) |
+| label shift | etiket kayması | verified_d2l | label-shift: A change in class proportions under an assumption of stable class-conditional input distributions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L37) |
+| concept drift | kavram kayması | proposed | concept-drift: A change over time in the relationship between inputs and targets or in the data-generating process. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L42) |
+| in-distribution | dağılım içi | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
 | Bayes error | Bayes hatası | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
-| regression target | Regresyon hedefi | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
-| feature vector | Öznitelik vektörü | verified_external | feature-vector: A vector containing the input features of an example. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L28) |
-| target variable | Hedef değişken | proposed | target-variable: The quantity a model is intended to predict. |  |
-| intercept | kesim noktası | verified_d2l | intercept: The additive constant in a regression or other linear model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L24) |
-| coefficient | Katsayı | proposed | coefficient: A numerical factor multiplying a variable or term. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/rmsprop.md#L165) |
-| least-squares regression | En küçük kareler regresyonu | proposed | least-squares-regression: A regression method that minimizes squared residuals. |  |
-| linear predictor | Doğrusal tahminci | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
-| closed-form solution | Kapalı biçimli çözüm | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. |  |
-| log odds | Log-odds | proposed | log-odds: The logarithm of the ratio of an event's probability to the probability of its complement. |  |
-| odds ratio | Odds oranı | proposed | odds-ratio: A ratio comparing the odds of an event under two conditions. |  |
-| independent variable | Bağımsız değişken | proposed | independent-variable: A variable treated as an input or explanatory quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L4) |
-| noise variance | Gürültü varyansı | proposed | noise-variance: The variance of the random perturbation in a model. |  |
-| heteroscedastic | Değişen varyanslı | proposed | heteroscedastic: Describing noise whose variance varies across observations or inputs. |  |
+| regression target | regresyon hedefi | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
+| feature vector | öznitelik vektörü | verified_external | feature-vector: A vector containing the input features of an example. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-reflex-models.md#L28) |
+| target variable | hedef değişken | proposed | target-variable: The quantity a model is intended to predict. |  |
+| intercept | sabit terim | proposed | intercept: The additive constant in a regression or other linear model. |  |
+| coefficient | katsayı | proposed | coefficient: A numerical factor multiplying a variable or term. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/rmsprop.md#L165) |
+| least-squares regression | en küçük kareler regresyonu | proposed | least-squares-regression: A regression method that minimizes squared residuals. |  |
+| linear predictor | doğrusal tahminci | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
+| closed-form solution | kapalı biçimli çözüm | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. |  |
+| log odds | log-odds | proposed | log-odds: The logarithm of the ratio of an event's probability to the probability of its complement. |  |
+| odds ratio | odds oranı | proposed | odds-ratio: A ratio comparing the odds of an event under two conditions. |  |
+| independent variable | bağımsız değişken | proposed | independent-variable: A variable treated as an input or explanatory quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L4) |
+| noise variance | gürültü varyansı | proposed | noise-variance: The variance of the random perturbation in a model. |  |
+| heteroscedastic | değişen varyanslı | proposed | heteroscedastic: Describing noise whose variance varies across observations or inputs. |  |
 | mean absolute error | ortalama mutlak hata | verified_d2l | mean-absolute-error: The average absolute difference between predictions and targets. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/ssd.md#L392) |
-| root mean squared error | Kök ortalama kare hata | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
-| classification loss | Sınıflandırma kaybı | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
-| hinge loss | Menteşe yitimi | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L279) |
-| squared loss | kare kaybı | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [google-ml-tr-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=tr#squared-loss) |
+| root mean squared error | kök ortalama karesel hata | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
+| classification loss | sınıflandırma kaybı | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
+| hinge loss | menteşe kaybı | proposed | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. |  |
+| squared loss | karesel kayıp | proposed | squared-loss: A loss proportional to the square of a prediction error. |  |
 | Huber loss | Huber kaybı | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
-| regularized objective | Düzenlileştirilmiş amaç | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
-| random initialization | Rastgele başlatma | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
-| gradient norm | Gradyan normu | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
-| leaky ReLU | Sızıntılı ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_generative-adversarial-networks/dcgan.md#L308) |
-| hyperbolic tangent | Hiperbolik tanjant | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp.md#L218) |
-| fully connected layer | Tam bağlı katman | proposed | fully-connected-layer: A layer in which each output unit receives a learned connection from every input unit. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L50) |
-| hidden unit | Gizli birim | proposed | hidden-unit: A computational unit in a network layer between input and output. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp-scratch.md#L33) |
-| network depth | Ağ derinliği | proposed | network-depth: The number of successive computational layers in a network. |  |
-| network width | Ağ genişliği | proposed | network-width: The number of units or features in a network layer. |  |
-| training dynamics | Eğitim dinamikleri | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
-| parameter update | Parametre güncellemesi | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
-| optimizer state | Optimizasyon durum | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
-| minibatch gradient | Mini yığın gradyanı | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
-| full gradient | Tam gradyan | proposed | full-gradient: The gradient of an objective computed over the full dataset. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/minibatch-sgd.md#L177) |
-| gradient noise | Gradyan gürültüsü | proposed | gradient-noise: The deviation of a stochastic gradient estimate from the full gradient. |  |
-| stochastic approximation | Stokastik yaklaştırma | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
-| training iteration | Eğitim yinelemesi | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L46) |
-| exponential decay | Üstel azalma | proposed | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. |  |
-| decoupled weight decay | Ayrık ağırlık çürümesi | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
-| second moment | İkinci moment | proposed | second-moment: The expectation or average of the square of a quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L143) |
-| first moment | Birinci moment | proposed | first-moment: The expectation or average of a quantity. |  |
-| bias correction | Yanlılık düzeltmesi | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
+| regularized objective | düzenlileştirilmiş amaç | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
+| random initialization | rastgele ilkleme | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
+| gradient norm | gradyan normu | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
+| leaky ReLU | sızıntılı ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_generative-adversarial-networks/dcgan.md#L308) |
+| hyperbolic tangent | hiperbolik tanjant | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp.md#L218) |
+| fully connected layer | tam bağlı katman | proposed | fully-connected-layer: A layer in which each output unit receives a learned connection from every input unit. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L50) |
+| hidden unit | gizli birim | proposed | hidden-unit: A computational unit in a network layer between input and output. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/mlp-scratch.md#L33) |
+| network depth | ağ derinliği | proposed | network-depth: The number of successive computational layers in a network. |  |
+| network width | ağ genişliği | proposed | network-width: The number of units or features in a network layer. |  |
+| training dynamics | eğitim dinamikleri | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
+| parameter update | parametre güncellemesi | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
+| optimizer state | optimize edici durumu | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
+| minibatch gradient | mini yığın gradyanı | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
+| full gradient | tam gradyan | proposed | full-gradient: The gradient of an objective computed over the full dataset. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/minibatch-sgd.md#L177) |
+| gradient noise | gradyan gürültüsü | proposed | gradient-noise: The deviation of a stochastic gradient estimate from the full gradient. |  |
+| stochastic approximation | stokastik yaklaşıklama | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
+| training iteration | eğitim yinelemesi | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/underfit-overfit.md#L46) |
+| exponential decay | üstel azalma | proposed | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. |  |
+| decoupled weight decay | ayrıştırılmış ağırlık sönümü | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
+| second moment | ikinci moment | proposed | second-moment: The expectation or average of the square of a quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L143) |
+| first moment | birinci moment | proposed | first-moment: The expectation or average of a quantity. |  |
+| bias correction | yanlılık düzeltmesi | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
 | cross-correlation | çapraz korelasyon | verified_d2l | cross-correlation: An operation that combines a local input window with a kernel without reversing the kernel. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/conv-layer.md#L271) |
-| kernel size | Çekirdek boyutu | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/self-attention-and-positional-encoding.md#L83) |
-| input channel | Giriş kanalı | proposed | input-channel: A channel in the input to an operation or network layer. |  |
-| output channel | Çıkış kanalı | proposed | output-channel: A channel produced by an operation or network layer. |  |
-| spatial resolution | Uzamsal çözünürlük | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
-| local receptive field | Yerel alıcı alan | proposed | local-receptive-field: The local input region influencing a particular network activation. |  |
-| translation invariance | Çeviri Değişmezliği | verified_d2l | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/why-conv.md#L38) |
-| spatial invariance | Uzamsal değişmezlik | proposed | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. |  |
-| zero padding | Sıfır dolgusu | proposed | zero-padding: Padding an input with zeros around its boundary. |  |
-| dilation | Genleşme | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
-| downsampling | örnek seyreltme | verified_d2l | downsampling: Reducing the spatial or temporal resolution of a representation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L100) |
-| upsampling | örnek sıklaştırma | verified_d2l | upsampling: Increasing the spatial or temporal resolution of a representation. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L358) |
-| aliasing | Örtüşme | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/why-conv.md#L36) |
+| kernel size | çekirdek boyutu | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_attention-mechanisms/self-attention-and-positional-encoding.md#L83) |
+| input channel | girdi kanalı | proposed | input-channel: A channel in the input to an operation or network layer. |  |
+| output channel | çıktı kanalı | proposed | output-channel: A channel produced by an operation or network layer. |  |
+| spatial resolution | uzamsal çözünürlük | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
+| local receptive field | yerel alıcı alan | proposed | local-receptive-field: The local input region influencing a particular network activation. |  |
+| translation invariance | öteleme değişmezliği | proposed | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. |  |
+| spatial invariance | uzamsal değişmezlik | proposed | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. |  |
+| zero padding | sıfır dolgusu | proposed | zero-padding: Padding an input with zeros around its boundary. |  |
+| dilation | genişletme | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
+| downsampling | aşağı örnekleme | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
+| upsampling | yukarı örnekleme | proposed | upsampling: Increasing the spatial or temporal resolution of a representation. |  |
+| aliasing | örtüşme | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/why-conv.md#L36) |
 | pooling window | ortaklama penceresi | verified_d2l | pooling-window: The local region over which a pooling operation aggregates values. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-neural-networks/pooling.md#L14) |
-| global pooling | Küresel ortaklama | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
-| fully convolutional network | Tam evrişimli ağ | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fcn.md#L27) |
-| bilinear interpolation | Çift doğrusal aradeğerleme | verified_d2l | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fcn.md#L90) |
-| nearest-neighbor interpolation | En yakın komşu enterpolasyonu | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
-| random horizontal flip | Rastgele yatay çevirme | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
-| random resized crop | Rastgele yeniden boyutlandırılmış kırpma | proposed | random-resized-crop: An augmentation that crops a randomly selected region and resizes it. |  |
-| color jitter | Renk oynatma | proposed | color-jitter: An augmentation that randomly changes image color properties. |  |
-| synthetic data | Sentetik veri | proposed | synthetic-data: Artificially generated examples used for training, testing, or analysis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-scratch.md#L32) |
-| training recipe | Eğitim tarifi | proposed | training-recipe: A combination of training choices such as optimization, augmentation, and schedules. |  |
-| identity shortcut | Özdeş atlama bağlantısı | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
-| bottleneck block | Darboğaz bloğu | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
-| convolutional block | Evrişim bloğu | proposed | convolutional-block: A network component grouping convolutional and often other operations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/densenet.md#L139) |
+| global pooling | küresel ortaklama | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| fully convolutional network | tam evrişimli ağ | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fcn.md#L27) |
+| bilinear interpolation | çift doğrusal aradeğerleme | verified_d2l | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/fcn.md#L90) |
+| nearest-neighbor interpolation | en yakın komşu aradeğerlemesi | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
+| random horizontal flip | rastgele yatay çevirme | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
+| random resized crop | rastgele yeniden boyutlandırılmış kırpma | proposed | random-resized-crop: An augmentation that crops a randomly selected region and resizes it. |  |
+| color jitter | renk oynatma | proposed | color-jitter: An augmentation that randomly changes image color properties. |  |
+| synthetic data | sentetik veri | proposed | synthetic-data: Artificially generated examples used for training, testing, or analysis. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression-scratch.md#L32) |
+| training recipe | eğitim tarifi | proposed | training-recipe: A combination of training choices such as optimization, augmentation, and schedules. |  |
+| identity shortcut | özdeş atlama bağlantısı | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
+| bottleneck block | darboğaz bloğu | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
+| convolutional block | evrişim bloğu | proposed | convolutional-block: A network component grouping convolutional and often other operations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/densenet.md#L139) |
 | network in network | ağ içindeki ağ | verified_d2l | network-in-network: An architecture using learned channelwise transformations within convolutional networks. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/nin.md#L4) |
-| image patch | Görüntü yaması | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
-| patch embedding | Yama gömme | proposed | patch-embedding: A vector representation computed from an image patch. |  |
-| image classifier | Görüntü sınıflandırıcısı | proposed | image-classifier: A model that assigns categories to images. |  |
+| image patch | görüntü yaması | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
+| patch embedding | yama gömmesi | proposed | patch-embedding: A vector representation computed from an image patch. |  |
+| image classifier | görüntü sınıflandırıcısı | proposed | image-classifier: A model that assigns categories to images. |  |
 | ground truth | gerçek referans değer | verified_d2l | ground-truth: Observed or reference annotations treated as targets for a task. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L152) |
-| ground-truth bounding box | Gerçek sınırlayıcı kutu | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
-| region of interest | İlgi bölgesi | proposed | region-of-interest: An image region selected for further processing or prediction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L36) |
+| ground-truth bounding box | gerçek sınırlayıcı kutu | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
+| region of interest | ilgi bölgesi | proposed | region-of-interest: An image region selected for further processing or prediction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L36) |
 | region proposal network | bölge önerisi ağı | verified_d2l | region-proposal-network: A network that generates candidate regions for object detection. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L89) |
-| single shot multibox detection | Tek Atışta Çoklu Kutu Algılama | verified_d2l | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/ssd.md#L1) |
+| single shot multibox detection | tek atışta çoklu kutu algılama | verified_d2l | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/ssd.md#L1) |
 | style transfer | stil aktarımı | verified_d2l | style-transfer: Generating an image that combines the content of one image with the style of another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L5) |
-| content loss | İçerik Kaybı | verified_d2l | content-loss: A loss measuring differences in content representations between images. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L179) |
-| style loss | Stil Kaybı | verified_d2l | style-loss: A loss measuring differences in style representations between images. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L197) |
-| total variation | Toplam değişim | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L17) |
-| perceptual loss | Algısal kayıp | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
-| latent diffusion | Gizil difüzyon | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
-| recommendation | Öneri | proposed | recommendation: Selecting or ranking items to present to a user. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L78) |
-| user-item interaction | Kullanıcı-öğe etkileşimi | proposed | user-item-interaction: An observed relationship or action involving a user and an item. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/mf.md#L9) |
-| explicit feedback | Açık geri bildirim | proposed | explicit-feedback: Directly supplied preference information such as a rating. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L3) |
-| user embedding | Kullanıcı gömme | proposed | user-embedding: A learned vector representation of a user. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L38) |
-| item embedding | Öğe gömme | proposed | item-embedding: A learned vector representation of an item. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L50) |
-| latent factor | Gizil faktör | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
-| rating prediction | Puan tahmini | proposed | rating-prediction: Estimating a user's numerical rating for an item. |  |
-| ranking | Sıralama | proposed | ranking: Ordering items according to a relevance or preference score. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L22) |
-| click-through rate | Tıklama oranı | proposed | click-through-rate: The fraction of impressions that lead to a click. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L194) |
-| click-through rate prediction | Tıklama oranı tahmini | proposed | click-through-rate-prediction: Estimating the probability that a displayed item will be clicked. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ctr.md#L9) |
-| factorization machine | Faktörleştirme makinesi | proposed | factorization-machine: A model that represents pairwise feature interactions using low-dimensional factors. |  |
-| neural collaborative filtering | Sinirsel işbirlikçi filtreleme | proposed | neural-collaborative-filtering: Collaborative filtering using a neural network to model user-item interactions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L1) |
-| pairwise ranking | İkili sıralama | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
+| content loss | içerik kaybı | verified_d2l | content-loss: A loss measuring differences in content representations between images. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L179) |
+| style loss | stil kaybı | verified_d2l | style-loss: A loss measuring differences in style representations between images. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/neural-style.md#L197) |
+| total variation | toplam varyasyon | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
+| perceptual loss | algısal kayıp | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
+| latent diffusion | gizil difüzyon | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
+| recommendation | öneri | proposed | recommendation: Selecting or ranking items to present to a user. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L78) |
+| user-item interaction | kullanıcı-öğe etkileşimi | proposed | user-item-interaction: An observed relationship or action involving a user and an item. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/mf.md#L9) |
+| explicit feedback | açık geri bildirim | proposed | explicit-feedback: Directly supplied preference information such as a rating. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L3) |
+| user embedding | kullanıcı gömmesi | proposed | user-embedding: A learned vector representation of a user. |  |
+| item embedding | öğe gömmesi | proposed | item-embedding: A learned vector representation of an item. |  |
+| latent factor | gizil faktör | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
+| rating prediction | puan tahmini | proposed | rating-prediction: Estimating a user's numerical rating for an item. |  |
+| ranking | sıralama | proposed | ranking: Ordering items according to a relevance or preference score. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression.md#L22) |
+| click-through rate | tıklama oranı | proposed | click-through-rate: The fraction of impressions that lead to a click. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L194) |
+| click-through rate prediction | tıklama oranı tahmini | proposed | click-through-rate-prediction: Estimating the probability that a displayed item will be clicked. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ctr.md#L9) |
+| factorization machine | faktörleştirme makinesi | proposed | factorization-machine: A model that represents pairwise feature interactions using low-dimensional factors. |  |
+| neural collaborative filtering | sinirsel işbirlikçi filtreleme | proposed | neural-collaborative-filtering: Collaborative filtering using a neural network to model user-item interactions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L1) |
+| pairwise ranking | çiftli sıralama | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
 | Bayesian personalized ranking | Bayesçi kişiselleştirilmiş sıralama | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
-| cold start | Soğuk başlangıç | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L19) |
+| cold start | soğuk başlangıç | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L19) |
 | sparsity | seyreklik | verified_d2l | sparsity: The condition in which most entries or interactions in a representation are absent or zero. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L312) |
-| subword tokenization | Alt sözcük belirteçleme | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
-| token frequency | Belirteç sıklığı | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
-| out-of-vocabulary | Sözcük dağarcığı dışı | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
-| unknown token | Bilinmeyen belirteç | proposed | unknown-token: A special token representing an item not present in a vocabulary. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/similarity-analogy.md#L144) |
-| beginning-of-sequence token | Dizi başlangıç belirteci | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
-| end-of-sequence token | Dizi sonu belirteci | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
-| embedding layer | Gömme Katmanı | verified_d2l | embedding-layer: A layer mapping discrete indices to learned vector representations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec-pretraining.md#L34) |
-| embedding dimension | Gömme boyutu | proposed | embedding-dimension: The number of components in each embedding vector. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/fm.md#L82) |
-| center word | merkez sözcüğün | verified_d2l | center-word: The word used as the central item in a word-context training example. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/subword-embedding.md#L8) |
-| context word | Bağlam sözcüğü | proposed | context-word: A word appearing near a selected center word in a corpus. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L196) |
-| co-occurrence | Birlikte görülme | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
-| global vectors | küresel vektörlerden (Global Vectors) | verified_d2l | global-vectors: A word embedding method trained using global word co-occurrence statistics. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/glove.md#L44) |
+| subword tokenization | alt sözcük belirteçleme | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
+| token frequency | belirteç sıklığı | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
+| out-of-vocabulary | sözcük dağarcığı dışı | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
+| unknown token | bilinmeyen belirteç | proposed | unknown-token: A special token representing an item not present in a vocabulary. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/similarity-analogy.md#L144) |
+| beginning-of-sequence token | dizi başlangıç belirteci | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
+| end-of-sequence token | dizi sonu belirteci | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
+| embedding layer | gömme katmanı | verified_d2l | embedding-layer: A layer mapping discrete indices to learned vector representations. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word2vec-pretraining.md#L34) |
+| embedding dimension | gömme boyutu | proposed | embedding-dimension: The number of components in each embedding vector. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/fm.md#L82) |
+| center word | merkez sözcük | proposed | center-word: The word used as the central item in a word-context training example. |  |
+| context word | bağlam sözcüğü | proposed | context-word: A word appearing near a selected center word in a corpus. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/word-embedding-dataset.md#L196) |
+| co-occurrence | birlikte görülme | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
+| global vectors | GloVe | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
 | subsampling | alt örnekleme | verified_d2l | subsampling: Selecting a subset of observations according to a sampling rule. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L320) |
-| word similarity | Sözcük Benzerliği | verified_d2l | word-similarity: A measure of how closely related two words are in meaning or representation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/similarity-analogy.md#L110) |
-| decoder state | Kod çözücü durumu | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
-| alignment | Hizalama | proposed | alignment: A relationship linking positions or elements across two sequences. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L111) |
-| sequence decoding | Dizi kod çözme | proposed | sequence-decoding: The process of selecting an output sequence from a model's predictions. |  |
+| word similarity | sözcük benzerliği | verified_d2l | word-similarity: A measure of how closely related two words are in meaning or representation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/similarity-analogy.md#L110) |
+| decoder state | kod çözücü durumu | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
+| alignment | hizalama | proposed | alignment: A relationship linking positions or elements across two sequences. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/rcnn.md#L111) |
+| sequence decoding | dizi kod çözme | proposed | sequence-decoding: The process of selecting an output sequence from a model's predictions. |  |
 | greedy search | açgözlü arama | verified_d2l | greedy-search: A search procedure selecting the locally best choice at each step. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L150) |
-| length normalization | Uzunluk normalizasyonu | verified_external | length-normalization: Adjusting a sequence score to reduce systematic preference for particular sequence lengths. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L537) |
-| exposure bias | Maruz kalma yanlılığı | proposed | exposure-bias: A mismatch between sequence-model training with observed context and generation using model-produced context. |  |
-| scheduled sampling | Zamanlanmış örnekleme | proposed | scheduled-sampling: A training method that varies between observed and model-generated previous tokens. |  |
-| translation quality | Çeviri kalitesi | proposed | translation-quality: The degree to which a translation preserves meaning and satisfies linguistic criteria. |  |
-| brevity penalty | Kısalık cezası | proposed | brevity-penalty: A factor reducing a translation score when the generated text is too short relative to references. |  |
-| bidirectional context | Çift yönlü bağlam | proposed | bidirectional-context: Context available from both before and after a position in a sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L187) |
-| downstream task | Alt görev | proposed | downstream-task: A task for which a pretrained representation or model is subsequently used. |  |
-| sequence classification | Dizi sınıflandırması | proposed | sequence-classification: Assigning a label to an entire input sequence. |  |
-| sentiment classification | Duygu sınıflandırması | proposed | sentiment-classification: Assigning a sentiment category to text. |  |
-| textual entailment | Metinsel çıkarım | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
+| length normalization | uzunluk normalleştirmesi | proposed | length-normalization: Adjusting a sequence score to reduce systematic preference for particular sequence lengths. |  |
+| exposure bias | maruz kalma yanlılığı | proposed | exposure-bias: A mismatch between sequence-model training with observed context and generation using model-produced context. |  |
+| scheduled sampling | zamanlanmış örnekleme | proposed | scheduled-sampling: A training method that varies between observed and model-generated previous tokens. |  |
+| translation quality | çeviri kalitesi | proposed | translation-quality: The degree to which a translation preserves meaning and satisfies linguistic criteria. |  |
+| brevity penalty | kısalık cezası | proposed | brevity-penalty: A factor reducing a translation score when the generated text is too short relative to references. |  |
+| bidirectional context | çift yönlü bağlam | proposed | bidirectional-context: Context available from both before and after a position in a sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L187) |
+| downstream task | alt akış görevi | proposed | downstream-task: A task for which a pretrained representation or model is subsequently used. |  |
+| sequence classification | dizi sınıflandırması | proposed | sequence-classification: Assigning a label to an entire input sequence. |  |
+| sentiment classification | duygu sınıflandırması | proposed | sentiment-classification: Assigning a sentiment category to text. |  |
+| textual entailment | metinsel gerektirme | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
 | premise | öncül | verified_d2l | premise: A statement given as the basis for assessing another statement in natural language inference. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L250) |
-| hypothesis | Hipotez | verified_external | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L63) |
-| contradiction | Çelişki | verified_d2l | contradiction: A relationship in which one statement is incompatible with another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L11) |
-| attention weight | Dikkat ağırlığı | verified_external | attention-weight: A coefficient controlling a value's contribution to an attention output. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L628) |
-| softmax temperature | Softmax sıcaklığı | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
-| attention masking | Dikkat maskeleme | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
-| causal masking | Nedensel maskeleme | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
-| padding mask | Dolgu maskesi | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
-| absolute position | Mutlak konum | proposed | absolute-position: A position represented relative to the beginning or another fixed reference. |  |
-| transformer encoder | Dönüştürücü kodlayıcı | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert-pretraining.md#L30) |
-| transformer decoder | Dönüştürücü kod çözücü | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-pretraining/bert.md#L16) |
-| autoregressive decoding | Otoregresif kod çözme | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
-| text generation | Metin üretimi | proposed | text-generation: Producing text with a model, optionally conditioned on a prompt or context. |  |
-| sequence generation | Dizi üretimi | proposed | sequence-generation: Producing an ordered sequence of model outputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/index.md#L8) |
+| hypothesis | hipotez | verified_external | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-229-supervised-learning.md#L63) |
+| contradiction | çelişki | verified_d2l | contradiction: A relationship in which one statement is incompatible with another. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md#L11) |
+| attention weight | dikkat ağırlığı | verified_external | attention-weight: A coefficient controlling a value's contribution to an attention output. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-recurrent-neural-networks.md#L628) |
+| softmax temperature | softmax sıcaklığı | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
+| attention masking | dikkat maskeleme | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
+| causal masking | nedensel maskeleme | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
+| padding mask | dolgu maskesi | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
+| absolute position | mutlak konum | proposed | absolute-position: A position represented relative to the beginning or another fixed reference. |  |
+| transformer encoder | transformer kodlayıcısı | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
+| transformer decoder | transformer kod çözücüsü | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. |  |
+| autoregressive decoding | otoregresif kod çözme | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
+| text generation | metin üretimi | proposed | text-generation: Producing text with a model, optionally conditioned on a prompt or context. |  |
+| sequence generation | dizi üretimi | proposed | sequence-generation: Producing an ordered sequence of model outputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recurrent-modern/index.md#L8) |
 | large language model | büyük dil modeli | verified_external | large-language-model: A language model with substantial capacity trained on broad text data. | [google-ml-tr-generative](https://developers.google.com/machine-learning/glossary/generative?hl=tr#large-language-model) |
-| long-context | Uzun bağlam | proposed | long-context: Describing a model or task involving unusually long input sequences. |  |
-| label smoothing | Etiket yumuşatma | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/googlenet.md#L328) |
-| expected calibration error | Beklenen kalibrasyon hatası | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
-| maximum margin | Maksimum marj | proposed | maximum-margin: The largest achievable separation between decision boundary and relevant examples under specified constraints. |  |
-| training distribution | Eğitim dağılımı | proposed | training-distribution: The data distribution from which training examples are drawn. |  |
-| test distribution | Test dağılımı | proposed | test-distribution: The data distribution used to assess a model after training. |  |
-| data distribution | Veri dağılımı | proposed | data-distribution: The probability distribution describing observed or target data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L5) |
-| model distribution | Model dağılımı | proposed | model-distribution: The probability distribution specified by a model. |  |
-| conditional model | Koşullu model | proposed | conditional-model: A model that predicts or describes a distribution conditional on given inputs. |  |
-| conditional likelihood | Koşullu olabilirlik | proposed | conditional-likelihood: The probability or density of an observed outcome conditional on inputs, viewed as a function of parameters. |  |
+| long-context | uzun bağlam | proposed | long-context: Describing a model or task involving unusually long input sequences. |  |
+| label smoothing | etiket yumuşatma | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/googlenet.md#L328) |
+| expected calibration error | beklenen kalibrasyon hatası | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
+| maximum margin | maksimum marj | proposed | maximum-margin: The largest achievable separation between decision boundary and relevant examples under specified constraints. |  |
+| training distribution | eğitim dağılımı | proposed | training-distribution: The data distribution from which training examples are drawn. |  |
+| test distribution | test dağılımı | proposed | test-distribution: The data distribution used to assess a model after training. |  |
+| data distribution | veri dağılımı | proposed | data-distribution: The probability distribution describing observed or target data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L5) |
+| model distribution | model dağılımı | proposed | model-distribution: The probability distribution specified by a model. |  |
+| conditional model | koşullu model | proposed | conditional-model: A model that predicts or describes a distribution conditional on given inputs. |  |
+| conditional likelihood | koşullu olabilirlik | proposed | conditional-likelihood: The probability or density of an observed outcome conditional on inputs, viewed as a function of parameters. |  |
 | joint probability | bileşik olasılık | verified_d2l | joint-probability: The probability assigned to a combination of events or values. | [d2l-tr-terminology](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/TERMINOLOGY.md#L184) |
-| marginal probability | marjinal (tümsel) olasılık | verified_d2l | marginal-probability: A probability obtained after summing or integrating over other variables. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_preliminaries/probability.md#L245) |
-| conditional expectation | Koşullu beklenen değer | proposed | conditional-expectation: The expected value of a random variable given specified information. |  |
-| conditional variance | Koşullu varyans | proposed | conditional-variance: The variance of a random variable given specified information. |  |
-| total expectation | Toplam beklenti | proposed | total-expectation: The expectation obtained by averaging conditional expectations. |  |
-| total variance | Toplam varyans | proposed | total-variance: A decomposition of variance into expected conditional variance and variance of conditional expectation. |  |
+| marginal probability | marjinal olasılık | proposed | marginal-probability: A probability obtained after summing or integrating over other variables. |  |
+| conditional expectation | koşullu beklenti | proposed | conditional-expectation: The expected value of a random variable given specified information. |  |
+| conditional variance | koşullu varyans | proposed | conditional-variance: The variance of a random variable given specified information. |  |
+| total expectation | toplam beklenti | proposed | total-expectation: The expectation obtained by averaging conditional expectations. |  |
+| total variance | toplam varyans | proposed | total-variance: A decomposition of variance into expected conditional variance and variance of conditional expectation. |  |
 | Bayes risk | Bayes riski | proposed | bayes-risk: The minimum expected loss attainable under a specified probability model and loss function. |  |
-| posterior probability | Sonsal olasılık | proposed | posterior-probability: The probability of an event or hypothesis after conditioning on observed data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L9) |
-| prior probability | Önsel olasılık | proposed | prior-probability: The probability of an event or hypothesis before conditioning on the data under consideration. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L29) |
-| likelihood ratio | Olabilirlik oranı | proposed | likelihood-ratio: The ratio of likelihoods under two parameter values or hypotheses. |  |
-| conjugacy | Eşleniklik | proposed | conjugacy: A relationship in which posterior distributions remain in the same family as the prior. |  |
-| predictive distribution | Öngörü dağılımı | proposed | predictive-distribution: A probability distribution over a future or unobserved outcome. |  |
-| predictive uncertainty | Öngörü belirsizliği | proposed | predictive-uncertainty: Uncertainty in a model's prediction for an outcome. |  |
-| epistemic uncertainty | Epistemik belirsizlik | proposed | epistemic-uncertainty: Uncertainty due to limited knowledge about a model or its parameters. |  |
-| aleatoric uncertainty | Aleatorik belirsizlik | proposed | aleatoric-uncertainty: Uncertainty associated with inherent randomness or variability in observations. |  |
-| uncertainty quantification | Belirsizlik nicemleme | proposed | uncertainty-quantification: Estimating or characterizing uncertainty in quantities or predictions. |  |
-| posterior inference | Sonsal çıkarım | proposed | posterior-inference: The computation or approximation of a posterior distribution after observing data. |  |
-| likelihood model | Olabilirlik modeli | proposed | likelihood-model: A probability model for observations conditional on model parameters or latent variables. |  |
-| missing data | Eksik veri | proposed | missing-data: Values that are not observed for some variables or examples. |  |
-| missingness | Eksiklik | proposed | missingness: The pattern or mechanism by which data values are absent. |  |
+| posterior probability | sonsal olasılık | proposed | posterior-probability: The probability of an event or hypothesis after conditioning on observed data. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L9) |
+| prior probability | önsel olasılık | proposed | prior-probability: The probability of an event or hypothesis before conditioning on the data under consideration. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L29) |
+| likelihood ratio | olabilirlik oranı | proposed | likelihood-ratio: The ratio of likelihoods under two parameter values or hypotheses. |  |
+| conjugacy | eşleniklik | proposed | conjugacy: A relationship in which posterior distributions remain in the same family as the prior. |  |
+| predictive distribution | öngörü dağılımı | proposed | predictive-distribution: A probability distribution over a future or unobserved outcome. |  |
+| predictive uncertainty | öngörü belirsizliği | proposed | predictive-uncertainty: Uncertainty in a model's prediction for an outcome. |  |
+| epistemic uncertainty | epistemik belirsizlik | proposed | epistemic-uncertainty: Uncertainty due to limited knowledge about a model or its parameters. |  |
+| aleatoric uncertainty | aleatorik belirsizlik | proposed | aleatoric-uncertainty: Uncertainty associated with inherent randomness or variability in observations. |  |
+| uncertainty quantification | belirsizlik nicelleştirme | proposed | uncertainty-quantification: Estimating or characterizing uncertainty in quantities or predictions. |  |
+| posterior inference | sonsal çıkarım | proposed | posterior-inference: The computation or approximation of a posterior distribution after observing data. |  |
+| likelihood model | olabilirlik modeli | proposed | likelihood-model: A probability model for observations conditional on model parameters or latent variables. |  |
+| missing data | eksik veri | proposed | missing-data: Values that are not observed for some variables or examples. |  |
+| missingness | eksiklik | proposed | missingness: The pattern or mechanism by which data values are absent. |  |
 | Boltzmann distribution | Boltzmann dağılımı | proposed | boltzmann-distribution: A probability distribution assigning probabilities proportional to exponentiated negative energies. |  |
-| energy function | Enerji fonksiyonu | proposed | energy-function: A scalar function assigning an energy to each state or data point. |  |
-| energy-based model | Enerji tabanlı model | proposed | energy-based-model: A probabilistic model that assigns unnormalized probability through an energy function. |  |
-| partition function | bölmeleme fonksiyonu | verified_d2l | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L91) |
-| normalizing constant | Normalleştirme sabiti | proposed | normalizing-constant: A factor that makes a nonnegative function sum or integrate to one. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L91) |
-| unnormalized density | Normalleştirilmemiş yoğunluk | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
-| log density | Log-yoğunluk | proposed | log-density: The logarithm of a probability density. |  |
-| denoising score matching | Gürültü giderici skor eşleştirme | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
-| contrastive divergence | Karşıtsal ıraksama | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
+| energy function | enerji fonksiyonu | proposed | energy-function: A scalar function assigning an energy to each state or data point. |  |
+| energy-based model | enerji tabanlı model | proposed | energy-based-model: A probabilistic model that assigns unnormalized probability through an energy function. |  |
+| partition function | bölüşüm fonksiyonu | verified_external | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. | review-tr-e0f8a8cc36: page |
+| normalizing constant | normalleştirme sabiti | proposed | normalizing-constant: A factor that makes a nonnegative function sum or integrate to one. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-scratch.md#L91) |
+| unnormalized density | normalleştirilmemiş yoğunluk | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
+| log density | log-yoğunluk | proposed | log-density: The logarithm of a probability density. |  |
+| denoising score matching | gürültü giderici skor eşleştirme | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
+| contrastive divergence | karşıtsal ıraksama | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
 | Langevin sampling | Langevin örneklemesi | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
-| annealed Langevin dynamics | Tavlanmış Langevin dinamikleri | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
-| score network | Skor ağı | proposed | score-network: A neural network trained to estimate a score function. |  |
-| noise level | Gürültü düzeyi | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
-| signal-to-noise ratio | Sinyal-gürültü oranı | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
-| clean sample | Temiz örnek | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
-| forward diffusion | İleri difüzyon | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
-| reverse-time SDE | Ters zamanlı stokastik diferansiyel denklem | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
-| reverse transition | Ters geçiş | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
-| forward transition | İleri geçiş | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
-| ancestral sampling | Atasal örnekleme | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
+| annealed Langevin dynamics | tavlanmış Langevin dinamikleri | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
+| score network | skor ağı | proposed | score-network: A neural network trained to estimate a score function. |  |
+| noise level | gürültü düzeyi | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
+| signal-to-noise ratio | sinyal-gürültü oranı | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
+| clean sample | temiz örnek | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
+| forward diffusion | ileri difüzyon | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
+| reverse-time SDE | ters zamanlı stokastik diferansiyel denklem | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
+| reverse transition | ters geçiş | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
+| forward transition | ileri süreç geçişi | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
+| ancestral sampling | atasal örnekleme | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
 | DDPM | DDPM | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
 | DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
-| variance schedule | Varyans çizelgesi | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
-| velocity prediction | Hız tahmini | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
-| score estimate | Skor tahmini | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
-| denoiser | Gürültü giderici | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
-| denoising objective | Gürültü giderme amacı | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
-| conditional denoising | Koşullu gürültü giderme | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
-| guidance scale | Yönlendirme ölçeği | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
-| class conditioning | Sınıfa koşullama | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
-| diffusion transformer | Difüzyon dönüştürücüsü | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
-| variational autoencoder | Varyasyonel otokodlayıcı | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
-| reconstruction error | Yeniden oluşturma hatası | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
-| bottleneck | Darboğaz | proposed | bottleneck: A constrained intermediate representation that limits information or computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L363) |
-| latent code | Gizil kod | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
-| mode dropping | Mod düşmesi | proposed | mode-dropping: Failure of a generative model to represent some modes of a target distribution. |  |
-| sample quality | Örnek kalitesi | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
-| sample diversity | Örnek çeşitliliği | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
-| Fréchet Inception Distance | Fréchet Inception Uzaklığı | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
-| maximum mean discrepancy | Maksimum ortalama uyuşmazlığı | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
-| adversarial training | Çekişmeli eğitim | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
-| adversarial objective | Çekişmeli amaç | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
-| minimax game | Minimaks oyunu | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
+| variance schedule | varyans çizelgesi | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
+| velocity prediction | hız tahmini | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
+| score estimate | skor tahmini | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
+| denoiser | gürültü giderici | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
+| denoising objective | gürültü giderme amacı | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
+| conditional denoising | koşullu gürültü giderme | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
+| guidance scale | kılavuzlama ölçeği | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
+| class conditioning | sınıfa koşullama | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
+| diffusion transformer | difüzyon Transformer'ı (DiT) | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
+| variational autoencoder | varyasyonel otokodlayıcı | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
+| reconstruction error | yeniden oluşturma hatası | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
+| bottleneck | darboğaz | proposed | bottleneck: A constrained intermediate representation that limits information or computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/resnet.md#L363) |
+| latent code | gizil kod | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
+| mode dropping | mod düşmesi | proposed | mode-dropping: Failure of a generative model to represent some modes of a target distribution. |  |
+| sample quality | örnek kalitesi | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
+| sample diversity | örnek çeşitliliği | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
+| Fréchet Inception Distance | Fréchet Inception uzaklığı | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
+| maximum mean discrepancy | maksimum ortalama uyuşmazlığı | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
+| adversarial training | çekişmeli eğitim | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
+| adversarial objective | çekişmeli amaç | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
+| minimax game | minimaks oyunu | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
 | Wasserstein GAN | Wasserstein GAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
-| gradient penalty | Gradyan cezası | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
-| spectral normalization | Spektral normalizasyon | proposed | spectral-normalization: A normalization method controlling a weight matrix's spectral norm. |  |
-| pixel-space | Piksel uzayı | proposed | pixel-space: The representation domain consisting of image pixel values. |  |
-| critical point | Kritik nokta | proposed | critical-point: A point at which a derivative is zero or otherwise fails to define a regular direction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L71) |
-| local maximum | Yerel maksimum | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L134) |
-| global maximum | Küresel maksimum | proposed | global-maximum: A point with objective value no smaller than all feasible points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/sentiment-analysis-cnn.md#L90) |
-| strict convexity | Katı dışbükeylik | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
-| smoothness | Düzgünlük | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
-| convex objective | Dışbükey amaç | proposed | convex-objective: An optimization objective that is a convex function. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/alexnet.md#L43) |
+| gradient penalty | gradyan cezası | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
+| spectral normalization | spektral normalleştirme | proposed | spectral-normalization: A normalization method controlling a weight matrix's spectral norm. |  |
+| pixel-space | piksel uzayı | proposed | pixel-space: The representation domain consisting of image pixel values. |  |
+| critical point | kritik nokta | proposed | critical-point: A point at which a derivative is zero or otherwise fails to define a regular direction. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L71) |
+| local maximum | yerel maksimum | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/optimization-intro.md#L134) |
+| global maximum | küresel maksimum | proposed | global-maximum: A point with objective value no smaller than all feasible points. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_natural-language-processing-applications/sentiment-analysis-cnn.md#L90) |
+| strict convexity | katı dışbükeylik | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
+| smoothness | düzgünlük | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
+| convex objective | dışbükey amaç | proposed | convex-objective: An optimization objective that is a convex function. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_convolutional-modern/alexnet.md#L43) |
 | constrained optimization | kısıtlı optimizasyon | verified_d2l | constrained-optimization: Optimization subject to conditions on feasible solutions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/convexity.md#L196) |
-| first-order optimality | Birinci mertebe optimalite | proposed | first-order-optimality: A condition characterizing a candidate optimum using first-order information. |  |
-| second-order optimality | İkinci mertebe optimalite | proposed | second-order-optimality: A condition characterizing a candidate optimum using curvature information. |  |
-| sufficient condition | Yeterli koşul | proposed | sufficient-condition: A condition that guarantees a stated result or property. |  |
-| primal problem | Asıl problem | proposed | primal-problem: The original optimization problem associated with a dual problem. |  |
-| dual variable | İkili değişken | proposed | dual-variable: A variable associated with a constraint in a dual or Lagrangian formulation. |  |
-| dual function | İkili fonksiyon | proposed | dual-function: A function obtained by optimizing a Lagrangian over primal variables. |  |
-| duality gap | İkillik aralığı | proposed | duality-gap: The difference between the primal and dual objective values or optima. |  |
-| strong duality | Güçlü ikillik | proposed | strong-duality: Equality of the optimal primal and dual objective values. |  |
-| weak duality | Zayıf ikillik | proposed | weak-duality: A bound relating feasible primal and dual objective values. |  |
-| complementary slackness | Tamamlayıcı gevşeklik | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
-| subgradient method | Altgradyan yöntemi | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
-| projection operator | İzdüşüm operatörü | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
-| projected gradient descent | İzdüşümlü gradyan inişi | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
-| backtracking line search | Geri izlemeli çizgi araması | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
-| descent direction | İniş yönü | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/multivariable-calculus.md#L153) |
-| descent lemma | İniş lemması | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
+| first-order optimality | birinci mertebe optimalite | proposed | first-order-optimality: A condition characterizing a candidate optimum using first-order information. |  |
+| second-order optimality | ikinci mertebe optimalite | proposed | second-order-optimality: A condition characterizing a candidate optimum using curvature information. |  |
+| sufficient condition | yeterli koşul | proposed | sufficient-condition: A condition that guarantees a stated result or property. |  |
+| primal problem | primal problem | proposed | primal-problem: The original optimization problem associated with a dual problem. |  |
+| dual variable | dual değişken | proposed | dual-variable: A variable associated with a constraint in a dual or Lagrangian formulation. |  |
+| dual function | dual fonksiyon | proposed | dual-function: A function obtained by optimizing a Lagrangian over primal variables. |  |
+| duality gap | dualite aralığı | proposed | duality-gap: The difference between the primal and dual objective values or optima. |  |
+| strong duality | güçlü dualite | proposed | strong-duality: Equality of the optimal primal and dual objective values. |  |
+| weak duality | zayıf dualite | proposed | weak-duality: A bound relating feasible primal and dual objective values. |  |
+| complementary slackness | tamamlayıcı gevşeklik | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
+| subgradient method | alt gradyan yöntemi | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
+| projection operator | izdüşüm operatörü | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
+| projected gradient descent | izdüşümlü gradyan inişi | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
+| backtracking line search | geri izlemeli çizgi araması | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
+| descent direction | iniş yönü | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/multivariable-calculus.md#L153) |
+| descent lemma | iniş lemması | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
 | Newton step | Newton adımı | proposed | newton-step: An update computed from gradient and curvature information in Newton's method. |  |
-| conjugate gradient | Eşlenik gradyan | proposed | conjugate-gradient: An iterative method for solving suitable linear systems or optimization problems using conjugate directions. |  |
-| curvature | eğri | verified_d2l | curvature: A description of how the slope or gradient of a function changes. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/gd.md#L192) |
+| conjugate gradient | eşlenik gradyan | proposed | conjugate-gradient: An iterative method for solving suitable linear systems or optimization problems using conjugate directions. |  |
+| curvature | eğrilik | verified_external | curvature: A description of how the slope or gradient of a function changes. | review-tr-92c1bae9fb: page; review-tr-7ad68ec9f9: page |
 | Hessian eigenvalue | Hessian özdeğeri | proposed | hessian-eigenvalue: An eigenvalue of a Hessian matrix describing curvature along an associated direction. |  |
-| ill-conditioning | Kötü koşulluluk | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
-| preconditioning | Ön Şartlandırma | verified_d2l | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adagrad.md#L16) |
-| second moment estimate | İkinci moment tahmini | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L143) |
-| exponential averaging | Üstel ortalama | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
-| momentum buffer | Momentum tamponu | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
+| ill-conditioning | kötü koşulluluk | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
+| preconditioning | önkoşullama | proposed | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. |  |
+| second moment estimate | ikinci moment tahmini | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adam.md#L143) |
+| exponential averaging | üstel ortalama | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
+| momentum buffer | momentum tamponu | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
 | Nesterov momentum | Nesterov momentumu | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
-| stochastic gradient | Stokastik gradyan | proposed | stochastic-gradient: A random estimate of an objective's gradient. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L289) |
-| minibatch gradient descent | Mini yığın gradyan inişi | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
-| gradient variance | Gradyan varyansı | proposed | gradient-variance: The variance of a stochastic gradient estimator. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adagrad.md#L48) |
-| convergence guarantee | Yakınsama garantisi | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
-| optimization landscape | Optimizasyon manzarası | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
-| gradient flow | Gradyan akışı | proposed | gradient-flow: A continuous-time dynamical system that moves along the negative gradient of an objective. |  |
-| implicit regularization | Örtük düzenlileştirme | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
+| stochastic gradient | stokastik gradyan | proposed | stochastic-gradient: A random estimate of an objective's gradient. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-deep-learning-tips-and-tricks.md#L289) |
+| minibatch gradient descent | mini yığın gradyan inişi | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
+| gradient variance | gradyan varyansı | proposed | gradient-variance: The variance of a stochastic gradient estimator. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_optimization/adagrad.md#L48) |
+| convergence guarantee | yakınsama garantisi | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
+| optimization landscape | optimizasyon yüzeyi | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
+| gradient flow | gradyan akışı | proposed | gradient-flow: A continuous-time dynamical system that moves along the negative gradient of an objective. |  |
+| implicit regularization | örtük düzenlileştirme | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
 | Lipschitz gradient | Lipschitz gradyanı | proposed | lipschitz-gradient: A gradient whose change is bounded by a constant times the change in its input. |  |
-| minibatch noise | Mini yığın gürültüsü | proposed | minibatch-noise: Random variation in an update caused by using a finite minibatch. |  |
-| learning dynamics | Öğrenme dinamikleri | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
-| optimization trajectory | Optimizasyon yörüngesi | proposed | optimization-trajectory: The sequence or path of parameter values generated by an optimization method. |  |
-| objective value | Amaç değeri | proposed | objective-value: The numerical value of an optimization objective at a point. |  |
-| minimizer | Minimumlaştırıcı | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
-| maximizer | Maksimumlaştırıcı | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
-| risk minimization | Risk minimizasyonu | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L103) |
-| nonconvex optimization | Dışbükey olmayan optimizasyon | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
-| shrinkage | küçülme | verified_external | shrinkage: Pulling estimates or parameters toward a reference value, often zero. | [google-ml-tr-df](https://developers.google.com/machine-learning/glossary/df?hl=tr#shrinkage) |
-| outlier | Aykırı değer | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
-| generalized linear model | Genelleştirilmiş doğrusal model | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
-| exponential family | Üstel Ailesi | verified_d2l | exponential-family: A family of probability distributions with a common exponential-form representation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/distributions.md#L732) |
+| minibatch noise | mini yığın gürültüsü | proposed | minibatch-noise: Random variation in an update caused by using a finite minibatch. |  |
+| learning dynamics | öğrenme dinamikleri | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
+| optimization trajectory | optimizasyon yörüngesi | proposed | optimization-trajectory: The sequence or path of parameter values generated by an optimization method. |  |
+| objective value | amaç değeri | proposed | objective-value: The numerical value of an optimization objective at a point. |  |
+| minimizer | minimize edici | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
+| maximizer | maksimize edici | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
+| risk minimization | risk minimizasyonu | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_multilayer-perceptrons/environment.md#L103) |
+| nonconvex optimization | dışbükey olmayan optimizasyon | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
+| shrinkage | büzülme | proposed | shrinkage: Pulling estimates or parameters toward a reference value, often zero. |  |
+| outlier | aykırı değer | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
+| generalized linear model | genelleştirilmiş doğrusal model | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
+| exponential family | üstel aile | proposed | exponential-family: A family of probability distributions with a common exponential-form representation. |  |
 | Fisher information matrix | Fisher bilgi matrisi | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L611) |
-| asymptotic normality | Asimptotik normallik | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
-| identifiability | Tanımlanabilirlik | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
-| posterior mode | Sonsal mod | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
+| asymptotic normality | asimptotik normallik | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
+| identifiability | tanımlanabilirlik | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
+| posterior mode | sonsal mod | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
 | Bayesian linear regression | Bayesçi doğrusal regresyon | proposed | bayesian-linear-regression: Linear regression that represents uncertainty about parameters with a posterior distribution. |  |
 | Gaussian prior | Gauss önseli | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
 | Gaussian likelihood | Gauss olabilirliği | proposed | gaussian-likelihood: A likelihood based on a Gaussian observation model. |  |
 | Gaussian posterior | Gauss sonsalı | proposed | gaussian-posterior: A posterior probability distribution in the Gaussian family. |  |
-| hyperprior | Hiperönsel | proposed | hyperprior: A prior distribution placed on a model's hyperparameters. |  |
+| hyperprior | hiperönsel | proposed | hyperprior: A prior distribution placed on a model's hyperparameters. |  |
 | Gaussian process regression | Gauss süreci regresyonu | proposed | gaussian-process-regression: Regression using a Gaussian process prior over functions. |  |
 | Gaussian process prior | Gauss süreci önseli | proposed | gaussian-process-prior: A prior distribution over functions specified by a mean function and covariance kernel. |  |
 | Gaussian process posterior | Gauss süreci sonsalı | proposed | gaussian-process-posterior: A distribution over functions obtained by conditioning a Gaussian process prior on observations. |  |
-| mean function | Ortalama fonksiyonu | proposed | mean-function: A function specifying the expected value of a random function at each input. |  |
-| length scale | Uzunluk ölçeği | proposed | length-scale: A parameter controlling the distance over which a kernel or process varies substantially. |  |
-| observation noise | Gözlem gürültüsü | proposed | observation-noise: Random variation or measurement error in observed data. |  |
+| mean function | ortalama fonksiyonu | proposed | mean-function: A function specifying the expected value of a random function at each input. |  |
+| length scale | uzunluk ölçeği | proposed | length-scale: A parameter controlling the distance over which a kernel or process varies substantially. |  |
+| observation noise | gözlem gürültüsü | proposed | observation-noise: Random variation or measurement error in observed data. |  |
 | Gaussian observation noise | Gauss gözlem gürültüsü | proposed | gaussian-observation-noise: Observation noise modeled using a Gaussian distribution. |  |
-| posterior predictive mean | Sonsal öngörü ortalaması | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
-| predictive variance | Öngörü varyansı | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
-| kernel matrix | Çekirdek matrisi | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/transposed-conv.md#L32) |
+| posterior predictive mean | sonsal öngörü ortalaması | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
+| predictive variance | öngörü varyansı | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
+| kernel matrix | çekirdek matrisi | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/transposed-conv.md#L32) |
 | Cholesky decomposition | Cholesky ayrışımı | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
 | Cholesky factor | Cholesky faktörü | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
-| log marginal likelihood | Log-marjinal olabilirlik | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
-| hyperparameter optimization | Hiper parametre ayarı | verified_d2l | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/linear-regression.md#L96) |
-| search space | Arama uzayı | proposed | search-space: The set of configurations or solutions considered by a search procedure. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L98) |
-| configuration space | Yapılandırma uzayı | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
-| validation metric | Doğrulama metriği | proposed | validation-metric: A performance measure computed on validation data. |  |
-| acquisition function | Edinim fonksiyonu | proposed | acquisition-function: A criterion for selecting the next candidate to evaluate in Bayesian optimization. |  |
-| expected improvement | Beklenen iyileşme | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
-| multi-fidelity optimization | Çok doğruluklu optimizasyon | proposed | multi-fidelity-optimization: Optimization that uses evaluations at different costs and levels of accuracy. |  |
-| fidelity | Sadakat düzeyi | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
-| successive halving | Ardışık yarılama | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
+| log marginal likelihood | log-marjinal olabilirlik | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
+| hyperparameter optimization | hiperparametre optimizasyonu | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. |  |
+| search space | arama uzayı | proposed | search-space: The set of configurations or solutions considered by a search procedure. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-221-states-models.md#L98) |
+| configuration space | yapılandırma uzayı | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
+| validation metric | doğrulama metriği | proposed | validation-metric: A performance measure computed on validation data. |  |
+| acquisition function | edinim fonksiyonu | proposed | acquisition-function: A criterion for selecting the next candidate to evaluate in Bayesian optimization. |  |
+| expected improvement | beklenen iyileşme | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
+| multi-fidelity optimization | çok sadakat düzeyli optimizasyon | proposed | multi-fidelity-optimization: Optimization that uses evaluations at different costs and levels of accuracy. |  |
+| fidelity | sadakat düzeyi | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
+| successive halving | ardışık yarılama | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
 | Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
-| noisy objective | Gürültülü amaç | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
-| hyperparameter configuration | Hiperparametre yapılandırması | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
-| asynchronous scheduling | Asenkron zamanlama | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
-| rating matrix | Puan matrisi | proposed | rating-matrix: A matrix of user ratings for items. |  |
-| interaction matrix | Etkileşim matrisi | proposed | interaction-matrix: A matrix recording interactions between two sets of entities such as users and items. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/movielens.md#L49) |
-| matrix completion | Matris tamamlama | proposed | matrix-completion: Inferring missing entries of a partially observed matrix. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L3) |
-| low-rank factorization | Düşük rütbeli ayrıştırma | proposed | low-rank-factorization: Representing a matrix using factors with a lower-dimensional shared dimension. |  |
-| ranking loss | Sıralama kaybı | proposed | ranking-loss: A loss measuring errors in the ordering of items. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L5) |
-| pairwise loss | İkili kayıp | proposed | pairwise-loss: A loss defined on pairs of examples or items and their relative relationship. |  |
-| pointwise loss | Noktasal kayıp | proposed | pointwise-loss: A loss evaluated individually on examples or items. |  |
-| negative feedback | Olumsuz geri bildirim | proposed | negative-feedback: An observation indicating dislike or lack of preference under a specified interpretation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L3) |
-| item ranking | Öğe sıralaması | proposed | item-ranking: Ordering items by predicted relevance or preference. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L19) |
-| retrieval | Getirme | proposed | retrieval: Selecting candidate items or documents for further ranking or presentation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/image-classification-dataset.md#L204) |
-| user behavior | Kullanıcı davranışı | proposed | user-behavior: Actions or interactions performed by a user in a system. |  |
-| next-item prediction | Sonraki öğe tahmini | proposed | next-item-prediction: Predicting the next item a user will interact with based on available context. |  |
+| noisy objective | gürültülü amaç | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
+| hyperparameter configuration | hiperparametre yapılandırması | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
+| asynchronous scheduling | asenkron zamanlama | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
+| rating matrix | puan matrisi | proposed | rating-matrix: A matrix of user ratings for items. |  |
+| interaction matrix | etkileşim matrisi | proposed | interaction-matrix: A matrix recording interactions between two sets of entities such as users and items. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/movielens.md#L49) |
+| matrix completion | matris tamamlama | proposed | matrix-completion: Inferring missing entries of a partially observed matrix. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/seqrec.md#L3) |
+| low-rank factorization | düşük kerteli ayrıştırma | proposed | low-rank-factorization: Representing a matrix using factors with a lower-dimensional shared dimension. |  |
+| ranking loss | sıralama kaybı | proposed | ranking-loss: A loss measuring errors in the ordering of items. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L5) |
+| pairwise loss | çiftli kayıp | proposed | pairwise-loss: A loss defined on pairs of examples or items and their relative relationship. |  |
+| pointwise loss | noktasal kayıp | proposed | pointwise-loss: A loss evaluated individually on examples or items. |  |
+| negative feedback | olumsuz geri bildirim | proposed | negative-feedback: An observation indicating dislike or lack of preference under a specified interpretation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/ranking.md#L3) |
+| item ranking | öğe sıralaması | proposed | item-ranking: Ordering items by predicted relevance or preference. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/recsys-intro.md#L19) |
+| retrieval | erişim | verified_external | retrieval: Selecting candidate items or documents for further ranking or presentation. | review-tr-92c1bae9fb: page; review-tr-7ccf254e3b: page |
+| user behavior | kullanıcı davranışı | proposed | user-behavior: Actions or interactions performed by a user in a system. |  |
+| next-item prediction | sonraki öğe tahmini | proposed | next-item-prediction: Predicting the next item a user will interact with based on available context. |  |
 | selection bias | seçim yanlılığı | verified_external | selection-bias: Systematic distortion caused by the process selecting observations into a dataset. | [google-ml-tr-responsible-ai](https://developers.google.com/machine-learning/glossary/responsible-ai?hl=tr#selection-bias) |
-| long tail | Uzun kuyruk | proposed | long-tail: A collection of relatively infrequent items that collectively may be substantial. |  |
-| hit rate | İsabet oranı | proposed | hit-rate: The fraction of cases in which a target item appears in a recommended set. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L100) |
-| normalized discounted cumulative gain | Normalize indirgenmiş kümülatif kazanç | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
-| information theory | Bilgi Teorisi | verified_d2l | information-theory: The study of quantifying information, uncertainty, compression, and communication. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L1) |
-| information content | Bilgi içeriği | proposed | information-content: A measure of the information associated with an outcome or message. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L231) |
+| long tail | uzun kuyruk | proposed | long-tail: A collection of relatively infrequent items that collectively may be substantial. |  |
+| hit rate | isabet oranı | proposed | hit-rate: The fraction of cases in which a target item appears in a recommended set. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_recommender-systems/neumf.md#L100) |
+| normalized discounted cumulative gain | normalleştirilmiş indirgenmiş kümülatif kazanç (NDCG) | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
+| information theory | bilgi teorisi | verified_d2l | information-theory: The study of quantifying information, uncertainty, compression, and communication. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L1) |
+| information content | bilgi içeriği | proposed | information-content: A measure of the information associated with an outcome or message. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L231) |
 | Shannon entropy | Shannon entropisi | verified_d2l | shannon-entropy: The expected self-information of a random variable. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L102) |
-| joint entropy | Bileşik Entropi | verified_d2l | joint-entropy: The entropy of a joint probability distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L172) |
-| information bottleneck | Bilgi darboğazı | proposed | information-bottleneck: A framework that balances compression of an input against retention of information about a target. |  |
-| lossless compression | Kayıpsız sıkıştırma | proposed | lossless-compression: Compression that permits exact reconstruction of the original data. |  |
-| source coding | Kaynak kodlama | proposed | source-coding: Representing information from a source using a code. |  |
-| code length | Kod uzunluğu | proposed | code-length: The number of symbols or bits used to encode a message. |  |
-| prefix code | Önek kod | proposed | prefix-code: A code in which no codeword is a prefix of another codeword. |  |
+| joint entropy | bileşik entropi | verified_d2l | joint-entropy: The entropy of a joint probability distribution. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-mathematics-for-deep-learning/information-theory.md#L172) |
+| information bottleneck | bilgi darboğazı | proposed | information-bottleneck: A framework that balances compression of an input against retention of information about a target. |  |
+| lossless compression | kayıpsız sıkıştırma | proposed | lossless-compression: Compression that permits exact reconstruction of the original data. |  |
+| source coding | kaynak kodlama | proposed | source-coding: Representing information from a source using a code. |  |
+| code length | kod uzunluğu | proposed | code-length: The number of symbols or bits used to encode a message. |  |
+| prefix code | önek kod | proposed | prefix-code: A code in which no codeword is a prefix of another codeword. |  |
 | Kraft inequality | Kraft eşitsizliği | proposed | kraft-inequality: A condition relating the lengths of codewords in a prefix code. |  |
-| arithmetic coding | Aritmetik kodlama | proposed | arithmetic-coding: A compression method encoding a sequence as an interval determined by symbol probabilities. |  |
-| minimum description length | Minimum açıklama uzunluğu | proposed | minimum-description-length: A principle selecting models using the combined description length of model and data. |  |
-| description length | Açıklama uzunluğu | proposed | description-length: The length of an encoding of an object, model, or dataset. |  |
-| total variation distance | Toplam varyasyon uzaklığı | proposed | total-variation-distance: A measure of the largest difference in probability assigned to the same event by two distributions. |  |
+| arithmetic coding | aritmetik kodlama | proposed | arithmetic-coding: A compression method encoding a sequence as an interval determined by symbol probabilities. |  |
+| minimum description length | minimum açıklama uzunluğu | proposed | minimum-description-length: A principle selecting models using the combined description length of model and data. |  |
+| description length | açıklama uzunluğu | proposed | description-length: The length of an encoding of an object, model, or dataset. |  |
+| total variation distance | toplam varyasyon uzaklığı | proposed | total-variation-distance: A measure of the largest difference in probability assigned to the same event by two distributions. |  |
 | f-divergence | f-ıraksaması | proposed | f-divergence: A family of divergences defined using a convex function of a density ratio. |  |
-| density ratio | Yoğunluk oranı | proposed | density-ratio: The ratio of two probability densities evaluated at the same point. |  |
-| rate-distortion | Oran-çarpıklık | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
-| distortion measure | Çarpıklık ölçüsü | proposed | distortion-measure: A function quantifying the difference between an original object and its reconstruction. |  |
-| channel capacity | Kanal kapasitesi | proposed | channel-capacity: The maximum reliable communication rate of a channel under specified constraints. |  |
-| noisy channel | Gürültülü kanal | proposed | noisy-channel: A communication channel whose output is randomly perturbed relative to its input. |  |
-| channel coding | Kanal kodlama | proposed | channel-coding: Encoding messages to support reliable communication through a channel. |  |
-| contrastive learning | Karşıtsal öğrenme | proposed | contrastive-learning: Learning representations by distinguishing related examples from alternatives. |  |
-| contrastive loss | Karşıtsal kayıp | proposed | contrastive-loss: A loss encouraging specified examples to be similar or different in representation. |  |
+| density ratio | yoğunluk oranı | proposed | density-ratio: The ratio of two probability densities evaluated at the same point. |  |
+| rate-distortion | hız-bozulma | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
+| distortion measure | bozulma ölçüsü | proposed | distortion-measure: A function quantifying the difference between an original object and its reconstruction. |  |
+| channel capacity | kanal kapasitesi | proposed | channel-capacity: The maximum reliable communication rate of a channel under specified constraints. |  |
+| noisy channel | gürültülü kanal | proposed | noisy-channel: A communication channel whose output is randomly perturbed relative to its input. |  |
+| channel coding | kanal kodlama | proposed | channel-coding: Encoding messages to support reliable communication through a channel. |  |
+| contrastive learning | karşıtsal öğrenme | proposed | contrastive-learning: Learning representations by distinguishing related examples from alternatives. |  |
+| contrastive loss | karşıtsal kayıp | proposed | contrastive-loss: A loss encouraging specified examples to be similar or different in representation. |  |
 | InfoNCE | InfoNCE | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
-| negative pair | Negatif çift | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
-| positive pair | Pozitif çift | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
-| natural parameter | Doğal parametre | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
-| free energy | Serbest enerji | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
-| importance sampling | Önem örneklemesi | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
-| detailed balance | Ayrıntılı denge | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
-| mixing time | Karışma süresi | proposed | mixing-time: A measure of how long a Markov chain takes to approach its stationary distribution. |  |
-| autocorrelation | Özilişki | proposed | autocorrelation: Correlation of a random process or sequence with a shifted version of itself. |  |
+| negative pair | negatif çift | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
+| positive pair | pozitif çift | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
+| natural parameter | doğal parametre | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
+| free energy | serbest enerji | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
+| importance sampling | önem örneklemesi | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
+| detailed balance | ayrıntılı denge | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
+| mixing time | karışma süresi | proposed | mixing-time: A measure of how long a Markov chain takes to approach its stationary distribution. |  |
+| autocorrelation | özilişki | proposed | autocorrelation: Correlation of a random process or sequence with a shifted version of itself. |  |
 | Monte Carlo integration | Monte Carlo integrasyonu | proposed | monte-carlo-integration: Estimating an integral using random samples. |  |
-| random walk | Rastgele yürüyüş | proposed | random-walk: A stochastic process formed by successive random increments or transitions. |  |
+| random walk | rastgele yürüyüş | proposed | random-walk: A stochastic process formed by successive random increments or transitions. |  |
 | Itô process | Itô süreci | proposed | ito-process: A stochastic process represented using drift and diffusion integrals with respect to Brownian motion. |  |
 | Itô integral | Itô integrali | proposed | ito-integral: A stochastic integral defined for suitable adapted processes with respect to Brownian motion. |  |
-| drift | Sürüklenme | proposed | drift: The systematic component of motion in a stochastic or dynamical process. |  |
-| diffusion coefficient | Difüzyon katsayısı | proposed | diffusion-coefficient: A coefficient controlling the random fluctuations in a stochastic differential equation. |  |
-| noise coefficient | Gürültü katsayısı | proposed | noise-coefficient: A coefficient controlling the magnitude of stochastic forcing. |  |
-| local truncation error | Yerel kesme hatası | proposed | local-truncation-error: The error incurred in one numerical step when starting from an exact state. |  |
-| global error | Küresel hata | proposed | global-error: The accumulated difference between a numerical solution and the exact solution over an interval. |  |
-| adaptive step size | Uyarlamalı adım büyüklüğü | proposed | adaptive-step-size: A step size adjusted during computation according to an error or performance criterion. |  |
-| stability region | Kararlılık bölgesi | proposed | stability-region: The set of step and problem parameters for which a numerical method remains stable. |  |
-| numerical solver | Sayısal çözücü | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
-| linear stability | Doğrusal kararlılık | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
-| continuous normalizing flow | Sürekli normalleştirici akış | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
+| drift | sürüklenme | proposed | drift: The systematic component of motion in a stochastic or dynamical process. |  |
+| diffusion coefficient | difüzyon katsayısı | proposed | diffusion-coefficient: A coefficient controlling the random fluctuations in a stochastic differential equation. |  |
+| noise coefficient | gürültü katsayısı | proposed | noise-coefficient: A coefficient controlling the magnitude of stochastic forcing. |  |
+| local truncation error | yerel kesme hatası | proposed | local-truncation-error: The error incurred in one numerical step when starting from an exact state. |  |
+| global error | küresel hata | proposed | global-error: The accumulated difference between a numerical solution and the exact solution over an interval. |  |
+| adaptive step size | uyarlamalı adım büyüklüğü | proposed | adaptive-step-size: A step size adjusted during computation according to an error or performance criterion. |  |
+| stability region | kararlılık bölgesi | proposed | stability-region: The set of step and problem parameters for which a numerical method remains stable. |  |
+| numerical solver | sayısal çözücü | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
+| linear stability | doğrusal kararlılık | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
+| continuous normalizing flow | sürekli normalleştirici akış | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
 | Jacobian determinant | Jakobiyen determinantı | proposed | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. |  |
-| continuity equation | Süreklilik denklemi | proposed | continuity-equation: An equation describing conservation of probability or mass as it flows through space. |  |
+| continuity equation | süreklilik denklemi | proposed | continuity-equation: An equation describing conservation of probability or mass as it flows through space. |  |
 | Kolmogorov forward equation | Kolmogorov ileri denklemi | proposed | kolmogorov-forward-equation: An equation describing the evolution of a stochastic process's probability distribution. |  |
-| multi-query attention | Çoklu sorgu dikkati | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
-| query head | Sorgu başı | proposed | query-head: An attention head that produces queries used to weight values. |  |
-| induction head | Tümevarım başı | proposed | induction-head: An attention head associated with continuing a repeated token pattern from earlier context. |  |
+| multi-query attention | çoklu sorgu dikkati | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
+| query head | sorgu başı | proposed | query-head: An attention head that produces queries used to weight values. |  |
+| induction head | tümevarım başı | proposed | induction-head: An attention head associated with continuing a repeated token pattern from earlier context. |  |
 | QK circuit | QK devresi | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
 | OV circuit | OV devresi | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
-| feedforward block | İleri beslemeli blok | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
+| feedforward block | ileri beslemeli blok | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
 | RMSNorm | RMSNorm | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
 | ALiBi | ALiBi | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
-| sparse attention | Seyrek dikkat | proposed | sparse-attention: Attention in which only a subset of query-key pairs is computed or used. |  |
-| linear attention | Doğrusal dikkat | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
-| quadratic complexity | Karesel karmaşıklık | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
-| tokens per second | Saniyede belirteç | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
-| head dimension | Baş boyutu | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
-| weight tying | Ağırlık bağlama | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
-| embedding table | Gömme tablosu | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
-| output projection | Çıkış izdüşümü | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
-| induction circuit | Tümevarım devresi | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
-| attention pattern | Dikkat örüntüsü | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
-| softmax normalization | Softmax normalizasyonu | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
-| top-k routing | En iyi k yönlendirmesi | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
-| expert parallelism | Uzman paralelliği | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
-| shared expert | Paylaşılan uzman | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
-| compute budget | Hesaplama bütçesi | proposed | compute-budget: The computational resources allocated to a training or inference task. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L664) |
-| training compute | Eğitim hesaplaması | proposed | training-compute: The amount of computation used to train a model. |  |
-| active parameters | Etkin parametreler | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
-| model width | Model genişliği | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
-| training tokens | Eğitim belirteçleri | proposed | training-tokens: Tokens processed as part of model training. |  |
-| inference cost | Çıkarım maliyeti | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
-| kernel launch | Çekirdek başlatma | proposed | kernel-launch: Starting an operation or kernel for execution on a device. |  |
-| launch overhead | Başlatma ek yükü | proposed | launch-overhead: Time or resources spent initiating a computational operation. |  |
-| half precision | Yarı hassasiyet | proposed | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. |  |
-| single precision | Tek hassasiyet | proposed | single-precision: A floating-point format commonly represented using 32 bits. |  |
-| double precision | Çift hassasiyet | proposed | double-precision: A floating-point format commonly represented using 64 bits. |  |
-| floating-point format | Kayan nokta biçimi | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
-| loss scaling | Kayıp ölçekleme | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
-| activation memory | Aktivasyon belleği | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
-| all-gather | All-Gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
-| reduce-scatter | Reduce-Scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
-| batching | Yığınlama | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
-| perceptual compression | Algısal sıkıştırma | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
-| semantic compression | Anlamsal sıkıştırma | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
-| Reflow | Yeniden akış | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
-| consistency training | Tutarlılık eğitimi | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
-| reference velocity | Referans hız | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
-| stop-gradient | Gradyanı durdurma | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
-| prior term | Önsel terim | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
-| denoising term | Gürültü giderme terimi | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
-| reconstruction term | Yeniden oluşturma terimi | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
+| sparse attention | seyrek dikkat | proposed | sparse-attention: Attention in which only a subset of query-key pairs is computed or used. |  |
+| linear attention | doğrusal dikkat | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
+| quadratic complexity | karesel karmaşıklık | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
+| tokens per second | saniyede belirteç | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
+| head dimension | baş boyutu | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
+| weight tying | ağırlık bağlama | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
+| embedding table | gömme tablosu | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
+| output projection | çıktı izdüşümü | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
+| induction circuit | tümevarım devresi | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
+| attention pattern | dikkat örüntüsü | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
+| softmax normalization | softmax normalleştirmesi | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
+| top-k routing | en iyi k yönlendirmesi | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
+| expert parallelism | uzman paralelliği | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
+| shared expert | paylaşılan uzman | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
+| compute budget | hesaplama bütçesi | proposed | compute-budget: The computational resources allocated to a training or inference task. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_introduction/index.md#L664) |
+| training compute | eğitim hesaplaması | proposed | training-compute: The amount of computation used to train a model. |  |
+| active parameters | etkin parametreler | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
+| model width | model genişliği | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
+| training tokens | eğitim belirteçleri | proposed | training-tokens: Tokens processed as part of model training. |  |
+| inference cost | çıkarım maliyeti | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
+| kernel launch | çekirdek başlatma | proposed | kernel-launch: Starting an operation or kernel for execution on a device. |  |
+| launch overhead | başlatma ek yükü | proposed | launch-overhead: Time or resources spent initiating a computational operation. |  |
+| half precision | yarı hassasiyet | proposed | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. |  |
+| single precision | tek hassasiyet | proposed | single-precision: A floating-point format commonly represented using 32 bits. |  |
+| double precision | çift hassasiyet | proposed | double-precision: A floating-point format commonly represented using 64 bits. |  |
+| floating-point format | kayan nokta biçimi | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
+| loss scaling | kayıp ölçekleme | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
+| activation memory | aktivasyon belleği | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
+| all-gather | all-gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
+| reduce-scatter | reduce-scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
+| batching | yığınlama | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
+| perceptual compression | algısal sıkıştırma | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
+| semantic compression | anlamsal sıkıştırma | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
+| Reflow | Reflow | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
+| consistency training | tutarlılık eğitimi | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
+| reference velocity | referans hız | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
+| stop-gradient | gradyanı durdurma | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
+| prior term | önsel terim | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
+| denoising term | gürültü giderme terimi | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
+| reconstruction term | yeniden oluşturma terimi | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
 | Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | Eleştirmen-üretici | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
-| model | Model | proposed | model: A mathematical or computational representation used to describe data or make predictions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L31) |
-| training | Eğitim | verified_d2l | training: The process of fitting a model using data and a learning objective. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L126) |
-| activation | Aktivasyon | verified_external | activation: The output of a neural network unit or activation function for a given input. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L584) |
-| mask | Maske | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/anchor.md#L471) |
+| critic | eleştirmen | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| model | model | proposed | model: A mathematical or computational representation used to describe data or make predictions. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.md#L31) |
+| training | eğitim | verified_d2l | training: The process of fitting a model using data and a learning objective. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_linear-networks/softmax-regression-concise.md#L126) |
+| activation | aktivasyon | verified_external | activation: The output of a neural network unit or activation function for a given input. | [amidi-tr-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/tr/cs-230-convolutional-neural-networks.md#L584) |
+| mask | maske | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. | [d2l-tr-source](https://github.com/d2l-ai/d2l-tr/blob/fff29a8aa5dd6dcab30e45caff912a5b290286f6/chapter_computer-vision/anchor.md#L471) |
+| sample | örnek | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
+| loss | kayıp | proposed | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. |  |
+| score | puan | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
+| batch | yığın | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
+| advantage | avantaj | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
+| cost | maliyet | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |

@@ -235,7 +235,11 @@ build; copy it unchanged.
 | layer, depth, head | 層, 深さ, ヘッド | レイヤ, 頭 |
 | performance | of a model → 性能; of code → 速度 or 計算性能 | パフォーマンス |
 
-### 7.2 Glossary corrections (use these until the glossary is updated)
+### 7.2 Glossary corrections (applied)
+
+These corrections are now in `glossary/terms/ja.jsonl`, with the full review's
+188 (`glossary/review/ja.md`); the glossary is authoritative. The list stays here
+as a record of the errors the earlier machine-translated edition introduced.
 
 汎化 (not 一般化), 分散 (バリアンス), 期待値 (期待), 連鎖律 (チェーンルール), 平行移動不変性
 (翻訳不変性), 相互情報量 (相互情報), 勾配消失 (消失するグラデーション), 勾配爆発 (グラデーションの爆発),

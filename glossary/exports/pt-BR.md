@@ -18,18 +18,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | test set | conjunto de teste | verified_d2l | test-set: Data held out to assess a fitted model. | [d2l-pt-chapter_computer-vision-kaggle-cifar10](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_computer-vision/kaggle-cifar10.md#L52) |
 | model parameter | parâmetro do modelo | proposed | model-parameter: A value learned or fitted as part of a model. |  |
 | weight | peso | proposed | weight: A coefficient that scales an input or connection in a model. |  |
-| bias | termo de viés | proposed | bias: An additive offset in a model or prediction. |  |
+| bias | viés | verified_external | bias: An additive offset in a model or prediction. | review-pt-BR-76f6c01120: page |
 | prediction | previsão | verified_external | prediction: A model's estimate of an outcome for an input. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#prediction) |
 | loss function | função de perda | verified_external | loss-function: A function measuring the error of a prediction or model. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#loss-function) |
-| objective function | função objetiva | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [google-ml-metrics-pt-BR](https://developers.google.com/machine-learning/glossary/metrics?hl=pt-br#objective-function) |
+| objective function | função objetivo | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | review-pt-BR-28b1041fe0: page; review-pt-BR-ea05596e92: page |
 | squared error | erro quadrático | proposed | squared-error: The square of the difference between a prediction and its target. |  |
 | mean squared error | erro quadrático médio | proposed | mean-squared-error: The average squared difference between predictions and targets. |  |
 | empirical risk | risco empírico | proposed | empirical-risk: The average loss measured on a finite dataset. |  |
 | minibatch | minilote | verified_external | minibatch: A subset of examples processed together in an update. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#mini-batch) |
 | batch size | tamanho do lote | verified_external | batch-size: The number of examples processed in a batch. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#batch-size) |
 | epoch | época | proposed | epoch: A pass through the training dataset. |  |
-| gradient descent | gradiente descendente | verified_d2l | gradient-descent: An optimization method that moves parameters against the objective gradient. | [d2l-pt-chapter_introduction-index](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_introduction/index.md#L421) |
-| stochastic gradient descent | descida de gradiente estocástico | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. |  |
+| gradient descent | descida de gradiente | proposed | gradient-descent: An optimization method that moves parameters against the objective gradient. |  |
+| stochastic gradient descent | descida de gradiente estocástica | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. |  |
 | learning rate | taxa de aprendizado | verified_external | learning-rate: The step-size setting used in an optimization update. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#learning-rate) |
 | optimization | otimização | proposed | optimization: The process of finding values that improve an objective. |  |
 | gradient | gradiente | verified_external | gradient: The vector of partial derivatives of a scalar function. | [stanford-paired-pt-BR-cs-229-linear-algebra](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-linear-algebra.md#L291) |
@@ -63,11 +63,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | random variable | variável aleatória | verified_external | random-variable: A quantity whose value is determined by a random outcome. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L123) |
 | probability distribution | distribuição de probabilidade | proposed | probability-distribution: A specification of probabilities for possible outcomes. |  |
 | probability density | densidade de probabilidade | proposed | probability-density: A function whose integral over a region gives its probability. |  |
-| conditional probability | probabilidade Condicional | verified_external | conditional-probability: The probability of an event given another event. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L69) |
+| conditional probability | probabilidade condicional | proposed | conditional-probability: The probability of an event given another event. |  |
 | joint distribution | distribuição conjunta | proposed | joint-distribution: A probability distribution over multiple random variables together. |  |
-| marginal distribution | distribuição marginale | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
+| marginal distribution | distribuição marginal | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
 | independence | independência | verified_external | independence: A property where knowing one event or variable does not change the distribution of another. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L105) |
-| expectation | expectativa | verified_d2l | expectation: The probability-weighted average of a random quantity. | [d2l-pt-chapter_multilayer-perceptrons-dropout](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_multilayer-perceptrons/dropout.md#L161) |
+| expectation | esperança | verified_external | expectation: The probability-weighted average of a random quantity. | review-pt-BR-acb2c082c7: page; review-pt-BR-c40e449f80: page |
 | variance | variância | verified_external | variance: The expected squared deviation from the mean. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L165) |
 | standard deviation | desvio padrão | verified_external | standard-deviation: The square root of variance. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L171) |
 | covariance | covariância | proposed | covariance: A measure of how two random variables vary together. |  |
@@ -94,40 +94,40 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | precision | precisão | proposed | precision: The fraction of predicted positives that are true positives. |  |
 | recall | revocação | proposed | recall: The fraction of actual positives that are correctly identified. |  |
 | confusion matrix | matriz de confusão | verified_external | confusion-matrix: A table comparing predicted and actual class counts. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#confusion-matrix) |
-| neural network | rede Neural | verified_external | neural-network: A model composed of interconnected parameterized transformations. | [stanford-paired-pt-BR-cs-229-supervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-supervised-learning.md#L81) |
+| neural network | rede neural | proposed | neural-network: A model composed of interconnected parameterized transformations. |  |
 | neuron | neurônio | verified_external | neuron: A computational unit that transforms inputs into an output. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#neuron) |
 | layer | camada | proposed | layer: A stage of a neural network that transforms its input. |  |
-| hidden layer | camada escondida | verified_external | hidden-layer: A network layer between the input and output layers. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#hidden-layer) |
+| hidden layer | camada oculta | verified_external | hidden-layer: A network layer between the input and output layers. | review-pt-BR-a0f4765b53: page; review-pt-BR-ea05596e92: page |
 | activation function | função de ativação | verified_external | activation-function: A function applied to a unit's input to produce its activation. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#activation-function) |
 | nonlinearity | não linearidade | proposed | nonlinearity: A transformation that is not linear in its input. |  |
 | multilayer perceptron | perceptron multicamadas | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. |  |
-| rectified linear unit | unidade Linear Retificada | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | [stanford-paired-pt-BR-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-230-convolutional-neural-networks.md#L49) |
+| rectified linear unit | ReLU | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | review-pt-BR-c40ce8f156: page |
 | overfitting | sobreajuste | verified_d2l | overfitting: Fitting training data so closely that performance on unseen data suffers. | [d2l-pt-chapter_computer-vision-image-augmentation](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_computer-vision/image-augmentation.md#L363) |
 | underfitting | subajuste | proposed | underfitting: Failing to capture important structure even in the training data. |  |
 | generalization | generalização | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#generalization) |
 | regularization | regularização | verified_d2l | regularization: A method that constrains or modifies learning to improve generalization. | [d2l-pt-chapter_attention-mechanisms-attention-scoring-functions](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_attention-mechanisms/attention-scoring-functions.md#L329) |
 | weight decay | decaimento de pesos | proposed | weight-decay: A regularization method that shrinks model weights during training. |  |
-| dropout | desativação aleatória | proposed | dropout: A training method that randomly masks activations to regularize a network. |  |
+| dropout | dropout | verified_external | dropout: A training method that randomly masks activations to regularize a network. | review-pt-BR-76f6c01120: page; review-pt-BR-bc64ba442f: page; review-pt-BR-ea05596e92: page |
 | early stopping | parada antecipada | proposed | early-stopping: Stopping training based on validation performance before fitting continues too far. |  |
 | hyperparameter | hiperparâmetro | verified_external | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [google-ml-fundamentals-pt-BR](https://developers.google.com/machine-learning/glossary/fundamentals?hl=pt-br#hyperparameter) |
-| model selection | seleção de Modelo | verified_external | model-selection: The process of choosing a model or configuration using available evidence. | [stanford-paired-pt-BR-cs-229-machine-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-machine-learning-tips-and-tricks.md#L129) |
+| model selection | seleção de modelos | proposed | model-selection: The process of choosing a model or configuration using available evidence. |  |
 | cross-validation | validação cruzada | verified_external | cross-validation: A method for evaluating configurations across different train-validation splits. | [stanford-paired-pt-BR-cs-229-machine-learning-tips-and-tricks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-machine-learning-tips-and-tricks.md#L171) |
 | initialization | inicialização | proposed | initialization: The choice of initial parameter values before training. |  |
 | vanishing gradient | desvanecimento do gradiente | proposed | vanishing-gradient: A gradient that becomes very small as it propagates through a network. |  |
 | exploding gradient | explosão do gradiente | proposed | exploding-gradient: A gradient that grows excessively large during propagation. |  |
-| gradient clipping | recorte de gradientes | proposed | gradient-clipping: Limiting gradient magnitude to stabilize optimization. |  |
+| gradient clipping | clipping de gradiente | proposed | gradient-clipping: Limiting gradient magnitude to stabilize optimization. |  |
 | batch normalization | normalização em lote | verified_external | batch-normalization: A normalization method using statistics of activations in a batch. | [stanford-paired-pt-BR-cs-229-deep-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-deep-learning.md#L129) |
 | layer normalization | normalização por camada | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | convolução | verified_external | convolution: An operation that combines local input values with shared kernel weights. | [stanford-paired-pt-BR-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-230-convolutional-neural-networks.md#L28) |
 | convolutional neural network | rede neural convolucional | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
-| kernel | núcleo de convolução | proposed | kernel: A set of weights applied locally in a convolution. |  |
+| kernel | kernel | proposed | kernel: A set of weights applied locally in a convolution. |  |
 | filter | filtro | proposed | filter: A learned set of local weights used to extract a pattern. |  |
 | channel | canal | proposed | channel: A feature dimension in a structured representation such as an image. |  |
-| stride | passo | verified_external | stride: The spacing between successive positions of an operation on an input. | [stanford-paired-pt-BR-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-230-convolutional-neural-networks.md#L35) |
+| stride | stride | proposed | stride: The spacing between successive positions of an operation on an input. |  |
 | padding | preenchimento | verified_external | padding: Extra values added around an input to control an operation's boundary or output size. | [stanford-paired-pt-BR-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-230-convolutional-neural-networks.md#L35) |
-| pooling | agrupamento | proposed | pooling: An operation that aggregates values over local regions. |  |
-| max pooling | agrupamento máximo | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
-| average pooling | agrupamento por média | proposed | average-pooling: Pooling that averages values in each region. |  |
+| pooling | pooling | verified_external | pooling: An operation that aggregates values over local regions. | review-pt-BR-c63085c199: page; review-pt-BR-ea05596e92: page |
+| max pooling | pooling máximo | verified_external | max-pooling: Pooling that selects the maximum value in each region. | review-pt-BR-c63085c199: page |
+| average pooling | pooling médio | verified_external | average-pooling: Pooling that averages values in each region. | review-pt-BR-c63085c199: page |
 | receptive field | campo receptivo | verified_external | receptive-field: The region of an input that can influence a particular activation. | [stanford-paired-pt-BR-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-230-convolutional-neural-networks.md#L289) |
 | translation equivariance | equivariância à translação | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | conexão residual | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
@@ -137,12 +137,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | transfer learning | aprendizado por transferência | verified_d2l | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [d2l-pt-chapter_computer-vision-fine-tuning](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_computer-vision/fine-tuning.md#L14) |
 | fine-tuning | ajuste fino | verified_d2l | fine-tuning: Further training a pretrained model for a particular task or dataset. | [d2l-pt-chapter_computer-vision-fine-tuning](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_computer-vision/fine-tuning.md#L14) |
 | pretraining | pré-treinamento | proposed | pretraining: Training a model on an initial task or dataset before adaptation. |  |
-| object detection | detecção de objeto | verified_d2l | object-detection: The task of locating and classifying objects in an image. | [d2l-pt-chapter_computer-vision-rcnn](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_computer-vision/rcnn.md#L126) |
+| object detection | detecção de objetos | proposed | object-detection: The task of locating and classifying objects in an image. |  |
 | bounding box | caixa delimitadora | proposed | bounding-box: A rectangle specifying the location and extent of an object. |  |
 | intersection over union | interseção sobre união | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
 | semantic segmentation | segmentação semântica | verified_d2l | semantic-segmentation: The task of assigning a semantic class to each image pixel. | [d2l-pt-chapter_computer-vision-fcn](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_computer-vision/fcn.md#L5) |
 | instance segmentation | segmentação de instâncias | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
-| image classification | classificação de imagem | verified_external | image-classification: The task of assigning a class to an image. | [stanford-paired-pt-BR-cs-230-convolutional-neural-networks](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-230-convolutional-neural-networks.md#L359) |
+| image classification | classificação de imagens | proposed | image-classification: The task of assigning a class to an image. |  |
 | computer vision | visão computacional | proposed | computer-vision: The study of extracting information and making predictions from visual data. |  |
 | recurrent neural network | rede neural recorrente | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
 | hidden state | estado oculto | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
@@ -152,16 +152,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | token | token | proposed | token: A unit into which text is divided for processing. |  |
 | tokenization | tokenização | proposed | tokenization: The process of dividing text into tokens. |  |
 | vocabulary | vocabulário | verified_d2l | vocabulary: The set of tokens available to a language model. | [d2l-pt-chapter_recurrent-neural-networks-text-preprocessing](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_recurrent-neural-networks/text-preprocessing.md#L103) |
-| embedding | incorporação vetorial | proposed | embedding: A learned numerical representation of a discrete item or other object. |  |
-| word embedding | incorporação de palavras | proposed | word-embedding: A numerical vector representing a word. |  |
+| embedding | embedding | verified_external | embedding: A learned numerical representation of a discrete item or other object. | review-pt-BR-0fabb60463: page; review-pt-BR-ea05596e92: page |
+| word embedding | embedding de palavras | proposed | word-embedding: A numerical vector representing a word. |  |
 | sequence-to-sequence | sequência para sequência | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | codificador | proposed | encoder: A component that converts an input into an internal representation. |  |
 | decoder | decodificador | proposed | decoder: A component that produces an output from an internal representation or context. |  |
-| teacher forcing | forçamento pelo professor | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
+| teacher forcing | teacher forcing | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
 | beam search | busca em feixe | proposed | beam-search: A decoding method that retains a limited number of candidate sequences at each step. |  |
 | perplexity | perplexidade | proposed | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. |  |
-| long short-term memory | memória de longo e curto prazo | proposed | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. |  |
-| gated recurrent unit | unidade recorrente com portas | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
+| long short-term memory | LSTM | verified_external | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | review-pt-BR-588e8edde6: page |
+| gated recurrent unit | GRU | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
 | attention | atenção | proposed | attention: A mechanism that forms a context-dependent weighted combination of values. |  |
 | self-attention | autoatenção | proposed | self-attention: Attention in which queries, keys, and values are derived from the same sequence. |  |
 | multi-head attention | atenção multicabeças | proposed | multi-head-attention: Attention computed in several learned representation subspaces and then combined. |  |
@@ -180,9 +180,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | latent variable | variável latente | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
 | latent space | espaço latente | proposed | latent-space: A space of unobserved representations used by a model. |  |
 | diffusion model | modelo de difusão | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
-| noise schedule | cronograma de ruído | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
+| noise schedule | agendamento de ruído | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
 | denoising | remoção de ruído | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
-| score function | função escore de densidade | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
+| score function | função escore | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | cadeia de Markov | proposed | markov-chain: A stochastic process whose next state depends on the present state. |  |
 | Markov decision process | processo de decisão de Markov | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. |  |
 | reinforcement learning | aprendizado por reforço | proposed | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. |  |
@@ -192,12 +192,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | action | ação | verified_external | action: A choice made by an agent that can affect the environment. | [google-ml-agent-pt-BR](https://developers.google.com/machine-learning/glossary/agent?hl=pt-br#action) |
 | reward | recompensa | verified_d2l | reward: A scalar feedback signal evaluating an outcome or transition. | [d2l-pt-chapter_introduction-index](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_introduction/index.md#L1119) |
 | policy | política | verified_d2l | policy: A rule or distribution for selecting actions from states. | [d2l-pt-chapter_introduction-index](https://github.com/d2l-ai/d2l-pt/blob/ee8a9f0a88a4791f277a55e32cb6c83fd00a7cac/chapter_introduction/index.md#L1123) |
-| return | retorno acumulado | proposed | return: The accumulated future reward from a point in a trajectory. |  |
+| return | retorno | proposed | return: The accumulated future reward from a point in a trajectory. |  |
 | discount factor | fator de desconto | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
 | value function | função de valor | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [stanford-paired-pt-BR-cs-229-deep-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-deep-learning.md#L237) |
 | action-value function | função de valor de ação | proposed | action-value-function: A function estimating expected return from a state and action. |  |
 | value iteration | iteração de valor | proposed | value-iteration: An iterative method for computing optimal values using Bellman updates. |  |
-| Q-learning | aprendizado Q | proposed | q-learning: An off-policy temporal-difference method for learning action values. |  |
+| Q-learning | Q-learning | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | review-pt-BR-6b479fcd6c: page |
 | exploration | exploração | proposed | exploration: Trying actions to acquire information about their outcomes. |  |
 | policy gradient | gradiente de política | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
 | convex function | função convexa | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
@@ -206,10 +206,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | local minimum | mínimo local | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. |  |
 | global minimum | mínimo global | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
 | saddle point | ponto de sela | proposed | saddle-point: A stationary point that is not a local extremum in all directions. |  |
-| Hessian | hessiano | verified_external | hessian: The matrix of second partial derivatives of a scalar function. | [stanford-paired-pt-BR-cs-229-linear-algebra](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-linear-algebra.md#L303) |
+| Hessian | hessiana | verified_external | hessian: The matrix of second partial derivatives of a scalar function. | review-pt-BR-f08131edc8: page |
 | Jacobian | matriz jacobiana | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
-| momentum | momento | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. |  |
-| learning rate schedule | cronograma da taxa de aprendizado | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
+| momentum | momentum | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. |  |
+| learning rate schedule | agendamento da taxa de aprendizado | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
 | Adam | Adam | proposed | adam: An optimization algorithm using adaptive estimates of gradient moments. |  |
 | AdaGrad | AdaGrad | proposed | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. |  |
 | RMSProp | RMSProp | proposed | rmsprop: An adaptive gradient method using a moving average of squared gradients. |  |
@@ -218,8 +218,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | stationary point | ponto estacionário | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
 | Gaussian process | processo gaussiano | proposed | gaussian-process: A distribution over functions whose finite collections of values are jointly Gaussian. |  |
 | covariance function | função de covariância | proposed | covariance-function: A function specifying covariance between values at pairs of inputs. |  |
-| kernel function | função de núcleo | proposed | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. |  |
-| posterior predictive distribution | distribuição preditiva posterior | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
+| kernel function | função kernel | proposed | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. |  |
+| posterior predictive distribution | distribuição preditiva a posteriori | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
 | Bayesian optimization | otimização bayesiana | proposed | bayesian-optimization: An optimization method using a probabilistic surrogate to choose evaluations. |  |
 | grid search | busca em grade | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
 | random search | busca aleatória | proposed | random-search: A search that samples hyperparameter configurations at random. |  |
@@ -243,7 +243,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | change of variables | mudança de variáveis | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
 | Markov property | propriedade de Markov | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
 | stationary distribution | distribuição estacionária | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
-| principal component analysis | análise de componente principal | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [stanford-paired-pt-BR-cs-229-unsupervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-unsupervised-learning.md#L177) |
+| principal component analysis | análise de componentes principais | verified_external | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | review-pt-BR-cf35b65e70: page |
 | dimensionality reduction | redução de dimensionalidade | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
 | principal component | componente principal | proposed | principal-component: A direction capturing variance under the constraints of principal component analysis. |  |
 | convergence | convergência | verified_external | convergence: The approach of a sequence or process toward a limiting value or behavior. | [stanford-paired-pt-BR-cs-229-unsupervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-unsupervised-learning.md#L99) |
@@ -252,8 +252,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayesian inference | inferência bayesiana | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
 | confidence interval | intervalo de confiança | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. |  |
 | hypothesis testing | teste de hipóteses | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. |  |
-| bootstrap | reamostragem bootstrap | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
-| central limit theorem | teorema do Limite Central | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L321) |
+| bootstrap | bootstrap | verified_external | bootstrap: A resampling method that estimates variability by sampling from observed data. | review-pt-BR-0256a87938: page |
+| central limit theorem | teorema central do limite | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | review-pt-BR-0bd71487fa: page |
 | law of large numbers | lei dos grandes números | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. |  |
 | variance reduction | redução de variância | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
 | causality | causalidade | proposed | causality: The relationship in which changes to one variable bring about changes in another. |  |
@@ -264,7 +264,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fairness | equidade | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
 | parallelism | paralelismo | proposed | parallelism: Executing multiple computations concurrently. |  |
 | data parallelism | paralelismo de dados | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
-| GPU | unidade de processamento gráfico | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
+| GPU | GPU | verified_external | gpu: A processor designed for highly parallel numerical computation. | review-pt-BR-78bdffb3c3: page |
 | memory bandwidth | largura de banda da memória | proposed | memory-bandwidth: The rate at which data can be transferred to or from memory. |  |
 | throughput | vazão | proposed | throughput: The amount of work completed per unit time. |  |
 | latency | latência | verified_external | latency: The elapsed time required to complete a task or operation. | [google-ml-generative-pt-BR](https://developers.google.com/machine-learning/glossary/generative?hl=pt-br#latency) |
@@ -273,8 +273,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | probability mass function | função de massa de probabilidade | proposed | probability-mass-function: A function assigning probabilities to individual discrete outcomes. |  |
 | cumulative distribution function | função de distribuição acumulada | proposed | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. |  |
 | conditional distribution | distribuição condicional | proposed | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. |  |
-| log-likelihood | logaritmo da verossimilhança | proposed | log-likelihood: The logarithm of a likelihood function. |  |
-| negative log-likelihood | logaritmo negativo da verossimilhança | proposed | negative-log-likelihood: The negative logarithm of the likelihood of observed data. |  |
+| log-likelihood | log-verossimilhança | verified_external | log-likelihood: The logarithm of a likelihood function. | review-pt-BR-40348cdde4: page |
+| negative log-likelihood | log-verossimilhança negativa | proposed | negative-log-likelihood: The negative logarithm of the likelihood of observed data. |  |
 | maximum a posteriori | máximo a posteriori | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
 | conjugate prior | distribuição a priori conjugada | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
 | Beta distribution | distribuição beta | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
@@ -293,21 +293,21 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | standard error | erro padrão | proposed | standard-error: The standard deviation of a sampling distribution of an estimator. |  |
 | sampling distribution | distribuição amostral | proposed | sampling-distribution: The probability distribution of a statistic across repeated samples. |  |
 | statistical significance | significância estatística | proposed | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. |  |
-| p-value | valor p | proposed | p-value: The probability under a null model of a result at least as extreme as the observed result according to a test statistic. |  |
+| p-value | valor-p | verified_external | p-value: The probability under a null model of a result at least as extreme as the observed result according to a test statistic. | review-pt-BR-e5de9ff624: page |
 | null hypothesis | hipótese nula | proposed | null-hypothesis: The reference hypothesis assessed by a statistical test. |  |
 | credible interval | intervalo de credibilidade | proposed | credible-interval: An interval containing a specified posterior probability of an unknown quantity. |  |
-| posterior predictive | preditivo posterior | proposed | posterior-predictive: A prediction obtained by averaging over posterior uncertainty. |  |
+| posterior predictive | preditiva a posteriori | proposed | posterior-predictive: A prediction obtained by averaging over posterior uncertainty. |  |
 | probabilistic model | modelo probabilístico | proposed | probabilistic-model: A model that represents uncertainty using probability distributions. |  |
 | latent variable model | modelo de variáveis latentes | proposed | latent-variable-model: A probabilistic model incorporating unobserved variables. |  |
 | mixture model | modelo de mistura | proposed | mixture-model: A probability model combining multiple component distributions. |  |
 | mixture of Gaussians | mistura de gaussianas | proposed | mixture-of-gaussians: A probability distribution formed as a weighted combination of Gaussian components. |  |
 | variational inference | inferência variacional | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
 | evidence lower bound | limite inferior da evidência | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
-| log probability | logaritmo da probabilidade | proposed | log-probability: The logarithm of a probability or probability density. |  |
-| log-sum-exp | logaritmo da soma de exponenciais | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
+| log probability | log-probabilidade | proposed | log-probability: The logarithm of a probability or probability density. |  |
+| log-sum-exp | log-sum-exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
 | numerical stability | estabilidade numérica | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. |  |
 | floating point | ponto flutuante | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
-| underflow | subfluxo | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
+| underflow | underflow | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
 | overflow | estouro | proposed | overflow: A numerical condition in which a magnitude exceeds the representable range. |  |
 | condition number | número de condição | proposed | condition-number: A measure of how sensitive a mathematical problem is to perturbations. |  |
 | convergence rate | taxa de convergência | proposed | convergence-rate: The speed at which an iterative procedure approaches a limit or solution. |  |
@@ -342,7 +342,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | supervised learning | aprendizado supervisionado | proposed | supervised-learning: Learning a mapping from inputs to observed targets. |  |
 | unsupervised learning | aprendizado não supervisionado | proposed | unsupervised-learning: Learning structure from data without task labels. |  |
 | in-context learning | aprendizado em contexto | proposed | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. |  |
-| prompt | instrução | proposed | prompt: An input that guides a model's response or behavior. |  |
+| prompt | prompt | verified_external | prompt: An input that guides a model's response or behavior. | review-pt-BR-16a1470807: page |
 | context window | janela de contexto | verified_external | context-window: The amount of context a model can process in a single input. | [google-ml-generative-pt-BR](https://developers.google.com/machine-learning/glossary/generative?hl=pt-br#context-window) |
 | next-token prediction | previsão do próximo token | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
 | autoregressive model | modelo autorregressivo | verified_external | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. | [google-ml-generative-pt-BR](https://developers.google.com/machine-learning/glossary/generative?hl=pt-br#auto-regressive-model) |
@@ -351,16 +351,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | cross-attention | atenção cruzada | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
 | scaled dot-product attention | atenção por produto escalar escalonado | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | atenção softmax | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
-| position embedding | incorporação posicional | proposed | position-embedding: A representation of position used in a sequence model. |  |
-| rotary position embedding | incorporação posicional rotativa | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
+| position embedding | embedding posicional | proposed | position-embedding: A representation of position used in a sequence model. |  |
+| rotary position embedding | embedding posicional rotativo | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
 | feedforward network | rede de propagação direta | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
 | residual block | bloco residual | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | camada de normalização | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
-| root mean square | raiz quadrática média | proposed | root-mean-square: The square root of the mean of squared values. |  |
+| root mean square | raiz da média dos quadrados | proposed | root-mean-square: The square root of the mean of squared values. |  |
 | encoder-decoder | codificador-decodificador | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | comprimento da sequência | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | pontuação de atenção | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
-| attention pooling | agregação por atenção | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
+| attention pooling | pooling por atenção | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
 | additive attention | atenção aditiva | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
 | dot-product attention | atenção por produto escalar | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
 | masked attention | atenção mascarada | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
@@ -369,7 +369,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | n-gram | n-grama | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
 | corpus | corpus | proposed | corpus: A collection of texts used for language analysis or model training. |  |
 | word frequency | frequência de palavras | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
-| embedding matrix | matriz de incorporações | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
+| embedding matrix | matriz de embeddings | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
 | cosine similarity | similaridade de cosseno | proposed | cosine-similarity: A similarity measure based on the angle between vectors. |  |
 | nearest neighbor | vizinho mais próximo | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. |  |
 | word analogy | analogia de palavras | proposed | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. |  |
@@ -383,7 +383,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | semantic similarity | similaridade semântica | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
 | convolutional layer | camada convolucional | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | mapa de características | proposed | feature-map: An array of activations representing features across positions. |  |
-| pooling layer | camada de agrupamento | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
+| pooling layer | camada de pooling | verified_external | pooling-layer: A layer that aggregates local groups of activations. | review-pt-BR-c63085c199: page |
 | strided convolution | convolução com passo | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | convolução transposta | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. |  |
 | dilated convolution | convolução dilatada | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
@@ -394,7 +394,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | image recognition | reconhecimento de imagens | proposed | image-recognition: The task of identifying visual content in images. |  |
 | image segmentation | segmentação de imagens | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
 | region proposal | proposta de região | proposed | region-proposal: A candidate image region that may contain an object. |  |
-| anchor box | caixa âncora | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
+| anchor box | caixa-âncora | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
 | non-maximum suppression | supressão de não máximos | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
 | data augmentation | aumento de dados | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
 | random crop | recorte aleatório | proposed | random-crop: A data augmentation that selects a random subregion of an input. |  |
@@ -411,24 +411,24 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | policy iteration | iteração de política | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
 | policy evaluation | avaliação de política | proposed | policy-evaluation: Computing or estimating the value of a policy. |  |
 | policy improvement | melhoria de política | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
-| off-policy | fora da política | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
-| on-policy | na política | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
+| off-policy | off-policy | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
+| on-policy | on-policy | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
 | multi-armed bandit | bandido de múltiplos braços | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
 | regret | arrependimento | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
 | Markov reward process | processo de recompensa de Markov | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
 | Bellman optimality equation | equação de otimalidade de Bellman | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | teorema do gradiente de política | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
 | deep reinforcement learning | aprendizado profundo por reforço | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
-| target network | rede alvo | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
+| target network | rede-alvo | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
 | experience replay | replay de experiências | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
 | diffusion process | processo de difusão | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
 | forward process | processo direto | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
 | reverse process | processo reverso | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
-| score matching | ajuste de escores | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
+| score matching | score matching | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | dinâmica de Langevin | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
 | noise prediction | previsão de ruído | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
 | Gaussian noise | ruído gaussiano | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. |  |
-| flow matching | ajuste de fluxos | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
+| flow matching | flow matching | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
 | probability flow | fluxo de probabilidade | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
 | vector field | campo vetorial | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
 | continuous-time | tempo contínuo | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
@@ -439,13 +439,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adjoint method | método adjunto | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | exponencial de matriz | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | transformada de Fourier | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
-| bias | viés estatístico | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
+| bias | viés | verified_external | statistical-bias: The difference between an estimator’s expected value and the true parameter. | review-pt-BR-b2d70cc63b: page |
 | mixture of experts | mistura de especialistas | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
 | transition kernel | núcleo de transição | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | recompensa esperada | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
 | effective horizon | horizonte efetivo | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
 | behavior policy | política de comportamento | proposed | behavior-policy: The policy that generates the data used by a learning algorithm. |  |
-| target policy | política alvo | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
+| target policy | política-alvo | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
 | temporal-difference error | erro de diferença temporal | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
 | reward-to-go | recompensa futura acumulada | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
 | dynamic programming | programação dinâmica | proposed | dynamic-programming: A family of methods solving a problem through recursive subproblems. |  |
@@ -453,7 +453,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | control variate | variável de controle | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
 | function approximation | aproximação de funções | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
 | actor | ator | proposed | actor: The policy component of an actor-critic method. |  |
-| critic | crítico de valor | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
+| critic | crítico | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
 | fixed point | ponto fixo | proposed | fixed-point: A point unchanged by applying a given mapping. |  |
 | value backup | atualização de valor | proposed | value-backup: A computation updating a value estimate using rewards and successor values. |  |
 | greedy policy | política gulosa | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. |  |
@@ -473,7 +473,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | natural gradient | gradiente natural | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
 | Shampoo | Shampoo | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
 | Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
-| heavy-ball momentum | momento de bola pesada | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
+| heavy-ball momentum | momentum heavy-ball | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
 | trust-region method | método de região de confiança | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
 | soft-thresholding | limiarização suave | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
 | convex conjugate | conjugada convexa | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
@@ -496,7 +496,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | normal equations | equações normais | verified_external | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. | [stanford-paired-pt-BR-cs-229-supervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-supervised-learning.md#L141) |
 | one-hot encoding | codificação one-hot | proposed | one-hot-encoding: A representation of a category as a vector with one active component. |  |
 | concatenation | concatenação | proposed | concatenation: The operation of joining arrays or sequences along an axis. |  |
-| broadcasting | transmissão de dimensões | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
+| broadcasting | broadcasting | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
 | shape | forma | proposed | shape: The sizes of the axes of an array or tensor. |  |
 | slice | fatia | proposed | slice: A selected portion of an array or sequence. |  |
 | forward mode | modo direto | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
@@ -526,7 +526,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | image-to-image translation | tradução de imagem para imagem | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
 | cycle consistency | consistência cíclica | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
 | critic loss | perda do crítico | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
-| KV cache | cache de chaves e valores | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
+| KV cache | cache KV | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
 | grouped-query attention | atenção com consultas agrupadas | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
 | attention sink | sumidouro de atenção | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
 | transformer block | bloco transformer | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
@@ -537,18 +537,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | prefill | processamento inicial do contexto | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
 | decode | decodificação | proposed | decode: The stage of generating output tokens from a model one step at a time. |  |
 | time to first token | tempo até o primeiro token | proposed | time-to-first-token: The elapsed time from a generation request until its first output token. |  |
-| roofline | modelo de teto de desempenho | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
+| roofline | roofline | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
 | arithmetic intensity | intensidade aritmética | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
 | mixed precision | precisão mista | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
 | eager execution | execução imediata | proposed | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. |  |
-| activation checkpointing | salvamento seletivo de ativações | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
+| activation checkpointing | checkpointing de ativações | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
 | data loader | carregador de dados | proposed | data-loader: A component that prepares and supplies batches of data to a training process. |  |
 | input pipeline | pipeline de entrada | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
 | stochastic depth | profundidade estocástica | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | agrupamento global por média | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
+| global average pooling | pooling médio global | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
 | grouped convolution | convolução agrupada | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | média móvel exponencial | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
-| inverted dropout | desativação aleatória invertida | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
+| inverted dropout | dropout invertido | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
 | He initialization | inicialização de He | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
 | GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
 | generalization gap | lacuna de generalização | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
@@ -596,14 +596,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | memory-bound | limitado pela memória | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
 | compute-bound | limitado pela computação | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
 | graph compilation | compilação de grafos | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
-| just-in-time compilation | compilação em tempo de execução | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
+| just-in-time compilation | compilação just-in-time | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
 | asynchronous execution | execução assíncrona | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | sincronização | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. |  |
-| all-reduce | redução coletiva | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
+| all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | acúmulo de gradientes | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
 | pipeline parallelism | paralelismo de pipeline | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
 | tensor parallelism | paralelismo de tensores | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
-| checkpointing | salvamento de pontos de verificação | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
+| checkpointing | checkpointing | verified_external | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. | review-pt-BR-0ade1edd44: page |
 | reproducibility | reprodutibilidade | proposed | reproducibility: The ability to obtain consistent results when repeating an experiment under specified conditions. |  |
 | random number generator | gerador de números aleatórios | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
 | rounding error | erro de arredondamento | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
@@ -622,7 +622,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reward hacking | exploração indevida da recompensa | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
 | planning horizon | horizonte de planejamento | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | operador de Bellman | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
-| bootstrapping | atualização por estimativas | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
+| bootstrapping | bootstrapping | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
 | Monte Carlo return | retorno de Monte Carlo | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
 | terminal reward | recompensa terminal | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
 | exploration bonus | bônus de exploração | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
@@ -687,12 +687,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | probability simplex | simplexo de probabilidade | proposed | probability-simplex: The set of nonnegative vectors whose components sum to one. |  |
 | stochastic process | processo estocástico | proposed | stochastic-process: A collection of random variables indexed by time or another parameter. |  |
 | conditional independence | independência condicional | proposed | conditional-independence: Independence of variables after conditioning on another variable or set of variables. |  |
-| posterior mean | média posterior | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
-| posterior variance | variância posterior | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
+| posterior mean | média a posteriori | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
+| posterior variance | variância a posteriori | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
 | independent samples | amostras independentes | proposed | independent-samples: Samples whose values do not provide information about each other under the model. |  |
 | identically distributed | identicamente distribuídas | proposed | identically-distributed: Having the same probability distribution. |  |
 | random sample | amostra aleatória | verified_external | random-sample: A collection of observations drawn according to a sampling procedure. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L279) |
-| sample mean | média da amostra | verified_external | sample-mean: The arithmetic average of observed sample values. | [stanford-paired-pt-BR-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-probability.md#L309) |
+| sample mean | média amostral | verified_external | sample-mean: The arithmetic average of observed sample values. | review-pt-BR-18371f7e1f: page |
 | sample variance | variância amostral | proposed | sample-variance: A statistic measuring dispersion of observed values around their sample mean. |  |
 | population mean | média populacional | proposed | population-mean: The expected value of a variable in the population under study. |  |
 | sampling error | erro de amostragem | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
@@ -714,19 +714,19 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | data processing inequality | desigualdade do processamento de dados | proposed | data-processing-inequality: A bound stating that processing cannot increase information about an original variable under a Markov relationship. |  |
 | relative entropy | entropia relativa | proposed | relative-entropy: Another name for Kullback-Leibler divergence between distributions. |  |
 | Gaussian path | trajetória gaussiana | proposed | gaussian-path: A family of noisy distributions formed by combining a scaled data point with Gaussian noise. |  |
-| log-SNR | logaritmo da relação sinal-ruído | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
+| log-SNR | log-SNR | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
 | conditional velocity | velocidade condicional | proposed | conditional-velocity: The velocity of an individual noisy path conditioned on its clean data point. |  |
 | marginal velocity | velocidade marginal | proposed | marginal-velocity: The average path velocity conditioned on a point at a given time. |  |
-| conditional flow matching | ajuste condicional de fluxos | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
+| conditional flow matching | flow matching condicional | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
 | simple loss | perda simples | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
-| flow map | aplicação de fluxo | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
+| flow map | mapa de fluxo | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
 | average velocity | velocidade média | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
 | consistency model | modelo de consistência | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
 | consistency distillation | destilação de consistência | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
 | adaptive layer norm | normalização adaptativa por camada | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
 | adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | modelabilidade | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
-| forward posterior | posterior do processo direto | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
+| forward posterior | distribuição a posteriori do processo direto | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
 | binary classification | classificação binária | proposed | binary-classification: The task of assigning each input to one of two classes. |  |
 | multiclass classification | classificação multiclasse | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
 | multi-label classification | classificação multirrótulo | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
@@ -767,13 +767,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayes error | erro de Bayes | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
 | regression target | alvo de regressão | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
 | feature vector | vetor de características | proposed | feature-vector: A vector containing the input features of an example. |  |
-| target variable | variável alvo | proposed | target-variable: The quantity a model is intended to predict. |  |
+| target variable | variável-alvo | proposed | target-variable: The quantity a model is intended to predict. |  |
 | intercept | intercepto | proposed | intercept: The additive constant in a regression or other linear model. |  |
 | coefficient | coeficiente | proposed | coefficient: A numerical factor multiplying a variable or term. |  |
 | least-squares regression | regressão por mínimos quadrados | proposed | least-squares-regression: A regression method that minimizes squared residuals. |  |
 | linear predictor | preditor linear | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
 | closed-form solution | solução em forma fechada | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. |  |
-| log odds | logaritmo das chances | proposed | log-odds: The logarithm of the ratio of an event's probability to the probability of its complement. |  |
+| log odds | log-chances | proposed | log-odds: The logarithm of the ratio of an event's probability to the probability of its complement. |  |
 | odds ratio | razão de chances | proposed | odds-ratio: A ratio comparing the odds of an event under two conditions. |  |
 | independent variable | variável independente | proposed | independent-variable: A variable treated as an input or explanatory quantity. |  |
 | noise variance | variância do ruído | proposed | noise-variance: The variance of the random perturbation in a model. |  |
@@ -781,7 +781,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mean absolute error | erro absoluto médio | proposed | mean-absolute-error: The average absolute difference between predictions and targets. |  |
 | root mean squared error | raiz do erro quadrático médio | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
 | classification loss | perda de classificação | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
-| hinge loss | perda de Hinge | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [stanford-paired-pt-BR-cs-229-supervised-learning](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/pt/cs-229-supervised-learning.md#L75) |
+| hinge loss | perda hinge | proposed | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. |  |
 | squared loss | perda quadrática | proposed | squared-loss: A loss proportional to the square of a prediction error. |  |
 | Huber loss | perda de Huber | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
 | regularized objective | objetivo regularizado | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
@@ -807,7 +807,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | first moment | primeiro momento | proposed | first-moment: The expectation or average of a quantity. |  |
 | bias correction | correção de viés | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
 | cross-correlation | correlação cruzada | proposed | cross-correlation: An operation that combines a local input window with a kernel without reversing the kernel. |  |
-| kernel size | tamanho do núcleo | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. |  |
+| kernel size | tamanho do kernel | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. |  |
 | input channel | canal de entrada | proposed | input-channel: A channel in the input to an operation or network layer. |  |
 | output channel | canal de saída | proposed | output-channel: A channel produced by an operation or network layer. |  |
 | spatial resolution | resolução espacial | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
@@ -819,8 +819,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | downsampling | subamostragem | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | sobreamostragem | proposed | upsampling: Increasing the spatial or temporal resolution of a representation. |  |
 | aliasing | aliasing | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
-| pooling window | janela de agrupamento | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
-| global pooling | agrupamento global | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| pooling window | janela de pooling | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
+| global pooling | pooling global | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
 | fully convolutional network | rede totalmente convolucional | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
 | bilinear interpolation | interpolação bilinear | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | interpolação por vizinho mais próximo | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
@@ -834,9 +834,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convolutional block | bloco convolucional | proposed | convolutional-block: A network component grouping convolutional and often other operations. |  |
 | network in network | rede dentro de rede | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
 | image patch | patch de imagem | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
-| patch embedding | incorporação de patch | proposed | patch-embedding: A vector representation computed from an image patch. |  |
+| patch embedding | embedding de patch | proposed | patch-embedding: A vector representation computed from an image patch. |  |
 | image classifier | classificador de imagens | proposed | image-classifier: A model that assigns categories to images. |  |
-| ground truth | referência verdadeira | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
+| ground truth | ground truth | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
 | ground-truth bounding box | caixa delimitadora de referência | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
 | region of interest | região de interesse | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
 | region proposal network | rede de propostas de regiões | proposed | region-proposal-network: A network that generates candidate regions for object detection. |  |
@@ -850,8 +850,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | recommendation | recomendação | proposed | recommendation: Selecting or ranking items to present to a user. |  |
 | user-item interaction | interação usuário-item | proposed | user-item-interaction: An observed relationship or action involving a user and an item. |  |
 | explicit feedback | feedback explícito | proposed | explicit-feedback: Directly supplied preference information such as a rating. |  |
-| user embedding | incorporação de usuário | proposed | user-embedding: A learned vector representation of a user. |  |
-| item embedding | incorporação de item | proposed | item-embedding: A learned vector representation of an item. |  |
+| user embedding | embedding de usuário | proposed | user-embedding: A learned vector representation of a user. |  |
+| item embedding | embedding de item | proposed | item-embedding: A learned vector representation of an item. |  |
 | latent factor | fator latente | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
 | rating prediction | previsão de avaliações | proposed | rating-prediction: Estimating a user's numerical rating for an item. |  |
 | ranking | ranqueamento | proposed | ranking: Ordering items according to a relevance or preference score. |  |
@@ -861,7 +861,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | neural collaborative filtering | filtragem colaborativa neural | proposed | neural-collaborative-filtering: Collaborative filtering using a neural network to model user-item interactions. |  |
 | pairwise ranking | ranqueamento por pares | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
 | Bayesian personalized ranking | ranqueamento bayesiano personalizado | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
-| cold start | início a frio | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
+| cold start | partida a frio | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
 | sparsity | esparsidade | proposed | sparsity: The condition in which most entries or interactions in a representation are absent or zero. |  |
 | subword tokenization | tokenização de subpalavras | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
 | token frequency | frequência de tokens | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
@@ -869,12 +869,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | unknown token | token desconhecido | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
 | beginning-of-sequence token | token de início de sequência | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
 | end-of-sequence token | token de fim de sequência | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
-| embedding layer | camada de incorporação | proposed | embedding-layer: A layer mapping discrete indices to learned vector representations. |  |
-| embedding dimension | dimensão da incorporação | proposed | embedding-dimension: The number of components in each embedding vector. |  |
+| embedding layer | camada de embedding | proposed | embedding-layer: A layer mapping discrete indices to learned vector representations. |  |
+| embedding dimension | dimensão do embedding | proposed | embedding-dimension: The number of components in each embedding vector. |  |
 | center word | palavra central | proposed | center-word: The word used as the central item in a word-context training example. |  |
 | context word | palavra de contexto | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
 | co-occurrence | coocorrência | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
-| global vectors | vetores globais | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
+| global vectors | GloVe | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
 | subsampling | subamostragem | proposed | subsampling: Selecting a subset of observations according to a sampling rule. |  |
 | word similarity | similaridade entre palavras | proposed | word-similarity: A measure of how closely related two words are in meaning or representation. |  |
 | decoder state | estado do decodificador | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
@@ -923,16 +923,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | total expectation | esperança total | proposed | total-expectation: The expectation obtained by averaging conditional expectations. |  |
 | total variance | variância total | proposed | total-variance: A decomposition of variance into expected conditional variance and variance of conditional expectation. |  |
 | Bayes risk | risco de Bayes | proposed | bayes-risk: The minimum expected loss attainable under a specified probability model and loss function. |  |
-| posterior probability | probabilidade posterior | proposed | posterior-probability: The probability of an event or hypothesis after conditioning on observed data. |  |
+| posterior probability | probabilidade a posteriori | proposed | posterior-probability: The probability of an event or hypothesis after conditioning on observed data. |  |
 | prior probability | probabilidade a priori | proposed | prior-probability: The probability of an event or hypothesis before conditioning on the data under consideration. |  |
 | likelihood ratio | razão de verossimilhanças | proposed | likelihood-ratio: The ratio of likelihoods under two parameter values or hypotheses. |  |
 | conjugacy | conjugação | proposed | conjugacy: A relationship in which posterior distributions remain in the same family as the prior. |  |
 | predictive distribution | distribuição preditiva | proposed | predictive-distribution: A probability distribution over a future or unobserved outcome. |  |
 | predictive uncertainty | incerteza preditiva | proposed | predictive-uncertainty: Uncertainty in a model's prediction for an outcome. |  |
 | epistemic uncertainty | incerteza epistêmica | proposed | epistemic-uncertainty: Uncertainty due to limited knowledge about a model or its parameters. |  |
-| aleatoric uncertainty | incerteza aleatória | proposed | aleatoric-uncertainty: Uncertainty associated with inherent randomness or variability in observations. |  |
+| aleatoric uncertainty | incerteza aleatórica | proposed | aleatoric-uncertainty: Uncertainty associated with inherent randomness or variability in observations. |  |
 | uncertainty quantification | quantificação da incerteza | proposed | uncertainty-quantification: Estimating or characterizing uncertainty in quantities or predictions. |  |
-| posterior inference | inferência posterior | proposed | posterior-inference: The computation or approximation of a posterior distribution after observing data. |  |
+| posterior inference | inferência a posteriori | proposed | posterior-inference: The computation or approximation of a posterior distribution after observing data. |  |
 | likelihood model | modelo de verossimilhança | proposed | likelihood-model: A probability model for observations conditional on model parameters or latent variables. |  |
 | missing data | dados ausentes | proposed | missing-data: Values that are not observed for some variables or examples. |  |
 | missingness | ausência de dados | proposed | missingness: The pattern or mechanism by which data values are absent. |  |
@@ -942,8 +942,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | partition function | função de partição | proposed | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. |  |
 | normalizing constant | constante de normalização | proposed | normalizing-constant: A factor that makes a nonnegative function sum or integrate to one. |  |
 | unnormalized density | densidade não normalizada | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
-| log density | logaritmo de densidade | proposed | log-density: The logarithm of a probability density. |  |
-| denoising score matching | ajuste de escore por remoção de ruído | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
+| log density | log-densidade | proposed | log-density: The logarithm of a probability density. |  |
+| denoising score matching | denoising score matching | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
 | contrastive divergence | divergência contrastiva | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
 | Langevin sampling | amostragem de Langevin | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
 | annealed Langevin dynamics | dinâmica de Langevin com recozimento | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
@@ -958,10 +958,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | ancestral sampling | amostragem ancestral | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
 | DDPM | DDPM | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
 | DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
-| variance schedule | cronograma de variância | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
+| variance schedule | agendamento de variância | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
 | velocity prediction | previsão de velocidade | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
-| score estimate | estimativa do escore de densidade | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
-| denoiser | removedor de ruído | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
+| score estimate | estimativa do escore | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
+| denoiser | rede de remoção de ruído | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
 | denoising objective | objetivo de remoção de ruído | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
 | conditional denoising | remoção condicional de ruído | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
 | guidance scale | escala de orientação | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
@@ -996,13 +996,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | primal problem | problema primal | proposed | primal-problem: The original optimization problem associated with a dual problem. |  |
 | dual variable | variável dual | proposed | dual-variable: A variable associated with a constraint in a dual or Lagrangian formulation. |  |
 | dual function | função dual | proposed | dual-function: A function obtained by optimizing a Lagrangian over primal variables. |  |
-| duality gap | lacuna de dualidade | proposed | duality-gap: The difference between the primal and dual objective values or optima. |  |
+| duality gap | gap de dualidade | proposed | duality-gap: The difference between the primal and dual objective values or optima. |  |
 | strong duality | dualidade forte | proposed | strong-duality: Equality of the optimal primal and dual objective values. |  |
 | weak duality | dualidade fraca | proposed | weak-duality: A bound relating feasible primal and dual objective values. |  |
 | complementary slackness | folga complementar | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
 | subgradient method | método de subgradiente | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
 | projection operator | operador de projeção | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
-| projected gradient descent | descida de gradiente projetado | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
+| projected gradient descent | descida de gradiente projetada | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
 | backtracking line search | busca linear com retrocesso | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
 | descent direction | direção de descida | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. |  |
 | descent lemma | lema de descida | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
@@ -1014,8 +1014,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | preconditioning | pré-condicionamento | proposed | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. |  |
 | second moment estimate | estimativa do segundo momento | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. |  |
 | exponential averaging | média exponencial | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
-| momentum buffer | acumulador de momento | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
-| Nesterov momentum | momento de Nesterov | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
+| momentum buffer | buffer de momentum | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
+| Nesterov momentum | momentum de Nesterov | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
 | stochastic gradient | gradiente estocástico | proposed | stochastic-gradient: A random estimate of an objective's gradient. |  |
 | minibatch gradient descent | descida de gradiente por minilotes | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
 | gradient variance | variância do gradiente | proposed | gradient-variance: The variance of a stochastic gradient estimator. |  |
@@ -1039,25 +1039,25 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Fisher information matrix | matriz de informação de Fisher | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. |  |
 | asymptotic normality | normalidade assintótica | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
 | identifiability | identificabilidade | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
-| posterior mode | moda posterior | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
+| posterior mode | moda a posteriori | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
 | Bayesian linear regression | regressão linear bayesiana | proposed | bayesian-linear-regression: Linear regression that represents uncertainty about parameters with a posterior distribution. |  |
-| Gaussian prior | distribuição prévia gaussiana | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
+| Gaussian prior | distribuição a priori gaussiana | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
 | Gaussian likelihood | verossimilhança gaussiana | proposed | gaussian-likelihood: A likelihood based on a Gaussian observation model. |  |
-| Gaussian posterior | distribuição posterior gaussiana | proposed | gaussian-posterior: A posterior probability distribution in the Gaussian family. |  |
-| hyperprior | hiperprior | proposed | hyperprior: A prior distribution placed on a model's hyperparameters. |  |
+| Gaussian posterior | distribuição a posteriori gaussiana | proposed | gaussian-posterior: A posterior probability distribution in the Gaussian family. |  |
+| hyperprior | hiperpriori | proposed | hyperprior: A prior distribution placed on a model's hyperparameters. |  |
 | Gaussian process regression | regressão por processos gaussianos | proposed | gaussian-process-regression: Regression using a Gaussian process prior over functions. |  |
-| Gaussian process prior | prior de processo gaussiano | proposed | gaussian-process-prior: A prior distribution over functions specified by a mean function and covariance kernel. |  |
-| Gaussian process posterior | posterior de processo gaussiano | proposed | gaussian-process-posterior: A distribution over functions obtained by conditioning a Gaussian process prior on observations. |  |
+| Gaussian process prior | distribuição a priori de processo gaussiano | proposed | gaussian-process-prior: A prior distribution over functions specified by a mean function and covariance kernel. |  |
+| Gaussian process posterior | distribuição a posteriori de processo gaussiano | proposed | gaussian-process-posterior: A distribution over functions obtained by conditioning a Gaussian process prior on observations. |  |
 | mean function | função média | proposed | mean-function: A function specifying the expected value of a random function at each input. |  |
 | length scale | escala de comprimento | proposed | length-scale: A parameter controlling the distance over which a kernel or process varies substantially. |  |
 | observation noise | ruído de observação | proposed | observation-noise: Random variation or measurement error in observed data. |  |
 | Gaussian observation noise | ruído de observação gaussiano | proposed | gaussian-observation-noise: Observation noise modeled using a Gaussian distribution. |  |
-| posterior predictive mean | média preditiva posterior | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
+| posterior predictive mean | média preditiva a posteriori | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
 | predictive variance | variância preditiva | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
-| kernel matrix | matriz de núcleo | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. |  |
+| kernel matrix | matriz de kernel | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. |  |
 | Cholesky decomposition | decomposição de Cholesky | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
 | Cholesky factor | fator de Cholesky | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
-| log marginal likelihood | logaritmo da verossimilhança marginal | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
+| log marginal likelihood | log-verossimilhança marginal | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
 | hyperparameter optimization | otimização de hiperparâmetros | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. |  |
 | search space | espaço de busca | proposed | search-space: The set of configurations or solutions considered by a search procedure. |  |
 | configuration space | espaço de configurações | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
@@ -1139,8 +1139,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | multi-query attention | atenção de múltiplas consultas | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
 | query head | cabeça de consulta | proposed | query-head: An attention head that produces queries used to weight values. |  |
 | induction head | cabeça de indução | proposed | induction-head: An attention head associated with continuing a repeated token pattern from earlier context. |  |
-| QK circuit | circuito consulta-chave | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
-| OV circuit | circuito valor-saída | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
+| QK circuit | circuito QK | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
+| OV circuit | circuito OV | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
 | feedforward block | bloco de propagação direta | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
 | RMSNorm | RMSNorm | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
 | ALiBi | ALiBi | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
@@ -1150,12 +1150,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | tokens per second | tokens por segundo | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
 | head dimension | dimensão da cabeça | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
 | weight tying | vinculação de pesos | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
-| embedding table | tabela de incorporações | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
+| embedding table | tabela de embeddings | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | projeção de saída | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | circuito de indução | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
 | attention pattern | padrão de atenção | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
 | softmax normalization | normalização softmax | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
-| top-k routing | roteamento dos k melhores | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
+| top-k routing | roteamento top-k | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
 | expert parallelism | paralelismo de especialistas | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
 | shared expert | especialista compartilhado | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | orçamento computacional | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
@@ -1166,27 +1166,33 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | inference cost | custo de inferência | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
 | kernel launch | lançamento de kernel | proposed | kernel-launch: Starting an operation or kernel for execution on a device. |  |
 | launch overhead | sobrecarga de lançamento | proposed | launch-overhead: Time or resources spent initiating a computational operation. |  |
-| half precision | precisão reduzida | proposed | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. |  |
+| half precision | meia precisão | verified_external | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. | review-pt-BR-b94aa55157: page |
 | single precision | precisão simples | proposed | single-precision: A floating-point format commonly represented using 32 bits. |  |
 | double precision | precisão dupla | proposed | double-precision: A floating-point format commonly represented using 64 bits. |  |
 | floating-point format | formato de ponto flutuante | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
 | loss scaling | escalonamento da perda | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
 | activation memory | memória de ativações | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
-| all-gather | coleta coletiva | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
-| reduce-scatter | redução com distribuição | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
+| all-gather | all-gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
+| reduce-scatter | reduce-scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
 | batching | processamento em lotes | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
 | perceptual compression | compressão perceptual | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
 | semantic compression | compressão semântica | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
 | Reflow | Reflow | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
 | consistency training | treinamento de consistência | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
 | reference velocity | velocidade de referência | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
-| stop-gradient | parada do gradiente | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
-| prior term | termo prévio | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
+| stop-gradient | stop-gradient | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
+| prior term | termo a priori | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
 | denoising term | termo de remoção de ruído | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
 | reconstruction term | termo de reconstrução | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
 | Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | crítico generativo | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| critic | crítico | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
 | model | modelo | proposed | model: A mathematical or computational representation used to describe data or make predictions. |  |
 | training | treinamento | proposed | training: The process of fitting a model using data and a learning objective. |  |
 | activation | ativação | proposed | activation: The output of a neural network unit or activation function for a given input. |  |
 | mask | máscara | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. |  |
+| sample | amostra | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
+| loss | perda | proposed | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. |  |
+| score | pontuação | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
+| batch | lote | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
+| advantage | vantagem | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
+| cost | custo | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |

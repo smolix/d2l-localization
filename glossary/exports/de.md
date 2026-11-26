@@ -6,38 +6,38 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 
 | English | Preferred | Status | Concept / sense | Evidence |
 | --- | --- | --- | --- | --- |
-| linear regression | Lineare Regression | verified_external | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=53) |
+| linear regression | lineare Regression | verified_external | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=53) |
 | regression | Regression | proposed | regression: The task of predicting a numerical outcome. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L1) |
 | classification | Klassifikation | verified_external | classification: The task of assigning an input to a category. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=53) |
 | feature | Merkmal | proposed | feature: An observed input variable used by a model. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L88) |
 | label | Label | proposed | label: The target value associated with an example. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L125) |
 | training example | Trainingsbeispiel | proposed | training-example: An observation used to fit a model. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L175) |
 | dataset | Datensatz | proposed | dataset: A collection of examples used for analysis or learning. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L4) |
-| training set | Trainingsdaten | verified_external | training-set: The portion of data used to fit model parameters. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
-| validation set | Validierungs-Dataset | verified_external | validation-set: Data used to select models or tune settings during development. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#validation-set) |
-| test set | Testdaten | verified_external | test-set: Data held out to assess a fitted model. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
+| training set | Trainingsdatensatz | proposed | training-set: The portion of data used to fit model parameters. |  |
+| validation set | Validierungsdatensatz | proposed | validation-set: Data used to select models or tune settings during development. |  |
+| test set | Testdatensatz | proposed | test-set: Data held out to assess a fitted model. |  |
 | model parameter | Modellparameter | proposed | model-parameter: A value learned or fitted as part of a model. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L51) |
 | weight | Gewicht | verified_external | weight: A coefficient that scales an input or connection in a model. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#weight) |
 | bias | Bias | proposed | bias: An additive offset in a model or prediction. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L28) |
 | prediction | Vorhersage | verified_d2l | prediction: A model's estimate of an outcome for an input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-scratch.md#L426) |
 | loss function | Verlustfunktion | verified_external | loss-function: A function measuring the error of a prediction or model. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#loss-function) |
 | objective function | Zielfunktion | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [google-ml-de-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=de#objective-function) |
-| squared error | Quadratischer Fehler | proposed | squared-error: The square of the difference between a prediction and its target. |  |
+| squared error | quadratischer Fehler | proposed | squared-error: The square of the difference between a prediction and its target. |  |
 | mean squared error | Mittlerer quadratischer Fehler | proposed | mean-squared-error: The average squared difference between predictions and targets. |  |
-| empirical risk | Empirisches Risiko | proposed | empirical-risk: The average loss measured on a finite dataset. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L87) |
+| empirical risk | empirisches Risiko | proposed | empirical-risk: The average loss measured on a finite dataset. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L87) |
 | minibatch | Minibatch | proposed | minibatch: A subset of examples processed together in an update. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L104) |
 | batch size | Batchgröße | verified_external | batch-size: The number of examples processed in a batch. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#batch-size) |
 | epoch | Epoche | verified_external | epoch: A pass through the training dataset. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#epoch) |
 | gradient descent | Gradientenabstieg | verified_external | gradient-descent: An optimization method that moves parameters against the objective gradient. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#gradient-descent) |
-| stochastic gradient descent | Stochastischer Gradientenabstieg | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L80) |
+| stochastic gradient descent | stochastischer Gradientenabstieg | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L80) |
 | learning rate | Lernrate | verified_external | learning-rate: The step-size setting used in an optimization update. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L63) |
 | optimization | Optimierung | proposed | optimization: The process of finding values that improve an objective. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L84) |
 | gradient | Gradient | proposed | gradient: The vector of partial derivatives of a scalar function. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L88) |
 | derivative | Ableitung | proposed | derivative: The rate of change of a function with respect to an input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L119) |
-| partial derivative | Partielle Ableitung | proposed | partial-derivative: A derivative with respect to one variable while others are held fixed. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L90) |
+| partial derivative | partielle Ableitung | proposed | partial-derivative: A derivative with respect to one variable while others are held fixed. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L90) |
 | chain rule | Kettenregel | proposed | chain-rule: A rule for differentiating compositions of functions. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L52) |
-| backpropagation | Fehlerrückführung | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L69) |
-| automatic differentiation | Automatische Differenzierung | verified_d2l | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/autograd.md#L1) |
+| backpropagation | Backpropagation | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | review-de-809cb60b8b: page |
+| automatic differentiation | automatisches Differenzieren | verified_external | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. | review-de-00818d4e62: page |
 | computational graph | Berechnungsgraph | proposed | computational-graph: A representation of a computation as connected operations and values. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L108) |
 | vector | Vektor | proposed | vector: An ordered collection of numerical components. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L24) |
 | matrix | Matrix | proposed | matrix: A rectangular array of numerical entries. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L45) |
@@ -50,9 +50,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | eigenvector | Eigenvektor | proposed | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. |  |
 | singular value decomposition | Singulärwertzerlegung | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
 | norm | Norm | proposed | norm: A function measuring the size of a vector or other mathematical object. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression-concise.md#L181) |
-| Euclidean distance | Euklidischer Abstand | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
-| linear algebra | Lineare Algebra | verified_d2l | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L1) |
-| linear transformation | Lineare Transformation | proposed | linear-transformation: A mapping that preserves vector addition and scalar multiplication. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L28) |
+| Euclidean distance | euklidischer Abstand | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
+| linear algebra | lineare Algebra | verified_d2l | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L1) |
+| linear transformation | lineare Transformation | proposed | linear-transformation: A mapping that preserves vector addition and scalar multiplication. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L28) |
 | identity matrix | Einheitsmatrix | proposed | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. |  |
 | determinant | Determinante | proposed | determinant: A scalar associated with a square matrix that describes signed volume scaling. |  |
 | rank | Rang | proposed | rank: The dimension of the span of a matrix's columns or rows. |  |
@@ -63,8 +63,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | random variable | Zufallsvariable | proposed | random-variable: A quantity whose value is determined by a random outcome. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L36) |
 | probability distribution | Wahrscheinlichkeitsverteilung | proposed | probability-distribution: A specification of probabilities for possible outcomes. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L72) |
 | probability density | Wahrscheinlichkeitsdichte | proposed | probability-density: A function whose integral over a region gives its probability. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L222) |
-| conditional probability | Bedingte Wahrscheinlichkeit | verified_d2l | conditional-probability: The probability of an event given another event. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L196) |
-| joint distribution | Gemeinsame Verteilung | proposed | joint-distribution: A probability distribution over multiple random variables together. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L206) |
+| conditional probability | bedingte Wahrscheinlichkeit | verified_d2l | conditional-probability: The probability of an event given another event. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L196) |
+| joint distribution | gemeinsame Verteilung | proposed | joint-distribution: A probability distribution over multiple random variables together. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L206) |
 | marginal distribution | Randverteilung | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
 | independence | Unabhängigkeit | verified_d2l | independence: A property where knowing one event or variable does not change the distribution of another. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L216) |
 | expectation | Erwartungswert | proposed | expectation: The probability-weighted average of a random quantity. |  |
@@ -76,16 +76,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bernoulli distribution | Bernoulli-Verteilung | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L334) |
 | Poisson distribution | Poisson-Verteilung | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
 | Bayes' theorem | Satz von Bayes | verified_d2l | bayes-theorem: A rule relating conditional probabilities through prior and evidence. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L200) |
-| prior | Prior-Verteilung | proposed | prior: A probability distribution expressing uncertainty before observing data. |  |
-| posterior | A-posteriori-Wahrscheinlichkeit | proposed | posterior: A probability distribution updated after observing data. |  |
+| prior | A-priori-Verteilung | proposed | prior: A probability distribution expressing uncertainty before observing data. |  |
+| posterior | A-posteriori-Verteilung | proposed | posterior: A probability distribution updated after observing data. |  |
 | likelihood | Likelihood | proposed | likelihood: The probability or density of observed data viewed as a function of model parameters. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L84) |
 | maximum likelihood | Maximum-Likelihood | proposed | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L263) |
 | maximum likelihood estimation | Maximum-Likelihood-Schätzung | proposed | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L273) |
-| sampling | Stichprobenziehung | proposed | sampling: The process of drawing observations from a distribution or population. |  |
+| sampling | Sampling | proposed | sampling: The process of drawing observations from a distribution or population. |  |
 | Monte Carlo | Monte Carlo | proposed | monte-carlo: A family of methods that use random samples to estimate quantities. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L398) |
 | entropy | Entropie | verified_external | entropy: A measure of uncertainty in a probability distribution. | [google-ml-de-df](https://developers.google.com/machine-learning/glossary/df?hl=de#entropy) |
 | cross-entropy | Kreuzentropie | proposed | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L72) |
-| mutual information | Wechselseitige Information | proposed | mutual-information: A measure of statistical dependence between random variables. |  |
+| mutual information | gegenseitige Information | verified_external | mutual-information: A measure of statistical dependence between random variables. | review-de-9c52954385: page |
 | softmax | Softmax-Funktion | verified_external | softmax: A function converting real-valued scores into a probability distribution. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#softmax) |
 | logistic regression | logistische Regression | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#logistic-regression) |
 | sigmoid | Sigmoidfunktion | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L22) |
@@ -94,58 +94,58 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | precision | Präzision | verified_external | precision: The fraction of predicted positives that are true positives. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=53) |
 | recall | Trefferquote | verified_external | recall: The fraction of actual positives that are correctly identified. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
 | confusion matrix | Konfusionsmatrix | proposed | confusion-matrix: A table comparing predicted and actual class counts. |  |
-| neural network | neuronales Netzwerk | verified_external | neural-network: A model composed of interconnected parameterized transformations. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#neural-network) |
+| neural network | neuronales Netz | verified_external | neural-network: A model composed of interconnected parameterized transformations. | review-de-809cb60b8b: page |
 | neuron | Neuron | proposed | neuron: A computational unit that transforms inputs into an output. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L280) |
 | layer | Schicht | proposed | layer: A stage of a neural network that transforms its input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L34) |
-| hidden layer | versteckte Ebene | verified_external | hidden-layer: A network layer between the input and output layers. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#hidden-layer) |
+| hidden layer | versteckte Schicht | verified_external | hidden-layer: A network layer between the input and output layers. | review-de-809cb60b8b: page |
 | activation function | Aktivierungsfunktion | verified_external | activation-function: A function applied to a unit's input to produce its activation. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L45) |
 | nonlinearity | Nichtlinearität | proposed | nonlinearity: A transformation that is not linear in its input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/mlp.md#L57) |
-| multilayer perceptron | Mehrschichtiges Perzeptron | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/mlp.md#L22) |
-| rectified linear unit | Gleichgerichtete lineare Einheit | proposed | rectified-linear-unit: An activation function that outputs the larger of zero and its input. |  |
+| multilayer perceptron | mehrschichtiges Perzeptron | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/mlp.md#L22) |
+| rectified linear unit | ReLU | verified_external | rectified-linear-unit: An activation function that outputs the larger of zero and its input. | review-de-a22d2567e0: page |
 | overfitting | Überanpassung | verified_external | overfitting: Fitting training data so closely that performance on unseen data suffers. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#overfitting) |
 | underfitting | Unteranpassung | verified_external | underfitting: Failing to capture important structure even in the training data. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#underfitting) |
 | generalization | Generalisierung | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#generalization) |
 | regularization | Regularisierung | verified_external | regularization: A method that constrains or modifies learning to improve generalization. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#regularization) |
 | weight decay | Gewichtszerfall | proposed | weight-decay: A regularization method that shrinks model weights during training. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L8) |
 | dropout | Dropout | proposed | dropout: A training method that randomly masks activations to regularize a network. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L26) |
-| early stopping | Vorzeitiges Beenden | verified_external | early-stopping: Stopping training based on validation performance before fitting continues too far. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#early-stopping) |
+| early stopping | Early Stopping | proposed | early-stopping: Stopping training based on validation performance before fitting continues too far. |  |
 | hyperparameter | Hyperparameter | proposed | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L139) |
 | model selection | Modellauswahl | verified_d2l | model-selection: The process of choosing a model or configuration using available evidence. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L58) |
 | cross-validation | Kreuzvalidierung | proposed | cross-validation: A method for evaluating configurations across different train-validation splits. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L74) |
 | initialization | Initialisierung | proposed | initialization: The choice of initial parameter values before training. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression-scratch.md#L155) |
-| vanishing gradient | Verschwindender Gradient | proposed | vanishing-gradient: A gradient that becomes very small as it propagates through a network. |  |
-| exploding gradient | Explodierender Gradient | proposed | exploding-gradient: A gradient that grows excessively large during propagation. |  |
+| vanishing gradient | verschwindender Gradient | proposed | vanishing-gradient: A gradient that becomes very small as it propagates through a network. |  |
+| exploding gradient | explodierender Gradient | proposed | exploding-gradient: A gradient that grows excessively large during propagation. |  |
 | gradient clipping | Gradienten-Clipping | proposed | gradient-clipping: Limiting gradient magnitude to stabilize optimization. |  |
 | batch normalization | Batchnormalisierung | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
 | layer normalization | Schichtnormalisierung | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
 | convolution | Faltung | proposed | convolution: An operation that combines local input values with shared kernel weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L355) |
-| convolutional neural network | Faltungsneuronales Netz | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
-| kernel | Kernel | proposed | kernel: A set of weights applied locally in a convolution. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/weight-decay.md#L338) |
+| convolutional neural network | Convolutional Neural Network | verified_external | convolutional-neural-network: A neural network using convolutional layers to process structured data. | review-de-a22d2567e0: page |
+| kernel | Faltungskern | proposed | kernel: A set of weights applied locally in a convolution. |  |
 | filter | Filter | proposed | filter: A learned set of local weights used to extract a pattern. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L74) |
 | channel | Kanal | proposed | channel: A feature dimension in a structured representation such as an image. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L227) |
-| stride | Schrittweite | proposed | stride: The spacing between successive positions of an operation on an input. |  |
+| stride | Stride | proposed | stride: The spacing between successive positions of an operation on an input. |  |
 | padding | Padding | proposed | padding: Extra values added around an input to control an operation's boundary or output size. |  |
 | pooling | Pooling | proposed | pooling: An operation that aggregates values over local regions. |  |
 | max pooling | Max-Pooling | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
 | average pooling | Average-Pooling | proposed | average-pooling: Pooling that averages values in each region. |  |
-| receptive field | Rezeptives Feld | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
+| receptive field | rezeptives Feld | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
 | translation equivariance | Translationsäquivarianz | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | Residualverbindung | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
 | residual network | Residualnetz | proposed | residual-network: A neural network built using residual connections. |  |
 | skip connection | Skip-Verbindung | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
-| image augmentation | Bildaugmentation | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
+| image augmentation | Bildaugmentierung | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
 | transfer learning | Transferlernen | proposed | transfer-learning: Reusing knowledge learned on one task to improve learning on another. |  |
-| fine-tuning | Feinabstimmung | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | [google-ml-de-generative](https://developers.google.com/machine-learning/glossary/generative?hl=de#fine-tuning) |
+| fine-tuning | Fine-Tuning | proposed | fine-tuning: Further training a pretrained model for a particular task or dataset. |  |
 | pretraining | Vortraining | proposed | pretraining: Training a model on an initial task or dataset before adaptation. |  |
 | object detection | Objekterkennung | proposed | object-detection: The task of locating and classifying objects in an image. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L397) |
 | bounding box | Begrenzungsrahmen | proposed | bounding-box: A rectangle specifying the location and extent of an object. |  |
 | intersection over union | Intersection over Union | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
-| semantic segmentation | Semantische Segmentierung | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
+| semantic segmentation | semantische Segmentierung | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
 | instance segmentation | Instanzsegmentierung | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
 | image classification | Bildklassifikation | proposed | image-classification: The task of assigning a class to an image. |  |
 | computer vision | Computer Vision | proposed | computer-vision: The study of extracting information and making predictions from visual data. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L17) |
 | recurrent neural network | Rekurrentes neuronales Netz | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
-| hidden state | Verborgener Zustand | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
+| hidden state | versteckter Zustand | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
 | time step | Zeitschritt | proposed | time-step: A position in a sequential or temporal computation. |  |
 | sequence | Sequenz | proposed | sequence: An ordered collection of elements. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L176) |
 | language model | Sprachmodell | proposed | language-model: A model assigning probabilities to sequences of language tokens. |  |
@@ -157,35 +157,35 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sequence-to-sequence | Sequenz-zu-Sequenz | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | Encoder | proposed | encoder: A component that converts an input into an internal representation. |  |
 | decoder | Decoder | proposed | decoder: A component that produces an output from an internal representation or context. |  |
-| teacher forcing | Teacher Forcing | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
-| beam search | Strahlsuche | proposed | beam-search: A decoding method that retains a limited number of candidate sequences at each step. |  |
+| teacher forcing | Teacher-Forcing | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
+| beam search | Beam-Search | proposed | beam-search: A decoding method that retains a limited number of candidate sequences at each step. |  |
 | perplexity | Perplexität | verified_external | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. | [google-ml-de-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=de#perplexity) |
-| long short-term memory | Langzeit-Kurzzeit-Gedächtnis | proposed | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. |  |
+| long short-term memory | Long Short-Term Memory | verified_external | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | review-de-07123de77d: page |
 | gated recurrent unit | Gated Recurrent Unit | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
 | attention | Attention | proposed | attention: A mechanism that forms a context-dependent weighted combination of values. |  |
-| self-attention | Selbstaufmerksamkeit | proposed | self-attention: Attention in which queries, keys, and values are derived from the same sequence. |  |
-| multi-head attention | Mehrkopf-Attention | proposed | multi-head-attention: Attention computed in several learned representation subspaces and then combined. |  |
+| self-attention | Self-Attention | proposed | self-attention: Attention in which queries, keys, and values are derived from the same sequence. |  |
+| multi-head attention | Multi-Head-Attention | verified_external | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | review-de-fa0c0b9dfc: page |
 | query | Abfrage | proposed | query: A representation used to select relevant information in attention. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L211) |
 | key | Schlüssel | proposed | key: A representation compared with a query to determine attention weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L10) |
 | value | Wert | proposed | value: A representation combined according to attention weights. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L129) |
 | positional encoding | Positionskodierung | proposed | positional-encoding: Information added to representations to communicate sequence position. |  |
 | transformer | Transformer | proposed | transformer: A neural architecture built around attention and feedforward layers. |  |
-| masked language model | Maskiertes Sprachmodell | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
+| masked language model | maskiertes Sprachmodell | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
 | BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
-| generative model | Generatives Modell | proposed | generative-model: A model that describes or generates samples from a data distribution. |  |
-| discriminative model | Diskriminatives Modell | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. |  |
+| generative model | generatives Modell | proposed | generative-model: A model that describes or generates samples from a data distribution. |  |
+| discriminative model | diskriminatives Modell | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. |  |
 | generator | Generator | proposed | generator: A model component that produces synthetic samples. |  |
 | discriminator | Diskriminator | proposed | discriminator: A model component trained to distinguish classes of samples, often real and generated. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L382) |
 | autoencoder | Autoencoder | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
-| latent variable | Latente Variable | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
-| latent space | Latenter Raum | proposed | latent-space: A space of unobserved representations used by a model. |  |
+| latent variable | latente Variable | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
+| latent space | latenter Raum | proposed | latent-space: A space of unobserved representations used by a model. |  |
 | diffusion model | Diffusionsmodell | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
 | noise schedule | Rauschplan | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
 | denoising | Entrauschung | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
-| score function | Dichtescore-Funktion | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
+| score function | Score-Funktion | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | Markow-Kette | proposed | markov-chain: A stochastic process whose next state depends on the present state. |  |
 | Markov decision process | Markow-Entscheidungsprozess | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. |  |
-| reinforcement learning | Verstärkendes Lernen | proposed | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. |  |
+| reinforcement learning | bestärkendes Lernen | verified_external | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | review-de-c0388ea2a4: page |
 | agent | Agent | proposed | agent: An entity that chooses actions in an environment. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L4) |
 | environment | Umgebung | proposed | environment: The external system with which an agent interacts. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L7) |
 | state | Zustand | proposed | state: A representation of the situation relevant to a sequential decision process. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L30) |
@@ -193,67 +193,67 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reward | Belohnung | proposed | reward: A scalar feedback signal evaluating an outcome or transition. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L198) |
 | policy | Strategie | verified_external | policy: A rule or distribution for selecting actions from states. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L225) |
 | return | Ertrag | proposed | return: The accumulated future reward from a point in a trajectory. |  |
-| discount factor | Diskontfaktor | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
+| discount factor | Diskontierungsfaktor | verified_external | discount-factor: A factor that controls the relative weight of future rewards. | review-de-c0388ea2a4: page |
 | value function | Wertfunktion | verified_external | value-function: A function estimating expected return from a state or state-action pair. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L237) |
 | action-value function | Aktionswertfunktion | proposed | action-value-function: A function estimating expected return from a state and action. |  |
 | value iteration | Wertiteration | proposed | value-iteration: An iterative method for computing optimal values using Bellman updates. |  |
 | Q-learning | Q-Lernen | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L291) |
 | exploration | Exploration | proposed | exploration: Trying actions to acquire information about their outcomes. |  |
 | policy gradient | Policy-Gradient | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
-| convex function | Konvexe Funktion | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
-| convex optimization | Konvexe Optimierung | proposed | convex-optimization: Optimization of a convex objective over a convex feasible set. |  |
+| convex function | konvexe Funktion | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
+| convex optimization | konvexe Optimierung | proposed | convex-optimization: Optimization of a convex objective over a convex feasible set. |  |
 | convexity | Konvexität | proposed | convexity: A geometric property governing line segments in sets or functions. |  |
-| local minimum | Lokales Minimum | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. |  |
-| global minimum | Globales Minimum | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
+| local minimum | lokales Minimum | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. |  |
+| global minimum | globales Minimum | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
 | saddle point | Sattelpunkt | proposed | saddle-point: A stationary point that is not a local extremum in all directions. |  |
 | Hessian | Hesse-Matrix | proposed | hessian: The matrix of second partial derivatives of a scalar function. |  |
 | Jacobian | Jacobi-Matrix | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
-| momentum | Impuls | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L22) |
+| momentum | Momentum | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. |  |
 | learning rate schedule | Lernratenplan | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
 | Adam | Adam | proposed | adam: An optimization algorithm using adaptive estimates of gradient moments. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L286) |
 | AdaGrad | AdaGrad | proposed | adagrad: An adaptive gradient method that scales updates using accumulated squared gradients. |  |
 | RMSProp | RMSProp | proposed | rmsprop: An adaptive gradient method using a moving average of squared gradients. |  |
 | Lagrange multiplier | Lagrange-Multiplikator | proposed | lagrange-multiplier: A variable used to incorporate a constraint into an optimization problem. |  |
 | constraint | Nebenbedingung | proposed | constraint: A condition that feasible solutions to an optimization problem must satisfy. |  |
-| stationary point | Stationärer Punkt | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
+| stationary point | stationärer Punkt | proposed | stationary-point: A point where the gradient of a differentiable objective is zero. |  |
 | Gaussian process | Gauß-Prozess | proposed | gaussian-process: A distribution over functions whose finite collections of values are jointly Gaussian. |  |
 | covariance function | Kovarianzfunktion | proposed | covariance-function: A function specifying covariance between values at pairs of inputs. |  |
 | kernel function | Kernfunktion | proposed | kernel-function: A function specifying covariance or similarity between pairs of inputs, as in Gaussian processes. |  |
-| posterior predictive distribution | Posterior-prädiktive Verteilung | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
-| Bayesian optimization | Bayessche Optimierung | proposed | bayesian-optimization: An optimization method using a probabilistic surrogate to choose evaluations. |  |
+| posterior predictive distribution | posterior-prädiktive Verteilung | proposed | posterior-predictive-distribution: The distribution of future observations conditioned on observed data. |  |
+| Bayesian optimization | bayessche Optimierung | proposed | bayesian-optimization: An optimization method using a probabilistic surrogate to choose evaluations. |  |
 | grid search | Gittersuche | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
 | random search | Zufallssuche | proposed | random-search: A search that samples hyperparameter configurations at random. |  |
 | recommender system | Empfehlungssystem | proposed | recommender-system: A system that predicts or ranks items for users. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L227) |
-| collaborative filtering | Kollaboratives Filtern | proposed | collaborative-filtering: A recommendation approach using patterns of user-item interactions. |  |
+| collaborative filtering | kollaboratives Filtern | proposed | collaborative-filtering: A recommendation approach using patterns of user-item interactions. |  |
 | matrix factorization | Matrixfaktorisierung | proposed | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. |  |
-| implicit feedback | Implizites Feedback | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L220) |
+| implicit feedback | implizites Feedback | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L220) |
 | word2vec | Word2Vec | proposed | word2vec: A family of methods for learning word vectors from context. |  |
-| negative sampling | Negatives Sampling | proposed | negative-sampling: A training technique contrasting observed examples with sampled negative examples. |  |
+| negative sampling | negatives Sampling | proposed | negative-sampling: A training technique contrasting observed examples with sampled negative examples. |  |
 | sentiment analysis | Sentimentanalyse | proposed | sentiment-analysis: The task of identifying sentiment expressed in text. |  |
-| natural language inference | Natürlichsprachliche Inferenz | proposed | natural-language-inference: The task of determining a logical relationship between text statements. |  |
+| natural language inference | natürlichsprachliche Inferenz | proposed | natural-language-inference: The task of determining a logical relationship between text statements. |  |
 | machine translation | maschinelle Übersetzung | verified_external | machine-translation: The automatic conversion of text from one language to another. | [google-ml-de-generative](https://developers.google.com/machine-learning/glossary/generative?hl=de#machine-translation) |
 | BLEU | BLEU-Wert | proposed | bleu: A metric comparing generated translations with reference translations using n-gram overlap. |  |
 | state space | Zustandsraum | proposed | state-space: The set or representation of possible states of a system. |  |
-| ordinary differential equation | Gewöhnliche Differentialgleichung | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
-| stochastic differential equation | Stochastische Differentialgleichung | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
-| Brownian motion | Brownsche Bewegung | proposed | brownian-motion: A continuous-time stochastic process with independent Gaussian increments. |  |
+| ordinary differential equation | gewöhnliche Differentialgleichung | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
+| stochastic differential equation | stochastische Differentialgleichung | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
+| Brownian motion | brownsche Bewegung | proposed | brownian-motion: A continuous-time stochastic process with independent Gaussian increments. |  |
 | Euler method | Euler-Verfahren | proposed | euler-method: A numerical method that advances a differential equation using local slopes. |  |
-| Neural ODE | Neuronale Differentialgleichung | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
-| normalizing flow | Normalisierender Fluss | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
+| Neural ODE | Neural ODE | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
+| normalizing flow | normalisierender Fluss | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
 | change of variables | Variablentransformation | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
 | Markov property | Markow-Eigenschaft | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
-| stationary distribution | Stationäre Verteilung | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
+| stationary distribution | stationäre Verteilung | proposed | stationary-distribution: A distribution that remains unchanged under a process's transition dynamics. |  |
 | principal component analysis | Hauptkomponentenanalyse | proposed | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L277) |
-| dimensionality reduction | Reduktion von Dimensionen | verified_external | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=53) |
+| dimensionality reduction | Dimensionsreduktion | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
 | principal component | Hauptkomponente | proposed | principal-component: A direction capturing variance under the constraints of principal component analysis. |  |
 | convergence | Konvergenz | verified_external | convergence: The approach of a sequence or process toward a limiting value or behavior. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#convergence) |
-| empirical risk minimization | Empirische Risikominimierung | proposed | empirical-risk-minimization: The principle of minimizing average loss over observed training examples. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L101) |
-| statistical learning | Statistisches Lernen | proposed | statistical-learning: Learning models from data using statistical principles. |  |
-| Bayesian inference | Bayessche Inferenz | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
+| empirical risk minimization | empirische Risikominimierung | proposed | empirical-risk-minimization: The principle of minimizing average loss over observed training examples. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L101) |
+| statistical learning | statistisches Lernen | proposed | statistical-learning: Learning models from data using statistical principles. |  |
+| Bayesian inference | bayessche Inferenz | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
 | confidence interval | Konfidenzintervall | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. |  |
 | hypothesis testing | Hypothesentest | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. |  |
 | bootstrap | Bootstrap-Verfahren | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
-| central limit theorem | Zentraler Grenzwertsatz | proposed | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. |  |
+| central limit theorem | zentraler Grenzwertsatz | proposed | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. |  |
 | law of large numbers | Gesetz der großen Zahlen | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L26) |
 | variance reduction | Varianzreduktion | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
 | causality | Kausalität | proposed | causality: The relationship in which changes to one variable bring about changes in another. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L21) |
@@ -264,26 +264,26 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fairness | Fairness | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L225) |
 | parallelism | Parallelität | proposed | parallelism: Executing multiple computations concurrently. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L398) |
 | data parallelism | Datenparallelität | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
-| GPU | Grafikprozessor | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
+| GPU | GPU | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
 | memory bandwidth | Speicherbandbreite | proposed | memory-bandwidth: The rate at which data can be transferred to or from memory. |  |
 | throughput | Durchsatz | proposed | throughput: The amount of work completed per unit time. |  |
 | latency | Latenz | verified_external | latency: The elapsed time required to complete a task or operation. | [google-ml-de-generative](https://developers.google.com/machine-learning/glossary/generative?hl=de#latency) |
 | quantization | Quantisierung | proposed | quantization: Representing numerical values using a reduced set of discrete values. |  |
 | knowledge distillation | Wissensdestillation | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
-| probability mass function | Wahrscheinlichkeitsmassenfunktion | proposed | probability-mass-function: A function assigning probabilities to individual discrete outcomes. |  |
-| cumulative distribution function | Kumulative Verteilungsfunktion | proposed | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. |  |
-| conditional distribution | Bedingte Verteilung | proposed | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L21) |
+| probability mass function | Wahrscheinlichkeitsfunktion | verified_external | probability-mass-function: A function assigning probabilities to individual discrete outcomes. | review-de-22131621bc: page |
+| cumulative distribution function | Verteilungsfunktion | proposed | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. |  |
+| conditional distribution | bedingte Verteilung | proposed | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L21) |
 | log-likelihood | Log-Likelihood | proposed | log-likelihood: The logarithm of a likelihood function. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L84) |
 | negative log-likelihood | Negative Log-Likelihood | proposed | negative-log-likelihood: The negative logarithm of the likelihood of observed data. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L263) |
 | maximum a posteriori | Maximum-a-posteriori-Schätzung | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
-| conjugate prior | Konjugierte Priorverteilung | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
+| conjugate prior | konjugierte A-priori-Verteilung | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
 | Beta distribution | Beta-Verteilung | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
 | categorical distribution | Kategorialverteilung | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
 | exponential distribution | Exponentialverteilung | proposed | exponential-distribution: A continuous distribution often used to model waiting times. |  |
 | uniform distribution | Gleichverteilung | proposed | uniform-distribution: A distribution assigning equal density or probability across its support. |  |
 | random seed | Zufallsstartwert | proposed | random-seed: An initial value controlling a pseudorandom number generator. |  |
 | independent and identically distributed | Unabhängig und identisch verteilt | proposed | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. |  |
-| sufficient statistic | Suffiziente Statistik | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
+| sufficient statistic | suffiziente Statistik | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
 | Fisher information | Fisher-Information | proposed | fisher-information: A measure of how much an observation reveals about a parameter. |  |
 | point estimate | Punktschätzung | proposed | point-estimate: A single value used to estimate an unknown quantity. |  |
 | bias-variance decomposition | Bias-Varianz-Zerlegung | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
@@ -292,20 +292,20 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | quantile | Quantil | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
 | standard error | Standardfehler | proposed | standard-error: The standard deviation of a sampling distribution of an estimator. |  |
 | sampling distribution | Stichprobenverteilung | proposed | sampling-distribution: The probability distribution of a statistic across repeated samples. |  |
-| statistical significance | Statistische Signifikanz | proposed | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. |  |
+| statistical significance | statistische Signifikanz | proposed | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. |  |
 | p-value | p-Wert | proposed | p-value: The probability under a null model of a result at least as extreme as the observed result according to a test statistic. |  |
 | null hypothesis | Nullhypothese | proposed | null-hypothesis: The reference hypothesis assessed by a statistical test. |  |
 | credible interval | Glaubwürdigkeitsintervall | proposed | credible-interval: An interval containing a specified posterior probability of an unknown quantity. |  |
 | posterior predictive | Posterior-prädiktiv | proposed | posterior-predictive: A prediction obtained by averaging over posterior uncertainty. |  |
-| probabilistic model | Probabilistisches Modell | proposed | probabilistic-model: A model that represents uncertainty using probability distributions. |  |
-| latent variable model | Latentes Variablenmodell | proposed | latent-variable-model: A probabilistic model incorporating unobserved variables. |  |
-| mixture model | Mischungsmodell | proposed | mixture-model: A probability model combining multiple component distributions. |  |
+| probabilistic model | probabilistisches Modell | proposed | probabilistic-model: A model that represents uncertainty using probability distributions. |  |
+| latent variable model | latentes Variablenmodell | proposed | latent-variable-model: A probabilistic model incorporating unobserved variables. |  |
+| mixture model | Mischmodell | proposed | mixture-model: A probability model combining multiple component distributions. |  |
 | mixture of Gaussians | Gauß-Mischmodell | proposed | mixture-of-gaussians: A probability distribution formed as a weighted combination of Gaussian components. |  |
 | variational inference | Variationsinferenz | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
-| evidence lower bound | Untere Evidenzschranke | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
+| evidence lower bound | untere Evidenzschranke | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
 | log probability | Log-Wahrscheinlichkeit | proposed | log-probability: The logarithm of a probability or probability density. |  |
 | log-sum-exp | Log-Sum-Exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
-| numerical stability | Numerische Stabilität | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L135) |
+| numerical stability | numerische Stabilität | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L135) |
 | floating point | Gleitkomma | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
 | underflow | Unterlauf | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-scratch.md#L124) |
 | overflow | Überlauf | verified_d2l | overflow: A numerical condition in which a magnitude exceeds the representable range. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L72) |
@@ -317,9 +317,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | subgradient | Subgradient | proposed | subgradient: A generalization of a gradient applicable to certain nondifferentiable functions. |  |
 | proximal operator | Proximaloperator | proposed | proximal-operator: An optimization operator balancing a function value with distance from an input point. |  |
 | Lipschitz continuity | Lipschitz-Stetigkeit | proposed | lipschitz-continuity: A bound on how rapidly a function can change relative to its input. |  |
-| strong convexity | Starke Konvexität | proposed | strong-convexity: A strengthened form of convexity with a positive quadratic lower bound. |  |
-| convex set | Konvexe Menge | proposed | convex-set: A set containing every line segment between any two of its points. |  |
-| feasible region | Zulässiger Bereich | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
+| strong convexity | starke Konvexität | proposed | strong-convexity: A strengthened form of convexity with a positive quadratic lower bound. |  |
+| convex set | konvexe Menge | proposed | convex-set: A set containing every line segment between any two of its points. |  |
+| feasible region | zulässiger Bereich | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
 | duality | Dualität | proposed | duality: A relationship between an optimization problem and an associated dual problem. |  |
 | Lagrangian | Lagrange-Funktion | proposed | lagrangian: A function combining an objective with weighted constraint terms. |  |
 | coordinate descent | Koordinatenabstieg | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
@@ -334,70 +334,70 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | forward pass | Vorwärtsdurchlauf | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
 | computational efficiency | Recheneffizienz | proposed | computational-efficiency: The effectiveness with which computation uses time or resources. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L73) |
 | loss landscape | Verlustlandschaft | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
-| inductive bias | Induktiver Bias | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
-| universal approximation | Universelle Approximation | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
+| inductive bias | induktiver Bias | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
+| universal approximation | universelle Approximation | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
 | feature extraction | Merkmalsextraktion | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
 | representation learning | Repräsentationslernen | proposed | representation-learning: Learning useful features or representations from data. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L279) |
-| self-supervised learning | Selbstüberwachtes Lernen | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
+| self-supervised learning | selbstüberwachtes Lernen | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
 | supervised learning | überwachtes Lernen | verified_external | supervised-learning: Learning a mapping from inputs to observed targets. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
 | unsupervised learning | unüberwachtes Lernen | verified_external | unsupervised-learning: Learning structure from data without task labels. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
-| in-context learning | Lernen im Kontext | verified_external | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. | [google-ml-de-generative](https://developers.google.com/machine-learning/glossary/generative?hl=de#in-context-learning) |
+| in-context learning | In-Context-Lernen | proposed | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. |  |
 | prompt | Prompt | proposed | prompt: An input that guides a model's response or behavior. |  |
 | context window | Kontextfenster | verified_external | context-window: The amount of context a model can process in a single input. | [google-ml-de-generative](https://developers.google.com/machine-learning/glossary/generative?hl=de#context-window) |
 | next-token prediction | Vorhersage des nächsten Tokens | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
-| autoregressive model | Autoregressives Modell | proposed | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. |  |
+| autoregressive model | autoregressives Modell | proposed | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. |  |
 | autoregressive generation | Autoregressive Generierung | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
-| causal attention | Kausale Attention | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
-| cross-attention | Kreuzaufmerksamkeit | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
-| scaled dot-product attention | Skalierte Skalarprodukt-Attention | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
+| causal attention | kausale Attention | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
+| cross-attention | Cross-Attention | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
+| scaled dot-product attention | skalierte Skalarprodukt-Attention | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | Softmax-Attention | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
 | position embedding | Positionseinbettung | proposed | position-embedding: A representation of position used in a sequence model. |  |
-| rotary position embedding | Rotierende Positionseinbettung | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
-| feedforward network | Feedforward-Netzwerk | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
+| rotary position embedding | Rotary Position Embedding | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
+| feedforward network | Feedforward-Netz | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
 | residual block | Residualblock | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | Normalisierungsschicht | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
-| root mean square | Quadratisches Mittel | proposed | root-mean-square: The square root of the mean of squared values. |  |
+| root mean square | quadratisches Mittel | proposed | root-mean-square: The square root of the mean of squared values. |  |
 | encoder-decoder | Encoder-Decoder | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | Sequenzlänge | proposed | sequence-length: The number of elements in a sequence. |  |
-| attention score | Aufmerksamkeitsscore | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
+| attention score | Attention-Score | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
 | attention pooling | Attention-Pooling | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
 | additive attention | Additive Attention | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
-| dot-product attention | Skalarprodukt-Aufmerksamkeit | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
-| masked attention | Maskierte Aufmerksamkeit | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
+| dot-product attention | Skalarprodukt-Attention | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
+| masked attention | maskierte Attention | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
 | byte pair encoding | Byte-Pair-Encoding | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
-| subword | Teilwort | proposed | subword: A token unit that can represent part of a word. |  |
+| subword | Subwort | proposed | subword: A token unit that can represent part of a word. |  |
 | n-gram | n-Gramm | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
 | corpus | Korpus | proposed | corpus: A collection of texts used for language analysis or model training. |  |
 | word frequency | Worthäufigkeit | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
 | embedding matrix | Einbettungsmatrix | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
 | cosine similarity | Kosinusähnlichkeit | proposed | cosine-similarity: A similarity measure based on the angle between vectors. |  |
-| nearest neighbor | Nächster Nachbar | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. |  |
+| nearest neighbor | nächster Nachbar | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. |  |
 | word analogy | Wortanalogie | proposed | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. |  |
 | skip-gram | Skip-Gram | proposed | skip-gram: A word embedding model and objective that predict context words from a center word. |  |
-| continuous bag of words | Kontinuierliches Bag-of-Words | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
-| masked language modeling | Maskierte Sprachmodellierung | proposed | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. |  |
+| continuous bag of words | Continuous Bag of Words | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
+| masked language modeling | maskierte Sprachmodellierung | proposed | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. |  |
 | next sentence prediction | Vorhersage des nächsten Satzes | proposed | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. |  |
 | question answering | Fragebeantwortung | proposed | question-answering: The task of producing an answer to a question, often using a supplied context. |  |
 | text classification | Textklassifikation | proposed | text-classification: The task of assigning categories to text. |  |
 | named entity recognition | Erkennung benannter Entitäten | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. |  |
-| semantic similarity | Semantische Ähnlichkeit | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
+| semantic similarity | semantische Ähnlichkeit | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
 | convolutional layer | Faltungsschicht | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | Merkmalskarte | proposed | feature-map: An array of activations representing features across positions. |  |
 | pooling layer | Pooling-Schicht | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
-| strided convolution | Strided Convolution | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
-| transposed convolution | Transponierte Faltung | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. |  |
-| dilated convolution | Dilated Convolution | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
-| depthwise convolution | Tiefenweise Faltung | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
-| pointwise convolution | Punktweise Faltung | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
+| strided convolution | Faltung mit Stride | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
+| transposed convolution | transponierte Faltung | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. |  |
+| dilated convolution | dilatierte Faltung | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
+| depthwise convolution | tiefenweise Faltung | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
+| pointwise convolution | punktweise Faltung | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
 | image resolution | Bildauflösung | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
 | pixel | Pixel | proposed | pixel: An individual sample in a digital image. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/image-classification-dataset.md#L74) |
 | image recognition | Bilderkennung | proposed | image-recognition: The task of identifying visual content in images. |  |
 | image segmentation | Bildsegmentierung | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
 | region proposal | Regionsvorschlag | proposed | region-proposal: A candidate image region that may contain an object. |  |
 | anchor box | Ankerbox | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
-| non-maximum suppression | Nicht-Maximum-Unterdrückung | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
-| data augmentation | Datenaugmentation | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
-| random crop | Zufälliger Bildausschnitt | proposed | random-crop: A data augmentation that selects a random subregion of an input. |  |
+| non-maximum suppression | Non-Maximum-Suppression | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
+| data augmentation | Datenaugmentierung | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
+| random crop | zufälliger Bildausschnitt | proposed | random-crop: A data augmentation that selects a random subregion of an input. |  |
 | super-resolution | Superauflösung | proposed | super-resolution: The task of producing a higher-resolution image from a lower-resolution input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L152) |
 | image generation | Bilderzeugung | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
 | feature pyramid | Merkmalspyramide | proposed | feature-pyramid: A collection of feature representations at multiple spatial scales. |  |
@@ -407,78 +407,78 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | trajectory | Trajektorie | proposed | trajectory: A sequence of states, actions, or observations generated over time. |  |
 | episode | Episode | proposed | episode: A sequence of interactions ending at a terminal condition. |  |
 | terminal state | Endzustand | proposed | terminal-state: A state marking the end of an episode. |  |
-| optimal policy | Optimale Strategie | proposed | optimal-policy: A policy achieving the best expected return under a specified criterion. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L249) |
+| optimal policy | optimale Strategie | proposed | optimal-policy: A policy achieving the best expected return under a specified criterion. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L249) |
 | policy iteration | Strategieiteration | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
 | policy evaluation | Strategiebewertung | proposed | policy-evaluation: Computing or estimating the value of a policy. |  |
 | policy improvement | Strategieverbesserung | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
 | off-policy | Off-Policy | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
 | on-policy | On-Policy | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
-| multi-armed bandit | Mehrarmiger Bandit | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
+| multi-armed bandit | mehrarmiger Bandit | proposed | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. |  |
 | regret | Regret | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
 | Markov reward process | Markow-Belohnungsprozess | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
 | Bellman optimality equation | Bellman-Optimalitätsgleichung | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | Policy-Gradient-Theorem | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
-| deep reinforcement learning | Tiefes verstärkendes Lernen | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
-| target network | Zielnetzwerk | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
-| experience replay | Experience Replay | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
+| deep reinforcement learning | tiefes bestärkendes Lernen | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
+| target network | Zielnetz | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
+| experience replay | Experience-Replay | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
 | diffusion process | Diffusionsprozess | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
 | forward process | Vorwärtsprozess | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
 | reverse process | Rückwärtsprozess | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
-| score matching | Score Matching | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
+| score matching | Score-Matching | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | Langevin-Dynamik | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
 | noise prediction | Rauschvorhersage | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
-| Gaussian noise | Gaußsches Rauschen | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. |  |
-| flow matching | Flow Matching | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
+| Gaussian noise | gaußsches Rauschen | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. |  |
+| flow matching | Flow-Matching | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
 | probability flow | Wahrscheinlichkeitsfluss | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
 | vector field | Vektorfeld | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
-| continuous-time | Kontinuierliche Zeit | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
+| continuous-time | kontinuierliche Zeit | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
 | discretization | Diskretisierung | proposed | discretization: Approximation of a continuous object or process using discrete steps or values. |  |
 | Euler-Maruyama | Euler-Maruyama | proposed | euler-maruyama: A numerical method for approximating solutions of stochastic differential equations. |  |
 | Itô calculus | Itô-Kalkül | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
 | ODE solver | ODE-Löser | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
-| adjoint method | Adjungierte Methode | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
+| adjoint method | adjungierte Methode | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | Matrixexponential | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | Fourier-Transformation | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
-| bias | Statistischer Bias | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
+| bias | Verzerrung | verified_external | statistical-bias: The difference between an estimator’s expected value and the true parameter. | review-de-3fb627f434: page |
 | mixture of experts | Mixture of Experts | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
 | transition kernel | Übergangskern | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
-| expected reward | Erwartete Belohnung | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
-| effective horizon | Effektiver Horizont | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
+| expected reward | erwartete Belohnung | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
+| effective horizon | effektiver Horizont | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
 | behavior policy | Verhaltensstrategie | proposed | behavior-policy: The policy that generates the data used by a learning algorithm. |  |
 | target policy | Zielstrategie | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
 | temporal-difference error | Temporal-Difference-Fehler | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
-| reward-to-go | Künftiger Ertrag | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
-| dynamic programming | Dynamische Programmierung | proposed | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L321) |
-| contextual bandit | Kontextueller Bandit | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
-| control variate | Kontrollvariable | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
+| reward-to-go | künftiger Ertrag | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
+| dynamic programming | dynamische Programmierung | proposed | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L321) |
+| contextual bandit | kontextueller Bandit | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
+| control variate | Kontrollvariate | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
 | function approximation | Funktionsapproximation | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
 | actor | Akteur | proposed | actor: The policy component of an actor-critic method. |  |
 | critic | Kritiker | proposed | critic: The component of an actor-critic method that estimates value or evaluates the policy. |  |
 | fixed point | Fixpunkt | proposed | fixed-point: A point unchanged by applying a given mapping. |  |
 | value backup | Wert-Backup | proposed | value-backup: A computation updating a value estimate using rewards and successor values. |  |
-| greedy policy | Gierige Strategie | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. |  |
+| greedy policy | gierige Strategie | proposed | greedy-policy: A policy that chooses an action with the highest estimated value. |  |
 | exploration rate | Explorationsrate | proposed | exploration-rate: A parameter controlling how often an agent explores actions. |  |
 | state-action pair | Zustand-Aktion-Paar | proposed | state-action-pair: A combination of a state and an action available in that state. |  |
 | partially observable | Teilweise beobachtbar | proposed | partially-observable: Describing a process in which the agent cannot directly observe the complete state. |  |
 | Markov chain Monte Carlo | Markow-Chain-Monte-Carlo | proposed | markov-chain-monte-carlo: A family of sampling methods that construct a Markov chain with a desired stationary distribution. |  |
 | noise ball | Rauschkugel | proposed | noise-ball: A neighborhood around a solution within which stochastic updates continue to fluctuate. |  |
-| implicit bias | impliziter Bias | verified_external | implicit-bias: A preference for certain solutions induced by the learning procedure itself. | [google-ml-de-responsible-ai](https://developers.google.com/machine-learning/glossary/responsible-ai?hl=de#implicit-bias) |
+| implicit bias | impliziter Bias | proposed | implicit-bias: A preference for certain solutions induced by the learning procedure itself. |  |
 | preconditioner | Vorkonditionierer | proposed | preconditioner: A transformation used to improve the conditioning of an optimization problem. |  |
 | sharpness | Schärfe | proposed | sharpness: A measure of how rapidly an objective rises around a point. |  |
 | step size | Schrittweite | proposed | step-size: The magnitude of a step taken by an iterative method. |  |
-| soft maximum | Weiches Maximum | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
+| soft maximum | weiches Maximum | proposed | soft-maximum: A smooth approximation to the maximum of a collection of values. |  |
 | proximal gradient | Proximalgradient | proposed | proximal-gradient: An optimization method combining a gradient step with a proximal operation. |  |
 | cosine decay | Kosinus-Abfall | proposed | cosine-decay: A schedule that reduces a quantity according to a cosine-shaped curve. |  |
 | AdamW | AdamW | proposed | adamw: An adaptive optimizer that decouples weight decay from gradient-based updates. |  |
-| natural gradient | Natürlicher Gradient | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
+| natural gradient | natürlicher Gradient | proposed | natural-gradient: A gradient direction adjusted to account for the geometry of a model's probability distributions. |  |
 | Shampoo | Shampoo | proposed | shampoo: An optimizer that uses structured second-moment information to precondition updates. |  |
 | Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
 | heavy-ball momentum | Heavy-Ball-Momentum | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
-| trust-region method | Vertrauensbereichsverfahren | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
-| soft-thresholding | Weiches Schwellenwertverfahren | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
+| trust-region method | Trust-Region-Verfahren | verified_external | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. | review-de-96c9228d7a: page |
+| soft-thresholding | weiches Schwellenwertverfahren | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
 | convex conjugate | Konvex Konjugierte | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
 | subdifferential | Subdifferential | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
-| dual problem | Duales Problem | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
+| dual problem | duales Problem | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
 | shadow price | Schattenpreis | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
 | Lasso | Lasso | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/weight-decay.md#L30) |
 | ridge regression | Ridge-Regression | proposed | ridge-regression: A regression method using a squared-weight penalty. |  |
@@ -491,10 +491,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | power iteration | Potenziteration | proposed | power-iteration: An iterative algorithm for estimating a dominant eigenvector or singular direction. |  |
 | projection | Projektion | proposed | projection: A mapping that sends a point onto a specified subspace or set. |  |
 | span | Spann | proposed | span: The set of all linear combinations of a collection of vectors. |  |
-| linear independence | Lineare Unabhängigkeit | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
+| linear independence | lineare Unabhängigkeit | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
 | covariance matrix | Kovarianzmatrix | proposed | covariance-matrix: A matrix containing covariances between pairs of random variables. |  |
 | normal equations | Normalgleichungen | proposed | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. |  |
-| one-hot encoding | One-Hot-Codierung | verified_external | one-hot-encoding: A representation of a category as a vector with one active component. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#one-hot-encoding) |
+| one-hot encoding | One-Hot-Kodierung | proposed | one-hot-encoding: A representation of a category as a vector with one active component. |  |
 | concatenation | Verkettung | proposed | concatenation: The operation of joining arrays or sequences along an axis. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_notation/index.md#L36) |
 | broadcasting | Broadcasting | proposed | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. |  |
 | shape | Form | proposed | shape: The sizes of the axes of an array or tensor. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L134) |
@@ -502,16 +502,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | forward mode | Vorwärtsmodus | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
 | reverse mode | Rückwärtsmodus | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
 | truncation error | Abbruchfehler | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
-| finite difference | Endliche Differenz | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
+| finite difference | endliche Differenz | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
 | mean value theorem | Mittelwertsatz | proposed | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. |  |
 | Taylor expansion | Taylor-Entwicklung | proposed | taylor-expansion: A local approximation to a function expressed in powers of displacement from a point. |  |
-| conditional entropy | Bedingte Entropie | proposed | conditional-entropy: The uncertainty remaining in one random variable after another is known. |  |
+| conditional entropy | bedingte Entropie | proposed | conditional-entropy: The uncertainty remaining in one random variable after another is known. |  |
 | surprisal | Überraschungswert | proposed | surprisal: The negative logarithm of the probability assigned to an outcome. |  |
-| effective sample size | Effektive Stichprobengröße | proposed | effective-sample-size: A measure of the amount of information in a weighted or dependent sample relative to independent samples. |  |
-| union bound | Vereinigungsabschätzung | proposed | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. |  |
+| effective sample size | effektive Stichprobengröße | proposed | effective-sample-size: A measure of the amount of information in a weighted or dependent sample relative to independent samples. |  |
+| union bound | boolesche Ungleichung | proposed | union-bound: An upper bound on the probability of a union of events by the sum of their probabilities. |  |
 | gamma function | Gammafunktion | proposed | gamma-function: A function extending the factorial to a broader domain. |  |
-| maximum entropy | Maximale Entropie | proposed | maximum-entropy: A principle choosing the highest-entropy distribution subject to specified constraints. |  |
-| empirical distribution | Empirische Verteilung | proposed | empirical-distribution: A distribution that assigns probability mass to observed sample values. |  |
+| maximum entropy | maximale Entropie | proposed | maximum-entropy: A principle choosing the highest-entropy distribution subject to specified constraints. |  |
+| empirical distribution | empirische Verteilung | proposed | empirical-distribution: A distribution that assigns probability mass to observed sample values. |  |
 | confidence level | Konfidenzniveau | proposed | confidence-level: The long-run coverage probability associated with a confidence interval procedure. |  |
 | statistical power | Teststärke | proposed | statistical-power: The probability that a statistical test rejects a false null hypothesis. |  |
 | variance-preserving | Varianzerhaltend | proposed | variance-preserving: Describing a diffusion process designed to keep the marginal variance controlled. |  |
@@ -519,15 +519,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | classifier guidance | Klassifikator-Guidance | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
 | classifier-free guidance | Classifier-Free Guidance | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
 | probability-flow ODE | Wahrscheinlichkeitsfluss-ODE | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
-| optimal transport | Optimaler Transport | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
+| optimal transport | optimaler Transport | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
 | Wasserstein distance | Wasserstein-Abstand | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
 | mode collapse | Moduskollaps | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
-| conditional generation | Bedingte Generierung | proposed | conditional-generation: Generating samples conditioned on specified information. |  |
+| conditional generation | bedingte Generierung | proposed | conditional-generation: Generating samples conditioned on specified information. |  |
 | image-to-image translation | Bild-zu-Bild-Übersetzung | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
 | cycle consistency | Zykluskonsistenz | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
 | critic loss | Kritikerverlust | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
-| KV cache | Schlüssel-Wert-Cache | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
-| grouped-query attention | Gruppierte Query-Attention | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
+| KV cache | KV-Cache | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
+| grouped-query attention | Grouped-Query-Attention | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
 | attention sink | Attention-Sink | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
 | transformer block | Transformer-Block | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
 | residual stream | Residualstrom | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
@@ -538,52 +538,52 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | decode | Dekodierung | proposed | decode: The stage of generating output tokens from a model one step at a time. |  |
 | time to first token | Zeit bis zum ersten Token | proposed | time-to-first-token: The elapsed time from a generation request until its first output token. |  |
 | roofline | Roofline | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
-| arithmetic intensity | Arithmetische Intensität | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
-| mixed precision | Gemischte Präzision | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
+| arithmetic intensity | arithmetische Intensität | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
+| mixed precision | gemischte Genauigkeit | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
 | eager execution | sofortige Ausführung | verified_external | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. | [google-ml-de-tensorflow](https://developers.google.com/machine-learning/glossary/tensorflow?hl=de#eager-execution) |
 | activation checkpointing | Aktivierungs-Checkpointing | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
 | data loader | Datenlader | proposed | data-loader: A component that prepares and supplies batches of data to a training process. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/image-classification-dataset.md#L132) |
 | input pipeline | Eingabepipeline | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
-| stochastic depth | Stochastische Tiefe | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | Global Average Pooling | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
-| grouped convolution | Gruppierte Faltung | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
+| stochastic depth | stochastische Tiefe | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
+| global average pooling | Global-Average-Pooling | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
+| grouped convolution | gruppierte Faltung | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | Exponentieller gleitender Mittelwert | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
-| inverted dropout | Invertiertes Dropout | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
+| inverted dropout | invertiertes Dropout | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
 | He initialization | He-Initialisierung | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
 | GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
 | generalization gap | Generalisierungslücke | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
 | hypothesis class | Hypothesenklasse | proposed | hypothesis-class: The set of candidate functions or models considered by a learning method. |  |
-| uniform convergence | Gleichmäßige Konvergenz | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
+| uniform convergence | gleichmäßige Konvergenz | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
 | VC dimension | VC-Dimension | proposed | vc-dimension: A measure of the capacity of a class of binary classifiers. |  |
-| adaptive overfitting | Adaptives Overfitting | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
+| adaptive overfitting | adaptive Überanpassung | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
 | interpolation threshold | Interpolationsschwelle | proposed | interpolation-threshold: A model-capacity threshold at which a model can fit the training data exactly. |  |
 | logit | Logit | proposed | logit: An unnormalized score used as an input to a probability transformation. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L57) |
 | margin | Margin | proposed | margin: A measure of separation between a prediction and a decision boundary or competing class. |  |
 | calibration | Kalibrierung | proposed | calibration: Agreement between predicted probabilities and observed frequencies. |  |
 | softplus | Softplus | proposed | softplus: A smooth function commonly used as an approximation to the rectified linear unit. |  |
-| selective state space model | Selektives Zustandsraummodell | proposed | selective-state-space-model: A state space model whose parameters depend on the current input. |  |
-| linear recurrence | Lineare Rekurrenz | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
+| selective state space model | selektives Zustandsraummodell | proposed | selective-state-space-model: A state space model whose parameters depend on the current input. |  |
+| linear recurrence | lineare Rekurrenz | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
 | input-dependent | Eingabeabhängig | proposed | input-dependent: Describing a quantity whose value changes with the input. |  |
-| selective scan | Selektiver Scan | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
-| parallel scan | Paralleler Scan | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
-| recurrent state | Rekurrenter Zustand | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
+| selective scan | selektiver Scan | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
+| parallel scan | paralleler Scan | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
+| recurrent state | rekurrenter Zustand | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
 | forget gate | Vergessensgatter | proposed | forget-gate: A gate that controls how much of a previous state is retained. |  |
 | input gate | Eingabegatter | proposed | input-gate: A gate that controls how much new information enters a recurrent state. |  |
 | output gate | Ausgabegatter | proposed | output-gate: A gate that controls how a recurrent state contributes to the output. |  |
 | update gate | Update-Gatter | proposed | update-gate: A gate that controls the blend of previous state and candidate state in a recurrent model. |  |
 | reset gate | Reset-Gatter | proposed | reset-gate: A gate that controls how previous state influences a candidate recurrent update. |  |
-| backpropagation through time | Fehlerrückführung durch die Zeit | proposed | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. |  |
-| truncated backpropagation through time | Abgeschnittene Fehlerrückführung durch die Zeit | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
+| backpropagation through time | Backpropagation durch die Zeit | proposed | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. |  |
+| truncated backpropagation through time | abgeschnittene Backpropagation durch die Zeit | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
 | sequence transduction | Sequenztransduktion | proposed | sequence-transduction: The task of converting an input sequence into an output sequence. |  |
 | sequence modeling | Sequenzmodellierung | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. |  |
-| beam width | Strahlbreite | proposed | beam-width: The number of candidate sequences retained at each step of beam search. |  |
-| greedy decoding | Gieriges Dekodieren | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
-| causal language model | Kausales Sprachmodell | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
-| masked token | Maskiertes Token | proposed | masked-token: A token hidden or replaced so a model must infer it from context. |  |
+| beam width | Beam-Breite | proposed | beam-width: The number of candidate sequences retained at each step of beam search. |  |
+| greedy decoding | gieriges Dekodieren | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
+| causal language model | kausales Sprachmodell | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
+| masked token | maskiertes Token | proposed | masked-token: A token hidden or replaced so a model must infer it from context. |  |
 | context length | Kontextlänge | proposed | context-length: The number of input tokens available to a sequence model. |  |
 | attention head | Attention-Kopf | proposed | attention-head: One independently parameterized attention operation in multi-head attention. |  |
 | attention map | Attention-Karte | proposed | attention-map: A matrix or array of attention weights between queries and keys. |  |
-| causal mask | Kausale Maske | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
+| causal mask | kausale Maske | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
 | router | Router | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
 | load balancing | Lastausgleich | proposed | load-balancing: Distributing work across resources or experts to avoid disproportionate assignment. |  |
 | capacity factor | Kapazitätsfaktor | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
@@ -593,70 +593,70 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | memory footprint | Speicherbedarf | proposed | memory-footprint: The amount of memory occupied by data or a computation. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/backprop.md#L127) |
 | memory hierarchy | Speicherhierarchie | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
 | memory access | Speicherzugriff | proposed | memory-access: A read from or write to a memory location. |  |
-| memory-bound | Speichergebunden | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
-| compute-bound | Rechengebunden | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
+| memory-bound | speicherbegrenzt | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
+| compute-bound | rechenbegrenzt | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
 | graph compilation | Graphkompilierung | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
 | just-in-time compilation | Just-in-time-Kompilierung | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
-| asynchronous execution | Asynchrone Ausführung | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
+| asynchronous execution | asynchrone Ausführung | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | Synchronisierung | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. |  |
 | all-reduce | All-Reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | Gradientenakkumulation | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
-| pipeline parallelism | Pipeline-Parallelismus | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
-| tensor parallelism | Tensorparallelismus | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
+| pipeline parallelism | Pipeline-Parallelität | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
+| tensor parallelism | Tensorparallelität | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
 | checkpointing | Checkpointing | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
 | reproducibility | Reproduzierbarkeit | proposed | reproducibility: The ability to obtain consistent results when repeating an experiment under specified conditions. |  |
 | random number generator | Zufallszahlengenerator | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
 | rounding error | Rundungsfehler | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
-| dynamic range | Dynamischer Bereich | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
+| dynamic range | dynamischer Bereich | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | Trainingsdurchsatz | proposed | training-throughput: The amount of training work completed per unit time. |  |
 | soft actor-critic | Soft Actor-Critic | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | Deep Q-Network | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L309) |
-| proximal policy optimization | Proximale Policy-Optimierung | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
-| trust region | Vertrauensbereich | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
-| offline reinforcement learning | Offline Reinforcement Learning | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
+| proximal policy optimization | Proximal Policy Optimization | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
+| trust region | Trust-Region | verified_external | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. | review-de-96c9228d7a: page |
+| offline reinforcement learning | bestärkendes Offline-Lernen | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
 | behavior cloning | Verhaltensklonen | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
 | importance weight | Wichtigkeitsgewicht | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. |  |
 | advantage estimate | Vorteilsschätzung | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |
-| generalized advantage estimation | Generalisierte Vorteilsschätzung | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
+| generalized advantage estimation | verallgemeinerte Vorteilsschätzung | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
 | reward model | Belohnungsmodell | proposed | reward-model: A learned model that predicts a reward or preference signal. |  |
-| reward hacking | Reward Hacking | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
+| reward hacking | Reward-Hacking | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
 | planning horizon | Planungshorizont | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | Bellman-Operator | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
 | bootstrapping | Bootstrapping | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
 | Monte Carlo return | Monte-Carlo-Ertrag | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
-| terminal reward | Terminale Belohnung | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
+| terminal reward | terminale Belohnung | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
 | exploration bonus | Explorationsbonus | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
-| upper confidence bound | Obere Konfidenzschranke | proposed | upper-confidence-bound: A decision criterion combining an estimate with an uncertainty-based optimism term. |  |
+| upper confidence bound | obere Konfidenzschranke | proposed | upper-confidence-bound: A decision criterion combining an estimate with an uncertainty-based optimism term. |  |
 | random vector | Zufallsvektor | proposed | random-vector: A vector whose components are random variables. |  |
 | multivariate Gaussian | Multivariate Gauß-Verteilung | proposed | multivariate-gaussian: A Gaussian probability distribution over vectors. |  |
 | positive semidefinite | Positiv semidefinit | proposed | positive-semidefinite: Having a nonnegative quadratic form for every vector. |  |
 | positive definite matrix | Positiv definite Matrix | proposed | positive-definite-matrix: A symmetric matrix with a strictly positive quadratic form for every nonzero vector. |  |
-| symmetric matrix | Symmetrische Matrix | proposed | symmetric-matrix: A matrix equal to its transpose. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L186) |
+| symmetric matrix | symmetrische Matrix | proposed | symmetric-matrix: A matrix equal to its transpose. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/linear-algebra.md#L186) |
 | diagonal matrix | Diagonalmatrix | proposed | diagonal-matrix: A matrix whose entries outside the main diagonal are zero. |  |
-| orthogonal matrix | Orthogonale Matrix | proposed | orthogonal-matrix: A square matrix whose columns form an orthonormal set. |  |
+| orthogonal matrix | orthogonale Matrix | proposed | orthogonal-matrix: A square matrix whose columns form an orthonormal set. |  |
 | unit vector | Einheitsvektor | proposed | unit-vector: A vector whose norm equals one. |  |
 | vector space | Vektorraum | proposed | vector-space: A set of vectors closed under addition and scalar multiplication. |  |
 | subspace | Unterraum | proposed | subspace: A subset that is itself a vector space under the inherited operations. |  |
-| inner product | Inneres Produkt | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/autograd.md#L89) |
-| outer product | Äußeres Produkt | proposed | outer-product: A matrix formed by multiplying each component of one vector by each component of another. |  |
-| quadratic form | Quadratische Form | proposed | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. |  |
-| quadratic function | Quadratische Funktion | proposed | quadratic-function: A function containing terms of degree at most two. |  |
-| linear system | Lineares Gleichungssystem | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
-| least squares | Kleinste Quadrate | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. |  |
+| inner product | inneres Produkt | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/autograd.md#L89) |
+| outer product | äußeres Produkt | proposed | outer-product: A matrix formed by multiplying each component of one vector by each component of another. |  |
+| quadratic form | quadratische Form | proposed | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. |  |
+| quadratic function | quadratische Funktion | proposed | quadratic-function: A function containing terms of degree at most two. |  |
+| linear system | lineares Gleichungssystem | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
+| least squares | kleinste Quadrate | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. |  |
 | residual | Residuum | proposed | residual: The difference between an observed value and its fitted or predicted value. |  |
 | ill-conditioned | Schlecht konditioniert | proposed | ill-conditioned: Describing a problem whose solution is highly sensitive to small perturbations. |  |
-| singular matrix | Singuläre Matrix | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
-| invertible matrix | Invertierbare Matrix | proposed | invertible-matrix: A square matrix with an inverse. |  |
+| singular matrix | singuläre Matrix | proposed | singular-matrix: A square matrix that does not have an inverse. |  |
+| invertible matrix | invertierbare Matrix | proposed | invertible-matrix: A square matrix with an inverse. |  |
 | pseudoinverse | Pseudoinverse | proposed | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. |  |
 | orthonormal basis | Orthonormalbasis | proposed | orthonormal-basis: A basis whose vectors have unit norm and are mutually orthogonal. |  |
 | basis vector | Basisvektor | proposed | basis-vector: A vector belonging to a basis of a vector space. |  |
 | eigendecomposition | Eigenwertzerlegung | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. |  |
 | singular value | Singulärwert | proposed | singular-value: A nonnegative scaling factor in a matrix's singular value decomposition. |  |
-| left singular vector | Linker Singulärvektor | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
-| right singular vector | Rechter Singulärvektor | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
-| low-rank approximation | Niedrigrangige Approximation | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
-| orthogonal projection | Orthogonale Projektion | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
-| Euclidean norm | Euklidische Norm | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
+| left singular vector | linker Singulärvektor | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
+| right singular vector | rechter Singulärvektor | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
+| low-rank approximation | niedrigrangige Approximation | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
+| orthogonal projection | orthogonale Projektion | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
+| Euclidean norm | euklidische Norm | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
 | Frobenius norm | Frobeniusnorm | proposed | frobenius-norm: The square root of the sum of squares of all matrix entries. |  |
 | operator norm | Operatornorm | proposed | operator-norm: The maximum factor by which a linear operator can stretch vectors under chosen norms. |  |
 | triangle inequality | Dreiecksungleichung | proposed | triangle-inequality: An inequality stating that the size of a sum is at most the sum of the sizes of its parts. |  |
@@ -666,30 +666,30 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | affine transformation | Affine Transformation | proposed | affine-transformation: A linear transformation followed by a translation. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L68) |
 | Hessian-vector product | Hesse-Vektor-Produkt | proposed | hessian-vector-product: The product of a Hessian matrix with a vector, often computed without forming the full matrix. |  |
 | directional derivative | Richtungsableitung | proposed | directional-derivative: The rate of change of a function in a specified direction. |  |
-| total derivative | Totale Ableitung | proposed | total-derivative: The derivative accounting for dependence through all relevant variables. |  |
-| second derivative | Zweite Ableitung | proposed | second-derivative: The derivative of a first derivative, measuring how a slope changes. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L170) |
+| total derivative | totale Ableitung | proposed | total-derivative: The derivative accounting for dependence through all relevant variables. |  |
+| second derivative | zweite Ableitung | proposed | second-derivative: The derivative of a first derivative, measuring how a slope changes. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L170) |
 | initial condition | Anfangsbedingung | proposed | initial-condition: A value specified at the starting point of a differential equation or recurrence. |  |
 | boundary condition | Randbedingung | proposed | boundary-condition: A constraint on a solution at the boundary of its domain. |  |
-| numerical integration | Numerische Integration | proposed | numerical-integration: Approximation of an integral using numerical computations. |  |
+| numerical integration | numerische Integration | proposed | numerical-integration: Approximation of an integral using numerical computations. |  |
 | Riemann sum | Riemann-Summe | proposed | riemann-sum: A sum approximating an integral by adding contributions from subintervals. |  |
-| indefinite integral | Unbestimmtes Integral | proposed | indefinite-integral: A family of antiderivatives of a function. |  |
-| definite integral | Bestimmtes Integral | proposed | definite-integral: An integral over a specified domain, representing accumulated quantity. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_notation/index.md#L50) |
-| integration by parts | Partielle Integration | proposed | integration-by-parts: An integration rule derived from the product rule for derivatives. |  |
+| indefinite integral | unbestimmtes Integral | proposed | indefinite-integral: A family of antiderivatives of a function. |  |
+| definite integral | bestimmtes Integral | proposed | definite-integral: An integral over a specified domain, representing accumulated quantity. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_notation/index.md#L50) |
+| integration by parts | partielle Integration | proposed | integration-by-parts: An integration rule derived from the product rule for derivatives. |  |
 | fundamental theorem of calculus | Hauptsatz der Differential- und Integralrechnung | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
-| implicit differentiation | Implizites Differenzieren | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
+| implicit differentiation | implizites Differenzieren | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
 | Lipschitz constant | Lipschitz-Konstante | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
 | Lipschitz continuous | Lipschitz-stetig | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
 | convex combination | Konvexkombination | proposed | convex-combination: A weighted sum with nonnegative weights that sum to one. |  |
 | Jensen's inequality | Jensen-Ungleichung | proposed | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. |  |
 | first-order condition | Bedingung erster Ordnung | proposed | first-order-condition: A condition on first derivatives used to characterize candidate optima. |  |
 | second-order condition | Bedingung zweiter Ordnung | proposed | second-order-condition: A condition involving second derivatives used to characterize candidate optima. |  |
-| feasible point | Zulässiger Punkt | proposed | feasible-point: A point satisfying all constraints of an optimization problem. |  |
+| feasible point | zulässiger Punkt | proposed | feasible-point: A point satisfying all constraints of an optimization problem. |  |
 | probability simplex | Wahrscheinlichkeitssimplex | proposed | probability-simplex: The set of nonnegative vectors whose components sum to one. |  |
-| stochastic process | Stochastischer Prozess | proposed | stochastic-process: A collection of random variables indexed by time or another parameter. |  |
-| conditional independence | Bedingte Unabhängigkeit | proposed | conditional-independence: Independence of variables after conditioning on another variable or set of variables. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L262) |
-| posterior mean | Posteriorer Mittelwert | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
-| posterior variance | Posteriore Varianz | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
-| independent samples | Unabhängige Stichproben | proposed | independent-samples: Samples whose values do not provide information about each other under the model. |  |
+| stochastic process | stochastischer Prozess | proposed | stochastic-process: A collection of random variables indexed by time or another parameter. |  |
+| conditional independence | bedingte Unabhängigkeit | proposed | conditional-independence: Independence of variables after conditioning on another variable or set of variables. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L262) |
+| posterior mean | A-posteriori-Mittelwert | proposed | posterior-mean: The expectation of an unknown quantity under its posterior distribution. |  |
+| posterior variance | A-posteriori-Varianz | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
+| independent samples | unabhängige Stichproben | proposed | independent-samples: Samples whose values do not provide information about each other under the model. |  |
 | identically distributed | Identisch verteilt | proposed | identically-distributed: Having the same probability distribution. |  |
 | random sample | Zufallsstichprobe | proposed | random-sample: A collection of observations drawn according to a sampling procedure. |  |
 | sample mean | Stichprobenmittelwert | proposed | sample-mean: The arithmetic average of observed sample values. |  |
@@ -697,28 +697,28 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | population mean | Populationsmittelwert | proposed | population-mean: The expected value of a variable in the population under study. |  |
 | sampling error | Stichprobenfehler | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
 | estimator variance | Varianz des Schätzers | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
-| unbiased estimator | Erwartungstreuer Schätzer | proposed | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. |  |
-| consistent estimator | Konsistenter Schätzer | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
-| maximum likelihood estimator | Maximum-Likelihood-Schätzung | verified_external | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L273) |
+| unbiased estimator | erwartungstreuer Schätzer | proposed | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. |  |
+| consistent estimator | konsistenter Schätzer | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
+| maximum likelihood estimator | Maximum-Likelihood-Schätzer | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
 | test statistic | Teststatistik | proposed | test-statistic: A quantity computed from data and used by a statistical test. |  |
 | type I error | Fehler erster Art | proposed | type-i-error: Rejecting a true null hypothesis. |  |
 | type II error | Fehler zweiter Art | proposed | type-ii-error: Failing to reject a false null hypothesis. |  |
 | Monte Carlo estimate | Monte-Carlo-Schätzung | proposed | monte-carlo-estimate: An estimate computed using randomly sampled quantities. |  |
 | proposal distribution | Vorschlagsverteilung | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
-| rejection sampling | Rejection Sampling | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
+| rejection sampling | Rejection-Sampling | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
 | Gibbs sampling | Gibbs-Sampling | proposed | gibbs-sampling: A Markov chain Monte Carlo method that repeatedly samples conditional distributions. |  |
 | variational objective | Variationsziel | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
-| marginal likelihood | Marginale Likelihood | proposed | marginal-likelihood: The probability or density of observed data after integrating out latent variables or parameters. |  |
+| marginal likelihood | marginale Likelihood | proposed | marginal-likelihood: The probability or density of observed data after integrating out latent variables or parameters. |  |
 | entropy rate | Entropierate | proposed | entropy-rate: The rate at which a stochastic process produces uncertainty or information. |  |
-| conditional mutual information | Bedingte wechselseitige Information | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
+| conditional mutual information | bedingte gegenseitige Information | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
 | data processing inequality | Datenverarbeitungsungleichung | proposed | data-processing-inequality: A bound stating that processing cannot increase information about an original variable under a Markov relationship. |  |
 | relative entropy | Relative Entropie | proposed | relative-entropy: Another name for Kullback-Leibler divergence between distributions. |  |
 | Gaussian path | Gauß-Pfad | proposed | gaussian-path: A family of noisy distributions formed by combining a scaled data point with Gaussian noise. |  |
 | log-SNR | Log-SNR | proposed | log-snr: The logarithm of the signal-to-noise ratio used to index noise levels. |  |
-| conditional velocity | Bedingte Geschwindigkeit | proposed | conditional-velocity: The velocity of an individual noisy path conditioned on its clean data point. |  |
-| marginal velocity | Marginale Geschwindigkeit | proposed | marginal-velocity: The average path velocity conditioned on a point at a given time. |  |
-| conditional flow matching | Bedingtes Flow Matching | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
-| simple loss | Einfacher Verlust | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
+| conditional velocity | bedingte Geschwindigkeit | proposed | conditional-velocity: The velocity of an individual noisy path conditioned on its clean data point. |  |
+| marginal velocity | marginale Geschwindigkeit | proposed | marginal-velocity: The average path velocity conditioned on a point at a given time. |  |
+| conditional flow matching | bedingtes Flow-Matching | proposed | conditional-flow-matching: Training a velocity field by regression against conditional path velocities. |  |
+| simple loss | einfacher Verlust | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
 | flow map | Flussabbildung | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
 | average velocity | Durchschnittsgeschwindigkeit | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
 | consistency model | Konsistenzmodell | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
@@ -727,12 +727,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adaLN-Zero | AdaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | Modellierbarkeit | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
 | forward posterior | Vorwärts-Posterior | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
-| binary classification | binäre Klassifizierung | verified_external | binary-classification: The task of assigning each input to one of two classes. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=53) |
+| binary classification | binäre Klassifikation | proposed | binary-classification: The task of assigning each input to one of two classes. |  |
 | multiclass classification | Mehrklassenklassifikation | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
 | multi-label classification | Mehrlabelklassifikation | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
-| binary cross-entropy | Binäre Kreuzentropie | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. |  |
+| binary cross-entropy | binäre Kreuzentropie | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. |  |
 | softmax regression | Softmax-Regression | verified_d2l | softmax-regression: A classification model that applies softmax to linear class scores. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L1) |
-| logistic loss | Logistischer Verlust | proposed | logistic-loss: A loss derived from the logistic model for classification. |  |
+| logistic loss | logistischer Verlust | proposed | logistic-loss: A loss derived from the logistic model for classification. |  |
 | decision boundary | Entscheidungsgrenze | proposed | decision-boundary: A boundary separating regions assigned different predictions by a classifier. |  |
 | true positive | Richtig positiv | proposed | true-positive: A positive example correctly classified as positive. |  |
 | false positive | Falsch positiv | proposed | false-positive: A negative example incorrectly classified as positive. |  |
@@ -748,86 +748,86 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | negative class | negative Klasse | verified_external | negative-class: The class treated as negative when evaluating a binary classification problem. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#negative-class) |
 | training loss | Trainingsverlust | verified_external | training-loss: The loss measured on training examples. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#training-loss) |
 | validation loss | Validierungsverlust | verified_external | validation-loss: The loss measured on validation examples. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#validation-loss) |
-| test error | Testsfehlerrate | verified_external | test-error: The prediction error measured on a held-out test set. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
-| training error | Trainingsfehlerrate | verified_external | training-error: The prediction error measured on the training set. | [kit-de-bilingual](https://publish.etp.kit.edu/record/22293/files/ETP-Bachelor-KA-2025-01-Zeh-Marschke.pdf#page=54) |
+| test error | Testfehler | proposed | test-error: The prediction error measured on a held-out test set. |  |
+| training error | Trainingsfehler | proposed | training-error: The prediction error measured on the training set. |  |
 | population risk | Populationsrisiko | proposed | population-risk: Expected loss under the population data distribution. |  |
 | generalization error | Generalisierungsfehler | proposed | generalization-error: The expected prediction error on examples from a target distribution. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L16) |
 | regularization strength | Regularisierungsstärke | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
 | model capacity | Modellkapazität | verified_external | model-capacity: The expressive or fitting ability of a model class. | [google-ml-de-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=de#model-capacity) |
-| model complexity | Komplexität des Modells | verified_d2l | model-complexity: A measure of the flexibility or structural richness of a model. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L44) |
+| model complexity | Modellkomplexität | proposed | model-complexity: A measure of the flexibility or structural richness of a model. |  |
 | regularization path | Regularisierungspfad | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
 | learning curve | Lernkurve | proposed | learning-curve: A plot of model performance or loss as training or data size changes. |  |
-| double descent | Doppelter Abstieg | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
+| double descent | doppelter Abstieg | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
 | validation error | Validierungsfehler | proposed | validation-error: The prediction error measured on validation data. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/underfit-overfit.md#L76) |
-| held-out data | Zurückgehaltene Daten | proposed | held-out-data: Data set aside from fitting for evaluation or model selection. |  |
+| held-out data | zurückgehaltene Daten | proposed | held-out-data: Data set aside from fitting for evaluation or model selection. |  |
 | covariate shift | Kovariatenverschiebung | proposed | covariate-shift: A change in the distribution of inputs while the conditional target distribution is assumed unchanged. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L38) |
 | label shift | Labelverteilungsverschiebung | proposed | label-shift: A change in class proportions under an assumption of stable class-conditional input distributions. |  |
 | concept drift | Konzeptdrift | proposed | concept-drift: A change over time in the relationship between inputs and targets or in the data-generating process. |  |
 | in-distribution | In der Verteilung | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
 | Bayes error | Bayes-Fehler | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
 | regression target | Regressionsziel | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
-| feature vector | Featurevektor | verified_external | feature-vector: A vector containing the input features of an example. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#feature-vector) |
+| feature vector | Merkmalsvektor | proposed | feature-vector: A vector containing the input features of an example. |  |
 | target variable | Zielvariable | proposed | target-variable: The quantity a model is intended to predict. |  |
 | intercept | Achsenabschnitt | proposed | intercept: The additive constant in a regression or other linear model. |  |
 | coefficient | Koeffizient | proposed | coefficient: A numerical factor multiplying a variable or term. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/calculus.md#L177) |
 | least-squares regression | Kleinste-Quadrate-Regression | proposed | least-squares-regression: A regression method that minimizes squared residuals. |  |
-| linear predictor | Linearer Prädiktor | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
-| closed-form solution | Geschlossene Lösung | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression-scratch.md#L183) |
+| linear predictor | linearer Prädiktor | proposed | linear-predictor: A weighted sum of features, often including an intercept. |  |
+| closed-form solution | geschlossene Lösung | proposed | closed-form-solution: A solution expressed directly using a finite formula rather than an iterative algorithm. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression-scratch.md#L183) |
 | log odds | Log-Odds | proposed | log-odds: The logarithm of the ratio of an event's probability to the probability of its complement. |  |
 | odds ratio | Odds Ratio | proposed | odds-ratio: A ratio comparing the odds of an event under two conditions. |  |
-| independent variable | Unabhängige Variable | proposed | independent-variable: A variable treated as an input or explanatory quantity. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/calculus.md#L74) |
+| independent variable | unabhängige Variable | proposed | independent-variable: A variable treated as an input or explanatory quantity. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/calculus.md#L74) |
 | noise variance | Rauschvarianz | proposed | noise-variance: The variance of the random perturbation in a model. |  |
 | heteroscedastic | Heteroskedastisch | proposed | heteroscedastic: Describing noise whose variance varies across observations or inputs. |  |
 | mean absolute error | Mittlerer absoluter Fehler | proposed | mean-absolute-error: The average absolute difference between predictions and targets. |  |
 | root mean squared error | Wurzel des mittleren quadratischen Fehlers | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
 | classification loss | Klassifikationsverlust | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
 | hinge loss | Hinge-Verlust | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [google-ml-de-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=de#hinge-loss) |
-| squared loss | Quadratischer Verlust | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#squared-loss) |
+| squared loss | quadratischer Verlust | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#squared-loss) |
 | Huber loss | Huber-Verlust | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
-| regularized objective | Regularisierte Zielfunktion | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
+| regularized objective | regularisierte Zielfunktion | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | Zufallsinitialisierung | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | Gradientennorm | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
 | leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L51) |
-| hyperbolic tangent | Hyperbolischer Tangens | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
+| hyperbolic tangent | hyperbolischer Tangens | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
 | fully connected layer | Vollständig verbundene Schicht | proposed | fully-connected-layer: A layer in which each output unit receives a learned connection from every input unit. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L34) |
-| hidden unit | Verborgene Einheit | proposed | hidden-unit: A computational unit in a network layer between input and output. | [amidi-de-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/de/cs-229-deep-learning.md#L33) |
+| hidden unit | versteckte Einheit | proposed | hidden-unit: A computational unit in a network layer between input and output. |  |
 | network depth | Netztiefe | proposed | network-depth: The number of successive computational layers in a network. |  |
 | network width | Netzbreite | proposed | network-width: The number of units or features in a network layer. |  |
 | training dynamics | Trainingsdynamik | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
 | parameter update | Parameterupdate | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
 | optimizer state | Optimiererzustand | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
 | minibatch gradient | Minibatch-Gradient | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
-| full gradient | Vollständiger Gradient | proposed | full-gradient: The gradient of an objective computed over the full dataset. |  |
+| full gradient | vollständiger Gradient | proposed | full-gradient: The gradient of an objective computed over the full dataset. |  |
 | gradient noise | Gradientenrauschen | proposed | gradient-noise: The deviation of a stochastic gradient estimate from the full gradient. |  |
-| stochastic approximation | Stochastische Approximation | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
+| stochastic approximation | stochastische Approximation | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
 | training iteration | Trainingsiteration | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L34) |
-| exponential decay | Exponentieller Abfall | proposed | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. |  |
-| decoupled weight decay | Entkoppelter Gewichtszerfall | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
-| second moment | Zweites Moment | proposed | second-moment: The expectation or average of the square of a quantity. |  |
-| first moment | Erstes Moment | proposed | first-moment: The expectation or average of a quantity. |  |
+| exponential decay | exponentieller Abfall | proposed | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. |  |
+| decoupled weight decay | entkoppelter Gewichtszerfall | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
+| second moment | zweites Moment | proposed | second-moment: The expectation or average of the square of a quantity. |  |
+| first moment | erstes Moment | proposed | first-moment: The expectation or average of a quantity. |  |
 | bias correction | Bias-Korrektur | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
 | cross-correlation | Kreuzkorrelation | proposed | cross-correlation: An operation that combines a local input window with a kernel without reversing the kernel. |  |
 | kernel size | Kerngröße | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. |  |
 | input channel | Eingabekanal | proposed | input-channel: A channel in the input to an operation or network layer. |  |
 | output channel | Ausgabekanal | proposed | output-channel: A channel produced by an operation or network layer. |  |
-| spatial resolution | Räumliche Auflösung | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
+| spatial resolution | räumliche Auflösung | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
 | local receptive field | Lokales rezeptives Feld | proposed | local-receptive-field: The local input region influencing a particular network activation. |  |
 | translation invariance | Translationsinvarianz | proposed | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. |  |
-| spatial invariance | Räumliche Invarianz | proposed | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. |  |
+| spatial invariance | räumliche Invarianz | proposed | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. |  |
 | zero padding | Zero-Padding | proposed | zero-padding: Padding an input with zeros around its boundary. |  |
 | dilation | Dilatation | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
 | downsampling | Downsampling | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | Upsampling | proposed | upsampling: Increasing the spatial or temporal resolution of a representation. |  |
 | aliasing | Aliasing | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
 | pooling window | Pooling-Fenster | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
-| global pooling | Global Pooling | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
-| fully convolutional network | Vollfaltungsnetz | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
-| bilinear interpolation | Bilineare Interpolation | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
+| global pooling | globales Pooling | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| fully convolutional network | vollständig faltendes Netz | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
+| bilinear interpolation | bilineare Interpolation | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | Nächster-Nachbar-Interpolation | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
 | random horizontal flip | Zufällige horizontale Spiegelung | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
 | random resized crop | Zufälliger größenangepasster Ausschnitt | proposed | random-resized-crop: An augmentation that crops a randomly selected region and resizes it. |  |
 | color jitter | Farbjitter | proposed | color-jitter: An augmentation that randomly changes image color properties. |  |
-| synthetic data | Synthetische Daten | proposed | synthetic-data: Artificially generated examples used for training, testing, or analysis. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L65) |
+| synthetic data | synthetische Daten | proposed | synthetic-data: Artificially generated examples used for training, testing, or analysis. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L65) |
 | training recipe | Trainingsrezept | proposed | training-recipe: A combination of training choices such as optimization, augmentation, and schedules. |  |
 | identity shortcut | Identitäts-Shortcut | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
 | bottleneck block | Bottleneck-Block | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
@@ -836,123 +836,123 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | image patch | Bild-Patch | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
 | patch embedding | Patch-Einbettung | proposed | patch-embedding: A vector representation computed from an image patch. |  |
 | image classifier | Bildklassifikator | proposed | image-classifier: A model that assigns categories to images. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L81) |
-| ground truth | Grundwahrheit | proposed | ground-truth: Observed or reference annotations treated as targets for a task. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-scratch.md#L181) |
+| ground truth | Ground Truth | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
 | ground-truth bounding box | Referenz-Begrenzungsrahmen | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
-| region of interest | Interessensregion | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
+| region of interest | Region of Interest | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
 | region proposal network | Region Proposal Network | proposed | region-proposal-network: A network that generates candidate regions for object detection. |  |
 | single shot multibox detection | Single Shot Multibox Detection | proposed | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. |  |
 | style transfer | Stiltransfer | proposed | style-transfer: Generating an image that combines the content of one image with the style of another. |  |
 | content loss | Inhaltsverlust | proposed | content-loss: A loss measuring differences in content representations between images. |  |
 | style loss | Stilverlust | proposed | style-loss: A loss measuring differences in style representations between images. |  |
-| total variation | Totale Variation | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
-| perceptual loss | Perzeptueller Verlust | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
-| latent diffusion | Latente Diffusion | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
+| total variation | totale Variation | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
+| perceptual loss | perzeptueller Verlust | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
+| latent diffusion | latente Diffusion | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
 | recommendation | Empfehlung | proposed | recommendation: Selecting or ranking items to present to a user. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L391) |
 | user-item interaction | Nutzer-Objekt-Interaktion | proposed | user-item-interaction: An observed relationship or action involving a user and an item. |  |
-| explicit feedback | Explizites Feedback | proposed | explicit-feedback: Directly supplied preference information such as a rating. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L220) |
+| explicit feedback | explizites Feedback | proposed | explicit-feedback: Directly supplied preference information such as a rating. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L220) |
 | user embedding | Nutzereinbettung | proposed | user-embedding: A learned vector representation of a user. |  |
 | item embedding | Objekteinbettung | proposed | item-embedding: A learned vector representation of an item. |  |
-| latent factor | Latenter Faktor | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
+| latent factor | latenter Faktor | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
 | rating prediction | Bewertungsvorhersage | proposed | rating-prediction: Estimating a user's numerical rating for an item. |  |
 | ranking | Ranking | proposed | ranking: Ordering items according to a relevance or preference score. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L83) |
 | click-through rate | Klickrate | proposed | click-through-rate: The fraction of impressions that lead to a click. |  |
 | click-through rate prediction | Klickratenvorhersage | proposed | click-through-rate-prediction: Estimating the probability that a displayed item will be clicked. |  |
 | factorization machine | Faktorisierungsmaschine | proposed | factorization-machine: A model that represents pairwise feature interactions using low-dimensional factors. |  |
 | neural collaborative filtering | Neuronales kollaboratives Filtern | proposed | neural-collaborative-filtering: Collaborative filtering using a neural network to model user-item interactions. |  |
-| pairwise ranking | Paarweises Ranking | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
+| pairwise ranking | paarweises Ranking | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
 | Bayesian personalized ranking | Bayessches personalisiertes Ranking | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
 | cold start | Kaltstart | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
 | sparsity | Sparsität | proposed | sparsity: The condition in which most entries or interactions in a representation are absent or zero. |  |
 | subword tokenization | Subwort-Tokenisierung | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
 | token frequency | Tokenhäufigkeit | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
 | out-of-vocabulary | Außerhalb des Vokabulars | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
-| unknown token | Unbekanntes Token | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
+| unknown token | unbekanntes Token | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
 | beginning-of-sequence token | Sequenzanfangstoken | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
 | end-of-sequence token | Sequenzendtoken | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
-| embedding layer | Einbettungsebene | verified_external | embedding-layer: A layer mapping discrete indices to learned vector representations. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#embedding-layer) |
+| embedding layer | Einbettungsschicht | proposed | embedding-layer: A layer mapping discrete indices to learned vector representations. |  |
 | embedding dimension | Einbettungsdimension | proposed | embedding-dimension: The number of components in each embedding vector. |  |
 | center word | Zentralwort | proposed | center-word: The word used as the central item in a word-context training example. |  |
 | context word | Kontextwort | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
 | co-occurrence | Kookkurrenz | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
-| global vectors | Globale Vektoren | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
+| global vectors | globale Vektoren | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
 | subsampling | Unterabtastung | proposed | subsampling: Selecting a subset of observations according to a sampling rule. |  |
 | word similarity | Wortähnlichkeit | proposed | word-similarity: A measure of how closely related two words are in meaning or representation. |  |
 | decoder state | Decoder-Zustand | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
 | alignment | Alignment | proposed | alignment: A relationship linking positions or elements across two sequences. |  |
 | sequence decoding | Sequenzdekodierung | proposed | sequence-decoding: The process of selecting an output sequence from a model's predictions. |  |
-| greedy search | Gierige Suche | proposed | greedy-search: A search procedure selecting the locally best choice at each step. |  |
+| greedy search | gierige Suche | proposed | greedy-search: A search procedure selecting the locally best choice at each step. |  |
 | length normalization | Längennormalisierung | proposed | length-normalization: Adjusting a sequence score to reduce systematic preference for particular sequence lengths. |  |
-| exposure bias | Exposure Bias | proposed | exposure-bias: A mismatch between sequence-model training with observed context and generation using model-produced context. |  |
+| exposure bias | Exposure-Bias | proposed | exposure-bias: A mismatch between sequence-model training with observed context and generation using model-produced context. |  |
 | scheduled sampling | Scheduled Sampling | proposed | scheduled-sampling: A training method that varies between observed and model-generated previous tokens. |  |
 | translation quality | Übersetzungsqualität | proposed | translation-quality: The degree to which a translation preserves meaning and satisfies linguistic criteria. |  |
-| brevity penalty | Kürzestrafe | proposed | brevity-penalty: A factor reducing a translation score when the generated text is too short relative to references. |  |
-| bidirectional context | Bidirektionaler Kontext | proposed | bidirectional-context: Context available from both before and after a position in a sequence. |  |
-| downstream task | Nachgelagerte Aufgabe | proposed | downstream-task: A task for which a pretrained representation or model is subsequently used. |  |
+| brevity penalty | Brevity Penalty | proposed | brevity-penalty: A factor reducing a translation score when the generated text is too short relative to references. |  |
+| bidirectional context | bidirektionaler Kontext | proposed | bidirectional-context: Context available from both before and after a position in a sequence. |  |
+| downstream task | nachgelagerte Aufgabe | proposed | downstream-task: A task for which a pretrained representation or model is subsequently used. |  |
 | sequence classification | Sequenzklassifikation | proposed | sequence-classification: Assigning a label to an entire input sequence. |  |
 | sentiment classification | Sentimentklassifikation | proposed | sentiment-classification: Assigning a sentiment category to text. |  |
-| textual entailment | Textuelle Inferenz | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
+| textual entailment | textuelle Inferenz | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
 | premise | Prämisse | proposed | premise: A statement given as the basis for assessing another statement in natural language inference. |  |
 | hypothesis | Hypothese | proposed | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. |  |
 | contradiction | Widerspruch | proposed | contradiction: A relationship in which one statement is incompatible with another. |  |
 | attention weight | Attention-Gewicht | proposed | attention-weight: A coefficient controlling a value's contribution to an attention output. |  |
 | softmax temperature | Softmax-Temperatur | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
 | attention masking | Attention-Maskierung | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
-| causal masking | Kausale Maskierung | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
+| causal masking | kausale Maskierung | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
 | padding mask | Padding-Maske | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
 | absolute position | Absolute Position | proposed | absolute-position: A position represented relative to the beginning or another fixed reference. |  |
 | transformer encoder | Transformer-Encoder | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
 | transformer decoder | Transformer-Decoder | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. |  |
-| autoregressive decoding | Autoregressives Dekodieren | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
+| autoregressive decoding | autoregressives Dekodieren | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
 | text generation | Textgenerierung | proposed | text-generation: Producing text with a model, optionally conditioned on a prompt or context. |  |
 | sequence generation | Sequenzgenerierung | proposed | sequence-generation: Producing an ordered sequence of model outputs. |  |
-| large language model | Großes Sprachmodell | proposed | large-language-model: A language model with substantial capacity trained on broad text data. |  |
-| long-context | Langer Kontext | proposed | long-context: Describing a model or task involving unusually long input sequences. |  |
-| label smoothing | Label Smoothing | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. |  |
-| expected calibration error | Erwarteter Kalibrierungsfehler | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
-| maximum margin | Maximaler Rand | proposed | maximum-margin: The largest achievable separation between decision boundary and relevant examples under specified constraints. |  |
+| large language model | großes Sprachmodell | proposed | large-language-model: A language model with substantial capacity trained on broad text data. |  |
+| long-context | langer Kontext | proposed | long-context: Describing a model or task involving unusually long input sequences. |  |
+| label smoothing | Label-Smoothing | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. |  |
+| expected calibration error | erwarteter Kalibrierungsfehler | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
+| maximum margin | Maximum-Margin | proposed | maximum-margin: The largest achievable separation between decision boundary and relevant examples under specified constraints. |  |
 | training distribution | Trainingsverteilung | proposed | training-distribution: The data distribution from which training examples are drawn. |  |
 | test distribution | Testverteilung | proposed | test-distribution: The data distribution used to assess a model after training. |  |
 | data distribution | Datenverteilung | proposed | data-distribution: The probability distribution describing observed or target data. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L5) |
 | model distribution | Modellverteilung | proposed | model-distribution: The probability distribution specified by a model. |  |
-| conditional model | Bedingtes Modell | proposed | conditional-model: A model that predicts or describes a distribution conditional on given inputs. |  |
-| conditional likelihood | Bedingte Likelihood | proposed | conditional-likelihood: The probability or density of an observed outcome conditional on inputs, viewed as a function of parameters. |  |
-| joint probability | Gemeinsame Wahrscheinlichkeit | proposed | joint-probability: The probability assigned to a combination of events or values. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L194) |
+| conditional model | bedingtes Modell | proposed | conditional-model: A model that predicts or describes a distribution conditional on given inputs. |  |
+| conditional likelihood | bedingte Likelihood | proposed | conditional-likelihood: The probability or density of an observed outcome conditional on inputs, viewed as a function of parameters. |  |
+| joint probability | gemeinsame Wahrscheinlichkeit | proposed | joint-probability: The probability assigned to a combination of events or values. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L194) |
 | marginal probability | Randwahrscheinlichkeit | proposed | marginal-probability: A probability obtained after summing or integrating over other variables. |  |
-| conditional expectation | Bedingter Erwartungswert | proposed | conditional-expectation: The expected value of a random variable given specified information. |  |
-| conditional variance | Bedingte Varianz | proposed | conditional-variance: The variance of a random variable given specified information. |  |
-| total expectation | Totale Erwartung | proposed | total-expectation: The expectation obtained by averaging conditional expectations. |  |
-| total variance | Totale Varianz | proposed | total-variance: A decomposition of variance into expected conditional variance and variance of conditional expectation. |  |
+| conditional expectation | bedingter Erwartungswert | proposed | conditional-expectation: The expected value of a random variable given specified information. |  |
+| conditional variance | bedingte Varianz | proposed | conditional-variance: The variance of a random variable given specified information. |  |
+| total expectation | Satz vom totalen Erwartungswert | proposed | total-expectation: The expectation obtained by averaging conditional expectations. |  |
+| total variance | totale Varianz | proposed | total-variance: A decomposition of variance into expected conditional variance and variance of conditional expectation. |  |
 | Bayes risk | Bayes-Risiko | proposed | bayes-risk: The minimum expected loss attainable under a specified probability model and loss function. |  |
-| posterior probability | Posteriorwahrscheinlichkeit | proposed | posterior-probability: The probability of an event or hypothesis after conditioning on observed data. |  |
-| prior probability | Priorwahrscheinlichkeit | proposed | prior-probability: The probability of an event or hypothesis before conditioning on the data under consideration. |  |
+| posterior probability | A-posteriori-Wahrscheinlichkeit | proposed | posterior-probability: The probability of an event or hypothesis after conditioning on observed data. |  |
+| prior probability | A-priori-Wahrscheinlichkeit | proposed | prior-probability: The probability of an event or hypothesis before conditioning on the data under consideration. |  |
 | likelihood ratio | Likelihood-Verhältnis | proposed | likelihood-ratio: The ratio of likelihoods under two parameter values or hypotheses. |  |
 | conjugacy | Konjugiertheit | proposed | conjugacy: A relationship in which posterior distributions remain in the same family as the prior. |  |
-| predictive distribution | Prädiktive Verteilung | proposed | predictive-distribution: A probability distribution over a future or unobserved outcome. |  |
-| predictive uncertainty | Prädiktive Unsicherheit | proposed | predictive-uncertainty: Uncertainty in a model's prediction for an outcome. |  |
-| epistemic uncertainty | Epistemische Unsicherheit | proposed | epistemic-uncertainty: Uncertainty due to limited knowledge about a model or its parameters. |  |
-| aleatoric uncertainty | Aleatorische Unsicherheit | proposed | aleatoric-uncertainty: Uncertainty associated with inherent randomness or variability in observations. |  |
+| predictive distribution | prädiktive Verteilung | proposed | predictive-distribution: A probability distribution over a future or unobserved outcome. |  |
+| predictive uncertainty | prädiktive Unsicherheit | proposed | predictive-uncertainty: Uncertainty in a model's prediction for an outcome. |  |
+| epistemic uncertainty | epistemische Unsicherheit | proposed | epistemic-uncertainty: Uncertainty due to limited knowledge about a model or its parameters. |  |
+| aleatoric uncertainty | aleatorische Unsicherheit | proposed | aleatoric-uncertainty: Uncertainty associated with inherent randomness or variability in observations. |  |
 | uncertainty quantification | Unsicherheitsquantifizierung | proposed | uncertainty-quantification: Estimating or characterizing uncertainty in quantities or predictions. |  |
 | posterior inference | Posteriorinferenz | proposed | posterior-inference: The computation or approximation of a posterior distribution after observing data. |  |
 | likelihood model | Likelihood-Modell | proposed | likelihood-model: A probability model for observations conditional on model parameters or latent variables. |  |
-| missing data | Fehlende Daten | proposed | missing-data: Values that are not observed for some variables or examples. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/pandas.md#L50) |
-| missingness | Fehlende Werte | proposed | missingness: The pattern or mechanism by which data values are absent. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L458) |
+| missing data | fehlende Daten | proposed | missing-data: Values that are not observed for some variables or examples. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/pandas.md#L50) |
+| missingness | fehlende Werte | proposed | missingness: The pattern or mechanism by which data values are absent. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L458) |
 | Boltzmann distribution | Boltzmann-Verteilung | proposed | boltzmann-distribution: A probability distribution assigning probabilities proportional to exponentiated negative energies. |  |
 | energy function | Energiefunktion | proposed | energy-function: A scalar function assigning an energy to each state or data point. |  |
-| energy-based model | Energiebasiertes Modell | proposed | energy-based-model: A probabilistic model that assigns unnormalized probability through an energy function. |  |
-| partition function | Partitionsfunktion | verified_d2l | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-scratch.md#L90) |
+| energy-based model | energiebasiertes Modell | proposed | energy-based-model: A probabilistic model that assigns unnormalized probability through an energy function. |  |
+| partition function | Partitionsfunktion | proposed | partition-function: A normalizing constant obtained by summing or integrating unnormalized probabilities. |  |
 | normalizing constant | Normierungskonstante | proposed | normalizing-constant: A factor that makes a nonnegative function sum or integrate to one. |  |
-| unnormalized density | Unnormierte Dichte | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
+| unnormalized density | unnormierte Dichte | proposed | unnormalized-density: A nonnegative function proportional to a probability density but not necessarily integrating to one. |  |
 | log density | Log-Dichte | proposed | log-density: The logarithm of a probability density. |  |
-| denoising score matching | Denoising Score Matching | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
-| contrastive divergence | Kontrastive Divergenz | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
+| denoising score matching | Denoising-Score-Matching | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
+| contrastive divergence | kontrastive Divergenz | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
 | Langevin sampling | Langevin-Sampling | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
 | annealed Langevin dynamics | Annealed Langevin Dynamics | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
 | score network | Score-Netz | proposed | score-network: A neural network trained to estimate a score function. |  |
 | noise level | Rauschpegel | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
 | signal-to-noise ratio | Signal-Rausch-Verhältnis | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
-| clean sample | Saubere Stichprobe | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
+| clean sample | unverrauschtes Sample | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
 | forward diffusion | Vorwärtsdiffusion | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
-| reverse-time SDE | Rückwärtszeit-SDE | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
+| reverse-time SDE | zeitumgekehrte SDE | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
 | reverse transition | Rückwärtsübergang | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
 | forward transition | Vorwärtsübergang | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
 | ancestral sampling | Ancestral Sampling | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
@@ -963,66 +963,66 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | score estimate | Score-Schätzung | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
 | denoiser | Entrauscher | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
 | denoising objective | Entrauschungsziel | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
-| conditional denoising | Bedingtes Entrauschen | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
+| conditional denoising | bedingtes Entrauschen | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
 | guidance scale | Guidance-Skala | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
 | class conditioning | Klassenkonditionierung | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
 | diffusion transformer | Diffusion Transformer | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
 | variational autoencoder | Variationsautoencoder | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
 | reconstruction error | Rekonstruktionsfehler | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
 | bottleneck | Flaschenhals | proposed | bottleneck: A constrained intermediate representation that limits information or computation. |  |
-| latent code | Latenter Code | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
-| mode dropping | Modenausfall | proposed | mode-dropping: Failure of a generative model to represent some modes of a target distribution. |  |
-| sample quality | Stichprobenqualität | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
-| sample diversity | Stichprobenvielfalt | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
+| latent code | latenter Code | proposed | latent-code: A latent representation used to encode data or drive generation. |  |
+| mode dropping | Modusausfall | proposed | mode-dropping: Failure of a generative model to represent some modes of a target distribution. |  |
+| sample quality | Sample-Qualität | proposed | sample-quality: The degree to which generated samples satisfy criteria such as fidelity. |  |
+| sample diversity | Sample-Vielfalt | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
 | Fréchet Inception Distance | Fréchet Inception Distance | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
 | maximum mean discrepancy | Maximum Mean Discrepancy | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
-| adversarial training | Adversariales Training | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
-| adversarial objective | Adversariale Zielfunktion | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
+| adversarial training | adversariales Training | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
+| adversarial objective | adversariale Zielfunktion | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | Minimax-Spiel | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
 | Wasserstein GAN | Wasserstein-GAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
 | gradient penalty | Gradientenstrafe | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
-| spectral normalization | Spektrale Normalisierung | proposed | spectral-normalization: A normalization method controlling a weight matrix's spectral norm. |  |
+| spectral normalization | spektrale Normalisierung | proposed | spectral-normalization: A normalization method controlling a weight matrix's spectral norm. |  |
 | pixel-space | Pixelraum | proposed | pixel-space: The representation domain consisting of image pixel values. |  |
-| critical point | Kritischer Punkt | proposed | critical-point: A point at which a derivative is zero or otherwise fails to define a regular direction. |  |
-| local maximum | Lokales Maximum | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. |  |
-| global maximum | Globales Maximum | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
-| strict convexity | Strikte Konvexität | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
+| critical point | kritischer Punkt | proposed | critical-point: A point at which a derivative is zero or otherwise fails to define a regular direction. |  |
+| local maximum | lokales Maximum | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. |  |
+| global maximum | globales Maximum | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
+| strict convexity | strikte Konvexität | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
 | smoothness | Glattheit | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
-| convex objective | Konvexe Zielfunktion | proposed | convex-objective: An optimization objective that is a convex function. |  |
-| constrained optimization | Beschränkte Optimierung | proposed | constrained-optimization: Optimization subject to conditions on feasible solutions. |  |
+| convex objective | konvexe Zielfunktion | proposed | convex-objective: An optimization objective that is a convex function. |  |
+| constrained optimization | beschränkte Optimierung | proposed | constrained-optimization: Optimization subject to conditions on feasible solutions. |  |
 | first-order optimality | Optimalität erster Ordnung | proposed | first-order-optimality: A condition characterizing a candidate optimum using first-order information. |  |
 | second-order optimality | Optimalität zweiter Ordnung | proposed | second-order-optimality: A condition characterizing a candidate optimum using curvature information. |  |
-| sufficient condition | Hinreichende Bedingung | proposed | sufficient-condition: A condition that guarantees a stated result or property. |  |
-| primal problem | Primales Problem | proposed | primal-problem: The original optimization problem associated with a dual problem. |  |
+| sufficient condition | hinreichende Bedingung | proposed | sufficient-condition: A condition that guarantees a stated result or property. |  |
+| primal problem | primales Problem | proposed | primal-problem: The original optimization problem associated with a dual problem. |  |
 | dual variable | Dualvariable | proposed | dual-variable: A variable associated with a constraint in a dual or Lagrangian formulation. |  |
 | dual function | Dualfunktion | proposed | dual-function: A function obtained by optimizing a Lagrangian over primal variables. |  |
 | duality gap | Dualitätslücke | proposed | duality-gap: The difference between the primal and dual objective values or optima. |  |
-| strong duality | Starke Dualität | proposed | strong-duality: Equality of the optimal primal and dual objective values. |  |
-| weak duality | Schwache Dualität | proposed | weak-duality: A bound relating feasible primal and dual objective values. |  |
-| complementary slackness | Komplementäre Schlupfbedingung | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
+| strong duality | starke Dualität | proposed | strong-duality: Equality of the optimal primal and dual objective values. |  |
+| weak duality | schwache Dualität | proposed | weak-duality: A bound relating feasible primal and dual objective values. |  |
+| complementary slackness | komplementärer Schlupf | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
 | subgradient method | Subgradientenverfahren | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
 | projection operator | Projektionsoperator | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
-| projected gradient descent | Projizierter Gradientenabstieg | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
+| projected gradient descent | projizierter Gradientenabstieg | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
 | backtracking line search | Backtracking-Liniensuche | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
 | descent direction | Abstiegsrichtung | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. |  |
 | descent lemma | Abstiegslemma | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
 | Newton step | Newton-Schritt | proposed | newton-step: An update computed from gradient and curvature information in Newton's method. |  |
-| conjugate gradient | Konjugierter Gradient | proposed | conjugate-gradient: An iterative method for solving suitable linear systems or optimization problems using conjugate directions. |  |
+| conjugate gradient | konjugierter Gradient | proposed | conjugate-gradient: An iterative method for solving suitable linear systems or optimization problems using conjugate directions. |  |
 | curvature | Krümmung | proposed | curvature: A description of how the slope or gradient of a function changes. |  |
 | Hessian eigenvalue | Hesse-Eigenwert | proposed | hessian-eigenvalue: An eigenvalue of a Hessian matrix describing curvature along an associated direction. |  |
-| ill-conditioning | Schlechte Konditionierung | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
+| ill-conditioning | schlechte Konditionierung | proposed | ill-conditioning: A condition in which a problem or objective is sensitive to perturbations or has widely differing scales. |  |
 | preconditioning | Vorkonditionierung | proposed | preconditioning: Transforming an optimization or linear-system problem to improve its conditioning. |  |
 | second moment estimate | Schätzung des zweiten Moments | proposed | second-moment-estimate: An estimate of the expected squared value of a quantity. |  |
-| exponential averaging | Exponentielle Mittelung | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
-| momentum buffer | Impulspuffer | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
-| Nesterov momentum | Nesterov-Impuls | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
-| stochastic gradient | Stochastischer Gradient | proposed | stochastic-gradient: A random estimate of an objective's gradient. |  |
+| exponential averaging | exponentielle Mittelung | proposed | exponential-averaging: Averaging with weights that decrease exponentially for older observations. |  |
+| momentum buffer | Momentum-Puffer | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
+| Nesterov momentum | Nesterov-Momentum | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
+| stochastic gradient | stochastischer Gradient | proposed | stochastic-gradient: A random estimate of an objective's gradient. |  |
 | minibatch gradient descent | Minibatch-Gradientenabstieg | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
 | gradient variance | Gradientenvarianz | proposed | gradient-variance: The variance of a stochastic gradient estimator. |  |
 | convergence guarantee | Konvergenzgarantie | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
 | optimization landscape | Optimierungslandschaft | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
 | gradient flow | Gradientenfluss | proposed | gradient-flow: A continuous-time dynamical system that moves along the negative gradient of an objective. |  |
-| implicit regularization | Implizite Regularisierung | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
+| implicit regularization | implizite Regularisierung | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
 | Lipschitz gradient | Lipschitz-Gradient | proposed | lipschitz-gradient: A gradient whose change is bounded by a constant times the change in its input. |  |
 | minibatch noise | Minibatch-Rauschen | proposed | minibatch-noise: Random variation in an update caused by using a finite minibatch. |  |
 | learning dynamics | Lerndynamik | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
@@ -1031,15 +1031,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | minimizer | Minimierer | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L103) |
 | maximizer | Maximierer | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
 | risk minimization | Risikominimierung | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L101) |
-| nonconvex optimization | Nichtkonvexe Optimierung | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
+| nonconvex optimization | nichtkonvexe Optimierung | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
 | shrinkage | Schrumpfung | proposed | shrinkage: Pulling estimates or parameters toward a reference value, often zero. |  |
 | outlier | Ausreißer | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
-| generalized linear model | Generalisiertes lineares Modell | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
+| generalized linear model | verallgemeinertes lineares Modell | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
 | exponential family | Exponentialfamilie | proposed | exponential-family: A family of probability distributions with a common exponential-form representation. |  |
 | Fisher information matrix | Fisher-Informationsmatrix | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. |  |
-| asymptotic normality | Asymptotische Normalität | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
+| asymptotic normality | asymptotische Normalität | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
 | identifiability | Identifizierbarkeit | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
-| posterior mode | Posteriorer Modus | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
+| posterior mode | A-posteriori-Modus | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
 | Bayesian linear regression | Bayessche lineare Regression | proposed | bayesian-linear-regression: Linear regression that represents uncertainty about parameters with a posterior distribution. |  |
 | Gaussian prior | Gauß-Prior | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
 | Gaussian likelihood | Gauß-Likelihood | proposed | gaussian-likelihood: A likelihood based on a Gaussian observation model. |  |
@@ -1051,54 +1051,54 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mean function | Mittelwertfunktion | proposed | mean-function: A function specifying the expected value of a random function at each input. |  |
 | length scale | Längenskala | proposed | length-scale: A parameter controlling the distance over which a kernel or process varies substantially. |  |
 | observation noise | Beobachtungsrauschen | proposed | observation-noise: Random variation or measurement error in observed data. |  |
-| Gaussian observation noise | Gaußsches Beobachtungsrauschen | proposed | gaussian-observation-noise: Observation noise modeled using a Gaussian distribution. |  |
-| posterior predictive mean | Posterior-prädiktiver Mittelwert | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
-| predictive variance | Prädiktive Varianz | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
-| kernel matrix | Kernelmatrix | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. |  |
+| Gaussian observation noise | gaußsches Beobachtungsrauschen | proposed | gaussian-observation-noise: Observation noise modeled using a Gaussian distribution. |  |
+| posterior predictive mean | posterior-prädiktiver Mittelwert | proposed | posterior-predictive-mean: The expected value of a prediction under the posterior predictive distribution. |  |
+| predictive variance | prädiktive Varianz | proposed | predictive-variance: The variance of a model's predictive distribution. |  |
+| kernel matrix | Kernmatrix | proposed | kernel-matrix: A matrix of kernel evaluations between pairs of inputs. |  |
 | Cholesky decomposition | Cholesky-Zerlegung | proposed | cholesky-decomposition: A factorization of a positive definite matrix into a triangular matrix and its transpose. |  |
 | Cholesky factor | Cholesky-Faktor | proposed | cholesky-factor: The triangular factor in a Cholesky decomposition. |  |
-| log marginal likelihood | Log-marginale Likelihood | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
+| log marginal likelihood | log-marginale Likelihood | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
 | hyperparameter optimization | Hyperparameteroptimierung | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/kaggle-house-price.md#L286) |
 | search space | Suchraum | proposed | search-space: The set of configurations or solutions considered by a search procedure. |  |
 | configuration space | Konfigurationsraum | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
 | validation metric | Validierungsmetrik | proposed | validation-metric: A performance measure computed on validation data. |  |
 | acquisition function | Akquisitionsfunktion | proposed | acquisition-function: A criterion for selecting the next candidate to evaluate in Bayesian optimization. |  |
-| expected improvement | Erwartete Verbesserung | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
+| expected improvement | erwartete Verbesserung | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
 | multi-fidelity optimization | Multifidelity-Optimierung | proposed | multi-fidelity-optimization: Optimization that uses evaluations at different costs and levels of accuracy. |  |
 | fidelity | Fidelity | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
-| successive halving | Sukzessive Halbierung | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
+| successive halving | sukzessive Halbierung | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
 | Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
-| noisy objective | Verrauschte Zielfunktion | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
+| noisy objective | verrauschte Zielfunktion | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
 | hyperparameter configuration | Hyperparameterkonfiguration | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
-| asynchronous scheduling | Asynchrone Planung | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
+| asynchronous scheduling | asynchrones Scheduling | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
 | rating matrix | Bewertungsmatrix | proposed | rating-matrix: A matrix of user ratings for items. |  |
 | interaction matrix | Interaktionsmatrix | proposed | interaction-matrix: A matrix recording interactions between two sets of entities such as users and items. |  |
 | matrix completion | Matrixvervollständigung | proposed | matrix-completion: Inferring missing entries of a partially observed matrix. |  |
-| low-rank factorization | Niedrigrangige Faktorisierung | proposed | low-rank-factorization: Representing a matrix using factors with a lower-dimensional shared dimension. |  |
+| low-rank factorization | niedrigrangige Faktorisierung | proposed | low-rank-factorization: Representing a matrix using factors with a lower-dimensional shared dimension. |  |
 | ranking loss | Ranking-Verlust | proposed | ranking-loss: A loss measuring errors in the ordering of items. |  |
-| pairwise loss | Paarweiser Verlust | proposed | pairwise-loss: A loss defined on pairs of examples or items and their relative relationship. |  |
-| pointwise loss | Punktweiser Verlust | proposed | pointwise-loss: A loss evaluated individually on examples or items. |  |
-| negative feedback | Negatives Feedback | proposed | negative-feedback: An observation indicating dislike or lack of preference under a specified interpretation. |  |
+| pairwise loss | paarweiser Verlust | proposed | pairwise-loss: A loss defined on pairs of examples or items and their relative relationship. |  |
+| pointwise loss | punktweiser Verlust | proposed | pointwise-loss: A loss evaluated individually on examples or items. |  |
+| negative feedback | negatives Feedback | proposed | negative-feedback: An observation indicating dislike or lack of preference under a specified interpretation. |  |
 | item ranking | Objektranking | proposed | item-ranking: Ordering items by predicted relevance or preference. |  |
 | retrieval | Retrieval | proposed | retrieval: Selecting candidate items or documents for further ranking or presentation. |  |
 | user behavior | Nutzerverhalten | proposed | user-behavior: Actions or interactions performed by a user in a system. |  |
 | next-item prediction | Vorhersage des nächsten Objekts | proposed | next-item-prediction: Predicting the next item a user will interact with based on available context. |  |
 | selection bias | Selektionsbias | proposed | selection-bias: Systematic distortion caused by the process selecting observations into a dataset. |  |
-| long tail | Langer Schwanz | proposed | long-tail: A collection of relatively infrequent items that collectively may be substantial. |  |
-| hit rate | Trefferquote | proposed | hit-rate: The fraction of cases in which a target item appears in a recommended set. |  |
-| normalized discounted cumulative gain | Normalisierter diskontierter kumulierter Gewinn | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
+| long tail | langer Schwanz | proposed | long-tail: A collection of relatively infrequent items that collectively may be substantial. |  |
+| hit rate | Hit-Rate | proposed | hit-rate: The fraction of cases in which a target item appears in a recommended set. |  |
+| normalized discounted cumulative gain | Normalized Discounted Cumulative Gain | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
 | information theory | Informationstheorie | proposed | information-theory: The study of quantifying information, uncertainty, compression, and communication. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression.md#L129) |
 | information content | Informationsgehalt | proposed | information-content: A measure of the information associated with an outcome or message. |  |
 | Shannon entropy | Shannon-Entropie | proposed | shannon-entropy: The expected self-information of a random variable. |  |
-| joint entropy | Gemeinsame Entropie | proposed | joint-entropy: The entropy of a joint probability distribution. |  |
+| joint entropy | gemeinsame Entropie | proposed | joint-entropy: The entropy of a joint probability distribution. |  |
 | information bottleneck | Informationsflaschenhals | proposed | information-bottleneck: A framework that balances compression of an input against retention of information about a target. |  |
-| lossless compression | Verlustfreie Kompression | proposed | lossless-compression: Compression that permits exact reconstruction of the original data. |  |
+| lossless compression | verlustfreie Kompression | proposed | lossless-compression: Compression that permits exact reconstruction of the original data. |  |
 | source coding | Quellenkodierung | proposed | source-coding: Representing information from a source using a code. |  |
 | code length | Codelänge | proposed | code-length: The number of symbols or bits used to encode a message. |  |
 | prefix code | Präfixcode | proposed | prefix-code: A code in which no codeword is a prefix of another codeword. |  |
 | Kraft inequality | Kraft-Ungleichung | proposed | kraft-inequality: A condition relating the lengths of codewords in a prefix code. |  |
-| arithmetic coding | Arithmetische Kodierung | proposed | arithmetic-coding: A compression method encoding a sequence as an interval determined by symbol probabilities. |  |
-| minimum description length | Minimale Beschreibungslänge | proposed | minimum-description-length: A principle selecting models using the combined description length of model and data. |  |
+| arithmetic coding | arithmetische Kodierung | proposed | arithmetic-coding: A compression method encoding a sequence as an interval determined by symbol probabilities. |  |
+| minimum description length | minimale Beschreibungslänge | proposed | minimum-description-length: A principle selecting models using the combined description length of model and data. |  |
 | description length | Beschreibungslänge | proposed | description-length: The length of an encoding of an object, model, or dataset. |  |
 | total variation distance | Totalvariationsabstand | proposed | total-variation-distance: A measure of the largest difference in probability assigned to the same event by two distributions. |  |
 | f-divergence | f-Divergenz | proposed | f-divergence: A family of divergences defined using a convex function of a density ratio. |  |
@@ -1106,32 +1106,32 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | rate-distortion | Rate-Distortion | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
 | distortion measure | Verzerrungsmaß | proposed | distortion-measure: A function quantifying the difference between an original object and its reconstruction. |  |
 | channel capacity | Kanalkapazität | proposed | channel-capacity: The maximum reliable communication rate of a channel under specified constraints. |  |
-| noisy channel | Verrauschter Kanal | proposed | noisy-channel: A communication channel whose output is randomly perturbed relative to its input. |  |
-| channel coding | Kanalcodierung | proposed | channel-coding: Encoding messages to support reliable communication through a channel. |  |
-| contrastive learning | Kontrastives Lernen | proposed | contrastive-learning: Learning representations by distinguishing related examples from alternatives. |  |
-| contrastive loss | Kontrastiver Verlust | proposed | contrastive-loss: A loss encouraging specified examples to be similar or different in representation. |  |
+| noisy channel | verrauschter Kanal | proposed | noisy-channel: A communication channel whose output is randomly perturbed relative to its input. |  |
+| channel coding | Kanalkodierung | proposed | channel-coding: Encoding messages to support reliable communication through a channel. |  |
+| contrastive learning | kontrastives Lernen | proposed | contrastive-learning: Learning representations by distinguishing related examples from alternatives. |  |
+| contrastive loss | kontrastiver Verlust | proposed | contrastive-loss: A loss encouraging specified examples to be similar or different in representation. |  |
 | InfoNCE | InfoNCE | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
-| negative pair | Negatives Paar | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
-| positive pair | Positives Paar | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
-| natural parameter | Natürlicher Parameter | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
-| free energy | Freie Energie | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
-| importance sampling | Importance Sampling | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
-| detailed balance | Detailliertes Gleichgewicht | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
+| negative pair | negatives Paar | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
+| positive pair | positives Paar | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
+| natural parameter | natürlicher Parameter | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
+| free energy | freie Energie | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
+| importance sampling | Importance-Sampling | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
+| detailed balance | detailliertes Gleichgewicht | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
 | mixing time | Mischzeit | proposed | mixing-time: A measure of how long a Markov chain takes to approach its stationary distribution. |  |
 | autocorrelation | Autokorrelation | proposed | autocorrelation: Correlation of a random process or sequence with a shifted version of itself. |  |
 | Monte Carlo integration | Monte-Carlo-Integration | proposed | monte-carlo-integration: Estimating an integral using random samples. |  |
-| random walk | Zufallsweg | proposed | random-walk: A stochastic process formed by successive random increments or transitions. |  |
+| random walk | Irrfahrt | proposed | random-walk: A stochastic process formed by successive random increments or transitions. |  |
 | Itô process | Itô-Prozess | proposed | ito-process: A stochastic process represented using drift and diffusion integrals with respect to Brownian motion. |  |
 | Itô integral | Itô-Integral | proposed | ito-integral: A stochastic integral defined for suitable adapted processes with respect to Brownian motion. |  |
 | drift | Drift | proposed | drift: The systematic component of motion in a stochastic or dynamical process. |  |
 | diffusion coefficient | Diffusionskoeffizient | proposed | diffusion-coefficient: A coefficient controlling the random fluctuations in a stochastic differential equation. |  |
 | noise coefficient | Rauschkoeffizient | proposed | noise-coefficient: A coefficient controlling the magnitude of stochastic forcing. |  |
-| local truncation error | Lokaler Abschneidefehler | proposed | local-truncation-error: The error incurred in one numerical step when starting from an exact state. |  |
-| global error | Globaler Fehler | proposed | global-error: The accumulated difference between a numerical solution and the exact solution over an interval. |  |
+| local truncation error | lokaler Abbruchfehler | proposed | local-truncation-error: The error incurred in one numerical step when starting from an exact state. |  |
+| global error | globaler Fehler | proposed | global-error: The accumulated difference between a numerical solution and the exact solution over an interval. |  |
 | adaptive step size | Adaptive Schrittweite | proposed | adaptive-step-size: A step size adjusted during computation according to an error or performance criterion. |  |
 | stability region | Stabilitätsgebiet | proposed | stability-region: The set of step and problem parameters for which a numerical method remains stable. |  |
-| numerical solver | Numerischer Löser | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
-| linear stability | Lineare Stabilität | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
+| numerical solver | numerischer Löser | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
+| linear stability | lineare Stabilität | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
 | continuous normalizing flow | Kontinuierlicher normalisierender Fluss | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
 | Jacobian determinant | Jacobi-Determinante | proposed | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. |  |
 | continuity equation | Kontinuitätsgleichung | proposed | continuity-equation: An equation describing conservation of probability or mass as it flows through space. |  |
@@ -1139,44 +1139,44 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | multi-query attention | Multi-Query-Attention | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
 | query head | Query-Kopf | proposed | query-head: An attention head that produces queries used to weight values. |  |
 | induction head | Induktionskopf | proposed | induction-head: An attention head associated with continuing a repeated token pattern from earlier context. |  |
-| QK circuit | QK-Schaltung | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
-| OV circuit | OV-Schaltung | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
+| QK circuit | QK-Schaltkreis | proposed | qk-circuit: The composition of query and key projections that determines an attention score's bilinear form. |  |
+| OV circuit | OV-Schaltkreis | proposed | ov-circuit: The composition of value and output projections describing information moved by an attention head. |  |
 | feedforward block | Feedforward-Block | proposed | feedforward-block: A network component applying feedforward transformations within a larger model. |  |
 | RMSNorm | RMSNorm | proposed | rmsnorm: A normalization layer that rescales activations using their root mean square. |  |
 | ALiBi | ALiBi | proposed | alibi: A positional attention method using distance-dependent linear biases. |  |
 | sparse attention | Sparse Attention | proposed | sparse-attention: Attention in which only a subset of query-key pairs is computed or used. |  |
-| linear attention | Lineare Attention | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
-| quadratic complexity | Quadratische Komplexität | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
+| linear attention | lineare Attention | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
+| quadratic complexity | quadratische Komplexität | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
 | tokens per second | Token pro Sekunde | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
 | head dimension | Kopfdimension | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
 | weight tying | Gewichtsbindung | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
 | embedding table | Einbettungstabelle | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | Ausgabeprojektion | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
-| induction circuit | Induktionsschaltung | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
+| induction circuit | Induktionsschaltkreis | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
 | attention pattern | Attention-Muster | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
 | softmax normalization | Softmax-Normalisierung | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
 | top-k routing | Top-k-Routing | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
-| expert parallelism | Expertenparallelismus | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
-| shared expert | Gemeinsamer Experte | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
+| expert parallelism | Expertenparallelität | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
+| shared expert | gemeinsamer Experte | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | Rechenbudget | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
 | training compute | Trainingsrechenaufwand | proposed | training-compute: The amount of computation used to train a model. |  |
-| active parameters | Aktive Parameter | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
+| active parameters | aktive Parameter | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
 | model width | Modellbreite | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
 | training tokens | Trainingstoken | proposed | training-tokens: Tokens processed as part of model training. |  |
 | inference cost | Inferenzkosten | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |
 | kernel launch | Kernelstart | proposed | kernel-launch: Starting an operation or kernel for execution on a device. |  |
 | launch overhead | Start-Overhead | proposed | launch-overhead: Time or resources spent initiating a computational operation. |  |
-| half precision | Halbe Präzision | proposed | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. |  |
-| single precision | Einfache Präzision | proposed | single-precision: A floating-point format commonly represented using 32 bits. |  |
-| double precision | Doppelte Präzision | proposed | double-precision: A floating-point format commonly represented using 64 bits. |  |
+| half precision | halbe Genauigkeit | proposed | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. |  |
+| single precision | einfache Genauigkeit | verified_external | single-precision: A floating-point format commonly represented using 32 bits. | review-de-763463d9dd: page |
+| double precision | doppelte Genauigkeit | verified_external | double-precision: A floating-point format commonly represented using 64 bits. | review-de-763463d9dd: page |
 | floating-point format | Gleitkommaformat | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
-| loss scaling | Loss Scaling | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
+| loss scaling | Loss-Scaling | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
 | activation memory | Aktivierungsspeicher | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
 | all-gather | All-Gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
 | reduce-scatter | Reduce-Scatter | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
 | batching | Batching | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
-| perceptual compression | Perzeptuelle Kompression | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
-| semantic compression | Semantische Kompression | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
+| perceptual compression | perzeptuelle Kompression | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
+| semantic compression | semantische Kompression | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
 | Reflow | Reflow | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
 | consistency training | Konsistenztraining | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
 | reference velocity | Referenzgeschwindigkeit | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
@@ -1185,8 +1185,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | denoising term | Entrauschungsterm | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
 | reconstruction term | Rekonstruktionsterm | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
 | Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | Kritiker-generativ | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| critic | Kritiker | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
 | model | Modell | verified_external | model: A mathematical or computational representation used to describe data or make predictions. | [google-ml-de-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=de#model) |
-| training | Ausbildung | verified_d2l | training: The process of fitting a model using data and a learning objective. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/softmax-regression-concise.md#L120) |
+| training | Training | verified_external | training: The process of fitting a model using data and a learning objective. | review-de-809cb60b8b: page; review-de-ea5a983ce9: page |
 | activation | Aktivierung | proposed | activation: The output of a neural network unit or activation function for a given input. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_linear-networks/linear-regression.md#L293) |
 | mask | Maske | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. |  |
+| sample | Sample | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
+| loss | Verlust | verified_external | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. | review-de-b4d0d33449: page |
+| score | Score | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
+| batch | Batch | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
+| advantage | Vorteil | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
+| cost | Kosten | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |

@@ -1,6 +1,6 @@
 # Glossary review (2026-11-26)
 
-One Fable review per language against `concepts.jsonl` senses: `<locale>.md` is the verdict, `<locale>-corrections.jsonl` the proposed changes (`concept_id`, `current`, `proposed`, `new_status`, `severity`, `reason`, `sources`). Nothing is applied to `terms/` yet; each language's open choices need a native speaker first.
+One Fable review per language against `concepts.jsonl` senses: `<locale>.md` is the verdict, `<locale>-corrections.jsonl` the proposed changes (`concept_id`, `current`, `proposed`, `new_status`, `severity`, `reason`, `sources`). Applied to `terms/` on 2026-11-26 by `scripts/apply_review.py` (replaced terms are recorded in each entry's `notes`; cited web pages are registered in `sources/review-2026-11-26.jsonl`), followed by `scripts/fix_casing.py` (heading capitals: tr 794, de 246 entries). Where a reviewer chose between two established terms, the corrections file applies the reviewer's recommendation; the open choices listed in each `<locale>.md` still need a native speaker, and changing one is a normal glossary edit.
 
 | Locale | Corrections | of 1,184 | wrong sense | calque/MT | non-standard | inconsistent | minor |
 |---|--:|--:|--:|--:|--:|--:|--:|
