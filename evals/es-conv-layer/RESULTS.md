@@ -15,3 +15,18 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Opus found that a line break inside a term («descenso de\ngradiente») hid it from the glossary check (fixed).
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `4fafcb0`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 0 | 5,328 (1.25) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 1 | 5,179 (1.22) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 1 | 4,938 (1.16) |
+
+The native-reader verdict is pending.
