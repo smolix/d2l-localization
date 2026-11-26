@@ -239,7 +239,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | stochastic differential equation | equação diferencial estocástica | proposed | stochastic-differential-equation: A differential equation incorporating random perturbations. |  |
 | Brownian motion | movimento browniano | proposed | brownian-motion: A continuous-time stochastic process with independent Gaussian increments. |  |
 | Euler method | método de Euler | proposed | euler-method: A numerical method that advances a differential equation using local slopes. |  |
-| Neural ODE | equação diferencial ordinária neural | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
+| Neural ODE | EDO neural | proposed | neural-ode: A model that parameterizes continuous-time dynamics with a neural network. |  |
 | normalizing flow | fluxo normalizante | proposed | normalizing-flow: An invertible transformation used to construct a tractable probability distribution. |  |
 | change of variables | mudança de variáveis | proposed | change-of-variables: A rule for transforming quantities such as integrals or densities under a mapping. |  |
 | Markov property | propriedade de Markov | proposed | markov-property: The property that the future is conditionally independent of the past given the present. |  |
@@ -385,7 +385,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convolutional layer | camada convolucional | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | mapa de características | proposed | feature-map: An array of activations representing features across positions. |  |
 | pooling layer | camada de pooling | verified_external | pooling-layer: A layer that aggregates local groups of activations. | review-pt-BR-c63085c199: page |
-| strided convolution | convolução com passo | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
+| strided convolution | convolução com stride | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | convolução transposta | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. |  |
 | dilated convolution | convolução dilatada | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
 | depthwise convolution | convolução por canal | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
@@ -436,7 +436,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | discretization | discretização | proposed | discretization: Approximation of a continuous object or process using discrete steps or values. |  |
 | Euler-Maruyama | método de Euler-Maruyama | proposed | euler-maruyama: A numerical method for approximating solutions of stochastic differential equations. |  |
 | Itô calculus | cálculo de Itô | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
-| ODE solver | solucionador de equações diferenciais ordinárias | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
+| ODE solver | solucionador de EDOs | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
 | adjoint method | método adjunto | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | exponencial de matriz | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | transformada de Fourier | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
@@ -519,7 +519,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | variance-exploding | explosão de variância | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
 | classifier guidance | orientação por classificador | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
 | classifier-free guidance | orientação sem classificador | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
-| probability-flow ODE | equação diferencial ordinária de fluxo de probabilidade | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
+| probability-flow ODE | EDO de fluxo de probabilidade | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
 | optimal transport | transporte ótimo | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
 | Wasserstein distance | distância de Wasserstein | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
 | mode collapse | colapso de modos | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
@@ -610,9 +610,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | rounding error | erro de arredondamento | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
 | dynamic range | faixa dinâmica | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | vazão de treinamento | proposed | training-throughput: The amount of training work completed per unit time. |  |
-| soft actor-critic | ator-crítico suave | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
-| deep Q-network | rede Q profunda | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
-| proximal policy optimization | otimização proximal de política | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
+| soft actor-critic | SAC | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
+| deep Q-network | DQN | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
+| proximal policy optimization | PPO | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
 | trust region | região de confiança | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
 | offline reinforcement learning | aprendizado por reforço offline | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
 | behavior cloning | clonagem de comportamento | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
@@ -953,7 +953,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | signal-to-noise ratio | relação sinal-ruído | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
 | clean sample | amostra limpa | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
 | forward diffusion | difusão direta | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
-| reverse-time SDE | equação diferencial estocástica em tempo reverso | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
+| reverse-time SDE | EDE em tempo reverso | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
 | reverse transition | transição reversa | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
 | forward transition | transição direta | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
 | ancestral sampling | amostragem ancestral | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |

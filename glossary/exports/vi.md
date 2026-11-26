@@ -87,9 +87,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | entropy | entropy | proposed | entropy: A measure of uncertainty in a probability distribution. |  |
 | cross-entropy | entropy chéo | verified_d2l | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [east-vi-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/chapter_linear-networks/softmax-regression.md#L160) |
 | mutual information | thông tin tương hỗ | verified_external | mutual-information: A measure of statistical dependence between random variables. | review-vi-5745ceb0ca: page |
-| softmax | hàm softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
+| softmax | softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
 | logistic regression | hồi quy logistic | verified_d2l | logistic-regression: A probabilistic linear model commonly used for binary classification. | [east-vi-glossary-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/glossary.md#L298) |
-| sigmoid | hàm sigmoid | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. |  |
+| sigmoid | sigmoid | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. |  |
 | cross-entropy loss | hàm mất mát entropy chéo | proposed | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. |  |
 | accuracy | độ chính xác | verified_d2l | accuracy: The proportion of predictions that are correct. | [east-vi-glossary-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/glossary.md#L18) |
 | precision | precision | invariant | precision: The fraction of predicted positives that are true positives. | [east-vi-glossary-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/glossary.md#L403) |
@@ -193,7 +193,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | action | hành động | verified_external | action: A choice made by an agent that can affect the environment. | [east-google-ml-vi-agent](https://developers.google.com/machine-learning/glossary/agent?hl=vi#action) |
 | reward | phần thưởng | verified_d2l | reward: A scalar feedback signal evaluating an outcome or transition. | [east-vi-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/chapter_introduction/index.md#L291) |
 | policy | chính sách | verified_d2l | policy: A rule or distribution for selecting actions from states. | [east-vi-glossary-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/glossary.md#L396) |
-| return | tổng phần thưởng tích lũy | proposed | return: The accumulated future reward from a point in a trajectory. |  |
+| return | lợi tức | proposed | return: The accumulated future reward from a point in a trajectory. |  |
 | discount factor | hệ số chiết khấu | proposed | discount-factor: A factor that controls the relative weight of future rewards. |  |
 | value function | hàm giá trị | verified_external | value-function: A function estimating expected return from a state or state-action pair. | east-stanford-vi-cs-229-deep-learning-md: page |
 | action-value function | hàm giá trị hành động | proposed | action-value-function: A function estimating expected return from a state and action. |  |
@@ -207,7 +207,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | local minimum | cực tiểu cục bộ | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. |  |
 | global minimum | cực tiểu toàn cục | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
 | saddle point | điểm yên ngựa | proposed | saddle-point: A stationary point that is not a local extremum in all directions. |  |
-| Hessian | ma trận Hessian | proposed | hessian: The matrix of second partial derivatives of a scalar function. |  |
+| Hessian | ma trận Hesse | proposed | hessian: The matrix of second partial derivatives of a scalar function. |  |
 | Jacobian | ma trận Jacobi | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
 | momentum | động lượng | verified_d2l | momentum: An optimization technique that accumulates past gradients in an update direction. | [east-vi-glossary-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/glossary.md#L329) |
 | learning rate schedule | lịch tốc độ học | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
@@ -412,8 +412,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | policy iteration | lặp chính sách | proposed | policy-iteration: An iterative method alternating policy evaluation and improvement. |  |
 | policy evaluation | đánh giá chính sách | proposed | policy-evaluation: Computing or estimating the value of a policy. |  |
 | policy improvement | cải thiện chính sách | proposed | policy-improvement: Updating a policy to achieve better expected value. |  |
-| off-policy | ngoài chính sách (off-policy) | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
-| on-policy | theo chính sách (on-policy) | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
+| off-policy | ngoài chính sách | proposed | off-policy: Describing learning about one policy from data generated by another. |  |
+| on-policy | theo chính sách | proposed | on-policy: Describing learning about the same policy used to generate data. |  |
 | multi-armed bandit | máy đánh bạc đa cần | verified_d2l | multi-armed-bandit: A sequential decision problem involving choices among actions with uncertain rewards. | [east-vi-glossary-md](https://github.com/d2l-ai/d2l-vi/blob/c775d6b4998e6243ec5d11f950e67679555a2c74/glossary.md#L330) |
 | regret | mức hối tiếc | proposed | regret: The cumulative performance difference relative to a specified reference strategy. |  |
 | Markov reward process | quá trình phần thưởng Markov | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
@@ -485,7 +485,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | ridge regression | hồi quy Ridge | proposed | ridge-regression: A regression method using a squared-weight penalty. |  |
 | Gram matrix | ma trận Gram | proposed | gram-matrix: A matrix of inner products or kernel evaluations between pairs of objects. |  |
 | column space | không gian cột | proposed | column-space: The set of all linear combinations of a matrix's columns. |  |
-| null space | không gian nghiệm không | proposed | null-space: The set of vectors mapped to zero by a linear transformation. |  |
+| null space | không gian hạt nhân | proposed | null-space: The set of vectors mapped to zero by a linear transformation. |  |
 | spectral radius | bán kính phổ | proposed | spectral-radius: The largest absolute value among a matrix's eigenvalues. |  |
 | spectral norm | chuẩn phổ | proposed | spectral-norm: The largest singular value of a matrix. |  |
 | nuclear norm | chuẩn hạt nhân | proposed | nuclear-norm: The sum of a matrix's singular values. |  |
@@ -610,7 +610,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | rounding error | sai số làm tròn | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
 | dynamic range | dải động | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | thông lượng huấn luyện | proposed | training-throughput: The amount of training work completed per unit time. |  |
-| soft actor-critic | actor-critic mềm (SAC) | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
+| soft actor-critic | actor-critic mềm | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | mạng Q sâu | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
 | proximal policy optimization | tối ưu chính sách gần kề (PPO) | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
 | trust region | vùng tin cậy | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
@@ -808,7 +808,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | first moment | mômen bậc một | proposed | first-moment: The expectation or average of a quantity. |  |
 | bias correction | hiệu chỉnh độ chệch | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
 | cross-correlation | tương quan chéo | proposed | cross-correlation: An operation that combines a local input window with a kernel without reversing the kernel. |  |
-| kernel size | kích thước nhân tích chập | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. |  |
+| kernel size | kích thước hạt nhân | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. |  |
 | input channel | kênh đầu vào | proposed | input-channel: A channel in the input to an operation or network layer. |  |
 | output channel | kênh đầu ra | proposed | output-channel: A channel produced by an operation or network layer. |  |
 | spatial resolution | độ phân giải không gian | proposed | spatial-resolution: The number of spatial samples in a representation. |  |

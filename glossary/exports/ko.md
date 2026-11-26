@@ -16,7 +16,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | training set | 훈련 세트 | proposed | training-set: The portion of data used to fit model parameters. |  |
 | validation set | 검증 세트 | verified_external | validation-set: Data used to select models or tune settings during development. | [east-stanford-ko-cs-229-machine-learning-tips-and-tricks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cs-229-machine-learning-tips-and-tricks.md#L141) |
 | test set | 테스트 세트 | verified_d2l | test-set: Data held out to assess a fitted model. | [east-ko-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_introduction/index.md#L92) |
-| model parameter | 모델 매개변수 | proposed | model-parameter: A value learned or fitted as part of a model. |  |
+| model parameter | 모델 파라미터 | proposed | model-parameter: A value learned or fitted as part of a model. |  |
 | weight | 가중치 | verified_d2l | weight: A coefficient that scales an input or connection in a model. | [east-ko-terminology-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/TERMINOLOGY.md#L157) |
 | bias | 편향 | verified_d2l | bias: An additive offset in a model or prediction. | [east-ko-terminology-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/TERMINOLOGY.md#L13) |
 | prediction | 예측 | verified_external | prediction: A model's estimate of an outcome for an input. | [east-google-ml-ko-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ko#prediction) |
@@ -62,7 +62,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | probability | 확률 | verified_d2l | probability: A numerical measure of the likelihood of an event. | [east-ko-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_preliminaries/probability.md#L172) |
 | random variable | 확률 변수 | verified_d2l | random-variable: A quantity whose value is determined by a random outcome. | [east-ko-terminology-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/TERMINOLOGY.md#L125) |
 | probability distribution | 확률 분포 | verified_d2l | probability-distribution: A specification of probabilities for possible outcomes. | [east-ko-chapter-linear-networks-softmax-regression-concise-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_linear-networks/softmax-regression-concise.md#L68) |
-| probability density | 확률밀도 | proposed | probability-density: A function whose integral over a region gives its probability. |  |
+| probability density | 확률 밀도 | proposed | probability-density: A function whose integral over a region gives its probability. |  |
 | conditional probability | 조건부 확률 | verified_external | conditional-probability: The probability of an event given another event. | [east-stanford-ko-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cs-229-probability.md#L70) |
 | joint distribution | 결합 분포 | verified_external | joint-distribution: A probability distribution over multiple random variables together. | review-ko-5459d2886c: page |
 | marginal distribution | 주변 분포 | verified_d2l | marginal-distribution: A distribution obtained by summing or integrating out other variables. | [east-ko-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_preliminaries/probability.md#L214) |
@@ -73,7 +73,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | covariance | 공분산 | verified_external | covariance: A measure of how two random variables vary together. | [east-stanford-ko-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cs-229-probability.md#L243) |
 | correlation | 상관관계 | verified_external | correlation: A normalized measure of association between variables. | [east-stanford-ko-cs-229-probability-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cs-229-probability.md#L249) |
 | Gaussian distribution | 가우시안 분포 | verified_d2l | gaussian-distribution: A continuous distribution characterized by a mean and variance. | [east-ko-terminology-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/TERMINOLOGY.md#L62) |
-| normal distribution | 정규분포 | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
+| normal distribution | 정규 분포 | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
 | Bernoulli distribution | 베르누이 분포 | verified_d2l | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [east-ko-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_introduction/index.md#L303) |
 | Poisson distribution | 푸아송 분포 | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
 | Bayes' theorem | 베이즈 정리 | verified_d2l | bayes-theorem: A rule relating conditional probabilities through prior and evidence. | [east-ko-chapter-preliminaries-probability-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_preliminaries/probability.md#L202) |
@@ -132,7 +132,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | receptive field | 수용 영역 | verified_external | receptive-field: The region of an input that can influence a particular activation. | [east-stanford-ko-convolutional-neural-networks-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/convolutional-neural-networks.md#L286) |
 | translation equivariance | 평행이동 등변성 | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | 잔차 연결 | verified_external | residual-connection: A connection that adds an earlier representation to a later transformation. | review-ko-7b125d5231: page |
-| residual network | 잔차 네트워크 | proposed | residual-network: A neural network built using residual connections. |  |
+| residual network | 잔차 신경망 | proposed | residual-network: A neural network built using residual connections. |  |
 | skip connection | 건너뛰기 연결 | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
 | image augmentation | 이미지 증강 | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
 | transfer learning | 전이 학습 | verified_d2l | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [east-ko-chapter-computer-vision-fine-tuning-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_computer-vision/fine-tuning.md#L10) |
@@ -178,7 +178,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | generator | 생성자 | proposed | generator: A model component that produces synthetic samples. |  |
 | discriminator | 판별자 | verified_d2l | discriminator: A model component trained to distinguish classes of samples, often real and generated. | [east-ko-chapter-generative-adversarial-networks-dcgan-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_generative-adversarial-networks/dcgan.md#L304) |
 | autoencoder | 오토인코더 | verified_d2l | autoencoder: A model trained to reconstruct inputs through an encoded representation. | [east-ko-chapter-recommender-systems-autorec-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_recommender-systems/autorec.md#L3) |
-| latent variable | 잠재변수 | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
+| latent variable | 잠재 변수 | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
 | latent space | 잠재 공간 | proposed | latent-space: A space of unobserved representations used by a model. |  |
 | diffusion model | 확산 모델 | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
 | noise schedule | 잡음 스케줄 | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
@@ -201,7 +201,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Q-learning | Q-러닝 | verified_external | q-learning: An off-policy temporal-difference method for learning action values. | [east-stanford-ko-cheatsheet-deep-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cheatsheet-deep-learning.md#L291) |
 | exploration | 탐험 | proposed | exploration: Trying actions to acquire information about their outcomes. |  |
 | policy gradient | 정책 경사 | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
-| convex function | 볼록함수 | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
+| convex function | 볼록 함수 | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. |  |
 | convex optimization | 볼록 최적화 | verified_d2l | convex-optimization: Optimization of a convex objective over a convex feasible set. | [east-ko-chapter-optimization-adagrad-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_optimization/adagrad.md#L18) |
 | convexity | 볼록성 | proposed | convexity: A geometric property governing line segments in sets or functions. |  |
 | local minimum | 국소 최솟값 | proposed | local-minimum: A point whose objective value is no greater than values at nearby points. |  |
@@ -277,10 +277,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | log-likelihood | 로그 가능도 | proposed | log-likelihood: The logarithm of a likelihood function. |  |
 | negative log-likelihood | 음의 로그 가능도 | verified_d2l | negative-log-likelihood: The negative logarithm of the likelihood of observed data. | [east-ko-chapter-appendix-mathematics-for-deep-learning-maximum-likelihood-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_appendix-mathematics-for-deep-learning/maximum-likelihood.md#L116) |
 | maximum a posteriori | 최대 사후 추정 | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
-| conjugate prior | 켤레 사전분포 | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
+| conjugate prior | 켤레 사전 분포 | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
 | Beta distribution | 베타 분포 | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
 | categorical distribution | 범주형 분포 | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
-| exponential distribution | 지수분포 | proposed | exponential-distribution: A continuous distribution often used to model waiting times. |  |
+| exponential distribution | 지수 분포 | proposed | exponential-distribution: A continuous distribution often used to model waiting times. |  |
 | uniform distribution | 균등 분포 | proposed | uniform-distribution: A distribution assigning equal density or probability across its support. |  |
 | random seed | 난수 시드 | proposed | random-seed: An initial value controlling a pseudorandom number generator. |  |
 | independent and identically distributed | 독립 동일 분포 | proposed | independent-and-identically-distributed: Describing random variables that are independent and share the same distribution. |  |
@@ -329,10 +329,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | weight initialization | 가중치 초기화 | verified_d2l | weight-initialization: The choice of starting values for model weights. | [east-ko-chapter-appendix-mathematics-for-deep-learning-eigendecomposition-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.md#L231) |
 | Xavier initialization | Xavier 초기화 | verified_d2l | xavier-initialization: An initialization method that scales weights to control activation variance across layers. | [east-ko-chapter-multilayer-perceptrons-numerical-stability-and-init-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_multilayer-perceptrons/numerical-stability-and-init.md#L145) |
 | weight sharing | 가중치 공유 | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
-| parameter count | 매개변수 수 | proposed | parameter-count: The number of parameters in a model. |  |
+| parameter count | 파라미터 수 | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | 계산 복잡도 | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
-| backward pass | 역방향 패스 | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
-| forward pass | 순방향 패스 | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
+| backward pass | 역전파 | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
+| forward pass | 순전파 | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
 | computational efficiency | 계산 효율성 | verified_d2l | computational-efficiency: The effectiveness with which computation uses time or resources. | [east-ko-chapter-linear-networks-softmax-regression-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_linear-networks/softmax-regression.md#L79) |
 | loss landscape | 손실 지형 | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
 | inductive bias | 귀납적 편향 | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
@@ -476,7 +476,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Muon | Muon | proposed | muon: An optimizer that applies matrix-oriented orthogonalization to updates of suitable model weights. |  |
 | heavy-ball momentum | 헤비볼 모멘텀 | proposed | heavy-ball-momentum: An optimization update that combines the current gradient with a fraction of the previous update. |  |
 | trust-region method | 신뢰 영역 방법 | proposed | trust-region-method: An optimization method that restricts each update to a region where a local approximation is trusted. |  |
-| soft-thresholding | 소프트 임계값 처리 | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
+| soft-thresholding | 소프트 임곗값 처리 | proposed | soft-thresholding: An operation that shrinks values toward zero and sets sufficiently small values to zero. |  |
 | convex conjugate | 볼록 켤레 | proposed | convex-conjugate: A function defined by maximizing a linear form minus a given function. |  |
 | subdifferential | 부분미분집합 | proposed | subdifferential: The set of all subgradients of a function at a point. |  |
 | dual problem | 쌍대 문제 | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
@@ -708,7 +708,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | proposal distribution | 제안 분포 | proposed | proposal-distribution: A distribution from which samples are drawn in a sampling algorithm. |  |
 | rejection sampling | 기각 샘플링 | proposed | rejection-sampling: A sampling method that accepts or rejects proposed samples according to a rule. |  |
 | Gibbs sampling | 깁스 샘플링 | proposed | gibbs-sampling: A Markov chain Monte Carlo method that repeatedly samples conditional distributions. |  |
-| variational objective | 변분 목적함수 | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
+| variational objective | 변분 목적 함수 | proposed | variational-objective: An objective used to fit an approximate distribution or model by variational methods. |  |
 | marginal likelihood | 주변 가능도 | proposed | marginal-likelihood: The probability or density of observed data after integrating out latent variables or parameters. |  |
 | entropy rate | 엔트로피율 | proposed | entropy-rate: The rate at which a stochastic process produces uncertainty or information. |  |
 | conditional mutual information | 조건부 상호 정보량 | proposed | conditional-mutual-information: A measure of dependence between variables after conditioning on other variables. |  |
@@ -727,7 +727,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adaptive layer norm | 적응형 층 정규화 | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
 | adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | 모델링 용이성 | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
-| forward posterior | 순방향 사후분포 | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
+| forward posterior | 순방향 사후 분포 | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
 | binary classification | 이진 분류 | verified_d2l | binary-classification: The task of assigning each input to one of two classes. | [east-ko-terminology-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/TERMINOLOGY.md#L15) |
 | multiclass classification | 다중 클래스 분류 | verified_d2l | multiclass-classification: The task of choosing one class from more than two possible classes. | [east-ko-chapter-introduction-index-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_introduction/index.md#L144) |
 | multi-label classification | 다중 레이블 분류 | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
@@ -753,10 +753,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | training error | 훈련 오차 | verified_external | training-error: The prediction error measured on the training set. | [east-stanford-ko-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cs-229-supervised-learning.md#L471) |
 | population risk | 모집단 위험 | proposed | population-risk: Expected loss under the population data distribution. |  |
 | generalization error | 일반화 오차 | proposed | generalization-error: The expected prediction error on examples from a target distribution. |  |
-| regularization strength | 규제 강도 | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
+| regularization strength | 정칙화 강도 | proposed | regularization-strength: A parameter controlling the influence of a regularization term. |  |
 | model capacity | 모델 용량 | verified_external | model-capacity: The expressive or fitting ability of a model class. | [east-google-ml-ko-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ko#model-capacity) |
 | model complexity | 모델 복잡도 | proposed | model-complexity: A measure of the flexibility or structural richness of a model. |  |
-| regularization path | 정규화 경로 | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
+| regularization path | 정칙화 경로 | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
 | learning curve | 학습 곡선 | proposed | learning-curve: A plot of model performance or loss as training or data size changes. |  |
 | double descent | 이중 하강 | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
 | validation error | 검증 오차 | proposed | validation-error: The prediction error measured on validation data. |  |
@@ -785,7 +785,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | hinge loss | 힌지 손실 | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [east-stanford-ko-cs-229-supervised-learning-md](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ko/cs-229-supervised-learning.md#L75) |
 | squared loss | 제곱 손실 | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [east-google-ml-ko-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ko#squared-loss) |
 | Huber loss | 후버 손실 | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
-| regularized objective | 정규화된 목적함수 | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
+| regularized objective | 정칙화된 목적 함수 | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | 무작위 초기화 | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | 기울기 노름 | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
 | leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
@@ -795,7 +795,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | network depth | 네트워크 깊이 | proposed | network-depth: The number of successive computational layers in a network. |  |
 | network width | 네트워크 너비 | proposed | network-width: The number of units or features in a network layer. |  |
 | training dynamics | 훈련 동역학 | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
-| parameter update | 매개변수 갱신 | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
+| parameter update | 파라미터 갱신 | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
 | optimizer state | 옵티마이저 상태 | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
 | minibatch gradient | 미니배치 기울기 | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
 | full gradient | 전체 기울기 | proposed | full-gradient: The gradient of an objective computed over the full dataset. |  |
@@ -820,9 +820,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | downsampling | 다운샘플링 | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | 업샘플링 | verified_d2l | upsampling: Increasing the spatial or temporal resolution of a representation. | [east-ko-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_computer-vision/fcn.md#L90) |
 | aliasing | 에일리어싱 | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
-| pooling window | 풀링 창 | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
+| pooling window | 풀링 윈도 | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
 | global pooling | 전역 풀링 | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
-| fully convolutional network | 완전 합성곱 네트워크 | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
+| fully convolutional network | 완전 합성곱 신경망 | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
 | bilinear interpolation | 쌍선형 보간 | verified_d2l | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. | [east-ko-chapter-computer-vision-fcn-md](https://github.com/d2l-ai/d2l-ko/blob/9857ea9899409b1e17003dcce7859d60aa892559/chapter_computer-vision/fcn.md#L91) |
 | nearest-neighbor interpolation | 최근접 이웃 보간 | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
 | random horizontal flip | 무작위 수평 뒤집기 | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
@@ -963,7 +963,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | velocity prediction | 속도 예측 | proposed | velocity-prediction: Estimating a velocity target describing movement along a generative path. |  |
 | score estimate | 스코어 추정 | proposed | score-estimate: An estimate of the gradient of a log probability density. |  |
 | denoiser | 잡음 제거기 | proposed | denoiser: A model or function that estimates a clean signal from a noisy observation. |  |
-| denoising objective | 잡음 제거 목적함수 | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
+| denoising objective | 잡음 제거 목적 함수 | proposed | denoising-objective: A training objective that rewards recovery of clean data or related quantities from noisy inputs. |  |
 | conditional denoising | 조건부 잡음 제거 | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
 | guidance scale | 가이던스 강도 | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
 | class conditioning | 클래스 조건화 | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
@@ -978,7 +978,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Fréchet Inception Distance | 프레셰 인셉션 거리 | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
 | maximum mean discrepancy | 최대 평균 불일치 | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
 | adversarial training | 적대적 훈련 | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
-| adversarial objective | 적대적 목적함수 | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
+| adversarial objective | 적대적 목적 함수 | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | 미니맥스 게임 | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
 | Wasserstein GAN | 와서슈타인 GAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
 | gradient penalty | 기울기 패널티 | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
@@ -989,7 +989,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | global maximum | 전역 최댓값 | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
 | strict convexity | 엄격한 볼록성 | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
 | smoothness | 매끄러움 | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
-| convex objective | 볼록 목적함수 | proposed | convex-objective: An optimization objective that is a convex function. |  |
+| convex objective | 볼록 목적 함수 | proposed | convex-objective: An optimization objective that is a convex function. |  |
 | constrained optimization | 제약 최적화 | proposed | constrained-optimization: Optimization subject to conditions on feasible solutions. |  |
 | first-order optimality | 일차 최적성 | proposed | first-order-optimality: A condition characterizing a candidate optimum using first-order information. |  |
 | second-order optimality | 이차 최적성 | proposed | second-order-optimality: A condition characterizing a candidate optimum using curvature information. |  |
@@ -1004,10 +1004,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | subgradient method | 부분기울기법 | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
 | projection operator | 사영 연산자 | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
 | projected gradient descent | 사영 경사 하강법 | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
-| backtracking line search | 역추적 선탐색 | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
+| backtracking line search | 역추적 선 탐색 | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
 | descent direction | 하강 방향 | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. |  |
 | descent lemma | 하강 보조정리 | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
-| Newton step | 뉴턴 단계 | proposed | newton-step: An update computed from gradient and curvature information in Newton's method. |  |
+| Newton step | 뉴턴 스텝 | proposed | newton-step: An update computed from gradient and curvature information in Newton's method. |  |
 | conjugate gradient | 켤레기울기법 | proposed | conjugate-gradient: An iterative method for solving suitable linear systems or optimization problems using conjugate directions. |  |
 | curvature | 곡률 | proposed | curvature: A description of how the slope or gradient of a function changes. |  |
 | Hessian eigenvalue | 헤시안 고윳값 | proposed | hessian-eigenvalue: An eigenvalue of a Hessian matrix describing curvature along an associated direction. |  |
@@ -1023,12 +1023,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convergence guarantee | 수렴 보장 | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
 | optimization landscape | 최적화 지형 | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
 | gradient flow | 기울기 흐름 | proposed | gradient-flow: A continuous-time dynamical system that moves along the negative gradient of an objective. |  |
-| implicit regularization | 암묵적 정규화 | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
+| implicit regularization | 암묵적 정칙화 | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
 | Lipschitz gradient | 립시츠 기울기 | proposed | lipschitz-gradient: A gradient whose change is bounded by a constant times the change in its input. |  |
 | minibatch noise | 미니배치 잡음 | proposed | minibatch-noise: Random variation in an update caused by using a finite minibatch. |  |
 | learning dynamics | 학습 동역학 | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
 | optimization trajectory | 최적화 궤적 | proposed | optimization-trajectory: The sequence or path of parameter values generated by an optimization method. |  |
-| objective value | 목적함수 값 | proposed | objective-value: The numerical value of an optimization objective at a point. |  |
+| objective value | 목적 함수 값 | proposed | objective-value: The numerical value of an optimization objective at a point. |  |
 | minimizer | 최소화점 | proposed | minimizer: A point at which a function achieves a minimum over a specified domain. |  |
 | maximizer | 최대화점 | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
 | risk minimization | 위험 최소화 | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. |  |
@@ -1042,13 +1042,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | identifiability | 식별 가능성 | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
 | posterior mode | 사후 최빈값 | proposed | posterior-mode: A value at which a posterior probability or density is maximized. |  |
 | Bayesian linear regression | 베이지안 선형 회귀 | proposed | bayesian-linear-regression: Linear regression that represents uncertainty about parameters with a posterior distribution. |  |
-| Gaussian prior | 가우시안 사전분포 | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
+| Gaussian prior | 가우시안 사전 분포 | proposed | gaussian-prior: A prior probability distribution in the Gaussian family. |  |
 | Gaussian likelihood | 가우시안 가능도 | proposed | gaussian-likelihood: A likelihood based on a Gaussian observation model. |  |
-| Gaussian posterior | 가우시안 사후분포 | proposed | gaussian-posterior: A posterior probability distribution in the Gaussian family. |  |
-| hyperprior | 초사전분포 | proposed | hyperprior: A prior distribution placed on a model's hyperparameters. |  |
+| Gaussian posterior | 가우시안 사후 분포 | proposed | gaussian-posterior: A posterior probability distribution in the Gaussian family. |  |
+| hyperprior | 초사전 분포 | proposed | hyperprior: A prior distribution placed on a model's hyperparameters. |  |
 | Gaussian process regression | 가우시안 프로세스 회귀 | proposed | gaussian-process-regression: Regression using a Gaussian process prior over functions. |  |
-| Gaussian process prior | 가우시안 프로세스 사전분포 | proposed | gaussian-process-prior: A prior distribution over functions specified by a mean function and covariance kernel. |  |
-| Gaussian process posterior | 가우시안 프로세스 사후분포 | proposed | gaussian-process-posterior: A distribution over functions obtained by conditioning a Gaussian process prior on observations. |  |
+| Gaussian process prior | 가우시안 프로세스 사전 분포 | proposed | gaussian-process-prior: A prior distribution over functions specified by a mean function and covariance kernel. |  |
+| Gaussian process posterior | 가우시안 프로세스 사후 분포 | proposed | gaussian-process-posterior: A distribution over functions obtained by conditioning a Gaussian process prior on observations. |  |
 | mean function | 평균 함수 | proposed | mean-function: A function specifying the expected value of a random function at each input. |  |
 | length scale | 길이 척도 | proposed | length-scale: A parameter controlling the distance over which a kernel or process varies substantially. |  |
 | observation noise | 관측 잡음 | proposed | observation-noise: Random variation or measurement error in observed data. |  |
@@ -1069,7 +1069,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | fidelity | 충실도 | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
 | successive halving | 순차적 절반 제거 | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
 | Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
-| noisy objective | 잡음이 있는 목적함수 | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
+| noisy objective | 잡음이 있는 목적 함수 | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
 | hyperparameter configuration | 하이퍼파라미터 구성 | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
 | asynchronous scheduling | 비동기 스케줄링 | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
 | rating matrix | 평점 행렬 | proposed | rating-matrix: A matrix of user ratings for items. |  |
@@ -1114,7 +1114,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | InfoNCE | InfoNCE | proposed | infonce: A contrastive objective using one positive example and sampled alternatives. |  |
 | negative pair | 음성 쌍 | proposed | negative-pair: A pair of examples treated as dissimilar or unmatched in a contrastive objective. |  |
 | positive pair | 양성 쌍 | proposed | positive-pair: A pair of examples treated as related or matched in a contrastive objective. |  |
-| natural parameter | 자연 매개변수 | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
+| natural parameter | 자연 파라미터 | proposed | natural-parameter: A parameter multiplying sufficient statistics in an exponential-family representation. |  |
 | free energy | 자유 에너지 | proposed | free-energy: A quantity combining energy and entropy or a related log-normalization objective. |  |
 | importance sampling | 중요도 샘플링 | proposed | importance-sampling: Estimating a target expectation using samples from another distribution with corrective weights. |  |
 | detailed balance | 세부 균형 | proposed | detailed-balance: A condition equating probability flow between each pair of states in opposite directions. |  |
@@ -1161,7 +1161,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | shared expert | 공유 전문가 | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | 연산 예산 | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
 | training compute | 훈련 연산량 | proposed | training-compute: The amount of computation used to train a model. |  |
-| active parameters | 활성 매개변수 수 | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
+| active parameters | 활성 파라미터 수 | proposed | active-parameters: The parameters used in a given forward computation for an input. |  |
 | model width | 모델 너비 | proposed | model-width: The size of a model's intermediate representation or number of units in a layer. |  |
 | training tokens | 훈련 토큰 수 | proposed | training-tokens: Tokens processed as part of model training. |  |
 | inference cost | 추론 비용 | proposed | inference-cost: The computational or resource cost of producing model predictions. |  |

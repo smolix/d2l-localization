@@ -834,8 +834,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | bottleneck block | μπλοκ bottleneck | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
 | convolutional block | συνελικτικό μπλοκ | proposed | convolutional-block: A network component grouping convolutional and often other operations. |  |
 | network in network | Network in Network | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
-| image patch | τμήμα εικόνας | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
-| patch embedding | ενσωμάτωση τμήματος | proposed | patch-embedding: A vector representation computed from an image patch. |  |
+| image patch | τεμάχιο εικόνας | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
+| patch embedding | ενσωμάτωση τεμαχίων | proposed | patch-embedding: A vector representation computed from an image patch. |  |
 | image classifier | ταξινομητής εικόνων | proposed | image-classifier: A model that assigns categories to images. |  |
 | ground truth | ground truth | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
 | ground-truth bounding box | πλαίσιο οριοθέτησης αναφοράς | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
