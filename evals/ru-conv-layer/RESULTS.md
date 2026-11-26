@@ -18,3 +18,29 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Opus assumed the build prints cross-references with a nominative prefix ("Раздел 7.1") and so never put a case-governing preposition directly before a bare `:numref:`. A Russian style guide should settle how references are phrased.
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors and zero warnings. Counts are from `bin/l10n compare`
+with the current checker.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 0 | 4,222 (0.99) | 16.8 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 0 | 4,105 (0.97) | 4.8 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 0 | 4,048 (0.95) | 2.7 min |
+
+- Like `fable`, all three place Russian dimension modifiers post-nominally
+  («матрицы $\mathbf{X}$ размера $n_\textrm{h} \times n_\textrm{w}$», «выхода
+  $\mathbf{Y}$ размера $2 \times 2$», «матрицу $\mathbf{W}$ размера
+  $4 \times 16$») and record each math-token reordering in `NOTES` rather than
+  rewording to keep English token order (`TRANSLATING.md` §9).
+- In `33bb377d`, `carbon` writes out *Теоретическое рецептивное поле* while
+  `neon` and `hydrogen` abbreviate *Теоретическое РП*; `carbon` and `neon` render
+  geometric *Bounding box* as *ограничивающая рамка*, whereas `hydrogen` uses
+  *Область* (which still passes with 0 warnings).
+
+The native-reader verdict is pending.

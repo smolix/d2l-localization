@@ -20,3 +20,27 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Fable translated the evident meaning of the slide kicker that says the loss "converges to [1, -1]" (the kernel does), noting it; the English was fixed after this revision.
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors and zero warnings. Counts are from `bin/l10n compare`
+with the current checker.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 0 | 4,572 (1.08) | 16.3 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 0 | 4,582 (1.08) | 4.8 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 0 | 4,504 (1.06) | 2.6 min |
+
+- Unlike `opus` and `sonnet`, all three keep natural Greek post-nominal dimension
+  order («πίνακα εισόδου $\mathbf{X}$ διαστάσεων
+  $n_\textrm{h} \times n_\textrm{w}$») and record the resulting math-token
+  reorderings in `NOTES` (`TRANSLATING.md` §9).
+- Before `:numref:`, `carbon` and `neon` use a gendered Greek article matching
+  the Quarto label («Στην `:numref:`»), whereas `hydrogen` inserts an explicit
+  noun («Στην ενότητα `:numref:`», which would duplicate Quarto's printed prefix).
+
+The native-reader verdict is pending.
