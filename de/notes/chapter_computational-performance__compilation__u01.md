@@ -1,0 +1,25 @@
+# Notes on chapter_computational-performance/compilation.md#u01 (Codex Astra (medium), 2026-11-26 19:48 UTC)
+
+- 44e0f922: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- b6b2f57c: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 7cb3ecc9: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 1c591a15: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 8db0d260: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 5d9858b6: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- c72c3a61: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 83aba589: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- fffde429: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 86dc3a23: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 32cbb421: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 51b17eea: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 325b12e9: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 7cf22f1d: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 06427ed4: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 813d698d: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- e01a3cba: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 1d1ebe6a: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- c941a3ce: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- df199337: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- 9a5eef42: „kernel“ bezeichnet hier GPU-Code. Der Glossareintrag „Faltungskern“ betrifft Faltungsgewichte.
+- d7d6149b: „prediction“ bezeichnet die aus der übertragenen Bytezahl abgeleitete Laufzeitprognose. „vorhergesagt“ gibt diese Bedeutung verbal wieder.
+- 1d1ebe6a: „generalization“ bezeichnet die symbolische Verallgemeinerung einer Tensorform durch den Compiler. Der Glossareintrag betrifft die Generalisierung eines gelernten Modells.

@@ -764,3 +764,77 @@
 ## chapter_recurrent-modern/hybrids.md#u01 (Codex Astra (medium), 2026-11-26)
 
 - „Welch's bound“ → „Welch-Schranke“, „multi-query associative recall“ → „assoziativer Abruf mit mehreren Abfragen“. „Abrufgenauigkeit“ bezeichnet den Anteil korrekt abgerufener Werte.
+
+## chapter_computational-performance/hardware.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „bandwidth-bound“ → „bandbreitenbegrenzt“, „shoreline“ → „Chiprand“.
+- „Tensor Cores“, „Streaming Multiprocessors“ und „Warps“ bleiben als Architekturbegriffe erhalten.
+- „memory sweep time“ → „Zeit für einen vollständigen Speicherdurchlauf“.
+
+## chapter_computational-performance/hardware.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „pageable memory“ → „auslagerbarer Speicher“ als Gegenstück zu „auslagerungsgesperrter Speicher“.
+- „microscaling“ → „Mikroskalierung“.
+
+## chapter_computational-performance/compilation.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „graph capture“ → „Grapherfassung“, „graph break“ → „Graphunterbrechung“, „guard“ → „Prüfbedingung“.
+- „operation fusion“ und „operator fusion“ → „Operatorfusion“, „kernel replay“ → „Wiedergabe von Kernelstarts“.
+- „tracing“ → „Tracing“, „placeholder“ → „Platzhalter“, „bucket“ bei Sequenzlängen → „Längenklasse“.
+
+## chapter_computational-performance/performance-model.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „bandwidth-bound“ → „bandbreitenbegrenzt“, „bandwidth roof“ → „Bandbreitengrenze“, „compute roof“ → „Grenze der Rechenleistung“.
+
+## chapter_computational-performance/performance-model.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „overhead-bound“ → „durch die Startkosten begrenzt“, wenn die Startzeit auf dem Host die Laufzeit bestimmt.
+- „profiler“ → „der Profiler“, „profile“ → „das Laufzeitprofil“.
+
+## chapter_computational-performance/multiple-gpus.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „star allreduce“ → „Stern-Allreduce“, „shard“ → „Partition“ eines Minibatchs, „chunk“ → „Block“ eines Gradiententensors.
+- „strong scaling“ und „weak scaling“ → „starke Skalierung“ und „schwache Skalierung“.
+
+## chapter_computational-performance/multiple-gpus.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „gradient fusion“ → „Gradientenfusion“, „bus bandwidth“ → „Busbandbreite“, „speedup“ als Verhältnis von Laufzeiten → „Beschleunigungsfaktor“.
+
+## chapter_computational-performance/multi-gpu-practice.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „gradient bucket“ → „Gradientenbündel“, kurz „Bündel“, „bucket model“ → „Bündelmodell“.
+- „device mesh“ → „Gerätegitter“, „collective operation“ → „kollektive Operation“, „exposed communication time“ → „nicht überdeckte Kommunikationszeit“.
+- „weak scaling“ → „schwache Skalierung“, „strong scaling“ → „starke Skalierung“, „SM contention“ → „Konkurrenz um SMs“.
+- „allreduce“ → „der Allreduce“, Plural „die Allreduces“.
+
+## chapter_computational-performance/memory-precision.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „up-projection“ und „down-projection“ → „Aufwärtsprojektion“ und „Abwärtsprojektion“ beim SwiGLU-FFN.
+- „peak memory“ → „Spitzenbedarf“ im Zusammenhang mit Speicherbelegung.
+
+## chapter_computational-performance/memory-precision.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „selective recomputation“ → „selektive Neuberechnung“, „chunked cross-entropy loss“ → „abschnittsweiser Kreuzentropieverlust“.
+
+## chapter_computational-performance/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „preallocation“ → „Vorabreservierung“ bei der Speicherverwaltung.
+- „trace“ → „Ablaufprotokoll“ bei der Laufzeitmessung.
+- „tensor tile“ → „Tensorkachel“, „tiling“ → „Kachelung“.
+
+## chapter_computational-performance/sharding.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „shard“ → „Partition“ für den lokal gespeicherten Anteil eines Tensors, „gradient bucket“ → „Gradientenpuffer“.
+- „collective“ → „kollektive Operation“, „training state“ → „Trainingszustand“.
+
+## chapter_computational-performance/sharding.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „prefetching“ → „Vorausladen“, „buffer donation“ → „Freigabe von Puffern zur Wiederverwendung“.
+
+## chapter_computational-performance/fast-transformer.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „kernel fusion“ → „Kernel-Fusion“, „measurement window“ → „Messfenster“, „rung“ → „Optimierungsstufe“, kurz „Stufe“.
+
+## chapter_computational-performance/fast-transformer.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „model FLOPs utilization“ → „Auslastung durch Modell-FLOPs“ (MFU).
