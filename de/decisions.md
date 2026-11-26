@@ -1840,3 +1840,94 @@
 ## chapter_mdl-information-theory/mdl-mi-estimation.md#u03 (Codex Astra (medium), 2026-11-26)
 
 - „starved batch“ → „Batch ohne seltenes Paar“, „hit batch“ → „Batch mit Treffer“.
+
+## chapter_mdl-dynamics/mdl-odes-solvers.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „linear system“ bezeichnet hier ein „lineares System“ von Differentialgleichungen. Der Glossareintrag „lineares Gleichungssystem“ betrifft algebraische Gleichungen.
+- „Picard iteration“ → „Picard-Iteration“, „Picard operator“ → „Picard-Operator“, „blow-up time“ → „Explosionszeitpunkt“.
+
+## chapter_mdl-dynamics/mdl-odes-solvers.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „stable/unstable spiral“ → „stabiler/instabiler Spiralpunkt“ für den Fixpunkttyp, „Spirale“ für die Bahn.
+- „transient growth“ → „transientes Wachstum“, „mode“ → „Mode“ (die), „integrating factor“ → „integrierender Faktor“.
+- „sample“ → „Abtastwert“ bei der zeitlichen Abtastung eines Signals.
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „forward Euler“ und „backward Euler“ → „explizites Euler-Verfahren“ und „implizites Euler-Verfahren“, für einzelne Schritte „expliziter/impliziter Euler-Schritt“.
+- „midpoint method“ → „Mittelpunktverfahren“, „Heun's method“ → „Heun-Verfahren“, „stability function“ → „Stabilitätsfunktion“.
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „embedded pair“ → „eingebettetes Verfahrenspaar“, „step-size controller“ → „Schrittweitensteuerung“.
+- „mode“ → „Eigenmode“ im Kontext linearer Differentialgleichungen.
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „splitting“ → „Operatorzerlegung“ bei der Komposition von Teilflüssen, „backward error analysis“ → „Rückwärtsfehleranalyse“.
+
+## chapter_mdl-dynamics/mdl-neural-odes.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „augmentation“ → „Zustandserweiterung“, „probe“ → „Testvektor“ bei der stochastischen Spurschätzung.
+
+## chapter_mdl-dynamics/mdl-sdes.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „increment“ → „Zuwachs“, „sample path“ → „Pfad“, „limiting law“ → „Grenzverteilung“.
+
+## chapter_mdl-dynamics/mdl-sdes.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „Itô's lemma“ → „Itô-Lemma“, „Itô isometry“ → „Itô-Isometrie“, „simple predictable process“ → „einfacher vorhersagbarer Prozess“.
+
+## chapter_mdl-dynamics/mdl-sdes.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „relaxation time“ → „Relaxationszeit“, „mean reversion“ → „Rückkehr zum Mittelwert“.
+
+## chapter_mdl-dynamics/mdl-sdes.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „strong/weak order“ → „starke/schwache Ordnung“, bei Bedarf „starke/schwache Konvergenzordnung“.
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „time-marginal“ → „Randverteilung zum jeweiligen Zeitpunkt“, bei Bezug auf die Dichte „Randdichte zum jeweiligen Zeitpunkt“.
+- „divergence theorem“, „Laplacian“ und „heat equation“ → „Divergenzsatz“, „Laplace-Operator“ und „Wärmeleitungsgleichung“.
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „probability current“ → „Wahrscheinlichkeitsstrom“, im Unterschied zum „Wahrscheinlichkeitsfluss“ (probability flow).
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „reversed clock“ → „umgekehrte Zeit“, „width excess“ → „Überschreitung der Sollbreite“.
+
+## chapter_mdl-dynamics/mdl-score-matching-diffusion-flow.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „regression lemma“ → „Regressionslemma“, „loss floor“ → „Untergrenze des Verlusts“.
+
+## chapter_mdl-dynamics/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „exponential integrator“ → „exponentieller Integrator“, „geometric integration“ → „geometrische Integration“, „leapfrog“ → „Leapfrog-Verfahren“.
+- „coupling layer“ → „Kopplungsschicht“, „controlled differential equation“ → „gesteuerte Differentialgleichung“.
+- „pairing“ → „Paarung“ bei der Zuordnung von Anfangs- und Endpunkten, „coupling“ → „Kopplung“ für den probabilistischen Begriff.
+
+## chapter_mdl-dynamics/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „Wasserstein gradient flow“ → „Wasserstein-Gradientenfluss“, „Schrödinger bridge“ → „Schrödinger-Brücke“, „path law“ → „Pfadverteilung“.
+- „sliced score matching“ → „Sliced-Score-Matching“.
+- „sampling error“ → „Fehler beim Sampling“, wenn die Abweichung der erzeugten Verteilung von der Zielverteilung gemeint ist.
+
+## chapter_mdl-dynamics/further-reading.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- Bei bibliografischen Links bleiben die veröffentlichten Werktitel im Original, beschreibende Zusätze werden übersetzt.
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „probability path“ → „Wahrscheinlichkeitspfad“, „conditional blob“ → „bedingte Teilwolke“, „noising kernel“ → „Verrauschungskern“.
+- „rectified flow“ → „Rectified Flow“ als Verfahrensname.
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „squared energy distance“ → „quadrierte Energiedistanz“, „sorted pairing“ → „sortierte Paarung“, „pair length“ → „Paarlänge“.
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „squared grid“ → „quadratisches Gitter“ für das Zeitgitter mit quadrierten Stützstellen.
