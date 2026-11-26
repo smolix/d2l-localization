@@ -15,6 +15,7 @@ languages:
   - {code: de, locale: de,      name: Deutsch,    bucket: d2l-de, hosts: [de.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: tr, locale: tr,      name: Türkçe,     bucket: d2l-tr, hosts: [tr.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: vi, locale: vi,      name: Tiếng Việt, bucket: d2l-vi, hosts: [vi.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: ru, locale: ru,      name: Русский,    bucket: d2l-ru, hosts: [ru.d2l.ai], dir: ltr, pinned: null, forum: english}  # no glossary yet
   - {code: el, locale: el,      name: Ελληνικά,   bucket: d2l-el, hosts: [el.d2l.ai], dir: ltr, pinned: null, forum: english}  # no glossary yet
   - {code: hi, locale: hi,      name: हिन्दी,      bucket: d2l-hi, hosts: [hi.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: ar, locale: ar,      name: العربية,    bucket: d2l-ar, hosts: [ar.d2l.ai], dir: rtl, pinned: null, forum: english}

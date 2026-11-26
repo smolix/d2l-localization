@@ -284,7 +284,7 @@ not fail the build.
    difference is translated.
 4. Scale out to the other languages. Arabic (right-to-left PDF) and Hindi
    (Devanagari shaping) come last: they carry the most typesetting risk.
-   Greek has no glossary yet.
+   Greek and Russian have no glossary yet.
 
 ## First language
 
