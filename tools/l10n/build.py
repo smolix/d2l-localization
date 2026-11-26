@@ -55,7 +55,7 @@ def translated_pages(lang, rev: str, stale: str = 'english') -> dict:
 
 def prepare_worktree(lang, rev: str, workdir: Path | None = None) -> Path:
     sha = config.resolve_rev(rev)
-    wt = workdir or BUILD_ROOT / lang.code
+    wt = (workdir or BUILD_ROOT / lang.code).resolve()
     if (wt / '.git').exists():
         config.git('checkout', '--detach', '-f', sha, cwd=wt)
         config.git('checkout', '-f', '--', '.', cwd=wt)
@@ -145,7 +145,7 @@ def deploy(lang, workdir=None, delete=True, dry_run=False):
         raise config.L10nError('English is deployed from d2l-neu, not from here')
     if not lang.bucket:
         raise config.L10nError(f'{lang.code} has no bucket in languages.yml')
-    wt = workdir or BUILD_ROOT / lang.code
+    wt = (workdir or BUILD_ROOT / lang.code).resolve()
     book = wt / '_book'
     if not (book / 'index.html').exists():
         raise config.L10nError(f'{book} has no build; run l10n build {lang.code}')
