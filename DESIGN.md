@@ -34,6 +34,7 @@ d2l-localization/
     book/              # translated .md files at the English paths (chapter_*/...)
     strings.yml        # UI strings (menu, buttons, template text)
     style.md           # this language's style guide (register, punctuation, spacing)
+    decisions.md       # running log of translation choices, read by every later unit
     agents.md          # which agent translated what, and review notes (section 6)
 ```
 
@@ -84,14 +85,48 @@ Renamed or moved files are followed through their section labels. The result
 is a small diff per language, as surgical as the English change, reviewed as
 one PR. The pin in `languages.yml` moves only after `l10n check` passes.
 
-## 5. Translation packets (agent-independent)
+## 5. Work units: whole sections, not isolated blocks
 
-Translation runs on packets so that any agent can do it (Claude Fable or Opus,
-Gemini, Codex, a person). `l10n translate --emit` writes JSONL packets;
-the agent returns JSONL answers; `l10n translate --apply` checks and merges
-them. The exact formats and rules are in `TRANSLATING.md`. Each answer carries
-the agent and model that produced it, recorded per block, so translation
-quality can be compared across agents and languages.
+Blocks are the unit of **alignment** (anchors, checks, updates), not the unit of
+**translation**. A translator that sees one paragraph at a time cannot write a
+cohesive narrative: it cannot see where the argument is going, which term it
+chose three paragraphs ago, or that "this" refers to a figure above. So the
+translator always works on a whole section and sees more around it.
+
+- **Unit.** One `##` section of a page (or the whole page when it is short),
+  typically 1,000-5,000 words, including the section's slides and exercises.
+- **Work file.** `l10n translate --emit` writes one Markdown work file per unit
+  (format in `TRANSLATING.md`). It holds, in order:
+  1. a brief: the language's `style.md`, the language's running decisions log
+     (below), and the glossary entries for every concept in the unit;
+  2. context to read, not translate: the chapter outline (English and, where
+     it exists, translated headings), the whole English page, and the
+     translation of the preceding section;
+  3. the unit itself: anchored English blocks, each followed by an empty slot
+     (new) or the current translation (update).
+- **Answer.** The translator returns the unit as Markdown with the same anchors,
+  one translated block per anchor. Markdown in, Markdown out: no JSON escaping
+  of long text, and it works for chat models, CLI agents editing files, and
+  people alike.
+- **Decisions log** (`<lang>/decisions.md`). After each unit the translator
+  appends the choices a later unit must follow: a term chosen without glossary
+  support, how a recurring phrase is rendered, a convention for a construct.
+  Every later work file includes it, so choices stay consistent across
+  chapters and across agents.
+- **Editorial pass.** After all units of a chapter are translated, an editor
+  (normally a different agent from the translator) reads the whole translated
+  chapter against the English for flow, transitions between sections, and
+  consistent terms and register. It may edit any block, keeping the anchors.
+- **Updates.** An update work file contains the whole section: unchanged blocks
+  locked with their translation, changed blocks with old English, new English
+  and old translation, new blocks empty. The translator edits only the open
+  blocks but reads everything. If an English change requires a locked
+  neighbour to change (a connective, a now-ambiguous "this"), it may edit that
+  block and must say so; `l10n check` lists such edits for review.
+
+`l10n translate --apply` checks each answer (section 10) and merges it. Each
+unit records the agent and model that produced it, so quality can be compared
+across agents and languages.
 
 ## 6. Agents per language
 
@@ -100,9 +135,9 @@ no language is tied to one agent: some languages may need Fable, some are fine
 with Opus, others may do better with Gemini or Codex **[ruled]**.
 
 - `TRANSLATING.md` is self-contained and written for any capable agent.
-- Before a language's full run, a bake-off: the same sample packets (about 30
-  blocks across prose, math-heavy text, slides and exercises, plus 10 update
-  packets) go to each candidate agent. Automated checks score preservation and
+- Before a language's full run, a bake-off: the same sample units (three or
+  four sections chosen to cover narrative prose, a derivation, slides and
+  exercises, plus two update units) go to each candidate agent. Automated checks score preservation and
   terminology; Alex (or a native reviewer) judges accuracy and fluency blind.
   Results go to `<lang>/agents.md`, which also records the chosen agent.
 
@@ -181,6 +216,6 @@ not fail the build.
    (Devanagari shaping) come last: they carry the most typesetting risk.
    Greek has no glossary yet.
 
-## Open
+## First language
 
-- First language: zh or ja.
+Japanese (`ja`) first **[ruled]**; Chinese next.
