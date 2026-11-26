@@ -1,0 +1,24 @@
+# One entry per language. Generates languages.json (the runtime language menu,
+# hosted in the d2l-data bucket) and drives `l10n build` / `l10n deploy`.
+# pinned: the English d2l-neu tag (en-YYYY.MM.DD) the language builds against;
+#         null until its first release.
+# forum:  english = link the English topics; own = the language's own category.
+
+languages:
+  - {code: en, locale: en,      name: English,    bucket: d2l-en, hosts: [d2l.ai, en.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: zh, locale: zh-Hans, name: 中文,        bucket: d2l-zh, hosts: [zh.d2l.ai], dir: ltr, pinned: null, forum: own, forum_category: 16}
+  - {code: ja, locale: ja,      name: 日本語,      bucket: d2l-ja, hosts: [ja.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: ko, locale: ko,      name: 한국어,      bucket: d2l-ko, hosts: [ko.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: pt, locale: pt-BR,   name: Português,  bucket: d2l-pt, hosts: [pt.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: es, locale: es,      name: Español,    bucket: d2l-es, hosts: [es.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: fr, locale: fr,      name: Français,   bucket: d2l-fr, hosts: [fr.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: de, locale: de,      name: Deutsch,    bucket: d2l-de, hosts: [de.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: tr, locale: tr,      name: Türkçe,     bucket: d2l-tr, hosts: [tr.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: vi, locale: vi,      name: Tiếng Việt, bucket: d2l-vi, hosts: [vi.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: el, locale: el,      name: Ελληνικά,   bucket: d2l-el, hosts: [el.d2l.ai], dir: ltr, pinned: null, forum: english}  # no glossary yet
+  - {code: hi, locale: hi,      name: हिन्दी,      bucket: d2l-hi, hosts: [hi.d2l.ai], dir: ltr, pinned: null, forum: english}
+  - {code: ar, locale: ar,      name: العربية,    bucket: d2l-ar, hosts: [ar.d2l.ai], dir: rtl, pinned: null, forum: english}
+
+# Earlier editions, listed after a divider at the bottom of the menu.
+old_editions:
+  - {code: en, name: English (old), url: https://en-v2.d2l.ai, bucket: d2l-en-v2}
