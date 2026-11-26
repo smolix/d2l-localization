@@ -73,6 +73,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | covariance | covariance | proposed | covariance: A measure of how two random variables vary together. |  |
 | correlation | corrélation | verified_external | correlation: A normalized measure of association between variables. | [stanford-paired-fr-cs-229-probability](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/fr/cs-229-probability.md#L249) |
 | Gaussian distribution | loi gaussienne | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. |  |
+| normal distribution | loi normale | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
 | Bernoulli distribution | loi de Bernoulli | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. |  |
 | Poisson distribution | loi de Poisson | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
 | Bayes' theorem | théorème de Bayes | proposed | bayes-theorem: A rule relating conditional probabilities through prior and evidence. |  |

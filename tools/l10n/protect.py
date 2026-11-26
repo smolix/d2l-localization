@@ -25,7 +25,11 @@ _TOKEN_RE = re.compile(r'''
 
 CLASSES = ('comment', 'ref', 'code', 'math', 'secref', 'target', 'attr', 'link', 'tag')
 _TRANSLATABLE_ATTR_RE = re.compile(r'\b(alt|title|aria-label)="[^"]*"')
-NUMBER_RE = re.compile(r'(?<![\w.])\d+(?:[.,]\d+)*(?![\w])')
+# A number is not part of an identifier ("3D", "F1", "x2"): no Latin, Greek or
+# Cyrillic letter, digit or underscore next to it. Scripts without spaces attach
+# counters and particles to digits ("5개", "3つ", "第2"), so those letters may.
+_NUM_WORD = r'0-9A-Za-z_\u00c0-\u024f\u0370-\u03ff\u0400-\u04ff\u1e00-\u1eff'
+NUMBER_RE = re.compile(rf'(?<![{_NUM_WORD}.])\d+(?:[.,]\d+)*(?![{_NUM_WORD}])')
 BIDI_RE = re.compile('[‎‏‪-‮⁦-⁩؜]')
 
 

@@ -64,6 +64,16 @@ class TestCheck(unittest.TestCase):
         _, w = self.check('高速です。', en)
         self.assertTrue(any(x.startswith('numbers not found') for x in w))
 
+    def test_numbers_with_counters(self):
+        # digits joined to Korean/Japanese counters are still the same numbers
+        self.assertEqual(self.check('크기 3의 커널을 9단계에 걸쳐 적용합니다.', 'Kernels of size 3 over 9 steps.'),
+                         ([], []))
+        self.assertEqual(self.check('3つのチャネルと 2 個のカーネル。', 'Use 3 channels and 2 kernels.'),
+                         ([], []))
+        # ...but an identifier like 3D or F1 is still not a number
+        self.assertEqual(self.check('3D 畳み込みと F1 スコア。', '3D convolutions and the F1 score.'),
+                         ([], []))
+
     def test_forbidden(self):
         en = 'Let $x$ be 2.'
         self.assertIn('bidi control character', self.check('‏$x$ を 2 とします。', en)[0])
@@ -90,6 +100,18 @@ class TestCheck(unittest.TestCase):
             tr = pseudo(kind, en)
             self.assertIn('⟦', tr)
             self.assertEqual(check_block(kind, en, tr), ([], []), (kind, tr))
+
+
+class GlossaryPresenceTest(unittest.TestCase):
+    def test_inflection_and_line_breaks(self):
+        from l10n.glossary import _present
+        self.assertTrue(_present('champ récepteur', 'les champs récepteurs'))
+        self.assertTrue(_present('matriz', 'producto de matrices'))
+        self.assertTrue(_present('descenso de gradiente', ' '.join('el descenso de\ngradiente'.split())))
+        self.assertTrue(_present('katman', 'gizli katmanları'))
+        self.assertTrue(_present('卷积', '卷积层'))
+        self.assertFalse(_present('loi normale', 'une loi uniforme'))
+        self.assertFalse(_present('red', 'una capa'))
 
 
 if __name__ == '__main__':

@@ -1,11 +1,11 @@
 {
-  "concepts": 1190,
+  "concepts": 1191,
   "locales": {
     "zh-Hans": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_d2l": 267,
-        "proposed": 885,
+        "proposed": 886,
         "verified_external": 38
       },
       "by_topic": {
@@ -126,6 +126,9 @@
           "verified_d2l": 17,
           "proposed": 17
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -158,11 +161,11 @@
       }
     },
     "ja": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 159,
         "verified_d2l": 159,
-        "proposed": 872
+        "proposed": 873
       },
       "by_topic": {
         "attention": {
@@ -286,6 +289,9 @@
           "verified_d2l": 7,
           "proposed": 21
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -320,11 +326,11 @@
       }
     },
     "ko": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 98,
         "verified_d2l": 160,
-        "proposed": 932
+        "proposed": 933
       },
       "by_topic": {
         "attention": {
@@ -447,6 +453,9 @@
           "verified_d2l": 12,
           "proposed": 17
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -481,10 +490,10 @@
       }
     },
     "es": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 76,
-        "proposed": 1114
+        "proposed": 1115
       },
       "by_topic": {
         "attention": {
@@ -585,6 +594,9 @@
           "proposed": 32,
           "verified_external": 4
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -614,11 +626,11 @@
       }
     },
     "ar": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 78,
         "verified_d2l": 89,
-        "proposed": 1023
+        "proposed": 1024
       },
       "by_topic": {
         "attention": {
@@ -735,6 +747,9 @@
           "proposed": 27,
           "verified_external": 3
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -769,11 +784,11 @@
       }
     },
     "pt-BR": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_d2l": 14,
         "verified_external": 79,
-        "proposed": 1097
+        "proposed": 1098
       },
       "by_topic": {
         "attention": {
@@ -880,6 +895,9 @@
           "verified_external": 3,
           "verified_d2l": 1
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -911,11 +929,11 @@
       }
     },
     "vi": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_d2l": 180,
         "verified_external": 75,
-        "proposed": 932,
+        "proposed": 933,
         "invariant": 3
       },
       "by_topic": {
@@ -1040,6 +1058,9 @@
           "verified_external": 3,
           "proposed": 21
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -1075,10 +1096,10 @@
       }
     },
     "fr": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 106,
-        "proposed": 1084
+        "proposed": 1085
       },
       "by_topic": {
         "attention": {
@@ -1180,6 +1201,9 @@
           "proposed": 27,
           "verified_external": 9
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -1209,10 +1233,10 @@
       }
     },
     "hi": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 49,
-        "proposed": 1141
+        "proposed": 1142
       },
       "by_topic": {
         "attention": {
@@ -1311,6 +1335,9 @@
           "verified_external": 3,
           "proposed": 33
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -1339,9 +1366,9 @@
       }
     },
     "tr": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
-        "proposed": 961,
+        "proposed": 962,
         "verified_d2l": 140,
         "verified_external": 89
       },
@@ -1462,6 +1489,9 @@
           "proposed": 20,
           "verified_external": 4
         },
+        "probability": {
+          "proposed": 1
+        },
         "probability and statistics": {
           "proposed": 1
         },
@@ -1496,10 +1526,10 @@
       }
     },
     "de": {
-      "total": 1190,
+      "total": 1191,
       "statuses": {
         "verified_external": 81,
-        "proposed": 1099,
+        "proposed": 1100,
         "verified_d2l": 10
       },
       "by_topic": {
@@ -1606,6 +1636,9 @@
           "proposed": 29,
           "verified_external": 2,
           "verified_d2l": 5
+        },
+        "probability": {
+          "proposed": 1
         },
         "probability and statistics": {
           "proposed": 1

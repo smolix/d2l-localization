@@ -73,6 +73,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | covariance | التغاير | verified_d2l | covariance: A measure of how two random variables vary together. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117) |
 | correlation | الارتباط | verified_external | correlation: A normalized measure of association between variables. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L252) |
 | Gaussian distribution | التوزيع الغاوسي | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. |  |
+| normal distribution | التوزيع الطبيعي | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
 | Bernoulli distribution | توزيع برنولي | verified_d2l | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=52) |
 | Poisson distribution | توزيع بواسون | verified_d2l | poisson-distribution: A discrete distribution often used to model event counts. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=138) |
 | Bayes' theorem | مبرهنة بايز | proposed | bayes-theorem: A rule relating conditional probabilities through prior and evidence. |  |

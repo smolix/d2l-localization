@@ -73,6 +73,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | covariance | सहप्रसरण | proposed | covariance: A measure of how two random variables vary together. |  |
 | correlation | सहसंबंध | proposed | correlation: A normalized measure of association between variables. |  |
 | Gaussian distribution | गाउसियन वितरण | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. |  |
+| normal distribution | प्रसामान्य बंटन | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
 | Bernoulli distribution | बर्नूली वितरण | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. |  |
 | Poisson distribution | पॉइसन वितरण | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
 | Bayes' theorem | बेज़ प्रमेय | proposed | bayes-theorem: A rule relating conditional probabilities through prior and evidence. |  |

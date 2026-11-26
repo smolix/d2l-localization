@@ -73,6 +73,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | covariance | hiệp phương sai | verified_external | covariance: A measure of how two random variables vary together. | east-stanford-vi-cs-229-probability-md: page |
 | correlation | tương quan | proposed | correlation: A normalized measure of association between variables. |  |
 | Gaussian distribution | phân phối Gauss | verified_external | gaussian-distribution: A continuous distribution characterized by a mean and variance. | review-vi-aaa69b5fd9: page |
+| normal distribution | phân phối chuẩn | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
 | Bernoulli distribution | phân phối Bernoulli | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. |  |
 | Poisson distribution | phân phối Poisson | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
 | Bayes' theorem | định lý Bayes | proposed | bayes-theorem: A rule relating conditional probabilities through prior and evidence. |  |
