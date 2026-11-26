@@ -838,3 +838,132 @@
 ## chapter_computational-performance/fast-transformer.md#u02 (Codex Astra (medium), 2026-11-26)
 
 - „model FLOPs utilization“ → „Auslastung durch Modell-FLOPs“ (MFU).
+
+## chapter_reinforcement-learning/mdp.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „start-state distribution“ → „Verteilung der Startzustände“, „state augmentation“ → „Zustandserweiterung“.
+- „reward shaping“ → „Belohnungsformung“, „verifier“ → „Prüfprogramm“.
+- „termination“ → „Terminierung“, „truncation“ → „Abbruch“ im Kontext einer vorzeitig beendeten Aufzeichnung.
+
+## chapter_reinforcement-learning/mdp.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „belief state“ → „Informationszustand“, „absorbing state“ → „absorbierender Zustand“.
+
+## chapter_reinforcement-learning/mdp.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „approach bonus“ → „Annäherungsbonus“.
+
+## chapter_reinforcement-learning/mdp.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „hedge“ → „Ausweichantwort“, wenn eine Antwort alle möglichen Lösungen nennt.
+
+## chapter_reinforcement-learning/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „optimal control“ → „optimale Regelung“, „linear-quadratic regulator“ → „linear-quadratischer Regler“, „receding-horizon model predictive control“ → „modellprädiktive Regelung mit gleitendem Horizont“.
+- „action value“ → „Aktionswert“, „value methods“ → „wertbasierte Verfahren“, „policy methods“ → „strategiebasierte Verfahren“.
+- „verifier“ → „Prüfprogramm“ bei der automatischen Bewertung einer generierten Antwort.
+
+## chapter_reinforcement-learning/value-iter.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „backup“ → „das Backup“, „sampled backup“ → „stichprobenbasiertes Backup“.
+- „calm ice“ → „griffiges Eis“, „slippery ice“ → „rutschiges Eis“, „cell“ → „Feld“ auf der Karte.
+- „approach bonus“ → „Annäherungsbonus“, „Bellman expectation equation“ → „Bellman-Erwartungswertgleichung“.
+
+## chapter_reinforcement-learning/value-iter.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „sweep“ → „Durchlauf“, „sup norm“ → „Supremumsnorm“, „stopping certificate“ → „beobachtbare Fehlerschranke“ als Abbruchkriterium.
+- „uniform policy“ → „Gleichverteilungsstrategie“.
+
+## chapter_reinforcement-learning/value-iter.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „kernel“ im Übergangsmodell eines MDP → „Übergangskern“.
+- „generalized policy iteration“ → „verallgemeinerte Strategieiteration“.
+
+## chapter_reinforcement-learning/value-iter.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „reward shaping“ → „Belohnungsgestaltung“, „potential-based shaping“ → „potentialbasierte Belohnungsgestaltung“.
+
+## chapter_reinforcement-learning/exploration.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „pull“ → „Zug“, „pull an arm“ → „an einem Arm ziehen“.
+- „annealed rule“ → „Regel mit abklingender Explorationsrate“.
+- „Thompson sampling“ → „Thompson-Sampling“.
+
+## chapter_reinforcement-learning/exploration.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „count-based bonus“ → „Bonus nach Besuchszahl“ für Zustand-Aktion-Paare.
+
+## chapter_reinforcement-learning/qlearning.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „backup“ → „das Backup“, „sampled backup“ → „Backup aus einem Sample“.
+- „semi-gradient step“ → „Semigradientenschritt“, „double-sampling problem“ → „Problem des doppelten Samplings“.
+- „maximization bias“ → „Maximierungsverzerrung“, „certainty equivalence“ → „Sicherheitsäquivalenz“.
+
+## chapter_reinforcement-learning/qlearning.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „seed“ → „Zufallsstartwert“ bei wiederholten Trainingsläufen.
+
+## chapter_reinforcement-learning/imitation.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „compounding error“ → „Fehlerakkumulation“, „sampling clone“ → „Klon mit Sampling“, „learner“ → „lernender Agent“.
+
+## chapter_reinforcement-learning/imitation.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „imitation learning“ → „Imitationslernen“, „on-policy distillation“ → „On-Policy-Destillation“.
+
+## chapter_reinforcement-learning/optimal-control.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „cost-to-go“ → „Restkosten“, „stage cost“ → „Stufenkosten“, „control effort“ → „Stellaufwand“, „control input“ → „Stellgröße“.
+- „certainty equivalence“ → „Sicherheitsäquivalenz“, „plant“ → „Regelstrecke“, „double integrator“ → „Doppelintegrator“.
+- „linear system“ → „lineares System“, wenn ein dynamisches System gemeint ist.
+
+## chapter_reinforcement-learning/optimal-control.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „nominal trajectory“ → „nominelle Trajektorie“, „forward rollout“ → „Vorwärtssimulation“, „swing-up“ → „Aufschwingen“ oder „Aufschwung“.
+- „open-loop execution“ → „Steuerung ohne Rückführung“, „basin of attraction“ → „Einzugsgebiet“, „energy pumping“ → „gezielte Energiezufuhr“.
+
+## chapter_reinforcement-learning/optimal-control.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „tracking“ → „Bahnfolgeregelung“ für die Regelung entlang einer vorgegebenen Trajektorie, „warm start“ → „Initialisierung mit dem bisherigen Plan“ im MPC-Kontext.
+
+## chapter_reinforcement-learning/optimal-control.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „controllability matrix“ → „Steuerbarkeitsmatrix“, „costate“ → „Kozustand“, „adjoint“ → „adjungierte Variable“.
+
+## chapter_reinforcement-learning/policy-gradient.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „preference“ → „Präferenz“, „log-derivative trick“ → „Trick mit der logarithmischen Ableitung“.
+
+## chapter_reinforcement-learning/policy-gradient.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „surrogate loss“ → „Ersatzverlust“, „state occupancy“ → „Zustandsbelegung“.
+
+## chapter_reinforcement-learning/baselines.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „baseline“ → „die Baseline“, „probe policy“ → „Teststrategie“, „score“ → „Score“ für den Gradienten der Log-Wahrscheinlichkeit.
+
+## chapter_reinforcement-learning/baselines.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „leave-one-out baseline“ → „Leave-one-out-Baseline“, „group centering“ → „Gruppenzentrierung“.
+
+## chapter_reinforcement-learning/baselines.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „value baseline“ → „Wert-Baseline“, „step length“ → „Schrittlänge“ für die gemessene Länge des Parameterschritts.
+
+## chapter_deep-reinforcement-learning/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „replay buffer“ → „Replay-Puffer“, „world model“ → „Weltmodell“, „policy gradient“ → „Strategiegradient“.
+- „rollout“ → „Trajektorie“ für die aufgezeichnete Folge von Interaktionen, „simulierte Trajektorie“ bei Planung im Modell.
+- „deadly triad“ → „tödliche Triade“, „twin critics“ → „zwei Kritiker“.
+
+## chapter_reinforcement-learning/deep-rl.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „tangent kernel“ → „Tangentenkernel“, „policy network“ → „Strategienetz“, „value network“ → „Wertnetz“.
+
+## chapter_reinforcement-learning/deep-rl.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „Gaussian policy“ → „Gauß-Strategie“, „pathwise gradient“ → „pfadweiser Gradient“, „score-function estimator“ → „Score-Funktionsschätzer“.
+
+## chapter_reinforcement-learning/deep-rl.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „deadly triad“ → „tödliche Triade“.
