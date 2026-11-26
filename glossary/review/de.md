@@ -1,0 +1,64 @@
+# German (de) glossary review
+
+Reviewed 2026-11-26 against `glossary/terms/de.jsonl` (1,184 concepts: 14 `verified_d2l`, 60 `verified_external`, 1,110 `proposed`). Corrections: `glossary/review/de-corrections.jsonl` (130 lines). Scope: all 74 verified entries, all 244 proposed entries with frequency ≥ 50, and roughly 700 of the remaining 866 proposed entries (read in frequency order; the lowest-frequency tail of about 150 was not read).
+
+## Verdict
+
+The glossary is usable as a starting point but not as an authority. The mathematics and statistics vocabulary (linear algebra, calculus, probability, optimization, information theory) is almost entirely correct standard German. The problems sit in three places: the "verified" tiers, which rest on machine-translated or weak sources; the deep-learning loanword layer, where no policy was applied and the same English head word is rendered two or three ways; and a handful of real sense errors.
+
+| Tier | Entries | I would change | Of those wrong sense / MT calque / non-standard |
+|---|---|---|---|
+| `verified_d2l` | 14 | 4 | 2 (`training` = *Ausbildung*; *Automatische Differenzierung*) |
+| `verified_external` | 60 | 18 | 9 |
+| `proposed`, frequency ≥ 50 | 244 | 25 | 11 |
+| `proposed`, rest (about 700 read) | 866 | 83 | 23 |
+
+By severity over all 130 corrections: wrong_sense 11, calque_or_mt 11, non_standard 23, inconsistent 51, minor 34. Eighteen corrections cite a source that uses the term in this sense and are marked `verified_external`; the other 112 remain `proposed`.
+
+The single worst entry is `training` → *Ausbildung* (3,550 occurrences, status `verified_d2l`). Next: `gpu` → *Grafikprozessor* (1,195), `critic-generative` → *Kritiker-generativ* (the concept ID leaked into the term, 1,037), `posterior` → *A-posteriori-Wahrscheinlichkeit* (a probability, not the distribution, 640), `rectified-linear-unit` → *Gleichgerichtete lineare Einheit* (562), `sampling` → *Stichprobenziehung* (565), `momentum` → *Impuls* (332), `stride` = `step-size` = *Schrittweite* (326 + 318), `long-short-term-memory` → *Langzeit-Kurzzeit-Gedächtnis* (misparses the name), `trust-region` → *Vertrauensbereich* (means confidence region).
+
+## Provenance
+
+**`verified_d2l` (14 entries, plus 123 `proposed` entries citing the same source).** The source is `d2l-ai/d2l-de` at commit `c4b458f`. Its `config.ini` declares `lang = de`, `origin_lang = en`, `translator = aws`: it is Amazon Translate output, the same pipeline as the Japanese edition. The repository has 15 commits, all by one author over two days (2020-07-17/18, "init commit" … "until mlp"), covers 31 chapter files up to the MLP chapter, and was never published (`de.d2l.ai` does not resolve). There is no sign of human post-editing: the text contains *Chargengröße* for batch size, *Verschwindende Farbverläufe* for vanishing gradients, *Gelenkwahrscheinlichkeit* for joint probability, and the heading *Ausbildung* for "Training" directly above a sentence that says "um das Modell zu trainieren". `DISCOVERY.md` describes this prose as "genuinely German"; that line should be corrected. The earlier audit (notes/ar-tr-de.md) already demoted four such renderings, but *Ausbildung* survived. Ten of the 14 entries are correct anyway (Wahrscheinlichkeit, Satz von Bayes, Überlauf, …) because they are ordinary mathematical German, not because the source is reliable. Recommendation: treat `d2l-de-source` as "attested in machine translation" and give it no verifying weight; relabel the ten correct entries only after a native check.
+
+**`verified_external` (60 entries), three sources of very different weight.**
+- *Google ML Glossary, German topic pages* (38 entries): machine-translated (`x-mtfrom-en`; a fetch of the `?hl=de` URL today returned the English page). It carries Google's localisation habits: *Ebene* for layer (*versteckte Ebene*, *Einbettungsebene*), untranslated *Dataset* and *Feature* (*Validierungs-Dataset*, *Featurevektor*), and descriptive paraphrases (*Vorzeitiges Beenden*, *Lernen im Kontext*). One entry (`implicit-bias`) cites the responsible-AI page, which defines human cognitive bias, not the optimizer's implicit bias. Ten of the 38 need changing (one of them, *neuronales Netzwerk*, only for consistency).
+- *KIT bachelor-thesis appendix* (14 entries): a student's two-page word list, not an edited glossary. It supplies *Testsfehlerrate* (malformed), *Trainingsfehlerrate*, *Reduktion von Dimensionen*, *binäre Klassifizierung* next to *Klassifikation*. Six of 14 need changing.
+- *Amidi CS 229/230 sheets* (8 entries): anonymous community translation that also contains *Aussetzen* for dropout, *Bündelnormalisierung* for batch normalization and *Verzerrung* for a layer's bias. The eight entries taken from it are acceptable except *Maximum-Likelihood-Schätzung* for the estimator; *Fehlerrückführung* is a policy question (below).
+
+None of the three is a German textbook or course. I checked against German Wikipedia articles (Künstliches neuronales Netz, Bestärkendes Lernen, Convolutional Neural Network, Transformer, Long short-term memory, Beurteilung eines binären Klassifikators, Automatisches Differenzieren, Verzerrung einer Schätzfunktion, Wahrscheinlichkeitsfunktion, Trust-Region-Verfahren, Gradientenverfahren, Gleitkommazahl, Transinformation); URLs are in the corrections file. I did not obtain a German textbook (e.g. the mitp translation of Goodfellow et al.) and recommend the native reviewer check the loanword decisions below against one.
+
+## Systematic problems
+
+1. **No loanword policy.** English and German forms alternate for the same head word: *Attention* / *Mehrkopf-Attention* vs. *Selbstaufmerksamkeit* / *Kreuzaufmerksamkeit* / *Aufmerksamkeitsscore*; *Kernel* vs. *Kerngröße* / *Kernfunktion* / *Kernelmatrix*; *Impuls* vs. *Heavy-Ball-Momentum*; *Strategie* vs. *Policy-Gradient* / *Proximale Policy-Optimierung*; *Abfrage* vs. *Query-Kopf*; *Überanpassung* vs. *Adaptives Overfitting*; *Faltung* vs. *Strided Convolution* / *Dilated Convolution*; *Verstärkendes Lernen* vs. *Offline Reinforcement Learning*; *Netz* vs. *Netzwerk*; *Parallelität* vs. *-parallelismus*; *Teilwort* vs. *Subwort-*.
+2. **Sense collisions.** `stride` and `step-size` are both *Schrittweite*; `recall` and `hit-rate` are both *Trefferquote*; `maximum-likelihood-estimator` and `-estimation` are both *Maximum-Likelihood-Schätzung*; `posterior` and `posterior-probability` overlap; *Stichprobe* is used for generated samples (*Stichprobenqualität*, *Saubere Stichprobe*); *Planung* is used for both planning and scheduling; *Präzision* is used for the metric and for floating-point formats (German: *doppelte Genauigkeit*). Bias: both senses are *Bias*; statistics German has *Verzerrung*, which separates them.
+3. **Calques and invented compounds:** *Gleichgerichtete lineare Einheit*, *Faltungsneuronales Netz*, *Vollfaltungsnetz*, *Dichtescore-Funktion*, *Wahrscheinlichkeitsmassenfunktion*, *Vereinigungsabschätzung*, *Zufallsweg*, *Grundwahrheit*, *Rückwärtszeit-SDE*, *Posteriorer Mittelwert*, *Rechengebunden*, *Generalisiertes lineares Modell* (mathematical "generalized" is *verallgemeinert*).
+4. **Missing head concepts.** The concept list has no entry for `sample`, `loss`, `score`, `temperature`, `batch`, `advantage`, `cost`, `average` although compounds of each exist (Stichproben-/Sample-, -verlust, Score-, Softmax-Temperatur, Batchgröße, Vorteilsschätzung). The collision check in the brief cannot be closed for these until the heads are added; from the compounds, loss = *Verlust*, batch = *Batch*, score (density) = *Score*, advantage = *Vorteil* are consistent.
+5. **Form conventions.**
+   - *Capitalisation:* about 320 proposed headwords capitalise a leading adjective (*Stochastischer Gradientenabstieg*, *Positiv definit*, *Orthogonal*), while the externally sourced ones do not (*neuronales Netz*, *überwachtes Lernen*). Headwords should be lemmas as they appear mid-sentence: nouns capitalised, adjectives lower-case. This is a mechanical fix and is not itemised in the corrections file.
+   - *Hyphenation:* English noun+noun loans are sometimes hyphenated (*Gibbs-Sampling*, *Max-Pooling*, *Zero-Padding*), sometimes not (*Score Matching*, *Label Smoothing*, *Importance Sampling*, *Teacher Forcing*). Hyphenate them; leave adjective+noun names open (*Deep Learning*, *Soft Actor-Critic*). Loan+German compounds: closed when the loan is assimilated (*Batchgröße*, *Tokenhäufigkeit*), hyphenated otherwise (*Attention-Gewicht*, *Pooling-Schicht*).
+   - *k/c:* *Kodierung* and *Codierung* both occur; pick one.
+   - *Markow/Markov:* the glossary uses the Duden/Wikipedia transliteration *Markow* throughout, which is consistent; ML literature mostly writes *Markov*. Author decision.
+   - *Gender* is not recorded. Entries imply neuter Token and Dropout (*Maskiertes Token*, *Invertiertes Dropout*), which is right. Add a gender field; suggested: das Token (plural *die Token*), das Embedding, der Prompt, der Batch, das Label, der Bias, das Dropout, das Padding, das Pooling, das Sampling, das Sample, der Stride, das Momentum, der Kernel, die Attention, das Fine-Tuning, der Score, das Logit, der Encoder, der Transformer, der Checkpoint, die Pipeline, der Cache.
+6. **Latin-script names** are handled correctly (Adam, AdamW, BERT, DDPM, RMSProp, Mamba, Muon). Exceptions: *Grafikprozessor* for GPU, the translated LSTM, half-translated method names (*Proximale Policy-Optimierung*, *Gruppierte Query-Attention*, *Kontinuierliches Bag-of-Words*, *Rotierende Positionseinbettung*).
+
+## Recommended policy
+
+Use the German term wherever mathematics, statistics or computer-science teaching has an established one, and the English loan (capitalised, with gender, hyphenated in compounds) where German practice has none or only a calque. Under this rule:
+
+- **German:** Schicht, Gewicht, Faltung, Merkmal, Verlust(funktion), Lernrate, Gradientenabstieg, Überanpassung, Regularisierung, Einbettung, Zustand, Aktion, Belohnung, Strategie, Erwartungswert, Verzerrung (statistical), Schrittweite (step size), Datensatz, Genauigkeit.
+- **English loan:** Dropout, Batch/Minibatch, Token, Prompt, Padding, Pooling, Stride, Momentum, Attention, Transformer, Encoder/Decoder, Sampling/Sample (generative), Logit, Softmax, ReLU, Bias (layer), Checkpoint, Fine-Tuning, Backpropagation, Early Stopping, Ground Truth, Beam-Search, and all algorithm names and acronyms.
+
+## Decisions for the author or a native reviewer
+
+1. **Attention vs. Aufmerksamkeit.** I recommend *Attention* in every compound (*Self-Attention*, *Cross-Attention*, *Multi-Head-Attention*). German Wikipedia uses *Aufmerksamkeit* / *Selbst-Aufmerksamkeit*; either is defensible, mixing is not.
+2. **Einbettung vs. Embedding.** The glossary is consistently *Einbettung* (Wikipedia: *Worteinbettung*); practitioners say *Embedding*. Keep *Einbettung* with *Embedding* as alternative, or switch all 12 compounds.
+3. **Backpropagation vs. Fehlerrückführung**, **Fine-Tuning vs. Feinabstimmung**, **Early Stopping**, **Q-Lernen vs. Q-Learning** (Wikipedia's RL article and the Amidi sheet say *Q-Lernen*; I left it).
+4. **Kern vs. Kernel.** Proposed: *Kern* for mathematical kernels (convolution, covariance, transition), *Kernel* for GPU kernels.
+5. **Query/Key/Value.** *Abfrage / Schlüssel / Wert* is attested (Wikipedia: *Abfragevektor*, *Schlüsselvektor*, *Wertevektor*) and kept; method names keep English (*Multi-Query-Attention*, *KV-Cache*). Alternative: *Anfrage* instead of *Abfrage*, which avoids the database connotation.
+6. **RL return.** *Ertrag* is used consistently. Wikipedia says *Gewinn*; many texts keep *Return*. Needs a native RL reader.
+7. **Policy.** *Strategie* for the concept (Wikipedia, Amidi), English in fixed names (*Policy-Gradient*, *On-/Off-Policy*, *Proximal Policy Optimization*). Confirm.
+8. **bestärkendes vs. verstärkendes Lernen**; **hidden = versteckt / verborgen / verdeckt** (one adjective for layer, state, unit); **Markow vs. Markov**; **Kodierung vs. Codierung**.
+9. **Precision / accuracy.** The glossary has accuracy = *Genauigkeit*, precision = *Präzision*, recall = *Trefferquote*. Note that German Wikipedia uses *Genauigkeit* for precision and *Korrektklassifikationsrate* for accuracy; the glossary's choice matches ML practice but should be defined at first use.
+10. **Schedules** (*Lernratenplan*, *Rauschplan*, *Varianzplan*): consistent but unusual; alternatives are *-Schedule* or *-schema*.
+11. **Coinages without German precedent:** *Residualstrom*, *Induktionskopf*, *-Schaltkreis* (mechanistic interpretability), *Rauschkugel*, *rechen-/speicherbegrenzt* (roofline), *Verhaltensklonen*, *Gewichtszerfall* vs. *Weight Decay*, *Flaschenhals* vs. *Bottleneck-Block*, *Form* for tensor shape, *Spann* vs. *lineare Hülle*, *Partitionsfunktion* vs. *Zustandssumme*, gate names (*Gatter*; Wikipedia: *Tor*).
