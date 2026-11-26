@@ -1,0 +1,21 @@
+# Notes on chapter_mdl-information-theory/mdl-test-functions-transport.md#u01 (Codex Astra (medium), 2026-11-26 23:18 UTC)
+
+- ea07253b: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- f7bcd665: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- e9f8e003: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- abaae335: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- fdf78b6e: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- 4a747d74: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- bcfb3752: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- df6f7e84: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- 62baba5f: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- be67b4bd: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- d095fa0e: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- ad70793a: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- 06acf4a4: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- 51730f41: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- 7fe823e5: „Kernel“ bezeichnet hier einen mathematischen Kernel. Der Glossartreffer „Faltungskern“ betrifft Faltungsschichten.
+- 4a747d74: „bias … upward“ ist ein Verb und mit „nach oben verzerren“ wiedergegeben.
+- 55ce74ed: „bias … upward“ bezeichnet eine Verzerrung nach oben und ist verbal übersetzt.
+- 472e7d9a: Die geschützte Formel nennt nur die Steigungen ±1. Wo beide Verteilungsfunktionen übereinstimmen, ist auch Steigung null zulässig.
+- e2ae02c7: Linear mit dem Abstand wachsen kann die Testfunktion, nicht die Steigungsschranke selbst.

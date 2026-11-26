@@ -1745,3 +1745,98 @@
 ## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u04 (Codex Astra (medium), 2026-11-26)
 
 - „temperature scaling“ → „Temperaturskalierung“, „duplicated evidence“ → „mehrfach gezählte Hinweise“.
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „self-information“ → „Informationsgehalt“, synonym mit „Überraschungswert“ (surprisal).
+- „dyadic source“ → „dyadische Quelle“, „Gibbs' inequality“ → „Gibbs-Ungleichung“.
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „proper scoring rule“ → „echte Bewertungsregel“, „strictly proper“ → „streng echt“, „log score“ → „logarithmischer Score“.
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „log-loss“ → „logarithmischer Verlust“, „counting model“ → „Zählmodell“, „symbol code“ → „Symbolcode“ und „codeword“ → „Codewort“.
+- „Shannon lengths“ → „Shannon-Längen“, „Kraft budget“ → „Kraft-Budget“ und „uniquely decodable“ → „eindeutig dekodierbar“.
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „stream code“ → „Stromcode“, „prequential code“ → „präquenzieller Code“.
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „asymptotic equipartition property“ → „asymptotische Gleichverteilungseigenschaft (AEP)“, „typical set“ → „typische Menge“.
+
+## chapter_mdl-information-theory/mdl-divergences-distances.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „divergence function“ → „Divergenzfunktion“, „squared Hellinger“ → „quadrierter Hellinger-Abstand“.
+
+## chapter_mdl-information-theory/mdl-divergences-distances.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „critic bound“ → „Kritikerschranke“ für die vom Kritiker gelieferte untere Schranke.
+
+## chapter_mdl-information-theory/mdl-scores.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „mixing weight“ → „Mischungsgewicht“, „score field“ → „Score-Feld“.
+
+## chapter_mdl-information-theory/mdl-scores.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „Stein operator“ → „Stein-Operator“, „Stein kernel“ → „Stein-Kernel“, „kernel Stein discrepancy“ → „Kernel-Stein-Diskrepanz“.
+
+## chapter_mdl-information-theory/mdl-test-functions-transport.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „mean feature“ → „mittlerer Merkmalsvektor“, „mean embedding“ → „Mittelwerteinbettung“.
+- „auditor“ in der Analogie für Testfunktionen → „Prüfer“.
+
+## chapter_mdl-information-theory/mdl-test-functions-transport.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „transport plan“ → „Transportplan“, „monotone quantile coupling“ → „monotone Quantilkopplung“, „entropic cost“ → „entropische Kosten“.
+
+## chapter_mdl-information-theory/further-reading.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „bits-back coding“ → „Bits-Back-Kodierung“, „temperature scaling“ → „Temperaturskalierung“, „two-part code“ → „zweiteiliger Code“.
+
+## chapter_mdl-information-theory/further-reading.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „differential privacy“ → „differentieller Datenschutz“, „sliced Wasserstein distance“ → „Sliced-Wasserstein-Abstand“, „Stein variational gradient descent“ → „variationeller Gradientenabstieg nach Stein“.
+
+## chapter_mdl-information-theory/further-reading.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „entropy model“ → „Entropiemodell“, „factor graph“ → „Faktorgraph“.
+
+## chapter_mdl-dynamics/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „probability current“ → „Wahrscheinlichkeitsstrom“, „adjoint state“ → „adjungierter Zustand“.
+- „quadratic variation“ → „quadratische Variation“, „stochastic calculus“ → „stochastische Analysis“.
+- „solver“ → „numerisches Verfahren“, bei benannten Verfahren etwa „Runge-Kutta-Verfahren“.
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „flipped bit“ → „gekipptes Bit“, „flip probability“ → „Kippwahrscheinlichkeit“.
+- „pointwise mutual information“ → „punktweise gegenseitige Information“ (PMI).
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „loss certificate“ → „Informationsnachweis durch den Verlust“, „usable information“ → „nutzbare Information“.
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „rate–distortion function“ → „Rate-Verzerrungs-Funktion“, „binary symmetric channel“ → „binärer symmetrischer Kanal“.
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u04 (Codex Astra (medium), 2026-11-26)
+
+- „variational information bottleneck“ → „variationeller Informationsflaschenhals“ (VIB), „operating point“ → „Arbeitspunkt“.
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u05 (Codex Astra (medium), 2026-11-26)
+
+- „interaction information“ → „Interaktionsinformation“, „binary erasure channel“ → „binärer Auslöschungskanal“.
+
+## chapter_mdl-information-theory/mdl-mi-estimation.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „pointwise mutual information“ → „punktweise gegenseitige Information“ (PMI), „mismatched pairs“ → „neu zusammengestellte Paare“, „histogram bin“ → „Histogrammklasse“.
+- „bound slack“ → „Abstand der Schranke (zum wahren Wert)“.
+
+## chapter_mdl-information-theory/mdl-mi-estimation.md#u03 (Codex Astra (medium), 2026-11-26)
+
+- „starved batch“ → „Batch ohne seltenes Paar“, „hit batch“ → „Batch mit Treffer“.
