@@ -19,7 +19,7 @@ large run.
 | [ru-conv-layer](ru-conv-layer/) | Русский (ru) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26 (new glossary); awaiting a native reader; see [RESULTS.md](ru-conv-layer/RESULTS.md) |
 | [el-conv-layer](el-conv-layer/) | Ελληνικά (el) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26 (new glossary); awaiting a native reader; see [RESULTS.md](el-conv-layer/RESULTS.md) |
 | [ja-conv-layer](ja-conv-layer/) | Japanese (ja) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](ja-conv-layer/RESULTS.md) |
-| [de-conv-layer](de-conv-layer/) | German (de) | Convolutions for Images (`chapter_convolutional-neural-networks/conv-layer.md`, 3 units, about 4,200 words) | Fable 5.2 chosen (author, 2026-11-26); see [RESULTS.md](de-conv-layer/RESULTS.md) |
+| [de-conv-layer](de-conv-layer/) | German (de) | Convolutions for Images (`chapter_convolutional-neural-networks/conv-layer.md`, 3 units, about 4,200 words) | Codex GPT-6.2 Astra chosen for the German translation; Fable 5.2 was the best of the Claude models (author, 2026-11-26); see [RESULTS.md](de-conv-layer/RESULTS.md) |
 
 ## Running a test with another agent
 

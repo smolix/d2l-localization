@@ -105,3 +105,7 @@ Among the three Gemini models, `carbon` writes the cleanest, most idiomatic
 textbook German and adheres most faithfully to `de/style.md` (with `neon` a fast
 runner-up aside from its four-part `Faltungskern-` compounds). Native-speaker
 verdict pending.
+
+## Decision
+
+**Translator for German (Alex Smola, 2026-11-26):** Codex GPT-6.2 Astra (`translator` in `languages.yml`). Among the Claude models Fable 5.2 was best.
