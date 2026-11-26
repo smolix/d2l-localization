@@ -17,3 +17,18 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Fable flagged the proposed 순방향 패스 (forward pass) as less usual than 순전파.
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `4fafcb0`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 3 | 3,937 (0.93) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 4 | 3,880 (0.91) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 3,691 (0.87) |
+
+The native-reader verdict is pending.
