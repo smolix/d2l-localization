@@ -27,3 +27,34 @@ commit `83260ff`.
 
 **Verdict (Alex Smola, native speaker):** Fable 5.2 writes the best German of the
 three. It is the translator for German (`translator` in `languages.yml`).
+
+## 2026-11-26: Astra, Sol and Terra
+
+Each model ran once in a fresh session at medium effort with the same prompt and
+pinned work files. All three completed 144 blocks. Counts are from
+`l10n compare` against the pinned English revision with the checker at
+`8f8980e`, before any German book translations were installed.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [Astra](answers-astra/) | `gpt-6.2-astra` | 0 | 1 | 4,488 (1.06) |
+| [Sol](answers-sol/) | `gpt-6.2-sol` | 0 | 1 | 4,500 (1.06) |
+| [Terra](answers-terra/) | `gpt-6.1-terra` | 0 | 9 | 4,196 (0.99) |
+
+- All three have the same false match in the linked English book title in
+  `6ab5b67c`. Terra also uses four compounds with *Kern*, writes a slide's
+  `4` as *vier*, and reorders math tokens in three blocks. The formulas in
+  those blocks are intact.
+- Astra and Sol both break up dense explanations effectively. In the *im2col*
+  derivation (`5bdffcd7`), Astra makes the two vectors in the dot product
+  explicit. Sol spells out that libraries use this algorithm alongside other
+  methods, preserving a nuance in the source.
+- The checker misses some issues visible in a side-by-side reading. Sol drops
+  the colon that introduces the display equation in `ae7e906d`. In the summary
+  (`92688a0c`), Terra's wording obscures that the layer **adds** the bias, and
+  its last exercise contains the ungrammatical *die automatisches
+  Differenzieren* (`6ab5b67c`).
+
+The side-by-side sample suggests reading Astra and Sol against Fable first. It
+covered the introduction, math-heavy explanations, captions, a slide and its
+list, and exercises. Native-speaker verdict pending.

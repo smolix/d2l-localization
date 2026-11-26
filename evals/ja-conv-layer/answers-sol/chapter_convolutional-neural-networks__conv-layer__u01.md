@@ -1,0 +1,476 @@
+<!--unit:chapter_convolutional-neural-networks/conv-layer.md#u01 lang=ja rev=370f7b3a15d0557b44a27c52e06ab7f5b30584e1-->
+
+<!--en:33d3b96b kind=heading-->
+# Convolutions for Images
+<!--tr:33d3b96b-->
+# 画像の畳み込み
+
+<!--en:852f5868 kind=paragraph-->
+In :numref:`sec_why-conv`, we derived the convolutional layer on paper from two
+geometric principles: translation equivariance and locality. Now we see what
+that formula actually computes on an image, and whether gradient descent can
+discover useful kernels automatically from data.
+<!--tr:852f5868-->
+:numref:`sec_why-conv` では、平行移動同変性（translation equivariance）と局所性（locality）という 2 つの幾何学的な原理から畳み込み層（convolutional layer）の式を導きました。ここでは、その式が画像に対して実際に何を計算するのか、また、勾配降下法（gradient descent）がデータから有用なカーネルを自動で見つけられるのかを確かめます。
+
+<!--en:55f0a41b kind=paragraph-->
+Consider locating vertical edges where a bright region meets a dark one.
+Subtracting each pixel's right-hand neighbor ($[\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$)
+yields zero inside uniform regions, $+1$ where white transitions to black, and
+$-1$ where black returns to white. Sweeping the two-weight detector $(1, -1)$
+across every valid image location produces an *edge map*. In this section, we
+implement two-dimensional cross-correlation, test our hand-crafted edge
+detector, let gradient descent *learn* $(1, -1)$ directly from data, show how
+a convolution becomes a single matrix multiplication (*im2col*), and
+derive how stacking layers widens a unit's receptive field.
+<!--tr:55f0a41b-->
+明るい領域と暗い領域の境目にある縦方向のエッジを見つけることを考えましょう。各ピクセルの値から右隣の値を引くと（$[\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$）、明るさが一様な領域では 0、白から黒に変わるところでは $+1$、黒から白に戻るところでは $-1$ になります。2 つの重み $(1, -1)$ を持つこの検出器を画像内の適用可能な位置すべてにわたって動かすと、*エッジマップ*が得られます。本節では、2 次元の相互相関（cross-correlation）を実装し、手作りのエッジ検出器を試します。次に、勾配降下法でデータから直接 $(1, -1)$ を*学習*させます。続いて、畳み込み（convolution）を 1 回の行列積（matrix multiplication）で計算する方法（*im2col*）を示します。最後に、層を重ねるとユニットの受容野（receptive field）がどう広がるかを導きます。
+
+<!--en:47958ed8 kind=heading-->
+## Cross-Correlation
+<!--tr:47958ed8-->
+## 相互相関
+
+<!--en:5e4296fe kind=heading-->
+### The Operation
+<!--tr:5e4296fe-->
+### 相互相関の演算
+
+<!--en:ae7e906d kind=paragraph-->
+Leaving channels aside for the moment, let the input $\mathbf{X}$ be an
+$n_\textrm{h} \times n_\textrm{w}$ matrix and the kernel $\mathbf{K}$ be a
+$k_\textrm{h} \times k_\textrm{w}$ matrix. The kernel defines a sliding
+*window* of shape $k_\textrm{h} \times k_\textrm{w}$. Placing the window's
+upper-left corner at $(i, j)$, we multiply the covered input patch elementwise
+with $\mathbf{K}$ and sum the products to produce the output entry at $(i, j)$:
+<!--tr:ae7e906d-->
+ひとまずチャネルは考えず、入力 $\mathbf{X}$ を $n_\textrm{h} \times n_\textrm{w}$ の行列、カーネル $\mathbf{K}$ を $k_\textrm{h} \times k_\textrm{w}$ の行列とします。カーネルを移動させると、その位置に形状 $k_\textrm{h} \times k_\textrm{w}$ の*ウィンドウ*が定まります。ウィンドウの左上隅を $(i, j)$ に置き、その範囲の入力パッチと $\mathbf{K}$ の対応する要素どうしを掛け合わせます。積の総和が位置 $(i, j)$ の出力になります。
+
+<!--en:3688b38b kind=paragraph-->
+This is the *two-dimensional cross-correlation* of $\mathbf{X}$ with
+$\mathbf{K}$, written $\mathbf{Y} = \mathbf{X} \star \mathbf{K}$ with
+zero-based indices matching code. Whereas :numref:`sec_why-conv` centered
+offsets symmetrically from $-\Delta$ to $\Delta$, anchoring at the upper-left
+corner differs only by a fixed shift of $\Delta$ while naturally handling
+even-sized kernels (such as a $2 \times 2$ kernel or our $1 \times 2$ edge
+detector) that have no center pixel.
+<!--tr:3688b38b-->
+これが*2 次元の相互相関*です。$\mathbf{X}$ と $\mathbf{K}$ の相互相関を $\mathbf{Y} = \mathbf{X} \star \mathbf{K}$ と書き、添字はコードと同じく 0 から始めます。:numref:`sec_why-conv` では、オフセットを $-\Delta$ から $\Delta$ まで中心の両側に対称に取りました。左上隅を基準にする場合との違いは、基準位置が一定量 $\Delta$ だけずれることです。左上隅を基準にすれば、$2 \times 2$ のカーネルや先ほどの $1 \times 2$ のエッジ検出器のように、サイズが偶数で中心ピクセルがない場合も同じように扱えます。
+
+<!--en:fa1b7da9 kind=caption-->
+![Two-dimensional cross-correlation. The shaded portions are the first output element and the input and kernel elements used to compute it: $0\times0+1\times1+3\times2+4\times3=19$.](../img/correlation.svg)
+<!--tr:fa1b7da9-->
+![2 次元の相互相関。網掛けは、最初の出力要素と、その計算に使う入力およびカーネルの要素を示す。計算結果は $0\times0+1\times1+3\times2+4\times3=19$。](../img/correlation.svg)
+
+<!--en:2f8e5deb kind=paragraph-->
+In :numref:`fig_correlation`, we slide a $2 \times 2$ kernel across a
+$3 \times 3$ input one pixel at a time, left to right and top to bottom. The
+window fits cleanly at four positions, yielding the $2 \times 2$ output:
+<!--tr:2f8e5deb-->
+:numref:`fig_correlation` では、$2 \times 2$ のカーネルを $3 \times 3$ の入力上で、左から右、上から下へ 1 ピクセルずつ動かします。ウィンドウ全体が入力内に収まる位置は 4 つあり、$2 \times 2$ の出力が得られます。
+
+<!--en:4741e012 kind=paragraph-->
+Notice that the output shrinks slightly along each axis because the kernel must
+stay wholly inside the input. Fitting a width-$k$ window into length $n$ leaves
+$n - k + 1$ valid positions, so the output shape is
+<!--tr:4741e012-->
+カーネル全体が入力内に収まる必要があるため、出力は各軸で少し小さくなります。幅 $k$ のウィンドウを長さ $n$ の範囲に収められる位置は $n - k + 1$ 個なので、出力の形状は次のようになります。
+
+<!--en:12d81c14 kind=paragraph-->
+Thus a $3 \times 3$ input with a $2 \times 2$ kernel yields $2 \times 2$, a
+$6 \times 8$ image with a $1 \times 2$ kernel yields $6 \times 7$, and a
+$28 \times 28$ Fashion-MNIST image with a $5 \times 5$ kernel yields
+$24 \times 24$. Whenever we want to preserve spatial dimensions, we surround the
+input with a border of zeros (*padding*), which we examine alongside strides and
+dilation in :numref:`sec_padding`.
+<!--tr:12d81c14-->
+したがって、$3 \times 3$ の入力に $2 \times 2$ のカーネルを適用すると出力は $2 \times 2$ になります。同様に、$6 \times 8$ の画像に $1 \times 2$ のカーネルを適用すると $6 \times 7$ に、$28 \times 28$ の Fashion-MNIST 画像に $5 \times 5$ のカーネルを適用すると $24 \times 24$ になります。縦横のサイズを保ちたい場合は、入力の周囲を 0 で埋めます（*パディング*）。これについては、ストライドやダイレーションとあわせて :numref:`sec_padding` で説明します。
+
+<!--en:869d223f kind=heading-->
+### Implementation
+<!--tr:869d223f-->
+### 実装
+
+<!--en:6a869f7c kind=paragraph-->
+We implement :eqref:`eq_corr2d` directly in `corr2d` using a pair of loops over
+every output coordinate.
+<!--tr:6a869f7c-->
+:eqref:`eq_corr2d` をそのまま `corr2d` に実装し、二重ループで出力の全座標を走査します。
+
+<!--en:81e1f383 kind=paragraph-->
+To verify `corr2d` against our hand calculation in :numref:`fig_correlation`,
+we construct the $3 \times 3$ input tensor `X` and $2 \times 2$ kernel `K` and
+evaluate `corr2d(X, K)`.
+<!--tr:81e1f383-->
+`corr2d` の結果が :numref:`fig_correlation` の手計算と一致するか確かめます。$3 \times 3$ の入力テンソル `X` と $2 \times 2$ のカーネル `K` を作り、`corr2d(X, K)` を計算します。
+
+<!--en:f567e1b2 kind=paragraph-->
+The output reproduces :numref:`fig_correlation` entry for entry (and as shown in
+:numref:`sec_why-conv`, strict mathematical convolution with a flipped kernel
+$\mathbf{K}'$ learns the exact same family of layers, so we follow standard
+deep learning terminology and call cross-correlation "convolution").
+<!--tr:f567e1b2-->
+出力の各要素は :numref:`fig_correlation` と一致します。なお、:numref:`sec_why-conv` で見たように、反転したカーネル $\mathbf{K}'$ を用いる数学的な意味での畳み込みでも、学習できる層の集合はまったく同じです。そのため、本書でも深層学習（deep learning）の慣例に従い、相互相関を「畳み込み」と呼びます。
+
+<!--en:bfe11c62 kind=heading-->
+## Convolutional Layers
+<!--tr:bfe11c62-->
+## 畳み込み層
+
+<!--en:2cdc020d kind=heading-->
+### The Layer
+<!--tr:2cdc020d-->
+### 畳み込み層の構成
+
+<!--en:c6371ece kind=paragraph-->
+A two-dimensional convolutional layer cross-correlates its input with a learned
+kernel and adds a scalar bias. Just like our MLP weights in
+:numref:`chap_perceptrons`, we initialize the kernel from
+$\mathcal{N}(0, 0.01^2)$ and the bias to zero. Below, `Conv2D` registers both
+parameters and invokes `corr2d` in its forward pass; a layer with a kernel of
+height $h$ and width $w$ is called an $h \times w$ convolutional layer.
+<!--tr:c6371ece-->
+2 次元の畳み込み層では、入力と学習したカーネルの相互相関を求め、スカラーのバイアスを加えます。多層パーセプトロン（multilayer perceptron、MLP）の重み（weight）を :numref:`chap_perceptrons` で初期化したときと同様に、カーネルの初期値は $\mathcal{N}(0, 0.01^2)$ からサンプリングし、バイアスの初期値は 0 とします。以下の `Conv2D` は両方をパラメータとして登録し、順伝播（forward pass）で `corr2d` を呼び出します。カーネルの高さが $h$、幅が $w$ の層を $h \times w$ の畳み込み層と呼びます。
+
+<!--en:29cd9061 kind=paragraph-->
+Unlike a dense layer, a convolutional layer is not locked to a fixed input
+resolution because its parameters depend only on the kernel size. The exact same
+$2 \times 2$ layer (5 parameters total) processes both our $3 \times 3$ tensor
+`X` and a $6 \times 8$ image, returning outputs of shapes $2 \times 2$ and
+$5 \times 7$:
+<!--tr:29cd9061-->
+畳み込み層のパラメータはカーネルサイズだけで決まるため、全結合層（dense layer）とは異なり、入力の解像度を固定する必要がありません。まったく同じ $2 \times 2$ の層（パラメータは計 5 個）で、$3 \times 3$ のテンソル `X` と $6 \times 8$ の画像を処理できます。出力の形状はそれぞれ $2 \times 2$ と $5 \times 7$ です。
+
+<!--en:c9e5aa07 kind=heading-->
+### Edge Detection
+<!--tr:c9e5aa07-->
+### エッジ検出
+
+<!--en:3d9a357b kind=paragraph-->
+We now test the vertical edge detector from the introduction on a
+$6 \times 8$ synthetic image whose middle four columns are black (`0`) and outer
+columns are white (`1`).
+<!--tr:3d9a357b-->
+ここで、冒頭の縦方向のエッジ検出器を $6 \times 8$ の合成画像で試します。中央の 4 列は黒（`0`）、その両側の列は白（`1`）です。
+
+<!--en:68513ff0 kind=paragraph-->
+We define the $1 \times 2$ kernel
+<!--tr:68513ff0-->
+$1 \times 2$ のカーネルを次のように定義します。
+
+<!--en:eb45803b kind=paragraph-->
+At every position $(i, j)$, this computes the horizontal *finite difference*
+$[\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$, a discrete approximation (up to sign)
+of the horizontal derivative of brightness, which vanishes across flat regions
+and spikes wherever intensity jumps.
+<!--tr:eb45803b-->
+このカーネルは各位置 $(i, j)$ で横方向の*有限差分*（finite difference）$[\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$ を計算します。これは明るさの横方向の導関数（derivative）を、符号の違いを除いて離散的に近似したものです。明るさが一定の領域では 0 になり、明るさが急に変わるところでは絶対値が大きくなります。
+
+<!--en:e810b3a9 kind=paragraph-->
+Cross-correlating the $6 \times 8$ stripe image `X` with the $1 \times 2$
+horizontal-difference kernel `K` via `corr2d(X, K)` produces the $6 \times 7$
+edge map `Y`:
+<!--tr:e810b3a9-->
+$6 \times 8$ の縞模様の画像 `X` と、$1 \times 2$ の横方向の差分カーネル `K` の相互相関を `corr2d(X, K)` で求めると、$6 \times 7$ のエッジマップ `Y` が得られます。
+
+<!--en:568358e4 kind=paragraph-->
+Sure enough, `Y` fires `+1` along the white-to-black boundary, `-1` along the
+black-to-white boundary, and `0` everywhere else. Applying the exact same kernel
+to the transposed image (turning the vertical stripe into a horizontal one)
+yields all zeros:
+<!--tr:568358e4-->
+予想どおり、`Y` は白から黒に変わる境界で `+1`、黒から白に変わる境界で `-1`、それ以外では `0` です。画像を転置して縦縞を横縞に変え、まったく同じカーネルを適用すると、出力はすべて 0 になります。
+
+<!--en:71c591a4 kind=paragraph-->
+Clearly `[1, -1]` responds strictly to vertical edges. Detecting horizontal
+edges, diagonals, corners, or textures requires different kernels altogether.
+<!--tr:71c591a4-->
+このように、`[1, -1]` が反応するのは縦方向のエッジだけです。横方向や斜め方向のエッジ、角、テクスチャを検出するには、別のカーネルが必要です。
+
+<!--en:f0af4887 kind=heading-->
+### Learning a Kernel
+<!--tr:f0af4887-->
+### カーネルの学習
+
+<!--en:61cacfaf kind=paragraph-->
+Hand-crafting `[1, -1]` is easy when we know the exact feature we want, yet no
+engineer can specify thousands of intermediate filters across a deep network by
+hand. Can gradient descent recover the kernel `[1, -1]` from the input–output
+pair `(X, Y)` alone? We test this using each framework's built-in 2D
+convolutional layer (with bias omitted and weights initialized from
+$\mathcal{N}(0, 0.01^2)$), minimizing squared error summed across all 42 output
+entries over 10 gradient steps at learning rate $0.03$. Because built-in layers
+expect 4D tensors including batch and channel axes (:numref:`sec_channels`), we
+reshape `X` and `Y` accordingly.
+<!--tr:61cacfaf-->
+検出したい特徴がはっきりしていれば、`[1, -1]` を手で設計するのは簡単です。しかし、深いネットワークの中間層にある何千ものフィルタを手作業で指定することはできません。勾配降下法でカーネル `[1, -1]` を入出力の組 `(X, Y)` だけから復元できるでしょうか。各フレームワークに組み込まれた 2 次元の畳み込み層を使って試します。バイアスは使わず、重みは $\mathcal{N}(0, 0.01^2)$ から初期化し、出力の全 42 要素にわたる二乗誤差（squared error）の和を、学習率（learning rate）$0.03$ の勾配降下法で 10 ステップかけて最小化します。組み込みの層はバッチ軸とチャネル軸を含む 4 次元のテンソルを受け取るため（:numref:`sec_channels`）、それに合わせて `X` と `Y` の形状を変えます。
+
+<!--en:c29c5d61 kind=paragraph-->
+Initially the loss sits near 12 (the near-zero random kernel misses all 12
+$\pm 1$ edge pixels by roughly 1), and within just nine steps it drops below
+0.01. Inspecting the learned kernel confirms what it found:
+<!--tr:c29c5d61-->
+初期の損失（loss）は約 12 です。ランダムに初期化したカーネルの重みがほぼ 0 で、正解が $\pm 1$ のエッジピクセル 12 個すべてで、予測が約 1 ずれるためです。わずか 9 ステップで損失は 0.01 未満に下がります。学習したカーネルの値も確かめてみましょう。
+
+<!--en:67d25b0b kind=paragraph-->
+Both entries land within roughly 0.02 of `[1, -1]`. Nothing in this loop knew
+anything about edges: given a loss signal, gradient descent discovered the
+filter on its own. Here we supervised the single layer directly with `Y`; in a
+deep CNN, backpropagation learns every layer's kernels end to end from the final
+task loss alone.
+<!--tr:67d25b0b-->
+2 つの要素はどちらも、`[1, -1]` の対応する値との差が約 0.02 以内に収まります。学習ループにはエッジに関する知識を組み込んでいません。勾配降下法は損失を手がかりにフィルタを自力で見つけました。ここでは 1 つの層に `Y` を直接教師信号として与えました。深い畳み込みニューラルネットワーク（convolutional neural network、CNN）では、最終タスクの損失だけを使い、誤差逆伝播法（backpropagation）によって全層のカーネルをエンドツーエンドで学習します。
+
+<!--en:91b0010d kind=slide_text-->
+Convolutions for Images<br>**2D cross-correlation · edge detection · learned kernels · im2col · receptive fields**
+<!--tr:91b0010d-->
+画像の畳み込み<br>**2 次元の相互相関・エッジ検出・カーネルの学習・im2col・受容野**
+
+<!--en:1d94295a kind=slide_title-->
+::: {.slide title="Detecting Local Edges Across an Image"}
+<!--tr:1d94295a-->
+::: {.slide title="画像全体にわたる局所エッジの検出"}
+
+<!--en:687ed302 kind=kicker-->
+[Motivation & Core Mental Model]{.kicker}
+<!--tr:687ed302-->
+[エッジ検出の動機と基本原理]{.kicker}
+
+<!--en:05fceed0 kind=slide_text-->
+- **Synthetic $6 \times 8$ test image:** White outer columns (`1`) surrounding a 4-column black vertical band (`0`).
+<!--tr:05fceed0-->
+- **合成画像 $6 \times 8$：**両側の白い列（`1`）に挟まれた幅 4 列の黒い縦帯（`0`）
+
+<!--en:71e700b3 kind=slide_text-->
+- **Horizontal finite difference:** Sweeping $\mathbf{K} = [1, -1]$ computes $[\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$, firing `+1` at white-to-black and `-1` at black-to-white edges.
+<!--tr:71e700b3-->
+- **横方向の有限差分：**$\mathbf{K} = [1, -1]$ を動かすと $[\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$ が求まり、白から黒の境界で `+1`、黒から白の境界で `-1`
+
+<!--en:957dc033 kind=slide_text-->
+- **Learning vs. hand-crafting:** Deep CNNs discover thousands of such kernels automatically via gradient descent.
+<!--tr:957dc033-->
+- **学習と手作業による設計：**深い CNN は勾配降下法でこのようなカーネルを数千個、自動で学習
+
+<!--en:cb1045e1 kind=slide_title-->
+::: {.slide title="The 2D Cross-Correlation Operation"}
+<!--tr:cb1045e1-->
+::: {.slide title="2 次元の相互相関"}
+
+<!--en:17bcece5 kind=kicker-->
+[Sliding-Window Inner Products]{.kicker}
+<!--tr:17bcece5-->
+[ウィンドウをずらしながら求める内積]{.kicker}
+
+<!--en:8d45aae8 kind=slide_text-->
+Given an $n_\textrm{h} \times n_\textrm{w}$ input matrix $\mathbf{X}$ and a $k_\textrm{h} \times k_\textrm{w}$ kernel $\mathbf{K}$, the 2D cross-correlation $\mathbf{Y} = \mathbf{X} \star \mathbf{K}$ places the window's top-left corner at $(i, j)$ and sums elementwise products:
+<!--tr:8d45aae8-->
+サイズ $n_\textrm{h} \times n_\textrm{w}$ の入力行列 $\mathbf{X}$ と、サイズ $k_\textrm{h} \times k_\textrm{w}$ のカーネル $\mathbf{K}$ に対し、2 次元の相互相関 $\mathbf{Y} = \mathbf{X} \star \mathbf{K}$ は、ウィンドウの左上隅を $(i, j)$ に置き、対応する要素どうしの積を合計する。
+
+<!--en:e484380c kind=slide_text-->
+- **Top-left anchor:** Zero-based indices $a, b \ge 0$ match array indexing in code and handle even-sized kernels (like $2 \times 2$ or $1 \times 2$) cleanly.
+<!--tr:e484380c-->
+- **左上隅を基準に：**添字 $a, b \ge 0$ はコードの配列と同じく 0 から始まるため、$2 \times 2$ や $1 \times 2$ のようにサイズが偶数のカーネルも自然に扱える
+
+<!--en:137c0980 kind=slide_text-->
+- **Shaded top-left output $(0,0)$:**
+  $0\cdot 0 + 1\cdot 1 + 3\cdot 2 + 4\cdot 3 = 19$.
+<!--tr:137c0980-->
+- **左上の網掛けの出力 $(0,0)$：**
+  $0\cdot 0 + 1\cdot 1 + 3\cdot 2 + 4\cdot 3 = 19$
+
+<!--en:575c4aea kind=slide_title-->
+::: {.slide title="Valid Window Positions and Output Spatial Shape"}
+<!--tr:575c4aea-->
+::: {.slide title="ウィンドウを置ける位置と出力の縦横サイズ"}
+
+<!--en:7eda4531 kind=kicker-->
+[Why Unpadded Convolutions Shrink the Grid]{.kicker}
+<!--tr:7eda4531-->
+[パディングなしの畳み込みで縦横が縮む理由]{.kicker}
+
+<!--en:891243ae kind=slide_text-->
+- **Valid window placements:** A $k_\textrm{h} \times k_\textrm{w}$ window fits inside an $n_\textrm{h} \times n_\textrm{w}$ grid at $n - k + 1$ positions per axis.
+<!--tr:891243ae-->
+- **ウィンドウを置ける位置：**$k_\textrm{h} \times k_\textrm{w}$ のウィンドウが $n_\textrm{h} \times n_\textrm{w}$ の格子内に収まる位置は各軸に $n - k + 1$ 個
+
+<!--en:55cc8c32 kind=slide_text-->
+- **Shape examples:** $3 \times 3 \star 2 \times 2 \to 2 \times 2$ ($19, 25, 37, 43$); $28 \times 28 \star 5 \times 5 \to 24 \times 24$.
+<!--tr:55cc8c32-->
+- **形状の例：**$3 \times 3 \star 2 \times 2 \to 2 \times 2$（$19, 25, 37, 43$）、$28 \times 28 \star 5 \times 5 \to 24 \times 24$
+
+<!--en:1e3463da kind=slide_title-->
+::: {.slide title="Implementing 2D Cross-Correlation in Code"}
+<!--tr:1e3463da-->
+::: {.slide title="2 次元の相互相関の実装"}
+
+<!--en:07566992 kind=kicker-->
+[Direct Nested-Loop Implementation]{.kicker}
+<!--tr:07566992-->
+[二重ループによる直接実装]{.kicker}
+
+<!--en:202aa5d3 kind=slide_text-->
+The function `corr2d` allocates the $(n_\textrm{h} - k_\textrm{h} + 1) \times (n_\textrm{w} - k_\textrm{w} + 1)$ output tensor and computes each entry as the sum of `X[i:i+h, j:j+w] * K`:
+<!--tr:202aa5d3-->
+関数 `corr2d` は $(n_\textrm{h} - k_\textrm{h} + 1) \times (n_\textrm{w} - k_\textrm{w} + 1)$ の出力テンソルを確保し、各要素を `X[i:i+h, j:j+w] * K` の総和として計算する。
+
+<!--en:bef130ba kind=slide_text-->
+Each iteration slices a $k_\textrm{h} \times k_\textrm{w}$ sub-window of `X`, multiplies elementwise with `K`, and reduces via `sum`.
+<!--tr:bef130ba-->
+各反復では、$k_\textrm{h} \times k_\textrm{w}$ の範囲を `X` から切り出し、`K` と要素ごとに掛け合わせ、その積を `sum` で合計する。
+
+<!--en:4ee9f6b1 kind=slide_title-->
+::: {.slide title="Verifying corr2d and the Flipped-Kernel Equivalence"}
+<!--tr:4ee9f6b1-->
+::: {.slide title="corr2d の検証と反転カーネルによる等価性"}
+
+<!--en:2b0be423 kind=kicker-->
+[Cross-Correlation vs. Mathematical Convolution]{.kicker}
+<!--tr:2b0be423-->
+[相互相関と数学的な畳み込み]{.kicker}
+
+<!--en:74b9b745 kind=slide_text-->
+- **180° flipped kernel $\mathbf{K}'$:** Cross-correlating with $\mathbf{K}$ equals convolving with $[\mathbf{K}']_{a,b} = [\mathbf{K}]_{-a,-b}$.
+<!--tr:74b9b745-->
+- **180° 回転させたカーネル $\mathbf{K}'$：**$\mathbf{K}$ との相互相関は $[\mathbf{K}']_{a,b} = [\mathbf{K}]_{-a,-b}$ を使った畳み込みと等価
+
+<!--en:5c8af7cd kind=slide_text-->
+- **Identical learned class:** Frameworks compute cross-correlation and call it convolution.
+<!--tr:5c8af7cd-->
+- **学習できる層の集合は同じ：**フレームワークでは相互相関を計算し、それを畳み込みと呼ぶ
+
+<!--en:a69e29b5 kind=slide_title-->
+::: {.slide title="Building a 2D Convolutional Layer Module"}
+<!--tr:a69e29b5-->
+::: {.slide title="2 次元の畳み込み層モジュールの実装"}
+
+<!--en:55763603 kind=kicker-->
+[Learnable Kernel Weights Plus Scalar Bias]{.kicker}
+<!--tr:55763603-->
+[学習可能なカーネルの重みとスカラーのバイアス]{.kicker}
+
+<!--en:5b8bad24 kind=slide_text-->
+A convolutional layer wraps `corr2d` with a learnable $k_\textrm{h} \times k_\textrm{w}$ weight parameter (initialized from $\mathcal{N}(0, 0.01^2)$) and a scalar bias (initialized to $0$):
+<!--tr:5b8bad24-->
+畳み込み層では `corr2d` に、学習可能な $k_\textrm{h} \times k_\textrm{w}$ の重みパラメータ（$\mathcal{N}(0, 0.01^2)$ から初期化）とスカラーのバイアス（$0$ に初期化）を組み合わせる。
+
+<!--en:c16d97d6 kind=slide_title-->
+::: {.slide title="Resolution Independence of Convolutional Layers"}
+<!--tr:c16d97d6-->
+::: {.slide title="入力の解像度に依存しない畳み込み層"}
+
+<!--en:a7d1e48f kind=kicker-->
+[Fixed Parameters Across Arbitrary Input Sizes]{.kicker}
+<!--tr:a7d1e48f-->
+[入力サイズが変わっても同じパラメータ]{.kicker}
+
+<!--en:53a2bce7 kind=slide_text-->
+- **Decoupled from $H \times W$:** The exact same 5 parameters ($2 \times 2$ kernel + 1 bias) process $3 \times 3$, $6 \times 8$, or megapixel inputs without reshaping weights.
+<!--tr:53a2bce7-->
+- **入力の縦横 $H \times W$ には依存しない：**同じ 5 個のパラメータ（$2 \times 2$ のカーネルとバイアス 1 個）で、$3 \times 3$、$6 \times 8$、メガピクセル級の入力を重みの形状を変えずに処理
+
+<!--en:017fec24 kind=slide_title-->
+::: {.slide title="Constructing a Synthetic Vertical-Edge Image"}
+<!--tr:017fec24-->
+::: {.slide title="縦方向のエッジを持つ合成画像の作成"}
+
+<!--en:896e641c kind=kicker-->
+[A 6×8 Binary Test Pattern]{.kicker}
+<!--tr:896e641c-->
+[6×8 の二値テストパターン]{.kicker}
+
+<!--en:0a4b456b kind=slide_text-->
+We construct the $6 \times 8$ test image `X` with ones on the left and right borders and zeros across the middle four columns (`X[:, 2:6] = 0`):
+<!--tr:0a4b456b-->
+$6 \times 8$ のテスト画像 `X` を用意し、左右の端を 1、中央の 4 列を 0 にする（`X[:, 2:6] = 0`）。
+
+<!--en:dfc7e3e3 kind=slide_text-->
+- **Piecewise-constant columns:** Intensity is constant (`1` or `0`) within columns $0\text{--}1$, $2\text{--}5$, and $6\text{--}7$, jumping only between columns $1 \to 2$ and $5 \to 6$.
+<!--tr:dfc7e3e3-->
+- **列を区切ると明るさは一定：**明るさ（`1` または `0`）は $0\text{--}1$、$2\text{--}5$、$6\text{--}7$ 列の各範囲で一定で、変化するのは $1 \to 2$ 列と $5 \to 6$ 列の境界だけ
+
+<!--en:3ce31cbe kind=slide_title-->
+::: {.slide title="Applying the Horizontal Finite-Difference Kernel"}
+<!--tr:3ce31cbe-->
+::: {.slide title="横方向の有限差分カーネルの適用"}
+
+<!--en:b37a1029 kind=kicker-->
+[Detecting Vertical Edges with K = [1, -1]]{.kicker}
+<!--tr:b37a1029-->
+[K = [1, -1] による縦方向のエッジ検出]{.kicker}
+
+<!--en:9be85019 kind=slide_text-->
+Cross-correlating `X` with the $1 \times 2$ kernel $\mathbf{K} = \begin{bmatrix} 1 & -1 \end{bmatrix}$ computes $[\mathbf{Y}]_{i,j} = [\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$ at every horizontal pair:
+<!--tr:9be85019-->
+`X` と $1 \times 2$ のカーネル $\mathbf{K} = \begin{bmatrix} 1 & -1 \end{bmatrix}$ の相互相関を取ると、横に隣り合うすべての組について $[\mathbf{Y}]_{i,j} = [\mathbf{X}]_{i,j} - [\mathbf{X}]_{i,j+1}$ が求まる。
+
+<!--en:f649cfae kind=slide_text-->
+- **Signed edge map:** Column 1 fires `+1` (white-to-black transition), column 5 fires `-1` (black-to-white transition), and all constant interior columns evaluate to `0`.
+<!--tr:f649cfae-->
+- **符号付きエッジマップ：**列番号 1 で `+1`（白から黒）、列番号 5 で `-1`（黒から白）、明るさが変わらない範囲の列では `0`
+
+<!--en:e6d155be kind=slide_title-->
+::: {.slide title="Orientation Selectivity of Edge Kernels"}
+<!--tr:e6d155be-->
+::: {.slide title="エッジ検出カーネルの方向選択性"}
+
+<!--en:b525cde4 kind=kicker-->
+[Why One Kernel Cannot Detect All Orientations]{.kicker}
+<!--tr:b525cde4-->
+[1 つのカーネルで全方向を検出できない理由]{.kicker}
+
+<!--en:38159de6 kind=slide_text-->
+- **Blind to horizontal edges:** Transposing `X` (`X.T`) makes horizontal neighbors identical, so $[1, -1]$ outputs all zeros.
+<!--tr:38159de6-->
+- **横方向のエッジに反応しない：**`X` を転置（`X.T`）すると横に隣り合う値が等しくなるため、$[1, -1]$ の出力はすべて 0
+
+<!--en:f0f30f76 kind=slide_text-->
+- **Filter banks (§{sec_channels}):** Vision layers learn parallel channels for horizontal, vertical, and diagonal orientations.
+<!--tr:f0f30f76-->
+- **フィルタバンク（§{sec_channels}）：**画像処理の層では、横・縦・斜め方向に対応するチャネルを並列に学習
+
+<!--en:b755e31b kind=slide_title-->
+::: {.slide title="Learning an Edge Detector via Gradient Descent"}
+<!--tr:b755e31b-->
+::: {.slide title="勾配降下法によるエッジ検出器の学習"}
+
+<!--en:86bbeea7 kind=kicker-->
+[Supervising a Built-In Convolutional Layer on (X, Y)]{.kicker}
+<!--tr:86bbeea7-->
+[(X, Y) を使った組み込みの畳み込み層の教師あり学習]{.kicker}
+
+<!--en:a569780c kind=slide_text-->
+- **4D framework tensors:** Reshape `X` and `Y` to 4D tensors (one example, one channel) and minimize $\mathcal{L} = \|\hat{\mathbf{Y}} - \mathbf{Y}\|_2^2$ at $\eta = 0.03$.
+<!--tr:a569780c-->
+- **フレームワークの 4 次元テンソル：**`X` と `Y` を 4 次元（データ例 1 個、チャネル 1 個）に整形し、$\mathcal{L} = \|\hat{\mathbf{Y}} - \mathbf{Y}\|_2^2$ を学習率 $\eta = 0.03$ で最小化
+
+<!--en:2489ce6e kind=slide_title-->
+::: {.slide title="Inspecting the Learned Kernel Weights"}
+<!--tr:2489ce6e-->
+::: {.slide title="学習したカーネルの重みの確認"}
+
+<!--en:7e4ef44b kind=kicker-->
+[Why Initial Loss Is 12 and Converges to [1, -1]]{.kicker}
+<!--tr:7e4ef44b-->
+[初期損失が 12 になる理由と重みの [1, -1] への収束]{.kicker}
+
+<!--en:9cd1c645 kind=slide_text-->
+- **Why loss starts at $12.0$:** Near-zero weights predict $\hat{Y} \approx 0$, missing the twelve $\pm 1$ edge pixels in `Y` ($12 \times 1^2 = 12$).
+<!--tr:9cd1c645-->
+- **初期損失が $12.0$ になる理由：**重みはほぼ 0 なので予測は $\hat{Y} \approx 0$ となり、正解が $\pm 1$ である `Y` のエッジピクセル 12 個をすべて見逃す（$12 \times 1^2 = 12$）
+
+<!--en:456670c5 kind=slide_text-->
+- **Convergence in 9 steps:** SGD recovers $[0.99, -0.99]$ automatically from data.
+<!--tr:456670c5-->
+- **9 ステップで収束：**勾配降下法がデータから $[0.99, -0.99]$ を自動で復元
+
+=== DECISIONS ===
+- "locality" → 「局所性」 and "offset" (spatial displacement) → 「オフセット」.
+- "edge map" → 「エッジマップ」, "edge detector" → 「エッジ検出器」, and "unit" (network element) → 「ユニット」.
+- "window" → 「ウィンドウ」, "patch" → 「パッチ」, and "valid window" → 「入力内に収まるウィンドウ」.
+- "dense layer" → 「全結合層」 when referring to the usual unstructured layer. Use 「全結合層」 for "fully connected layer" as well.
+- "spatial dimensions" → 「縦横のサイズ」 for 2D image axes.
+- "end to end" → 「エンドツーエンドで」.
+=== NOTES ===
+- 957dc033: CNN is the acronym prescribed by the style guide after the full term is introduced in 67d25b0b. The glossary warning is a false positive.
+- 7e4ef44b: The kicker makes the loss appear to converge to a pair of weights. The translation makes the weights the thing that converges to [1, -1].
+- 456670c5: The training loop uses deterministic gradient descent on a fixed input–output pair with all 42 outputs, so the slide's “SGD” is rendered as 勾配降下法.

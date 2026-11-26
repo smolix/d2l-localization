@@ -1,0 +1,167 @@
+<!--unit:chapter_convolutional-neural-networks/conv-layer.md#u03 lang=ja rev=370f7b3a15d0557b44a27c52e06ab7f5b30584e1-->
+
+<!--en:2294243a kind=heading-->
+## Exercises
+<!--tr:2294243a-->
+## 演習問題
+
+<!--en:6f4ddec6 kind=exercise-->
+1. [code] **Hand-designed kernels.** Design some kernels manually.
+    1. Given a directional vector $\mathbf{v} = (v_1, v_2)$, derive an
+       edge-detection kernel that detects edges orthogonal to $\mathbf{v}$,
+       i.e., edges in the direction $(v_2, -v_1)$.
+    1. Derive a finite difference operator for the second derivative.
+       Which structures in images respond most strongly to it?
+    1. What is the minimum size of a kernel to obtain a derivative of
+       order $d$?
+    1. How would you design a blur kernel? Why might you want to use such
+       a kernel?
+    1. Load a photograph, convert it to one channel, and downsample it to
+       about $100 \times 100$ pixels (`corr2d` loops in Python). Apply the
+       edge detector, the blur kernel, and the sharpening kernel "twice
+       the identity minus the blur", and display each result next to the
+       original. What does the edge map of a photograph show that the
+       edge map of the black band could not?
+
+    *Adapted from Stanford CS231n,
+    [Assignment 2](https://cs231n.github.io/assignments2024/assignment2/),
+    ConvolutionalNetworks notebook.*
+<!--tr:6f4ddec6-->
+1. [code] **手作りのカーネル。**カーネルをいくつか手で設計してください。
+    1. 方向ベクトル $\mathbf{v} = (v_1, v_2)$ が与えられたとき、$\mathbf{v}$ に直交するエッジ、すなわち $(v_2, -v_1)$ の方向のエッジを検出するカーネルを導出してください。
+    1. 2 階導関数の有限差分演算子を導出してください。画像のどのような構造がこれに最も強く反応しますか。
+    1. $d$ 階導関数を得るためのカーネルの最小サイズはいくつですか。
+    1. ぼかしカーネルをどのように設計しますか。なぜそのようなカーネルを使うのでしょうか。
+    1. 写真を読み込み、1 チャネルに変換し、約 $100 \times 100$ ピクセルにダウンサンプリングしてください（`corr2d` は Python でループします）。エッジ検出器、ぼかしカーネル、「恒等写像の 2 倍からぼかしを引いた」鮮鋭化カーネルを適用し、それぞれの結果を元の画像の隣に表示してください。写真のエッジマップには、黒い帯のエッジマップでは見られなかった何が示されますか。
+
+    *Stanford CS231n、[Assignment 2](https://cs231n.github.io/assignments2024/assignment2/) の ConvolutionalNetworks ノートブックを改変。*
+
+<!--en:ec8621f8 kind=exercise-->
+2. [code] **Convolution as a banded matrix.** The patch matrix of
+   :numref:`subsec_conv_matmul` unfolds the input. The opposite
+   construction unrolls the kernel. Let $\mathbf{X}$ be a $4 \times 4$
+   input, $\mathbf{K}$ a $3 \times 3$ kernel, and $\textrm{vec}(\cdot)$
+   the row-by-row flattening.
+    1. Construct the $4 \times 16$ matrix $\mathbf{W}$ with
+       $\mathbf{W}\,\textrm{vec}(\mathbf{X}) = \textrm{vec}(\mathbf{Y})$,
+       where $\mathbf{Y}$ is the cross-correlation of $\mathbf{X}$ with
+       $\mathbf{K}$. How many nonzero entries does each row have, and how
+       many distinct values appear in $\mathbf{W}$?
+    1. Build $\mathbf{W}$ in code from `K` and confirm that the product
+       reproduces `corr2d(X, K)`.
+    1. For an $n \times n$ input and a $k \times k$ kernel, count the
+       entries of $\mathbf{W}$ stored as a dense array, the nonzero
+       entries of $\mathbf{W}$, and the entries of the patch matrix. How
+       does each count grow with $n$?
+    1. Keep the sparsity pattern of $\mathbf{W}$ but give every row its
+       own $k^2$ values. The result is a locally connected layer: the
+       fourth-order tensor $\mathsf{V}$ of :numref:`sec_why-conv` in
+       $[\mathbf{H}]_{i,j} = [\mathbf{U}]_{i,j} + \sum_{a,b} [\mathsf{V}]_{i,j,a,b}[\mathbf{X}]_{i+a,j+b}$,
+       restricted to a $k \times k$ window of offsets $(a, b)$ before
+       translation equivariance ties the weights. For an $n \times n$
+       input, count the parameters of this layer, of a fully connected
+       layer with the same input and output shapes, and of the
+       convolution.
+
+    *Adapted from CMU 11-785,
+    [Homework 2 Part 1](https://deeplearning.cs.cmu.edu/S21/index.html).*
+<!--tr:ec8621f8-->
+2. [code] **帯行列としての畳み込み。** :numref:`subsec_conv_matmul` のパッチ行列は入力を展開します。反対にカーネルを展開する方法もあります。$\mathbf{X}$ を $4 \times 4$ の入力、$\mathbf{K}$ を $3 \times 3$ カーネル、$\textrm{vec}(\cdot)$ を行ごとの平坦化とします。
+    1. $4 \times 16$ 行列 $\mathbf{W}$ を、$\mathbf{W}\,\textrm{vec}(\mathbf{X}) = \textrm{vec}(\mathbf{Y})$ となるように構築してください。ここで $\mathbf{Y}$ は $\mathbf{X}$ と $\mathbf{K}$ の相互相関です。各行に非ゼロ要素はいくつありますか。また $\mathbf{W}$ には異なる値がいくつ現れますか。
+    1. `K` からコードで $\mathbf{W}$ を構築し、その積が `corr2d(X, K)` を再現することを確認してください。
+    1. $n \times n$ 入力と $k \times k$ カーネルについて、密な配列として格納した $\mathbf{W}$ の要素、$\mathbf{W}$ の非ゼロ要素、パッチ行列の要素をそれぞれ数えてください。各数は $n$ とともにどう増えますか。
+    1. $\mathbf{W}$ のスパース性パターンを保ったまま、各行に固有の $k^2$ 個の値を与えてください。結果は局所結合層になります。これは :numref:`sec_why-conv` の 4 階テンソル $\mathsf{V}$ を、$[\mathbf{H}]_{i,j} = [\mathbf{U}]_{i,j} + \sum_{a,b} [\mathsf{V}]_{i,j,a,b}[\mathbf{X}]_{i+a,j+b}$ において、平行移動に対する同変性が重みを共有させる前に、オフセット $(a, b)$ の $k \times k$ ウィンドウに制限したものです。$n \times n$ 入力について、この層、同じ入力と出力の形状を持つ全結合層、および畳み込みのパラメータを数えてください。
+
+    *CMU 11-785、[Homework 2 Part 1](https://deeplearning.cs.cmu.edu/S21/index.html) を改変。*
+
+<!--en:54bcee26 kind=exercise-->
+3. [code] **Effective receptive field.** ● The theoretical receptive
+   field $r$ of this section bounds which inputs *can* influence an
+   output; the effective receptive field measures how much
+   they actually do :cite:`Luo.Li.Urtasun.ea.2016`. Build a stack of $L$
+   single-channel $3 \times 3$ convolutional layers with no
+   padding, no bias, and no nonlinearity on a $32 \times 32$ input, using
+   the built-in layer of :numref:`subsec_learning_kernel`. Draw every
+   kernel entry independently from a standard normal distribution.
+    1. For $L = 3$ and a single draw of the kernels, backpropagate a unit
+       gradient from an output unit near the center of the last layer to
+       the input and plot the magnitude of the input gradient. Compare its
+       support with the $7 \times 7$ theoretical receptive field, and say
+       where the magnitude is largest.
+    1. Average the squared input gradient over 500 draws of the kernels,
+       for $L = 3$ and for $L = 10$. Sum each averaged map over its rows
+       and normalize the resulting column profile to sum to one. How does
+       the ratio of the profile's standard deviation to the theoretical
+       side length $2L + 1$ change with depth?
+    1. :numref:`fig_conv_rf_paths` counts the paths for $L = 3$ in one
+       dimension. Show that for general $L$ the expected squared input
+       gradient, summed over rows, is proportional to the convolution of
+       $L$ copies of the vector $(1, 1, 1)$. Derive how the standard
+       deviation of the normalized profile grows with $L$.
+<!--tr:54bcee26-->
+3. [code] **有効受容野。** ● 本節の理論上の受容野 $r$ は、どの入力が出力に影響を及ぼし*うる*かを限定します。有効受容野は実際にどれほど影響するかを測ります :cite:`Luo.Li.Urtasun.ea.2016`。:numref:`subsec_learning_kernel` の組み込み層を使い、$32 \times 32$ 入力に対して、パディング、バイアス、非線形性のない単一チャネルの $3 \times 3$ 畳み込み層を $L$ 層重ねてください。各カーネル要素は標準正規分布から独立に抽出してください。
+    1. $L = 3$ とし、カーネルを 1 回抽出して、最終層の中心付近の出力ユニットから単位勾配を入力まで逆伝播し、入力勾配の大きさをプロットしてください。その台を $7 \times 7$ の理論上の受容野と比較し、大きさが最大になる場所を述べてください。
+    1. $L = 3$ と $L = 10$ のそれぞれについて、カーネルを 500 回抽出して入力勾配の二乗を平均してください。各平均マップを行方向に合計し、得られた列のプロファイルの和が 1 になるように正規化してください。プロファイルの標準偏差と理論上の一辺の長さ $2L + 1$ の比は、深さとともにどう変化しますか。
+    1. :numref:`fig_conv_rf_paths` は 1 次元で $L = 3$ の場合の経路を数えています。一般の $L$ に対して、行方向に合計した入力勾配の二乗の期待値が、ベクトル $(1, 1, 1)$ を $L$ 個畳み込んだものに比例することを示してください。正規化したプロファイルの標準偏差が $L$ とともにどう増加するかを導出してください。
+
+<!--en:6ab5b67c kind=exercise-->
+4. [code] **Backward pass of a convolution.** ● Let $\mathbf{Y}$ be the
+   single-channel cross-correlation of an input $\mathbf{X}$ with a kernel
+   $\mathbf{K}$, as computed by `corr2d`, and let $\ell$ be a scalar loss
+   that depends on $\mathbf{X}$ and $\mathbf{K}$ only through $\mathbf{Y}$.
+    1. Derive $\partial \ell/\partial \mathbf{K}$ and
+       $\partial \ell/\partial \mathbf{X}$ in terms of
+       $\partial \ell/\partial \mathbf{Y}$, in the style of the
+       backpropagation equations of :numref:`sec_backprop`.
+    1. Implement your expression for $\partial \ell/\partial \mathbf{K}$
+       without automatic differentiation for the loss
+       $\ell = \sum_{i,j} G_{ij} Y_{ij}$, where $\mathbf{G}$ is a fixed
+       random matrix of the shape of $\mathbf{Y}$. Compare it with a
+       centered finite-difference gradient with step size $10^{-2}$ on a
+       small random `X` and `K`, and report the largest relative error.
+    1. Check your expression for $\partial \ell/\partial \mathbf{K}$
+       against the kernel gradient that automatic differentiation
+       computes in the experiment of :numref:`subsec_learning_kernel`.
+
+    *Adapted from Michael Nielsen,
+    [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/chap6.html),
+    Chapter 6, and Stanford CS231n,
+    [Assignment 2](https://cs231n.github.io/assignments2024/assignment2/),
+    ConvolutionalNetworks notebook.*
+<!--tr:6ab5b67c-->
+4. [code] **畳み込みの逆伝播。** ● $\mathbf{Y}$ を、`corr2d` で計算される入力 $\mathbf{X}$ とカーネル $\mathbf{K}$ の単一チャネルの相互相関とし、$\ell$ を $\mathbf{X}$ と $\mathbf{K}$ に $\mathbf{Y}$ を通じてのみ依存するスカラー損失とします。
+    1. $\partial \ell/\partial \mathbf{K}$ と $\partial \ell/\partial \mathbf{X}$ を、$\partial \ell/\partial \mathbf{Y}$ を用いて :numref:`sec_backprop` の誤差逆伝播法の式にならって導出してください。
+    1. 損失 $\ell = \sum_{i,j} G_{ij} Y_{ij}$ に対する $\partial \ell/\partial \mathbf{K}$ の式を、自動微分を使わずに実装してください。ここで $\mathbf{G}$ は $\mathbf{Y}$ と同じ形状の固定されたランダム行列です。小さなランダムな `X` と `K` について、ステップサイズ $10^{-2}$ の中心差分による勾配と比較し、最大相対誤差を報告してください。
+    1. $\partial \ell/\partial \mathbf{K}$ の式を、:numref:`subsec_learning_kernel` の実験で自動微分が計算するカーネル勾配と照合してください。
+
+    *Michael Nielsen、[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/chap6.html) の第 6 章、および Stanford CS231n、[Assignment 2](https://cs231n.github.io/assignments2024/assignment2/) の ConvolutionalNetworks ノートブックを改変。*
+
+<!--en:657a396a kind=tab_note-->
+[Discussions](https://d2l.discourse.group/t/65)
+<!--tr:657a396a-->
+[ディスカッション](https://d2l.discourse.group/t/65)
+
+<!--en:63c44b48 kind=tab_note-->
+[Discussions](https://d2l.discourse.group/t/66)
+<!--tr:63c44b48-->
+[ディスカッション](https://d2l.discourse.group/t/66)
+
+<!--en:00b73d0b kind=tab_note-->
+[Discussions](https://d2l.discourse.group/t/271)
+<!--tr:00b73d0b-->
+[ディスカッション](https://d2l.discourse.group/t/271)
+
+<!--en:b79af65b kind=tab_note-->
+[Discussions](https://d2l.discourse.group/t/17996)
+<!--tr:b79af65b-->
+[ディスカッション](https://d2l.discourse.group/t/17996)
+
+=== DECISIONS ===
+- edge map → エッジマップ
+- patch matrix → パッチ行列
+- finite difference → 有限差分
+- effective receptive field → 有効受容野
+
+=== NOTES ===
+- ec8621f8, 54bcee26, 6ab5b67c: math tokens reordered for natural Japanese.
+- 54bcee26: normal distribution is 正規分布 under the style guide; this is a false glossary match.
