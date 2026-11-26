@@ -128,7 +128,7 @@ function card(m, enWords) {
     <div class="stats">
       <div class="stat"><b class="${m.errors ? 'bad' : 'ok'}">${m.errors}</b><span>errors</span></div>
       <div class="stat"><b class="${cls}">${m.warnings}</b><span>warnings</span></div>
-      <div class="stat"><b>${m.words.toLocaleString('en')}</b><span>words · ${ratio}× EN</span></div>
+      <div class="stat"><b>${m.words.toLocaleString('en')}</b><span>${DATA.unit || 'words'} · ${ratio}× EN</span></div>
       ${m.missing ? `<div class="stat"><b class="bad">${m.missing}</b><span>blocks missing</span></div>` : ''}
     </div>
     <details><summary>Decisions it recorded</summary><div class="body">${m.decisions ? render(m.decisions) : '<p class="imgnote">None.</p>'}</div></details>

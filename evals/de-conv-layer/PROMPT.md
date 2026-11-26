@@ -28,6 +28,9 @@ agent name (lower case, e.g. `gemini-3-pro`).
    Fix every error. A warning can be a false match; never change a correct
    translation only to silence a warning, but name the false match in NOTES.
    Never run `l10n apply` without `--dry-run`. Do not edit any other file.
+   Keep any helper scripts or drafts in a directory of your own (e.g.
+   `work/{NAME}/`, which git ignores): other agents may run the same test at
+   the same time.
    (Python 3.12+ with PyYAML is needed.) Without the English checkout, skip
    this step and go through TRANSLATING.md §9 by hand; the comparison runs
    the check later.

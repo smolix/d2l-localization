@@ -20,6 +20,13 @@ from pathlib import Path
 from .answers import parse_answer
 
 TEMPLATE = Path(__file__).with_name('compare.html')
+NO_SPACES = {'ja', 'zh-Hans', 'zh-Hant', 'zh', 'th'}  # length in characters, not words
+
+
+def _length(text, lang_code):
+    if lang_code in NO_SPACES:
+        return len(re.sub(r'\s', '', text))
+    return len(text.split())
 
 
 def _blocks(work_files):
@@ -52,7 +59,8 @@ def _check(lang_code, files, rev):
 
 
 def collect(lang_code: str, evaldir: Path) -> dict:
-    work = sorted(p for p in evaldir.glob('*.md') if p.is_file())
+    work = sorted(p for p in evaldir.glob('*.md')   # README, PROMPT, RESULTS are not work files
+                  if p.is_file() and '<!--unit:' in p.read_text(encoding='utf-8'))
     if not work:
         raise SystemExit(f'{evaldir}: no work files (*.md)')
     blocks, order, rev, page = _blocks(work)
@@ -61,7 +69,7 @@ def collect(lang_code: str, evaldir: Path) -> dict:
         if not d.is_dir():
             continue
         name = d.name.removeprefix('answers-')
-        files = sorted(d.glob('*.md'))
+        files = sorted(f for f in d.glob('*.md') if '<!--unit:' in f.read_text(encoding='utf-8'))
         dec, notes = [], []
         for f in files:
             for a in parse_answer(f.read_text(encoding='utf-8'), str(f)):
@@ -74,7 +82,7 @@ def collect(lang_code: str, evaldir: Path) -> dict:
                 if a.notes.strip():
                     notes.append(f'**{unit}**\n\n' + a.notes.strip())
         out, errors, warnings = _check(lang_code, files, rev)
-        words = sum(len(blocks[a]['tr'].get(name, '').split()) for a in order)
+        words = sum(_length(blocks[a]['tr'].get(name, ''), lang_code) for a in order)
         missing = sum(1 for a in order if name not in blocks[a]['tr'])
         agents.append({'name': name, 'errors': errors, 'warnings': warnings, 'words': words,
                        'missing': missing, 'check': out,
@@ -82,7 +90,8 @@ def collect(lang_code: str, evaldir: Path) -> dict:
     if not agents:
         raise SystemExit(f'{evaldir}: no answers-<agent>/ directories')
     return {'lang': lang_code, 'page': page, 'rev': rev,
-            'en_words': sum(len(blocks[a]['en'].split()) for a in order),
+            'unit': 'characters' if lang_code in NO_SPACES else 'words',
+            'en_words': sum(_length(blocks[a]['en'], lang_code) for a in order),
             'agents': agents, 'blocks': [blocks[a] for a in order]}
 
 
@@ -99,7 +108,7 @@ def compare(lang_code: str, evaldir: str, out: str | None = None) -> Path:
     path = write_page(data, Path(out) if out else d / 'compare.html')
     for a in data['agents']:
         print(f"{a['name']:>12}: {a['errors']} error(s), {a['warnings']} warning(s), "
-              f"{a['words']} words ({a['words'] / max(data['en_words'], 1):.2f}x English)"
+              f"{a['words']} {data['unit']} ({a['words'] / max(data['en_words'], 1):.2f}x English)"
               + (f", {a['missing']} block(s) missing" if a['missing'] else ''))
     print(f'wrote {path}')
     return path

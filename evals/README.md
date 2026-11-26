@@ -7,6 +7,7 @@ large run.
 
 | Directory | Language | Page | Result |
 |---|---|---|---|
+| [ja-conv-layer](ja-conv-layer/) | Japanese (ja) | the same page | Fable 5.2, Opus 5.5, Sonnet 5.5 translated 2026-11-26; awaiting a native reader; see [RESULTS.md](ja-conv-layer/RESULTS.md) |
 | [de-conv-layer](de-conv-layer/) | German (de) | Convolutions for Images (`chapter_convolutional-neural-networks/conv-layer.md`, 3 units, about 4,200 words) | Fable 5.2 chosen (author, 2026-11-26); see [RESULTS.md](de-conv-layer/RESULTS.md) |
 
 ## Running a test with another agent
@@ -38,7 +39,7 @@ skips the check, and the comparison runs it for every agent afterwards.
    English block beside each translation, the error and warning counts, the
    length against English, and the DECISIONS and NOTES each translator
    recorded. Open it in a browser (it loads Markdown and math renderers from
-   cdnjs).
+   cdnjs). For Japanese and Chinese, length is counted in characters.
 5. **Read, do not count.** The check counts measure rule-following (format,
    protected tokens, glossary terms), not quality. Read at least ten blocks
    side by side, including a heading, a dense paragraph with math, a list, an
