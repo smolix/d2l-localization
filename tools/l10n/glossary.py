@@ -115,8 +115,8 @@ def _present(form: str, low: str) -> bool:
 
     A line break inside the term does not hide it. In scripts with spaces, an
     inflected form also counts: each word of the term may change its last
-    letter (last two for words over six letters) and take an ending ("champ récepteur" in "champs récepteurs",
-    "matriz" in "matrices", "convolução" in "convoluções", "katman" in "katmanları").
+    letters (the last two, for words over four letters) and take an ending ("champ récepteur" in "champs récepteurs",
+    "matriz" in "matrices", "convolução" in "convoluções", "şekil" in "şekli", "katman" in "katmanları").
     """
     f = ' '.join(form.lower().split())
     if f in low:
@@ -124,7 +124,7 @@ def _present(form: str, low: str) -> bool:
     words = f.split()
     if not all(re.fullmatch(r'[^\W\d_]+', w) for w in words):
         return False
-    stems = [re.escape(w[:-2] if len(w) > 6 else w[:-1] if len(w) > 4 else w) + r'[^\W\d_]*'
+    stems = [re.escape(w[:-2] if len(w) > 4 else w) + r'[^\W\d_]*'
              for w in words]
     return re.search(r'(?<![^\W\d_])' + r'\s+'.join(stems), low) is not None
 
