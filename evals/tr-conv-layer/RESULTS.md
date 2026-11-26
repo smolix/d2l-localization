@@ -16,3 +16,18 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Sonnet's warnings were Turkish vowel drop (şekil → şekli), which the check did not accept (fixed).
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `4fafcb0`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 4 | 4,328 (1.02) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 2 | 4,099 (0.97) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 3,922 (0.92) |
+
+The native-reader verdict is pending.
