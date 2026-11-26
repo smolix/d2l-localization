@@ -44,3 +44,18 @@ with the current checker.
   noun («Στην ενότητα `:numref:`», which would duplicate Quarto's printed prefix).
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `f73a6af`.
+
+| Agent | Model | Errors | Warnings | Words (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 0 | 5,035 (1.19) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 0 | 4,937 (1.16) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 4,531 (1.07) |
+
+The native-reader verdict is pending.
