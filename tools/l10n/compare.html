@@ -12,7 +12,8 @@
    aligned row per source block: English | Fable | Opus | Sonnet. */
 :root {
   --bg: #f6f7f9; --panel: #ffffff; --fg: #1d2330; --muted: #5d6677; --line: #dde1e8;
-  --en: #44506a; --a0: #0f7b6c; --a1: #b25d12; --a2: #4b4fc4; --a3: #a2386b; --a4: #5b7a12; --a5: #2f6fa3;
+  --en: #44506a; --a0: #0f7b6c; --a1: #b25d12; --a2: #4b4fc4; --a3: #a2386b; --a4: #5b7a12;
+  --a5: #2f6fa3; --a6: #7c3aed; --a7: #c2410c; --a8: #0e7490; --a9: #4d7c0f;
   --chip: #eef0f4; --warn: #9a6a00; --ok: #1d7a3e; --bad: #b3261e;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -20,16 +21,18 @@
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #12151b; --panel: #1a1f27; --fg: #e3e6ec; --muted: #9aa3b4; --line: #2b323e;
-  --en: #a8b3cc; --a0: #4cc3b0; --a1: #e59a55; --a2: #9ea2ff; --a3: #ee8ab8; --a4: #a9cf5c; --a5: #7fb6e6;
+  --en: #a8b3cc; --a0: #4cc3b0; --a1: #e59a55; --a2: #9ea2ff; --a3: #ee8ab8; --a4: #a9cf5c;
+  --a5: #7fb6e6; --a6: #c4b5fd; --a7: #fdba74; --a8: #67e8f9; --a9: #bef264;
   --chip: #242b36; --warn: #e0b54a; --ok: #5cc27e; --bad: #f08a80; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #12151b; --panel: #1a1f27; --fg: #e3e6ec; --muted: #9aa3b4; --line: #2b323e;
-  --en: #a8b3cc; --a0: #4cc3b0; --a1: #e59a55; --a2: #9ea2ff; --a3: #ee8ab8; --a4: #a9cf5c; --a5: #7fb6e6;
+  --en: #a8b3cc; --a0: #4cc3b0; --a1: #e59a55; --a2: #9ea2ff; --a3: #ee8ab8; --a4: #a9cf5c;
+  --a5: #7fb6e6; --a6: #c4b5fd; --a7: #fdba74; --a8: #67e8f9; --a9: #bef264;
   --chip: #242b36; --warn: #e0b54a; --ok: #5cc27e; --bad: #f08a80; color-scheme: dark }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--sans); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; max-width: 1760px; margin: 0 auto; display: grid; gap: 22px; }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; max-width: max(1760px, calc(var(--cols, 4) * 320px)); margin: 0 auto; display: grid; gap: 22px; }
 header h1 { font: 600 1.55rem/1.2 var(--sans); margin: 0; text-wrap: balance; }
 header p { margin: 6px 0 0; color: var(--muted); max-width: 75ch; }
 header p.back { margin: 0 0 8px; font: 500 0.9rem var(--sans); }
@@ -51,9 +54,11 @@ details .body { font-size: 0.88rem; max-height: 340px; overflow: auto; margin-to
 details pre { white-space: pre-wrap; font: 0.8rem/1.45 var(--mono); margin: 0; }
 .controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); padding-block: 10px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
 .controls .lbl { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.controls button { background: var(--chip); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 3px 9px; font: 500 0.8rem var(--sans); cursor: pointer; }
+.controls button:hover { border-color: var(--muted); }
 .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; cursor: pointer; user-select: none; }
 .toggle input { accent-color: var(--fg); }
-.colhead, .row { display: grid; gap: 12px; grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); }
+.colhead, .row { display: grid; gap: 12px; grid-template-columns: repeat(var(--cols, 4), minmax(220px, 1fr)); }
 .colhead { font: 600 0.8rem var(--sans); text-transform: uppercase; letter-spacing: 0.06em; }
 .colhead div { padding: 0 14px; display: flex; align-items: center; gap: 7px; }
 .rows { display: grid; gap: 10px; }
@@ -103,7 +108,7 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\
 <script>
 const DATA = /*DATA*/null;
 const COLS = [{ key: 'en', name: 'English', color: 'var(--en)' }].concat(
-  DATA.agents.map((a, i) => ({ key: a.name, name: a.name, color: 'var(--a' + (i % 6) + ')' })));
+  DATA.agents.map((a, i) => ({ key: a.name, name: a.name, color: 'var(--a' + (i % 10) + ')' })));
 const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 function render(src) {
@@ -150,8 +155,17 @@ function layout() {
 (function build(data) {
   document.getElementById('title').textContent = (data.name ? data.name + ': ' : '') + 'translations of ' + data.page;
   document.getElementById('lede').innerHTML = `${data.agents.length} translations into <code>${esc(data.lang)}</code> of <code>${esc(data.page)}</code> (English revision <code>${esc((data.rev || '').slice(0, 10))}</code>), from the same work files. Counts are from <code>l10n apply --dry-run</code>.`;
-  document.getElementById('controls').insertAdjacentHTML('beforeend', COLS.map(c =>
-    `<label class="toggle"><input type="checkbox" id="show-${esc(c.key)}" checked> ${esc(c.name)}</label>`).join(''));
+  document.getElementById('controls').insertAdjacentHTML('beforeend',
+    `<button type="button" id="btn-all">All</button><button type="button" id="btn-en-only">English only</button>` +
+    COLS.map(c => `<label class="toggle"><input type="checkbox" id="show-${esc(c.key)}" checked> ${esc(c.name)}</label>`).join(''));
+  document.getElementById('btn-all').addEventListener('click', () => {
+    COLS.forEach(c => { document.getElementById('show-' + c.key).checked = true; });
+    layout();
+  });
+  document.getElementById('btn-en-only').addEventListener('click', () => {
+    COLS.forEach(c => { document.getElementById('show-' + c.key).checked = (c.key === 'en'); });
+    layout();
+  });
   document.getElementById('cards').innerHTML = data.agents.map(a => card(a, data.en_words)).join('');
   document.getElementById('colhead').innerHTML = COLS.map(c => `<div data-k="${esc(c.key)}"><span class="dot" style="background:${c.color}"></span>${esc(c.name)}</div>`).join('');
   document.getElementById('rows').innerHTML = data.blocks.map(b => `<section class="row" id="b-${b.anchor}">` + COLS.map(c => {

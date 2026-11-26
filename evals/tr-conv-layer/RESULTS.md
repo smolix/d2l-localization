@@ -31,3 +31,22 @@ All three completed 144 blocks. Counts use the checker at `4fafcb0`.
 | [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 3,922 (0.92) |
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors and zero warnings. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 0 | 4,092 (0.96) | 15.2 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 0 | 4,008 (0.94) | 3.9 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 0 | 3,940 (0.93) | 3.5 min |
+
+- All three avoid line-leading `<n>. Bölüm` ordered-list collisions, preserve
+  Turkish case suffixes after inline math/code, and record SOV math/code token
+  reorderings in `NOTES`.
+
+The native-reader verdict is pending.

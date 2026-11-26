@@ -31,3 +31,25 @@ All three completed 144 blocks. Counts use the checker at `4fafcb0`.
 | [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 1 | 5,711 (1.35) |
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 1 | 6,045 (1.42) | 12.9 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 3 | 6,079 (1.43) | 4.8 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 7 | 5,944 (1.40) | 2.8 min |
+
+- All three share the false-match warning on `eed4e2a0` (*"the bell shape"* →
+  *hình dạng quả chuông*, geometric curve shape rather than tensor shape *kích
+  thước*). `neon` (2 blocks) and `hydrogen` (4 blocks) also use adjectival *vô
+  hướng* in *scalar bias* / *scalar loss* where the glossary expects the noun
+  *số vô hướng*, and `hydrogen` translates geometric *Bounding box* (`33bb377d`)
+  as *Hộp giới hạn* rather than *khung chứa*; all are documented in `NOTES`.
+
+The native-reader verdict is pending.

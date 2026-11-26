@@ -30,3 +30,22 @@ All three completed 144 blocks. Counts use the checker at `4fafcb0`.
 | [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 4,709 (1.11) |
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors and zero warnings. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 0 | 4,726 (1.11) | 8.2 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 0 | 4,730 (1.11) | 4.3 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 0 | 4,687 (1.10) | 2.4 min |
+
+- All three document Portuguese post-nominal dimension reorderings
+  (*matriz de entrada $\mathbf{X}$ de $n_\textrm{h} \times n_\textrm{w}$*) in
+  `NOTES` rather than forcing English token order.
+
+The native-reader verdict is pending.

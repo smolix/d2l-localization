@@ -32,3 +32,22 @@ All three completed 144 blocks. Counts use the checker at `4fafcb0`.
 | [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 3,691 (0.87) |
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors and zero warnings. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 0 | 3,785 (0.89) | 14.9 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 0 | 3,797 (0.89) | 4.4 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 0 | 3,740 (0.88) | 3.1 min |
+
+- All three preserve Latin acronyms (`MLP`, `CNN`, `SGD`), use polite formal
+  Korean (`-합니다` / `-입니다`) in prose and concise noun phrases in headings and
+  slides, and document Korean SOV math/code token reorderings in `NOTES`.
+
+The native-reader verdict is pending.

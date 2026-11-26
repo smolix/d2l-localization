@@ -30,3 +30,22 @@ All three completed 144 blocks. Counts use the checker at `4fafcb0`.
 | [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 4,779 (1.13) |
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors and zero warnings. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Words (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 0 | 5,014 (1.18) | 13.4 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 0 | 4,980 (1.17) | 4.8 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 0 | 5,009 (1.18) | 3.1 min |
+
+- Unlike `sonnet`, all three keep natural Hindi SOV word order around inline math
+  and code tokens and record the resulting token reorderings in `NOTES` (per
+  `TRANSLATING.md` §9).
+
+The native-reader verdict is pending.

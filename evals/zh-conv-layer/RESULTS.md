@@ -31,3 +31,26 @@ All three completed 144 blocks. Counts use the checker at `1fa7ded`.
 | [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 13,452 (0.54) |
 
 The native-reader verdict is pending.
+
+
+## 2026-11-26: Gemini 4 (Carbon, Neon and Hydrogen)
+
+Each model ran once in an independent session at `medium` effort with the prompt
+in `PROMPT.md` and the same three pinned work files. All three completed all 144
+blocks with zero errors. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Characters (× English) | Time |
+|---|---|--:|--:|--:|--:|
+| [carbon](answers-carbon/) | `gemini-4-carbon-medium` | 0 | 1 | 14,079 (0.57) | 10.7 min |
+| [neon](answers-neon/) | `gemini-4-neon-medium` | 0 | 1 | 13,838 (0.56) | 4.7 min |
+| [hydrogen](answers-hydrogen/) | `gemini-4-hydrogen-medium` | 0 | 2 | 13,635 (0.55) | 2.5 min |
+
+- All three share the false-match warning on `e3aa1086` (*"3 nonlinear
+  activations"*, where *activations* counts operations rather than activation
+  values `激活值`) and record it in `NOTES`; `hydrogen` adds one warning on
+  `ec8621f8` (*"sparsity pattern"* rendered idiomatically as `稀疏模式` rather than
+  `稀疏性`).
+- All three record grammar-driven Chinese math/code token reorderings in `NOTES`
+  rather than forcing English token order (following `TRANSLATING.md` §9).
+
+The native-reader verdict is pending.
