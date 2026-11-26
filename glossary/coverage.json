@@ -1668,6 +1668,232 @@
           "verified_d2l": 1
         }
       }
+    },
+    "ru": {
+      "total": 1191,
+      "statuses": {
+        "proposed": 1191
+      },
+      "by_topic": {
+        "attention": {
+          "proposed": 56
+        },
+        "attention mechanisms": {
+          "proposed": 1
+        },
+        "builders guide": {
+          "proposed": 3
+        },
+        "computational performance": {
+          "proposed": 22
+        },
+        "computer vision": {
+          "proposed": 59
+        },
+        "convolutional modern": {
+          "proposed": 33
+        },
+        "convolutional neural networks": {
+          "proposed": 25
+        },
+        "deep reinforcement learning": {
+          "proposed": 33
+        },
+        "diffusion models": {
+          "proposed": 105
+        },
+        "gaussian processes": {
+          "proposed": 34
+        },
+        "generative adversarial networks": {
+          "proposed": 30
+        },
+        "hyperparameter optimization": {
+          "proposed": 14
+        },
+        "introduction": {
+          "proposed": 1
+        },
+        "linear classification": {
+          "proposed": 34
+        },
+        "linear regression": {
+          "proposed": 40
+        },
+        "mdl calculus": {
+          "proposed": 14
+        },
+        "mdl dynamics": {
+          "proposed": 44
+        },
+        "mdl information theory": {
+          "proposed": 43
+        },
+        "mdl linear algebra": {
+          "proposed": 21
+        },
+        "mdl optimization": {
+          "proposed": 50
+        },
+        "mdl probability statistics": {
+          "proposed": 65
+        },
+        "multilayer perceptrons": {
+          "proposed": 27
+        },
+        "natural language processing applications": {
+          "proposed": 11
+        },
+        "natural language processing pretraining": {
+          "proposed": 27
+        },
+        "notation": {
+          "proposed": 1
+        },
+        "optimization": {
+          "proposed": 117
+        },
+        "preliminaries": {
+          "proposed": 36
+        },
+        "probability": {
+          "proposed": 1
+        },
+        "probability and statistics": {
+          "proposed": 1
+        },
+        "probability statistics": {
+          "proposed": 1
+        },
+        "recommender systems": {
+          "proposed": 46
+        },
+        "recurrent modern": {
+          "proposed": 45
+        },
+        "recurrent neural networks": {
+          "proposed": 31
+        },
+        "reinforcement learning": {
+          "proposed": 64
+        },
+        "transformers": {
+          "proposed": 56
+        }
+      }
+    },
+    "el": {
+      "total": 1191,
+      "statuses": {
+        "proposed": 1191
+      },
+      "by_topic": {
+        "attention": {
+          "proposed": 56
+        },
+        "attention mechanisms": {
+          "proposed": 1
+        },
+        "builders guide": {
+          "proposed": 3
+        },
+        "computational performance": {
+          "proposed": 22
+        },
+        "computer vision": {
+          "proposed": 59
+        },
+        "convolutional modern": {
+          "proposed": 33
+        },
+        "convolutional neural networks": {
+          "proposed": 25
+        },
+        "deep reinforcement learning": {
+          "proposed": 33
+        },
+        "diffusion models": {
+          "proposed": 105
+        },
+        "gaussian processes": {
+          "proposed": 34
+        },
+        "generative adversarial networks": {
+          "proposed": 30
+        },
+        "hyperparameter optimization": {
+          "proposed": 14
+        },
+        "introduction": {
+          "proposed": 1
+        },
+        "linear classification": {
+          "proposed": 34
+        },
+        "linear regression": {
+          "proposed": 40
+        },
+        "mdl calculus": {
+          "proposed": 14
+        },
+        "mdl dynamics": {
+          "proposed": 44
+        },
+        "mdl information theory": {
+          "proposed": 43
+        },
+        "mdl linear algebra": {
+          "proposed": 21
+        },
+        "mdl optimization": {
+          "proposed": 50
+        },
+        "mdl probability statistics": {
+          "proposed": 65
+        },
+        "multilayer perceptrons": {
+          "proposed": 27
+        },
+        "natural language processing applications": {
+          "proposed": 11
+        },
+        "natural language processing pretraining": {
+          "proposed": 27
+        },
+        "notation": {
+          "proposed": 1
+        },
+        "optimization": {
+          "proposed": 117
+        },
+        "preliminaries": {
+          "proposed": 36
+        },
+        "probability": {
+          "proposed": 1
+        },
+        "probability and statistics": {
+          "proposed": 1
+        },
+        "probability statistics": {
+          "proposed": 1
+        },
+        "recommender systems": {
+          "proposed": 46
+        },
+        "recurrent modern": {
+          "proposed": 45
+        },
+        "recurrent neural networks": {
+          "proposed": 31
+        },
+        "reinforcement learning": {
+          "proposed": 64
+        },
+        "transformers": {
+          "proposed": 56
+        }
+      }
     }
   },
   "retained_english_review_flags": [
@@ -2215,6 +2441,105 @@
     "de/training: English retained; inspect loanword/name rationale",
     "de/sample: English retained; inspect loanword/name rationale",
     "de/score: English retained; inspect loanword/name rationale",
-    "de/batch: English retained; inspect loanword/name rationale"
+    "de/batch: English retained; inspect loanword/name rationale",
+    "ru/softmax: English retained; inspect loanword/name rationale",
+    "ru/teacher-forcing: English retained; inspect loanword/name rationale",
+    "ru/bert: English retained; inspect loanword/name rationale",
+    "ru/adam: English retained; inspect loanword/name rationale",
+    "ru/adagrad: English retained; inspect loanword/name rationale",
+    "ru/rmsprop: English retained; inspect loanword/name rationale",
+    "ru/word2vec: English retained; inspect loanword/name rationale",
+    "ru/bleu: English retained; inspect loanword/name rationale",
+    "ru/gpu: English retained; inspect loanword/name rationale",
+    "ru/log-sum-exp: English retained; inspect loanword/name rationale",
+    "ru/skip-gram: English retained; inspect loanword/name rationale",
+    "ru/off-policy: English retained; inspect loanword/name rationale",
+    "ru/on-policy: English retained; inspect loanword/name rationale",
+    "ru/score-matching: English retained; inspect loanword/name rationale",
+    "ru/flow-matching: English retained; inspect loanword/name rationale",
+    "ru/adamw: English retained; inspect loanword/name rationale",
+    "ru/shampoo: English retained; inspect loanword/name rationale",
+    "ru/muon: English retained; inspect loanword/name rationale",
+    "ru/gelu: English retained; inspect loanword/name rationale",
+    "ru/softplus: English retained; inspect loanword/name rationale",
+    "ru/all-reduce: English retained; inspect loanword/name rationale",
+    "ru/soft-actor-critic: English retained; inspect loanword/name rationale",
+    "ru/log-snr: English retained; inspect loanword/name rationale",
+    "ru/adaln-zero: English retained; inspect loanword/name rationale",
+    "ru/leaky-relu: English retained; inspect loanword/name rationale",
+    "ru/network-in-network: English retained; inspect loanword/name rationale",
+    "ru/denoising-score-matching: English retained; inspect loanword/name rationale",
+    "ru/ddpm: English retained; inspect loanword/name rationale",
+    "ru/ddim: English retained; inspect loanword/name rationale",
+    "ru/wasserstein-gan: English retained; inspect loanword/name rationale",
+    "ru/hyperband: English retained; inspect loanword/name rationale",
+    "ru/infonce: English retained; inspect loanword/name rationale",
+    "ru/rmsnorm: English retained; inspect loanword/name rationale",
+    "ru/alibi: English retained; inspect loanword/name rationale",
+    "ru/all-gather: English retained; inspect loanword/name rationale",
+    "ru/reduce-scatter: English retained; inspect loanword/name rationale",
+    "ru/reflow: English retained; inspect loanword/name rationale",
+    "ru/mamba: English retained; inspect loanword/name rationale",
+    "el/monte-carlo: English retained; inspect loanword/name rationale",
+    "el/softmax: English retained; inspect loanword/name rationale",
+    "el/dropout: English retained; inspect loanword/name rationale",
+    "el/token: English retained; inspect loanword/name rationale",
+    "el/teacher-forcing: English retained; inspect loanword/name rationale",
+    "el/perplexity: English retained; inspect loanword/name rationale",
+    "el/transformer: English retained; inspect loanword/name rationale",
+    "el/bert: English retained; inspect loanword/name rationale",
+    "el/q-learning: English retained; inspect loanword/name rationale",
+    "el/adam: English retained; inspect loanword/name rationale",
+    "el/adagrad: English retained; inspect loanword/name rationale",
+    "el/rmsprop: English retained; inspect loanword/name rationale",
+    "el/word2vec: English retained; inspect loanword/name rationale",
+    "el/bleu: English retained; inspect loanword/name rationale",
+    "el/neural-ode: English retained; inspect loanword/name rationale",
+    "el/bootstrap: English retained; inspect loanword/name rationale",
+    "el/gpu: English retained; inspect loanword/name rationale",
+    "el/log-sum-exp: English retained; inspect loanword/name rationale",
+    "el/prompt: English retained; inspect loanword/name rationale",
+    "el/skip-gram: English retained; inspect loanword/name rationale",
+    "el/euler-maruyama: English retained; inspect loanword/name rationale",
+    "el/adamw: English retained; inspect loanword/name rationale",
+    "el/shampoo: English retained; inspect loanword/name rationale",
+    "el/muon: English retained; inspect loanword/name rationale",
+    "el/lasso: English retained; inspect loanword/name rationale",
+    "el/broadcasting: English retained; inspect loanword/name rationale",
+    "el/kv-cache: English retained; inspect loanword/name rationale",
+    "el/vision-transformer: English retained; inspect loanword/name rationale",
+    "el/prefill: English retained; inspect loanword/name rationale",
+    "el/roofline: English retained; inspect loanword/name rationale",
+    "el/gelu: English retained; inspect loanword/name rationale",
+    "el/logit: English retained; inspect loanword/name rationale",
+    "el/softplus: English retained; inspect loanword/name rationale",
+    "el/all-reduce: English retained; inspect loanword/name rationale",
+    "el/checkpointing: English retained; inspect loanword/name rationale",
+    "el/soft-actor-critic: English retained; inspect loanword/name rationale",
+    "el/deep-q-network: English retained; inspect loanword/name rationale",
+    "el/proximal-policy-optimization: English retained; inspect loanword/name rationale",
+    "el/bootstrapping: English retained; inspect loanword/name rationale",
+    "el/log-snr: English retained; inspect loanword/name rationale",
+    "el/adaln-zero: English retained; inspect loanword/name rationale",
+    "el/leaky-relu: English retained; inspect loanword/name rationale",
+    "el/network-in-network: English retained; inspect loanword/name rationale",
+    "el/ground-truth: English retained; inspect loanword/name rationale",
+    "el/single-shot-multibox-detection: English retained; inspect loanword/name rationale",
+    "el/ddpm: English retained; inspect loanword/name rationale",
+    "el/ddim: English retained; inspect loanword/name rationale",
+    "el/diffusion-transformer: English retained; inspect loanword/name rationale",
+    "el/bottleneck: English retained; inspect loanword/name rationale",
+    "el/frechet-inception-distance: English retained; inspect loanword/name rationale",
+    "el/wasserstein-gan: English retained; inspect loanword/name rationale",
+    "el/hyperband: English retained; inspect loanword/name rationale",
+    "el/information-bottleneck: English retained; inspect loanword/name rationale",
+    "el/infonce: English retained; inspect loanword/name rationale",
+    "el/rmsnorm: English retained; inspect loanword/name rationale",
+    "el/alibi: English retained; inspect loanword/name rationale",
+    "el/all-gather: English retained; inspect loanword/name rationale",
+    "el/reduce-scatter: English retained; inspect loanword/name rationale",
+    "el/reflow: English retained; inspect loanword/name rationale",
+    "el/stop-gradient: English retained; inspect loanword/name rationale",
+    "el/mamba: English retained; inspect loanword/name rationale"
   ]
 }

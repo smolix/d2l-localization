@@ -18,7 +18,7 @@ from urllib.parse import quote
 BASE = Path(__file__).resolve().parents[1]
 # The English book (smolix/d2l-neu), whose chapter files book_refs point into.
 ROOT = Path(__import__('os').environ.get('D2L_NEU', '/home/smola/d2l-neu'))
-LOCALES = ['zh-Hans', 'ja', 'ko', 'es', 'ar', 'pt-BR', 'vi', 'fr', 'hi', 'tr', 'de']
+LOCALES = ['zh-Hans', 'ja', 'ko', 'es', 'ar', 'pt-BR', 'vi', 'fr', 'hi', 'tr', 'de', 'ru', 'el']
 STATUSES = {'verified_d2l', 'verified_external', 'proposed', 'unresolved', 'invariant'}
 ELIGIBLE = {'verified_d2l', 'verified_external', 'invariant'}
 
