@@ -1263,3 +1263,9 @@
 - „prompt alignment“ → „Übereinstimmung mit dem Prompt“.
 - „remasking“ → „erneute Maskierung“, „unmasking“ → „Demaskierung“.
 - „noise-contrastive estimation“ → „rauschkontrastive Schätzung“.
+
+## chapter_mathematics-for-deep-learning/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „Gershgorin circles“ → „Gershgorin-Kreise“, „Marchenko–Pastur law“ → „Marchenko-Pastur-Gesetz“.
+- „concentration inequalities“ → „Konzentrationsungleichungen“, „Rademacher complexity“ → „Rademacher-Komplexität“.
+- „continuous adjoint sensitivity method“ → „kontinuierliche adjungierte Sensitivitätsmethode“.
