@@ -1931,3 +1931,8 @@
 ## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u04 (Codex Astra (medium), 2026-11-26)
 
 - „squared grid“ → „quadratisches Gitter“ für das Zeitgitter mit quadrierten Stützstellen.
+
+## chapter_tools-for-deep-learning/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „serving“ → „Inferenzbetrieb“, als Tätigkeit „ein Modell für Anfragen bereitstellen“.
+- „accelerator“ → „Beschleuniger“, „workload“ → „Arbeitslast“.
