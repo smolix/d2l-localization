@@ -16,3 +16,18 @@ Each agent ran once in a fresh session with the prompt in PROMPT.md, at medium e
 - Fable and Opus wrote 标准高斯分布 for "standard normal distribution" because the glossary then treated *normal distribution* as an alias of *Gaussian distribution*; both noted that 标准正态分布 is usual. The glossary has since been fixed.
 
 **Verdict:** pending a native reader.
+
+
+## 2026-11-26: Astra, Sol and Terra
+
+The recorded translations use the fixed work files and medium effort,
+each in an independent session.
+All three completed 144 blocks. Counts use the checker at `1fa7ded`.
+
+| Agent | Model | Errors | Warnings | Characters (× English) |
+|---|---|--:|--:|--:|
+| [astra](answers-astra/) | `gpt-6.2-astra` | 0 | 2 | 14,073 (0.57) |
+| [sol](answers-sol/) | `gpt-6.2-sol` | 0 | 4 | 13,783 (0.56) |
+| [terra](answers-terra/) | `gpt-6.1-terra` | 0 | 0 | 13,452 (0.54) |
+
+The native-reader verdict is pending.
