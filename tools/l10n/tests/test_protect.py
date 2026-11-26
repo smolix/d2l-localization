@@ -109,6 +109,7 @@ class GlossaryPresenceTest(unittest.TestCase):
         self.assertTrue(_present('matriz', 'producto de matrices'))
         self.assertTrue(_present('descenso de gradiente', ' '.join('el descenso de\ngradiente'.split())))
         self.assertTrue(_present('katman', 'gizli katmanları'))
+        self.assertTrue(_present('convolução', 'as convoluções'))
         self.assertTrue(_present('卷积', '卷积层'))
         self.assertFalse(_present('loi normale', 'une loi uniforme'))
         self.assertFalse(_present('red', 'una capa'))
