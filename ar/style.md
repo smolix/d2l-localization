@@ -713,3 +713,259 @@ Not checked:
   algorithm (UAX #9); it was reasoned, not rendered in a browser, and the
   Arabic build does not exist yet.
 - Whether the site search ignores Arabic marks was not tested.
+
+## 15. Conventions from the translated chapters
+
+Rules from the decisions log, front matter to the attention chapter. They add
+to §1–§10; chapter checks override units. Single terms are in the glossary and the lexicon (ar/decisions.md).
+
+### 15.1 Headings and recurring titles
+
+| English | Arabic | Note |
+|---|---|---|
+| Further Reading (page title); Recommended Resources; Visual introductions | قراءات إضافية; مصادر موصى بها; مقدمات بصرية | |
+| Implementation; … from Scratch; Concise … | التنفيذ; التنفيذ من الصفر; التنفيذ الموجز | also as kickers |
+| Preface; Introduction (parts of the book); Advanced (part overview) | التمهيد; المقدمة; المواضيع المتقدمة | |
+| "the Basics part", "Parts 3 & 4", "Part 1: …" | جزء *الأساسيات*; الجزءان 3 و 4; الجزء 1: … | part names keep the English italics |
+| Legacy … Library (build-only, unlisted) | مكتبة … القديمة (للبناء فقط، غير مدرجة) | `*-lib.md` pages |
+| *Name, date* (signature line) | *بقلم Name، date* | starts with an Arabic word; months transliterated: نوفمبر، يوليو |
+
+- **Heading patterns.** "X as Y" → X بوصفه / بوصفها Y (المربعات الصغرى بوصفها
+  إسقاطًا); "X under squared loss" → X في حالة الخسارة التربيعية; "The
+  Mechanics of X" → آلية عمل X; "Extensions to X" → التعميم على X; "Beyond X" →
+  ما بعد X; "Limits of X" (shortcomings) → قصور X; "Taxonomy of X" → أصناف X;
+  "X at a Glance" → X في لمحة.
+- **A heading that defines a Latin-named term** puts the class noun first:
+  "Masked Softmax" → عملية *softmax المقنعة*; in running text دالة softmax
+  المقنعة.
+- **Quoted section and page titles** are copied as the chapter index gives them;
+  a list of them is joined by و (الانتباه والمحولات ونماذج فضاء الحالات).
+
+### 15.2 Slides, kickers and table headers
+
+These recur on every page; write them identically.
+
+| English | Arabic |
+|---|---|
+| Check Your Understanding (kicker); [Check]; Concept Check: … (title); (answers) | التحقق من الفهم; [التحقق]; اختبار الفهم: …; (الإجابات) |
+| Key Takeaways; Takeaway; Summary: X; Summary & Key Takeaways; Summary: Key Takeaways from X | أهم الخلاصات; الخلاصة; الملخص: X; الملخص وأهم الخلاصات; الملخص: أهم الخلاصات من X |
+| Section Summary; Section Takeaways; Section Synthesis; Section & Chapter Synthesis; Check & Synthesis | ملخص القسم; خلاصات القسم; خلاصة القسم; خلاصة القسم والفصل; التحقق والتوليف |
+| Motivation; Worked Example; (cont.); Test your understanding of X; Solution preview | الدافع; مثال محلول; (تابع); اختبار فهم X; لمحة عن الحل |
+| Pitfall:; Pitfall 1: …; Diagnostic Pitfall; Fix:; Hint:; Measured:; Predict, then verify: | مزلق:; المزلق 1: …; مزلق تشخيصي; الحل:; تلميح:; بالقياس:; توقع ثم تحقق: |
+| Next (§{…}):; Up next (§{…} Title):; Setup; Experimental Setup | التالي (§{…}):; التالي (§{…} العنوان):; الإعداد; إعداد التجربة |
+| Code Implementation; Module Implementation; High-Level API; Model Definition; Shape Verification | التنفيذ في الشيفرة (✗ تنفيذ الشيفرة); تنفيذ Module; واجهة API عالية المستوى; تعريف النموذج; التحقق من الأشكال |
+| Experimental Evidence; Empirical Probe; Open Questions; Macro Architecture; Optimization & Regularization | الدليل التجريبي; مسبار تجريبي; أسئلة مفتوحة; المعمارية الكلية; التحسين والتنظيم |
+| Resource Accounting; Resource Ledger; Systems Bottleneck; X Trade-Offs; Decision Guide; Systems-Level Comparison | محاسبة الموارد; سجل الموارد; عنق زجاجة في الأنظمة; المقايضات المعمارية; دليل القرار المعماري; مقارنة على مستوى الأنظمة |
+| Chapter Architecture; Chapter Study Strategy; Architecture and Roadmap of Chapter N; Fast track to Chapter N | معمارية الفصل; استراتيجية دراسة الفصل; معمارية الفصل N وخارطة طريقه; المسار السريع إلى الفصل N |
+| Subtlety 1; Snippet A; (default); (result); tag [extended] | النقطة الدقيقة 1; المقطع A; (القيمة الافتراضية); (النتيجة); copied |
+| Table: Model / Input / Params / MACs / Peak / Val Acc; Model / Metric; part / shape / parameters / total | النموذج / المدخلات / المعلَمات / عمليات MAC / ذروة / دقة التحقق; النموذج / المقياس; الجزء / الشكل / المعلَمات / المجموع |
+| Table: Concept / Rule; Mathematical Form; Mathematical Expression; Key Property; Key Capability / Bottleneck; Practical Guideline | المفهوم / القاعدة; العبارة الرياضية; التعبير الرياضي; الخاصية الأساسية; القدرة الأساسية / عنق الزجاجة; الإرشاد العملي |
+| Table: Role & Practical Takeaway; Role & Systems Takeaway; Technique | الدور والخلاصة العملية; الدور والخلاصة من منظور الأنظمة; التقنية |
+
+- **Slash and ampersand in headers.** A slash stays a slash; & becomes و.
+  "A / B" with a shared head noun shares it in Arabic: "high- / low-frequency"
+  → عالي / منخفض التردد.
+- **Enumerated titles.** "Pillar 1 — X", "Route 1 — X" → الركيزة 1، X (dash →
+  comma; a colon stays); Roman series stay Latin (الاستعادة I / II); "Step 1 & 2"
+  → الخطوتان 1 و 2; "Unit 1 / Unit 2" → الوحدة الأولى / الوحدة الثانية.
+- **"Why …" titles** are questions with ؟, a lead-in "Why never …:" → سبب …:.
+  Verb-led titles become noun phrases: "Notice the flaw:" → العيب الظاهر:;
+  "Replacing A by B" → الاستعاضة عن A بـ B (the English order of A and B kept).
+- **Tasks on slides** take المطلوب. With a colon in the English: "Work out …
+  for each scenario:" → المطلوب: حساب … في كل حالة:; as a sentence without a
+  colon: "Work out these 3 problems." → المطلوب حل هذه المسائل الثلاث.
+  "Predict …" → المطلوب: توقع …; "You want …" → المطلوب …; "You must **lower**
+  …" → الواجب هو **خفض** …. Drop "our" on slides: "our valley" → الوادي نفسه.
+- **Slide enumerators** "(a)", "(b)" → في الحالة (a); "Model A / Model B" →
+  النموذج A / النموذج B. Free-standing slide labels "Hypothesis A / B — …" take
+  Arabic letters: الفرضية أ / ب، ….
+- **Lead words before math at a block start** (§3.2): "**$k = 1$:**" →
+  **عند $k = 1$:**; a formula answer takes its noun (النسبة $16 : 1$، الرتبة $\le d_h$);
+  $\eta$ → المعدل $\eta$; $A \to B$ → الانتقال $A \to B$; "$n = …$" → العرض $n = …$.
+- **A kicker or title starting with a number** is reordered: "[7,850 Learnable
+  Parameters]" → [المعلَمات القابلة للتعلم: 7,850]; "[40 Steps vs. 139 Steps]" →
+  [الخطوات: 40 مقابل 139]; "1,000 Valley Runs" → جولات الوادي الـ 1,000.
+- **Slide shorthand is written out** (LR → معدل التعلم، RF → مجال الاستقبال،
+  params → معلَمات، std → انحراف معياري); acronyms that are names (BN, GAP, MAC,
+  FLOP) stay Latin with a class noun.
+
+### 15.3 Exercises
+
+- **"Exercise :exref:`…`" and "problem :exref:`…`"** → التمرين :exref:`…`,
+  also in parentheses; "(Exercise 1)" → (التمرين 1); "Problems 29–30" →
+  المسألتان 29 و 30.
+- **Parts.** "part (a)" → الجزء (a); "from (b)", "your answer to (b)" → من
+  الجزء (b)، إجابتك عن الجزء (b); "the previous part" → الجزء السابق; a part
+  letter after a reference is copied (:exref:`…`a). (i) … (v) and (a) … (d) keep
+  Latin markers, with a free-standing و before the last. "(Optional.)" →
+  (اختياري.).
+- **Exercise titles** are noun phrases with the English full stop: "Where the
+  savings come from." → مصدر التوفير.; "Why reshuffle." → لماذا نعيد الخلط. (no
+  ؟); "X ablation" → استئصال X.
+- **"Suppose you …"** → افترض أنك …; "Prove" → برهن; أثبت only for a cited
+  result in body text: أثبت :citet:`…` أن ….
+- **"Replace A with B"** as an instruction → ضع مكان A B (✗ استبدل بـ, which
+  readers take in the reverse sense): "Replace the body of `f` by X" → ضع مكان
+  جسم الدالة `f` التعبير X.
+- **Imperatives with a second reading carry their mark** (§2): فُكّ، عُدّ، ثبّت،
+  وصِف، عمّم، ركّب، كامِل ("integrate"; كامل "complete"); none on أعط، اكتب، قس.
+- **Commands in body text** (installation steps, procedure lists) are masculine
+  singular imperatives (ثبّت، نزّل، **قدّر:**); on slides the same steps are
+  verbal nouns (تقدير، ضبط). Statements about the book keep نحن.
+
+### 15.4 Credit lines and reading lists
+
+Credit lines are italic when they stand alone; titles stay English; an Arabic
+word separates the source's Latin name from its Latin link text.
+
+| Source | Arabic |
+|---|---|
+| Kaggle Learn course | *مقتبس بتصرف من دورة [Course](url) في Kaggle Learn، التمرين N.* |
+| Course assignment | *مقتبس بتصرف من مقرر CMU 10-714، الواجب [Homework 2](url)، السؤال 2.* ; a generic link text is translated: مقرر Stanford CS224N، [الواجب 4](url)، المسألتان 1(b) و 1(c); MIT 18.05، [مجموعة المسائل 7](url)، المسألة 4 |
+| Book | *مقتبس بتصرف من كتاب [Title](url) لمؤلفه Author، الفصل N.* ; several authors: لمؤلفيه A و B; a draft: مسودة الطبعة الثالثة |
+| Project, repository | مشروع [micrograd](url) لمؤلفه Andrej Karpathy، الملف `file` |
+| Collection | مجموعة [Title](url) التي أعدها Author، المسألة N |
+| Documentation | وثائق PyTorch، صفحة [title](url) |
+| Tutorial section; two sources | درس [title](url) الذي أعده Author، قسم “section”; … من دليل PyTorch التعليمي [title](url) ومن دفتر JAX المعنون [title](url) |
+
+- **Reading-list items start with a class noun** before the author or link:
+  كتاب، مقرر، سلسلة، مقالة (blog post)، دراسة / ورقة (paper)، درس (video
+  lesson)، أداة (web tool)، دليل، صفحة; a named title takes المعنون / المعنونة:
+  مقالة Gabriel Goh المعنونة *[Title](url)*. "(paywalled)" → (الوصول مدفوع).
+- **A :citet: with its English title** is the subject: يُعد :citet:`…`
+  (*Title*) المرجع …; "A and :citet:`…`" → … وكذلك :citet:`…`; an acronym and
+  its citation in one parenthesis: (**L-BFGS**، وقد اقترحها :citet:`…`).
+- **Slide citations** stay Latin: (Bernstein & Newhouse, 2024). After a math span
+  or as a clause, add وفق / لدى: (وفق Yang et al., 2022); "Polyak's method
+  (1964)" → الطريقة لدى Polyak (1964); "Wen et al. (2024) explain" → تفسير Wen et
+  al. (2024) لـ …. A kicker that is only a citation takes بحث: [بحث Loshchilov
+  و Hutter (2019)].
+- **A Latin name directly before :citet:** gets an Arabic word between them:
+  (اختصار *Momentum Orthogonalized by Newton–Schulz*، وقد اقترحه :citet:`…`).
+
+### 15.5 Figures, captions and tables
+
+- **Panels:** "(left) / (middle) / (right)" → (يسارًا) / (في الوسط) / (يمينًا);
+  "panel (a)" → اللوحة (a). **Colours** with بـ: (بالأسود)، (بالألوان); line
+  styles: (الخط المتصل)، (الخط المتقطع)، (الأحمر المتقطع).
+- **Labels printed in a figure or by code** (Fashion-MNIST classes, heads/tails)
+  are translated in the text with the English once per page: القميص قصير الكمين
+  (T-shirt), حذاءً رياضيًا (sneaker، الفئة 7), الصورة (heads); a class named in
+  quotes as the code prints it stays Latin after الفئة.
+- **Table cells:** a model or method name in the first cell takes its class
+  noun, outside the bold (المحسن **AdamW**، وحدة GPU 0); a code label is copied
+  (`VGG-style, narrow`، `d2l.Module`). "**Framework** `layer`" → الطبقة `layer`
+  في **Framework**; "A + B" between code → A مع B; "None" → لا شيء; "Standard
+  for" → الخيار المعياري لـ; "predicted sick" → التنبؤ: مريض; "$3\times 3$ conv,
+  64 to 128, stride 2" → التفاف $3\times 3$، من 64 إلى 128، بخطوة انزلاق 2.
+
+### 15.6 Class nouns and names
+
+| Kind | Class noun | Example |
+|---|---|---|
+| CNN architectures | شبكة (feminine) | شبكة LeNet، شبكة على نمط VGG ("VGG-style") |
+| Language models | نموذج (masculine) | نموذج GPT-2 small، النموذج Kimi K2 |
+| Optimizers | محسن (masculine); SGD → خوارزمية; AMSGrad, Yogi, SVRG → طريقة | محسنا Adam و AdamW، بالمحسن AdamW |
+| Layers, activations | طبقة; دالة | طبقة LayerNorm، دالتا التفعيل ReLU و GELU |
+| Techniques, methods | طريقة in prose; خوارزمية for FlashAttention on slides and for online softmax | طريقة Mixup، طريقة im2col، تنعيم Kneser–Ney |
+| Positional schemes | ترميز; NoPE → أسلوب | ترميزا RoPE و ALiBi |
+| Python class (also a page-defined "module"), function, decorator | الصنف، الدالة، المزخرف; وحدة only for a Python module or a network unit | الصنف `Trainer`، "the Trainer" → الصنف Trainer |
+| Number formats | الصيغة / بصيغة; in backticks النوع | في الصيغة fp16، بصيغة bf16، بالنوع `float32` |
+| Hardware, memory | وحدة، بطاقة، ذاكرة | بطاقة RTX 4090، ذاكرة HBM |
+| Theorems, inequalities | مبرهنة، متباينة، توطئة | مبرهنة Pythagoras، متباينة Hoeffding |
+| Quoted example word; a letter | الكلمة; الرمز | الكلمة *gave*، الكلمتان *Alice* و *Bob* |
+| Books, novels | كتاب، رواية | رواية *The Time Machine* للكاتب H. G. Wells |
+| Games, datasets | لعبة; بيانات / مجموعة بيانات | لعبة Go، بيانات Fashion-MNIST |
+
+- **Agreement follows the class noun**, also for the bare name later (يحقق Muon،
+  خوارزمية BPTT المقتطعة). The noun is needed at the start of a block, clause or
+  cell, before a particle and between Latin runs; not after a free preposition
+  or on a later mention (في Muon، في fp32).
+- **Write elliptic lists out:** "ResNet-50, -101, and -152" → ResNet-50 و
+  ResNet-101 و ResNet-152 (a bare "-101" reads wrongly in right-to-left text).
+- **Compound person names keep the source dash or double hyphen:**
+  Kullback–Leibler، Nadaraya--Watson، Black--Scholes; a pair term in an equation
+  label takes an en dash between Arabic words (حد المحتوى–الموضع); body text
+  the descriptive form (الحدان التقاطعيان بين المحتوى والموضع).
+
+### 15.7 Numbers and units
+
+- **K, M, B, T after a number in prose become words:** "8B parameters" → 8
+  مليارات معلَمة; "43M-param" → 43 مليون معلَمة; "~1.5B" → نحو 1.5 مليار; "276M
+  multiply-adds" → 276 مليون عملية ضرب وجمع. Reason: B reads as bytes next to GB.
+  Model names keep the Latin (Llama 3 8B); math spans are copied
+  ($542\text{K}$، $3.38\textrm{M}$).
+- **A unit written as a word becomes an Arabic word; a symbol is copied:** "40
+  gigabytes" → 40 غيغابايت, "40 GB" → 40 GB; "milliseconds" → ميلي ثانية; "hertz"
+  → الهرتز, Hz → Hz. "per" → لكل: "2.1 bits per byte" → 2.1 بت لكل بايت; "/param"
+  → لكل معلَمة; on slides the slash stays: رمز مميز/كلمة.
+- **Ranges between math spans** in prose: بين $5$ و $10$ or من … إلى …; "135K
+  to 141M parameters" → من 135 ألف إلى 141 مليون معلَمة; chapter ranges
+  "(:numref:`a`--:numref:`b`)" → (من :numref:`a` إلى :numref:`b`).
+- **Quantity phrases with a math span** take a noun: "a $64\times$ range" →
+  مدى قدره $64\times$; "capped at $2.5$" → بسقف مقداره $2.5$.
+
+### 15.8 Glosses, parentheses and quotations
+
+Additions to §5.4:
+
+- **Keep a per-page list** of glossed terms; a term defined on an earlier page
+  is not glossed again; a chapter index glosses only its headline terms.
+- **English plural acronyms in a gloss become singular:** (multilayer
+  perceptron, MLP); a method name's expansion: Arabic, then English (*الانتباه
+  بانحيازات خطية*، Attention with Linear Biases).
+- **A synonym in the source** ("the *label* (or *target*)") → *الوسم* (label)،
+  ويسمى أيضًا *الهدف* (target), so that two parentheses do not touch.
+- **Inside one parenthesis**, Arabic commas join a gloss to more glosses or to
+  a reference: (*التنبؤ الأدائي*، performative prediction، *وحلقات التغذية
+  الراجعة*، feedback loops); (reinforcement learning، :numref:`…`); an
+  abbreviation: (maximum pooling، واختصاره *max-pooling*).
+- **Gloss an Arabic term that could be misread** even if it is common:
+  الانزياح السلبي (passive shift), so سلبي is not read as "negative".
+- **Quoted English text stays English** inside “…” where code, a figure or the
+  argument depends on its words (a prompt, a dataset sentence, “Hey Siri”,
+  *“Alice gave Bob the book”*); a sentence that only illustrates is translated:
+  "dog bites man" → “الكلب يعض الرجل”. A well-known phrase is translated with
+  the English once: “علينا أن نتعمق أكثر” (we need to go deeper). Words printed
+  by code stay Latin in quotes: الحشو “same”.
+
+### 15.9 Notation lists, math and code in prose
+
+- **Notation entries** (`* $x$: عدد قياسي`): several symbols before the colon
+  are joined by a free-standing و; English "a" / "the" become an indefinite /
+  definite noun ("a scalar" → عدد قياسي, "the identity matrix" → مصفوفة الوحدة).
+  Openers: "introduced in" → ترد هذه الرموز أول مرة في …; "these symbols belong
+  to" → تخص هذه الرموز ….
+- **Symbol-modified adjectives** become a noun phrase:
+
+| English | Arabic |
+|---|---|
+| $n$-dimensional vector; $d$-dimensional subspace | متجه بُعده $n$; فضاء جزئي بُعده $d$ |
+| $k$-th order tensor | موتر من المرتبة $k^\textrm{th}$ |
+| degree-$k$ polynomial | كثير حدود من الدرجة $k$ |
+| $K$-fold cross-validation | التحقق المتقاطع بـ $K$ طية |
+| the $i$-th convolution (no math superscript) | الالتفاف رقم $i$ |
+| $d'$-wide layer; a 256-to-256 layer | طبقة عرضها $d'$; الطبقة التي تنقل 256 قناة إلى 256 قناة |
+| the $K$ held-out losses; the first `num_train` windows | الخسائر المستبعدة وعددها $K$; النوافذ الأولى وعددها `num_train` |
+
+- **Hyphenated compounds** become adjective + noun: "fixed-input model" → نموذج
+  ثابت المدخلات; "heavy-tailed" → ثقيل الذيل; "noise-limited" → محدود بالضوضاء.
+- **A display equation followed by a counted noun:** the block after the
+  equation starts with the noun (معلَمة قابلة للتعلم.); a following "and
+  concatenates …" → ثم يربط ….
+- **Code named in prose** takes its class noun as the object: "sweep
+  `d2l.lr_sweep`" → نجري المسح بالدالة `d2l.lr_sweep`; "save `X`" → يحفظ الموتر
+  `X`; "a fresh `X`" → نموذج `X` جديد; "toggling `norm`" → تبديل قيمة `norm`.
+  Tab note "In JAX it is `x`" → في JAX هذا … هو `x`.
+- **`if`--`else`** and a run of names joined by slashes (RandAugment/Mixup/CutMix)
+  are copied as one left-to-right run; "`a` / `b`" → `a` أو `b`.
+
+### 15.10 Consistency
+
+- **Reuse the earlier page's rendering** wherever the English recurs; the
+  chapter index decides the chapter's terms, a chapter check corrects earlier
+  units in place, and may keep a chapter-specific term (تمديد السياق in
+  attention, إطالة السياق in the RNN chapter).
+- **Source defects** (a math span cut across a paragraph, "Theorem" on a slide
+  against "Proposition" in the body) are translated as they stand; the English
+  is fixed, not the Arabic.
