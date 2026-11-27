@@ -104,12 +104,22 @@ def prepare_worktree(lang, rev: str, workdir: Path | None = None) -> Path:
 TITLE_ANCHOR = "  title: {_yaml_str(i18n.t('book.title'))}\n"
 
 
+# build_part_pdfs.py checks the full book's preamble for the 10pt class option
+# right after `\documentclass[`; a translated book puts its babel language
+# (e.g. `ngerman,`) first, so the check refuses a correct .tex.
+DOCCLASS_OLD = "re.search(r'\\\\documentclass\\[\\s*' + PDF_FONTSIZE + ',', preamble)"
+DOCCLASS_NEW = "re.search(r'\\\\documentclass\\[[^\\]]*\\b' + PDF_FONTSIZE + ',', preamble)"
+
+
 def fix_tag_tools(wt: Path):
     gen_pdf = wt / 'tools' / 'gen_pdf.py'
     if gen_pdf.exists() and 'output-file' not in gen_pdf.read_text(encoding='utf-8'):
         scopes.apply_patches(wt, [('tools/gen_pdf.py', TITLE_ANCHOR,
                                    TITLE_ANCHOR + '  output-file: Dive-into-Deep-Learning'
                                    '  # l10n build\n')])
+    parts = wt / 'tools' / 'build_part_pdfs.py'
+    if parts.exists() and DOCCLASS_OLD in parts.read_text(encoding='utf-8'):
+        scopes.apply_patches(wt, [('tools/build_part_pdfs.py', DOCCLASS_OLD, DOCCLASS_NEW)])
 
 
 def overlay(lang, rev: str, wt: Path, stale='english', scope=None) -> list:
