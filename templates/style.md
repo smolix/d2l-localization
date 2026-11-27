@@ -29,3 +29,11 @@ Conventions that differ from body text.
 ## Known pitfalls
 Words that are easy to mistranslate in ML text in this language (e.g. "bias",
 "kernel", "score", "return"); see the glossary senses.
+
+## Conventions from the translated chapters
+Filled by the editorial pass of each chapter (TRANSLATING.md section 11): how
+recurring constructs are rendered (section titles such as Summary and
+Exercises, slide headings, captions, credit lines, class nouns before Latin
+names, glosses). One rule per bullet, with one example. Single term choices go
+into the lexicon in `decisions.md`, not here.
+

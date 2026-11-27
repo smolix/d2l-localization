@@ -1,6 +1,6 @@
 import unittest
 
-from l10n.units import decisions_brief, fold_lexicon, lexicon_surfaces
+from l10n.units import decisions_brief, fold_lexicon, lexicon_surfaces, log_backlog, new_log
 
 LOG = """# Decisions log
 
@@ -52,6 +52,14 @@ class LexiconTest(unittest.TestCase):
         self.assertIn('Intro.', out)
         kept, _ = fold_lexicon(LOG, [], keep_sections=True)
         self.assertIn('- new → جديد', kept)
+
+    def test_new_log_and_backlog(self):
+        log = new_log('Français', 'fr')
+        self.assertEqual(log_backlog(log), (1, True))           # the newline after the end marker
+        out, c = fold_lexicon(log + '\n## u01 (a, d)\n\n- x → y\n', ['- loss → perte'])
+        self.assertIn('- loss → perte\n<!-- l10n:lexicon-end -->', out)
+        self.assertEqual(log_backlog(out)[0], 1)
+        self.assertEqual(log_backlog('## a\n- x → y\n'), (15, False))
 
 
 if __name__ == '__main__':

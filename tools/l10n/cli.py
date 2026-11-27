@@ -69,6 +69,7 @@ def cmd_status(args):
     pct = 100 * tot['words_done'] / tot['words'] if tot['words'] else 0.0
     print(f'{"TOTAL (" + str(len(files)) + " files)":64} {tot["done"]:6} {tot["stale"]:6} '
           f'{tot["missing"]:6} {tot["orphan"]:5} {pct:6.1f}%')
+    _warn_backlog(lang)
 
 
 def cmd_pin(args):
@@ -80,6 +81,12 @@ def cmd_pin(args):
     config.set_language_field(lang.code, 'pinned', rev)
     config.set_language_field(lang.code, 'pinned_next', None)
     print(f'{lang.code}: pinned {rev}')
+    from .units import new_log
+    log = lang.root / 'decisions.md'
+    if not log.exists():
+        log.parent.mkdir(parents=True, exist_ok=True)
+        log.write_text(new_log(lang.name, lang.code), encoding='utf-8')
+        print(f'{log}: new decisions log with an empty lexicon')
 
 
 def emit_units(lang, rev, files, out: Path, limit=None, code='pytorch', include_closed=False):
@@ -134,8 +141,24 @@ def cmd_apply(args):
             print(f'{ans.path}#{ans.uid}: {state}')
             _print_report(rep, args.quiet)
             bad += 0 if rep.ok() else 1
+    _warn_backlog(lang)
     if bad and not args.force:
         sys.exit(1)
+
+
+def _warn_backlog(lang):
+    from .units import FOLD_WARN_BYTES, log_backlog
+    p = lang.root / 'decisions.md'
+    if not p.exists():
+        return
+    n, lexicon = log_backlog(p.read_text(encoding='utf-8'))
+    if n > FOLD_WARN_BYTES:
+        how = (f'fold them into the lexicon at the editorial pass (bin/l10n fold {lang.code} <lines>)'
+               if lexicon else
+               f'compact the log (workflow .claude/workflows/compact-decisions.js, '
+               f'or bin/l10n compact {lang.code} split|merge|assemble)')
+        print(f'NOTE    {p}: {n // 1000} KB of unit sections that every work file carries; {how} '
+              '(DESIGN.md section 5)')
 
 
 def cmd_check(args):
@@ -284,6 +307,27 @@ def cmd_fold(args):
           + ('' if args.keep_sections else '; unit sections after the lexicon removed'))
 
 
+def cmd_compact(args):
+    from . import compact
+    lang = _lang(args)
+    d = Path(args.dir)
+    if args.step == 'split':
+        meta = compact.split((lang.root / 'decisions.md').read_text(encoding='utf-8'), d)
+        print(f'{len(meta)} chunk(s) in {d}')
+        for m in meta:
+            print(f"  chunk{m['chunk']:02d}.md  {m['sections']:4} sections  {m['bytes']:7} bytes")
+    elif args.step == 'merge':
+        c = compact.merge(d, lang.code)
+        print(f"{c['entries']} entries, {c['keys']} English keys, {c['conflicts']} conflicts "
+              f"({d / 'conflicts.md'})")
+    else:
+        import datetime
+        date = args.date or datetime.date.today().isoformat()
+        c = compact.assemble(d, lang, date)
+        print(f"{lang.root / 'decisions.md'}: {c['lexicon_lines']} lexicon lines, {c['bytes']} bytes; "
+              f"style.md §{c['style_section']} (+{c['style_lines_added']} lines)")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog='l10n', description='Translation tools for Dive into Deep '
                                  'Learning (see DESIGN.md, TRANSLATING.md).')
@@ -311,6 +355,13 @@ def main(argv=None):
     p.add_argument('lines', help='file of lines "- english (sense) → Arabic — note"; '
                    '"→ (delete)" removes a term')
     p.add_argument('--keep-sections', action='store_true')
+
+    p = lang_cmd('compact', cmd_compact, 'compact a running decisions log into a lexicon '
+                 '(split / merge / assemble around the agents\' work; DESIGN.md section 5)',
+                 rev=False)
+    p.add_argument('step', choices=['split', 'merge', 'assemble'])
+    p.add_argument('dir', help='working directory for chunks, extracts and resolutions')
+    p.add_argument('--date', help='date for the header (assemble; default today)')
 
     p = lang_cmd('emit', cmd_emit, 'write work files for units that need translation')
     p.add_argument('--files', nargs='*')

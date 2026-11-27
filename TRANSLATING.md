@@ -78,6 +78,12 @@ Then, after the unit, two optional sections:
 - **DECISIONS** lists choices a later unit must follow: a term chosen without
   glossary support, the rendering of a recurring phrase, a convention for a
   construct. The tools append them to the language's decisions log.
+  Write one choice per bullet in the form the lexicon uses,
+  `- english (sense) → term — note` (English in base form, as it appears in
+  running text; the sense only for words with several senses), so the editor
+  can fold it in unchanged. A rule that is not a single term (how to render a
+  kind of construct) is a bullet in plain words; the editor moves it into
+  `style.md`.
 - **NOTES** lists anything a human should look at, by block hash: an ambiguous
   or wrong English source, a glossary term that does not fit, an edit to a
   locked block. Leave it out when there is nothing to say.
@@ -198,7 +204,10 @@ The glossary entries in the BRIEF decide technical terms:
 | `proposed` | Use it unless it is wrong in context; then choose better and record it in DECISIONS. |
 | `unresolved` or no entry | Use the established term in your language's ML literature and record it in DECISIONS. |
 
-- The decisions log in the BRIEF is binding like a verified glossary entry.
+- The decisions log in the BRIEF is binding like a verified glossary entry. It
+  shows only the lexicon lines whose English occurs in your unit, plus the
+  entries of the current chapter not yet folded in; grep the language's
+  `decisions.md` if you need a term outside your unit.
 - Use one term per concept throughout. Senses matter: statistical *bias* and a
   layer's *bias*, a convolution *kernel* and a covariance *kernel*, an RL
   *return* and a function's return value are different concepts.
@@ -264,3 +273,21 @@ We minimize the loss with *stochastic gradient descent* (:numref:`sec_sgd`), whi
 
 The first sentence is unchanged byte for byte; only the phrase that corresponds
 to the English change was edited.
+
+## 11. Editorial pass (the editor, once per chapter)
+
+After every unit of a chapter is applied, an editor reads the whole translated
+chapter against the English (DESIGN.md section 5) and makes it one text: one
+term per concept across its pages and with earlier chapters, the same rendering
+of recurring titles and slide headings, one register. The editor edits
+translations in `<lang>/book/` under their anchors only. Then, before the next
+chapter starts:
+
+1. Write the chapter's final term choices, one lexicon line each
+   (`- english (sense) → term — note`; repeat an existing English part exactly
+   to change it, `- english → (delete)` to remove one), to a file and run
+   `bin/l10n fold <lang> <file>`. This merges them into the lexicon and removes
+   the unit sections `apply` appended, so the log never grows a backlog.
+2. Add each new convention rule to `style.md`'s section "Conventions from the
+   translated chapters", unless it is already there.
+3. Run `bin/l10n check <lang> --files <the chapter's pages>`: no errors.

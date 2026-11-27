@@ -292,6 +292,29 @@ def fold_lexicon(text: str, new_lines: list, keep_sections: bool = False) -> tup
     return out, counts
 
 
+FOLD_WARN_BYTES = 60_000     # unit sections not yet folded into the lexicon
+
+
+def new_log(name: str, code: str) -> str:
+    """A fresh decisions.md for a new language: an empty lexicon, to which every
+    editorial pass folds its chapter's terms (DESIGN.md section 5)."""
+    return (f'# Decisions log: {name} ({code})\n\n'
+            'Binding like a verified glossary entry (TRANSLATING.md §7). The lexicon below has '
+            'one line per English term and sense, `- english / variant (sense) → term — note`; '
+            'a work file shows only the lines whose English occurs in its unit. `l10n apply` '
+            'appends a section per unit after the lexicon; each chapter\'s editorial pass folds '
+            f'them in with `bin/l10n fold {code} <lines>` (DESIGN.md §5).\n\n'
+            f'## Lexicon\n\n{LEXICON_BEGIN}\n{LEXICON_END}\n')
+
+
+def log_backlog(text: str) -> tuple:
+    """(bytes of the log outside a lexicon, has_lexicon): what `fold` or `compact` would
+    remove from every work file."""
+    if LEXICON_BEGIN in text and LEXICON_END in text:
+        return len(text.split(LEXICON_END, 1)[1].encode()), True
+    return len(text.encode()), False
+
+
 def previous_unit_translation(lang, rev, u: Unit, units, blocks, entries) -> str:
     prev = None
     if u.index > 1:
