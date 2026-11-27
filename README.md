@@ -16,7 +16,9 @@ a tagged English release (`en-YYYY.MM.DD`) and is served from its own bucket
 
 ## Native-speaker review of the style guides
 
-German (`de/style.md`) is confirmed. Every other style guide is a draft written on
+German (`de/style.md`) is confirmed. Japanese (`ja/style.md`) was reviewed by a
+native speaker (PR #2, 2026-11-27: だ・である body text, 〜せよ exercises, the
+other proposals accepted; its §9 records the decisions). Every other style guide is a draft written on
 2026-11-26 by Fable 5.2 from TRANSLATING.md, the glossary and the translation
 tests in `evals/`; no native speaker has reviewed it yet. Each guide ends with
 its settings, a numbered "For the author to confirm" list (each question has a

@@ -1,9 +1,8 @@
 # Style guide: Japanese (ja)
 
-Draft of 2026-11-26 for the author's review. Translators read this with every
-unit (TRANSLATING.md §7–§8). Each rule has one reason and one example
-(English → Japanese). Points that still need the author's ruling are collected
-in §9.
+Reviewed by a native Japanese speaker (PR #2, 2026-11-27). Translators read
+this with every unit (TRANSLATING.md §7–§8). Each rule has one reason and one
+example (English → Japanese). §9 records the decisions of the review.
 
 Order of authority: the decisions log, then this guide, then the glossary. The
 glossary's verified entries are binding except for the corrections in §7.2
@@ -13,25 +12,26 @@ glossary's verified entries are binding except for the corrections in §7.2
 
 | Where | Rule | Example |
 |---|---|---|
-| Body text, list items, tab notes, notes in the body | だ・である (常体)． である is the register of graduate monographs (the Japanese Goodfellow et al. and Bishop). | "Linear regression is a single artificial neuron." → 線形回帰は、1 個の人工ニューロンである。 |
+| Body text, list items, tab notes, notes in the body | だ・である (常体); never です・ます. Reason: である is the register of the Japanese technical monographs this book sits beside (the Japanese Goodfellow et al. and Bishop), and it keeps sentences short. | "Linear regression is a single artificial neuron." → 線形回帰は、1 個の人工ニューロンである。 |
 | Headings, captions, slides, table cells | Noun phrases (体言止め) or plain form (常体); never です・ます (JTF 1.1.2, 1.1.5). See §6. | "Training the Model" → モデルの訓練 |
-| Exercises | Polite requests: 〜してください; questions end in 〜ですか。 See §6. | "Show that …" → …を示してください。 |
+| Exercises | Imperative: 〜せよ / 〜を示せ; questions end in 〜か。 (なぜか。). See §6. | "Show that …" → …を示せ。 |
 
 **"We" and "you".** Japanese drops the subject. Do not write 私たちは or あなたは
 for the book's "we" and "you".
 
 | English | Japanese | Example |
 |---|---|---|
-| we + action in the text | no subject, 〜します | "We minimize the loss with SGD." → 損失は SGD で最小化します。 |
-| "let us", "let's", "we now turn to" | 〜しましょう / 〜してみましょう (only where the English invites; not every sentence) | "Let us look at the gradient." → 勾配を見てみましょう。 |
-| "in this section/chapter/book, we …" | 本節では / 本章では / 本書では + verb | "In this section, we formulate the model." → 本節では、モデルを定式化します。 |
-| "our model", "our dataset" | この / その, or nothing | "our model overfits" → このモデルは過学習しています |
-| "you can", "suppose you want" | no subject; 〜できます / 〜とします | "Suppose you want to estimate the price of a house." → 住宅の価格を見積もりたいとします。 |
-| "we recommend", "we believe" (the authors' view) | 本書では〜 / 〜と考えられます | "We recommend AdamW." → 本書では AdamW を勧めます。 |
-| "we" = people, the field | 私たち, 人間, 研究者 (here it is real content) | "We humans attend selectively." → 私たち人間は、選択的に注意を向けます。 |
+| we + action in the text | no subject, 〜する | "We minimize the loss with SGD." → 損失は SGD で最小化する。 |
+| "let us", "let's", "we now turn to" | 〜しよう / 〜してみよう (only where the English invites; not every sentence) | "Let us look at the gradient." → 勾配を見てみよう。 |
+| "in this section/chapter/book, we …" | 本節では / 本章では / 本書では + verb | "In this section, we formulate the model." → 本節では、モデルを定式化する。 |
+| "our model", "our dataset" | この / その, or nothing | "our model overfits" → このモデルは過学習している |
+| "you can", "suppose you want" | no subject; 〜できる / 〜とする | "Suppose you want to estimate the price of a house." → 住宅の価格を見積もりたいとする。 |
+| "we recommend", "we believe" (the authors' view) | 本書では〜 / 〜と考えられる | "We recommend AdamW." → 本書では AdamW を勧める。 |
+| "we" = people, the field | 私たち, 人間, 研究者 (here it is real content) | "We humans attend selectively." → 私たち人間は、選択的に注意を向ける。 |
 
-Vary sentence endings (〜です, 〜ます, 〜でしょう, 〜ません, 〜からです) so that a
-paragraph is not a run of 〜ます。 Do not mix in だ・である at sentence ends.
+Vary sentence endings (〜である, 〜する, 〜だろう, 〜ない, 〜からである) so that a
+paragraph is not a run of 〜である。 Use 〜のである sparingly. Never mix in
+です・ます.
 
 ## 2. Punctuation and spacing
 
@@ -39,15 +39,15 @@ paragraph is not a run of 〜ます。 Do not mix in だ・である at sentence
 
 | Item | Rule | Example |
 |---|---|---|
-| Comma, full stop | Full-width 、 and 。; never ，． or half-width `,` `.` as Japanese punctuation (JTF 1.2.1). | "Here $b$ is the bias." → ここで、$b$ はバイアスです。 |
+| Comma, full stop | Full-width 、 and 。; never ，． or half-width `,` `.` as Japanese punctuation (JTF 1.2.1). | "Here $b$ is the bias." → ここで、$b$ はバイアスである。 |
 | Lists in a sentence | 、 between items, also between Latin items; no "and" comma. | "Adam, RMSProp, and SGD" → Adam、RMSProp、SGD |
 | Parentheses | Full-width （） around Japanese text, an English gloss, or a reference; no space inside or outside (JTF 2.3.3, 3.3.1). Half-width `()` only where they belong to math, code, a Latin expression, or a panel marker `(a)`. | "(the workhorse optimizer of deep learning)" → （深層学習で最もよく使われるオプティマイザ） |
-| Colon | Full-width ： only after a label (a bold lead-in, 例：); no space after it. A colon that introduces a clause, list or equation becomes a sentence ending (JTF 3.2.7). | "**Core assumption:** …" → **中心となる仮定：**… ; "We get the following:" → 次の結果が得られます。 |
-| Semicolon, em dash | Not used. Split the sentence, or use 、 or （）. | "the bias—an offset—shifts the plane" → バイアス（オフセット）は平面を平行移動させます |
+| Colon | Full-width ： only after a label (a bold lead-in, 例：); no space after it. A colon that introduces a clause, list or equation becomes a sentence ending (JTF 3.2.7). | "**Core assumption:** …" → **中心となる仮定：**… ; "We get the following:" → 次の結果が得られる。 |
+| Semicolon, em dash | Not used. Split the sentence, or use 、 or （）. | "the bias—an offset—shifts the plane" → バイアス（オフセット）は平面を平行移動させる |
 | Quotation marks | 「」 for quotations, scare quotes and words mentioned as words; 『』 for book titles and for quotes inside 「」. No “ ” in Japanese text. | the "attention" weights → 「アテンション」の重み ; *Deep Learning* (book) → 『Deep Learning』 |
-| ? and ! | End body questions with 〜か。 and exclamations with 。 (JTF 3.2.1–3.2.2). ？ is allowed only in a heading or slide title that is a question. | "Why does this work?" → なぜこれでうまくいくのでしょうか。 |
+| ? and ! | End body questions with 〜か。 and exclamations with 。 (JTF 3.2.1–3.2.2). ？ is allowed only in a heading or slide title that is a question. | "Why does this work?" → なぜこれでうまくいくのだろうか。 |
 | Coordinate compounds | ・ joins parallel items inside one term; no slash. | "queries, keys, and values" as one notion → クエリ・キー・値 |
-| Emphasis | Keep `*…*` and `**…**` exactly on the corresponding word(s). Do not replace emphasis with 「」 and do not add any. The English gloss and particles stay outside the markers. | "*regression* predicts …" → *回帰*は…を予測します ; `*重み減衰*（weight decay）` |
+| Emphasis | Keep `*…*` and `**…**` exactly on the corresponding word(s). Do not replace emphasis with 「」 and do not add any. The English gloss and particles stay outside the markers. | "*regression* predicts …" → *回帰*は…を予測する ; `*重み減衰*（weight decay）` |
 
 ### 2.2 Spacing: one rule
 
@@ -68,12 +68,12 @@ for all half-width runs can be checked mechanically. This departs from JTF
 
 | English | Japanese |
 |---|---|
-| "updates $\mathbf{w}$ after every minibatch of 256 examples" | 256 個の例からなるミニバッチごとに $\mathbf{w}$ を更新します |
-| "ResNet appeared in 2015." | ResNet は 2015 年に登場しました。 |
-| "as shown in :numref:`fig_x`, the loss falls" | :numref:`fig_x` に示すように、損失は減少します |
+| "updates $\mathbf{w}$ after every minibatch of 256 examples" | 256 個の例からなるミニバッチごとに $\mathbf{w}$ を更新する |
+| "ResNet appeared in 2015." | ResNet は 2015 年に登場した。 |
+| "as shown in :numref:`fig_x`, the loss falls" | :numref:`fig_x` に示すように、損失は減少する |
 | "the KV cache (see :numref:`sec_kv`)" | KV キャッシュ（:numref:`sec_kv`）|
 | "an accuracy of 92.3%" | 92.3% の正解率 |
-| "`nn.Linear` is a *layer*" | `nn.Linear` は*層*です |
+| "`nn.Linear` is a *layer*" | `nn.Linear` は*層*である |
 
 - Digits and Latin letters are always half-width (JTF 2.1.8–2.1.9); katakana is
   always full-width.
@@ -82,7 +82,7 @@ for all half-width runs can be checked mechanically. This departs from JTF
 - Do not write 図, 表, 式 or 節 before a reference role: the build prints the
   prefix. "in :numref:`fig_x`" → ``:numref:`fig_x` では``, not ``図 :numref:`fig_x` では``.
 - A citation stands at the end of the clause it supports, before the 、 or 。:
-  …を発表しました :cite:`Legendre.1805`。
+  …を発表した :cite:`Legendre.1805`。
 
 ### 2.3 Order of protected tokens
 
@@ -91,10 +91,10 @@ Japanese is verb-final. Use particles and topic-fronting to keep the order
 before reordering; this is nearly always possible.
 
 "We update $\mathbf{w}$ using the gradient $\mathbf{g}$ and the step size
-$\eta$." → $\mathbf{w}$ は、勾配 $\mathbf{g}$ とステップサイズ $\eta$ を使って更新します。
+$\eta$." → $\mathbf{w}$ は、勾配 $\mathbf{g}$ とステップサイズ $\eta$ を使って更新する。
 
 - End the sentence before a display equation and start a new one after it:
-  "…is given by $$…$$ where $n$ is…" → …は次の式で与えられます。 $$…$$ ここで、$n$ は…です。
+  "…is given by $$…$$ where $n$ is…" → …は次の式で与えられる。 $$…$$ ここで、$n$ は…である。
 - Math that contains English stays as it is; do not repeat its meaning in
   Japanese. "the $i^{\textrm{th}}$ house" → $i^{\textrm{th}}$ の住宅 (not 「番目」).
 - If the English order would give wrong or unreadable Japanese, write correct
@@ -118,7 +118,7 @@ if an earlier unit of the page already introduced the term, do not repeat it.
 - Never in headings, captions, slides, exercises or table cells.
 
 "*stochastic gradient descent* (SGD) updates …" → *確率的勾配降下法*（stochastic
-gradient descent、SGD）は…を更新します。 Reason: readers go on to English papers
+gradient descent、SGD）は…を更新する。 Reason: readers go on to English papers
 and documentation; once per page keeps the text clean.
 
 ### 3.2 Kanji, katakana or English
@@ -172,7 +172,7 @@ units or currencies.
 - **Models, libraries, datasets, companies, hardware, benchmarks:** Latin
   script, exactly as in English. "Fashion-MNIST", "RTX 4090", "OpenAI".
 - **People:** Latin script, no honorific (no 氏, 博士). "Gauss grounded least
-  squares in probability theory." → Gauss は、最小二乗法を確率論で基礎づけました。 Reason:
+  squares in probability theory." → Gauss は、最小二乗法を確率論で基礎づけた。 Reason:
   citations and searches use the Latin form, and transliterations of less-known
   names are unreliable.
 - **Exception: terms named after people** follow the glossary, in katakana:
@@ -189,12 +189,12 @@ units or currencies.
 | Kind | Rule | Example |
 |---|---|---|
 | `heading` | Noun phrase, no 。, no English gloss. English "-ing + object" becomes object + の + noun. A question keeps its question form. | "The Model and the Loss" → モデルと損失 ; "Training the Model" → モデルの訓練 ; "Why Depth Helps" → なぜ深さが有効か |
-| `caption` | Plain form or noun phrase, not です・ます. End with 。 exactly when the English caption ends with a full stop. Keep `(a)`, `(b)`. | "Masks compose by logical AND." → マスクは論理積で合成される。 |
+| `caption` | The body's だ・である (§1), or a noun phrase where the English caption is one; never です・ます. End with 。 exactly when the English caption ends with a full stop. Keep `(a)`, `(b)`. | "Masks compose by logical AND." → マスクは論理積で合成される。 |
 | `slide_title`, `kicker` | Noun phrase, as short as the English; no 。 | `title="The Squared Error Loss Function"` → `title="二乗誤差損失関数"` ; `[Measuring Misfit]{.kicker}` → `[当てはまりの悪さを測る]{.kicker}` |
-| `slide_text` | Plain form or 体言止め, one line where the English is one line; no 。 after a single-sentence bullet. Bold lead-ins keep their bold and take ：. | "**Absorbing the bias:** Appending a ones column reduces the affine map to a single matrix product." → **バイアスの吸収：**1 の列を追加すると、アフィン写像は 1 つの行列積になる |
-| `exercise` | 〜してください; questions 〜ですか。 / なぜですか。 A bold title stays bold. Reason: 〜せよ and 〜しなさい belong to である-style exam books and clash with the body register. | "Show that the errors sum to zero. Why?" → 誤差の和が 0 になることを示してください。それはなぜですか。 |
-| `tab_note` | Body register. Describe this framework only; never compare frameworks. API names stay in code. | "PyTorch's `nn.LazyLinear(1)` requires only the output dimension." → PyTorch の `nn.LazyLinear(1)` に必要なのは、出力次元だけです。 |
-| `note` | The register of its surroundings: plain form inside a slide, です・ます in the body. Labels: **Answers:** → **解答：**, **Note:** → **補足：** | "**Answers:**" → **解答：** |
+| `slide_text` | Plain form as in the body, but shorter: end a bullet in 体言止め or a plain verb (〜になる, 〜する), and drop a final である or だ where the bullet reads without it. One line where the English is one line; no 。 after a single-sentence bullet. Bold lead-ins keep their bold and take ：. | "**Absorbing the bias:** Appending a ones column reduces the affine map to a single matrix product." → **バイアスの吸収：**1 の列を追加すると、アフィン写像は 1 つの行列積になる |
+| `exercise` | Imperative 〜せよ / 〜を示せ; questions 〜か。 / なぜか。 Hints and remarks inside an exercise in だ・である (**Hint:** → **ヒント：**). A bold title stays bold. Reason: 〜せよ matches the である body and is the form of exercises in Japanese textbooks. | "Show that the errors sum to zero. Why?" → 誤差の和が 0 になることを示せ。それはなぜか。 |
+| `tab_note` | だ・である, as the body (§1). Describe this framework only; never compare frameworks. API names stay in code. | "PyTorch's `nn.LazyLinear(1)` requires only the output dimension." → PyTorch の `nn.LazyLinear(1)` に必要なのは、出力次元だけである。 |
+| `note` | Plain form everywhere: である in the body, plain form or 体言止め inside a slide. Labels: **Answers:** → **解答：**, **Note:** → **補足：** | "**Answers:**" → **解答：** |
 | `table_row` | Noun phrases; numbers and units as in §4. | "Training time" → 訓練時間 |
 
 The cover kicker `[Dive into Deep Learning · §2.1]{.kicker}` is rewritten by the
@@ -254,20 +254,20 @@ Transformer (トランスフォーマー), Adam (アダム).
 
 | Pattern | Write instead | Example |
 |---|---|---|
-| "In this section, we will …" word for word | 本節では + verb, no subject | ✗ このセクションでは、私たちは損失関数を紹介するつもりです。 ✓ 本節では、損失関数を導入します。 |
+| "In this section, we will …" word for word | 本節では + verb, no subject | ✗ このセクションでは、私たちは損失関数を紹介するつもりである。 ✓ 本節では、損失関数を導入する。 |
 | Three or more の in a row | A verb or a clause | "the shape of the output of the first layer of the network" ✗ ネットワークの最初の層の出力の形状 ✓ ネットワークの最初の層が出力する形状 |
-| Passive carried over | Active with no subject | "The loss is computed and the gradients are then propagated backward." ✗ 損失が計算され、その後、勾配が逆方向に伝播されます。 ✓ 損失を計算し、続いて勾配を逆伝播します。 |
-| これ, それ, それら chains | Repeat the noun, or drop the pronoun | "This means that it converges." ✗ これは、それが収束することを意味します。 ✓ つまり、この反復は収束します。 |
-| Inanimate subject + transitive verb | 〜から / 〜により + わかる, なる | "This result tells us that depth helps." ✗ この結果は、深さが役立つことを私たちに教えます。 ✓ この結果から、深さが有効だとわかります。 |
-| 〜することができます, 〜を行います | 〜できます, the verb itself | "we can compute" → 計算できます ; "performs the update" → 更新します |
-| "Note that", "Recall that" every time as 〜に注意してください | なお、〜です。 / 〜でした。 | "Recall that $b$ is the bias." → $b$ はバイアスでした。 |
+| Passive carried over | Active with no subject | "The loss is computed and the gradients are then propagated backward." ✗ 損失が計算され、その後、勾配が逆方向に伝播される。 ✓ 損失を計算し、続いて勾配を逆伝播する。 |
+| これ, それ, それら chains | Repeat the noun, or drop the pronoun | "This means that it converges." ✗ これは、それが収束することを意味する。 ✓ つまり、この反復は収束する。 |
+| Inanimate subject + transitive verb | 〜から / 〜により + わかる, なる | "This result tells us that depth helps." ✗ この結果は、深さが役立つことを私たちに教える。 ✓ この結果から、深さが有効だとわかる。 |
+| 〜することができる, 〜を行う | 〜できる, the verb itself | "we can compute" → 計算できる ; "performs the update" → 更新する |
+| "Note that", "Recall that" every time as 〜に注意されたい / 〜を思い出そう | なお、〜である。 / 〜であった。 | "Recall that $b$ is the bias." → $b$ はバイアスであった。 |
 | Idioms translated by image | The meaning | "to get our feet wet" ✗ 足を濡らすために (the earlier edition) ✓ 手始めに |
-| 彼ら, それら for models or data; plural 〜たち | The noun, singular | "they overfit" (models) → これらのモデルは過学習します |
+| 彼ら, それら for models or data; plural 〜たち | The noun, singular | "they overfit" (models) → これらのモデルは過学習する |
 | One long sentence with stacked relative clauses | Two or three sentences within the block | Split at "which", "where", "so that". |
 
-Logical phrases are fixed: because → 〜ため / 〜からです; therefore → したがって;
+Logical phrases are fixed: because → 〜ため / 〜からである; therefore → したがって;
 however → しかし; only if → 〜の場合に限り; if and only if → 〜のとき、かつそのときに限り;
-at most → 高々 (in mathematics), 多くても; at least → 少なくとも; "let $x$ be …" → $x$ を…とします; such that →
+at most → 高々 (in mathematics), 多くても; at least → 少なくとも; "let $x$ be …" → $x$ を…とする; such that →
 …を満たす; with respect to → …に関する; without loss of generality → 一般性を失うことなく.
 
 ## 8. Sources
@@ -290,23 +290,35 @@ at most → 高々 (in mathematics), 多くても; at least → 少なくとも;
 - Spacing and emphasis behaviour: tested with the pandoc bundled in d2l-neu's
   `.venv-build` on 2026-11-26.
 
-## 9. For the author to confirm
+## 9. Decisions (native-speaker review, 2026-11-27)
 
-1. **Spaces between Japanese and half-width runs** (§2.2). Required around
-   references and after math by the current build; applied to all Latin words
-   and digits for one rule. The alternative is JTF's no-space rule with spaces
-   only around references and math.　- OK
-2. **Long-vowel convention** (§3.3): ML usage (パラメータ) rather than JTF and
-   Microsoft usage (パラメーター). - OK
-3. **アテンション rather than 注意機構** (§7.1), and 自己アテンション against the glossary's
-   自己注意. - OK
-4. **訓練 for "train", 学習 for "learn"** (§7.1) against the glossary's
-   training = 学習. - OK
-5. **The glossary corrections in §7.2**, several against `verified` entries. - OK
-6. **Exercises in 〜せよ (§6).
-7. **People in Latin script** even for Gauss, Bayes, Newton (§5). - OK
-8. **Checks:** whether `l10n check` may accept a different token order with a
-   NOTE (§2.3), whether `N×` and en-dash ranges count as protected tokens (§4),
-   and whether the Japanese build prints 図, 表, 式 before references (§2.2).  - OK
-9. **Italics:** Japanese fonts have no italic; the Japanese build should style
-   `*…*` as bold or with emphasis dots (a build setting, not a translator rule). - OK
+A native Japanese speaker reviewed the draft of 2026-11-26 (PR #2). The review
+changed the register and the form of exercises and accepted the other points
+as proposed.
+
+- **Register** (§1): changed. Body text, list items, tab notes and notes are
+  written in だ・である, not です・ます. All rules and examples in this guide
+  follow it.
+
+1. **Spaces between Japanese and half-width runs** (§2.2): accepted. One
+   half-width space next to every Latin word, number, inline math, inline code
+   and reference role, not only where the build requires it.
+2. **Long-vowel convention** (§3.3): accepted. ML usage (パラメータ), not JTF and
+   Microsoft usage (パラメーター).
+3. **アテンション, not 注意機構** (§7.1): accepted, with 自己アテンション in place of the
+   glossary's earlier 自己注意.
+4. **訓練 for "train", 学習 for "learn"** (§7.1): accepted, in place of the
+   glossary's earlier training = 学習.
+5. **The glossary corrections in §7.2**: accepted, including those against
+   `verified` entries; they are applied in the glossary.
+6. **Exercises** (§6): changed. Exercises use the imperative 〜せよ / 〜を示せ and
+   questions end in 〜か。, not 〜してください / 〜ですか。
+7. **People in Latin script** (§5): accepted, also for Gauss, Bayes and Newton.
+8. **Checks:** `l10n check` already accepts a reordered block when a NOTE names
+   its anchor (§2.3), and it counts `N×` and en-dash ranges by their digits
+   only, so 2 倍 and 40〜55 pass (§4). Whether the Japanese build prints 図, 表,
+   式 before references (§2.2) is to be confirmed on the first Japanese build.
+9. **Italics:** decided that the Japanese build styles `*…*` without italics,
+   since Japanese fonts have none. Whether it uses bold or emphasis dots (傍点)
+   is still to choose. This is build work, not a translator rule: translators
+   keep the markers as §2.1 says.

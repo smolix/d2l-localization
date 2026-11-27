@@ -26,7 +26,8 @@ commit `83260ff`.
   and Converges to [1, -1]" means the kernel, not the loss.
 
 **Verdict (Alex Smola, native speaker):** Fable 5.2 writes the best German of the
-three. It is the translator for German (`translator` in `languages.yml`).
+three Claude models. After the Codex runs below, the author chose Codex GPT-6.2
+Astra as the translator for German (`translator` in `languages.yml`).
 
 ## 2026-11-26: Astra, Sol and Terra
 

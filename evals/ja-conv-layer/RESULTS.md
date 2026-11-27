@@ -104,3 +104,11 @@ Overall, `neon` (9.4 min, 8 false-match warnings) and `carbon` (16.4 min, 8
 false-match warnings, except for the *先鋭化* kanji in `6f4ddec6`) write clean,
 natural `です・ます` technical Japanese on par with `fable` and `opus`.
 Native-reader verdict pending.
+
+## Verdict
+
+**Verdict (author, 2026-11-27):** Gemini 4 Carbon (`gemini-4-carbon-medium`) is
+the translator for Japanese (`translator` in `languages.yml`). The tests above
+were written in です・ます; the native-speaker review of `ja/style.md` (PR #2,
+2026-11-27) moved body text to だ・である and exercises to 〜せよ, so the book
+translation follows the revised guide, not these samples' register.

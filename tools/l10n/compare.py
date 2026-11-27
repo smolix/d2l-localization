@@ -17,6 +17,7 @@ import re
 from contextlib import redirect_stdout
 from pathlib import Path
 
+from . import config
 from .answers import parse_answer
 
 TEMPLATE = Path(__file__).with_name('compare.html')
@@ -125,6 +126,15 @@ def compare(lang_code: str, evaldir: str, out: str | None = None) -> Path:
     return path
 
 
+def style_status(lang) -> str:
+    """'reviewed', 'draft' or '' (no guide), from the head of <lang>/style.md."""
+    p = Path(__file__).resolve().parents[2] / lang / 'style.md'
+    if not p.exists():
+        return ''
+    head = ' '.join(p.read_text(encoding='utf-8').splitlines()[:6])
+    return 'draft' if re.search(r'\bdraft\b', head, re.I) else 'reviewed'
+
+
 def compare_all(evals: str, out: str) -> Path:
     """One page per test directory (<lang>-<name>/) plus an index that summarises them."""
     ev, od = Path(evals), Path(out)
@@ -140,11 +150,20 @@ def compare_all(evals: str, out: str) -> Path:
         results = d / 'RESULTS.md'
         verdict = ''
         if results.exists():
-            m = re.search(r'\*\*Verdict[^*]*\*\*\s*(.+)', results.read_text(encoding='utf-8'))
-            verdict = m.group(1).strip() if m else ''
+            # the last verdict paragraph (later runs append theirs), unwrapped
+            found = re.findall(r'\*\*Verdict[^*]*\*\*\s*(.+?)(?:\n\s*\n|\Z)',
+                               results.read_text(encoding='utf-8'), re.S)
+            verdict = ' '.join(found[-1].split()) if found else ''
+        try:
+            translator = config.get_language(lang).raw.get('translator') or ''
+        except config.L10nError:
+            translator = ''
         tests.append({'test': d.name, 'page': page, 'lang': lang, 'name': data['name'],
                       'unit': data['unit'], 'en': data['en_words'], 'verdict': verdict,
-                      'style': (Path(__file__).resolve().parents[2] / lang / 'style.md').exists(),
+                      'translator': translator,
+                      'chosen': next((a['name'] for a in data['agents']
+                                      if re.search(rf'\b{re.escape(a["name"])}\b', translator)), ''),
+                      'style': style_status(lang),
                       'agents': [{k: a[k] for k in ('name', 'errors', 'warnings', 'words', 'missing')}
                                  for a in data['agents']]})
         print(f'{d.name}: ' + ', '.join(f"{a['name']} {a['errors']}/{a['warnings']}" for a in data['agents']))

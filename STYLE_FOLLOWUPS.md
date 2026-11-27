@@ -2,6 +2,13 @@
 
 Settings, string overrides, checker/build code and glossary corrections proposed by the Fable-written style guides (`<code>/style.md`). None is applied yet. Each guide's final sections hold the details and the questions for a native reviewer.
 
+## ja (ja/style.md; reviewed by a native speaker, PR #2, 2026-11-27)
+- languages.yml ja: translator gemini-4-carbon (done). No check/typography settings needed.
+- ja/strings.yml (new, `l10n strings ja`): confirm on the first Japanese build that references print 図, 表, 式 (and 第 N 章 / N 節) from Quarto's Japanese defaults; pin them in strings.yml if not.
+- New code (confirmed): the Japanese build styles `*…*` without italics (CSS `em` in HTML; xeCJK in the PDFs and Beamer decks). Bold or emphasis dots (傍点) is still to choose.
+- Checker: nothing new; reordered tokens with a NOTE and `N×`/en-dash ranges are already handled (protect.py).
+- Glossary: nothing; 訓練, 自己アテンション and the §7.2 corrections are already in ja.jsonl.
+
 ## zh (zh/style.md, 606 lines; 17 to-confirm, 11 glossary corrections)
 - languages.yml: none.
 - zh/strings.yml (new): quarto.crossref-sec-prefix "§" (to confirm; Quarto zh prints 小节/章节); pin fig/tbl/eq to 图/表/式.

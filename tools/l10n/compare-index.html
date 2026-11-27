@@ -46,6 +46,8 @@ td.lang small { display: block; color: var(--muted); font-weight: 400; }
 .chip { display: inline-block; font-size: 0.78rem; padding: 1px 7px; border-radius: 999px; background: var(--chip); color: var(--muted); }
 .chip.yes { color: var(--ok); }
 td.verdict { color: var(--muted); max-width: 30ch; font-size: 0.9rem; }
+td.translator { font-size: 0.85rem; white-space: nowrap; }
+td.chosen { background: var(--chosen, rgba(46, 125, 50, 0.12)); font-weight: 600; }
 .legend { color: var(--muted); font-size: 0.88rem; margin-top: 14px; max-width: 80ch; }
 </style>
 </head>
@@ -63,22 +65,26 @@ const agents = [];
 TESTS.forEach(t => t.agents.forEach(a => { if (!agents.includes(a.name)) agents.push(a.name); }));
 document.getElementById('lede').innerHTML =
   `${TESTS.length} languages, ${agents.length} translators each (${agents.map(a => `<code>${esc(a)}</code>`).join(', ')}), the same page and English revision. ` +
-  `Style guide: whether the language has one yet; without it, translators followed the general rules and recorded their own conventions.`;
+  `Style guide: reviewed (confirmed by the author or a native speaker), draft (awaiting native-speaker review) or none. ` +
+  `Translator: the one chosen for the book translation (<code>languages.yml</code>); its cells are highlighted.`;
 const cell = (a, t) => {
   if (!a) return `<td class="first n" colspan="3">–</td>`;
   const ratio = t.en ? (a.words / t.en).toFixed(2) : '–';
-  return `<td class="first n ${a.errors ? 'bad' : 'ok'}">${a.errors}</td>` +
-         `<td class="n ${a.warnings > 10 ? 'warn' : ''}">${a.warnings}</td>` +
-         `<td class="n">${ratio}×${a.missing ? ` <span class="bad">−${a.missing}</span>` : ''}</td>`;
+  const pick = a.name === t.chosen ? ' chosen' : '';
+  return `<td class="first n${pick} ${a.errors ? 'bad' : 'ok'}">${a.errors}</td>` +
+         `<td class="n${pick} ${a.warnings > 10 ? 'warn' : ''}">${a.warnings}</td>` +
+         `<td class="n${pick}">${ratio}×${a.missing ? ` <span class="bad">−${a.missing}</span>` : ''}</td>`;
 };
+const STYLE = {reviewed: ['yes', 'reviewed'], draft: ['', 'draft'], '': ['', 'none']};
 document.getElementById('t').innerHTML =
   `<thead><tr><th rowspan="2">Language</th><th rowspan="2">Style guide</th>` +
-  agents.map(a => `<th class="grp" colspan="3">${esc(a)}</th>`).join('') + `<th rowspan="2">Verdict</th></tr>` +
+  agents.map(a => `<th class="grp" colspan="3">${esc(a)}</th>`).join('') + `<th rowspan="2">Translator</th><th rowspan="2">Verdict</th></tr>` +
   `<tr class="agents">` + agents.map(() => `<th class="first n">err</th><th class="n">warn</th><th class="n">length</th>`).join('') + `</tr></thead>` +
   `<tbody>` + TESTS.map(t => `<tr>` +
     `<td class="lang"><a href="${esc(t.page)}">${esc(t.name)}</a><small>${esc(t.lang)} · ${esc(t.test)}</small></td>` +
-    `<td><span class="chip ${t.style ? 'yes' : ''}">${t.style ? 'yes' : 'not yet'}</span></td>` +
+    `<td><span class="chip ${STYLE[t.style][0]}">${STYLE[t.style][1]}</span></td>` +
     agents.map(n => cell(t.agents.find(a => a.name === n), t)).join('') +
+    `<td class="translator">${t.translator ? `<code>${esc(t.translator)}</code>` : 'not chosen'}</td>` +
     `<td class="verdict">${esc(t.verdict || 'pending')}</td></tr>`).join('') + `</tbody>`;
 </script>
 </body>
