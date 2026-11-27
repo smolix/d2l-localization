@@ -1936,3 +1936,78 @@
 
 - „serving“ → „Inferenzbetrieb“, als Tätigkeit „ein Modell für Anfragen bereitstellen“.
 - „accelerator“ → „Beschleuniger“, „workload“ → „Arbeitslast“.
+
+## chapter_appendix-tools-for-deep-learning/index.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „serving“ → „Inferenzbetrieb“ für den Betrieb eines Modells zur Bearbeitung von Anfragen.
+- „continuous batching“ → „kontinuierliches Batching“.
+
+## chapter_appendix-tools-for-deep-learning/interactive-development.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „notebook kernel“ → „der Notebook-Kernel“, „execution counter“ → „der Ausführungszähler“.
+- „worker process“ → „der Arbeitsprozess“, „stack frame“ → „der Aufrufrahmen“.
+- „magic“ (IPython) → „der Magic-Befehl“. Benannte Befehle und Ansichten der englischen Editoroberfläche behalten ihren Namen.
+
+## chapter_appendix-tools-for-deep-learning/hosted-notebooks.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „runtime“ → „Laufzeitumgebung“, „setup cell“ → „Einrichtungszelle“, „compute units“ (Colab) → „Recheneinheiten“.
+- „notebook“ → „das Notebook“, „kernel“ im Jupyter-Kontext → „der Kernel“, „software image“ → „Softwareabbild“, „scratch space“ → „temporärer Speicher“.
+
+## chapter_appendix-tools-for-deep-learning/hosted-notebooks.md#u02 (Codex Astra (medium), 2026-11-26)
+
+- „environment fingerprint“ → „Fingerabdruck der Umgebung“, „secret store“ und „secret manager“ → „Speicher für Zugangsdaten“.
+
+## chapter_appendix-tools-for-deep-learning/cloud-instances.md#u01 (Codex Astra (medium), 2026-11-26)
+
+- „provider tier“ → „Anbietergruppe“, „hyperscaler“ → „der Hyperscaler“, „marketplace“ → „Marktplatz“.
+- „spot capacity“ → „Spot-Kapazität“, „egress fees“ → „Gebühren für ausgehenden Datenverkehr“, „object storage“ → „Objektspeicher“.
+- „smoke test“ → „Funktionstest“, „disposable instance“ → „ersetzbare Instanz“, „cost per completed result“ → „Kosten pro fertigem Ergebnis“.
+
+## chapter_appendix-tools-for-deep-learning/software-ecosystem.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „model card“ → „Modellkarte“, „leaderboard“ → „Rangliste“, außer in Eigennamen.
+- „pin a revision“ → „eine Revision festschreiben“, „software supply chain“ → „Softwarelieferkette“, „chat template“ → „Chatvorlage“.
+
+## chapter_appendix-tools-for-deep-learning/software-ecosystem.md#u02 (Codex Astra (medium), 2026-11-27)
+
+- „allowlist“ → „Positivliste“, „numerical fidelity“ → „Genauigkeit, mit der das numerische Verhalten des Originals wiedergegeben wird“ (hier geht es um den Vergleich nach einer Quantisierung).
+
+## chapter_appendix-tools-for-deep-learning/hardware.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „unified memory“ → „gemeinsamer Speicher“ für den Speicher, auf den CPU und GPU direkt zugreifen.
+- „compute throughput“ → „Rechendurchsatz“, „decode rate“ → „Dekodierrate“, „workspace“ → „Arbeitspuffer“.
+
+## chapter_appendix-tools-for-deep-learning/hardware.md#u02 (Codex Astra (medium), 2026-11-27)
+
+- „break-even“ → „Kostenschwelle“ beim Vergleich von Miete und Kauf, „total cost of ownership“ → „Gesamtbetriebskosten“.
+
+## chapter_appendix-tools-for-deep-learning/training-systems.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „scaling ladder“ → „Stufen der Skalierung“, „microbatch“ → „der Mikrobatch“ und „context parallelism“ → „Kontextparallelität“.
+- „offload“ → „Auslagerung“, „bubble fraction“ → „relativer Leerlauf“ für die hier auf die ideale Schrittzeit bezogene Größe.
+- „rank“ → „Rang“ für den über seine Prozessnummer identifizierten Teilnehmer, „world size“ → „Anzahl der Ränge“.
+
+## chapter_appendix-tools-for-deep-learning/utils.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „major tick“ → „Hauptteilstrich“, „colorbar“ → „Farbbalken“.
+
+## chapter_appendix-tools-for-deep-learning/model-serving.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „model serving“ → „Bereitstellung von Modellen“, „serving engine“ → „Inferenz-Engine“, „workload“ im Kontext von Inferenzdiensten → „Lastprofil“.
+- „time per output token“ → „Zeit pro Ausgabetoken“, „goodput“ → „Goodput“.
+- „prefix caching“ → „Präfix-Caching“, „paged KV cache“ → „seitenweise verwalteter KV-Cache“, „chunked prefill“ → „blockweiser Prefill“.
+- „admission control“ → „Zulassungssteuerung“, „conformance test“ → „Konformitätstest“.
+
+## chapter_appendix-tools-for-deep-learning/developers-guide.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „coding agent“ → „der Programmieragent“, „framework tab“ → „der Framework-Tab“.
+- Git-Terminologie: „der Fork“, „der Branch“, „der Commit“, „der Pull-Request“ und „das Repository“.
+- „stale output“ → „veraltete Ausgabe“, „output fingerprint“ → „Fingerabdruck der Ausgabe“, „build tag“ → „Build-Kennung“.
+
+## chapter_appendix-tools-for-deep-learning/developers-guide.md#u02 (Codex Astra (medium), 2026-11-27)
+
+- „prefix rule“ → „Präfixregel“, „dataflow rule“ → „Datenflussregel“, „noisy bisection“ → „Bisektion mit verrauschten Testergebnissen“.
+
+## chapter_appendix-tools-for-deep-learning/d2l.md#u01 (Codex Astra (medium), 2026-11-27)
+
+- „API reference“ → „API-Referenz“.
