@@ -203,3 +203,10 @@ left as they are for the reviewer.
   `vertical`, `jupyter-notebook` (added for Arabic) have no Hindi term yet,
   although `hi/style.md` §5.1 and §9.1 name इनपुट, आउटपुट, पैरामीटर, विंडो,
   पैच, किनारा, फ़्रेमवर्क, कोड and §13 डेंस लेयर.
+
+## Second round (reviewer, 2026-11-27)
+
+- Confirmed: the English once per page; इमेज for "image" (चित्र would also do, but it is the word for "figure"); कन्वोल्यूशन / कन्वोल्यूशनल, not कॉन्वोल्यूशन; all the judgement calls above.
+- **weight → वेट** in 8 entries (network weights; practitioners use the English word): `weight` भार → वेट; `weight-decay` भार क्षय → वेट डिके; `weight-initialization` भार इनिशियलाइज़ेशन → वेट इनिशियलाइज़ेशन; `weight-sharing` भार साझाकरण → वेट शेयरिंग; `importance-weight` महत्त्व भार → इम्पॉर्टेंस वेट (old form kept as an alternative); `decoupled-weight-decay` डीकपल्ड भार क्षय → डीकपल्ड वेट डिके; `attention-weight` अटेंशन भार → अटेंशन वेट; `weight-tying` वेट टाइइंग (भार बाँधना) → वेट टाइइंग. This resolves the weight-decay, weight-sharing and weight-tying items below.
+- Still open: the other doubtful cases below.
+

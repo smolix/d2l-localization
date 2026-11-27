@@ -17,7 +17,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | validation set | वैलिडेशन सेट | verified_external | validation-set: Data used to select models or tune settings during development. | [google-ml-hi-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=hi#validation-set) |
 | test set | परीक्षण सेट | proposed | test-set: Data held out to assess a fitted model. |  |
 | model parameter | मॉडल पैरामीटर | proposed | model-parameter: A value learned or fitted as part of a model. |  |
-| weight | भार | proposed | weight: A coefficient that scales an input or connection in a model. |  |
+| weight | वेट | proposed | weight: A coefficient that scales an input or connection in a model. |  |
 | bias | बायस | proposed | bias: An additive offset in a model or prediction. |  |
 | prediction | पूर्वानुमान | verified_external | prediction: A model's estimate of an outcome for an input. | review-hi-eac40127db: page |
 | loss function | लॉस फलन | proposed | loss-function: A function measuring the error of a prediction or model. |  |
@@ -107,7 +107,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | underfitting | अंडरफ़िटिंग | verified_external | underfitting: Failing to capture important structure even in the training data. | [google-ml-hi-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=hi#underfitting) |
 | generalization | सामान्यीकरण | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-hi-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=hi#generalization) |
 | regularization | रेगुलराइज़ेशन | verified_external | regularization: A method that constrains or modifies learning to improve generalization. | [google-ml-hi-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=hi#regularization) |
-| weight decay | भार क्षय | proposed | weight-decay: A regularization method that shrinks model weights during training. |  |
+| weight decay | वेट डिके | proposed | weight-decay: A regularization method that shrinks model weights during training. |  |
 | dropout | ड्रॉपआउट | proposed | dropout: A training method that randomly masks activations to regularize a network. |  |
 | early stopping | अर्ली स्टॉपिंग | verified_external | early-stopping: Stopping training based on validation performance before fitting continues too far. | [google-ml-hi-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=hi#early-stopping) |
 | hyperparameter | हाइपरपैरामीटर | proposed | hyperparameter: A setting chosen outside the ordinary parameter-learning process. |  |
@@ -326,9 +326,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | coordinate descent | निर्देशांक डिसेंट | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
 | learning rate decay | लर्निंग रेट क्षय | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
 | warmup | वार्मअप | proposed | warmup: A training phase in which a setting such as learning rate is gradually increased. |  |
-| weight initialization | भार इनिशियलाइज़ेशन | proposed | weight-initialization: The choice of starting values for model weights. |  |
+| weight initialization | वेट इनिशियलाइज़ेशन | proposed | weight-initialization: The choice of starting values for model weights. |  |
 | Xavier initialization | Xavier इनिशियलाइज़ेशन | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
-| weight sharing | भार साझाकरण | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
+| weight sharing | वेट शेयरिंग | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | पैरामीटर गणना | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | कंप्यूटेशनल जटिलता | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
 | backward pass | बैकवर्ड पास | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
@@ -616,7 +616,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | trust region | विश्वास क्षेत्र | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
 | offline reinforcement learning | ऑफ़लाइन रीइन्फ़ोर्समेंट लर्निंग | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
 | behavior cloning | व्यवहार अनुकरण | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
-| importance weight | महत्त्व भार | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. |  |
+| importance weight | इम्पॉर्टेंस वेट | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. |  |
 | advantage estimate | लाभ आकलन | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |
 | generalized advantage estimation | GAE (generalized advantage estimation) | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
 | reward model | पुरस्कार मॉडल | proposed | reward-model: A learned model that predicts a reward or preference signal. |  |
@@ -803,7 +803,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | stochastic approximation | स्टोकेस्टिक सन्निकटन | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
 | training iteration | प्रशिक्षण पुनरावृत्ति | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. |  |
 | exponential decay | चरघातांकी क्षय | verified_external | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. | review-hi-645e0afcfc: page |
-| decoupled weight decay | डीकपल्ड भार क्षय | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
+| decoupled weight decay | डीकपल्ड वेट डिके | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
 | second moment | द्वितीय आघूर्ण | proposed | second-moment: The expectation or average of the square of a quantity. |  |
 | first moment | प्रथम आघूर्ण | proposed | first-moment: The expectation or average of a quantity. |  |
 | bias correction | बायस सुधार | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
@@ -895,7 +895,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | premise | आधार वाक्य | proposed | premise: A statement given as the basis for assessing another statement in natural language inference. |  |
 | hypothesis | परिकल्पना | proposed | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. |  |
 | contradiction | अंतर्विरोध | proposed | contradiction: A relationship in which one statement is incompatible with another. |  |
-| attention weight | अटेंशन भार | proposed | attention-weight: A coefficient controlling a value's contribution to an attention output. |  |
+| attention weight | अटेंशन वेट | proposed | attention-weight: A coefficient controlling a value's contribution to an attention output. |  |
 | softmax temperature | सॉफ़्टमैक्स तापमान | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
 | attention masking | अटेंशन मास्किंग | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
 | causal masking | कॉज़ल मास्किंग | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
@@ -1150,7 +1150,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | quadratic complexity | द्विघात जटिलता | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
 | tokens per second | टोकन प्रति सेकंड | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
 | head dimension | हेड की विमा | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
-| weight tying | वेट टाइइंग (भार बाँधना) | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
+| weight tying | वेट टाइइंग | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
 | embedding table | एंबेडिंग तालिका | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | आउटपुट प्रक्षेपण | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | इंडक्शन परिपथ | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |

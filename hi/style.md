@@ -106,7 +106,7 @@ vary in practice.
 | English vowels | ऑ/ॉ for the vowel of "loss", "model"; ऐ/ै for the vowel of "batch", "map". No ऍ/ॅ. | लॉस, मॉडल, ऑप्टिमाइज़र, कॉलम ; बैच, पैडिंग, ऐक्टिवेशन |
 | English consonants | t, d → ट, ड; th → थ; f → फ़; z and voiced s → ज़; v, w → व; -tion → -शन; -sion → -ज़न; -ing → -िंग. | टोकन, डेटा, थ्रेशोल्ड, फ़िल्टर, नॉर्मलाइज़ेशन, विंडो, कन्फ़्यूज़न, पूलिंग |
 | Fixed spellings | शृंखला (✗ श्रृंखला), महत्त्व (as the glossary; ✗ महत्व inside terms), अंग्रेज़ी, हिंदी (the language menu's हिन्दी is a name and stays). | शृंखला नियम, महत्त्व सैंपलिंग |
-| Word division | Postpositions are separate words after nouns and attached to pronouns; -कर is attached; वाला is separate; ही, भी, तो, तक are separate. | मॉडल में, GPU पर ; उसका, इसमें, हमने ; रखकर ; दो भारों वाला डिटेक्टर |
+| Word division | Postpositions are separate words after nouns and attached to pronouns; -कर is attached; वाला is separate; ही, भी, तो, तक are separate. | मॉडल में, GPU पर ; उसका, इसमें, हमने ; रखकर ; दो वेट वाला डिटेक्टर |
 | Visarga | ः only inside Sanskrit words (अतः, क्रमशः, प्रायः). It is not a colon and a colon is not a visarga. | ✗ उत्तरः ✓ उत्तर: |
 
 ## 3. Punctuation and spacing
@@ -202,7 +202,7 @@ record the choice in DECISIONS.
 | Class | Rule | Examples |
 |---|---|---|
 | 1. School and first-degree mathematics and statistics | The Hindi term in its NCERT/IGNOU form. | आव्यूह, सदिश, अदिश, सारणिक, अवकलज, अवकलन, समाकल, फलन, प्रायिकता, प्रसरण, माध्य, माध्यिका, मानक विचलन, वितरण, प्रतिगमन, प्रत्याशा, संभाविता, अभिसरण, इष्टतमीकरण, विमा, पंक्ति, स्तंभ, अवयव, समष्टि |
-| 2. Everyday words that are also terms | Hindi. | प्रशिक्षण, भार, शोर, त्रुटि, मान, नीति, अवस्था, क्रिया, पुरस्कार, परिवेश, गहराई, नमूना, उदाहरण, चरण |
+| 2. Everyday words that are also terms | Hindi. | प्रशिक्षण, शोर, त्रुटि, मान, नीति, अवस्था, क्रिया, पुरस्कार, परिवेश, गहराई, नमूना, उदाहरण, चरण |
 | 3. Terms of art of machine learning and computing (first met in an ML course, a paper or framework documentation) | The English word in Devanagari, in the glossary's spelling. Never a coinage, even where a `proposed` glossary entry has one (§14). | ग्रेडिएंट, लॉस, लेयर, बायस, फ़ीचर, कर्नेल, टेंसर, टोकन, बैच, एपॉक, ऐक्टिवेशन, नॉर्मलाइज़ेशन, रेगुलराइज़ेशन, कन्वोल्यूशन, पूलिंग, पैडिंग, स्ट्राइड, अटेंशन, एंबेडिंग, ड्रॉपआउट, सैंपलिंग, इन्फ़रेंस, लर्निंग रेट, ओवरफ़िटिंग, बैकप्रॉपैगेशन, न्यूरल नेटवर्क, डीप लर्निंग, इमेज, ट्रांसलेशन इक्विवेरिएंस, ट्रांसलेशन इनवेरिएंस, लोकैलिटी, रिसेप्टिव फ़ील्ड, सुपरवाइज़्ड लर्निंग, डिफ़्यूज़न मॉडल, पैरेललिज़्म |
 | 4. General computing words long settled in Hindi | Devanagari loan. | कंप्यूटर, कोड, फ़ाइल, डेटा, प्रोग्राम, लूप, इंडेक्स, फ़्रेमवर्क, लाइब्रेरी, मेमोरी, इनपुट, आउटपुट, पैरामीटर, फ़ंक्शन (in code), क्लास, इंजीनियर |
 | 5. Names: models, architectures by name, optimizers, libraries, datasets, benchmarks, companies, hardware; acronyms; anything in code | Latin script, exactly as in English; never transliterated, never translated. | Adam, AdamW, ResNet, BERT, PyTorch, ImageNet, Fashion-MNIST, RTX 4090, ReLU, GELU, SGD, MLP, CNN, LSTM, GPU, KL, im2col ✗ एडम, पाइटॉर्च, रेसनेट, दीर्घ अल्पकालिक स्मृति |
@@ -250,11 +250,11 @@ Record the choice in DECISIONS.
 
 | Gender | Loans |
 |---|---|
-| Masculine | मॉडल, नेटवर्क, कर्नेल, टेंसर, ग्रेडिएंट, लॉस, बायस, फ़ीचर, फ़िल्टर, चैनल, पिक्सेल, टोकन, बैच, एपॉक, पैरामीटर, इनपुट, आउटपुट, डेटा, डेटासेट, लेबल, स्ट्राइड, मास्क, प्रॉम्प्ट, नॉर्म, स्कोर, लॉजिट, शेप, पैच, कैश, ग्राफ़, एजेंट, ट्रांसफ़ॉर्मर, एन्कोडर, डीकोडर, ऑप्टिमाइज़र, जनरेटर, अटेंशन, ड्रॉपआउट, सॉफ़्टमैक्स, लर्निंग रेट, शेड्यूल, चेकपॉइंट, फ़ंक्शन; all -शन words (ऐक्टिवेशन, कन्वोल्यूशन, नॉर्मलाइज़ेशन, रेगुलराइज़ेशन, बैकप्रॉपैगेशन) |
+| Masculine | मॉडल, नेटवर्क, वेट, कर्नेल, टेंसर, ग्रेडिएंट, लॉस, बायस, फ़ीचर, फ़िल्टर, चैनल, पिक्सेल, टोकन, बैच, एपॉक, पैरामीटर, इनपुट, आउटपुट, डेटा, डेटासेट, लेबल, स्ट्राइड, मास्क, प्रॉम्प्ट, नॉर्म, स्कोर, लॉजिट, शेप, पैच, कैश, ग्राफ़, एजेंट, ट्रांसफ़ॉर्मर, एन्कोडर, डीकोडर, ऑप्टिमाइज़र, जनरेटर, अटेंशन, ड्रॉपआउट, सॉफ़्टमैक्स, लर्निंग रेट, शेड्यूल, चेकपॉइंट, फ़ंक्शन; all -शन words (ऐक्टिवेशन, कन्वोल्यूशन, नॉर्मलाइज़ेशन, रेगुलराइज़ेशन, बैकप्रॉपैगेशन) |
 | Feminine | लेयर, इमेज, विंडो, क्लास, यूनिट, रैंक, क्वेरी, मेमोरी, लाइब्रेरी, एंट्रॉपी, लेटेंसी, ट्रैजेक्टरी, परप्लेक्सिटी, पाइपलाइन, बेसलाइन; all -इंग words (पूलिंग, पैडिंग, सैंपलिंग, एंबेडिंग, लर्निंग, प्री-ट्रेनिंग, फ़ाइन-ट्यूनिंग, क्लिपिंग) |
 
 Hindi terms keep their own gender; the frequent ones: आव्यूह, सदिश, फलन,
-अवकलज, प्रसरण, माध्य, वितरण, भार, मान, पुरस्कार, प्रतिफल, स्तंभ, अवयव, शोर,
+अवकलज, प्रसरण, माध्य, वितरण, मान, पुरस्कार, प्रतिफल, स्तंभ, अवयव, शोर,
 प्रशिक्षण, समीकरण are masculine; प्रायिकता, संभाविता, प्रत्याशा, सटीकता, त्रुटि,
 अवस्था, नीति, क्रिया, पंक्ति, प्रविष्टि, गहराई, विमा, समष्टि, शृंखला, कुंजी
 are feminine.
@@ -323,7 +323,7 @@ term, do not repeat it. (Class 3 was added on 2026-11-27, §14.)
 - Only once: ✗ a second लॉस (loss) on the same page.
 - Never gloss a class-4 loan or a class-5 name: ✗ डेटा (data), इनपुट (input),
   कोड (code).
-- Do not gloss words whose plain meaning is the technical one: भार, शोर,
+- Do not gloss words whose plain meaning is the technical one: शोर,
   त्रुटि, मान, योग, गहराई, उदाहरण, चरण, पंक्ति.
 - With an acronym, the first use gives the full term and the acronym as the
   glossary has them: स्टोकेस्टिक ग्रेडिएंट डिसेंट (SGD), LSTM (long short-term
@@ -393,7 +393,7 @@ units or currencies.
 | `heading` | Noun phrase or verbal noun, no danda, no English gloss. English "-ing + object" becomes object + का + noun, or object + verbal noun. A question keeps its ?. | "Convolutions for Images" → इमेजों के लिए कन्वोल्यूशन ; "Training the Model" → मॉडल का प्रशिक्षण ; "Learning a Kernel" → कर्नेल सीखना ; "Why Depth Helps" → गहराई क्यों मदद करती है? |
 | `caption` | Body register without हम and आप; a danda exactly where the English caption has a full stop. Keep `(a)`, `(b)`. | "Masks compose by logical AND." → मास्क तार्किक AND से जुड़ते हैं। |
 | `slide_title`, `kicker` | Noun phrase, as short as the English, no danda; "vs." → बनाम, "&" → और. | `title="Theoretical vs. Effective Receptive Fields"` → `title="सैद्धांतिक बनाम प्रभावी रिसेप्टिव फ़ील्ड"` ; `[Concept Check]{.kicker}` → `[समझ की जाँच]{.kicker}` |
-| `slide_text` | Short statements or noun phrases; no हम, no आप; instructions in the -एँ form; one line where the English is one line; a danda exactly where the English bullet ends in a full stop. Bold lead-ins keep their bold and colon. | "- **45% fewer parameters:** $27 c^2$ weights instead of $49 c^2$." → - **45% कम पैरामीटर:** $27 c^2$ भार, न कि $49 c^2$। ; "Lower the learning rate gradually" → लर्निंग रेट धीरे-धीरे घटाएँ |
+| `slide_text` | Short statements or noun phrases; no हम, no आप; instructions in the -एँ form; one line where the English is one line; a danda exactly where the English bullet ends in a full stop. Bold lead-ins keep their bold and colon. | "- **45% fewer parameters:** $27 c^2$ weights instead of $49 c^2$." → - **45% कम पैरामीटर:** $27 c^2$ वेट, न कि $49 c^2$। ; "Lower the learning rate gradually" → लर्निंग रेट धीरे-धीरे घटाएँ |
 | `exercise` | The -एँ imperative; direct questions with ?. A bold title keeps its bold, with the danda inside it where the English has the full stop inside. Copy `[code]`, ● and `:exlabel:` unchanged. | "**Hand-designed kernels.** Design some kernels manually. Why?" → **हाथ से बनाए कर्नेल।** कुछ कर्नेल हाथ से डिज़ाइन करें। क्यों? |
 | Source credits | "Adapted from X." → X से रूपांतरित। The link moves before से रूपांतरित; name the block in NOTES if tokens change order. | *Stanford CS231n, [Assignment 2](…) से रूपांतरित।* |
 | `tab_note` | Body register. Describe this framework only; never compare frameworks. API names stay in code. | "PyTorch's `nn.LazyLinear(1)` requires only the output dimension." → PyTorch के `nn.LazyLinear(1)` को केवल आउटपुट की विमा चाहिए। |
@@ -429,7 +429,7 @@ build; copy it unchanged.
 | class, square | class label, Python class → क्लास; square → वर्ग (वर्ग त्रुटि); परिकल्पना वर्ग and वर्गीकरण as in the glossary | वर्ग for a label class |
 | step, stride | चरण (चरण आकार, समय चरण); स्ट्राइड | |
 | image, edge | इमेज (इमेजें, इमेजों), in every compound (इमेज वर्गीकरण, इमेज पैच, इमेज पहचान); an edge in an image → किनारा, the border of an array or region → सीमा | छवि, तस्वीर (§14) |
-| weight | भार | वज़न, वेट |
+| weight | of a network or a weighted sum → वेट (वेट डिके, वेट शेयरिंग, वेट टाइइंग, अटेंशन वेट) (§14) | भार, वज़न |
 | derivative, gradient | अवकलज; ग्रेडिएंट; "with respect to $x$" → $x$ के सापेक्ष | डेरिवेटिव, प्रवणता |
 | translation | of an image or function → ट्रांसलेशन (ट्रांसलेशन इक्विवेरिएंस, ट्रांसलेशन इनवेरिएंस); of language → अनुवाद (मशीन अनुवाद); the fixed name इमेज-टू-इमेज ट्रांसलेशन | स्थानांतरण, अनुवाद निश्चरता |
 | local, locality | the CNN principle → लोकैलिटी, a local receptive field → लोकल रिसेप्टिव फ़ील्ड; local minimum, maximum (school mathematics) → स्थानीय न्यूनतम, स्थानीय अधिकतम | स्थानीयता |
@@ -580,10 +580,9 @@ Needs new code:
     1,00,000.
 14. **Dash and quotes** (§3): the em dash only as a last resort, with spaces;
     ASCII quotes turned into “…” by the build.
-15. **कन्वोल्यूशन or कॉन्वोल्यूशन** (§2). The reviewer's sample writes
-    कॉन्वोल्यूशनल लेयर; the glossary and this guide write कन्वोल्यूशन,
-    कन्वोल्यूशनल (12 entries). Proposed: keep कन्वोल्यूशन until the reviewer
-    confirms either form.
+15. **कन्वोल्यूशन, not कॉन्वोल्यूशन** (§2): decided by the reviewer
+    (2026-11-27, second round), as the glossary and this guide write it
+    (12 entries).
 16. **Floating-point precision** (§9.1): परिशुद्धता (अर्ध, एकल, द्विगुण,
     मिश्रित परिशुद्धता) against the loan प्रीसिज़न (हाफ़, सिंगल, मिक्स्ड
     प्रीसिज़न) that ruling 1 suggests for a computing term. Proposed: as now,
@@ -644,7 +643,7 @@ for "image" obscure. Their version of the section's opening:
 > डिसेंट (Gradient Descent) डेटा से उपयोगी कर्नेल (Kernels) खोज सकता है।
 
 §5.5 gives it in this guide's form (lower-case singular gloss, the dash with
-spaces, कन्वोल्यूशनल until §12.15 is answered). Why the coinages appeared:
+spaces, कन्वोल्यूशनल as the reviewer confirmed in the second round). Why the coinages appeared:
 the test translations were made before this guide existed, and the glossary's
 `proposed` Hindi entries were generated before the class-3 rule of §5.1 and
 never checked against it; TRANSLATING.md §7 tells translators to use
@@ -673,3 +672,23 @@ feedback with these rulings, and the body of this guide follows them.
    and `image` and `locality` were added. The list, with the borderline
    cases left for the reviewer, is in
    `glossary/notes/hi-native-review-2026-11-27.md`.
+
+Second round (reviewer, 2026-11-27):
+
+4. **The English once per page** (§5.5): confirmed, for class-3 terms at their
+   first use on a page.
+5. **"image"**: confirmed. The reviewer would accept चित्र or इमेज; the guide
+   keeps इमेज, since चित्र is the word for "figure".
+6. **कन्वोल्यूशन / कन्वोल्यूशनल**, not कॉन्वोल्यूशन (§12.15).
+7. **The sweep's judgement calls** are confirmed: statistical bias बायस
+   (बायस-रहित आकलक), सुपरवाइज़्ड / अनसुपरवाइज़्ड / सेल्फ़-सुपरवाइज़्ड लर्निंग,
+   डिफ़्यूज़न, स्पेशियल, पैरेलल / पैरेललिज़्म, and school mathematics kept in
+   Hindi (स्थानीय न्यूनतम).
+8. **weight → वेट** (§5.1 class 3, §9.1): the weights of a network are वेट,
+   as practitioners say; भार would confuse, although it means "weight". Also
+   in every compound: वेट डिके, वेट शेयरिंग, वेट इनिशियलाइज़ेशन, वेट टाइइंग,
+   अटेंशन वेट, इम्पॉर्टेंस वेट, डीकपल्ड वेट डिके. Masculine. ✗ भार, वज़न.
+9. **Still open**: the doubtful cases in
+   `glossary/notes/hi-native-review-2026-11-27.md` (decay other than weight
+   decay, floating-point precision §12.16, greedy, global pooling,
+   cross-correlation, and the others listed there).
