@@ -574,3 +574,194 @@ One rendering per term across the eight pages of the chapter; the unit entries a
 - "corrupted" (labels, points, measurements, data) → تالف; "oracle" (known ground truth to check against) → مرجع.
 - "least-squares solver" → خوارزمية حل المربعات الصغرى in prose, دوال الحل المتخصصة for the library routines (`lstsq`); حالّ stays the ODE solver.
 - Kept apart on purpose: "baseline model" → نموذج مرجعي and a "baseline" value or level → خط الأساس; the weight "decay" → اضمحلال and the "decay" of an error or loss → تناقص; the function `sgd` → دالة التحديث and the class `SGD` → المحدِّث; "decoupling" of weight decay → فصل and of features → فك الاقتران.
+
+## chapter_linear-classification/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Linear Classification" (chapter title) → التصنيف الخطي; "category" and "class" → فئة (فئات), "classifier" → مصنف, as on the introduction page.
+- "one-hot vector / label / target" → متجه الترميز الأحادي / وسوم الترميز الأحادي / هدف بالترميز الأحادي, from the glossary's ترميز أحادي (one-hot encoding).
+- "logit" → اللوجيت (اللوجيتات); "linear score" → درجة خطية; the softmax function → الدالة softmax, "softmax layer" → طبقة softmax; "multi-logit head" → رأس متعدد اللوجيتات.
+- "categorical" (label model, likelihood) → فئوي (نموذج فئوي للوسوم، سالب لوغاريتم الإمكان الفئوي).
+- "residual gradient" → تدرج … وهو الباقي; slide "residual gradient form" → صيغة الباقي للتدرج.
+- "evaluation" → التقييم; "deployment" → النشر; "deployment data" → بيانات النشر; "deployment shift" → الانزياح عند النشر; data "drift away from" → تنجرف بعيدًا عن.
+- "raw accuracy" → الدقة الخام; "positive examples" → الأمثلة الموجبة; "cost-sensitive thresholds" → العتبات الحساسة للكلفة; "calibration diagnostics" → تشخيصات المعايرة; "calibrated uncertainty" → عدم يقين معايَر; "Bayes cost thresholds" → عتبات الكلفة بمعنى بايز.
+- "Hoeffding bounds" → حدود Hoeffding, "Hoeffding radius" → نصف قطر … بحد Hoeffding; "Vapnik--Chervonenkis (VC) theory" → نظرية Vapnik--Chervonenkis (VC) (names in Latin; no glossary term carries them; glossary بُعد VC).
+- "importance-weighted", "importance weighting" → الموزون بالأهمية، الترجيح بالأهمية (glossary وزن الأهمية); "runaway feedback loops" → حلقات التغذية الراجعة الجامحة.
+- "templates" (learned weight images) → قوالب (القوالب المتعلَّمة); "fused log-sum-exp loss" → خسارة مدمجة تقوم على لوغاريتم مجموع الأسيات, on slides خسارة LogSumExp المدمجة; "image pipeline" → خط معالجة للصور.
+- Garments: shirt → قميص; T-shirt → قميص قصير الكمين; coat → معطف; sandal → صندل; pullover → كنزة; trousers → بنطال; dress → فستان; boot (ankle boot) → حذاء برقبة قصيرة; "garments" → قطع ملابس.
+- "percentage points" → نقطة مئوية; "sampling noise" → ضوضاء أخذ العينات; "validation accuracy" → دقة التحقق; "prevalence" → معدل الانتشار; "screening" → فحص مسحي; "auditing" → التدقيق; "toy" (example) → مثال مبسط.
+- Slide labels: "Self-Assessment" → التقييم الذاتي; "Chapter Roadmap" → خارطة طريق الفصل; "Chapter Study Guide" → دليل دراسة الفصل; "Empirical Anchors" → مرتكزات تجريبية; "The Modelling Recipe" → وصفة النمذجة; "autodiff" → الاشتقاق التلقائي; "GEMM" stays Latin after عمليات.
+- English glosses given on this page: classification, one-hot vectors, logit, cross-entropy loss, confusion matrices, log-sum-exp, precision, recall, adaptive overfitting, covariate shift, label shift.
+
+## chapter_linear-classification/softmax-regression.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "softmax regression" → انحدار softmax (glossary); "the softmax" / "softmax function" → دالة softmax (class noun wherever a block or clause would start with the Latin word); "softmax operator" → مؤثر softmax; "multinomial logistic regression" → الانحدار اللوجستي متعدد الحدود.
+- "logit" → لوجيت, dual لوجيتان, plural لوجيتات (glossary لوجيت; sound feminine plural); "unnormalized scores" → درجات غير مطبّعة; "affine score" → درجة تآلفية; "raw logits" → اللوجيتات الخام.
+- "class" and "category" → فئة (as in the introduction); "class label" → وسم الفئة; "tag" (multi-label) → وسم; "true class" → الفئة الحقيقية; "candidate class" → فئة مرشحة.
+- "one-hot encoding" → الترميز الأحادي (glossary); "one-hot vector" → متجه الترميز الأحادي, on slides المتجه الأحادي; "hard assignment" → إسناد قاطع; "soft assignment" → إسناد لين.
+- "valid" (probability distribution, simplex) → سليم (صحيح stays "integer" and "correct"); "degenerate distribution" → التوزيع المنحل; "categorical probabilities" → الاحتمالات الفئوية.
+- "shift invariance" (softmax) → الثبات تحت الإزاحة (as on the probability page); "log-odds" → لوغاريتم الأرجحية (glossary); "log-odds ratio" → لوغاريتم نسبة الأرجحية; "odds" → الأرجحية; "$k$ times as probable as" → يساوي $k$ أمثال احتمال ….
+- "logistic sigmoid" → دالة سيغمويد اللوجستية; "reduces to" (softmax to logistic regression) → يُختزل إلى، الاختزال إلى; "exponentiate" → يحسب الدالة الأسية لـ, "the exponentials" → القيم الأسية / الدوال الأسية; "strictly increasing" → متزايدة تمامًا; "partition sum" → مجموع التجزئة.
+- "decision regions" → مناطق القرار; "halfspace" → نصف فضاء; "convex polyhedron" → متعدد سطوح محدب; "flat-sided" → مسطح الأوجه; "flat" (hyperplane) → مسطح; "hyperplane" → المستوي الفائق (مستويات فائقة); two logits "tie" → يتساوى اللوجيتان; "simplex" → مبسط (glossary مبسط الاحتمالات), "vertices" → رؤوس.
+- "ordinal regression" → الانحدار الترتيبي; "threshold models" → نماذج العتبات; "competing softmax" → دالة softmax تنافسية; "spam filter" → مرشح البريد المزعج; "online retailer" → متجر إلكتروني; "downstream decisions" → القرارات اللاحقة; "at inference time" → عند الاستدلال; "numerical safeguard" → احتياط عددي.
+- Fashion-MNIST class names: قميص قصير الكمين، بنطال، كنزة، فستان، معطف، صندل، قميص، حذاء رياضي، حقيبة، حذاء برقبة قصيرة; cat / chicken / dog → قطة / دجاجة / كلب.
+- Slides: "Motivation & Failure Mode" → الدافع ونمط الإخفاق; "Concrete trace" → تتبع بالأرقام; "Memory convention" → اصطلاح التخزين; "redundant parameterization" → تمثيل معلَمي فائض; "scalar regression" → الانحدار القياسي; a slide lead-in "Consider a … image" → a noun phrase (صورة …).
+- English glosses given in u01 of this page (do not repeat in later units): supervised learning, hard assignment, soft assignments, softmax regression, multinomial logistic regression, cross-entropy loss, one-hot encoding, logits, log-odds ratio, shift invariance, logistic sigmoid, logistic regression, log-odds, logit, multi-label classification, ordinal regression.
+
+## chapter_linear-classification/softmax-regression-scratch.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Softmax Regression Implementation" → تنفيذ انحدار softmax; "the softmax" (function) → دالة softmax (class noun, Latin name); "rowwise softmax" → دالة softmax صفًا بصف.
+- "overflow" → الطفح, "underflow" → الطفح السفلي (glossary); verbs يطفح / يطفح سفليًا إلى; "overflows to `inf`" → يطفح إلى `inf`.
+- "log-sum-exp" → لوغاريتم مجموع الأسيات (glossary), with (log-sum-exp) once; the name "LogSumExp" on slides and in "LogSumExp trick" stays Latin (خسارة LogSumExp المدمجة); "fused" (loss, softmax + log) → مدمج; "log space" → الفضاء اللوغاريتمي.
+- "clamp", "clamping" (of probabilities) → الحصر (حصر الاحتمالات، الحصر عند $10^{-12}$), as on the earlier pages; "the clamp triggers" → يُفعَّل الحصر; "stopgap" → حل مؤقت; "zeroes out the gradient" → يصفّر التدرج.
+- "one-hot" (matrix, product) → الترميز الأحادي (glossary): مصفوفة ترميز أحادي، جداء الترميز الأحادي, with (one-hot) once.
+- "confusion matrix" → مصفوفة الالتباس (glossary); "confusions" → حالات الالتباس; "off-diagonal" → خارج القطر; "recognition rate" → معدل التعرف; "heatmap" → خريطة حرارية; "tally" → يبني بالعد / يحصي.
+- "templates" (weight columns shown as images) → قوالب (قوالب الأوزان), as on the linear-algebra page; "silhouette" → الصورة الظلية; "outline" → محيط.
+- "sanity check" → فحص السلامة (الفحص السريع للسلامة; "let us sanity-check" → لنتحقق سريعًا من سلامة …); "dual-metric" → ثنائي المقياس / بمقياسين; "overconfident" → مفرط الثقة (أفرط في الثقة); "discrete accuracy" → الدقة المتقطعة; "top-scoring class" → الفئة ذات الدرجة العليا.
+- "data loader" → محمِّل (محمِّل التحقق، محمِّل التدريب), with the mark; "binds `self.val_dataloader` to" → تسند إلى; "score a model" → يقيس أداء النموذج; "gather" → الالتقاط (as on the ndarray page).
+- Fashion-MNIST garment names are translated, with the English class name once in body text because code output and figures keep the English labels: T-shirt → القميص قصير الكمين, pullover → الكنزة, coat → المعطف, shirt → القميص, trousers → البناطيل, dress → الفستان, bag → الحقيبة, sandal → الصندل, sneaker → الحذاء الرياضي, ankle boot → الحذاء برقبة قصيرة, footwear → الأحذية; "upper-body tops" → الملابس العلوية; "garment" → قطعة ملابس.
+- Kickers that begin with a number in English are reordered to begin with an Arabic word: "[7,850 Learnable Parameters]" → [المعلَمات القابلة للتعلم: 7,850]; "[10 Epochs of Minibatch SGD]" → [خوارزمية SGD بالدفعات المصغرة مدة 10 حقب].
+- English glosses given in u01 of this page (do not repeat in later units): cross-entropy loss, log-sum-exp, overflow, underflow, accuracy, one-hot, confusion matrix, and the garment names T-shirt, pullover, coat, shirt.
+
+## chapter_linear-classification/classification.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Measuring Classifiers" → قياس المصنفات; "raw accuracy" → الدقة الخام; "majority class" → فئة الأغلبية; "catch / detect" (positives) → يكشف; "missing" (a sick patient) → إغفال.
+- Confusion-matrix cells in the plural: الموجبات الصحيحة، الموجبات الكاذبة، السوالب الكاذبة، السوالب الصحيحة (glossary موجب صحيح etc. for one example); table labels "predicted sick / healthy" → التنبؤ: مريض / التنبؤ: سليم; the acronyms TP, FP, FN, TN, TPR, FPR, PPV, ECE, ROC, AUC stay Latin.
+- "sensitivity" → الحساسية; "true-positive rate" → معدل الموجبات الصحيحة; "positive predictive value" → القيمة التنبؤية الموجبة; "false-alarm rate" → معدل الإنذارات الكاذبة; "prevalence" → معدل الانتشار; "population" (of people screened) → المجتمع; "screening (test)" → فحص مسحي / اختبار مسحي; "confirmatory test" → اختبار تأكيدي; "definitive" → قاطع.
+- "to flag" (a person as positive) → ينذر بمرضه، إصدار إنذار; "positive flags" → الإنذارات الموجبة; "flagged people" → من أنذر الاختبار بمرضهم (راية stays the 0/1 flag column).
+- "cost" → كلفة, plural كلف; "asymmetric" → غير متماثل; "cost-sensitive" → حساس للكلفة; "expected cost" → الكلفة المتوقعة; "correct calls" → القرارات الصحيحة; "intrinsic" (property of the test) → ملازم.
+- "harmonic mean" → المتوسط التوافقي; "precision--recall curve" → منحنى الإحكام والاستدعاء; "ROC curve" → منحنى ROC; "sweep thresholds / prevalence" → يمسح، مسح.
+- "confidence" → الثقة; "overconfident / underconfident" → مفرط الثقة / ناقص الثقة (فرط الثقة، نقص الثقة); "correctness indicator" → مؤشر الصواب (not الإصابة, which reads as "infection" beside the medical example); "top-class" (calibration, probability, confidence) → الفئة الأعلى احتمالًا.
+- "bin" (confidence bin, histogram bin) → حاوية (حاويات; حاويات ثقة); خانات stays the digits of a number and فئة the class. "well-populated bins" → الحاويات الممتلئة جيدًا; "equal-width" → متساوية العرض.
+- "reliability diagram" → مخطط الموثوقية; "reliability curve / statistics" → منحنى الموثوقية / إحصاءات الموثوقية; "miscalibration" → سوء المعايرة; "recalibration" → إعادة المعايرة; "well calibrated" → معايَر جيدًا; "perfectly calibrated" → معايَر تمامًا.
+- "temperature scaling" → تحجيم درجة الحرارة; "post-hoc" → لاحق للتدريب / بعد التدريب (not بعدي, the posterior); "fit $T$" → يلائم $T$, "fitted temperature" → درجة الحرارة الملائَمة; "damp" → يخمد; "percentage points" → نقاط مئوية; "overparameterized" → مفرط المعلَمات; "pigeonhole principle" → مبدأ برج الحمام; "abstain" → يمتنع (الامتناع); "reject option" → خيار الرفض; "specialist" → مختص; "to audit" (calibration) → يدقق، تدقيق.
+- Plain-text "argmax" stays Latin (التصنيف وفق argmax); "always-healthy" rule → قاعدة “سليم دائمًا”.
+- English glosses given in u01 of this page (do not repeat in later units): accuracy, false negative, false positive, calibrated, precision, recall, cost-sensitive decision thresholds, reliability diagrams, expected calibration error (ECE), temperature scaling, confusion matrix, true positives, true negatives, sensitivity, true-positive rate, positive predictive value, confidence. Class imbalance occurs only in a bold lead-in and a heading and has no gloss.
+
+## chapter_linear-classification/environment-and-distribution-shift.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "distribution shift" → انزياح التوزيع; "covariate shift" → انزياح المتغيرات المصاحبة; "label shift" → انزياح الوسوم (glossary); "concept shift" → انزياح المفهوم; "shift regime" → نمط الانزياح (أنماط); "shifted" (density, cloud) → مزاح; a distribution or definition that "drifts" → ينجرف (glossary انجراف).
+- "source / target distribution" → توزيع المصدر / توزيع الهدف; "source examples", "target inputs", "target labels" → أمثلة المصدر، مدخلات الهدف، وسوم الهدف; "target domain" → مجال الهدف; "target risk" → خطر الهدف; "target accuracy" → الدقة على الهدف.
+- "deployment" → النشر (بيانات النشر، المصنف المنشور); "passive / active shift" → الانزياح السلبي / النشط, with (passive shift) once so that سلبي is not read as "negative".
+- "importance weight" → وزن الأهمية (glossary); "importance weighting" → الترجيح بالأهمية; "reweighting" → إعادة الترجيح; "to weight an example by $\beta_i$" → يرجح المثال بالوزن $\beta_i$; "importance-weighted", "weighted", "unweighted" → الموزون بالأهمية، الموزون، غير الموزون; "downweight" → يخفض وزن.
+- "support" (of a density) → الحامل (style §10.1); "support overlap" → تداخل الحاملين; "missing support" → غياب الحامل.
+- "clipping weights" → قص الأوزان (from the glossary's قص التدرج); "clipped" → المقصوص (الأوزان المقصوصة); "cap" → سقف; "clipping threshold" → عتبة القص.
+- "domain classifier" → مصنف المجال; "domain label" → وسم المجال; "pool" (source with target inputs) → يضم … إلى …, "pooled inputs" → مدخلات مضمومة (not التجميع, the glossary's pooling).
+- "class priors" → الاحتمالات القبلية للفئات (the glossary's توزيع قبلي is the distribution); "class proportions" → نسب الفئات; "class-prior ratios" → نسب الاحتمالات القبلية للفئات.
+- "Bayes boundary" → حد بايز; "Bayes-optimal boundary" → الحد الأمثل بمعنى بايز; "Bayes ceiling" → سقف بايز; "at chance", "by chance" → عند مستوى الصدفة، بالصدفة; "majority class" → فئة الأغلبية.
+- "classifier two-sample test" → اختبار العينتين بالمصنف; "log-ratio" → لوغاريتم النسبة; "log density ratio" → لوغاريتم نسبة الكثافة; "standard normal distribution function" → دالة التوزيع الطبيعي المعياري.
+- "parabola" → قطع مكافئ ("parabolic boundary" → حد على شكل قطع مكافئ; "right arm" → الذراع اليمنى); "point cloud" → سحابة نقاط; "marker" (of a plot) → علامة.
+- "misspecified" → خاطئ التحديد (as in the regression chapter); "capacity-limited" → محدود السعة; "weighting scheme" → مخطط ترجيح; "learning primitive" → عنصر أولي في التعلم.
+- "default rate / default risk" (loans) → معدل التعثر في السداد / خطر التعثر; "loan applicants" → طالبو القروض; Oxfords → أحذية Oxford (Latin); "Goodhart's law" → قانون Goodhart (Latin name, no glossary term); "control samples" → عينات ضابطة; "startup" → شركة ناشئة.
+- "column-normalized confusion matrix" → مصفوفة الالتباس المطبَّعة حسب الأعمدة; "law of total probability" → قانون الاحتمال الكلي; "invertible" → قابلة للعكس; "black-box shift estimation" → تقدير الانزياح بالصندوق الأسود (BBSE); "positive flags" → الإنذارات الموجبة; "missed cases" → حالات فائتة; "unidentifiability" → عدم قابلية التحديد; "label flip" → قلب الوسوم; "adversarial" → خصومي.
+- Slides: "Weighted ERM" → مبدأ ERM الموزون (a class noun so that the block starts in Arabic); "2D … benchmark" → اختبار معياري ثنائي الأبعاد; "Why …" slide titles are questions with ؟, "Why …:" lead-ins become سبب …:; figure colour words → (بالأخضر)، (بالأحمر)، (بالبرتقالي); "(left) / (middle) / (right)" → (يسارًا) / (في الوسط) / (يمينًا).
+- Image credit lists in captions ("illustrations: …") → الصور التوضيحية: followed by the Latin credits copied as one run with their semicolons.
+- English glosses given in u01 of this page (do not repeat in later units): distribution shift, source distribution, target distribution, passive shift, importance-weighted covariate shift correction, confusion-matrix label shift correction, concept shift, target risk, importance weight, weighted empirical risk minimization, support overlap, effective sample size, domain classifier, classifier two-sample test.
+
+## chapter_linear-classification/generalization-classification.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "population error" → خطأ المجتمع (parallel to خطر المجتمع); "population distribution" → توزيع المجتمع; "population accuracy" → الدقة على المجتمع; "empirical error" → الخطأ التجريبي.
+- "memorizer" → نموذج حافظ (النماذج الحافظة), "lookup-table memorizer" → نموذج حافظ يعتمد على جدول بحث; "certify" → يشهد بـ, "certificates" → شهادات (ضمان stays "guarantee").
+- "validation split" → قسم التحقق; "evaluation split" → قسم التقييم; "validation images" → صور تحقق; "garments" → قطع الملابس; "fresh" (test set, data) → جديد; "untouched" → لم تُمس; "held-out test set" → مجموعة اختبار محجوزة.
+- "finite-sample" → للعينات المحدودة (عدم اليقين الناتج عن العينة المحدودة); a "finite" set or class → منته (فئة فرضيات منتهية); "infinite" → لانهائي.
+- Confidence intervals: "exact" → مضبوط; "asymptotic" → تقاربي; "normal interval / radius / approximation" → الفترة الطبيعية / نصف القطر الطبيعي / التقريب الطبيعي; "radius" → نصف القطر (نصف قطر الثقة); "a $95\%$ interval" → فترة بمستوى $95\%$; "plug-in" (interval, radius, variance: the estimate put in place of the true value) → تقديري; "coverage" → التغطية, "undercover" → تقصر تغطيتها; "conservative" → متحفظ; "percentage points" → نقطة مئوية; "worst case" → أسوأ الحالات; "simultaneous" (confidence radius) → المتزامن، في آن واحد.
+- Hoeffding, Vapnik, Chervonenkis, Boole, Radon, Sauer, Shelah stay Latin (no glossary term carries the names): متباينة Hoeffding، فترة Hoeffding، مبرهنة Radon، توطئة Sauer، حد الاتحاد المنسوب إلى Boole. The first mention of the VC dimension is *بُعد VC* (Vapnik--Chervonenkis dimension), so that the glossary term and the full name both appear; "VC bound" → حد VC; "VC generalization bound" → حد VC للتعميم; "VC theory" → نظرية VC.
+- "tail bound" → حد الذيل (حد الذيل الأسي); "looser" (bound) → أرخى, "loose bounds" → حدود رخوة; "vacuous" (bound) → فارغ; "concentration" → التركز; "distribution-free" → بلا افتراض على التوزيع.
+- "guesser" → مخمن (مخمنون), "coin-flipping guessers", "coin flippers" → مخمنون يرمون عملة / رماة العملة; "coin-flip labels" → وسوم ناتجة عن رمي عملة; "cherry-pick" → ينتقي (انتقاء الأوفر حظًا); "majority vote" → تصويت الأغلبية; "query" → استعلام; "test feedback" → التغذية الراجعة من الاختبار; "report the winner" → يعلن الفائز.
+- "hyperparameter tuning", "tune hyperparameters" → ضبط المعلَمات الفائقة (as on the regression pages; the glossary's تحسين المعلَمات الفائقة is kept for "hyperparameter optimization"); "architecture exploration" → استكشاف المعماريات; "one-shot final evaluation" → تقييم نهائي يُجرى مرة واحدة; "standard benchmarks" → الاختبارات المعيارية المعتمدة.
+- "shatter" → يحطم, "shattering" → التحطيم (the definition and its gloss come in the next unit); "labeling" (an assignment of labels to points) → توسيم (توسيمات ثنائية); "dichotomies" → تقسيمات ثنائية; "halfspace" → نصف فضاء (أنصاف الفضاءات الخطية); "halfplane" → نصف مستوٍ; "convex quadrilateral" → رباعي أضلاع محدب; "convex hull" → الغلاف المحدب; "non-collinear" → غير متسامتة; "lifted" (points, feature map) → مرفوع; "linearly dependent" → مرتبطة خطيًا.
+- "overparameterized" → مفرط المعلَمات (الشبكات مفرطة المعلَمات); "deep nets" → الشبكات العميقة; "post-training" in the plain sense "after training" → بعد التدريب (التدريب اللاحق stays the LLM stage); "binomial" → ثنائي الحدين; "rule of three" → قاعدة الثلاثة.
+- Slides: "error bars" → أشرطة الخطأ; "Section Summary" → ملخص القسم; "Benchmark (…)" as a lead-in for a worked number → المثال المرجعي; figure words "(solid)", "(dashed)", "dotted line", "blue", "orange" → (الخط المتصل)، (الخط المتقطع)، الخط المنقط، بالأزرق، بالبرتقالي; "(middle)" → (في الوسط); a bold lead-in that starts with a math span gets a leading noun (الحد $\mathrm{VC} \ge 3$).
+- English glosses given in u01 of this page (do not repeat in later units): selection bias, adaptive overfitting, Vapnik--Chervonenkis dimension, uniform convergence, empirical error, population error, confidence interval, coverage, union bound. i.i.d. is written out once (مستقلة ومتماثلة التوزيع (i.i.d.)). Not glossed yet: shatter, hypothesis class, VC bound (defined in the next unit).
+
+## chapter_linear-classification/image-classification-dataset.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "benchmark" (a dataset to compare models on) → اختبار معياري, glossed once on this page; "to benchmark the loader" → قياس أداء المحمل، قياس إنتاجية المحمل; "landmark benchmark" → اختبار معياري فارق; "headroom" → هامش.
+- "channel-first / channel-last layout" → تخطيط القنوات أولًا / تخطيط القنوات أخيرًا, "layout" (of a tensor) → تخطيط (تخطيطات); `NCHW` / `NHWC` stay in code.
+- "resize" (images) → يغير حجم، تغيير الحجم ("spatial resize" → تغيير الحجم المكاني); "rescale", "scale" (pixel values) → يعيد تحجيم، يحجّم; "footprint" of a dataset → حجم, "memory footprint" → بصمة الذاكرة (glossary).
+- Fashion-MNIST class names: قميص قصير الكمين (T-shirt)، بنطال (trouser)، كنزة (pullover)، فستان (dress)، معطف (coat)، صندل (sandal)، قميص (shirt)، حذاء رياضي (sneaker)، حقيبة (bag)، حذاء برقبة قصيرة (ankle boot); the English name is given once on the page because code and outputs keep it.
+- "silhouette" → صورة ظلية (صور ظلية); "outline" → محيط (خارجي); "boxy" → مربع (الهيئة); "upper-body garments / tops" → ملابس الجزء العلوي من الجسم / الملابس العلوية; "footwear cluster" → عنقود أحذية; "labeled gallery" → معرض صور موسومة.
+- "split" → قسم (قسم التدريب، قسم الاختبار), "train/test split" as an act → تقسيم إلى تدريب واختبار; "ships with" → تأتي بـ; "official" → رسمي; "nonstandard" → غير معياري.
+- "parse" (files) → يحلل; "gzipped" → المضغوطة بصيغة gzip; "IDX byte files" → ملفات IDX الثنائية; "header" → ترويسة; "N-byte" → ذات N بايتًا.
+- "native data loader" → محمل البيانات الأصلي في إطار العمل; "wrap" → يغلف; "attach a method to a class" → يلحق دالة بالصنف; "helper" (class or function) → صنف مساعد / دالة مساعدة; "dtype" → نوع البيانات; "leading batch axis" → محور دفعة في المقدمة; "singleton channel axis" → محور القناة المفرد.
+- "per-batch overhead" → العبء الإضافي لكل دفعة; "worker" (data-loading process) → عامل (عمال); "prefetch" → يجلب مسبقًا; "producer--consumer pipeline" → خط معالجة من منتج ومستهلك; "wall-clock time" → الزمن الفعلي; "starve the GPU" → تُحرم وحدة GPU من البيانات; "bottleneck" → عنق الزجاجة (أعناق الزجاجة).
+- "visual debugging" → التنقيح البصري; "silent data bugs" → مواطن الخلل الصامتة في البيانات; "syntax error" → خطأ نحوي; "runtime error" → خطأ في أثناء التشغيل; "misaligned labels" → وسوم لا تحاذي صورها; "expressive power" → قدرة تعبيرية; "linear template classifier" → مصنف القوالب الخطي.
+- "upsampling" → زيادة أخذ العينات (glossary); "linear map" → تحويل خطي (glossary); "the previous part" (of an exercise) → الجزء السابق.
+- Number lists in exercises ("1, 16, 64, 256, and 1024") are joined by a free-standing و between all items (style §3.2).
+- English glosses given on this page: benchmark, data loader, channel-first, channel-last, and the ten class names.
+
+## chapter_linear-classification/softmax-regression.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "zero-one error" → خطأ صفر-واحد (خطأ التصنيف صفر-واحد); "surrogate" (convex) → بديل (as in خسارة بديلة); "upper bound" → حد أعلى, "upper-bounds" → يحد … من الأعلى; "smooth" → أملس; "strictly decreasing" → متناقص تمامًا; "step function" → دالة درجية, "flat step" → الدرجة المسطحة.
+- "nats" / "bits" → نات / بت (وحدة النات، وحدة البت; invariant after a number: $0.37$ نات); inside math `\text{ nats}` is copied; "surprisal" → المفاجأة المعلوماتية (glossary); "code" (coding theory) → شفرة, "encode outcomes" → يرمّز النواتج.
+- Claude Shannon → كلود شانون (شانون is in Arabic letters by the introduction decision); "Gibbs' inequality" → متباينة Gibbs; "Kullback--Leibler divergence" → تباعد Kullback--Leibler (names in Latin).
+- "prediction minus observation" → التنبؤ ناقص المشاهدة (glossary مشاهدة); "observed label / class" → الوسم المرصود / الفئة المرصودة (as in u01); "globally convex" → محدبة على نحو شامل; "categorical draw" → سحبة فئوية; "per-example loss" → خسارة المثال الواحد.
+- "(Exercise :exref:`…`)" → (التمرين :exref:`…`); table "w.r.t." → بالنسبة إلى; "Loss (NLL)" → الخسارة (NLL).
+- "temperature" → درجة الحرارة (glossary درجة حرارة softmax); "sharpen / flatten" (a distribution) → يزيده حدة / يسطحه; "peaked" → حاد القمة; "scale factor" → معامل تحجيم; "without bound" → بلا حد; "overconfident guess" → تخمين مفرط الثقة; "confident mistake" → خطأ واثق.
+- Slides: "confident blunders" → الأخطاء الفادحة الواثقة; "saturation" → تشبع; "restoring force" → قوة إرجاع; "Scope assumption" → افتراض النطاق; "mutually exclusive" → متنافية; "Batched Matrix Formulation" → الصياغة المصفوفية بالدفعات; "a single GEMM" → عملية GEMM واحدة; "Boundary behavior" → السلوك عند الحدود; "Optimization Pitfall" → مزلق في التحسين.
+- English glosses given in u02 of this page (do not repeat in later units): negative log-likelihood, nats, log-sum-exp, information theory, surprisal, bits, entropy, cross-entropy, accuracy, error rate, margin, linearly separable, temperature, calibration.
+
+## chapter_linear-classification/classification.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "figure of merit" → مقياس للجودة; "class-weighted loss" → الخسارة الموزونة بالفئات; "class prior" → التوزيع القبلي للفئات; "class-conditional densities", "class-conditionals" → الكثافات الشرطية للفئات; "reweight" → يعيد الترجيح.
+- "receiver operating characteristic" → خاصية تشغيل المستقبل (glossary), then منحنى ROC; "AUC" → مساحة AUC (قيمتا AUC); "area under the ROC curve" → المساحة تحت منحنى ROC; "trapezoidal area" → المساحة المحسوبة بقاعدة شبه المنحرف; "threshold-free" → لا يعتمد على أي عتبة; "ranking quality" → جودة الترتيب; "scores tie" → تتساوى درجتان, "break ties at random" → يحسم التعادل عشوائيًا.
+- "simulate" (imperative) → حاكِ, "simulated scores" → الدرجات المحاكاة; "to threshold a classifier at $\tau$" → نضع عتبته عند $\tau$; "guess" → تخمين; "misdiagnosis" → التشخيص الخاطئ; "deferring to a specialist" → الإحالة إلى مختص; "unscaled model" → النموذج قبل التحجيم.
+- "This problem … of problem :exref:`…`" → هذه المسألة … من المسألة :exref:`…` (the English writes "problem", not "exercise").
+- Garment pairs in the exercise follow the softmax-regression-scratch page: sneaker → الحذاء الرياضي, sandal → الصندل, shirt → القميص, T-shirt → القميص قصير الكمين.
+- English glosses on this page in u02: none (the summary uses terms glossed in u01; exercises take no gloss, so receiver operating characteristic keeps only its acronym (ROC) as the English writes it).
+
+## chapter_linear-classification/softmax-regression-scratch.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Concise Implementation" (heading) → التنفيذ الموجز; "Defining the Model" → تعريف النموذج; "A Stable Cross-Entropy Loss" → خسارة إنتروبيا متقاطعة مستقرة; kicker "Concise Framework Implementation" → التنفيذ الموجز بإطار العمل.
+- "LogSumExp trick" → حيلة LogSumExp; "fused log-sum-exp cross-entropy" → الإنتروبيا المتقاطعة المدمجة القائمة على لوغاريتم مجموع الأسيات; "shifted exponent" → أس مزاح; "never materializing intermediate probabilities" → ألا نكوّن الاحتمالات الوسيطة صراحةً.
+- "install (a loss) on `d2l.Classifier.loss`" → يضع في (not يثبّت, which is installing software); "clamped" (loss, `cross_entropy`) → المحصورة; "trapping the loss above a floor" → تعلق الخسارة فوق أرضية (عالق, not محصور, which is the clamp); "positive floor" → أرضية موجبة; "the `1e-12` floor" → أرضية الحصر.
+- "twin hazards" → الخطران التوأمان; "confident blunder" → خطأ فادح ارتكبه بثقة; "classic pitfall" → مزلق شائع; "rock-solid numerical stability" → استقرار عددي راسخ; "intact gradients" → تدرجات سليمة; "logit magnitudes" → مقادير اللوجيتات; "extreme logits" → اللوجيتات المتطرفة.
+- "double softmax" → دالة softmax المزدوجة (خلل softmax المزدوجة); "smooth maximum" → قيمة عظمى ملساء; "the *softplus* of $x$" → دالة *softplus* للمتغير $x$; "naive expression" → التعبير الساذج; "relative accuracy" → الدقة النسبية; "double-precision reference" → قيمة مرجعية بالدقة المزدوجة.
+- "multiply-adds" → عمليات الضرب والجمع; "class means" → متوسطات الفئات, "mean image of each class" → صورة المتوسط لكل فئة; "by eye" → بالنظر; "tops" → الملابس العلوية.
+- "number formats" → صيغ الأعداد (الصيغة FP16); "exponent bits / mantissa bits" → بتات الأس / بتات الجزء الكسري; "running sum" → المجموع التراكمي.
+- Slides: "Critical invariant" → لامتغير حاسم; "identical mathematical trajectory" → مسار رياضي مطابق; "optimization dynamics" → ديناميكيات التحسين; "End-to-End Verification" → التحقق من طرف إلى طرف; "hidden size" → الحجم المخفي; "slots" (of a vector) → مواضع; "developer" → مطور; "immune to" → منيع على; table header "Component" → المكوّن; "Diagnostics ($83\%$ val)" → التشخيصات (تحقق $83\%$).
+- No new English gloss in u02 of this page: fully connected layer, softplus and LogSumExp are used in passing or stay Latin.
+
+## chapter_linear-classification/generalization-classification.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Statistical Learning Theory" → نظرية التعلم الإحصائي; "a priori" → مسبقًا; "learner" → خوارزمية التعلم (as on the regression page); "hypotheses" → الفرضيات.
+- "continuous parameter families" → العائلات ذات المعلَمات المستمرة; two classifiers "are indistinguishable on $\mathcal{S}$" → لا يمكن التمييز بينهما على $\mathcal{S}$; functions "realize" a labeling → تحقق; a class "induces" labelings → تحدث (إحداث).
+- "shatter" → يحطم, glossed (shatter) at its definition; the VC dimension at its definition in this unit → *بُعد VC* (Vapnik--Chervonenkis), since u01 already gave the full English gloss.
+- "Sauer's lemma" → توطئة Sauer; "grows polynomially" → ينمو نموًا كثير الحدود; "symmetrized union bound" → حد الاتحاد بصيغته المتناظرة; "absolute constant" → ثابت مطلق; "over the training draw $\mathcal{S}$" → على سحبة مجموعة التدريب $\mathcal{S}$.
+- "conceptual puzzle" → اللغز المفاهيمي; "adversarial distributions" → التوزيعات الخصومية; "natural images" → الصور الطبيعية; "one-vs-rest" → “واحد مقابل البقية”; "train--test gap" → الفجوة بين التدريب والاختبار; "capacity" → السعة; "sharp" (measurement) → دقيق.
+- Exercises: "a paper reports" → تذكر ورقة بحثية; "meaningful" (difference) → له دلالة; "submission" (of a model to a test-set holder) → عملية تقديم (يقدم نموذجًا); "recover" (labels) → يستعيد; "leaking a test set" → تسريب مجموعة اختبار; "lower-bound" (verb) → يوجد حدًا أدنى لـ; "hold out" → يحجز; "a 1 appended" → ملحقًا به 1; "indices" → الفهارس; "degree at most five" → من الدرجة الخامسة على الأكثر; "monomials" → أحاديات الحد.
+- English glosses given in u02 of this page: hypothesis class, shatter, VC bound.
+
+## chapter_linear-classification/softmax-regression.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Summary" → الملخص; "Exercises" → تمارين; "Discussions" → النقاشات (style §7).
+- "characterize all … coefficients" → أعط وصفًا لكل معاملات …; "reproduce" (a model, probabilities) → يعيد إنتاج; "redundant logit" → لوجيت فائض; "fitted logistic model" → نموذج لوجستي ملائَم.
+- "Bradley--Terry model" → نموذج Bradley--Terry (names in Latin); "default option" → خيار افتراضي; "choice probabilities" → احتمالات الاختيار; "observed choices" → الاختيارات المرصودة.
+- "smooth minimum" → صيغة ملساء للقيمة الصغرى; "arbitrarily small" → صغيرة بقدر ما نشاء; "the gap to $\max$" → الفجوة إلى; "equality on the right" → المساواة في الطرف الأيمن; "the largest value" → القيمة العظمى.
+- "without ties" (classification) → دون تساوٍ; "scaled parameters" → المعلَمات المحجَّمة; "unbounded norm" → معيار غير محدود; a "sequence of parameters" → متتالية (mathematical sense, style §10.1); "has no minimizer" → ليس لها نقطة تصغير; "finite minimizer" → نقطة تصغير منتهية.
+- "Gumbel-max trick" → حيلة Gumbel-max; "Gumbel distribution" → توزيع Gumbel; "probit model" → نموذج probit (Latin, like softmax); "CDF" → دالة التوزيع التراكمي (glossary; no Latin acronym); "perturb a logit with noise" → إضافة ضوضاء إلى اللوجيت اضطرابًا له, "perturbed score" → الدرجة المضطربة; "condition on" → اشترط على; "substitution" → التعويض; "up to Monte Carlo error" → في حدود خطأ مونت كارلو; "label frequencies" → التكرارات النسبية للوسوم; "i.i.d. draws" in an exercise → سحبات مستقلة ومتماثلة التوزيع.
+- Slides: "template nudging" → زحزحة القوالب; "rival templates" → القوالب المنافسة; "logit Hessian" → المصفوفة الهيسية بالنسبة إلى اللوجيتات; "KL divergence", "KL" → تباعد KL; "proper scoring rule" → قاعدة تسجيل سليمة; "mistake bound" → حد الأخطاء; "runaway weights" → أوزان جامحة; "honest calibration" → المعايرة الصادقة; "constant forecast" → تنبؤ ثابت; "surrogate error bound" → حد الخطأ بالخسارة البديلة; "order-preserving" → يحافظ على الترتيب; "shift-invariant" → ثابت تحت الإزاحة; "Summary: Key Takeaways for X" → الملخص: أهم خلاصات X; "Section Summary" → ملخص القسم.
+- A parenthesis that follows a math span and holds only another math span gets a leading أي (style §3.2): (أي $1\text{ bit}$).
+- English glosses on this page in u03: none (summary uses terms already glossed; exercises and slides take no gloss).
+
+## chapter_linear-classification/environment-and-distribution-shift.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "log-prior shift" (the term added to the logits) → إزاحة لوغاريتم الاحتمال القبلي (an offset, style §10.1: الإزاحة; الانزياح stays distribution shift); "Bayes logit adjustment" → تعديل اللوجيتات بقاعدة بايز; "confusion-matrix inversion" → عكس مصفوفة الالتباس; "unscramble" (the confusion) → يفك الالتباس.
+- "target class proportions" → نسب الفئات في الهدف; "target priors" → الاحتمالات القبلية للهدف; "source posterior" $p_S(y \mid \mathbf{x})$ → التوزيع البعدي في المصدر; "predicted class frequencies" → التكرارات النسبية للفئات المتنبأ بها.
+- "target pool" (the index set `pool`) → مخزون للهدف; "skewed target set" → مجموعة هدف مختلة النسب; "balanced" (split, images) → متوازن.
+- The Fashion-MNIST class named in quotes ("shirt") stays Latin after الفئة, as the code output prints it; the garments in running text are translated (قمصان، الملابس العلوية).
+- "performative prediction" → التنبؤ الأدائي; "performative" → أدائي; "feedback loop" → حلقة تغذية راجعة, "runaway" → جامحة, "decision-driven" → الناشئة عن القرارات; "self-confirming" → تؤكد نفسها.
+- "predictive policing" → الشرطة التنبؤية; "patrols" → دوريات; "incidents" → حوادث; "arrest records" → سجلات الاعتقال; "minor offenses" → مخالفات بسيطة; "highway toll camera" → كاميرا تحصيل الرسوم على طريق سريع; "psychiatry manual" → دليل للطب النفسي.
+- "randomized exploration" → استكشاف عشوائي; "bandits" on a slide → خوارزميات bandit (Latin after a class noun; no glossary entry); "data censored by the model's decisions" → بيانات حجبتها قرارات النموذج; "holdout data" → بيانات محجوزة (glossary).
+- "a trickle of freshly labeled examples" → قدر قليل متدفق من الأمثلة الموسومة حديثًا; "outdated" (labels) → متقادمة; "fresh target labels" → وسوم جديدة من الهدف.
+- "socio-technical systems" → الأنظمة الاجتماعية التقنية; "causal domain knowledge" → معرفة سببية بالمجال; "mixture" → خليط; "binary source domain" → مجال مصدر ثنائي.
+- Two terms glossed inside an existing English parenthesis: (*التنبؤ الأدائي*، performative prediction، *وحلقات التغذية الراجعة*، feedback loops), after the style guide's (*الحشو*، padding); a gloss followed by a reference shares one parenthesis: (reinforcement learning، :numref:`…`).
+- English glosses given in u02 of this page: performative prediction, feedback loops, reinforcement learning.
+
+## chapter_linear-classification (chapter check, claude fable-5.2 (medium), 2026-11-27)
+
+One rendering per term across the seven pages of the chapter; the unit entries above were corrected to match.
+
+- Fashion-MNIST class names, as on the dataset page (:numref:`sec_fashion_mnist`), on every page: قميص قصير الكمين (T-shirt)، بنطال (trouser; plural بناطيل)، كنزة (pullover)، فستان (dress)، معطف (coat)، صندل (sandal)، قميص (shirt)، حذاء رياضي (sneaker)، حقيبة (bag)، حذاء برقبة قصيرة (ankle boot; plural أحذية برقبة قصيرة). Not تيشيرت, قميص قطني, سروال, حذاء كاحل, حذاء عال, الحذاء نصف الطويل.
+- "importance weighting" → الترجيح بالأهمية; "importance-weighted" → الموزون بالأهمية; "importance weight" → وزن الأهمية (glossary). Not الترجيح بأوزان الأهمية.
+- "positive flags" (of a screening test or classifier) → الإنذارات الموجبة, with "false alarms" → الإنذارات الكاذبة; "to flag" → ينذر بـ.
+- Kept apart on purpose: "class prior" as the whole distribution → التوزيع القبلي للفئات (glossary توزيع قبلي) and "class priors" as the numbers $p(y)$ → الاحتمالات القبلية للفئات; "shift" of a distribution → انزياح and an additive offset (softmax shift invariance, log-prior shift) → إزاحة.
