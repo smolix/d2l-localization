@@ -6,40 +6,40 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 
 | English | Preferred | Status | Concept / sense | Evidence |
 | --- | --- | --- | --- | --- |
-| linear regression | линейная регрессия | proposed | linear-regression: A model that predicts a continuous target using a linear combination of inputs. |  |
-| regression | регрессия | proposed | regression: The task of predicting a numerical outcome. |  |
-| classification | классификация | proposed | classification: The task of assigning an input to a category. |  |
-| feature | признак | proposed | feature: An observed input variable used by a model. |  |
-| label | метка | proposed | label: The target value associated with an example. |  |
+| linear regression | линейная регрессия | verified_d2l | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/linear-regression.md#L6) |
+| regression | регрессия | verified_d2l | regression: The task of predicting a numerical outcome. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/linear-regression.md#L9) |
+| classification | классификация | verified_d2l | classification: The task of assigning an input to a category. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/linear-regression.md#L9) |
+| feature | признак | proposed | feature: An observed input variable used by a model. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L59) |
+| label | метка | proposed | label: The target value associated with an example. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L59) |
 | training example | обучающий пример | proposed | training-example: An observation used to fit a model. |  |
-| dataset | набор данных | proposed | dataset: A collection of examples used for analysis or learning. |  |
-| training set | обучающая выборка | proposed | training-set: The portion of data used to fit model parameters. |  |
+| dataset | набор данных | proposed | dataset: A collection of examples used for analysis or learning. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L28) |
+| training set | обучающая выборка | proposed | training-set: The portion of data used to fit model parameters. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L83) |
 | validation set | валидационная выборка | proposed | validation-set: Data used to select models or tune settings during development. |  |
-| test set | тестовая выборка | proposed | test-set: Data held out to assess a fitted model. |  |
-| model parameter | параметр модели | proposed | model-parameter: A value learned or fitted as part of a model. |  |
+| test set | тестовая выборка | proposed | test-set: Data held out to assess a fitted model. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L83) |
+| model parameter | параметр модели | proposed | model-parameter: A value learned or fitted as part of a model. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L83) |
 | weight | вес | proposed | weight: A coefficient that scales an input or connection in a model. |  |
 | bias | смещение | proposed | bias: An additive offset in a model or prediction. |  |
-| prediction | предсказание | proposed | prediction: A model's estimate of an outcome for an input. |  |
-| loss function | функция потерь | proposed | loss-function: A function measuring the error of a prediction or model. |  |
-| objective function | целевая функция | proposed | objective-function: The quantity an optimization procedure seeks to minimize or maximize. |  |
-| squared error | квадратичная ошибка | proposed | squared-error: The square of the difference between a prediction and its target. |  |
+| prediction | предсказание | proposed | prediction: A model's estimate of an outcome for an input. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L23) |
+| loss function | функция потерь | verified_d2l | loss-function: A function measuring the error of a prediction or model. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/index.md#L4) |
+| objective function | целевая функция | proposed | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L79) |
+| squared error | квадратичная ошибка | proposed | squared-error: The square of the difference between a prediction and its target. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L81) |
 | mean squared error | среднеквадратичная ошибка | proposed | mean-squared-error: The average squared difference between predictions and targets. |  |
 | empirical risk | эмпирический риск | proposed | empirical-risk: The average loss measured on a finite dataset. |  |
 | minibatch | мини-батч | proposed | minibatch: A subset of examples processed together in an update. |  |
 | batch size | размер батча | proposed | batch-size: The number of examples processed in a batch. |  |
 | epoch | эпоха | proposed | epoch: A pass through the training dataset. |  |
-| gradient descent | градиентный спуск | proposed | gradient-descent: An optimization method that moves parameters against the objective gradient. |  |
+| gradient descent | градиентный спуск | proposed | gradient-descent: An optimization method that moves parameters against the objective gradient. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L87) |
 | stochastic gradient descent | стохастический градиентный спуск | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. |  |
 | learning rate | скорость обучения | proposed | learning-rate: The step-size setting used in an optimization update. |  |
-| optimization | оптимизация | proposed | optimization: The process of finding values that improve an objective. |  |
-| gradient | градиент | proposed | gradient: The vector of partial derivatives of a scalar function. |  |
+| optimization | оптимизация | proposed | optimization: The process of finding values that improve an objective. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L79) |
+| gradient | градиент | proposed | gradient: The vector of partial derivatives of a scalar function. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L14) |
 | derivative | производная | proposed | derivative: The rate of change of a function with respect to an input. |  |
 | partial derivative | частная производная | proposed | partial-derivative: A derivative with respect to one variable while others are held fixed. |  |
 | chain rule | цепное правило | proposed | chain-rule: A rule for differentiating compositions of functions. |  |
-| backpropagation | обратное распространение ошибки | proposed | backpropagation: An algorithm that propagates derivatives backward through a computation. |  |
+| backpropagation | обратное распространение ошибки | proposed | backpropagation: An algorithm that propagates derivatives backward through a computation. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L14) |
 | automatic differentiation | автоматическое дифференцирование | proposed | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. |  |
 | computational graph | вычислительный граф | proposed | computational-graph: A representation of a computation as connected operations and values. |  |
-| vector | вектор | proposed | vector: An ordered collection of numerical components. |  |
+| vector | вектор | proposed | vector: An ordered collection of numerical components. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L63) |
 | matrix | матрица | proposed | matrix: A rectangular array of numerical entries. |  |
 | tensor | тензор | proposed | tensor: A multidimensional array generalizing scalars, vectors, and matrices. |  |
 | scalar | скаляр | proposed | scalar: A single numerical quantity. |  |
@@ -51,7 +51,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | singular value decomposition | сингулярное разложение | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
 | norm | норма | proposed | norm: A function measuring the size of a vector or other mathematical object. |  |
 | Euclidean distance | евклидово расстояние | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
-| linear algebra | линейная алгебра | proposed | linear-algebra: The mathematics of vectors, matrices, and linear mappings. |  |
+| linear algebra | линейная алгебра | proposed | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L12) |
 | linear transformation | линейное преобразование | proposed | linear-transformation: A mapping that preserves vector addition and scalar multiplication. |  |
 | identity matrix | единичная матрица | proposed | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. |  |
 | determinant | определитель | proposed | determinant: A scalar associated with a square matrix that describes signed volume scaling. |  |
@@ -59,8 +59,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | trace | след | proposed | trace: The sum of the diagonal entries of a square matrix. |  |
 | orthogonal | ортогональный | proposed | orthogonal: Having zero inner product, or preserving inner products for a transformation. |  |
 | positive definite | положительно определённый | proposed | positive-definite: Having a strictly positive quadratic form for every nonzero vector. |  |
-| probability | вероятность | proposed | probability: A numerical measure of the likelihood of an event. |  |
-| random variable | случайная величина | proposed | random-variable: A quantity whose value is determined by a random outcome. |  |
+| probability | вероятность | proposed | probability: A numerical measure of the likelihood of an event. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L136) |
+| random variable | случайная величина | proposed | random-variable: A quantity whose value is determined by a random outcome. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L16) |
 | probability distribution | распределение вероятностей | proposed | probability-distribution: A specification of probabilities for possible outcomes. |  |
 | probability density | плотность вероятности | proposed | probability-density: A function whose integral over a region gives its probability. |  |
 | conditional probability | условная вероятность | proposed | conditional-probability: The probability of an event given another event. |  |
@@ -80,12 +80,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | prior | априорное распределение | proposed | prior: A probability distribution expressing uncertainty before observing data. |  |
 | posterior | апостериорное распределение | proposed | posterior: A probability distribution updated after observing data. |  |
 | likelihood | правдоподобие | proposed | likelihood: The probability or density of observed data viewed as a function of model parameters. |  |
-| maximum likelihood | максимальное правдоподобие | proposed | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. |  |
+| maximum likelihood | максимальное правдоподобие | proposed | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L6) |
 | maximum likelihood estimation | метод максимального правдоподобия | proposed | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. |  |
 | sampling | сэмплирование | proposed | sampling: The process of drawing observations from a distribution or population. |  |
 | Monte Carlo | метод Монте-Карло | proposed | monte-carlo: A family of methods that use random samples to estimate quantities. |  |
-| entropy | энтропия | proposed | entropy: A measure of uncertainty in a probability distribution. |  |
-| cross-entropy | кросс-энтропия | proposed | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. |  |
+| entropy | энтропия | proposed | entropy: A measure of uncertainty in a probability distribution. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L10) |
+| cross-entropy | кросс-энтропия | proposed | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L138) |
 | mutual information | взаимная информация | proposed | mutual-information: A measure of statistical dependence between random variables. |  |
 | softmax | softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
 | logistic regression | логистическая регрессия | proposed | logistic-regression: A probabilistic linear model commonly used for binary classification. |  |
@@ -95,7 +95,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | precision | точность | proposed | precision: The fraction of predicted positives that are true positives. |  |
 | recall | полнота | proposed | recall: The fraction of actual positives that are correctly identified. |  |
 | confusion matrix | матрица ошибок | proposed | confusion-matrix: A table comparing predicted and actual class counts. |  |
-| neural network | нейронная сеть | proposed | neural-network: A model composed of interconnected parameterized transformations. |  |
+| neural network | нейронная сеть | verified_d2l | neural-network: A model composed of interconnected parameterized transformations. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/index.md#L4) |
 | neuron | нейрон | proposed | neuron: A computational unit that transforms inputs into an output. |  |
 | layer | слой | proposed | layer: A stage of a neural network that transforms its input. |  |
 | hidden layer | скрытый слой | proposed | hidden-layer: A network layer between the input and output layers. |  |
@@ -103,7 +103,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | nonlinearity | нелинейность | proposed | nonlinearity: A transformation that is not linear in its input. |  |
 | multilayer perceptron | многослойный перцептрон | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. |  |
 | rectified linear unit | ReLU | proposed | rectified-linear-unit: An activation function that outputs the larger of zero and its input. |  |
-| overfitting | переобучение | proposed | overfitting: Fitting training data so closely that performance on unseen data suffers. |  |
+| overfitting | переобучение | proposed | overfitting: Fitting training data so closely that performance on unseen data suffers. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L83) |
 | underfitting | недообучение | proposed | underfitting: Failing to capture important structure even in the training data. |  |
 | generalization | обобщающая способность | proposed | generalization: The ability of a learned model to perform well on unseen examples. |  |
 | regularization | регуляризация | proposed | regularization: A method that constrains or modifies learning to improve generalization. |  |
@@ -123,7 +123,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convolutional neural network | свёрточная нейронная сеть | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
 | kernel | ядро свёртки | proposed | kernel: A set of weights applied locally in a convolution. |  |
 | filter | фильтр | proposed | filter: A learned set of local weights used to extract a pattern. |  |
-| channel | канал | proposed | channel: A feature dimension in a structured representation such as an image. |  |
+| channel | канал | proposed | channel: A feature dimension in a structured representation such as an image. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L61) |
 | stride | шаг | proposed | stride: The spacing between successive positions of an operation on an input. |  |
 | padding | дополнение | proposed | padding: Extra values added around an input to control an operation's boundary or output size. |  |
 | pooling | пулинг | proposed | pooling: An operation that aggregates values over local regions. |  |
@@ -144,11 +144,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | semantic segmentation | семантическая сегментация | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
 | instance segmentation | сегментация экземпляров | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
 | image classification | классификация изображений | proposed | image-classification: The task of assigning a class to an image. |  |
-| computer vision | компьютерное зрение | proposed | computer-vision: The study of extracting information and making predictions from visual data. |  |
+| computer vision | компьютерное зрение | proposed | computer-vision: The study of extracting information and making predictions from visual data. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L17) |
 | recurrent neural network | рекуррентная нейронная сеть | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
 | hidden state | скрытое состояние | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
 | time step | временной шаг | proposed | time-step: A position in a sequential or temporal computation. |  |
-| sequence | последовательность | proposed | sequence: An ordered collection of elements. |  |
+| sequence | последовательность | proposed | sequence: An ordered collection of elements. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L105) |
 | language model | языковая модель | proposed | language-model: A model assigning probabilities to sequences of language tokens. |  |
 | token | токен | proposed | token: A unit into which text is divided for processing. |  |
 | tokenization | токенизация | proposed | tokenization: The process of dividing text into tokens. |  |
@@ -251,7 +251,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | empirical risk minimization | минимизация эмпирического риска | proposed | empirical-risk-minimization: The principle of minimizing average loss over observed training examples. |  |
 | statistical learning | статистическое обучение | proposed | statistical-learning: Learning models from data using statistical principles. |  |
 | Bayesian inference | байесовский вывод | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
-| confidence interval | доверительный интервал | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. |  |
+| confidence interval | доверительный интервал | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L18) |
 | hypothesis testing | проверка гипотез | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. |  |
 | bootstrap | бутстрэп | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
 | central limit theorem | центральная предельная теорема | proposed | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. |  |
@@ -340,7 +340,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | feature extraction | извлечение признаков | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
 | representation learning | обучение представлений | proposed | representation-learning: Learning useful features or representations from data. |  |
 | self-supervised learning | обучение с самоконтролем | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
-| supervised learning | обучение с учителем | proposed | supervised-learning: Learning a mapping from inputs to observed targets. |  |
+| supervised learning | обучение с учителем | proposed | supervised-learning: Learning a mapping from inputs to observed targets. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L50) |
 | unsupervised learning | обучение без учителя | proposed | unsupervised-learning: Learning structure from data without task labels. |  |
 | in-context learning | обучение в контексте | proposed | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. |  |
 | prompt | промпт | proposed | prompt: An input that guides a model's response or behavior. |  |
@@ -391,8 +391,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | depthwise convolution | поканальная свёртка | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
 | pointwise convolution | поточечная свёртка | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
 | image resolution | разрешение изображения | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
-| pixel | пиксель | proposed | pixel: An individual sample in a digital image. |  |
-| image recognition | распознавание изображений | proposed | image-recognition: The task of identifying visual content in images. |  |
+| pixel | пиксель | proposed | pixel: An individual sample in a digital image. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L61) |
+| image recognition | распознавание изображений | proposed | image-recognition: The task of identifying visual content in images. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L15) |
 | image segmentation | сегментация изображений | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
 | region proposal | регион-кандидат | proposed | region-proposal: A candidate image region that may contain an object. |  |
 | anchor box | якорная рамка | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
@@ -404,7 +404,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | feature pyramid | пирамида признаков | proposed | feature-pyramid: A collection of feature representations at multiple spatial scales. |  |
 | multi-scale | многомасштабный | proposed | multi-scale: Using or representing information at multiple resolutions or sizes. |  |
 | transition model | модель переходов | proposed | transition-model: A model describing how a system changes state. |  |
-| observation | наблюдение | proposed | observation: A measured or perceived value available to a learning system. |  |
+| observation | наблюдение | proposed | observation: A measured or perceived value available to a learning system. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L97) |
 | trajectory | траектория | proposed | trajectory: A sequence of states, actions, or observations generated over time. |  |
 | episode | эпизод | proposed | episode: A sequence of interactions ending at a terminal condition. |  |
 | terminal state | терминальное состояние | proposed | terminal-state: A state marking the end of an episode. |  |
@@ -428,7 +428,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | score matching | score matching | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | динамика Ланжевена | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
 | noise prediction | предсказание шума | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
-| Gaussian noise | гауссовский шум | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. |  |
+| Gaussian noise | гауссовский шум | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L128) |
 | flow matching | flow matching | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
 | probability flow | вероятностный поток | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
 | vector field | векторное поле | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
@@ -651,7 +651,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pseudoinverse | псевдообратная матрица | proposed | pseudoinverse: A generalized matrix inverse applicable to nonsquare or singular matrices. |  |
 | orthonormal basis | ортонормированный базис | proposed | orthonormal-basis: A basis whose vectors have unit norm and are mutually orthogonal. |  |
 | basis vector | базисный вектор | proposed | basis-vector: A vector belonging to a basis of a vector space. |  |
-| eigendecomposition | спектральное разложение | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. |  |
+| eigendecomposition | спектральное разложение | proposed | eigendecomposition: A matrix factorization using its eigenvalues and eigenvectors when the required conditions hold. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L12) |
 | singular value | сингулярное число | proposed | singular-value: A nonnegative scaling factor in a matrix's singular value decomposition. |  |
 | left singular vector | левый сингулярный вектор | proposed | left-singular-vector: A vector in the output-space orthonormal basis of a singular value decomposition. |  |
 | right singular vector | правый сингулярный вектор | proposed | right-singular-vector: A vector in the input-space orthonormal basis of a singular value decomposition. |  |
@@ -728,8 +728,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | моделируемость | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
 | forward posterior | апостериорное распределение прямого процесса | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
-| binary classification | бинарная классификация | proposed | binary-classification: The task of assigning each input to one of two classes. |  |
-| multiclass classification | многоклассовая классификация | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
+| binary classification | бинарная классификация | proposed | binary-classification: The task of assigning each input to one of two classes. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L134) |
+| multiclass classification | многоклассовая классификация | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L138) |
 | multi-label classification | классификация с несколькими метками | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
 | binary cross-entropy | бинарная кросс-энтропия | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. |  |
 | softmax regression | softmax-регрессия | proposed | softmax-regression: A classification model that applies softmax to linear class scores. |  |
@@ -767,7 +767,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | in-distribution | из того же распределения | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
 | Bayes error | байесовская ошибка | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
 | regression target | целевое значение регрессии | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
-| feature vector | вектор признаков | proposed | feature-vector: A vector containing the input features of an example. |  |
+| feature vector | вектор признаков | proposed | feature-vector: A vector containing the input features of an example. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L116) |
 | target variable | целевая переменная | proposed | target-variable: The quantity a model is intended to predict. |  |
 | intercept | свободный член | proposed | intercept: The additive constant in a regression or other linear model. |  |
 | coefficient | коэффициент | proposed | coefficient: A numerical factor multiplying a variable or term. |  |
@@ -1088,7 +1088,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | long tail | длинный хвост | proposed | long-tail: A collection of relatively infrequent items that collectively may be substantial. |  |
 | hit rate | доля попаданий | proposed | hit-rate: The fraction of cases in which a target item appears in a recommended set. |  |
 | normalized discounted cumulative gain | нормированный дисконтированный совокупный выигрыш | proposed | normalized-discounted-cumulative-gain: A ranking metric that weights relevant items by their positions and normalizes by an ideal ranking. |  |
-| information theory | теория информации | proposed | information-theory: The study of quantifying information, uncertainty, compression, and communication. |  |
+| information theory | теория информации | proposed | information-theory: The study of quantifying information, uncertainty, compression, and communication. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_appendix-mathematics-for-deep-learning/index.md#L20) |
 | information content | количество информации | proposed | information-content: A measure of the information associated with an outcome or message. |  |
 | Shannon entropy | энтропия Шеннона | proposed | shannon-entropy: The expected self-information of a random variable. |  |
 | joint entropy | совместная энтропия | proposed | joint-entropy: The entropy of a joint probability distribution. |  |
@@ -1187,12 +1187,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reconstruction term | член реконструкции | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
 | Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
 | critic | критик | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
-| model | модель | proposed | model: A mathematical or computational representation used to describe data or make predictions. |  |
-| training | обучение | proposed | training: The process of fitting a model using data and a learning objective. |  |
+| model | модель | verified_d2l | model: A mathematical or computational representation used to describe data or make predictions. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/index.md#L4) |
+| training | обучение | verified_d2l | training: The process of fitting a model using data and a learning objective. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_linear-networks/index.md#L4) |
 | activation | активация | proposed | activation: The output of a neural network unit or activation function for a given input. |  |
 | mask | маска | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. |  |
-| sample | сэмпл | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
-| loss | потери | proposed | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. |  |
+| sample | сэмпл | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L59) |
+| loss | потери | proposed | loss: The value of the loss function for a prediction, an example or a minibatch; the quantity training minimizes. | [d2l-ru-stabuev](https://github.com/stabuev/d2l-ru/blob/3d5548ab83f46e3f13e9df8791c08f1df748b8ec/chapter_introduction/index.md#L83) |
 | score | оценка | proposed | score: A scalar that rates a candidate (a token, a key, an item, an output), as in an attention, ranking or evaluation score; not the score function of a density. |  |
 | batch | батч | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
 | advantage | преимущество | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |

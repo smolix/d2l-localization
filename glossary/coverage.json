@@ -492,13 +492,14 @@
     "es": {
       "total": 1191,
       "statuses": {
-        "verified_external": 76,
-        "proposed": 1115
+        "verified_external": 107,
+        "verified_d2l": 26,
+        "proposed": 1058
       },
       "by_topic": {
         "attention": {
-          "verified_external": 3,
-          "proposed": 53
+          "verified_external": 5,
+          "proposed": 51
         },
         "attention mechanisms": {
           "proposed": 1
@@ -511,15 +512,17 @@
           "verified_external": 1
         },
         "computer vision": {
-          "proposed": 55,
-          "verified_external": 4
+          "proposed": 49,
+          "verified_external": 8,
+          "verified_d2l": 2
         },
         "convolutional modern": {
-          "proposed": 31,
-          "verified_external": 2
+          "proposed": 28,
+          "verified_external": 5
         },
         "convolutional neural networks": {
-          "proposed": 25
+          "proposed": 24,
+          "verified_external": 1
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -529,12 +532,12 @@
           "proposed": 102
         },
         "gaussian processes": {
-          "verified_external": 2,
-          "proposed": 32
+          "verified_external": 3,
+          "proposed": 31
         },
         "generative adversarial networks": {
-          "proposed": 28,
-          "verified_external": 2
+          "verified_external": 3,
+          "proposed": 27
         },
         "hyperparameter optimization": {
           "verified_external": 1,
@@ -544,21 +547,25 @@
           "proposed": 1
         },
         "linear classification": {
-          "proposed": 31,
+          "verified_d2l": 1,
+          "proposed": 30,
           "verified_external": 3
         },
         "linear regression": {
-          "verified_external": 6,
-          "proposed": 34
+          "verified_external": 7,
+          "proposed": 32,
+          "verified_d2l": 1
         },
         "mdl calculus": {
-          "proposed": 14
+          "proposed": 13,
+          "verified_d2l": 1
         },
         "mdl dynamics": {
           "proposed": 44
         },
         "mdl information theory": {
-          "proposed": 43
+          "proposed": 42,
+          "verified_d2l": 1
         },
         "mdl linear algebra": {
           "proposed": 20,
@@ -569,30 +576,33 @@
           "verified_external": 1
         },
         "mdl probability statistics": {
-          "verified_external": 2,
-          "proposed": 63
+          "verified_external": 3,
+          "proposed": 62
         },
         "multilayer perceptrons": {
-          "proposed": 26,
-          "verified_external": 1
+          "verified_external": 4,
+          "proposed": 23
         },
         "natural language processing applications": {
-          "proposed": 11
-        },
-        "natural language processing pretraining": {
-          "proposed": 26,
+          "proposed": 10,
           "verified_external": 1
         },
+        "natural language processing pretraining": {
+          "proposed": 24,
+          "verified_external": 3
+        },
         "notation": {
-          "proposed": 1
+          "verified_d2l": 1
         },
         "optimization": {
-          "proposed": 99,
-          "verified_external": 18
+          "proposed": 91,
+          "verified_external": 20,
+          "verified_d2l": 6
         },
         "preliminaries": {
-          "proposed": 32,
-          "verified_external": 4
+          "proposed": 27,
+          "verified_external": 5,
+          "verified_d2l": 4
         },
         "probability": {
           "proposed": 1
@@ -604,24 +614,28 @@
           "proposed": 1
         },
         "recommender systems": {
-          "proposed": 43,
-          "verified_external": 3
+          "proposed": 37,
+          "verified_external": 7,
+          "verified_d2l": 2
         },
         "recurrent modern": {
           "verified_external": 8,
-          "proposed": 37
+          "proposed": 36,
+          "verified_d2l": 1
         },
         "recurrent neural networks": {
-          "verified_external": 2,
-          "proposed": 29
+          "verified_external": 4,
+          "proposed": 27
         },
         "reinforcement learning": {
-          "proposed": 61,
+          "proposed": 56,
+          "verified_d2l": 5,
           "verified_external": 3
         },
         "transformers": {
-          "verified_external": 5,
-          "proposed": 51
+          "verified_external": 7,
+          "verified_d2l": 1,
+          "proposed": 48
         }
       }
     },
@@ -1675,7 +1689,8 @@
     "ru": {
       "total": 1191,
       "statuses": {
-        "proposed": 1191
+        "verified_d2l": 7,
+        "proposed": 1184
       },
       "by_topic": {
         "attention": {
@@ -1718,10 +1733,12 @@
           "proposed": 1
         },
         "linear classification": {
-          "proposed": 34
+          "verified_d2l": 1,
+          "proposed": 33
         },
         "linear regression": {
-          "proposed": 40
+          "verified_d2l": 4,
+          "proposed": 36
         },
         "mdl calculus": {
           "proposed": 14
@@ -1754,7 +1771,8 @@
           "proposed": 1
         },
         "optimization": {
-          "proposed": 117
+          "proposed": 116,
+          "verified_d2l": 1
         },
         "preliminaries": {
           "proposed": 36
@@ -1775,7 +1793,8 @@
           "proposed": 45
         },
         "recurrent neural networks": {
-          "proposed": 31
+          "verified_d2l": 1,
+          "proposed": 30
         },
         "reinforcement learning": {
           "proposed": 64

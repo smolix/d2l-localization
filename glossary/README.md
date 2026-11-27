@@ -6,7 +6,7 @@ This directory contains a reusable, source-traceable glossary for translating **
 
 **Read [COVERAGE.md](COVERAGE.md) before using the data.** A populated cell can be an unverified proposal. This is a terminology resource with an explicit review queue, not a claim of complete linguistic or native-speaker certification. Coverage of the English book and evidence coverage in each target language are separate measurements.
 
-The catalog has **1,191 distinct English concepts** and **15,483 target entries**. Of those target entries, **1,950 are source-attested** (including deliberately retained terms and author rulings) and **13,533 are proposals**. A full review on 2026-11-26 corrected 2,089 entries and demoted terms that were only attested by machine-translated sources; see [review/README.md](review/README.md). All entries have a preferred expression, but the proposals still need terminology review. The live-book inventory covers 275 navigation-linked pages; glossary completeness is not implied by that inventory.
+The catalog has **1,191 distinct English concepts** and **15,483 target entries**. Of those target entries, **2,017 are source-attested** (including deliberately retained terms and author rulings) and **13,466 are proposals**. A full review on 2026-11-26 corrected 2,089 entries and demoted terms that were only attested by machine-translated sources; see [review/README.md](review/README.md). All entries have a preferred expression, but the proposals still need terminology review. The live-book inventory covers 275 navigation-linked pages; glossary completeness is not implied by that inventory.
 
 ## Files to use
 
