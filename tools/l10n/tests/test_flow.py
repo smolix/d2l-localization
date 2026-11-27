@@ -215,6 +215,9 @@ class TestStringsMenu(TempRepo):
         self.assertEqual(sorted(names, key=menu_order),
                          ['Deutsch', 'English', 'Español', 'Português', 'Tiếng Việt',
                           'Türkçe', 'Ελληνικά', 'العربية', '中文', '日本語', '한국어'])
+        codes = {'English': 'en', 'Deutsch': 'de', '中文': 'zh', 'Español': 'es'}
+        self.assertEqual(sorted(codes, key=lambda n: menu_order(n, codes[n])),
+                         ['English', 'Deutsch', 'Español', '中文'])
 
 
 if __name__ == '__main__':

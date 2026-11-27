@@ -272,20 +272,21 @@ def live_pages() -> dict:
             if isinstance(l, dict) and l.get('code') and isinstance(l.get('pages'), list)}
 
 
-def menu_order(name: str) -> str:
-    """Sort key of a menu entry: its name as shown, without accents and
-    case, so the Latin-script names come first in alphabetical order
-    (Tiếng Việt before Türkçe) and the other scripts follow by code point."""
+def menu_order(name: str, code: str = '') -> tuple:
+    """Sort key of a menu entry: English first, then the name as shown,
+    without accents and case, so the Latin-script names come next in
+    alphabetical order (Tiếng Việt before Türkçe) and the other scripts
+    follow by code point."""
     folded = unicodedata.normalize('NFKD', name)
     bare = ''.join(c for c in folded if not unicodedata.combining(c))
-    return unicodedata.normalize('NFC', bare).casefold()   # NFC rejoins Hangul syllables
+    return (code != 'en', unicodedata.normalize('NFC', bare).casefold())   # NFC rejoins Hangul
 
 
 def menu_data(include_unpublished=False) -> dict:
     """languages.json: the language list from languages.yml, keeping each
     language's `pages` from the published file (a language without a list
     links to its home page). Each group (current languages, old editions)
-    is sorted alphabetically by the name it shows (`menu_order`)."""
+    keeps English first and sorts the rest by the name it shows (`menu_order`)."""
     data = config.load_languages()
     pages = live_pages()
     langs = []
@@ -298,9 +299,9 @@ def menu_data(include_unpublished=False) -> dict:
             if lang.code in pages:
                 entry['pages'] = pages[lang.code]
             langs.append(entry)
-    old = [{'name': o['name'], 'url': o['url']} for o in data['old_editions']]
-    langs.sort(key=lambda e: menu_order(e['name']))
-    old.sort(key=lambda e: menu_order(e['name']))
+    langs.sort(key=lambda e: menu_order(e['name'], e['code']))
+    old = [{'name': o['name'], 'url': o['url']}
+           for o in sorted(data['old_editions'], key=lambda o: menu_order(o['name'], o.get('code', '')))]
     return {'languages': langs, 'old_editions': old}
 
 
