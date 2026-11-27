@@ -1,14 +1,20 @@
 # Style guide: Hindi (hi)
 
-Draft of 2026-11-26 (Fable 5.2) for native-speaker review. Translators read this with every
-unit (TRANSLATING.md §7–§8). Each rule has one reason and one example
-(English → Hindi, or ✗ wrong / ✓ right). Sentences marked *fable*, *opus* or
-*sonnet* are quoted from the translation test `evals/hi-conv-layer/`. Points
-that need a native reviewer are marked "(to confirm)" and collected in §12.
+Draft of 2026-11-26 (Fable 5.2); a native Hindi speaker reviewed its
+terminology on 2026-11-27, and §14 records the decisions, which the body
+follows. Translators read this with every unit (TRANSLATING.md §7–§8). Each
+rule has one reason and one example (English → Hindi, or ✗ wrong / ✓ right).
+Sentences marked *fable*, *opus* or *sonnet* are quoted from the translation
+test `evals/hi-conv-layer/`, which was made before this guide existed. Points
+that still need a native reviewer are marked "(to confirm)" and collected in
+§12.
 
 Order of authority: the decisions log, then this guide, then the glossary. The
 glossary says *what* a term is; this guide says *how to choose, spell and
 inflect*. Where the two disagree today, §13 lists the glossary entry to change.
+**A `proposed` glossary entry never overrides §5.1** (§14, ruling 3): if it is
+a coinage for a term of art (class 3), write the English word in Devanagari
+and record the choice in DECISIONS, naming the entry.
 
 The reader is an Indian student or engineer who studied school mathematics in
 Hindi or in English, learns computer science mostly from English material, and
@@ -117,7 +123,7 @@ vary in practice.
 | Dash | The English em dash `—` becomes a comma, a colon or parentheses; where a dash is the only fit, an em dash with a space on each side, at most one pair per sentence. Ranges and pairs keep the en dash of the source (इनपुट–आउटपुट जोड़ा, 40–55). | "the bias—an offset—shifts the plane" → बायस (एक ऑफ़सेट) समतल को खिसकाता है। |
 | Hyphen | In repeated and paired Hindi words (एक-एक, अलग-अलग, धीरे-धीरे, प्रविष्टि-दर-प्रविष्टि), in loans the glossary hyphenates (क्रॉस-एंट्रॉपी, फ़ाइन-ट्यूनिंग, मिनी-बैच), and between a symbol or letter and a suffix-like word (table below). No hyphen between an adjective and its noun. | ✗ रैखिक-प्रतिगमन |
 | Quotation marks | Type ASCII `"…"`; the build turns them into “…” (tested). Inside them '…'. In a slide `title="…"` the ASCII `"` delimits the attribute, so type “…” (U+201C, U+201D) inside it. | हम क्रॉस-सहसंबंध को ही "कन्वोल्यूशन" कहते हैं। |
-| Parentheses | ASCII `( )`, a space outside, none inside. | ग्रहणशील क्षेत्र (receptive field) |
+| Parentheses | ASCII `( )`, a space outside, none inside. | रिसेप्टिव फ़ील्ड (receptive field) |
 | Abbreviations | Write them out: "e.g." → जैसे, उदाहरण के लिए; "i.e." → यानी; "etc." → आदि; "vs." → बनाम; "cf." → देखें; "std" → मानक विचलन. No Hindi abbreviations with a dot (✗ उदा., इ.). "et al." stays in Latin. English acronyms stay (§5). | |
 | Emphasis | Keep `*…*` and `**…**` on the corresponding word(s), around the whole inflected word, never splitting off an ending; add none. The English gloss stays outside the markers. | ✓ *लेयरों* ✗ *लेयर*ों ; `*परिमित अंतर* (finite difference)` |
 
@@ -139,7 +145,7 @@ separate words, never attached and never hyphenated.
 | Bare symbol, code identifier or model name as subject | Masculine singular. Do not turn the sentence passive to avoid the choice. | $n$ बढ़ता है। BERT … सीखता है। ✓ नीचे `Conv2D` दोनों पैरामीटर दर्ज करता है (*sonnet*) |
 | Acronyms and Latin names | No English plural -s, no Hindi ending, no apostrophe. Show the plural with a numeral, a quantifier or a head noun. | दो GPU, सभी GPU पर, CNN मॉडलों में ✗ GPUs, GPUओं, CNN्स, Adam's |
 | Symbol or number + suffix-like word | Hyphen after math or a letter; ordinals with digits are written solid. | $d$-विमीय, $k$-गुना, Q-लर्निंग, n-ग्राम, p-मान ; 10वाँ, 21वीं |
-| Latin name + Hindi noun | A space, no hyphen. | Adam ऑप्टिमाइज़र, ReLU ऐक्टिवेशन, GPU मेमोरी, KV कैश, Fashion-MNIST छवि |
+| Latin name + Hindi noun | A space, no hyphen. | Adam ऑप्टिमाइज़र, ReLU ऐक्टिवेशन, GPU मेमोरी, KV कैश, Fashion-MNIST इमेज |
 
 **Order of protected tokens.** Hindi is verb-final and postpositional, so two
 tokens of a class sometimes change places. First try the English order (Hindi
@@ -196,11 +202,11 @@ record the choice in DECISIONS.
 | Class | Rule | Examples |
 |---|---|---|
 | 1. School and first-degree mathematics and statistics | The Hindi term in its NCERT/IGNOU form. | आव्यूह, सदिश, अदिश, सारणिक, अवकलज, अवकलन, समाकल, फलन, प्रायिकता, प्रसरण, माध्य, माध्यिका, मानक विचलन, वितरण, प्रतिगमन, प्रत्याशा, संभाविता, अभिसरण, इष्टतमीकरण, विमा, पंक्ति, स्तंभ, अवयव, समष्टि |
-| 2. Everyday words that are also terms | Hindi. | प्रशिक्षण, भार, शोर, त्रुटि, मान, नीति, अवस्था, क्रिया, पुरस्कार, परिवेश, गहराई, छवि, नमूना, उदाहरण, चरण |
-| 3. Terms of art of machine learning and computing (first met in an ML course, a paper or framework documentation) | The English word in Devanagari, in the glossary's spelling. Never a coinage. | ग्रेडिएंट, लॉस, लेयर, बायस, फ़ीचर, कर्नेल, टेंसर, टोकन, बैच, एपॉक, ऐक्टिवेशन, नॉर्मलाइज़ेशन, रेगुलराइज़ेशन, कन्वोल्यूशन, पूलिंग, पैडिंग, स्ट्राइड, अटेंशन, एंबेडिंग, ड्रॉपआउट, सैंपलिंग, इन्फ़रेंस, लर्निंग रेट, ओवरफ़िटिंग, बैकप्रॉपैगेशन, न्यूरल नेटवर्क, डीप लर्निंग |
+| 2. Everyday words that are also terms | Hindi. | प्रशिक्षण, भार, शोर, त्रुटि, मान, नीति, अवस्था, क्रिया, पुरस्कार, परिवेश, गहराई, नमूना, उदाहरण, चरण |
+| 3. Terms of art of machine learning and computing (first met in an ML course, a paper or framework documentation) | The English word in Devanagari, in the glossary's spelling. Never a coinage, even where a `proposed` glossary entry has one (§14). | ग्रेडिएंट, लॉस, लेयर, बायस, फ़ीचर, कर्नेल, टेंसर, टोकन, बैच, एपॉक, ऐक्टिवेशन, नॉर्मलाइज़ेशन, रेगुलराइज़ेशन, कन्वोल्यूशन, पूलिंग, पैडिंग, स्ट्राइड, अटेंशन, एंबेडिंग, ड्रॉपआउट, सैंपलिंग, इन्फ़रेंस, लर्निंग रेट, ओवरफ़िटिंग, बैकप्रॉपैगेशन, न्यूरल नेटवर्क, डीप लर्निंग, इमेज, ट्रांसलेशन इक्विवेरिएंस, ट्रांसलेशन इनवेरिएंस, लोकैलिटी, रिसेप्टिव फ़ील्ड, सुपरवाइज़्ड लर्निंग, डिफ़्यूज़न मॉडल, पैरेललिज़्म |
 | 4. General computing words long settled in Hindi | Devanagari loan. | कंप्यूटर, कोड, फ़ाइल, डेटा, प्रोग्राम, लूप, इंडेक्स, फ़्रेमवर्क, लाइब्रेरी, मेमोरी, इनपुट, आउटपुट, पैरामीटर, फ़ंक्शन (in code), क्लास, इंजीनियर |
 | 5. Names: models, architectures by name, optimizers, libraries, datasets, benchmarks, companies, hardware; acronyms; anything in code | Latin script, exactly as in English; never transliterated, never translated. | Adam, AdamW, ResNet, BERT, PyTorch, ImageNet, Fashion-MNIST, RTX 4090, ReLU, GELU, SGD, MLP, CNN, LSTM, GPU, KL, im2col ✗ एडम, पाइटॉर्च, रेसनेट, दीर्घ अल्पकालिक स्मृति |
-| 6. Government-glossary coinages that classrooms do not use | Never. | ✗ प्रवणता अवरोहण, गहन अधिगम, यंत्र अधिगम, तंत्रिका जाल, संवलन, प्रदिश, आच्छद, पृच्छा, कूटलेखक, स्तर (for layer) |
+| 6. Coinages that classrooms and practitioners do not use | Never. | ✗ प्रवणता अवरोहण, गहन अधिगम, यंत्र अधिगम, तंत्रिका जाल, संवलन, प्रदिश, आच्छद, पृच्छा, कूटलेखक, स्तर (for layer), स्थानांतरण समचरता, स्थानांतरण निश्चरता, स्थानीयता (for locality), ग्रहणशील क्षेत्र, ज्ञान आसवन |
 
 Reasons. Engineering in India is taught in English, and Hindi ML teaching
 keeps the English technical nouns and uses Hindi for grammar and for school
@@ -209,10 +215,20 @@ reader can use a paper or an API. School mathematics is the opposite case: its
 Hindi vocabulary is stable and known to every Hindi-medium student.
 ✗ … इसलिए हम गहन अधिगम की मानक शब्दावली अपनाकर … (*sonnet*)
 ✓ … इसलिए हम डीप लर्निंग की प्रचलित शब्दावली के अनुसार … (*fable*)
+✗ स्थानांतरण समचरता और स्थानीयता ✓ ट्रांसलेशन इक्विवेरिएंस (translation
+equivariance) और लोकैलिटी (locality) (§14)
 
+- **The test for class 3 is the reader, not the dictionary.** If an Indian
+  engineer who learned the subject in English would say the English word, the
+  term is class 3, even where Hindi has a correct word of its own (पर्यवेक्षित,
+  विसरण, समांतरता, अभिनति). A `proposed` glossary entry is not evidence
+  either way: the Hindi proposals were generated before this guide and were
+  checked against it only on 2026-11-27. For a term of art that has no entry,
+  or whose entry is a coinage, transliterate it by §2 and record it in
+  DECISIONS.
 - **Mixed compounds are normal Hindi and follow from the rule:** लॉस फलन,
   फ़ीचर सदिश, ग्रेडिएंट का नॉर्म, रैखिक प्रतिगमन, बैच नॉर्मलाइज़ेशन, पैच आव्यूह,
-  क्रॉस-सहसंबंध.
+  क्रॉस-सहसंबंध, इमेज वर्गीकरण.
 - **Architecture words that the glossary writes in Devanagari are common
   nouns:** ट्रांसफ़ॉर्मर, न्यूरल नेटवर्क, सॉफ़्टमैक्स, सिग्मॉइड, एन्कोडर. Named
   models built from them stay in Latin (Vision Transformer, ResNet-18).
@@ -235,12 +251,12 @@ Record the choice in DECISIONS.
 | Gender | Loans |
 |---|---|
 | Masculine | मॉडल, नेटवर्क, कर्नेल, टेंसर, ग्रेडिएंट, लॉस, बायस, फ़ीचर, फ़िल्टर, चैनल, पिक्सेल, टोकन, बैच, एपॉक, पैरामीटर, इनपुट, आउटपुट, डेटा, डेटासेट, लेबल, स्ट्राइड, मास्क, प्रॉम्प्ट, नॉर्म, स्कोर, लॉजिट, शेप, पैच, कैश, ग्राफ़, एजेंट, ट्रांसफ़ॉर्मर, एन्कोडर, डीकोडर, ऑप्टिमाइज़र, जनरेटर, अटेंशन, ड्रॉपआउट, सॉफ़्टमैक्स, लर्निंग रेट, शेड्यूल, चेकपॉइंट, फ़ंक्शन; all -शन words (ऐक्टिवेशन, कन्वोल्यूशन, नॉर्मलाइज़ेशन, रेगुलराइज़ेशन, बैकप्रॉपैगेशन) |
-| Feminine | लेयर, विंडो, क्लास, यूनिट, रैंक, क्वेरी, मेमोरी, लाइब्रेरी, एंट्रॉपी, लेटेंसी, ट्रैजेक्टरी, परप्लेक्सिटी, पाइपलाइन, बेसलाइन; all -इंग words (पूलिंग, पैडिंग, सैंपलिंग, एंबेडिंग, लर्निंग, प्री-ट्रेनिंग, फ़ाइन-ट्यूनिंग, क्लिपिंग) |
+| Feminine | लेयर, इमेज, विंडो, क्लास, यूनिट, रैंक, क्वेरी, मेमोरी, लाइब्रेरी, एंट्रॉपी, लेटेंसी, ट्रैजेक्टरी, परप्लेक्सिटी, पाइपलाइन, बेसलाइन; all -इंग words (पूलिंग, पैडिंग, सैंपलिंग, एंबेडिंग, लर्निंग, प्री-ट्रेनिंग, फ़ाइन-ट्यूनिंग, क्लिपिंग) |
 
 Hindi terms keep their own gender; the frequent ones: आव्यूह, सदिश, फलन,
 अवकलज, प्रसरण, माध्य, वितरण, भार, मान, पुरस्कार, प्रतिफल, स्तंभ, अवयव, शोर,
 प्रशिक्षण, समीकरण are masculine; प्रायिकता, संभाविता, प्रत्याशा, सटीकता, त्रुटि,
-अवस्था, नीति, क्रिया, पंक्ति, प्रविष्टि, छवि, गहराई, विमा, समष्टि, शृंखला, कुंजी
+अवस्था, नीति, क्रिया, पंक्ति, प्रविष्टि, गहराई, विमा, समष्टि, शृंखला, कुंजी
 are feminine.
 ✓ कन्वोल्यूशनल लेयर … क्रॉस-सहसंबंध निकालती है और उसमें एक अदिश बायस जोड़ती है।
 (*fable*)
@@ -252,7 +268,7 @@ Loans inflect as Hindi nouns. Never the English plural.
 | Noun | Direct plural | Oblique plural | Not |
 |---|---|---|---|
 | Masculine loan (कर्नेल, मॉडल, टोकन, पैरामीटर) | unchanged: दो कर्नेल | -ों: कर्नेलों में, मॉडलों को | ✗ कर्नेल्स, टोकन्स, पैरामीटर्स |
-| Feminine loan in a consonant (लेयर, क्लास) | -ें: लेयरें | -ों: लेयरों में | ✗ लेयर्स |
+| Feminine loan in a consonant (लेयर, इमेज, क्लास) | -ें: लेयरें, इमेजें | -ों: लेयरों में, इमेजों में | ✗ लेयर्स, इमेजेस |
 | Feminine loan in -ई (क्वेरी, लाइब्रेरी) | -इयाँ: क्वेरियाँ | -इयों: क्वेरियों में | ✗ क्वेरीज़ |
 | Loan in -ओ (विंडो) | unchanged: चारों विंडो | unchanged: विंडो में | |
 | डेटा | singular mass noun: डेटा उपलब्ध है; oblique unchanged: डेटा से | | ✗ डेटाओं, डेटे |
@@ -286,19 +302,27 @@ English participle (✗ ट्रेन्ड मॉडल, ✗ लर्न क
 
 **Add the English once per page (one numbered section of the book), at the
 first occurrence in body text, after every Hindi technical term of class 1 or
-2 whose everyday meaning does not already give it: `हिंदी पद (english term)`,
-lower case, ASCII parentheses, outside the emphasis markers.** Reason: many
-readers know these concepts by their English names only, and all go on to
-English sources; once per page keeps the text clean. Check the English page in
-CONTEXT: if an earlier unit of the page introduced the term, do not repeat it.
+2 whose everyday meaning does not already give it, and after every class-3
+term in Devanagari: `हिंदी पद (english term)`, lower case, the glossary's
+singular, ASCII parentheses, outside the emphasis markers.** Reason: many
+readers know these concepts by their English names only, a long
+transliteration (इक्विवेरिएंस) is not always recognisable by sound, and all
+readers go on to English sources; once per page keeps the text clean. Check
+the English page in CONTEXT: if an earlier unit of the page introduced the
+term, do not repeat it. (Class 3 was added on 2026-11-27, §14.)
 
 - Gloss: आव्यूह (matrix), अवकलज (derivative), प्रसरण (variance), संभाविता
-  (likelihood), ग्रहणशील क्षेत्र (receptive field), स्थानांतरण समचरता (translation
-  equivariance), *परिमित अंतर* (finite difference).
-- Never gloss a loan: its sound is the English.
-  ✗ शुरू में लॉस (loss) लगभग 12 पर रहता है (*sonnet*)
-  ✗ … डेटा से अपने-आप उपयोगी कर्नेल (kernel) खोज सकता है (*opus*)
-  ✓ … क्या ग्रेडिएंट डिसेंट डेटा से उपयोगी कर्नेल अपने आप खोज सकता है (*fable*)
+  (likelihood), रिसेप्टिव फ़ील्ड (receptive field), ट्रांसलेशन इक्विवेरिएंस
+  (translation equivariance), लोकैलिटी (locality), *परिमित अंतर* (finite
+  difference).
+- ✓ :numref:`sec_why-conv` में हमने दो ज्यामितीय सिद्धांतों — ट्रांसलेशन
+  इक्विवेरिएंस (translation equivariance) और लोकैलिटी (locality) — के आधार
+  पर कन्वोल्यूशनल लेयर (convolutional layer) का सूत्र कागज़ पर व्युत्पन्न किया
+  था। … और क्या ग्रेडिएंट डिसेंट (gradient descent) डेटा से उपयोगी कर्नेल
+  (kernel) खोज सकता है। (the reviewer's sample, §14, in this guide's form)
+- Only once: ✗ a second लॉस (loss) on the same page.
+- Never gloss a class-4 loan or a class-5 name: ✗ डेटा (data), इनपुट (input),
+  कोड (code).
 - Do not gloss words whose plain meaning is the technical one: भार, शोर,
   त्रुटि, मान, योग, गहराई, उदाहरण, चरण, पंक्ति.
 - With an acronym, the first use gives the full term and the acronym as the
@@ -319,7 +343,7 @@ for 100,000 both raise "numbers not found").
 
 | Item | Rule | Example |
 |---|---|---|
-| Decimal, thousands | As in the source. No Indian grouping. | "10,000 images" → 10,000 छवियाँ ; 100,000 ✗ 1,00,000 |
+| Decimal, thousands | As in the source. No Indian grouping. | "10,000 images" → 10,000 इमेजें ; 100,000 ✗ 1,00,000 |
 | Number words | hundred सौ, thousand हज़ार, million मिलियन, billion बिलियन, trillion ट्रिलियन, with the English numeral unchanged. No conversion to लाख, करोड़, अरब. Reason: the numeral stays equal to the English, to code output and to model names (7B). (to confirm, §12.3) | "3 million parameters" → 3 मिलियन पैरामीटर ✗ 30 लाख |
 | Digits or words | As the English: a number spelled out in English is a Hindi word (दो, तीन, दस); a digit stays a digit. Never spell out a digit. | "two hidden layers" → दो हिडन लेयरें ; 10 एपॉक |
 | Ordinals | पहला, दूसरा, तीसरा, चौथा, पाँचवाँ … दसवाँ, agreeing with the noun (तीसरी लेयर); above ten, digits + वाँ/वीं/वें. | "the third epoch" → तीसरा एपॉक |
@@ -366,9 +390,9 @@ units or currencies.
 
 | Kind | Rule | Example |
 |---|---|---|
-| `heading` | Noun phrase or verbal noun, no danda, no English gloss. English "-ing + object" becomes object + का + noun, or object + verbal noun. A question keeps its ?. | "Convolutions for Images" → छवियों के लिए कन्वोल्यूशन ; "Training the Model" → मॉडल का प्रशिक्षण ; "Learning a Kernel" → कर्नेल सीखना ; "Why Depth Helps" → गहराई क्यों मदद करती है? |
+| `heading` | Noun phrase or verbal noun, no danda, no English gloss. English "-ing + object" becomes object + का + noun, or object + verbal noun. A question keeps its ?. | "Convolutions for Images" → इमेजों के लिए कन्वोल्यूशन ; "Training the Model" → मॉडल का प्रशिक्षण ; "Learning a Kernel" → कर्नेल सीखना ; "Why Depth Helps" → गहराई क्यों मदद करती है? |
 | `caption` | Body register without हम and आप; a danda exactly where the English caption has a full stop. Keep `(a)`, `(b)`. | "Masks compose by logical AND." → मास्क तार्किक AND से जुड़ते हैं। |
-| `slide_title`, `kicker` | Noun phrase, as short as the English, no danda; "vs." → बनाम, "&" → और. | `title="Theoretical vs. Effective Receptive Fields"` → `title="सैद्धांतिक बनाम प्रभावी ग्रहणशील क्षेत्र"` (*fable*) ; `[Concept Check]{.kicker}` → `[समझ की जाँच]{.kicker}` |
+| `slide_title`, `kicker` | Noun phrase, as short as the English, no danda; "vs." → बनाम, "&" → और. | `title="Theoretical vs. Effective Receptive Fields"` → `title="सैद्धांतिक बनाम प्रभावी रिसेप्टिव फ़ील्ड"` ; `[Concept Check]{.kicker}` → `[समझ की जाँच]{.kicker}` |
 | `slide_text` | Short statements or noun phrases; no हम, no आप; instructions in the -एँ form; one line where the English is one line; a danda exactly where the English bullet ends in a full stop. Bold lead-ins keep their bold and colon. | "- **45% fewer parameters:** $27 c^2$ weights instead of $49 c^2$." → - **45% कम पैरामीटर:** $27 c^2$ भार, न कि $49 c^2$। ; "Lower the learning rate gradually" → लर्निंग रेट धीरे-धीरे घटाएँ |
 | `exercise` | The -एँ imperative; direct questions with ?. A bold title keeps its bold, with the danda inside it where the English has the full stop inside. Copy `[code]`, ● and `:exlabel:` unchanged. | "**Hand-designed kernels.** Design some kernels manually. Why?" → **हाथ से बनाए कर्नेल।** कुछ कर्नेल हाथ से डिज़ाइन करें। क्यों? |
 | Source credits | "Adapted from X." → X से रूपांतरित। The link moves before से रूपांतरित; name the block in NOTES if tokens change order. | *Stanford CS231n, [Assignment 2](…) से रूपांतरित।* |
@@ -385,10 +409,10 @@ build; copy it unchanged.
 
 | English | Sense → Hindi | Not |
 |---|---|---|
-| bias | parameter $b$ → बायस; of an estimator → अभिनति (unbiased → अनभिनत); fixed compounds as in the glossary (इंडक्टिव बायस, चयन बायस); social → पूर्वाग्रह | पूर्वाग्रह for $b$ |
+| bias | parameter $b$ and of an estimator → बायस (unbiased → बायस-रहित, bias-variance → बायस-प्रसरण, bias correction → बायस सुधार); fixed compounds as in the glossary (इंडक्टिव बायस, चयन बायस); social → पूर्वाग्रह | पूर्वाग्रह for $b$; अभिनति, अनभिनत (§14) |
 | dimension | → विमा; two-dimensional → द्विविमीय, $d$-dimensional → $d$-विमीय; "2D" stays 2D. All three test translators wrote आयाम; in Hindi physics आयाम is amplitude. | आयाम, द्वि-आयामी, द्विआयामी |
 | shape, size, rank, order | tensor shape → शेप; size → आकार (कर्नेल का आकार); matrix rank → रैंक; order of a derivative or tensor → कोटि; sequence order → क्रम | आकार for shape; कोटि for rank |
-| learning, training | learn → सीखना; in terms → लर्निंग (लर्निंग रेट, पर्यवेक्षित लर्निंग); train → प्रशिक्षण; the stage names → प्री-ट्रेनिंग, फ़ाइन-ट्यूनिंग | अधिगम, ट्रेनिंग alone |
+| learning, training | learn → सीखना; in terms → लर्निंग (लर्निंग रेट, सुपरवाइज़्ड लर्निंग); train → प्रशिक्षण; the stage names → प्री-ट्रेनिंग, फ़ाइन-ट्यूनिंग | अधिगम, ट्रेनिंग alone |
 | generalization, normalization | generalization → सामान्यीकरण; normalization → नॉर्मलाइज़ेशन; normal distribution → प्रसामान्य वितरण; regularization → रेगुलराइज़ेशन | सामान्यीकरण for normalization |
 | probability, likelihood | प्रायिकता; संभाविता; "likely", "chance" in plain prose → संभावना | संभावना for either term |
 | prediction, estimate, inference | पूर्वानुमान; आकलन; इन्फ़रेंस | भविष्यवाणी, अनुमान |
@@ -404,10 +428,11 @@ build; copy it unchanged.
 | unit | of a network → यूनिट (हिडन यूनिट); a unit quantity → इकाई (इकाई सदिश) | |
 | class, square | class label, Python class → क्लास; square → वर्ग (वर्ग त्रुटि); परिकल्पना वर्ग and वर्गीकरण as in the glossary | वर्ग for a label class |
 | step, stride | चरण (चरण आकार, समय चरण); स्ट्राइड | |
-| image, edge | छवि (छवियाँ, छवियों); an edge in an image → किनारा, the border of an array or region → सीमा | तस्वीर |
+| image, edge | इमेज (इमेजें, इमेजों), in every compound (इमेज वर्गीकरण, इमेज पैच, इमेज पहचान); an edge in an image → किनारा, the border of an array or region → सीमा | छवि, तस्वीर (§14) |
 | weight | भार | वज़न, वेट |
 | derivative, gradient | अवकलज; ग्रेडिएंट; "with respect to $x$" → $x$ के सापेक्ष | डेरिवेटिव, प्रवणता |
-| translation | of an image or function → स्थानांतरण; of language → अनुवाद | अनुवाद निश्चरता |
+| translation | of an image or function → ट्रांसलेशन (ट्रांसलेशन इक्विवेरिएंस, ट्रांसलेशन इनवेरिएंस); of language → अनुवाद (मशीन अनुवाद); the fixed name इमेज-टू-इमेज ट्रांसलेशन | स्थानांतरण, अनुवाद निश्चरता |
+| local, locality | the CNN principle → लोकैलिटी, a local receptive field → लोकल रिसेप्टिव फ़ील्ड; local minimum, maximum (school mathematics) → स्थानीय न्यूनतम, स्थानीय अधिकतम | स्थानीयता |
 | vocabulary | of tokens → शब्दावली; "terminology" → पारिभाषिक शब्द, नाम | शब्दावली for both in one passage |
 | space | → समष्टि (सदिश समष्टि); in statistics समष्टि is also "population" (समष्टि माध्य): name the sense when both occur | अंतरिक्ष |
 | use, experiment | use → उपयोग; experiment → प्रयोग | प्रयोग for "use" |
@@ -466,6 +491,8 @@ Read or tested for this draft (2026-11-26):
   after math; `glossary._present` does not match inflected Devanagari forms
   (नमूना in नमूनों, बैच का आकार in बैच के आकार).
 - Quarto's language directory in `.venv-build`: it has no `_language-hi.yml`.
+- The native-speaker review of 2026-11-27 (§14) and the glossary sweep that
+  followed it (`glossary/notes/hi-native-review-2026-11-27.md`).
 
 Not checked (stated from the drafter's knowledge of them):
 
@@ -524,22 +551,20 @@ Needs new code:
 1. **Imperatives** (§1, §8). Proposed: the -एँ form everywhere (करें, दिखाएँ,
    मान लें). The alternative is the -इए form of NCERT exercises (सिद्ध कीजिए,
    मान लीजिए).
-2. **The class line of §5.1**, above all ग्रेडिएंट, लॉस, लेयर, कन्वोल्यूशन and
-   न्यूरल नेटवर्क as loans against प्रवणता, हानि, परत, संवलन and तंत्रिका
-   नेटवर्क. Proposed: as the glossary has them now.
+2. **The class line of §5.1**: decided (§14, ruling 1). Terms of art are
+   loans in Devanagari. The borderline entries of the glossary sweep are
+   listed for the reviewer in `glossary/notes/hi-native-review-2026-11-27.md`.
 3. **Number words** (§6). Proposed: मिलियन, बिलियन with the English numeral.
    The alternative is लाख, करोड़, अरब with converted numerals (30 लाख), which
    reads more naturally and breaks the number check.
 4. **Nukta** (§2). Proposed: ज़ and फ़ always, क़, ख़, ग़ never.
-5. **The English gloss** (§5.5). Proposed: after every class-1 and class-2
-   term, school mathematics included (आव्यूह (matrix)), once per page. The
-   alternative, as in the German guide, leaves school vocabulary unglossed.
+5. **The English gloss** (§5.5). Decided for class 3 (§14, ruling 1): once
+   per page. Still to confirm for class 1: after school mathematics too
+   (आव्यूह (matrix)), or, as in the German guide, not.
 6. **People's names** (§7). Proposed: Latin for people in the text; in terms,
    Devanagari for the listed names only. The alternative is Latin for all, as
    in the German ruling.
-7. **"image"** (§9.1). Proposed: छवि, as the glossary (nine entries, one from
-   the CBSE manual). *fable* and *opus* chose इमेज to match पिक्सेल, चैनल and
-   फ़ीचर मैप.
+7. **"image"** (§9.1): decided, इमेज (§14, ruling 2).
 8. **"dimension"** (§9.1). Proposed: विमा, द्विविमीय (the glossary, NCERT)
    against the आयाम that all three test translators wrote.
 9. **Structure words** (§7): अनुभाग for section, साध्य for proposition, उपपत्ति
@@ -555,6 +580,14 @@ Needs new code:
     1,00,000.
 14. **Dash and quotes** (§3): the em dash only as a last resort, with spaces;
     ASCII quotes turned into “…” by the build.
+15. **कन्वोल्यूशन or कॉन्वोल्यूशन** (§2). The reviewer's sample writes
+    कॉन्वोल्यूशनल लेयर; the glossary and this guide write कन्वोल्यूशन,
+    कन्वोल्यूशनल (12 entries). Proposed: keep कन्वोल्यूशन until the reviewer
+    confirms either form.
+16. **Floating-point precision** (§9.1): परिशुद्धता (अर्ध, एकल, द्विगुण,
+    मिश्रित परिशुद्धता) against the loan प्रीसिज़न (हाफ़, सिंगल, मिक्स्ड
+    प्रीसिज़न) that ruling 1 suggests for a computing term. Proposed: as now,
+    until confirmed.
 
 ## 13. Proposed glossary corrections
 
@@ -586,6 +619,57 @@ contradict them as they stand.
    `rate-distortion` दर विरूपण → **दर-विरूपण**; `scaled dot-product attention`
    स्केल्ड डॉट-गुणनफल अटेंशन → **स्केल्ड डॉट गुणनफल अटेंशन** (as `dot product`).
 9. To add, since the test showed three renderings each: `dimension` विमा (with
-   द्विविमीय), `image` छवि, `index` इंडेक्स, `section` अनुभाग, `deep learning`
-   डीप लर्निंग, `machine learning` मशीन लर्निंग, `unit` (network) यूनिट,
-   `dense layer` डेंस लेयर.
+   द्विविमीय), `image` इमेज (added 2026-11-27 with `locality` लोकैलिटी, §14),
+   `index` इंडेक्स, `section` अनुभाग, `deep learning` डीप लर्निंग, `machine
+   learning` मशीन लर्निंग, `unit` (network) यूनिट, `dense layer` डेंस लेयर.
+10. **Native-speaker review (2026-11-27, §14):** 77 entries changed from a
+    coinage or from छवि to the loan, and `image` and `locality` added; every
+    change, with its reason, and the borderline cases left open are in
+    `glossary/notes/hi-native-review-2026-11-27.md`.
+
+## 14. Decisions (native-speaker review, 2026-11-27)
+
+A native Hindi speaker who learned computer science in English, as most
+Indian ML practitioners have, read the test translations of
+`evals/hi-conv-layer/`. The coined Sanskritised terms were unreadable to them:
+स्थानांतरण समचरता, स्थानांतरण अपरिवर्तनीयता और स्थानीयता for "translation
+equivariance/invariance and locality". They want the English term in
+Devanagari, with the English in parentheses to help the reader, and found छवि
+for "image" obscure. Their version of the section's opening:
+
+> → sec_why-conv में, हमने दो ज्यामितीय सिद्धांतों—ट्रांसलेशन इक्विवेरिएंस
+> (Translation Equivariance) और लोकैलिटी (Locality)—के आधार पर कॉन्वोल्यूशनल
+> लेयर (Convolutional Layer) का सूत्र कागज़ पर व्युत्पन्न किया था। अब हम देखते
+> हैं कि यह सूत्र किसी चित्र पर वास्तव में क्या गणना करता है, और क्या ग्रेडिएंट
+> डिसेंट (Gradient Descent) डेटा से उपयोगी कर्नेल (Kernels) खोज सकता है।
+
+§5.5 gives it in this guide's form (lower-case singular gloss, the dash with
+spaces, कन्वोल्यूशनल until §12.15 is answered). Why the coinages appeared:
+the test translations were made before this guide existed, and the glossary's
+`proposed` Hindi entries were generated before the class-3 rule of §5.1 and
+never checked against it; TRANSLATING.md §7 tells translators to use
+`proposed` entries, so they used the coinages. The author approved the
+feedback with these rulings, and the body of this guide follows them.
+
+1. **Terms of art in Devanagari, never coined** (§5.1, class 3): confirmed and
+   made strict. A term of machine learning or computing is the English word in
+   Devanagari, with the English in parentheses at its first use on the page
+   (§5.5, now for class 3 as well as classes 1 and 2): ट्रांसलेशन इक्विवेरिएंस
+   (translation equivariance), ट्रांसलेशन इनवेरिएंस (translation invariance;
+   the reviewer also writes ट्रांसलेशनल इनवेरिएंस), लोकैलिटी (locality),
+   रिसेप्टिव फ़ील्ड (receptive field). ✗ स्थानांतरण समचरता, स्थानांतरण
+   निश्चरता, स्थानीयता, ग्रहणशील क्षेत्र.
+2. **"image" → इमेज** (§5.1, §5.2, §9.1): changed from छवि, which leaves
+   class 2. Also in every compound: इमेज वर्गीकरण, इमेज पैच, इमेज पहचान, इमेज
+   ऑगमेंटेशन, इमेज-टू-इमेज ट्रांसलेशन. Feminine, like लेयर: इमेजें, इमेजों में.
+   The sample's किसी चित्र पर is not followed: चित्र is the book's word for
+   "figure" (§7) and prints before every figure reference.
+3. **A `proposed` glossary entry never overrides the transliteration rule**
+   (order of authority at the top, §5.1): if an entry is a coinage for a term
+   of art, the translator writes the English word in Devanagari and records it
+   in DECISIONS, naming the entry. The glossary was swept the same day: 77
+   entries changed (34 coinages for terms of art, 32 compounds made
+   consistent with them, 9 image compounds, the 2 terms the reviewer named),
+   and `image` and `locality` were added. The list, with the borderline
+   cases left for the reviewer, is in
+   `glossary/notes/hi-native-review-2026-11-27.md`.
