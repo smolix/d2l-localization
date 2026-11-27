@@ -120,6 +120,37 @@ def fix_tag_tools(wt: Path):
     parts = wt / 'tools' / 'build_part_pdfs.py'
     if parts.exists() and DOCCLASS_OLD in parts.read_text(encoding='utf-8'):
         scopes.apply_patches(wt, [('tools/build_part_pdfs.py', DOCCLASS_OLD, DOCCLASS_NEW)])
+    en_yml = wt / 'i18n' / 'en.yml'
+    if en_yml.exists() and 'fonts.emphasis:' not in en_yml.read_text(encoding='utf-8'):
+        _apply_tag_patch(wt, EMPHASIS_PATCH)
+
+
+# smolix/d2l-neu#353 (021c717b9), the build files only: the fonts.emphasis
+# setting (bold *…* for ja). Applied to tags that predate it.
+EMPHASIS_PATCH = Path(__file__).with_name('tag-patches') / 'fonts-emphasis.patch'
+
+
+EMPHASIS_ANCHOR = 'fonts.pdf.cjk_mono: null\n'
+EMPHASIS_LINES = ('# How *…* (emphasis) is set in the HTML book, the PDFs and the Beamer decks:\n'
+                  '# italic, or bold for scripts whose fonts have no italic (Japanese).\n'
+                  'fonts.emphasis: italic\n')
+
+
+def patched_en_yml(text: str) -> str:
+    """The tag's i18n/en.yml as the build sees it after fix_tag_tools, so that
+    `l10n strings` writes the settings the patches add (fonts.emphasis)."""
+    if 'fonts.emphasis:' not in text and text.count(EMPHASIS_ANCHOR) == 1:
+        text = text.replace(EMPHASIS_ANCHOR, EMPHASIS_ANCHOR + EMPHASIS_LINES)
+    return text
+
+
+def _apply_tag_patch(wt: Path, patch: Path):
+    for args in (['--check'], []):
+        r = subprocess.run(['git', 'apply', *args, str(patch)], cwd=wt,
+                           capture_output=True, text=True)
+        if r.returncode:
+            raise config.L10nError(f'cannot apply {patch.name} to the tag\'s tools: '
+                                   f'{r.stderr.strip()}')
 
 
 def overlay(lang, rev: str, wt: Path, stale='english', scope=None) -> list:
@@ -395,6 +426,7 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
         en_text = config.show(rev, 'i18n/en.yml')
         if en_text is None:
             raise config.L10nError(f'i18n/en.yml does not exist at {rev}')
+        en_text = patched_en_yml(en_text)
     en = _flatten(yaml.safe_load(en_text))
     path = lang.root / 'strings.yml'
     old_text = path.read_text(encoding='utf-8') if path.exists() else ''

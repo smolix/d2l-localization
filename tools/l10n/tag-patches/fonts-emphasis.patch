@@ -1,0 +1,86 @@
+diff --git a/i18n/en.yml b/i18n/en.yml
+index 352ec94ff..80422a0ca 100644
+--- a/i18n/en.yml
++++ b/i18n/en.yml
+@@ -37,6 +37,9 @@ fonts.pdf.mono: Inconsolata
+ fonts.pdf.cjk: null
+ fonts.pdf.cjk_sans: null
+ fonts.pdf.cjk_mono: null
++# How *…* (emphasis) is set in the HTML book, the PDFs and the Beamer decks:
++# italic, or bold for scripts whose fonts have no italic (Japanese).
++fonts.emphasis: italic
+ # Pandoc/Quarto `lang` for the PDFs (babel hyphenation and LaTeX names).
+ # null: not set. Set it only for languages whose babel module works with
+ # XeLaTeX (de, fr, es, pt, ...).
+diff --git a/tools/gen_pdf.py b/tools/gen_pdf.py
+index 7bf2fc934..82d6bae02 100644
+--- a/tools/gen_pdf.py
++++ b/tools/gen_pdf.py
+@@ -426,7 +426,7 @@ def _write_quarto_yml(dst, framework, files):
+                         ('Path=static/fonts/', 'Extension=.ttf',
+                          'UprightFont=*-Regular', 'BoldFont=*-Bold',
+                          'Scale=0.9')))
+-    cjk = i18n.latex_cjk_preamble()
++    cjk = i18n.latex_locale_preamble()
+     if cjk:
+         (dst / 'static').mkdir(parents=True, exist_ok=True)
+         (dst / 'static' / 'd2l-i18n-preamble.tex').write_text(
+diff --git a/tools/i18n.py b/tools/i18n.py
+index b4210ef26..4019da1ce 100644
+--- a/tools/i18n.py
++++ b/tools/i18n.py
+@@ -278,6 +278,8 @@ def _head_extras() -> str:
+         css.append(f'body, .d2l-landing {{ font-family: {cat["fonts.html.sans"]}; }}')
+     if cat['fonts.html.mono'] != base['fonts.html.mono']:
+         css.append(f'code, pre, kbd, samp {{ font-family: {cat["fonts.html.mono"]}; }}')
++    if emphasis() == 'bold':
++        css.append('em { font-style: normal; font-weight: bold; }')
+     if css:
+         out.append('<style>\n' + '\n'.join(css) + '\n</style>')
+     return ''.join(x + '\n' for x in out)
+@@ -519,6 +521,29 @@ def quarto_lang_yaml(indent: str = '') -> str:
+     return ''.join(x + '\n' for x in lines)
+ 
+ 
++EMPHASIS = ('italic', 'bold')
++
++
++def emphasis() -> str:
++    """fonts.emphasis: how *…* is set (italic, or bold for scripts without
++    italics)."""
++    value = catalog().get('fonts.emphasis') or 'italic'
++    if value not in EMPHASIS:
++        raise SystemExit(f'i18n: fonts.emphasis must be one of {", ".join(EMPHASIS)}, '
++                         f'not {value!r}')
++    return value
++
++
++def latex_locale_preamble() -> str:
++    """LaTeX additions for the locale (PDFs and Beamer decks): xeCJK and its
++    fonts, and bold emphasis where fonts.emphasis says so; '' for English."""
++    out = latex_cjk_preamble()
++    if emphasis() == 'bold':
++        # pandoc writes *…* as \emph{…}; CJK fonts have no italic shape
++        out += '\\renewcommand{\\emph}[1]{\\textbf{#1}}\n'
++    return out
++
++
+ def latex_cjk_preamble() -> str:
+     """xeCJK setup for the CJK fonts of the locale, or '' (English)."""
+     cat = catalog()
+diff --git a/tools/slides_to_beamer.py b/tools/slides_to_beamer.py
+index 738a248c5..6817ffd85 100644
+--- a/tools/slides_to_beamer.py
++++ b/tools/slides_to_beamer.py
+@@ -363,8 +363,9 @@ def build_pdf(qmd: Path, pdf: Path, bundle: Path = None, keep: Path = None,
+             f'\\def\\dtlfooter{{{footer}}}\n'
+             f'\\def\\dtlcover{{{cover}}}\n'
+             '\\input{d2l-beamer}\n\\InputIfFileExists{sizes}{}{}\n'
+-            # xeCJK and its fonts for a CJK locale (none for English).
+-            + i18n.latex_cjk_preamble())
++            # xeCJK, its fonts and the emphasis style of the locale
++            # (none for English).
++            + i18n.latex_locale_preamble())
+         tex_name = f'{stem}.tex'
+         r = subprocess.run(
+             [str(QUARTO), 'pandoc', 'deck.md', '-f', 'markdown', '-t', 'beamer',
