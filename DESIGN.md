@@ -207,6 +207,35 @@ with Opus, others may do better with Gemini or Codex **[ruled]**.
    looks for `Dive-into-Deep-Learning.tex`) fails; the build adds
    `output-file: Dive-into-Deep-Learning` to the worktree's copy (until
    d2l-neu sets it itself).
+7. **Reference wording.** Quarto writes a section or chapter reference as
+   word + number ("Section 2.1.3"; in Japanese its language file gives
+   "セクション 2.1.3", "チャプター 3") and has no suffix form, so
+   `quarto.crossref-sec-prefix: 節` would print "節 2.1.3". A language whose
+   references put the word after or around the number sets two
+   localization-side keys in `<lang>/strings.yml` (`{n}` is the number; a
+   space becomes a no-break space):
+
+   | language | `xref.sec` | `xref.ch` | prints |
+   |---|---|---|---|
+   | ja (set) | `"{n} 節"` | `"第 {n} 章"` | 2.1.3 節, 第 3 章 |
+   | zh (to set) | `"{n} 节"` | `"第 {n} 章"` | 2.1.3 节, 第 3 章 |
+   | ko (to set) | `"{n}절"` | `"{n}장"` | 2.1.3절, 3장 |
+
+   Unset (the default), references keep Quarto's form. Quarto's prefixes are
+   left as they are: the tag's `fix_crossref_numbers.py` finds references by
+   them (it renumbers them and turns "Chapter 8.1" into "Section 8.1" for
+   section pages). `tools/l10n/xref.py` then rewrites the finished output:
+   the `quarto-xref` link texts of every HTML page and the same phrases in
+   `search.json` after make; the PDF `.tex` (gen_pdf.py's
+   `<pdf.section>~\ref{sec-x}` and `<pdf.chapter>~\ref{sec-chap-x}`) after
+   `fix_latex.py` and before xelatex, through a line the build adds to the
+   worktree's `tools/build_one_pdf.sh` that runs `.l10n/xref.py` with the
+   settings `.l10n/xref.json` (the part PDFs are cut from that `.tex`); and
+   the links to English pages of out-of-scope chapters (section 13). The
+   build passes the tag's tools the locale file without the `xref.*` keys.
+   Figure, table and equation references (図, 表, 式) are untouched: their
+   prefix form is correct. Slides keep the `§9.3` that `gen_slides.py` writes
+   for `§{sec_x}` in every language.
 
 `l10n deploy <lang>` uploads to bucket `d2l-<lang>` with the worktree's
 `tools/upload_r2.sh --delete` (keys in `~/.config/cloudflare/d2l-buckets.env`;

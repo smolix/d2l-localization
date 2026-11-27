@@ -27,7 +27,7 @@ from pathlib import Path
 
 import yaml
 
-from . import config, scope as scopes, tfile
+from . import config, scope as scopes, tfile, xref
 from .pseudo import L as PL, R as PR
 from .protect import nbsp
 from .segment import reconstruct
@@ -154,6 +154,47 @@ def _apply_tag_patch(wt: Path, patch: Path):
                                    f'{r.stderr.strip()}')
 
 
+# Section/chapter reference wording (xref.py): build_one_pdf.sh runs the
+# worktree's .l10n/xref.py on the fix_latex-patched .tex before xelatex, when
+# the build has written .l10n/xref.json (a language with xref.* templates).
+XREF_TEX_ANCHOR = 'python3 tools/fix_latex.py "_pdf/$fw/Dive-into-Deep-Learning.tex"\n'
+XREF_TEX_HOOK = ('[ ! -f .l10n/xref.json ] || python3 .l10n/xref.py tex '
+                 '"_pdf/$fw/Dive-into-Deep-Learning.tex" || exit 1  # l10n build: xref wording\n')
+
+
+def patch_xref_hook(wt: Path):
+    """Add the xref hook to the worktree's build_one_pdf.sh (once)."""
+    sh = wt / 'tools' / 'build_one_pdf.sh'
+    if XREF_TEX_HOOK not in sh.read_text(encoding='utf-8'):
+        scopes.apply_patches(wt, [('tools/build_one_pdf.sh', XREF_TEX_ANCHOR,
+                                   XREF_TEX_ANCHOR + XREF_TEX_HOOK)])
+
+
+def setup_xref(lang, wt: Path, env: dict) -> dict | None:
+    """Prepare the worktree for the language's xref.* templates: the settings
+    .l10n/xref.json (templates and the words to replace: Quarto's for HTML,
+    gen_pdf.py's pdf.section/pdf.chapter for LaTeX), the script
+    .l10n/xref.py and the hook in build_one_pdf.sh. None (and no settings
+    file, so the hook does nothing) for a language without templates."""
+    tpls = scopes.xref_templates(lang)
+    d = wt / '.l10n'
+    if not tpls:
+        for name in ('xref.json', 'xref.py'):
+            (d / name).unlink(missing_ok=True)
+        return None
+    patch_xref_hook(wt)
+    helper = scopes.run_helper(wt, env, {})
+    terms, pdf = helper['terms'], helper.get('pdf_terms') or {}
+    cfg = {'templates': tpls,
+           'html_words': {'sec': terms['Section'], 'ch': terms['Chapter']},
+           'tex_words': {'sec': pdf.get('Section'), 'ch': pdf.get('Chapter')}}
+    d.mkdir(exist_ok=True)
+    (d / 'xref.json').write_text(json.dumps(cfg, ensure_ascii=False, indent=1) + '\n',
+                                 encoding='utf-8')
+    shutil.copy2(Path(xref.__file__), d / 'xref.py')
+    return cfg
+
+
 def overlay(lang, rev: str, wt: Path, stale='english', scope=None) -> list:
     pages = translated_pages(lang, rev, stale, scope)
     for rel, text in pages.items():
@@ -194,6 +235,10 @@ def build(lang, rev: str | None = None, html_only=False, workdir=None, target=No
     print(f'{len(pages)} translated page(s) overlaid in {wt}')
     fix_tag_tools(wt)
     env = build_env(lang, wt)
+    xr = setup_xref(lang, wt, env)
+    if xr:
+        print(f'xref: sections as {xref.fill(xr["templates"].get("sec", "{n}"), "N", " ")!r}, '
+              f'chapters as {xref.fill(xr["templates"].get("ch", "{n}"), "N", " ")!r}')
     prep = None
     if not sc.full:
         print(sc.summary())
@@ -218,6 +263,10 @@ def build(lang, rev: str | None = None, html_only=False, workdir=None, target=No
         raise config.L10nError(f'make {target} failed (rc={rc}); see {log}')
     if prep:
         scopes.report(scopes.postprocess(lang, wt, prep), prep)
+    if xr:
+        st = xref.rewrite_book(wt / '_book', xr)
+        print(f'xref: {st["refs"]} reference(s) reworded in {st["files"]} page(s), '
+              f'{st["search"]} in search.json, {st["left"]} left in Quarto\'s form')
     return wt
 
 
@@ -361,6 +410,18 @@ FONT_DEFAULTS = {
 }
 
 
+XREF_COMMENT = [
+    '# Section and chapter references (d2l-localization tools/l10n/xref.py): Quarto',
+    '# writes word + number ("Section 2.1.3"); a language that puts the word after or',
+    '# around the number sets templates, {n} the number, a space a no-break space:',
+    '#   ja  xref.sec: "{n} 節"    xref.ch: "第 {n} 章"',
+    '#   zh  xref.sec: "{n} 节"    xref.ch: "第 {n} 章"',
+    '#   ko  xref.sec: "{n}절"     xref.ch: "{n}장"',
+    '# Unset: Quarto\'s form. Applied to the HTML book, search, the PDFs and the',
+    '# links to English chapters; slides keep their "§9.3".',
+]
+
+
 def is_setting(key: str) -> bool:
     return any(key == s or (s.endswith('.') and key.startswith(s)) for s in SETTING_PREFIXES)
 
@@ -456,7 +517,8 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
     changed |= set(k for k in extra if k in old and k in snap and snap[k] != extra[k]) | \
         (_update_keys(old_text) & set(extra))
     added = [k for k in en if k not in old] + [k for k in extra if k not in old]
-    removed = [k for k in old if k not in en and k not in extra and not k.startswith('quarto.')]
+    removed = [k for k in old if k not in en and k not in extra
+               and not k.startswith(('quarto.', 'xref.'))]
     out = [f'# UI strings and settings for {lang.name} ({lang.code}): the D2L_LOCALE_FILE of '
            f'`l10n build {lang.code}`.',
            f'# Generated from d2l-neu i18n/en.yml by `l10n strings {lang.code}`; edit the values. '
@@ -514,6 +576,10 @@ def strings(lang, rev: str | None = None, en_file: Path | None = None, pseudo=Fa
         out += ['', '# Quarto language overrides (keys of Quarto share/language/_language.yml)']
         for k, v in quarto_extra.items():
             out += _render_value(k, v)
+    out += [''] + XREF_COMMENT
+    for k in ('xref.sec', 'xref.ch'):
+        if k in old:
+            out += _render_value(k, old[k])
     text = '\n'.join(out).rstrip('\n') + '\n'
     data = _flatten(yaml.safe_load(text))
     for k in en:

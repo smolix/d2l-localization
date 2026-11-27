@@ -8,6 +8,7 @@ renders:
 request: {"labels": {file: [[label, "label"|"eqlabel"], ...]}}
 answer:  {"terms": {"Chapter": ..., "Section": ..., "Figure": ..., "Table": ...,
                     "Equation": ...},          # Quarto's words in the build language
+          "pdf_terms": {"Chapter": ..., "Section": ...},  # gen_pdf.py's (pdf.chapter/section)
           "numbering": {file: [N, k] | null},  # CHAPTER_NUMBERING, every key
           "labels": {label: {"file", "id", "kind", "number", "title"}}}
 
@@ -118,6 +119,7 @@ def main():
             labels[label] = {'file': rel, 'id': qid, 'kind': kind, 'number': num,
                              'title': title}
     ans = {'terms': {k: i18n.quarto_term(v) for k, v in TERMS.items()},
+           'pdf_terms': {'Chapter': i18n.t('pdf.chapter'), 'Section': i18n.t('pdf.section')},
            'numbering': {k: v for k, v in CHAPTER_NUMBERING.items()},
            'labels': labels}
     Path(sys.argv[2]).write_text(json.dumps(ans, ensure_ascii=False, indent=1),
