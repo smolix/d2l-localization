@@ -38,7 +38,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | chain rule | शृंखला नियम | verified_external | chain-rule: A rule for differentiating compositions of functions. | review-hi-8d53b4cc85: page |
 | backpropagation | बैकप्रॉपैगेशन | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | [google-ml-hi-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=hi#backpropagation) |
 | automatic differentiation | स्वचालित अवकलन | proposed | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. |  |
-| computational graph | कम्प्यूटेशनल ग्राफ़ | proposed | computational-graph: A representation of a computation as connected operations and values. |  |
+| computational graph | कंप्यूटेशनल ग्राफ़ | proposed | computational-graph: A representation of a computation as connected operations and values. |  |
 | vector | सदिश | proposed | vector: An ordered collection of numerical components. |  |
 | matrix | आव्यूह | proposed | matrix: A rectangular array of numerical entries. |  |
 | tensor | टेंसर | verified_external | tensor: A multidimensional array generalizing scalars, vectors, and matrices. | [google-ml-hi-tensorflow](https://developers.google.com/machine-learning/glossary/tensorflow?hl=hi#tensor) |
@@ -73,7 +73,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | covariance | सहप्रसरण | proposed | covariance: A measure of how two random variables vary together. |  |
 | correlation | सहसंबंध | proposed | correlation: A normalized measure of association between variables. |  |
 | Gaussian distribution | गाउसियन वितरण | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. |  |
-| normal distribution | प्रसामान्य बंटन | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
+| normal distribution | प्रसामान्य वितरण | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
 | Bernoulli distribution | बर्नूली वितरण | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. |  |
 | Poisson distribution | पॉइसन वितरण | proposed | poisson-distribution: A discrete distribution often used to model event counts. |  |
 | Bayes' theorem | बेज़ प्रमेय | proposed | bayes-theorem: A rule relating conditional probabilities through prior and evidence. |  |
@@ -113,7 +113,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | hyperparameter | हाइपरपैरामीटर | proposed | hyperparameter: A setting chosen outside the ordinary parameter-learning process. |  |
 | model selection | मॉडल चयन | proposed | model-selection: The process of choosing a model or configuration using available evidence. |  |
 | cross-validation | क्रॉस-वैलिडेशन | proposed | cross-validation: A method for evaluating configurations across different train-validation splits. |  |
-| initialization | आरंभीकरण | proposed | initialization: The choice of initial parameter values before training. |  |
+| initialization | इनिशियलाइज़ेशन | proposed | initialization: The choice of initial parameter values before training. |  |
 | vanishing gradient | लुप्त होता ग्रेडिएंट | proposed | vanishing-gradient: A gradient that becomes very small as it propagates through a network. |  |
 | exploding gradient | विस्फोटक ग्रेडिएंट | proposed | exploding-gradient: A gradient that grows excessively large during propagation. |  |
 | gradient clipping | ग्रेडिएंट क्लिपिंग | proposed | gradient-clipping: Limiting gradient magnitude to stabilize optimization. |  |
@@ -144,14 +144,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | semantic segmentation | सिमेंटिक सेगमेंटेशन | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
 | instance segmentation | इंस्टेंस सेगमेंटेशन | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
 | image classification | छवि वर्गीकरण | proposed | image-classification: The task of assigning a class to an image. |  |
-| computer vision | कंप्यूटर दृष्टि | proposed | computer-vision: The study of extracting information and making predictions from visual data. |  |
+| computer vision | कंप्यूटर विज़न | proposed | computer-vision: The study of extracting information and making predictions from visual data. |  |
 | recurrent neural network | रिकरेंट न्यूरल नेटवर्क (RNN) | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
 | hidden state | हिडन अवस्था | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
 | time step | समय चरण | proposed | time-step: A position in a sequential or temporal computation. |  |
 | sequence | अनुक्रम | proposed | sequence: An ordered collection of elements. |  |
 | language model | भाषा मॉडल | proposed | language-model: A model assigning probabilities to sequences of language tokens. |  |
 | token | टोकन | proposed | token: A unit into which text is divided for processing. |  |
-| tokenization | टोकनीकरण | proposed | tokenization: The process of dividing text into tokens. |  |
+| tokenization | टोकनाइज़ेशन | proposed | tokenization: The process of dividing text into tokens. |  |
 | vocabulary | शब्दावली | proposed | vocabulary: The set of tokens available to a language model. |  |
 | embedding | एंबेडिंग | proposed | embedding: A learned numerical representation of a discrete item or other object. |  |
 | word embedding | शब्द एंबेडिंग | proposed | word-embedding: A numerical vector representing a word. |  |
@@ -278,7 +278,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | negative log-likelihood | ऋणात्मक लॉग-संभाविता | proposed | negative-log-likelihood: The negative logarithm of the likelihood of observed data. |  |
 | maximum a posteriori | अधिकतम पश्च प्रायिकता | proposed | maximum-a-posteriori: A principle for selecting a parameter value that maximizes its posterior probability or density. |  |
 | conjugate prior | संयुग्मी पूर्व वितरण | proposed | conjugate-prior: A prior whose posterior belongs to the same distribution family under a specified likelihood. |  |
-| Beta distribution | Beta वितरण | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
+| Beta distribution | बीटा वितरण | proposed | beta-distribution: A continuous distribution on the unit interval often used for probabilities. |  |
 | categorical distribution | श्रेणीबद्ध वितरण | proposed | categorical-distribution: A distribution over a finite set of categories. |  |
 | exponential distribution | चरघातांकी वितरण | proposed | exponential-distribution: A continuous distribution often used to model waiting times. |  |
 | uniform distribution | एकसमान वितरण | proposed | uniform-distribution: A distribution assigning equal density or probability across its support. |  |
@@ -317,7 +317,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | quasi-Newton | अर्ध न्यूटन | proposed | quasi-newton: An optimization approach that approximates curvature rather than computing the full Hessian. |  |
 | subgradient | सबग्रेडिएंट | proposed | subgradient: A generalization of a gradient applicable to certain nondifferentiable functions. |  |
 | proximal operator | प्रॉक्सिमल ऑपरेटर | proposed | proximal-operator: An optimization operator balancing a function value with distance from an input point. |  |
-| Lipschitz continuity | लिप्शित्स सातत्य | proposed | lipschitz-continuity: A bound on how rapidly a function can change relative to its input. |  |
+| Lipschitz continuity | Lipschitz सातत्य | proposed | lipschitz-continuity: A bound on how rapidly a function can change relative to its input. |  |
 | strong convexity | प्रबल उत्तलता | proposed | strong-convexity: A strengthened form of convexity with a positive quadratic lower bound. |  |
 | convex set | उत्तल समुच्चय | proposed | convex-set: A set containing every line segment between any two of its points. |  |
 | feasible region | व्यवहार्य क्षेत्र | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
@@ -326,8 +326,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | coordinate descent | निर्देशांक डिसेंट | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
 | learning rate decay | लर्निंग रेट क्षय | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
 | warmup | वार्मअप | proposed | warmup: A training phase in which a setting such as learning rate is gradually increased. |  |
-| weight initialization | भार आरंभीकरण | proposed | weight-initialization: The choice of starting values for model weights. |  |
-| Xavier initialization | Xavier आरंभीकरण | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
+| weight initialization | भार इनिशियलाइज़ेशन | proposed | weight-initialization: The choice of starting values for model weights. |  |
+| Xavier initialization | Xavier इनिशियलाइज़ेशन | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
 | weight sharing | भार साझाकरण | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | पैरामीटर गणना | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | संगणकीय जटिलता | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
@@ -350,7 +350,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | autoregressive generation | ऑटोरिग्रेसिव जनरेशन | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
 | causal attention | कारणात्मक अटेंशन | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
 | cross-attention | क्रॉस-अटेंशन | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
-| scaled dot-product attention | स्केल्ड डॉट-गुणनफल अटेंशन | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
+| scaled dot-product attention | स्केल्ड डॉट गुणनफल अटेंशन | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | सॉफ़्टमैक्स अटेंशन | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
 | position embedding | पोज़िशन एंबेडिंग | proposed | position-embedding: A representation of position used in a sequence model. |  |
 | rotary position embedding | RoPE (रोटरी पोज़िशन एंबेडिंग) | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
@@ -358,7 +358,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | residual block | अवशिष्ट ब्लॉक | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | नॉर्मलाइज़ेशन लेयर | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
 | root mean square | RMS (वर्ग-माध्य-मूल) | proposed | root-mean-square: The square root of the mean of squared values. |  |
-| encoder-decoder | एन्कोडर डीकोडर | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
+| encoder-decoder | एन्कोडर-डीकोडर | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | अनुक्रम लंबाई | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | अटेंशन स्कोर | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
 | attention pooling | अटेंशन पूलिंग | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
@@ -426,7 +426,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | forward process | फ़ॉरवर्ड प्रक्रिया | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
 | reverse process | रिवर्स प्रक्रिया | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
 | score matching | स्कोर मैचिंग | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
-| Langevin dynamics | लांजेविन गतिकी | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
+| Langevin dynamics | Langevin गतिकी | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
 | noise prediction | शोर पूर्वानुमान | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
 | Gaussian noise | गाउसियन शोर | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. |  |
 | flow matching | फ़्लो मैचिंग | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
@@ -443,7 +443,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | bias | अभिनति | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
 | mixture of experts | विशेषज्ञों का मिश्रण | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. | [google-ml-hi-generative](https://developers.google.com/machine-learning/glossary/generative?hl=hi#mixture-of-experts) |
 | transition kernel | संक्रमण कर्नेल | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
-| expected reward | अपेक्षित पुरस्कार | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
+| expected reward | प्रत्याशित पुरस्कार | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
 | effective horizon | प्रभावी क्षितिज | proposed | effective-horizon: A scale describing how many future steps contribute materially to a discounted return. |  |
 | behavior policy | व्यवहार नीति | proposed | behavior-policy: The policy that generates the data used by a learning algorithm. |  |
 | target policy | लक्ष्य नीति | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
@@ -532,7 +532,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | attention sink | अटेंशन सिंक | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
 | transformer block | ट्रांसफ़ॉर्मर ब्लॉक | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
 | residual stream | रेज़िडुअल स्ट्रीम | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
-| vision transformer | दृष्टि ट्रांसफ़ॉर्मर | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
+| vision transformer | विज़न ट्रांसफ़ॉर्मर (ViT) | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
 | position interpolation | पोज़िशन अंतर्वेशन | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
 | relative position | सापेक्ष स्थिति | proposed | relative-position: The displacement between positions in a sequence. |  |
 | prefill | प्रीफ़िल | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
@@ -550,7 +550,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | grouped convolution | ग्रुप्ड कन्वोल्यूशन | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | चरघातांकी गतिमान औसत | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
 | inverted dropout | उलटा ड्रॉपआउट | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
-| He initialization | He आरंभीकरण | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
+| He initialization | He इनिशियलाइज़ेशन | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
 | GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
 | generalization gap | सामान्यीकरण अंतर | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. |  |
 | hypothesis class | परिकल्पना वर्ग | proposed | hypothesis-class: The set of candidate functions or models considered by a learning method. |  |
@@ -658,7 +658,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | low-rank approximation | निम्न-रैंक सन्निकटन | proposed | low-rank-approximation: An approximation to a matrix using a matrix with smaller rank. |  |
 | orthogonal projection | लांबिक प्रक्षेपण | proposed | orthogonal-projection: Projection onto a subspace along directions perpendicular to it. |  |
 | Euclidean norm | यूक्लिडीय नॉर्म | proposed | euclidean-norm: The square root of the sum of squared vector components. |  |
-| Frobenius norm | फ़्रोबेनियस नॉर्म | proposed | frobenius-norm: The square root of the sum of squares of all matrix entries. |  |
+| Frobenius norm | Frobenius नॉर्म | proposed | frobenius-norm: The square root of the sum of squares of all matrix entries. |  |
 | operator norm | ऑपरेटर नॉर्म | proposed | operator-norm: The maximum factor by which a linear operator can stretch vectors under chosen norms. |  |
 | triangle inequality | त्रिभुज असमिका | verified_external | triangle-inequality: An inequality stating that the size of a sum is at most the sum of the sizes of its parts. | review-hi-0da3d6cc91: page |
 | Kronecker product | Kronecker गुणनफल | proposed | kronecker-product: A matrix product forming blocks by multiplying one matrix's entries by another matrix. |  |
@@ -678,8 +678,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | integration by parts | खंडशः समाकलन | verified_external | integration-by-parts: An integration rule derived from the product rule for derivatives. | review-hi-64b2c5689f: page |
 | fundamental theorem of calculus | कलन का मूल प्रमेय | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
 | implicit differentiation | अंतर्निहित अवकलन | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
-| Lipschitz constant | लिप्शित्स नियतांक | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
-| Lipschitz continuous | लिप्शित्स सतत | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
+| Lipschitz constant | Lipschitz नियतांक | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
+| Lipschitz continuous | Lipschitz सतत | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
 | convex combination | उत्तल संयोजन | proposed | convex-combination: A weighted sum with nonnegative weights that sum to one. |  |
 | Jensen's inequality | जेनसेन असमिका | proposed | jensen-s-inequality: An inequality relating a convex function of an expectation to the expectation of the function. |  |
 | first-order condition | प्रथम क्रम शर्त | proposed | first-order-condition: A condition on first derivatives used to characterize candidate optima. |  |
@@ -786,7 +786,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | squared loss | वर्ग लॉस | proposed | squared-loss: A loss proportional to the square of a prediction error. |  |
 | Huber loss | Huber लॉस | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
 | regularized objective | रेगुलराइज़्ड उद्देश्य | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
-| random initialization | यादृच्छिक आरंभीकरण | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
+| random initialization | यादृच्छिक इनिशियलाइज़ेशन | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | ग्रेडिएंट नॉर्म | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
 | leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
 | hyperbolic tangent | अतिपरवलयिक स्पर्शज्या | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
@@ -864,7 +864,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayesian personalized ranking | BPR (Bayesian personalized ranking) | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
 | cold start | कोल्ड स्टार्ट | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
 | sparsity | विरलता | proposed | sparsity: The condition in which most entries or interactions in a representation are absent or zero. |  |
-| subword tokenization | उपशब्द टोकनीकरण | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
+| subword tokenization | उपशब्द टोकनाइज़ेशन | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
 | token frequency | टोकन आवृत्ति | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
 | out-of-vocabulary | शब्दावली से बाहर | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
 | unknown token | अज्ञात टोकन | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
@@ -946,11 +946,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | log density | लॉग घनत्व | proposed | log-density: The logarithm of a probability density. |  |
 | denoising score matching | डीनॉइज़िंग स्कोर मैचिंग | proposed | denoising-score-matching: Learning a score function from denoising objectives on noise-corrupted samples. |  |
 | contrastive divergence | कॉन्ट्रास्टिव डाइवर्जेंस | proposed | contrastive-divergence: An approximation to an energy-model learning gradient using short Markov chains. |  |
-| Langevin sampling | लांजेविन सैंपलिंग | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
-| annealed Langevin dynamics | एनील्ड लांजेविन गतिकी | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
+| Langevin sampling | Langevin सैंपलिंग | proposed | langevin-sampling: Sampling using stochastic updates combining a score or energy gradient with noise. |  |
+| annealed Langevin dynamics | एनील्ड Langevin गतिकी | proposed | annealed-langevin-dynamics: Langevin sampling applied across a sequence of decreasing noise levels. |  |
 | score network | स्कोर नेटवर्क | proposed | score-network: A neural network trained to estimate a score function. |  |
 | noise level | शोर स्तर | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
-| signal-to-noise ratio | संकेत शोर अनुपात | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
+| signal-to-noise ratio | संकेत-शोर अनुपात | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
 | clean sample | शुद्ध नमूना | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
 | forward diffusion | फ़ॉरवर्ड विसरण | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
 | reverse-time SDE | रिवर्स-टाइम SDE | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
@@ -1004,7 +1004,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | subgradient method | सबग्रेडिएंट विधि | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
 | projection operator | प्रक्षेपण ऑपरेटर | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
 | projected gradient descent | प्रक्षेपित ग्रेडिएंट डिसेंट | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
-| backtracking line search | बैकट्रैकिंग लाइन सर्च | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
+| backtracking line search | बैकट्रैकिंग रेखा खोज | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
 | descent direction | डिसेंट दिशा | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. |  |
 | descent lemma | डिसेंट लेम्मा | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
 | Newton step | न्यूटन चरण | proposed | newton-step: An update computed from gradient and curvature information in Newton's method. |  |
@@ -1024,7 +1024,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | optimization landscape | इष्टतमीकरण परिदृश्य | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
 | gradient flow | ग्रेडिएंट फ़्लो | proposed | gradient-flow: A continuous-time dynamical system that moves along the negative gradient of an objective. |  |
 | implicit regularization | अंतर्निहित रेगुलराइज़ेशन | proposed | implicit-regularization: A preference for certain solutions arising from the learning algorithm rather than an explicit penalty. |  |
-| Lipschitz gradient | लिप्शित्स ग्रेडिएंट | proposed | lipschitz-gradient: A gradient whose change is bounded by a constant times the change in its input. |  |
+| Lipschitz gradient | Lipschitz ग्रेडिएंट | proposed | lipschitz-gradient: A gradient whose change is bounded by a constant times the change in its input. |  |
 | minibatch noise | मिनी-बैच शोर | proposed | minibatch-noise: Random variation in an update caused by using a finite minibatch. |  |
 | learning dynamics | लर्निंग की गतिकी | proposed | learning-dynamics: The evolution of a learning system's parameters or predictions over training. |  |
 | optimization trajectory | इष्टतमीकरण ट्रैजेक्टरी | proposed | optimization-trajectory: The sequence or path of parameter values generated by an optimization method. |  |
@@ -1064,7 +1064,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | configuration space | विन्यास समष्टि | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
 | validation metric | वैलिडेशन मापदंड | proposed | validation-metric: A performance measure computed on validation data. |  |
 | acquisition function | एक्विज़िशन फलन | proposed | acquisition-function: A criterion for selecting the next candidate to evaluate in Bayesian optimization. |  |
-| expected improvement | अपेक्षित सुधार | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
+| expected improvement | प्रत्याशित सुधार | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
 | multi-fidelity optimization | मल्टी-फ़िडेलिटी इष्टतमीकरण | proposed | multi-fidelity-optimization: Optimization that uses evaluations at different costs and levels of accuracy. |  |
 | fidelity | फ़िडेलिटी | proposed | fidelity: The degree to which an approximation or evaluation represents a target process or result. |  |
 | successive halving | क्रमिक अर्धीकरण | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
@@ -1104,7 +1104,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | total variation distance | टोटल वेरिएशन दूरी | proposed | total-variation-distance: A measure of the largest difference in probability assigned to the same event by two distributions. |  |
 | f-divergence | f-डाइवर्जेंस | proposed | f-divergence: A family of divergences defined using a convex function of a density ratio. |  |
 | density ratio | घनत्व अनुपात | proposed | density-ratio: The ratio of two probability densities evaluated at the same point. |  |
-| rate-distortion | दर विरूपण | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
+| rate-distortion | दर-विरूपण | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
 | distortion measure | विरूपण माप | proposed | distortion-measure: A function quantifying the difference between an original object and its reconstruction. |  |
 | channel capacity | चैनल क्षमता | proposed | channel-capacity: The maximum reliable communication rate of a channel under specified constraints. |  |
 | noisy channel | शोरयुक्त चैनल | proposed | noisy-channel: A communication channel whose output is randomly perturbed relative to its input. |  |

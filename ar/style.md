@@ -1,6 +1,6 @@
 # Style guide: Arabic (ar)
 
-Draft of 2026-11-26 for the author's review; no native reader has confirmed it
+Draft of 2026-11-26 (Fable 5.2) for native-speaker review; no native reader has confirmed it
 yet. Translators read this with every unit (TRANSLATING.md §7–§8). Each rule
 has one reason and one example (English → Arabic, or ✗ wrong / ✓ right). Rules
 marked "(to confirm)" are decided here and listed again in §12.

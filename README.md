@@ -12,6 +12,24 @@ a tagged English release (`en-YYYY.MM.DD`) and is served from its own bucket
 
 - [tools/l10n/](tools/l10n/): the `l10n` command (`bin/l10n`; Python 3.12+, PyYAML).
 - [glossary/](glossary/): the terminology catalog (moved from d2l-neu).
+- `<code>/style.md`: each language's style guide, read by translators with every unit.
+
+## Native-speaker review of the style guides
+
+German (`de/style.md`) is confirmed. Every other style guide is a draft written on
+2026-11-26 by Fable 5.2 from TRANSLATING.md, the glossary and the translation
+tests in `evals/`; no native speaker has reviewed it yet. Each guide ends with
+its settings, a numbered "For the author to confirm" list (each question has a
+proposed answer) and proposed glossary corrections. Native speakers are asked to:
+
+1. Answer the numbered questions at the end of their language's guide.
+2. Correct any rule that is wrong for technical writing in that language,
+   keeping the shape: one decision, one reason, one example.
+3. Open a pull request against `<code>/style.md`, saying which variety and
+   publishing tradition the corrections follow.
+
+[STYLE_FOLLOWUPS.md](STYLE_FOLLOWUPS.md) lists the build and checker changes the
+guides propose; none is applied yet.
 
 ## The workflow
 

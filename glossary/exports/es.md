@@ -126,9 +126,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | channel | canal | proposed | channel: A feature dimension in a structured representation such as an image. |  |
 | stride | stride | proposed | stride: The spacing between successive positions of an operation on an input. |  |
 | padding | relleno | proposed | padding: Extra values added around an input to control an operation's boundary or output size. |  |
-| pooling | agrupación | proposed | pooling: An operation that aggregates values over local regions. |  |
-| max pooling | agrupación máxima | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
-| average pooling | agrupación por promedio | proposed | average-pooling: Pooling that averages values in each region. |  |
+| pooling | pooling | proposed | pooling: An operation that aggregates values over local regions. |  |
+| max pooling | max pooling | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
+| average pooling | average pooling | proposed | average-pooling: Pooling that averages values in each region. |  |
 | receptive field | campo receptivo | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
 | translation equivariance | equivarianza a traslaciones | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | conexión residual | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
@@ -154,7 +154,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | tokenization | tokenización | proposed | tokenization: The process of dividing text into tokens. |  |
 | vocabulary | vocabulario | proposed | vocabulary: The set of tokens available to a language model. |  |
 | embedding | embedding | proposed | embedding: A learned numerical representation of a discrete item or other object. |  |
-| word embedding | incrustación de palabras | proposed | word-embedding: A numerical vector representing a word. |  |
+| word embedding | embedding de palabras | proposed | word-embedding: A numerical vector representing a word. |  |
 | sequence-to-sequence | secuencia a secuencia | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
 | encoder | codificador | proposed | encoder: A component that converts an input into an internal representation. |  |
 | decoder | decodificador | proposed | decoder: A component that produces an output from an internal representation or context. |  |
@@ -170,7 +170,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | key | clave | proposed | key: A representation compared with a query to determine attention weights. |  |
 | value | valor | proposed | value: A representation combined according to attention weights. |  |
 | positional encoding | codificación posicional | proposed | positional-encoding: Information added to representations to communicate sequence position. |  |
-| transformer | transformador | proposed | transformer: A neural architecture built around attention and feedforward layers. |  |
+| transformer | Transformer | proposed | transformer: A neural architecture built around attention and feedforward layers. |  |
 | masked language model | modelo de lenguaje enmascarado | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
 | BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
 | generative model | modelo generativo | proposed | generative-model: A model that describes or generates samples from a data distribution. |  |
@@ -307,7 +307,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | log probability | log-probabilidad | proposed | log-probability: The logarithm of a probability or probability density. |  |
 | log-sum-exp | log-sum-exp | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
 | numerical stability | estabilidad numérica | proposed | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. |  |
-| floating point | coma flotante | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
+| floating point | punto flotante | proposed | floating-point: A finite-precision numerical representation using a significand and exponent. |  |
 | underflow | subdesbordamiento | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
 | overflow | desbordamiento | proposed | overflow: A numerical condition in which a magnitude exceeds the representable range. |  |
 | condition number | número de condición | proposed | condition-number: A measure of how sensitive a mathematical problem is to perturbations. |  |
@@ -352,8 +352,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | cross-attention | atención cruzada | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
 | scaled dot-product attention | atención de producto escalar escalado | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | atención softmax | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
-| position embedding | incrustación posicional | proposed | position-embedding: A representation of position used in a sequence model. |  |
-| rotary position embedding | incrustación posicional rotatoria | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
+| position embedding | embedding posicional | proposed | position-embedding: A representation of position used in a sequence model. |  |
+| rotary position embedding | embedding posicional rotatorio | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
 | feedforward network | red prealimentada | verified_external | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. | review-es-4e8d853777: page |
 | residual block | bloque residual | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | capa de normalización | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
@@ -361,7 +361,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | encoder-decoder | codificador-decodificador | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | longitud de secuencia | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | puntuación de atención | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
-| attention pooling | agrupación por atención | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
+| attention pooling | pooling por atención | proposed | attention-pooling: Combining values using weights determined by an attention mechanism. |  |
 | additive attention | atención aditiva | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
 | dot-product attention | atención por producto escalar | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
 | masked attention | atención enmascarada | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
@@ -370,7 +370,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | n-gram | n-grama | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
 | corpus | corpus | proposed | corpus: A collection of texts used for language analysis or model training. |  |
 | word frequency | frecuencia de palabra | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
-| embedding matrix | matriz de incrustaciones | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
+| embedding matrix | matriz de embeddings | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
 | cosine similarity | similitud coseno | proposed | cosine-similarity: A similarity measure based on the angle between vectors. |  |
 | nearest neighbor | vecino más cercano | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. |  |
 | word analogy | analogía de palabras | proposed | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. |  |
@@ -384,7 +384,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | semantic similarity | similitud semántica | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
 | convolutional layer | capa convolucional | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | mapa de características | proposed | feature-map: An array of activations representing features across positions. |  |
-| pooling layer | capa de agrupación | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
+| pooling layer | capa de pooling | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
 | strided convolution | convolución con stride | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
 | transposed convolution | convolución transpuesta | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. |  |
 | dilated convolution | convolución dilatada | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
@@ -530,9 +530,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | KV cache | caché KV | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
 | grouped-query attention | atención de consultas agrupadas | proposed | grouped-query-attention: An attention design in which groups of query heads share key and value heads. |  |
 | attention sink | sumidero de atención | proposed | attention-sink: A token or position receiving substantial attention weight across many queries. |  |
-| transformer block | bloque transformador | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
+| transformer block | bloque Transformer | proposed | transformer-block: A repeated transformer component combining attention and feedforward transformations. |  |
 | residual stream | flujo residual | proposed | residual-stream: The sequence of representations passed between transformer blocks through residual connections. |  |
-| vision transformer | transformador de visión | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
+| vision transformer | Vision Transformer | proposed | vision-transformer: A transformer architecture that processes images as sequences of patches. |  |
 | position interpolation | interpolación posicional | proposed | position-interpolation: A technique that rescales positional coordinates to extend a model's usable context. |  |
 | relative position | posición relativa | proposed | relative-position: The displacement between positions in a sequence. |  |
 | prefill | prefill | proposed | prefill: The initial processing of a prompt before autoregressive decoding. |  |
@@ -546,7 +546,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | data loader | cargador de datos | proposed | data-loader: A component that prepares and supplies batches of data to a training process. |  |
 | input pipeline | canalización de entrada | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
 | stochastic depth | profundidad estocástica | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | agrupación global por promedio | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
+| global average pooling | global average pooling | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
 | grouped convolution | convolución agrupada | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | media móvil exponencial | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
 | inverted dropout | dropout invertido | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
@@ -590,7 +590,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | capacity factor | factor de capacidad | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
 | scaling law | ley de escalado | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
 | compute-optimal | óptimo para el presupuesto de cómputo | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
-| floating-point precision | precisión de coma flotante | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
+| floating-point precision | precisión de punto flotante | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
 | memory footprint | huella de memoria | proposed | memory-footprint: The amount of memory occupied by data or a computation. |  |
 | memory hierarchy | jerarquía de memoria | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
 | memory access | acceso a memoria | proposed | memory-access: A read from or write to a memory location. |  |
@@ -820,8 +820,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | downsampling | submuestreo | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
 | upsampling | sobremuestreo | proposed | upsampling: Increasing the spatial or temporal resolution of a representation. |  |
 | aliasing | aliasing | verified_external | aliasing: Distortion caused when different signals become indistinguishable after sampling. | review-es-c3fe3ca9d9: page |
-| pooling window | ventana de agrupación | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
-| global pooling | agrupación global | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| pooling window | ventana de pooling | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
+| global pooling | pooling global | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
 | fully convolutional network | red totalmente convolucional | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
 | bilinear interpolation | interpolación bilineal | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | interpolación por vecino más cercano | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
@@ -835,7 +835,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | convolutional block | bloque convolucional | proposed | convolutional-block: A network component grouping convolutional and often other operations. |  |
 | network in network | Network in Network (NiN) | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
 | image patch | parche de imagen | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
-| patch embedding | incrustación de parche | proposed | patch-embedding: A vector representation computed from an image patch. |  |
+| patch embedding | embedding de parches | proposed | patch-embedding: A vector representation computed from an image patch. |  |
 | image classifier | clasificador de imágenes | proposed | image-classifier: A model that assigns categories to images. |  |
 | ground truth | verdad de referencia | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
 | ground-truth bounding box | cuadro delimitador de referencia | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
@@ -851,8 +851,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | recommendation | recomendación | proposed | recommendation: Selecting or ranking items to present to a user. |  |
 | user-item interaction | interacción usuario-elemento | proposed | user-item-interaction: An observed relationship or action involving a user and an item. |  |
 | explicit feedback | retroalimentación explícita | proposed | explicit-feedback: Directly supplied preference information such as a rating. |  |
-| user embedding | incrustación de usuario | proposed | user-embedding: A learned vector representation of a user. |  |
-| item embedding | incrustación de elemento | proposed | item-embedding: A learned vector representation of an item. |  |
+| user embedding | embedding de usuario | proposed | user-embedding: A learned vector representation of a user. |  |
+| item embedding | embedding de elemento | proposed | item-embedding: A learned vector representation of an item. |  |
 | latent factor | factor latente | proposed | latent-factor: An unobserved component used to represent users, items, or their interactions. |  |
 | rating prediction | predicción de calificaciones | proposed | rating-prediction: Estimating a user's numerical rating for an item. |  |
 | ranking | ordenación | proposed | ranking: Ordering items according to a relevance or preference score. |  |
@@ -870,8 +870,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | unknown token | token desconocido | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
 | beginning-of-sequence token | token de inicio de secuencia | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
 | end-of-sequence token | token de fin de secuencia | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
-| embedding layer | capa de incrustación | proposed | embedding-layer: A layer mapping discrete indices to learned vector representations. |  |
-| embedding dimension | dimensión de la incrustación | proposed | embedding-dimension: The number of components in each embedding vector. |  |
+| embedding layer | capa de embedding | proposed | embedding-layer: A layer mapping discrete indices to learned vector representations. |  |
+| embedding dimension | dimensión del embedding | proposed | embedding-dimension: The number of components in each embedding vector. |  |
 | center word | palabra central | proposed | center-word: The word used as the central item in a word-context training example. |  |
 | context word | palabra de contexto | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
 | co-occurrence | coocurrencia | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
@@ -901,8 +901,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | causal masking | enmascaramiento causal | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
 | padding mask | máscara de relleno | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
 | absolute position | posición absoluta | proposed | absolute-position: A position represented relative to the beginning or another fixed reference. |  |
-| transformer encoder | codificador transformador | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
-| transformer decoder | decodificador transformador | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. |  |
+| transformer encoder | codificador del Transformer | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
+| transformer decoder | decodificador del Transformer | proposed | transformer-decoder: A transformer component that generates output using causal attention, often with cross-attention. |  |
 | autoregressive decoding | decodificación autorregresiva | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
 | text generation | generación de texto | proposed | text-generation: Producing text with a model, optionally conditioned on a prompt or context. |  |
 | sequence generation | generación de secuencias | proposed | sequence-generation: Producing an ordered sequence of model outputs. |  |
@@ -967,7 +967,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | conditional denoising | eliminación condicional de ruido | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
 | guidance scale | escala de guiado | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
 | class conditioning | condicionamiento por clase | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
-| diffusion transformer | transformador de difusión | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
+| diffusion transformer | Diffusion Transformer | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
 | variational autoencoder | autocodificador variacional | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
 | reconstruction error | error de reconstrucción | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
 | bottleneck | cuello de botella | proposed | bottleneck: A constrained intermediate representation that limits information or computation. |  |
@@ -1151,7 +1151,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | tokens per second | tokens por segundo | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
 | head dimension | dimensión de la cabeza | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
 | weight tying | vinculación de pesos | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
-| embedding table | tabla de incrustaciones | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
+| embedding table | tabla de embeddings | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | proyección de salida | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | circuito de inducción | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
 | attention pattern | patrón de atención | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
@@ -1170,7 +1170,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | half precision | media precisión | verified_external | half-precision: A floating-point format using fewer bits than single precision, commonly 16 bits. | review-es-bdf87e83e3: page |
 | single precision | precisión simple | proposed | single-precision: A floating-point format commonly represented using 32 bits. |  |
 | double precision | precisión doble | proposed | double-precision: A floating-point format commonly represented using 64 bits. |  |
-| floating-point format | formato de coma flotante | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
+| floating-point format | formato de punto flotante | proposed | floating-point-format: A representation specifying how floating-point values are encoded. |  |
 | loss scaling | escalado de la pérdida | proposed | loss-scaling: Scaling a loss during mixed-precision training to preserve small gradient values. |  |
 | activation memory | memoria de activaciones | proposed | activation-memory: Memory occupied by intermediate activations during a computation. |  |
 | all-gather | all-gather | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
