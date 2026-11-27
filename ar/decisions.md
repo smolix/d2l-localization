@@ -765,3 +765,202 @@ One rendering per term across the seven pages of the chapter; the unit entries a
 - "importance weighting" → الترجيح بالأهمية; "importance-weighted" → الموزون بالأهمية; "importance weight" → وزن الأهمية (glossary). Not الترجيح بأوزان الأهمية.
 - "positive flags" (of a screening test or classifier) → الإنذارات الموجبة, with "false alarms" → الإنذارات الكاذبة; "to flag" → ينذر بـ.
 - Kept apart on purpose: "class prior" as the whole distribution → التوزيع القبلي للفئات (glossary توزيع قبلي) and "class priors" as the numbers $p(y)$ → الاحتمالات القبلية للفئات; "shift" of a distribution → انزياح and an additive offset (softmax shift invariance, log-prior shift) → إزاحة.
+
+## chapter_multilayer-perceptrons/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Multilayer Perceptrons" (chapter title) → البيرسبترون متعدد الطبقات (glossary, definite singular); gloss (multilayer perceptron, MLP) once, then "an MLP", "MLPs" → شبكة MLP / شبكات MLP (class noun, no Latin plural); "single-layer perceptron" → البيرسبترون وحيد الطبقة.
+- "exclusive-OR (XOR)" → دالة “أو” الحصرية (XOR) at first mention, then XOR; "bit" → بت (بتان).
+- "linear barrier" → الحاجز الخطي; "feature interactions" → تفاعلات الميزات; "fold (input space)" → يطوي; "linear regions" → مناطق خطية; "pieces" → قطع; "linear / algebraic collapse" → الانهيار الخطي / الجبري; "expressive power" → قدرة تعبيرية.
+- "256-unit ReLU MLP" → شبكة MLP من 256 وحدة بدالة ReLU; sigmoid in a list of activation names → سيغمويد (glossary دالة سيغمويد).
+- "Xavier / He initialization" → تهيئة Xavier / تهيئة He (Latin names after the class noun, repeated: تهيئة *Xavier* وتهيئة *He*); "variance-preserving initialization" → تهيئة حافظة للتباين.
+- "vanishing and exploding gradients" → تلاشي التدرجات وانفجارها; "hidden-unit symmetry" → تناظر الوحدات المخفية; "slope matrices" → مصفوفات الميول.
+- "random-label memorization" → حفظ الوسوم العشوائية; "heavily overparameterized" → مفرطة المعلَمات إلى حد بعيد; "multiplicative noise" → الضوضاء الضربية; "interpolation" (fitting the training data exactly) → الاستيفاء; "minimum-norm implicit bias" → الانحياز الضمني نحو المعيار الأصغر.
+- "contrast detectors / contrast patterns" (image contrast) → كاشفات تضاد / أنماط تضاد; "whole-garment templates" → قوالب قطع الملابس الكاملة; "blurred" → ضبابي; "localized" → موضعي.
+- "activation-memory and FLOP budgets" → ميزانيتا التدريب من ذاكرة التفعيلات ومن عمليات FLOP; "GPU RAM" → ذاكرة RAM لوحدة GPU; "GPU epoch time" → زمن الحقبة على وحدة GPU; "floats" → أعداد بالفاصلة العائمة; "the full toolkit" → العدة كلها.
+- Slides: "The Central Problem" → المشكلة المركزية; "What Depth Introduces" → ما يجلبه العمق; "Running Benchmark" → الاختبار المعياري المستمر; "Running Example" → المثال المستمر; "Softmax baseline" → النموذج المرجعي softmax; "Check & Synthesis" → التحقق والتوليف; "Concept Check & Study Guide" → اختبار الفهم ودليل دراسة الفصل; "context-blind" → لا ترى السياق; "leakage-free" → بلا تسرب; "tabular ML" → تعلم الآلة على البيانات الجدولية; "batch scaling" → التزايد مع حجم الدفعة.
+- English glosses given on this page: perceptron, multilayer perceptron (MLP), hidden layer, activation function, backpropagation, double descent, implicit bias, dropout.
+
+## chapter_multilayer-perceptrons/numerical-stability-and-init.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "multiplicative factor", "multiplier", "per-layer factor / multiplier" → العامل الضربي (العامل الضربي للطبقة الواحدة); "by a factor of $c$" stays بمعامل $c$.
+- "mean square" (of gradients, activations) → متوسط المربع (متوسط مربع التدرج، متوسط مربع التفعيلات); "second moment" → العزم الثاني (glossary).
+- "slope" ($\phi'$) → ميل (ميول); "weight and slope matrices" → مصفوفات الأوزان والميول; "matrix--slope factor / operator" → عامل / مؤثر من مصفوفة وميل; "unit slope" → ميل مقداره واحد.
+- "fan-in" / "fan-out" → التفرع الداخل / التفرع الخارج, each with its English once; "the two fan counts" → عددا التفرع.
+- "permutation symmetry" → تناظر التبديل; "break symmetry" → كسر التناظر; "symmetry breaking" → كسر التناظر.
+- "hop" (one layer crossed by the gradient) → قفزة (قفزات); "unroll" (a recurrence) → يفرد، الفرد; "backward recurrence" → العلاقة التكرارية الخلفية.
+- "upstream gradient" → التدرج الوارد من جهة المخرج (as on the calculus page); "downstream gradient" → التدرج الصادر نحو جهة المدخل.
+- "pre-activation" → قيمة ما قبل التفعيل (قيم ما قبل التفعيل), as on the linear-algebra page; "zero-mean" → ذو متوسط صفري; "zero-centered" → متمركز حول الصفر; "saturated tails" → الذيول المشبعة.
+- "Xavier / Glorot / He / Kaiming initialization" → تهيئة Xavier / Glorot / He / Kaiming (names in Latin; "or X initialization" → وتسمى أيضًا تهيئة X); "Explicit He Normal" → تهيئة He الطبيعية الصريحة; "Glorot uniform", "LeCun normal" → توزيع Glorot المنتظم، توزيع LeCun الطبيعي; "default initializer" → المهيئ الافتراضي.
+- "attenuation" → توهين; "signal decay" → تناقص الإشارة; "crush / collapse" (activations) → يسحق / انهيار; "inflate" → يضخم; "frozen" (loss) → مجمدة; "sluggish" (epoch) → متثاقلة; "astronomically large" → بقيم فلكية.
+- "synthetic probe" → مسبار اصطناعي; "setup" → إعداد (إعدادات); "regime" → نمط (أنماط); "trainability" → قابلية التدريب; "untrainable" → غير قابل للتدريب; "run" → جولة تدريب; "validation accuracy" → دقة التحقق.
+- "step-size conditioning" → اشتراط حجم الخطوة (from the glossary's اشتراط مسبق); "catch-22" → مأزق; "semilog plot" → رسم نصف لوغاريتمي; "a deep plain ReLU stack" → مجموعة مكدسة عميقة عادية من طبقات ReLU.
+- Sigmoid in running text → دالة سيغمويد ("with sigmoid activations" → مع التفعيل بدالة سيغمويد); slide lead-ins "ReLU (…):" → دالة ReLU (…): so that the block starts in Arabic.
+- Table cells "**Framework** `layer`" → الطبقة `layer` في **Framework** (an Arabic word between the Latin name and the code span); "per layer" → لكل طبقة.
+- English glosses given in u01 of this page (do not repeat in later units): forward pass, permutation symmetry, i.i.d., pre-activations, vanishing gradients, exploding gradients, fan-in, fan-out, normalization layers, residual connections, gradient clipping.
+
+## chapter_multilayer-perceptrons/dropout.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "dropout" → الحذف العشوائي (glossary), glossed (dropout) once; "inverted dropout" → الحذف العشوائي المعكوس; "dropout probability" → احتمال الحذف العشوائي; "dropout layer" → طبقة الحذف العشوائي; "dropped units" → الوحدات المحذوفة; the class name `Dropout` and BatchNorm stay Latin (طبقة BatchNorm).
+- "co-adaptation" → التكيف المشترك (co-adaptation); "partner units" → وحدات شريكة (الشركاء); units "co-occur" → تحضر معًا; "conspire" / "conspiracies" → تتواطأ / مؤامرات.
+- "masking" → التقنيع; "mask" → قناع (أقنعة; glossary); "unmasked" → غير مقنّع; "rescaling" → إعادة التحجيم; "surviving activations / units", "survivors" → التفعيلات / الوحدات الباقية، القيم الباقية; "zero out" → يصفّر; "thinned" (subnetworks, ReLUs) → مخففة; "subnetwork" → شبكة جزئية.
+- "inject noise" → حقن الضوضاء; "multiplicative / additive noise" → ضوضاء ضربية / جمعية; "noisy" (data, labels, masks) → مشوب بالضوضاء; "perturbation-resilient" → متين أمام الاضطرابات.
+- "memorize / memorization" → يحفظ / الحفظ; "late-stage memorization" → الحفظ في المراحل المتأخرة; "training quirks" → خصوصيات عارضة في بيانات التدريب; "corrupted labels" → الوسوم التالفة, "wrong labels" → الوسوم الخاطئة, "corrupt" (verb) → يفسد; "reproduce" (wrong labels) → يعيد إنتاج.
+- "test time" → وقت الاختبار; "at inference time" → عند الاستدلال; "disable / turn off dropout" → تعطيل الحذف العشوائي; "deterministic(ally)" → حتمي / على نحو حتمي; "training mode" → نمط التدريب; "training-mode flag" → راية نمط التدريب; "mode switching" → تبديل النمط.
+- "ensemble" (of subnetworks) → مجموعة (مجموعة الشبكات الجزئية، تقريب مجموعة النماذج), as on the probability page.
+- "adaptive ridge penalty" → عقوبة ريدج تكيفية; "feature energy" → طاقة الميزة, "energy-weighted" → موزون بالطاقة; "variance inflation" → تضخم التباين; "train--test variance shift" → انزياح في التباين بين التدريب والاختبار; "running variance / statistics" (BatchNorm) → التباين التراكمي / الإحصاءات التراكمية; "expectation mismatch" → عدم تطابق التوقع.
+- "He-initialized" → مهيأ بتهيئة He (He stays Latin: no glossary term carries the name); "uniform tensor" → موتر منتظم التوزيع; "a vector of ones" → متجه عناصره واحدات; "pack hyperparameters into" → يحزم … في.
+- "trajectories" (accuracy curves of two runs) → المساران; "early peak" → الذروة المبكرة; "single-pass pretraining" → التدريب المسبق بمرور واحد; "LLMs" on slides → النماذج اللغوية الكبيرة; "Transformers" → المحولات; "stress test" → اختبار إجهاد; "Warm-Up" (slide title) → إحماء; kicker "Check" → التحقق.
+- "MLP" in running text takes the class noun شبكة (شبكة MLP غير منظمة، شبكة MLP ذات طبقتين مخفيتين).
+- English glosses given in u01 of this page (do not repeat in later units): dropout, co-adaptation, inverted dropout.
+
+## chapter_multilayer-perceptrons/mlp-implementation.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "MLP" → شبكة MLP (شبكتا MLP، شبكات MLP), the acronym after a class noun as the English writes it; the full term البيرسبترون متعدد الطبقات only where the English spells it out (slide titles); "two-layer MLP" → شبكة MLP ذات الطبقتين; "ReLU units" → وحدات ReLU; "hidden features" → الميزات المخفية; "hidden representation" → تمثيل مخفي.
+- "Implementation" (section title) → التنفيذ; "Implementation from Scratch" → التنفيذ من الصفر; "Checks before Training" → فحوص قبل التدريب; "pre-training checks / invariants" → فحوص / لامتغيرات ما قبل التدريب; "sanity checks" → فحوص السلامة; "invariants" → لامتغيرات.
+- "contrast" (bright next to dark in an image) → تضاد (أنماط التضاد); التباين stays variance (حافظ للتباين on the same page).
+- "output layer" → طبقة الإخراج (style §10.1, as in the chapter index); "outgoing weight" → وزن خارج (أوزانها الخارجة); "high-norm unit" → وحدة عالية المعيار; "whole-garment templates" → قوالب لقطع ملابس كاملة; "blurred" → ضبابية.
+- "controlled comparison" → مقارنة مضبوطة; "head-to-head" → مباشرةً / مقارنة مباشرة; "linear baseline" → النموذج الخطي المرجعي; "validation accuracy histories" → سجلات دقة التحقق, "trajectory" → مسار; "trajectory-for-trajectory" → مسارًا بمسار.
+- "wall-clock time per epoch" → الزمن الفعلي للحقبة; "GPU epoch time" → زمن الحقبة على وحدة GPU; "runtime" → زمن التشغيل; "data loading" → تحميل البيانات; "kernel-launch overhead" → العبء الإضافي الناتج عن إطلاق النوى; "tensor cores" → أنوية الموترات (أنوية for hardware cores); "in milliseconds / microseconds" → في أجزاء من الألف / من المليون من الثانية.
+- "container" (`Sequential`) → حاوية; "parameter class" → صنف المعلَمات; "manual parameter arrays" → مصفوفات معلَمات يدوية; "floats" → أعداد بالفاصلة العائمة; "parameter budget" → ميزانية المعلَمات.
+- "active ReLU fraction" → نسبة وحدات ReLU النشطة; "dead" (layer, ReLU units) → ميت; "hidden pre-activations" → قيم ما قبل التفعيل في الطبقة المخفية; "slow warmup" → إحماء بطيء; "suppressed by a factor of" → تُكبح بمعامل; "to trail" → يتأخر عن.
+- "tops" (upper-body garments) → الملابس العلوية, one of them → قطعة علوية; "natural suspects" → من البديهي أن نشتبه بها; "widen" a layer, "scaling to $h$" → يوسع، التوسيع; "fan-in-scaled" → محجَّمة حسب عدد مدخلات الطبقة; "overriding the default initialization" → استبدال التهيئة الافتراضية.
+- Kickers: "The Empirical Question" → السؤال التجريبي; "Initialization Invariants" → لامتغيرات التهيئة; "High-Level API" → واجهة API عالية المستوى; "Check" → التحقق; "Visualizing First-Layer Weights" → تصوير أوزان الطبقة الأولى; "Quantitative Summary" → ملخص كمي.
+- English glosses given in u01 of this page: only the garment names T-shirt, pullover, coat, shirt (code and figure titles keep them). No term gloss: the page introduces no new term.
+
+## chapter_multilayer-perceptrons/backprop.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "backward recurrence" → العلاقة التكرارية الخلفية ("recurrence" as a mathematical recursion → علاقة تكرارية; التكرار alone stays iteration/recurrence in sequence models).
+- "upstream gradient / sensitivity / errors" → التدرج الوارد من جهة المخرج / الحساسية الواردة من جهة المخرج / الأخطاء الواردة من جهة المخرج (as on the calculus page); "incoming gradient" → التدرج الوارد.
+- "to gate" (a gradient by the activation slope) → يمر / تمرير … عبر بوابة (بوابة ميل التفعيل، بوابة ReLU); "to zero out" → يصفّر; "dead ReLU unit" → وحدة ReLU ميتة (وحدات ReLU الميتة); "inactive" (unit) → غير نشطة.
+- "broadcasted bias addition" → جمع الانحياز بالبث; "elementwise activation" → التفعيل عنصرًا بعنصر; "local matrix-calculus rules" → قواعد محلية من التفاضل المصفوفي; "error signal" → إشارة الخطأ; "summand" → حد من حدود المجموع; "factor" (of a product at a multiply node) → عامل.
+- "to cache" (forward values) → يخزن مؤقتًا (المدخل المخزن مؤقتًا، التفعيلات المخزنة مؤقتًا); "read off" (a gradient) → يستخرج; "two-step module" (per-layer backward step) → إجراء من خطوتين (not وحدة, which is the hidden unit here).
+- "worked example" → مثال محلول; "by hand" → يدويًا; "gradient check" → فحص التدرجات; "rounding floor" → أرضية التقريب; "relative discrepancy" → الفرق النسبي; "a few units of machine epsilon" → بضعة أمثال إبسيلون الآلة.
+- "the MLP" as a common noun → شبكة MLP (شبكات MLP); "one-hidden-layer MLP" → شبكة MLP ذات طبقة مخفية واحدة; "$K$-layer MLP" → شبكة MLP من $K$ طبقة; "interior layer" → طبقة داخلية.
+- "one-hot label matrix" → مصفوفة الوسوم بالترميز الأحادي; "directed acyclic graph" → مخطط موجه لادوري, "DAG" → مخطط DAG; "children" (of a node) → أبناء; "outgoing edges" → الأضلاع الخارجة; "downstream paths" → مسارات لاحقة.
+- Slides: "MACs" → عملية MAC (class noun, no Latin plural); "matmul" → جداء مصفوفات; "rule of thumb" → قاعدة تقريبية; "tangents / adjoints" → المماسات / القيم القرينة; "rank-1 matrix" → مصفوفة من الرتبة 1; "floats" → أعداد بالفاصلة العائمة; "contract" (a product into a small result) → يختزل; "Systems Cost" → كلفة الأنظمة; "credit assignment" → إسناد الفضل; kicker "[Check]" → [التحقق]; "None" in a table cell → لا شيء.
+- English glosses given in u01 of this page (do not repeat in later units): reverse-mode automatic differentiation, computational graph, forward pass, backward pass, reverse topological order. Backpropagation occurs only in headings and slides so far and has no gloss yet.
+
+## chapter_multilayer-perceptrons/generalization-deep.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "interpolate" → يستوفي (glossary استيفاء), "interpolator" → مستوفٍ (المستوفي، مستوفيات), "interpolating function" → الدالة المستوفية; "minimum-norm interpolator / solution / fit" → المستوفي / الحل / الملاءمة ذو (ذات) المعيار الأصغر; "minimum-norm least squares" → المربعات الصغرى ذات المعيار الأصغر; "zero-loss solutions" → الحلول ذات الخسارة الصفرية.
+- "overparameterized" → مفرط المعلَمات, "overparameterization" → فرط المعلَمات, "underparameterized" → ناقص المعلَمات; "regime" (classical, overparameterized) → نطاق (نطاق فرط المعلَمات).
+- "memorization" → الحفظ ("random-label memorization" → حفظ الوسوم العشوائية; "memorization capacity" → سعة الحفظ); "capacity bound" → حد السعة (حدود السعة); "distribution-free" → بلا افتراض على التوزيع; "vacuous" → فارغ; "label-blind" → لا يرى الوسوم; "function class" → فئة الدوال.
+- "no free lunch theorem" → مبرهنة لا غداء مجاني; "1-nearest-neighbor classifier" → مصنف أقرب جار واحد (glossary أقرب جار); "random chance" (accuracy level) → مستوى الصدفة.
+- "double descent" → النزول المزدوج (glossary), "second descent" → النزول الثاني; "spike" (in test error) → قفزة (يقفز); "heal" → يتعافى; "cliff" → جرف; "U-curve" → منحنى U (منحنى على شكل U).
+- "random-features model" → نموذج ميزات عشوائية; "tractable" → قابل للتحليل; "controlled experiments" → تجارب محكمة; "exact results" → نتائج مضبوطة; "freeze" (a layer) → يجمد; "conditioning" → الاشتراط, "poorly / well conditioned directions" → الاتجاهات سيئة / جيدة الاشتراط, "singular conditioning" → الاشتراط المنفرد.
+- "maximum-margin separator" → الفاصل ذو الهامش الأقصى (glossary هامش أقصى); "hard-margin SVM" → آلة SVM ذات الهامش الصلب; "support vectors" → متجهات الدعم (the established term; الحامل stays the support of a function); "boundary examples" → الأمثلة الحدية; "row space" → فضاء الصفوف; "full row rank" → رتبة صفوف كاملة; "underdetermined" → ناقص التحديد; "unknowns" → مجاهيل; "solution hyperplane" → المستوي الفائق للحلول; "null-space component" → المركبة في الفضاء الصفري.
+- "clean-first learning" → تعلم الأنماط النظيفة أولًا; "structured patterns" → الأنماط ذات البنية; "coherent signal" → الإشارة المتسقة; "grokking" → ظاهرة grokking (Latin after a class noun, like softmax; no glossary entry in this unit).
+- "Limits of …" (heading, in the sense of shortcomings) → قصور …; headings "X under squared / logistic loss" → X في حالة الخسارة التربيعية / اللوجستية; "sample-wise" (double descent) → بحسب حجم العينة; "row-space invariance" → الثبات في فضاء الصفوف; "Pythagorean optimality" → الأمثلية وفق مبرهنة Pythagoras.
+- English glosses given in u01 of this page (do not repeat in later units): interpolate, overparameterized, minimum-norm interpolator, early stopping, vacuous, no free lunch theorem, inductive bias, 1-nearest-neighbor, random features, double descent, interpolation threshold, implicit bias, implicit regularization, maximum-margin separator.
+
+## chapter_multilayer-perceptrons/kaggle-house-price.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Predicting House Prices on Kaggle" → التنبؤ بأسعار المنازل على Kaggle; "house", "home" → منزل (منازل); "mansion" → قصر; "starter home" → منزل صغير رخيص; "dwelling style" → نمط المسكن; "duplex" → مسكن مزدوج; "pool", "alley" → مسبح، ممر خلفي. The city is written أيمز (ولاية أيوا); the dataset name Ames Housing stays Latin.
+- "attribute" (a raw column describing a house) → صفة (صفات); ميزة stays the model's feature and سمة the Python attribute. "numeric category code" → رمز فئة عددي (رموز الفئات العددية); "row identifier" → معرف الصفوف; "nominal categories" → فئات اسمية.
+- log-RMSE stays Latin (مقياس log-RMSE، قيمة log-RMSE); RMSE where the English writes the acronym → خطأ RMSE (على التدريب / على التحقق); the full term is the glossary's جذر متوسط مربع الخطأ.
+- "leakage-free" → خال من التسرب (المعالجة المسبقة الخالية من التسرب; on a cover slide بلا تسرب); "leak into" → يتسرب إلى، يسرّب; "leaked statistics" → الإحصاءات المتسربة.
+- "linear baseline", "baseline model" → النموذج الخطي المرجعي، النموذج المرجعي (chapter decision: baseline model → نموذج مرجعي); "the right baseline" (a level) → خط الأساس.
+- "5-fold cross-validation" → التحقق المتقاطع بـ 5 طيات; "shared 5-fold partition / splits" → التقسيم المشترك إلى 5 طيات; "shared folds" → طيات مشتركة; "fold-to-fold" → من طية إلى أخرى; "per-fold" → لكل طية، الطيات المفردة; "fold-sampling noise" → ضوضاء أخذ عينات الطيات; "round" → جولة.
+- "target centering" → مركزة الهدف (الأهداف الممركزة; "un-centering" → إلغاء المركزة); "logarithmic target transformation" → التحويل اللوغاريتمي للهدف; "log price" → لوغاريتم السعر; "exponentiate" → يحسب الدالة الأسية.
+- "He-initialized", "He init" → مهيأ بتهيئة He، تهيئة He (name in Latin); "64 ReLU units" → 64 وحدة ReLU; "MLP" → شبكة MLP (class noun, as the English writes the acronym).
+- "model factory" → مصنع نماذج; "preprocessor" → معالج مسبق; "fit the preprocessing on train" → تُقدَّر على `train` (decision: fit statistics → يقدّر); "dummy columns" → الأعمدة الوهمية; "binary indicator" → مؤشر ثنائي; "informative missingness" → فقدان يحمل معلومات.
+- "jitter" → اهتزاز; "damp" → تخميد; "sweep `wd`" → يمسح قيم `wd`; "textbook U-shape" → شكل U نموذجي; "under-/over-regularized" → تنظيم ناقص / تنظيم مفرط; "head to head" → وجهًا لوجه.
+- "submission", "submitting predictions" → التقديم، تقديم التنبؤات; "winning weight decay" → اضمحلال الأوزان الفائز; "ensemble the fold models" → يكوّن مجموعة من نماذج الطيات; "gradient-boosted decision trees" → أشجار القرار المعززة بالتدرج.
+- Slides: "capstone" → ختامي (القسم الختامي، التحدي الختامي); "winner's curse" → لعنة الفائز; "optimistic bias" → الانحياز المتفائل; "downward selection bias" → انحياز اختيار نحو الأسفل; "price brackets" → شرائح الأسعار; "Type Hygiene" → سلامة الأنواع; "Pitfall Prevented" → المزلق المتجنَّب; "reality check" → اختبار الواقع; kicker "[Check]" → [التحقق]; "Step 1 & 2" → الخطوتان 1 و 2; "A + B" between two code spans in a table cell → A مع B.
+- English glosses given in u01 of this page (do not repeat in later units): data leakage, root-mean-squared error (RMSE).
+
+## chapter_multilayer-perceptrons/dropout.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Monte Carlo dropout" → الحذف العشوائي بطريقة مونت كارلو; "switch dropout / the masks off, on" → يعطّل / يبقيه مفعّلًا، والأقنعة معطلة / مفعّلة; "swap the two probabilities" → تبديل الاحتمالين أحدهما بالآخر.
+- "report" (a number, in exercises) → أبلغ عن; "tolerates" → تتحمل; "strength" of weight decay → شدة (شدات); "mechanism" → آلية.
+- "additive" (effects) → جمعي; "diminishing returns" → عوائد متناقصة; "cancel each other out" → يلغي أحدهما الآخر.
+- "mismatch between training and test" → عدم التطابق بين التدريب والاختبار; "weighted geometric mean" → المتوسط الهندسي الموزون ("normalized" → المطبَّع); "$\boldsymbol{\xi}$ ranges over the masks" → تأخذ $\boldsymbol{\xi}$ قيمها من الأقنعة كلها; "neither equality holds in general" → لا تصح أي من المساواتين عمومًا.
+- English glosses on this page in u02: none (exercises take no gloss).
+
+## chapter_multilayer-perceptrons/mlp.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Multilayer Perceptrons" (page title) → البيرسبترون متعدد الطبقات (as the chapter title); first mention *البيرسبترون متعدد الطبقات* (multilayer perceptron, MLP), afterwards "an MLP" → شبكة MLP (feminine agreement).
+- "monotonicity" → الرتابة, "monotonic / non-monotonic" → رتيب / غير رتيب; "feature interactions" → تفاعلات الميزات (التفاعل بين الميزات); "score" (linear) → درجة, so body temperature is written حرارة الجسم without درجة beside it.
+- "XOR problem" → مسألة XOR; "exclusive-OR" → دالة *أو الحصرية* (exclusive-OR, XOR); "corners" of the unit square → أركان; "diagonal" → قطر (قطرا مربع الوحدة); "midpoint" → نقطة المنتصف; "flip" (a bit) → قلب.
+- "**Proposition.**" → **قضية.**; "**Proof.**" → **برهان.**; "Suppose for contradiction" → لنفترض على سبيل التناقض; "misclassify" → يخطئ في تصنيف; "decision rule" → قاعدة القرار.
+- "pre-activations" → قيم ما قبل التفعيل (pre-activations); "activations" → التفعيلات; "width" (of a layer) → عرض; "hidden layer of $2$ units" on slides → طبقة مخفية عرضها $2$ where the math span must stay.
+- "collapse" (layers into one affine map) → ينهار، الانهيار (الانهيار الجبري، الانهيار الخطي); points that "collapse onto" one point → تنطبق على.
+- "rectified linear unit" → *الوحدة الخطية المصحَّحة* (rectified linear unit, ReLU), then ReLU with a class noun (دالة ReLU، وحدة ReLU، تفعيلات ReLU); "rectifying activations" → التفعيلات المصحِّحة; "squashing activations" → التفعيلات الضاغطة, "squasher" → ضاغط; "dead ReLU" → وحدات ReLU الميتة; "inactive units" → الوحدات غير النشطة; a unit "turns on" → تنشط.
+- "fold" → يطوي، طي (طي الفضاء); "band / strip" → شريط (الشريط القطري); "carve out" → يقتطع; "hidden space" → الفضاء المخفي; "input space" → فضاء المدخلات; "compositional hierarchy" → تراتب تركيبي; "linear readout" → القراءة الخطية.
+- "hinge" → مفصل (مفاصل); "knot" → نقطة انكسار; "polyline" → خط منكسر; "linear pieces" → قطع خطية; "linear segments" → قطع مستقيمة; "tent function / map" → دالة الخيمة; "continuous" (function) → متصلة; "compact" → متراص; "non-polynomial" → ليست كثير حدود; "closed bounded interval" → فترة مغلقة ومحدودة; "uniform approximation" → التقريب المنتظم; "universal approximation theorem" → مبرهنة التقريب الشامل.
+- "attenuate" (gradients) → يوهن، توهين; "saturate / saturation" → يتشبع، التشبع; "tail" (of an activation) → ذيل; "gradient flow" → سريان التدرج; "kink" → انكسار; "dip" → انخفاض; "expressive power" → القدرة التعبيرية; "learnability" → قابلية التعلم; "depth efficiency" → كفاءة العمق.
+- Slides: "Constructive Example" → مثال إنشائي; "Head-to-Head" → وجهًا لوجه; kicker "[Check]" → [التحقق]; "LSTMs/GRUs" → شبكات LSTM و GRU; plain "Sigmoid", "Tanh" in titles and table cells → سيغمويد، الظل الزائدي; "Unit 1 / Unit 2" → الوحدة الأولى / الوحدة الثانية.
+- English glosses given in u01 of this page (do not repeat in later units): multilayer perceptron (MLP), hidden layer, activation function, exclusive-OR (XOR), pre-activations, activations, nonlinearity, rectified linear unit (ReLU). Not glossed yet (slides only so far): universal approximation, hinge, sigmoid, hyperbolic tangent, GELU, leaky ReLU, vanishing gradients.
+
+## chapter_multilayer-perceptrons/mlp-implementation.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "the identity" (function, in place of an activation) → الدالة المحايدة (no glossary entry; متطابقة stays the identity equation, مصفوفة الوحدة the identity matrix).
+- "hidden width" → العرض المخفي (plural العروض المخفية), as on the generalization-deep page; "affine maps" → التحويلات التآلفية (glossary تحويل تآلفي); "interval of $t$" → فترة من قيم $t$; "regions of input space" → مناطق فضاء المدخلات.
+- "your answer to (b)" → إجابتك عن الجزء (b); "run" (one training of five) → جولة تدريب; "fraction of validation examples" → نسبة أمثلة التحقق; "the arithmetic" (cost that grows with width) → العمل الحسابي; "time one pass over the training data" → قس زمن مرور واحد على بيانات التدريب.
+- English glosses on this page in u02: none (the summary uses terms glossed earlier; exercises take no gloss).
+
+## chapter_multilayer-perceptrons/kaggle-house-price.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "target leakage" → تسرب الهدف; "target encoding" → ترميز الهدف (verb: يرمّز بترميز الهدف); "encode out of fold" → يرمّز خارج الطية; "in-sample encoding" → الترميز داخل العينة.
+- "fold ensemble" → مجموعة نماذج الطيات; "ensembles of decision trees" → مجموعات أشجار القرار; "gradient-boosted trees" → الأشجار المعززة بالتدرج; "fit a model to" (exercise imperative) → لائم نموذج … على.
+- "leaderboard score" → الدرجة على لوحة المتصدرين; "cross-validated error / RMSE" → خطأ التحقق المتقاطع، خطأ RMSE في التحقق المتقاطع.
+- "median imputation" → التعويض بالوسيط; "imputed feature" → ميزة معوَّضة; "unstandardized / standardized" (model, pipeline, columns) → غير موحد معياريًا / موحد معياريًا; "to within a factor of ten" → بدقة لا تتعدى معاملًا مقداره عشرة.
+- "geometric averaging", "geometric mean" → المتوسط الهندسي; "price space" → فضاء الأسعار; "price-space average" → المتوسط في فضاء الأسعار; "log-space average" → المتوسط في الفضاء اللوغاريتمي.
+- "Adapted from Kaggle Learn, [course], Exercise N" → مقتبس بتصرف من دورة [course] في Kaggle Learn، التمرين N (as on the pandas page).
+
+## chapter_multilayer-perceptrons/numerical-stability-and-init.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Symmetry among Hidden Units" → التناظر بين الوحدات المخفية; "permutation-symmetric" → متناظرة تحت التبديل; "permutation invariance" → الثبات تحت التبديل; "single effective neuron / effective unit" → عصبون فعال واحد / وحدة فعالة.
+- "He-scaled weights" → أوزان بمقياس تهيئة He; "He scale" → مقياس He.
+- "submultiplicative" (norm) → تحت ضربي; "submultiplicativity" → الخاصية تحت الضربية; "largest singular value" → القيمة المفردة العظمى; "grow geometrically" → ينمو هندسيًا, "decay geometrically" → يتناقص هندسيًا; "strictly smaller than one" → أصغر تمامًا من واحد.
+- "the function of an MLP" → الدالة التي تحسبها شبكة MLP; "leaves … unchanged" → يُبقي … على حاله; "incoming / outgoing weights" → أوزان داخلة / خارجة; "output bias" → انحياز المخرجات; "replacing A by B" → الاستعاضة عن A بـ B (keeps the token order).
+- "averaged fans" → متوسط التفرعين; "widths" (a list of layer widths) → قيم العرض; "tempting shortcut" → طريق مختصر مغرٍ; "negative half-line" → نصف المستقيم السالب.
+- "layer gain" → كسب الطبقة; "rescaling symmetry" → تناظر إعادة التحجيم; "architectural stabilizers" → عوامل استقرار معمارية (not مثبتات: المثبِّت is the installer); "residual skip connections" → وصلات التخطي ذات البواقي; BatchNorm, LayerNorm, Leaky ReLU, GELU stay Latin.
+- Summary table: "Small / Large Fixed $\mathcal{N}(\cdot)$" → توزيع ثابت صغير / كبير; "(on ReLU)" → (مع ReLU); "`inf`/`NaN`" → `inf` أو `NaN`.
+- Credit line with several problems: … لمؤلفه Simon Prince، المسائل 3.5 و 4.3 و 7.15.
+- English glosses on this page in u02: none (the section uses terms glossed in u01; exercises and slides take no gloss).
+
+## chapter_multilayer-perceptrons/backprop.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Arithmetic Cost" (heading) → كلفة العمليات الحسابية; "multiply-adds" after a number → N عملية ضرب وجمع.
+- "one-sided finite difference" → الفرق المحدود أحادي الجانب; "central difference" → الفرق المركزي (as on the calculus page).
+- "forward / backward sweep" → الاجتياز الأمامي / اجتياز خلفي; "sweeps the graph backward / forward" → يجتاز المخطط إلى الخلف / إلى الأمام; "seeds X at" → يضع البذرة X عند.
+- "prediction" in the exercises (the English writes "prediction", not "inference") → التنبؤ; "inference" stays الاستدلال.
+- "autograd engine" → محرك اشتقاق تلقائي; "miniature" → مصغر; "parents" (of a graph node) → آباء; "references" (object references) → مراجع; "affordable" → في المتناول.
+- "combination of the four indices" → توليفة من الفهارس الأربعة; "object" (a mathematical object) → كائن.
+- The tag "[extended]" is copied like "[code]".
+- "Adapted from Andrej Karpathy, [micrograd](…), `file`" → مقتبس بتصرف من مشروع [micrograd](…) لمؤلفه Andrej Karpathy، الملف `file`.
+- English glosses given in u02 of this page: backpropagation (first body-text occurrence, in the Summary), finite difference.
+
+## chapter_multilayer-perceptrons/generalization-deep.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "patience" (early stopping) → الصبر (نافذة صبر، قاعدة الصبر، الإيقاف القائم على الصبر), glossed (patience) once; "tolerance" $\theta$ → هامش السماح; "stopping epoch" → حقبة التوقف; "retained epoch" → الحقبة المحتفظ بها; "consecutive epochs" → حقب متتالية.
+- "checkpoint" → نقطة استعادة (from the glossary's حفظ نقاط الاستعادة); "best validation checkpoint" → نقطة الاستعادة ذات أفضل أداء على التحقق; "restore" (a checkpoint) → الرجوع إلى.
+- "modular addition" → الجمع المقاسي, glossed (modular addition) once; "modular arithmetic" → الحساب المقاسي (not المعياري "standard" and not النمطي: نمط is "mode"); "algorithmic tasks" → مهام خوارزمية; "training table" → جدول التدريب.
+- "grokking" → ظاهرة grokking (as in u01), also in the caption, the exercise title and slide titles.
+- "term" of a bound ($B$, "the second term") → المقدار, so that it is not confused with الحد "bound" in the same sentence; "lower bound" → حد أدنى; "complexity measures" → مقاييس التعقيد; "a member of $\mathcal{F}$" → عنصر من.
+- "infimum" → الحد الأدنى الأعظم; "grows without bound" → ينمو بلا حد; "converges in direction" → يتقارب في الاتجاه; "rescalings" → إعادات التحجيم; "coordinate along the $i$-th eigenvector" → الإحداثي على امتداد المتجه الذاتي رقم $i$.
+- "peak" (of the double-descent curve) → قمة (قفزة stays "spike"); "tuned model" → النموذج المضبوط; "training fraction" → نسبة التدريب; "weight-decay strength" → شدة اضمحلال الأوزان; "delay" → التأخر; "saturates" (accuracy) → تتشبع; "redundant features" → الميزات المكررة.
+- Slides: "Temporal / Spatial implicit bias" → الانحياز الضمني الزمني / المكاني; "clean-first window" → نافذة الأنماط النظيفة أولًا; "memorization phase" → مرحلة الحفظ; "coherent gradients" → التدرجات المتسقة; "implicit ridge" → ريدج ضمني; "Corrupted-label arithmetic" → حساب الوسوم التالفة; kicker "[Check]" → [التحقق]; "Answers:" → الإجابات:.
+- Credit line for a book in an exercise: *مقتبس بتصرف من كتاب [Title](url) لمؤلفه Author، الفصل N.* / لمؤلفيه A و B و C، القسم N.
+- English glosses given in u02 of this page: patience, modular addition.
+
+## chapter_multilayer-perceptrons/mlp.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "joint" (of a ReLU unit, in the exercises) → نقطة انكسار, the same as "knot"; "one hinge per joint" → مفصل لكل نقطة انكسار.
+- "$m$-fold composition" → التركيب $m$ مرة; "composing $g$ with itself" → تركيب $g$ مع نفسها; "sawtooth wave" → موجة سن المنشار.
+- "ridge function" → دالة ريدج (دوال ريدج), with ريدج as in the glossary's ridge terms; "Stone–Weierstrass theorem" → مبرهنة Stone–Weierstrass (names in Latin: no glossary term carries them).
+- "Gaussian error linear unit" → الوحدة الخطية ذات الخطأ الغاوسي, then GELU; "standard normal CDF" → دالة التوزيع التراكمي للتوزيع الطبيعي المعياري; "its cousin" → قريبتها.
+- "positive half-line" → نصف المستقيم الموجب; "horizontal asymptotes" → خطوط مقاربة أفقية; "state squashers" → ضاغطات للحالة; "recurrent architectures" → المعماريات المتكررة; "rectifiers" → الدوال المصحِّحة.
+- "the plane" → المستوي; "uniform limit" → نهاية منتظمة; "closed under sums, products, and scalar multiples" → مغلقة تحت الجمع والضرب والضرب في عدد قياسي; "finite linear combinations" → التراكيب الخطية المنتهية; "the graph" (of a function) → المنحنى البياني.
+- Exercise title "XOR by hand" → مسألة XOR يدويًا (the class noun so that the block starts in Arabic); credit line for a book chapter: … لمؤلفه Author، الفصل N.
+- English glosses given in u02 of this page: hinge, universal approximation theorem, ridge functions, dead ReLU, Gaussian error linear unit, logistic sigmoid, hyperbolic tangent, vanishing gradients.
+
+## chapter_multilayer-perceptrons: chapter check (claude fable-5.2 (medium), 2026-11-27)
+- One rendering per term across the chapter's eight pages; the entries above were corrected in place.
+- "Multilayer Perceptrons" as chapter title, page title and in slide titles, and the full term in running text → البيرسبترون متعدد الطبقات (glossary, definite singular; no plural البيرسبترونات); "an MLP", "MLPs" → شبكة MLP / شبكات MLP on every page (never نموذج MLP).
+- Slide kicker "[Check]" → [التحقق]; التحقق من الفهم stays for "Check Your Understanding" and اختبار الفهم for "Concept Check".
+- "inactive" (ReLU unit) → غير نشطة (opposite of النشطة; not خاملة); "dead ReLU" → وحدة ReLU ميتة.
+- "contrast" (bright next to dark in an image) → تضاد (كاشفات تضاد، أنماط التضاد); التباين is variance only.
+- "linear baseline" → النموذج الخطي المرجعي; "floats" → أعداد بالفاصلة العائمة.
+- Kept apart on purpose: "regime" → نطاق for a range of model size (النطاق الكلاسيكي، نطاق فرط المعلَمات) and نمط for a kind of behaviour (أنماط التهيئة، نمط الانزياح); "head-to-head" → وجهًا لوجه in slide kickers and comparisons of models, مباشرةً as an adverb in running text.
