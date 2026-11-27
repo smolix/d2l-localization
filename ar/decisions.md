@@ -349,3 +349,228 @@
 - "ground-truth targets" → الأهداف من الحقيقة المرجعية; "true label" → الوسم الحقيقي; "residual" → الباقي; "silently" → بصمت; "batch dimension" → بُعد الدفعة; "target shape" (of a reshape) → الشكل المستهدف.
 - "pairwise absolute-difference matrix" → مصفوفة الفروق المطلقة الزوجية; "wall-clock execution time" → زمن التنفيذ الفعلي; "speedup factor" → معامل التسريع; "megabytes" → ميغابايت; "peak memory footprint" → ذروة بصمة الذاكرة; "outer operations" → العمليات الخارجية.
 - Exercise credit line for a named author's collection: *مقتبس بتصرف من مجموعة [Title](url) التي أعدها Author، المسألة N.* (an Arabic word between the two Latin names).
+
+## chapter_linear-regression/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Linear Regression" (chapter and section title) → الانحدار الخطي; "regression" → الانحدار; "workhorse of" → عماد; "proving ground" → ميدان اختبار.
+- "minibatch stochastic gradient descent" → النزول التدرجي العشوائي بالدفعات المصغرة; "minibatch SGD" on slides → خوارزمية SGD بالدفعات المصغرة.
+- "training pipeline" → خط التدريب (from خط معالجة); "training harness" → أدوات التدريب; "parameterized forward pass" → التمرير الأمامي ذو المعلَمات; "weight-norm regularization" → التنظيم بمعيار الأوزان.
+- "affine model" → النموذج التآلفي; "squared error loss" → خسارة الخطأ التربيعي; "in closed form" → بصيغة مغلقة; "iteratively" → تكراريًا; "noise floor" → أرضية الضوضاء.
+- "synthetic benchmark" → اختبار معياري اصطناعي; "synthetic testbed" → منصة اختبار اصطناعية; "oracle" (known ground truth to verify against) → مرجع.
+- "polynomial" → كثير حدود (كثيرات الحدود); "polynomial curve fitting" → ملاءمة المنحنيات بكثيرات الحدود; "degree" → درجة; "cubic" → دالة تكعيبية; "interpolate" → يستوفي (glossary استيفاء).
+- "validation split" → قسم التحقق; "$K$-fold cross-validation" → التحقق المتقاطع بـ $K$ طية ("fold" → طية); "squared bias" → مربع الانحياز; "peek at test data" → اختلاس النظر إلى بيانات الاختبار.
+- "squared $\ell_2$ penalty" → عقوبة $\ell_2$ تربيعية; "penalized loss" → الخسارة ذات العقوبة; "ridge" → ريدج (glossary انحدار ريدج; تقليص ريدج); "collinear" → متسامت; "effective parameters" → المعلَمات الفعالة; "held-out risk" → الخطر على البيانات المحجوزة; "scalable" → قابل للتوسع; "misfit" → سوء الملاءمة.
+- English glosses given on this page: regression, linear regression, maximum likelihood, minibatch stochastic gradient descent, cross-validation, overfitting, weight decay.
+
+## chapter_linear-regression/weight-decay.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "weight decay" → اضمحلال الأوزان (glossary); "decay" (verb) → يضمحل; "multiplicative decay / shrinkage factor" → الاضمحلال الضربي / عامل التقليص الضربي; "shrink" → يقلص (glossary تقليص).
+- "penalized" (loss, objective, optimization, gradient step) → معاقَب (with the fatha), "to penalize" → يعاقب, "unpenalized" → غير معاقَب / لا يعاقَب; "regularization constant" → ثابت التنظيم; "unregularized" → غير منظم; "tax" (metaphor) → ضريبة.
+- "polynomial" → كثير الحدود (متعدد الحدود stays "multinomial"); "polynomial features" → ميزات كثير الحدود; "feature selection" → انتقاء الميزات; "collinear" → متسامت (ميزات متسامتة); "high-dimensional" → عالي الأبعاد.
+- "thermometer" → ميزان حرارة; "sensor" → مستشعر; "sensor drift" → انجراف المستشعر; "reading" → قراءة; Kelvin → الكلفن, Celsius → الدرجات المئوية.
+- "ridge regression" → انحدار ريدج (glossary), short "ridge" → ريدج; "Tikhonov regularization" → تنظيم Tikhonov (name in Latin, no glossary term); "the Lasso" → Lasso after a class noun (طريقة Lasso، انحدار Lasso).
+- "factor of $\frac{1}{2}$", "by a factor $(1-\eta\lambda)$" → العامل; "amplified by $500$", "cuts by $10^6$" → بمعامل; "effective capacity" → السعة الفعالة; "isotropic" → متناحي; "unit variance" → تباين مقداره واحد.
+- "constraint set" → مجموعة القيود; "subject to" → تحت القيد; "disk" → قرص; "sphere / norm ball" → كرة / كرة معيار; "elliptical contours" → خطوط الكفاف الإهليلجية (ellipse itself stays قطع ناقص); "diamond" → معيَّن; "cross-polytope" → متعدد السطوح المتقاطع; "vertices" → رؤوس; "corner" → زاوية; "boundary" → حدود.
+- "posterior density" → الكثافة البعدية; "maximum a posteriori" → تقدير الاحتمال البعدي الأقصى (glossary), then تقدير MAP; "Bayesian statistics" → الإحصاء البايزي; "prior belief" → اعتقاد قبلي; "negative logarithm" → سالب اللوغاريتم.
+- "minibatch SGD" → خوارزمية SGD بالدفعات المصغرة; "plain SGD" → خوارزمية SGD العادية; "adaptive optimizers" → المحسنات التكيفية; "decoupling" → فصل.
+- Slides: "Lagrangian duality" → الثنوية اللاغرانجية; "Lipschitz sensitivity bound" → حد ليبشيتز للحساسية; "intercept" → المقطع; "damp" → يخمد; "poorly determined directions" → الاتجاهات ضعيفة التحديد; "geometric decay" → اضمحلال هندسي; "eigenspectrum" → الطيف الذاتي; "spectral shrinkage / regularization" → التقليص الطيفي / التنظيم الطيفي. Slide titles that are "Why …" clauses are written as questions with ؟; quoted words inside a title attribute take ‘…’.
+- English glosses given in u01 of this page (do not repeat in later units): collinear, ridge regression, weight decay, regularization constant, cross-polytope, sparsity, prior distribution, posterior density, maximum a posteriori.
+
+## chapter_linear-regression/linear-regression.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "regression" → الانحدار; "method of least squares" → طريقة المربعات الصغرى; "least-squares fit" → ملاءمة المربعات الصغرى; "regression line" → خط الانحدار; "fit a line to data" → يلائم خطًا مع البيانات.
+- "model class" → فئة النماذج (parallel to the usual فئة الفرضيات; صنف stays the Python class, عائلة النماذج stays "model family").
+- "affine combination" → تركيب تآلفي; "affine model" → النموذج التآلفي; "constant translation" → إزاحة ثابتة; "offset" (of the linear model) → الإزاحة; "intercept" → المقطع (glossary).
+- "marginal influence / marginal slopes" → التأثير الحدي / الميول الحدية (هامشي stays the probability sense); "weighted sum" → مجموع موزون.
+- "baseline" (model) → نموذج مرجعي; "interpretable" → قابل للتفسير; "candidate" (parameters, slopes) → مرشح.
+- "corrupted label / point" → وسم تالف / نقطة تالفة, "to corrupt" → يفسد; "clean points" → النقاط النظيفة; "pull" (of a data point on the fit) → شد.
+- "overestimate / underestimate" → التقدير الزائد / التقدير الناقص; "factor of $\frac{1}{2}$" → المعامل $\frac{1}{2}$; "drops down" (on differentiation) → ينزل; "the minimum" (location) → القيمة الصغرى.
+- "fitted plane" → المستوي الذي نلائمه; "hyperplane" → المستوي الفائق; "origin" → نقطة الأصل; "hat" (over a symbol) → القبعة.
+- "per-example losses" → خسائر الأمثلة المفردة; "per-example scale" → مقياس المثال الواحد; "optimization problem" → مسألة التحسين.
+- "bounding-box heads" → رؤوس صناديق الإحاطة; "object detectors" → كاشفات الكائنات; "clinical risk scoring" → تقدير درجات الخطر السريري; "demand forecasting" → التنبؤ بالطلب; "vectorized array operations" → عمليات المصفوفات المتجهية; "vectorizing" (slide) → الصياغة المتجهية; "workhorse optimizer" → المحسن الذي يقوم عليه ….
+- Slides: "augmented notation" → الصيغة الموسعة; "ones column" → عمود من الواحدات; "absorbing the bias" → استيعاب الانحياز; "convex quadratic bowl" → وعاء تربيعي محدب; "cross term" → الحد التقاطعي; "vanishes identically" → يساوي الصفر تطابقيًا; "uniqueness" → الوحدانية; "singular" (matrix) → منفردة; "collinearity" → التعدد الخطي; "minimum-norm solution" → الحل ذو المعيار الأصغر; "strictly positive definite" → موجبة التعريف تمامًا; "misfit" → سوء الملاءمة; "failure mode" → نمط إخفاق; "pitfall" → مزلق; "minibatch SGD" → خوارزمية SGD بالدفعات المصغرة; "Gaussian MLE" → تقدير MLE الغاوسي.
+- People: Legendre stays Latin (Adrien-Marie Legendre); Gauss in Arabic letters with his given names (كارل فريدريش غاوس); "Pythagorean decomposition" → التفكيك وفق مبرهنة Pythagoras (the name is in no glossary term, so Latin). The dwarf planet Ceres → سيريس.
+- Synonym lists in a definition ("the *label* (or *target*)") → *الوسم* (label)، ويسمى أيضًا *الهدف* (target), so that the English gloss and the synonym do not form two adjacent parentheses.
+- English glosses given in u01 of this page (do not repeat in later units): regression, method of least squares, linear regression, fully connected layer, minibatch stochastic gradient descent, training dataset, example, label, target, features, covariates, model class, weights, bias, offset, intercept, affine, design matrix, loss function, squared error, cost, objective, mean absolute error. Not glossed yet, because the opening only names them and later sections define them: normal equations, maximum-likelihood estimation, computational graph, residual, outlier, orthogonal projection.
+
+## chapter_linear-regression/linear-regression-concise.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "concise implementation" → التنفيذ الموجز; "from scratch" / "scratch" (loss, run, rate, implementation) → من الصفر (خسارتنا المكتوبة من الصفر، تنفيذنا من الصفر، جولة التدريب من الصفر).
+- "built-in" (layer, loss, optimizer of a framework) → مدمج في إطار العمل (المحسن المدمج); "out of the box" → جاهز للاستخدام; "hardware-tuned" → مضبوط للعتاد; "loss primitive" → دالة خسارة أولية.
+- "subclass" → صنف فرعي; "base class" → صنف أساسي; "inherit" → يرث; "delegate to" → يحيل إلى; "wrap" → يغلف; "contract" (of `d2l.Module`) → عقد; a `d2l.Module` as a common noun → Module in Latin (as on the oo-design page), "data module" → وحدة البيانات, "module tree" → شجرة الوحدات; "registered parameters" → المعلَمات المسجلة.
+- "lazy" (shape inference, layer, initializer) → مؤجل (استنتاجًا مؤجلًا، الطبقة المؤجلة، المهيئ المؤجل); "eager" (allocation, layer) → فوري; "dummy call" → استدعاء وهمي; "materialize" (shapes, weights of a lazy layer) → تحديد الأشكال، تنشأ الأوزان.
+- "noise floor" → أرضية الضوضاء (الأرضية); "levels off / plateaus at" → يستقر عند; "benchmark results" → النتائج المرجعية; "halve" → ينصّف، تنصيف; "double" → يتضاعف.
+- "ground-truth parameters" → معلَمات الحقيقة المرجعية; "generating parameters / weight" → معلَمات التوليد / وزن التوليد; "recovery" (of parameters) → استعادة المعلَمات; "training run" → جولة تدريب; "diverge" (training) → يتباعد; "single-output" → وحيد المخرج; "output width" → عرض المخرجات.
+- MSE: متوسط الخطأ التربيعي (mean squared error, MSE) at the first mention, then MSE where the English writes MSE (خسارة MSE، تدرج MSE); "standard mean squared error" → متوسط الخطأ التربيعي في صيغته المعيارية.
+- "minibatch SGD" → SGD بالدفعات المصغرة, with a class noun (محسن، خوارزمية); "adaptive optimizer" → محسن تكيفي; "data pipeline" → خط معالجة البيانات; "object-oriented design" → التصميم كائني التوجه.
+- Slides: "Replace A with B" → الاستغناء عن A بـ B (keeps the English token order); "Bare Functions" → دوال بسيطة; "OO Scratch" → كائني التوجه من الصفر; "pedagogical progression" → المسار التعليمي (not التدرج, the gradient).
+- English glosses given in u01 of this page: fully connected layer, mean squared error (MSE), dense layer.
+
+## chapter_linear-regression/oo-design.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "object-oriented" → كائني التوجه (التصميم كائني التوجه، تجريدات كائنية التوجه), glossed once; "abstraction" → تجريد (تجريدات); "contract" (of a class) → عقد; "separation of concerns" → فصل الاهتمامات; "coupling" → اقتران.
+- The classes `Module`, `DataModule`, `Trainer` take the class noun الصنف where a block would start with them; "the trainer" as a common noun → المدرِّب (kasra+shadda against مدرَّب "trained"); "module" as a common noun for a `Module` → Module in Latin (وحدة stays the Python module, e.g. الوحدة `inspect`).
+- "training harness" → أدوات التدريب (as on the chapter index); "one reusable harness" → مجموعة أدوات واحدة; "Utilities" (section) → الأدوات المساعدة, "utility", "helper" → أداة مساعدة / دالة مساعدة; "plumbing" → شيفرة توصيل.
+- "metric" → مقياس (مقاييس; قاموس مقاييس); "metric averager" → حاسبة متوسطات المقاييس; "log" (metrics) → يسجل; "live plots / curves" → رسوم حية / منحنيات حية.
+- "decorator" → مزخرف; "method" → دالة (من دوال الصنف); "constructor" → مُنشئ (مُنشئات); "attribute" → سمة; "argument" → وسيط; "base class" → الصنف الأساسي; "subclass" → صنف فرعي; "inherit" → يرث; "override" → يعيد تعريف; "instance" → مثيل, "instantiate" → ينشئ مثيلًا; "skeleton" (of a class) → هيكل الصنف; "bind an argument as an attribute on `self`" → يحوّل الوسيط إلى سمة في `self` (ربط stays concatenation); "caller's frame" → إطار المستدعي; "stack frame" → إطار المكدس; "hook" → خطاف (خطافات); "delegate to" → يحيل إلى; "wrap" → يغلف; "unpack" → يفك; "dictionary" → قاموس; "updater" → المحدِّث.
+- "pass" over a data loader → مرور (مرورات; اختبار المرورين); "iterable" → كائن قابل للتكرار; "iterate over" → المرور على; "iterator" → مكرِّر (with the mark); "shuffle / reshuffle" → يخلط / يعيد الخلط; "index permutation" → تبديل الفهارس, "random permutation" → تبديل عشوائي; "deterministic order" → ترتيب حتمي; "split" (training / validation) → قسم; "held-out validation loss" → خسارة التحقق على البيانات المحجوزة; "remainder" (the partial last minibatch) → الباقي; "exhausts" (a generator) → ينضب; "synthetic regression data" → بيانات الانحدار الاصطناعية; "literate code" → شيفرة بأسلوب البرمجة الأدبية; "device transfer" → النقل بين الأجهزة.
+- Bold list lead-ins and kickers that are a bare class name in English get the class noun الصنف / المزخرف in front (style §3.2); a comma between two code spans inside a lead-in becomes و.
+- English glosses given in u01 of this page (do not repeat in later units): object-oriented, method, decorator, constructors, hyperparameters, base class, tuple.
+
+## chapter_linear-regression/linear-regression-scratch.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "training pipeline" → خط التدريب; "minibatch iterator" → مكرِّر الدفعات المصغرة; Python "generator" → مولد (المولد `minibatches`), "yields" → يعطي, "exhausts" → ينضب (نضوب), "single-use" → أحادي الاستعمال / يُستعمل مرة واحدة.
+- "noise floor" → أرضية الضوضاء ("irreducible noise floor" → أرضية الضوضاء غير القابلة للاختزال; "the floor" → الأرضية; "statistical estimation floor" → أرضية التقدير الإحصائي); "stability ceiling" → سقف الاستقرار; "stability boundary" → حد الاستقرار.
+- "excess loss" → الخسارة الزائدة; "parameter error" → خطأ المعلَمات; "expected loss" → الخسارة المتوقعة; "initial loss" → الخسارة الابتدائية; "decay rate" → معدل التناقص, "exponential decay" → تناقص أسي; "contraction" (of the error per step) → الانكماش, "contracts" → ينكمش; "plateau", "flatten out" → يستوي، الاستواء.
+- "random permutation" → تبديل عشوائي; "reshuffling" → إعادة الخلط; "remainder batch" → دفعة البقية; "pass" over a generator → مرور.
+- "training run" → جولة تدريب (as in the introduction); "closed-form prediction" → تنبؤ الصيغة المغلقة; "measured" → المقيسة; "cross term" → حد تقاطعي; "sample covariance matrix" → مصفوفة التغاير العينية.
+- "true parameters" → المعلَمات الحقيقية; "known ground-truth parameters" → نعرف معلَمات حقيقتها المرجعية; "recovered parameters" → المعلَمات المستعادة, "parameter recovery" → استعادة المعلَمات.
+- "guard" (slides: implementation guard, broadcasting guard) → احتياط (احتياطات); "defensive reshape" → إعادة التشكيل الدفاعية; "updater" → دالة التحديث; "object-oriented" → كائني التوجه (التصميم كائني التوجه، أصناف كائنية التوجه); "least-squares solver" → خوارزمية حل المربعات الصغرى.
+- "Exercise :exref:`…`" → التمرين :exref:`…` (the word is written, as in the English); "crawls" (too small a learning rate) → يزحف, "divergence" (of training) → التباعد; "quadratic bowl" → وعاء تربيعي; "undiscounted momentum" → زخم بلا خصم; "minimum" (of a function) → القيمة الصغرى; "invariant" (kicker) → لامتغير.
+- "by a factor of $c$" → بالمعامل $c$ / بمعامل يقارب …; "$7\times$ per epoch" stays as the math span followed by في الحقبة / لكل حقبة.
+- English glosses given in u01 of this page (do not repeat in later units): forward pass, hyperparameters, broadcasting, mean squared error, epoch, irreducible noise floor, parameter error, excess loss.
+
+## chapter_linear-regression/synthetic-regression-data.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "noise floor" → أرضية الضوضاء; "loss floor" → أرضية الخسارة ("the floor" → الأرضية); "irreducible" → غير قابل للاختزال; a loss that "plateaus / levels off" → تستقر; "target plateau" → المستوى المستهدف الذي تستقر عنده.
+- "scatter plot" → مخطط تبعثر (مخططات التبعثر); "scatter" → التبعثر, "spread" → التشتت; "band" → شريط; "thick clouds" → سحب سميكة; not مخطط انتشار (الانتشار is diffusion).
+- "ground-truth model / parameters" → نموذج يمثل الحقيقة المرجعية / معلَمات الحقيقة المرجعية; "true parameters" → المعلَمات الحقيقية; "learned parameters" → المعلَمات المتعلَّمة; "data-generating" → المولد للبيانات، التي ولّدت البيانات; "data-generating process" → عملية توليد البيانات; "data generator" → مولد البيانات.
+- "design matrix" → مصفوفة التصميم; "augmented design matrix" → مصفوفة التصميم الموسعة; "standard normal" → يتبع التوزيع الطبيعي المعياري; "additive Gaussian noise" → ضوضاء غاوسية جمعية; "signal" → الإشارة; "realized noise" → الضوضاء المتحققة.
+- "least-squares fit" → ملاءمة المربعات الصغرى; "least-squares solution" → حل المربعات الصغرى; "solver" (least squares) → خوارزمية الحل (the glossary's حالّ is the ODE solver); "closed-form normal equations" → المعادلات الناظمية ذات الصيغة المغلقة; "gold-standard fit" → الملاءمة التي تمثل المرجع الذهبي.
+- "reference benchmark" → مرجع معياري للمقارنة; "benchmark quantity" → كمية مرجعية; "our synthetic benchmark" → اختبارنا المعياري الاصطناعي; "testbed" → منصة اختبار; "pass/fail" → النجاح أو الإخفاق; "tolerance" → هامش السماح; "oracle" (pass/fail) → مرجع.
+- "minibatch SGD" → خوارزمية SGD بالدفعات المصغرة; "iterative optimization / optimizer" → التحسين التكراري / محسن تكراري; "converged" → متقارب; "training run" → جولة تدريب; "a single run" (of an estimator) → تشغيل واحد.
+- "statistical estimation error" → خطأ تقدير إحصائي; "numerical error" → خطأ عددي; "machine precision" → دقة الآلة; "Cramér–Rao bound" → حد Cramér–Rao (Latin name, no glossary term); "predictor" → متنبئ; "a limit of the data" → قيد تفرضه البيانات.
+- "misspecified" (model) → خاطئ التحديد (تحديد النموذج خاطئ); "a model that does not fit" → نموذج لا يلائم البيانات; "unmodeled term" → الحد غير المنمذج; "corrupted labels" → وسوم تالفة.
+- "correlated features" → ميزات مترابطة; "collinearity" → التعدد الخطي (بين الميزات); "isotropic features" → الميزات المتناحية; "decoupling" → فك الاقتران; "concentrate around" → تتركز حول; "cross-products" → الجداءات المتقاطعة; "out-of-sample" → خارج العينة; "SNR" stays Latin (نسبة SNR).
+- The theory's "prediction" (a formula's value, $\sigma/\sqrt{n}$) → التنبؤ; what the reader is asked to predict → توقع، التوقع (as on earlier pages).
+- "part (a)" of an exercise → الجزء (a); slide enumerators (a)/(b) → في الحالة (a) / (b); slide series "Recovery I/II/III" → الاستعادة I / II / III.
+- English glosses given on this page: noise floor, synthetic data, scatter plot, statistical estimation error.
+
+## chapter_linear-regression/generalization.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "fit" (a model, a curve; noun and verb) → يلائم، الملاءمة (ملاءمة المنحنيات بكثيرات الحدود; "the fitted model" → النموذج الملائم; "refit" → إعادة الملاءمة), from the glossary's فرط الملاءمة; "well matched / balanced fit" → ملاءمة مناسبة / متوازنة.
+- "polynomial" → كثير الحدود (كثيرات الحدود), "degree-$k$ polynomial" → كثير حدود من الدرجة $k$; "degree" → درجة; "cubic" → كثير حدود تكعيبي / المنحنى التكعيبي; "monomial" → أحادي الحد (أحاديات الحد); "polynomial features" → ميزات كثير الحدود; "parabola" → قطع مكافئ.
+- "$K$-fold cross-validation" → التحقق المتقاطع بـ $K$ طية (invariant in case); "fold" → طية (طيات); "held-out fold" → الطية المحجوزة; "leave-one-out" → ترك مثال واحد (التحقق المتقاطع بترك مثال واحد).
+- "true risk" → الخطر الحقيقي; "predictor" → متنبئ; "model class" → فئة النماذج (as on the linear-regression page; عائلة stays "family"); "parametric models" → النماذج المعلَمية.
+- "noise floor" → أرضية الضوضاء; "irreducible" → غير قابل للاختزال; "interpolate" → يستوفي، الاستيفاء; "monotonic(ally)" → رتيب (تناقصًا رتيبًا); "U-shaped curve" → منحنى على شكل U; "sweet spot" → النقطة المثلى; "trade-off" → مقايضة; "failure mode" → نمط إخفاق.
+- "the contrast" (between results) → الفارق, never التباين, which is variance on this page.
+- "MSE" where the English writes the acronym → خطأ MSE (خطأ MSE على الاختبار); the full term متوسط الخطأ التربيعي where the English spells it out.
+- "Vandermonde" stays Latin (مصفوفة تصميم Vandermonde); "nearly singular" → شبه منفردة; "nearly collinear" → شبه متسامتتين; "split" (train/validation/test) → قسم; "three-way split" → التقسيم الثلاثي; "sample complexity" → تعقيد العينة; "pessimistic / optimistic bias" → انحياز متشائم / متفائل; "learner" → خوارزمية تعلم.
+- "(Exercise :exref:`…`)" → (التمرين :exref:`…`).
+- English glosses given in u01 of this page (do not repeat in later units): training set, generalization, underfitting, overfitting, bias-variance decomposition, validation sets, K-fold cross-validation, independent and identically distributed (i.i.d.), training error, empirical risk, generalization error, true risk, population risk, empirical risk minimization, test set, generalization gap, polynomial features, mean squared error.
+
+## chapter_linear-regression/linear-regression-scratch.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "primitives" (of a training loop) → عناصر أولية; "overshoot" (the quadratic bowl) → يتخطى; "silent shape mismatch" → عدم تطابق صامت في الأشكال; "bug-free" → خلو الشيفرة من الأخطاء.
+- "full-batch gradient descent" → النزول التدرجي بالدفعة الكاملة; "grid" (of learning rates to try) → شبكة قيم; "component of the parameter error along $\tilde{\mathbf{x}}$" → مركبة خطأ المعلَمات على امتداد ….
+- "robust losses" → الخسائر المتينة (glossary متانة); "Huber loss" → خسارة هوبر; "corruption" (of a label) → الإفساد, "corrupted data" → البيانات التالفة; "generating bias" → انحياز التوليد; "penalty curves" → منحنيات العقوبة; "against the iteration" → مقابل رقم التكرار.
+- "Replace A with B" in exercises → ضع مكان A B (keeps the English token order and avoids the reversed استبدل بـ); "second derivatives" → المشتقات الثانية; "first-order reverse-mode differentiation" → الاشتقاق بالنمط العكسي من المرتبة الأولى; "outer `tf.GradientTape`" → شريط خارجي من الصنف `tf.GradientTape`.
+- Exercise title "Why reshuffle." → لماذا نعيد الخلط. (full stop inside the bold, as the English; no ؟).
+
+## chapter_linear-regression/generalization.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "leave-one-out" as a noun for the estimate → ترك مثال واحد (تقدير ترك مثال واحد، بواقي ترك مثال واحد); "repeated cross-validation" → التحقق المتقاطع المكرر; "5-fold cross-validation" → التحقق المتقاطع بـ 5 طيات ("both 5-fold estimates" → التقديران بـ 5 طيات); "CV" on slides → التحقق المتقاطع (no Latin acronym).
+- "disjoint" (splits, subsets) → منفصلة; "round" (of cross-validation) → جولة; "coarse split" → تقسيم أخشن; "unstable learner" → خوارزمية تعلم غير مستقرة; "decision tree" → شجرة القرار; "folklore" → الاعتقاد الشائع; "held in a vault" → تُحفظ في خزنة; "hierarchy" (of features) → تراتب.
+- "the $K$ held-out losses", "all $n$ residuals" → the noun, then وعددها $K$ / $n$ (no الـ before a symbol).
+- "genuine gap" → فجوة فعلية (حقيقي stays "true/real"); slide "Model A / Model B" → النموذج A / النموذج B; table "train / val errors" → خطأ التدريب / خطأ التحقق; "Summary & Key Takeaways" → الملخص وأهم الخلاصات.
+- English glosses given in u02 of this page (do not repeat in later units): hyperparameters, model selection, folds, leave-one-out cross-validation.
+
+## chapter_linear-regression/weight-decay.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "benchmarks" for a loss (reference values to compare against) → قيمتان مرجعيتان (slide: القيم المرجعية); "oracle parameters" → المعلَمات المرجعية (oracle → مرجع, as on the chapter page); "trivial constant model / predictor" → نموذج ثابت بديهي / المتنبئ الثابت; "baseline" → خط الأساس.
+- "subclass" (verb) → يشتق صنفًا فرعيًا من; "object-oriented" → كائني التوجه (as on the oo-design references); "fitted model" → النموذج الملائَم; "report" (a loss) → الإبلاغ عن.
+- "training run", "the unpenalized run" → جولة التدريب (غير المعاقَبة); "sweet spot" (stopping) → نقطة مثلى; "bottom out" → تبلغ قاعها; "textbook display of" → مثال نموذجي على.
+- "singular" (matrix) → منفردة (شاذة stays "anomalous"); "invertible" → قابلة للعكس; "strictly positive definite" → موجبة التعريف تمامًا; "positive semidefinite" (feminine) → موجبة شبه معرفة; "orthonormal" → متعامد معياري; "eigendirection" → اتجاه ذاتي; "eigenbasis" → الأساس الذاتي; "matrix form" → الصيغة المصفوفية; "centered" → ممركزة.
+- "sample second-moment (covariance) matrix" → مصفوفة العزم الثاني (التغاير) العيّنية; "empirical variance (spread)" → التباين التجريبي (التشتت).
+- "shrinkage factor" → عامل التقليص; "well-determined / poorly determined directions" → الاتجاهات جيدة التحديد / ضعيفة التحديد; "noisy" (direction, component) → مشوب بالضوضاء; "damp", "damping" → يخمد، الإخماد; "effective number of parameters" → العدد الفعال للمعلَمات.
+- "filtering", "filter" in the spectral sense (directional filtering, spectral filter) → ترشيح، مرشح (glossary مرشح); التصفية stays for filtering data with a mask. "blind scaling" → تحجيم أعمى.
+- "orthogonal invariance" → الثبات تحت التحويلات المتعامدة; "project onto" → إسقاط على; "breakdown" (of the error) → تفصيل; "spectral lens / picture" → العدسة الطيفية / الصورة الطيفية; "gap" (to the least-squares solution) → فجوة; "half-power threshold" → عتبة نصف القدرة; "null-space annihilation" → إفناء الفضاء الصفري.
+- "exercise :exref:`…`" in running text → التمرين :exref:`…`.
+- English glosses given in u02 of this page (do not repeat in later units): early stopping, normal equations, eigendecomposition, shrinkage factor, effective number of parameters.
+
+## chapter_linear-regression/oo-design.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- `self.history` / "the History" as a common noun → السجل (حلقة التدريب والسجل); "progress board" → لوحة التقدم (اللوحة `ProgressBoard`); "setup hooks" → خطافات الإعداد; "forward-looking hooks … dormant" → خطافات تستشرف الفصول اللاحقة وتبقى خاملة.
+- "learning-rate scheduler" → مجدول معدل التعلم (مجدولات), beside the glossary's جدول معدل التعلم for "schedule"; "gradient transformation" (Optax) → تحويل التدرج; "views of the model" → عرضان للنموذج; "mode" (training / evaluation) → نمط.
+- "epoch means" → متوسطات الحقب; "unweighted average" → المتوسط غير الموزون; "size-weighted" → موزون بالحجم; "the same vote" → الصوت نفسه; "running sum" → المجموع التراكمي; "partial (last) minibatch" → دفعة مصغرة (أخيرة) جزئية; "discard" (a partial minibatch) → يهمل، الإهمال; "skew" (means) → يحرف.
+- "sweep" (hyperparameter sweep, silent sweeps) → عمليات مسح (مسح المعلَمات الفائقة); "headless mode" → النمط بلا عرض; "fit_epoch sweeps through the loader" → تمر على (not اجتياز, the autograd sweep).
+- "asynchronous backend" → الواجهة الخلفية غير المتزامنة; "bounded asynchrony" → لاتزامن محدود; "overhead" → عبء إضافي; "eagerly" → فوريًا; "fused graph / computation" → مخطط مدمج / حساب مدمج; "compiled step" → خطوة مصرَّفة; "to decorate" → يزخرف (زخرفة الدالة بالمزخرف).
+- "memorize" (label noise) → يحفظ، الحفظ; "plunge / drop to the noise floor" → تهبط إلى أرضية الضوضاء; "to within about a thousandth" → بفارق لا يتجاوز نحو جزء من ألف; "plateaus" (validation loss) → تستقر.
+- Planck stays Latin (قانون Planck، ثابت Planck: the name is in no glossary term); Boltzmann in Arabic letters (ثابت بولتزمان, style §7); "black body" → جسم أسود; "spectral radiance" → الإشعاعية الطيفية; "wavelength" → طول موجي; "of order one" → من مرتبة الواحد.
+- "on-the-fly generation" → التوليد عند الطلب; "data-generating process" → عملية توليد البيانات; "stream of minibatches" → سيل من الدفعات المصغرة; "vision / sequence datasets" → مجموعات البيانات البصرية / التسلسلية.
+- Slide title "Summary & Key Takeaways" → الملخص وأهم الخلاصات; table cells that are a bare class name in bold (`d2l.Module`) are copied without a class noun.
+- English glosses on this page: none added in u02 (gradient clipping, dropout, batch normalization, early stopping and learning-rate schedule are used only in passing, in tab notes, exercises or slides).
+
+## chapter_linear-regression/linear-regression.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- Section headings: "Minimizing the Loss" → تصغير الخسارة; "The Normal Equations" → المعادلات الناظمية; "Least Squares as Projection" → المربعات الصغرى بوصفها إسقاطًا ("X as Y" in headings → X بوصفه Y); "Vectorization for Speed" → الصياغة المتجهية من أجل السرعة.
+- "normal" (perpendicular, the sense behind "normal equations") → ناظم (ناظمًا، الناظمية), with (normal) once where the text explains the name; "perpendicular" and "orthogonal" both → متعامد مع.
+- "full-batch gradient descent", "full-batch GD" → النزول التدرجي بالدفعة الكاملة (no Latin "GD"); "full-batch gradient" → تدرج الدفعة الكاملة; "minibatch SGD" in prose → خوارزمية SGD بالدفعات المصغرة.
+- "statistical redundancy", "dataset redundancy" → الفائض الإحصائي، فائض مجموعة البيانات (not تكرار, which is repetition/iteration); "redundant features" → ميزات مكررة.
+- "computational scaling" (how cost grows) → تزايد الكلفة الحسابية; "cubic parameter scaling" → تزايد تكعيبي مع عدد المعلَمات; "learning-rate scaling", "scale the learning rate" → تحجيم معدل التعلم.
+- "invertible" → قابلة للعكس; "matrix inversion" → عكس المصفوفات; "completing the square" → إكمال المربع; "linearly independent / dependent" → مستقلة خطيًا / مرتبطة خطيًا; "full column rank" → رتبة أعمدة كاملة; "unique global minimizer" → نقطة التصغير الشاملة الوحيدة.
+- "dedicated least-squares solvers" → الدوال المتخصصة في حل مسائل المربعات الصغرى (slides: دوال الحل المتخصصة); "QR or SVD factorizations" → تحليل QR أو SVD; "numerically stable" → مستقر عدديًا; "up to `float32` precision" → في حدود دقة `float32`; lower-case "flops" → عملية FLOP.
+- "sweep out a subspace" → يرسم فضاءً جزئيًا; "flat subspace" → فضاء جزئي مستو; "$d$-dimensional subspace" → فضاء جزئي بُعده $d$; "observation space" → فضاء المشاهدات.
+- "sampled uniformly" → تُسحب بانتظام (أخذ العينات المنتظم); "signed prediction error" → خطأ التنبؤ ذو الإشارة; "overpredicts" → يتنبأ بقيمة أكبر من اللازم; "update rule" → قاعدة التحديث; "held-out validation data" → بيانات تحقق محجوزة.
+- "overshoot" → يتجاوز القيمة الصغرى; "fluctuate perpetually" → يتذبذب بلا انقطاع; "neighborhood" → جوار; "terminal noise ball" → كرة الضوضاء النهائية; "halving / quartering / quadrupling" → تنصيف / تخفيض إلى الربع / مضاعفة أربع مرات; "decaying $\eta \to 0$" → تخفيض $\eta \to 0$ تدريجيًا; "steady-state" → في الحالة المستقرة; "jitter" → اهتزاز; "population parameters" → معلَمات المجتمع الإحصائي.
+- "vectorize" → يصوغ صياغة متجهية, "vectorization" → الصياغة المتجهية, "vectorized call" → استدعاء متجهي; "dispatch" (operations to a library or device) → يرسل, "dispatch overhead" → عبء الإرسال; "interpreter overhead" → عبء المفسر; "warm-up call" → استدعاء إحماء; "asynchronously" → بصورة غير متزامنة; "GPU cores" → أنوية GPU; "GPU streams" → مجاري GPU; "timing helper" → دالة التوقيت المساعدة; "routine" → دالة.
+- "homoscedastic" → متجانس التباين; "additive noise" → ضوضاء جمعية; "light / heavy tails" → ذيول خفيفة / ثقيلة; "robust" (loss) → متين; "smooth" → أملس; "splice A onto B" → يصل A بـ B; "rate" (Poisson) → المعدل; "NLL" stays Latin after سالب لوغاريتم الإمكان (خسارة NLL).
+- Laplace → لابلاس in Arabic letters (ضوضاء لابلاس، توزيع لابلاس), as the name is in the glossary's لابلاسي; Poisson → بواسون; Huber → هوبر (glossary خسارة هوبر); Pythagorean theorem → مبرهنة Pythagoras.
+- "synaptic weights" → الأوزان المشبكية; "input node / output node" → عقدة مدخل / عقدة المخرج; "tunable parameters" → معلَمات قابلة للضبط; "layer depth" → عمق الطبقات; "the MLP chapter" → فصل MLP.
+- Slide lead-ins "Why never …:", "Why stack layers later:" → سبب …: (noun phrase); slide table header "Role & Practical Takeaway" → الدور والخلاصة العملية; "Summary & Key Takeaways" → الملخص وأهم الخلاصات; figure colour words "(black)", "(color)" → (بالأسود)، (بالألوان).
+- English glosses given in u02 of this page (do not repeat in later units): normal equations, column space, span, orthogonal projection, normal, gradient descent, minibatch SGD, minibatch, learning rate, unbiased estimator, model parameters, hyperparameters, noise ball, vectorize.
+
+## chapter_linear-regression/generalization.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "IID" (as the English writes it in exercises) → i.i.d., as glossed in u01 (افتراض i.i.d.); "dependent observations" → المشاهدات غير المستقلة; "train/validation split" → التقسيم إلى تدريب وتحقق.
+- "rigid models" → النماذج الصلبة (as in u01); "overly flexible" → المفرطة المرونة; "memorization" → الحفظ; "repeated queries contaminate the test set" → الاستعلامات المتكررة تلوث مجموعة الاختبار.
+- "exact" (fit, arithmetic, regression) → مضبوط (الحساب المضبوط، ملاءمة مضبوطة); "distinct" (inputs) → متمايزة; "basis" → أساس; "nearly parallel" (columns) → تكاد تكون متوازية; "span the same functions" → تولد الدوال نفسها; "full column rank" → رتبة أعمدة كاملة; "invertible" → قابلة للعكس.
+- Chebyshev and Sherman--Morrison stay in Latin (كثيرات حدود Chebyshev، أساس Chebyshev، متطابقة Sherman--Morrison); "optimism" (of the training error) → تفاؤل; "Hint:" → تلميح:; "fresh labels" → وسوم جديدة.
+- "Consider least squares with …" in an exercise → لنأخذ المربعات الصغرى مع …; "Let $x$ be …" → ليكن / لتكن.
+
+## chapter_linear-regression/weight-decay.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "parameter groups" (of an optimizer) → مجموعات المعلَمات; "gradient transformation" (Optax) → تحويل التدرج; "predicate" → شرط; "exempt from decay" → يعفي من الاضمحلال; "contraction factor" → عامل الانكماش.
+- "reproducing kernel Hilbert spaces (RKHS)" → فضاءات Hilbert ذات النواة المولِّدة (reproducing kernel Hilbert spaces, RKHS); Hilbert stays Latin (the name is in no glossary term). "frameworks" in the sense of theoretical frameworks → أطر (without عمل).
+- "regularizer" → منظِّم (المنظِّمات), with the marks, as on the Basics page; "norm-based story" → تفسيرنا القائم على المعيار; "scale poorly to" → لا تتوسع جيدًا إلى.
+- "proximal step" → الخطوة القريبة (from the glossary's مؤثر قريب); "soft-thresholding" → العتبة الناعمة (glossary); "coordinate-wise" → إحداثيًا بإحداثي; "augmented least squares" → مربعات صغرى موسعة; "ordinary least squares" → المربعات الصغرى العادية; "to center" (imperative) → اجعل … ممركزة.
+- "sweep" (over values of a hyperparameter) → مسح (مسح قيم $\lambda$); "undetermined directions" → الاتجاهات غير المحددة.
+- "decoupled weight decay" → اضمحلال الأوزان المنفصل (plural الأوزان, to match the page's اضمحلال الأوزان; the glossary proposes اضمحلال وزن منفصل); "decoupled / coupled update" → التحديث المنفصل / التحديث المقترن; "to precondition" (a gradient) → يطبق اشتراطًا مسبقًا (glossary اشتراط مسبق); "under-decay" → يضعف اضمحلال.
+- "Lipschitz slope" → ميل ليبشيتز; "noise-to-signal ratio" → نسبة الضوضاء إلى الإشارة; "oracle floor" → الأرضية المرجعية; "optimizer-level" → على مستوى المحسن.
+- Exercise credit line for a book: *مقتبس بتصرف من كتاب [Title](url) لمؤلفه Author، المسألة N.* (لمؤلفيه with several authors joined by و; "Exercise N" → التمرين N).
+- English glosses given in u03 of this page: hyperparameter, reproducing kernel Hilbert spaces (RKHS).
+
+## chapter_linear-regression/linear-regression.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- Section headings: "Squared Loss and Gaussian Noise" → الخسارة التربيعية والضوضاء الغاوسية; "The Normal Distribution" → التوزيع الطبيعي; "Maximum Likelihood" → الإمكان الأعظم; "Choosing a Loss from a Noise Model" → اختيار الخسارة من نموذج الضوضاء; "Linear Regression as a Neural Network" → الانحدار الخطي بوصفه شبكة عصبية.
+- "normally distributed" → يتبع التوزيع الطبيعي; "bell-shaped curve" → منحنى على شكل جرس; "well-behaved noise" → ضوضاء حسنة السلوك; "natural default model" → النموذج الافتراضي البديهي (not الطبيعي, which is "normal" here); "observed label" → وسم مرصود; "conditional mean / median" → المتوسط الشرطي / الوسيط الشرطي.
+- "conditional probability density" → كثافة الاحتمال الشرطي (keeps both glossary terms كثافة الاحتمال and احتمال شرطي); "the likelihood factors into the product" → يتحلل الإمكان إلى الجداء.
+- "statistic" (a function of the data: mean, median) → إحصاءة (إحصاءات); "$q$-quantile" → التجزيء $q$ (glossary تجزيء); "pinball loss" → خسارة الكرة والدبابيس (pinball loss), a description rather than a transliteration; "forecasters" → خبراء التنبؤ (المتنبئ stays "predictor"); "tilt" (a loss) → يميل.
+- "expected squared / absolute error" → الخطأ التربيعي المتوقع / الخطأ المطلق المتوقع; "absolute error ($\ell_1$) loss" → خسارة الخطأ المطلق ($\ell_1$); "finite variance" → تباين منته.
+- Table cells: "real-valued" → قيم حقيقية; "positive" → قيم موجبة; "multiplicative fluctuations" → تقلبات ضربية; "counts" → أعداد, "count data" → بيانات العد; "arrivals" → حالات الوصول; "Statistic predicted" → الإحصاءة المتنبأ بها; noise-model cells غاوسي، لابلاس، بواسون.
+- "wild outliers" → قيم شاذة جامحة; "sharp corner" → ركن حاد; "smooth optima" → قيم مثلى ملساء; "inset" (of a figure) → الرسم المدرج; "(right)" / "(left)" in captions → (يمينًا) / (يسارًا).
+- "input layer / output layer" → طبقة الإدخال / طبقة الإخراج (style §10.1); "computing unit" → وحدة حسابية; "artificial neuron" → عصبون اصطناعي; "cortex" → القشرة الدماغية; "synapses" → المشابك; "dendrites" → التغصنات; "integrate" (signals) → يدمج (not يجمع: التجميع is pooling); "count layers" → يحصي الطبقات (نعد would read as "prepare"); McCulloch and Pitts stay Latin.
+- English glosses given in u03 of this page (do not repeat in later units): maximum likelihood, negative log-likelihood, maximum-likelihood estimator, homoscedastic, quantile, pinball loss, Huber loss, input layer, output layer, dense layer. Normal distribution, median and absolute error take no gloss (school statistics; mean absolute error was glossed in u01).
+
+## chapter_linear-regression/linear-regression.md#u04 (claude fable-5.2 (medium), 2026-11-27)
+
+- "parameterization" (a way of writing a quantity in terms of the parameters) → تمثيل معلَمي (التمثيلان المعلَميان), parallel to النماذج المعلَمية.
+- "characterize the set of …" (exercises) → أعط وصفًا لمجموعة …; "minimizer of smallest norm" → نقطة التصغير ذات المعيار الأصغر; "rectangular diagonal" (matrix) → قطرية مستطيلة; "nonzero entries" → العناصر غير الصفرية.
+- "Black--Scholes model of option pricing" → نموذج Black--Scholes لتسعير الخيارات (names in Latin; no glossary term); "Moore--Penrose pseudoinverse" → المعكوس الزائف بمعنى Moore--Penrose, with the hyphens as the English page writes them.
+- "scale" (of the Laplace distribution) → مقياس; "on the log scale" → على المقياس اللوغاريتمي; "substitute" (for a missing derivative) → بديل; "fix" (for a non-converging iteration) → علاج; "iterates" → نواتج التكرار (as on the linear-algebra page).
+- "assigns probability to" → الاحتمال الذي يسنده النموذج إلى …; "grocery store" → متجر بقالة; "observed count" → العدد المرصود.
+- English glosses on this page in u04: none (summary uses terms already glossed; exercises take no gloss, so subgradient and pseudoinverse stay unglossed).
+
+## chapter_linear-regression (chapter check, claude fable-5.2 (medium), 2026-11-27)
+
+One rendering per term across the eight pages of the chapter; the unit entries above were corrected to match.
+
+- "polynomial" → كثير الحدود (كثير حدود، كثيرات الحدود), masculine; "$K$-fold cross-validation" → التحقق المتقاطع بـ $K$ طية.
+- "model class" → فئة النماذج (parallel to the glossary's فئة الفرضيات); صنف stays the Python class, عائلة the "family".
+- "collinear" (features, directions) → متسامت; "collinearity" (the statistical phenomenon) → التعدد الخطي. Not التداخل الخطي.
+- "singular" (matrix) → منفردة, "nearly singular" → شبه منفردة: the chapter keeps شاذة for outliers (قيمة شاذة), which share pages with singular matrices. The glossary proposes مصفوفة شاذة.
+- "full column rank" → رتبة أعمدة كاملة; "the minimum" (of a function) → القيمة الصغرى (glossary قيمة صغرى محلية / شاملة).
+- "random permutation" → تبديل عشوائي; a generator that "exhausts" → ينضب (نضوب); "iterator" → مكرِّر, always with the mark (مكرر reads "repeated").
+- "corrupted" (labels, points, measurements, data) → تالف; "oracle" (known ground truth to check against) → مرجع.
+- "least-squares solver" → خوارزمية حل المربعات الصغرى in prose, دوال الحل المتخصصة for the library routines (`lstsq`); حالّ stays the ODE solver.
+- Kept apart on purpose: "baseline model" → نموذج مرجعي and a "baseline" value or level → خط الأساس; the weight "decay" → اضمحلال and the "decay" of an error or loss → تناقص; the function `sgd` → دالة التحديث and the class `SGD` → المحدِّث; "decoupling" of weight decay → فصل and of features → فك الاقتران.
