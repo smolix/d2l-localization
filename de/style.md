@@ -578,3 +578,93 @@ in the section named.
 21. **Reinforcement Learning:** Retain the English term, including in Deep
     Reinforcement Learning and Offline Reinforcement Learning (§8.2).
 22. **Proximal policy optimization:** Use Proximal Policy Optimierung (§8.2).
+
+## 11. Conventions from the translated chapters
+
+Rules from the decisions log of the translated chapters. They add to the
+sections above; where they differ, the sections above win. Single terms are in
+the glossary and the lexicon (de/decisions.md).
+
+### 11.1 Headings and recurring titles
+
+- **Part and chapter titles are fixed** and repeated identically wherever a
+  later page names them: "Basics" → Grundlagen, "Preliminaries" →
+  Handwerkszeug, "Advanced" → Fortgeschrittene Themen, "Attic" → Archiv.
+
+### 11.2 Names, titles of works and interface labels
+
+- **Method, architecture and hardware names that are established in English
+  stay English proper names**, spelling and hyphenation unchanged, capitalised
+  as in the source: Maximal Update Parametrization, Mirror Descent, Rectified
+  Flow, Tensor Cores, Grokking, BlurPool. Descriptive technical compounds are
+  translated instead (§3.1).
+- **A named schedule or method with parts:** keep the name and its
+  abbreviation, and name the parts at introduction: Warmup–Stable–Decay (WSD)
+  with its three phases.
+- **Titles of linked books, papers and course material stay in the original
+  language**; only descriptive link text around them is translated. A popular
+  work with a published German title takes that title, and its characters
+  their German names: "Where's Waldo" → „Wo ist Walter?“, then Walter.
+- **Commands, views and menu entries of an English tool interface keep their
+  English names.** Git words are loan nouns with article: der Fork, der Branch,
+  der Commit, der Pull-Request, das Repository.
+- **Person names in multi-name compounds are hyphenated throughout; an en dash
+  between names becomes a hyphen:** "Newton–Schulz iteration" →
+  Newton-Schulz-Iteration; Kneser-Ney-Glättung, Polyak-Mittelung.
+- **Eponymous theorems and inequalities:** name + hyphen + noun, never an
+  apostrophe genitive: "Gibbs' inequality" → Gibbs-Ungleichung. The lower-case
+  adjective only where it is the established German term (§6): "Jordan normal
+  form" → jordansche Normalform.
+- **A translated named result keeps its English name as gloss at first
+  mention** (§3.6): "law of the unconscious statistician" → Transformationssatz
+  für Erwartungswerte (engl. law of the unconscious statistician).
+
+### 11.3 Loans, acronyms and compounds
+
+- **Every loan noun not in §3.3 gets a fixed gender, recorded in the lexicon**,
+  and is used with it throughout: der Hook, das Backup, der Profiler, der
+  Allreduce (die Allreduces), der Rollout, das Sink-Token.
+- **English acronyms stay unchanged inside German compounds, with a hyphen**
+  (§3.4): KL-Divergenz, KV-Kopf, Top-5-Fehler, Q-Netz, Log-RMSE. A model name
+  stays whole: Deep Q-Network.
+- **Abbreviations stay English-based.** At first use they follow the German term
+  in parentheses; afterwards write what the English writes: "Jacobian-vector
+  product (JVP)" → Jacobi-Vektor-Produkt (JVP); "bits per byte (bpb)" → Bit pro
+  Byte (bpb); "model FLOPs utilization (MFU)" → Auslastung durch Modell-FLOPs
+  (MFU).
+- **Long "X of Y" or adjective-stacked English noun phrases become a phrase,
+  not a coined compound** (§1, at most three parts): "operator-splitting
+  methods" → Verfahren zur Operatorzerlegung; "randomized range finder" →
+  randomisierte Bestimmung des Bildraums.
+- **English operation verbs become a descriptive German verb phrase**, not a
+  coined verb (§3.5): "detach" → vom Berechnungsgraphen abtrennen; "pull an
+  arm" → an einem Arm ziehen; "sampling without replacement" → Ziehen ohne
+  Zurücklegen.
+
+### 11.4 Word choice and glosses
+
+- **One German rendering per sense.** Where one English word has several senses,
+  choose by context and keep each sense's rendering; a context rule in the
+  lexicon wins over the general glossary entry: "rollout" (sequence model) →
+  rekursive Vorhersage, (recorded RL data) → Trajektorie, (generated with the
+  policy) → der Rollout; "linear system" of ODEs → lineares System (✗ lineares
+  Gleichungssystem).
+- **Render by role, not image:** "floor"/"ceiling" as benchmark values →
+  Referenzwert, Untergrenze / obere Schranke; ✗ Boden, Decke.
+- **A gloss in the lexicon is given at first use** where the reader cannot guess
+  the term: "noise ball" → Kugel um das Minimum.
+
+### 11.5 Consistency
+
+- **Sibling terms follow the pattern of the first:** after „um null zentrierter
+  Gradientenstrafterm“, "one-centered penalty" → um eins zentrierter
+  Strafterm; "upper/lower confidence bound" → obere/untere Konfidenzschranke;
+  strong/weak scaling → starke/schwache Skalierung.
+- **Pairs and series with a shared head are translated in parallel:**
+  Vorwärts-Hook / Rückwärts-Hook, Aufwärtsprojektion / Abwärtsprojektion,
+  Unigramm / Bigramm / Trigramm. Factor out a shared part (harte / weiche
+  Zuordnung) only where the English does.
+- **Long form first, then a short form for later use:** „Skala des
+  Gradientenrauschens“, then „Rauschskala“; „vollständig verbundener
+  Klassifikationskopf“, then „vollständig verbundener Kopf“. Tables and slides
+  use the short form.
