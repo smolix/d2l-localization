@@ -5,7 +5,7 @@
 Mit dynamischer Programmierung (:numref:`sec_valueiter`) haben wir das Problem des rutschigen Sees gelöst. Dazu haben wir eine Tabelle mit sechzehn Zustandswerten so oft durchlaufen, bis die Bellman-Optimalitätsgleichung für jedes Feld galt. Alle seither betrachteten Verfahren, vom Q-Learning bis zum Verhaltensklonen, verwenden eine Tabellenzeile pro Zustand. Was geschieht, wenn der Zustand wie beim Fahrzeug aus :numref:`sec_mdp` ein kontinuierlicher Vektor $\mathbf{x}_t \in \mathbb{R}^d$ aus Positionen, Winkeln und Geschwindigkeiten ist? Und wenn die Aktion eine kontinuierliche Stellgröße $\mathbf{u}_t \in \mathbb{R}^m$ ist, die über die bekannte Dynamik $\mathbf{x}_{t+1} = f(\mathbf{x}_t, \mathbf{u}_t)$ wirkt? Ein Gitter stößt hier schnell an seine Grenzen. Teilen wir jede der $d$ Koordinaten in $100$ Intervalle, erhalten wir $100^d$ Gitterzellen. Das ist Bellmans *Fluch der Dimensionalität* (engl. curse of dimensionality) :cite:`BellmanDPBook`.
 
 <!--en:2d9364b2-->
-Die Regelungstheorie löste dieses Problem für kontinuierliche Zustands- und Aktionsräume lange vor dem tiefen bestärkenden Lernen. Ausgangspunkt war eine algebraische Beobachtung von :citet:`Kalman.1960`. Ist die Übergangsdynamik linear in Zustand und Stellgröße und sind die Kosten eines Schritts in beiden quadratisch, so bleibt die quadratische Form der Wertfunktion bei jedem Rückwärtsschritt der dynamischen Programmierung nach Bellman erhalten. Statt einer Tabelle mit $100^d$ Einträgen brauchen wir für die exakte Wertfunktion $V_t(\mathbf{x}) = \mathbf{x}^\top \mathbf{P}_t \mathbf{x}$ nur eine symmetrische $d \times d$-Matrix $\mathbf{P}_t$ mit $d(d+1)/2$ unabhängigen Einträgen. Das Bellman-Backup vereinfacht sich zur *Riccati-Rekursion*. Die optimale Strategie (engl. optimal policy) hat die Form einer linearen Zustandsrückführung $\mathbf{u}_t^* = -\mathbf{K}_t \mathbf{x}_t$. Dies ist der *linear-quadratische Regler* (engl. linear-quadratic regulator, LQR) :cite:`Kalman.1960,Anderson.Moore.2007`.
+Die Regelungstheorie löste dieses Problem für kontinuierliche Zustands- und Aktionsräume lange vor dem Deep Reinforcement Learning. Ausgangspunkt war eine algebraische Beobachtung von :citet:`Kalman.1960`. Ist die Übergangsdynamik linear in Zustand und Stellgröße und sind die Kosten eines Schritts in beiden quadratisch, so bleibt die quadratische Form der Wertfunktion bei jedem Rückwärtsschritt der dynamischen Programmierung nach Bellman erhalten. Statt einer Tabelle mit $100^d$ Einträgen brauchen wir für die exakte Wertfunktion $V_t(\mathbf{x}) = \mathbf{x}^\top \mathbf{P}_t \mathbf{x}$ nur eine symmetrische $d \times d$-Matrix $\mathbf{P}_t$ mit $d(d+1)/2$ unabhängigen Einträgen. Das Bellman-Backup vereinfacht sich zur *Riccati-Rekursion*. Die optimale Strategie (engl. optimal policy) hat die Form einer linearen Zustandsrückführung $\mathbf{u}_t^* = -\mathbf{K}_t \mathbf{x}_t$. Dies ist der *linear-quadratische Regler* (engl. linear-quadratic regulator, LQR) :cite:`Kalman.1960,Anderson.Moore.2007`.
 
 <!--en:347d1d6a-->
 Die meisten physikalischen Systeme sind nichtlinear, und ihre Aktoren erreichen Sättigungsgrenzen. Zwei Ideen erweitern LQR auf nichtlineare Systeme mit kontinuierlichen Stellgrößen. Beide sind grundlegend für die moderne Trajektorienoptimierung und Robotik :cite:`Tedrake.2023,Bertsekas.2025`. Erstens linearisiert das *iterative LQR-Verfahren* (iLQR) :cite:`Li.Todorov.2004` die nichtlineare Dynamik wiederholt um eine vorläufige Trajektorie und nähert dort die Kosten quadratisch an. Im Rückwärtsdurchlauf löst es ein zeitvariantes LQR-Problem, um im Vorwärtsdurchlauf die Trajektorie zu verbessern. Zweitens macht die *modellprädiktive Regelung* (engl. model predictive control, MPC) :cite:`Rawlings.Mayne.Diehl.2017` aus der Trajektorienoptimierung mit endlichem Horizont eine Strategie mit Rückführung. In jedem Schritt $t$ löst sie das Regelungsproblem über einen gleitenden Horizont neu. Sie geht dabei vom aktuell gemessenen Zustand $\mathbf{x}_t$ aus, wendet nur die erste Stellgröße $\mathbf{u}_{t|t}^*$ an und plant im Schritt $t+1$ erneut. In diesem Abschnitt leiten wir LQR, iLQR und MPC mit gleitendem Horizont her. Wir untersuchen, wann eine lokale lineare Rückführung ausreicht und wann wir dem System durch nichtlineare Regelung Energie zuführen müssen. Außerdem sehen wir, wie MPC die Planung mit erlernten neuronalen Dynamikmodellen in :numref:`sec_model_based` vorbereitet.
@@ -17,7 +17,7 @@ Die meisten physikalischen Systeme sind nichtlinear, und ihre Aktoren erreichen 
 ### Dynamik im Zustandsraum und quadratische Kosten
 
 <!--en:fc623c45-->
-In der Regelungstechnik bezeichnen wir einen kontinuierlichen Zustand mit $\mathbf{x}_t \in \mathbb{R}^d$ und eine Aktion (die Stellgröße) mit $\mathbf{u}_t \in \mathbb{R}^m$. Beim bestärkenden Lernen maximieren wir eine Belohnung $r(\mathbf{x}_t, \mathbf{u}_t)$. Bei der optimalen Regelung minimieren wir die Stufenkosten (engl. stage cost) $c(\mathbf{x}_t, \mathbf{u}_t) = -r(\mathbf{x}_t, \mathbf{u}_t)$. Für ein zeitdiskretes lineares System gilt
+In der Regelungstechnik bezeichnen wir einen kontinuierlichen Zustand mit $\mathbf{x}_t \in \mathbb{R}^d$ und eine Aktion (die Stellgröße) mit $\mathbf{u}_t \in \mathbb{R}^m$. Beim Reinforcement Learning maximieren wir eine Belohnung $r(\mathbf{x}_t, \mathbf{u}_t)$. Bei der optimalen Regelung minimieren wir die Stufenkosten (engl. stage cost) $c(\mathbf{x}_t, \mathbf{u}_t) = -r(\mathbf{x}_t, \mathbf{u}_t)$. Für ein zeitdiskretes lineares System gilt
 
 <!--en:7c80c399-->
 Dabei ist $\mathbf{A} \in \mathbb{R}^{d \times d}$ die Zustandsübergangsmatrix und $\mathbf{B} \in \mathbb{R}^{d \times m}$ die Eingangsmatrix. Das System ist das zeitdiskrete Gegenstück zu den linearen gewöhnlichen Differentialgleichungen in :numref:`sec_mdl-odes-solvers`. Der Zielzustand ist der Ursprung $\mathbf{x} = \mathbf{0}$. Über einen endlichen Horizont von $H$ Schritten minimieren wir die quadratischen Gesamtkosten
@@ -205,16 +205,16 @@ Bei den drei Störstärken im Pendelbenchmark treten die Unterschiede zwischen d
 - **Starke Störung ($\Delta\dot\vartheta = +2.2\text{ rad/s}$):** Der Stoß stoppt den Aufstieg und lässt das Pendel zurückfallen. Bei der linearen Rückführung um die alte nominelle Trajektorie erreicht das Drehmoment die Sättigungsgrenze. TV-LQR versagt ($\vartheta_{120} = +1.959\text{ rad}$, Ertrag $-797.9$), denn das Pendel müsste erneut Schwung holen. In der Umgebung der alten Trajektorie, in der die lineare Näherung gilt, ist das nicht möglich. MPC bringt das Pendel dank der Regel zur Neuinitialisierung wieder ins aufrechte Gleichgewicht ($\vartheta_{120} = 0.000\text{ rad}$, Ertrag $-558.2$). Im Schritt des Stoßes verfehlt der mit dem alten Plan initialisierte Aufschwung die obere Lage. Deshalb plant `mpc_action` vom Zustand nach der Störung aus einen neuen Aufschwung und folgt diesem Plan. Eine Neuplanung allein auf Grundlage des verschobenen Plans würde nicht ausreichen, da sie in der Nähe der alten Trajektorie bleibt.
 
 <!--en:d06401f6-->
-### Von der klassischen Regelung zum bestärkenden Lernen
+### Von der klassischen Regelung zum Reinforcement Learning
 
 <!--en:ef0d2db7-->
-:numref:`tab_control_vs_rl` stellt die Begriffe der klassischen optimalen Regelung denen des bestärkenden Lernens gegenüber. Die Übersicht zeigt, wie die folgenden Abschnitte dieses Kapitels und :numref:`chap_deep_rl` die einzelnen Annahmen von LQR und iLQR lockern:
+:numref:`tab_control_vs_rl` stellt die Begriffe der klassischen optimalen Regelung denen im Reinforcement Learning gegenüber. Die Übersicht zeigt, wie die folgenden Abschnitte dieses Kapitels und :numref:`chap_deep_rl` die einzelnen Annahmen von LQR und iLQR lockern:
 
 <!--en:de521a8c-->
-:Zusammenhang zwischen klassischer optimaler Regelung und bestärkendem Lernen.
+:Zusammenhang zwischen klassischer optimaler Regelung und Reinforcement Learning.
 
 <!--en:b095358b-->
-| Begriff | Klassische optimale Regelung | Bestärkendes Lernen |
+| Begriff | Klassische optimale Regelung | Reinforcement Learning |
 
 <!--en:feae8bf9-->
 | Variablen | Zustand $\mathbf{x}_t \in \mathbb{R}^d$, Stellgröße $\mathbf{u}_t \in \mathbb{R}^m$ | Zustand $s_t \in \mathcal{S}$, Aktion $a_t \in \mathcal{A}$ |
@@ -232,7 +232,7 @@ Bei den drei Störstärken im Pendelbenchmark treten die Unterschiede zwischen d
 | Bekannte nichtlineare Dynamik $f$ | Gradientenbasierte Trajektorienoptimierung (iLQR oder DDP) mit MPC | Baumsuche oder stichprobenbasierte MPC (:numref:`sec_model_based`) |
 
 <!--en:555994e6-->
-| Unbekannte Dynamik, erlerntes Modell $\hat{f}_\phi$ | Systemidentifikation und sicherheitsäquivalente MPC | Modellbasiertes bestärkendes Lernen mit Random Shooting oder CEM (:numref:`sec_model_based`) |
+| Unbekannte Dynamik, erlerntes Modell $\hat{f}_\phi$ | Systemidentifikation und sicherheitsäquivalente MPC | Modellbasiertes Reinforcement Learning mit Random Shooting oder CEM (:numref:`sec_model_based`) |
 
 <!--en:a912dbc4-->
 | Unbekannte Dynamik, kein Modell | Modellfreie adaptive Regelung | Policy-Gradient (:numref:`sec_policygradient`, :numref:`sec_deeprl`), PPO (:numref:`sec_ppo`), DQN (:numref:`sec_dqn`), SAC (:numref:`sec_sac`) |
@@ -517,19 +517,19 @@ Die drei Teilbilder zeigen den Zusammenhang zwischen lokalem LQR, Trajektorienop
 - **Starker Stoß ($\Delta\dot{\vartheta} = +2.2$):** Der Aufstieg bricht ab. Die lineare Rückführung von TV-LQR um den alten Plan erreicht die Sättigungsgrenze und versagt ($\vartheta_{120} = +1.96$). **MPC erkennt, dass der mit dem alten Plan initialisierte Aufschwung die obere Lage verfehlt, plant einen neuen Aufschwung und erreicht wieder $\vartheta_{120} = 0.000$**.
 
 <!--en:6f19a7bd-->
-::: {.slide title="Klassische optimale Regelung und bestärkendes Lernen im Vergleich"}
+::: {.slide title="Klassische optimale Regelung und Reinforcement Learning im Vergleich"}
 
 <!--en:92be91c3-->
 [Begriffe der beiden Fachgebiete]{.kicker}
 
 <!--en:933f09ed-->
-- **Variablen und Ziel:** Die optimale Regelung minimiert die Summe der Stufenkosten $\sum_t c(\mathbf{x}_t, \mathbf{u}_t)$ über $(\mathbf{x}_t, \mathbf{u}_t) \in \mathbb{R}^d \times \mathbb{R}^m$. Bestärkendes Lernen maximiert den diskontierten Ertrag $\mathbb{E}[\sum_t \gamma^t r(s_t, a_t)]$.
+- **Variablen und Ziel:** Die optimale Regelung minimiert die Summe der Stufenkosten $\sum_t c(\mathbf{x}_t, \mathbf{u}_t)$ über $(\mathbf{x}_t, \mathbf{u}_t) \in \mathbb{R}^d \times \mathbb{R}^m$. Reinforcement Learning maximiert den diskontierten Ertrag $\mathbb{E}[\sum_t \gamma^t r(s_t, a_t)]$.
 
 <!--en:726d12c5-->
 - **Backups:** Die Riccati-Rekursion für $\mathbf{x}^\top\mathbf{P}_t\mathbf{x}$ entspricht dem Bellman-Operator $\mathcal{T}$ für $V(s), Q(s, a)$.
 
 <!--en:49549736-->
-- **Unbekannte Physik:** Systemidentifikation und MPC stellen die Verbindung zum modellbasierten bestärkenden Lernen (§{sec_model_based}) und zu modellfreien Policy-Gradienten (§{sec_policygradient}) her.
+- **Unbekannte Physik:** Systemidentifikation und MPC stellen die Verbindung zum modellbasierten Reinforcement Learning (§{sec_model_based}) und zu modellfreien Policy-Gradienten (§{sec_policygradient}) her.
 
 <!--en:46bca58d-->
 ::: {.slide title="Verständnisfragen zu LQR, iLQR und MPC"}

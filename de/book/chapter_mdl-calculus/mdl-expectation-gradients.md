@@ -92,7 +92,7 @@ In Worten: Der Gradient einer Dichte ist die Dichte selbst multipliziert mit dem
 Multiplizieren wir :eqref:`eq_mdl-log-derivative` mit einer Funktion $g(x)$, die nicht von $\boldsymbol\theta$ abhängt, und integrieren wir anschließend, erhalten wir die **Identität für die Score-Funktion**:
 
 <!--en:4a3fd967-->
-Damit ist der Gradient eines erwarteten Verlusts wieder ein Erwartungswert unter $p_{\boldsymbol\theta}$. Der Verlust $g(x)$ jedes Samples erhält ein Gewicht, das angibt, wie stark $\boldsymbol\theta$ die Log-Wahrscheinlichkeit dieses Samples erhöht. Für die Monte-Carlo-Schätzung ziehen wir Samples $x_i\sim p_{\boldsymbol\theta}$ und mitteln die Werte $g(x_i)\nabla_{\boldsymbol\theta}\log p_{\boldsymbol\theta}(x_i)$. Im bestärkenden Lernen ist dies der REINFORCE-Schätzer der Policy-Gradient-Verfahren (:numref:`sec_policygradient`) :cite:`Williams.1992`. (Hängt $g$ auch direkt von $\boldsymbol\theta$ ab, kommt nach der Produktregel der Term $\mathbb{E}[\nabla_{\boldsymbol\theta}g(X,\boldsymbol\theta)]$ hinzu.)
+Damit ist der Gradient eines erwarteten Verlusts wieder ein Erwartungswert unter $p_{\boldsymbol\theta}$. Der Verlust $g(x)$ jedes Samples erhält ein Gewicht, das angibt, wie stark $\boldsymbol\theta$ die Log-Wahrscheinlichkeit dieses Samples erhöht. Für die Monte-Carlo-Schätzung ziehen wir Samples $x_i\sim p_{\boldsymbol\theta}$ und mitteln die Werte $g(x_i)\nabla_{\boldsymbol\theta}\log p_{\boldsymbol\theta}(x_i)$. Im Reinforcement Learning ist dies der REINFORCE-Schätzer der Policy-Gradient-Verfahren (:numref:`sec_policygradient`) :cite:`Williams.1992`. (Hängt $g$ auch direkt von $\boldsymbol\theta$ ab, kommt nach der Produktregel der Term $\mathbb{E}[\nabla_{\boldsymbol\theta}g(X,\boldsymbol\theta)]$ hinzu.)
 
 <!--en:20003492-->
 Da der Score den Mittelwert null hat, können wir jede konstante **Baseline** $b$ (unabhängig von $x$) von $g(X)$ abziehen, ohne den Schätzer zu verzerren (:numref:`sec_baselines`). Es gilt $\mathbb{E}[(g(X)-b)\nabla_{\boldsymbol\theta}\log p_{\boldsymbol\theta}(X)]=\mathbb{E}[g(X)\nabla_{\boldsymbol\theta}\log p_{\boldsymbol\theta}(X)]$. Eine geeignete Wahl von $b$ kann die Varianz der Schätzung erheblich senken.
@@ -178,7 +178,7 @@ Erwartungswerte und ihre Gradienten<br>**Differenzieren unter dem Integralzeiche
 [Motivation]{.kicker}
 
 <!--en:ddd904f1-->
-- **Sampling mit parametrisierter Verteilung:** VAEs ziehen latente Codes $\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_{\boldsymbol{\theta}}, \operatorname{diag}(\boldsymbol{\sigma}_{\boldsymbol{\theta}}^2))$, und beim bestärkenden Lernen bestimmen Strategien die Verteilung der gezogenen Aktionen $a \sim \pi_{\boldsymbol{\theta}}(a \mid s)$.
+- **Sampling mit parametrisierter Verteilung:** VAEs ziehen latente Codes $\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_{\boldsymbol{\theta}}, \operatorname{diag}(\boldsymbol{\sigma}_{\boldsymbol{\theta}}^2))$, und beim Reinforcement Learning bestimmen Strategien die Verteilung der gezogenen Aktionen $a \sim \pi_{\boldsymbol{\theta}}(a \mid s)$.
 
 <!--en:d5c84a15-->
 - **Unterbrochener Berechnungsgraph:** Ein direkt gezogenes Sample $x_i \sim p_{\boldsymbol{\theta}}$ ist nur eine Zahl. Kein Berechnungsgraph verbindet sie mit $\boldsymbol{\theta}$.

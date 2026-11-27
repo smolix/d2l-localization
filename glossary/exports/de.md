@@ -186,7 +186,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | score function | Score-Funktion | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | Markov-Kette | verified_external | markov-chain: A stochastic process whose next state depends on the present state. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | Markov decision process | Markov-Entscheidungsprozess | verified_external | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
-| reinforcement learning | bestärkendes Lernen | verified_external | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | review-de-c0388ea2a4: page; author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
+| reinforcement learning | Reinforcement Learning | invariant | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | author-ruling-de-rl-ppo-2026-11-26: de/style.md §8.2 and §10 |
 | agent | Agent | proposed | agent: An entity that chooses actions in an environment. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_preliminaries/probability.md#L4) |
 | environment | Umgebung | proposed | environment: The external system with which an agent interacts. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/environment.md#L7) |
 | state | Zustand | proposed | state: A representation of the situation relevant to a sequential decision process. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_multilayer-perceptrons/dropout.md#L30) |
@@ -419,7 +419,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Markov reward process | Markov-Belohnungsprozess | verified_external | markov-reward-process: A Markov process equipped with rewards and a return criterion. | author-ruling-de-2026-11-26: de/style.md §8.2 and §10 |
 | Bellman optimality equation | Bellman-Optimalitätsgleichung | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | Policy-Gradient-Theorem | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
-| deep reinforcement learning | tiefes bestärkendes Lernen | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
+| deep reinforcement learning | Deep Reinforcement Learning | invariant | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. | author-ruling-de-rl-ppo-2026-11-26: de/style.md §8.2 and §10 |
 | target network | Zielnetz | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
 | experience replay | Experience-Replay | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
 | diffusion process | Diffusionsprozess | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
@@ -612,9 +612,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | training throughput | Trainingsdurchsatz | proposed | training-throughput: The amount of training work completed per unit time. |  |
 | soft actor-critic | Soft Actor-Critic | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | Deep Q-Network | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. | [d2l-de-source](https://github.com/d2l-ai/d2l-de/blob/c4b458ff1059f4a0aca8e58e12d2970d11a6298f/chapter_introduction/index.md#L309) |
-| proximal policy optimization | Proximal Policy Optimization | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
+| proximal policy optimization | Proximal Policy Optimierung | verified_external | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. | author-ruling-de-rl-ppo-2026-11-26: de/style.md §8.2 and §10 |
 | trust region | Trust-Region | verified_external | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. | review-de-96c9228d7a: page |
-| offline reinforcement learning | bestärkendes Offline-Lernen | proposed | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. |  |
+| offline reinforcement learning | Offline Reinforcement Learning | invariant | offline-reinforcement-learning: Learning a policy from a fixed dataset without further environment interaction. | author-ruling-de-rl-ppo-2026-11-26: de/style.md §8.2 and §10 |
 | behavior cloning | Verhaltensklonen | proposed | behavior-cloning: Learning a policy by supervised imitation of demonstrated actions. |  |
 | importance weight | Wichtigkeitsgewicht | proposed | importance-weight: A ratio used to correct for sampling from a distribution different from the target distribution. |  |
 | advantage estimate | Vorteilsschätzung | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |

@@ -149,7 +149,7 @@ Zu den Grundlagen aus :numref:`chap_reinforcement_learning` gehören die Impleme
 - Der [RL Baselines3 Zoo](https://github.com/DLR-RM/rl-baselines3-zoo) :cite:`Raffin.Hill.Gleave.ea.2021` liefert auf die jeweilige Umgebung abgestimmte Hyperparameter für PPO (:numref:`sec_ppo`), DQN (:numref:`sec_dqn`) und SAC (:numref:`sec_sac`).
 
 <!--en:79721658-->
-- [rliable](https://github.com/google-research/rliable) :cite:`Agarwal.Schwarzer.Castro.ea.2021` liefert Konfidenzintervalle aus einem geschichteten Bootstrap-Verfahren und Leistungsprofile. Damit lassen sich Trainingsläufe beim tiefen bestärkenden Lernen auch bei wenigen Zufallsstartwerten vergleichen.
+- [rliable](https://github.com/google-research/rliable) :cite:`Agarwal.Schwarzer.Castro.ea.2021` liefert Konfidenzintervalle aus einem geschichteten Bootstrap-Verfahren und Leistungsprofile. Damit lassen sich Trainingsläufe beim Deep Reinforcement Learning auch bei wenigen Zufallsstartwerten vergleichen.
 
 <!--en:47df5cc5-->
 - Die Übersichtsarbeit von :citet:`Levine.Kumar.Tucker.ea.2020` knüpft an :numref:`sec_offline` an und führt von der Untersuchung des tabellarischen Falls zu tiefen Offline-Verfahren.

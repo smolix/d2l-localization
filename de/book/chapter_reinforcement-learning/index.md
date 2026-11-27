@@ -1,5 +1,5 @@
 <!--en:b8107830-->
-# Bestärkendes Lernen
+# Reinforcement Learning
 
 <!--en:52cecb39-->
 Bisher haben wir jedes Modell in diesem Buch mit einem festen Datensatz trainiert. Keine Vorhersage des Modells hatte Einfluss darauf, welches Beispiel als Nächstes kam. Betrachten wir nun ein Sprachmodell, das eine Mathematikaufgabe löst. Sein Lösungsweg umfasst tausend Token. Erst am Ende prüft ein Programm, ob die Antwort stimmt. Kein Token hat ein eigenes Label, und jedes Token verändert, was das Modell als Nächstes schreiben kann. Einem Regler, der einen Stab auf einem fahrenden Wagen balanciert, geht es ähnlich. Jeder Stoß verändert den Winkel, den er als Nächstes korrigieren muss. Seine einzige Belohnung (engl. reward) ist die Zeit, die der Stab aufrecht bleibt. :numref:`fig_rl_agent_env` zeigt diesen Kreislauf zwischen dem *Agenten*, der die Entscheidungen trifft, und der *Umgebung* (engl. environment), auf die er einwirkt.
@@ -26,13 +26,13 @@ Die folgenden frei zugänglichen Materialien bieten theoretische Darstellungen, 
 **Lehrbücher**
 
 <!--en:cabb7b05-->
-- Sutton und Barto geben in *Reinforcement Learning: An Introduction* :cite:`Sutton.Barto.2018` eine umfassende Einführung in wertbasierte und strategiebasierte Verfahren, Planung und Funktionsapproximation. Für ihre grundlegenden Beiträge zum bestärkenden Lernen (engl. reinforcement learning) erhielten sie den Turing Award 2024.
+- Sutton und Barto geben in *Reinforcement Learning: An Introduction* :cite:`Sutton.Barto.2018` eine umfassende Einführung in wertbasierte und strategiebasierte Verfahren, Planung und Funktionsapproximation. Für ihre grundlegenden Beiträge zum Reinforcement Learning erhielten sie den Turing Award 2024.
 
 <!--en:1725f7f1-->
 - Szepesvári stellt in *Algorithms for Reinforcement Learning* :cite:`Szepesvari.2010` die Algorithmen dieses Kapitels und ihre Garantien auf weniger als hundert Seiten vor.
 
 <!--en:2a027965-->
-- Bertsekas entwickelt in *A Course in Reinforcement Learning* :cite:`Bertsekas.2025` das bestärkende Lernen aus der Sicht der optimalen Regelung und der dynamischen Programmierung.
+- Bertsekas entwickelt in *A Course in Reinforcement Learning* :cite:`Bertsekas.2025` das Reinforcement Learning aus der Sicht der optimalen Regelung und der dynamischen Programmierung.
 
 <!--en:fe304d58-->
 - Agarwal, Jiang, Kakade und Sun geben in *Reinforcement Learning: Theory and Algorithms* :cite:`Agarwal.Jiang.Kakade.ea.2019` die Wachstumsraten der Stichprobenkomplexität an, die wir in diesem Kapitel qualitativ beschreiben.
@@ -47,7 +47,7 @@ Die folgenden frei zugänglichen Materialien bieten theoretische Darstellungen, 
 **Kurse**
 
 <!--en:13842fe7-->
-- [Berkeley CS285: Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) behandelt auf Graduiertenniveau Policy-Gradienten, wertbasierte Verfahren, modellbasiertes Lernen und bestärkendes Offline-Lernen.
+- [Berkeley CS285: Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) behandelt auf Graduiertenniveau Policy-Gradienten, wertbasierte Verfahren, modellbasiertes Lernen und Offline Reinforcement Learning.
 
 <!--en:6bc85c3c-->
 - [Stanford CS234: Reinforcement Learning](https://web.stanford.edu/class/cs234/) kommt diesem Kapitel thematisch am nächsten. Der Kurs behandelt die Grundlagen, die Exploration und Policy-Gradienten mit ihren Garantien.
@@ -65,7 +65,7 @@ Die folgenden frei zugänglichen Materialien bieten theoretische Darstellungen, 
 **Kommentierte Implementierungen**
 
 <!--en:217fb7cd-->
-- [CleanRL](https://github.com/vwxyzjn/cleanrl) :cite:`Huang.Dossa.Ye.ea.2022` implementiert die wichtigsten nach :numref:`sec_deeprl` behandelten Algorithmen für tiefes bestärkendes Lernen in jeweils einer Datei und prüft sie mit Benchmarks.
+- [CleanRL](https://github.com/vwxyzjn/cleanrl) :cite:`Huang.Dossa.Ye.ea.2022` implementiert die wichtigsten nach :numref:`sec_deeprl` behandelten Algorithmen für Deep Reinforcement Learning in jeweils einer Datei und prüft sie mit Benchmarks.
 
 <!--en:ed5acff1-->
 - [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) :cite:`Raffin.Hill.Gleave.ea.2021` stellt dieselben Algorithmen als Bibliothek bereit. Die zugehörige Sammlung enthält abgestimmte Hyperparameter.
@@ -83,7 +83,7 @@ Die folgenden frei zugänglichen Materialien bieten theoretische Darstellungen, 
 - [The 37 Implementation Details of Proximal Policy Optimization](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/) :cite:`Huang.Dossa.Raffin.ea.2022` dokumentiert Implementierungsentscheidungen, die in den Beschreibungen des Algorithmus fehlen, und zeigt, wie sie die Güte von PPO und die Reproduzierbarkeit beeinflussen.
 
 <!--en:b7b234df-->
-Grundlagen des bestärkenden Lernens<br>**Markov-Entscheidungsprozesse · dynamische Programmierung · zeitliche Differenzen · Exploration · Nachahmung · optimale Regelung · Policy-Gradienten · Varianzreduktion**
+Grundlagen von Reinforcement Learning<br>**Markov-Entscheidungsprozesse · dynamische Programmierung · zeitliche Differenzen · Exploration · Nachahmung · optimale Regelung · Policy-Gradienten · Varianzreduktion**
 
 <!--en:649a629f-->
 ::: {.slide title="Aktionen bestimmen, welche Daten der Agent als Nächstes sieht"}

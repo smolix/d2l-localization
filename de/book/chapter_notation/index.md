@@ -8,7 +8,7 @@ Eine klare, einheitliche Notation erleichtert es, mathematische Ideen mit Code z
 In den folgenden Übersichten kennzeichnet der unbestimmte Artikel *„ein“ oder „eine“* eine allgemeine Schreibkonvention. So bedeutet „$x$: ein Skalar“, dass kursive Kleinbuchstaben im Allgemeinen Skalare bezeichnen. Der bestimmte Artikel *„der“, „die“ oder „das“* kennzeichnet dagegen ein Symbol mit festgelegter Bedeutung, etwa „$\mathbb{R}$: die Menge der reellen Zahlen“.
 
 <!--en:38fc2576-->
-Das Alphabet ist endlich. Einige gebräuchliche Buchstaben haben daher je nach Fachgebiet unterschiedliche Bedeutungen. Die Schreibweise und der Kontext machen in jedem Fall deutlich, was gemeint ist. So steht bei der Sigmoidfunktion $\sigma(\cdot)$ das Argument in Klammern. Eine Standardabweichung $\sigma_X$ trägt eine Zufallsvariable als Index. Ein Singulärwert $\sigma_i(\mathbf{X})$ hat einen Index und bezieht sich auf eine Matrix. Beim Rauschplan (engl. noise schedule) $\sigma_t$ eines Diffusionsmodells bezeichnet der Index die Zeit $t$. Auf mögliche Verwechslungen weisen wir im Folgenden ausdrücklich hin. Kapitel, die viele eigene Fachbegriffe einführen, beginnen zudem mit einer eigenen Notationstabelle. Das gilt für Optimierung (:numref:`tab_mdl-opt-notation`), Informationstheorie (:numref:`tab_mdl-it-notation`), Dynamik (:numref:`tab_mdl-dyn-notation`), bestärkendes Lernen (:numref:`tab_rl_notation`), Generative Adversarial Networks (:numref:`tab_gan_notation`) und Diffusionsmodelle (:numref:`tab_diffusion-notation`). Die letzten Abschnitte dieses Kapitels fassen die wichtigsten Symbole für einige weiterführende Themen zusammen.
+Das Alphabet ist endlich. Einige gebräuchliche Buchstaben haben daher je nach Fachgebiet unterschiedliche Bedeutungen. Die Schreibweise und der Kontext machen in jedem Fall deutlich, was gemeint ist. So steht bei der Sigmoidfunktion $\sigma(\cdot)$ das Argument in Klammern. Eine Standardabweichung $\sigma_X$ trägt eine Zufallsvariable als Index. Ein Singulärwert $\sigma_i(\mathbf{X})$ hat einen Index und bezieht sich auf eine Matrix. Beim Rauschplan (engl. noise schedule) $\sigma_t$ eines Diffusionsmodells bezeichnet der Index die Zeit $t$. Auf mögliche Verwechslungen weisen wir im Folgenden ausdrücklich hin. Kapitel, die viele eigene Fachbegriffe einführen, beginnen zudem mit einer eigenen Notationstabelle. Das gilt für Optimierung (:numref:`tab_mdl-opt-notation`), Informationstheorie (:numref:`tab_mdl-it-notation`), Dynamik (:numref:`tab_mdl-dyn-notation`), Reinforcement Learning (:numref:`tab_rl_notation`), Generative Adversarial Networks (:numref:`tab_gan_notation`) und Diffusionsmodelle (:numref:`tab_diffusion-notation`). Die letzten Abschnitte dieses Kapitels fassen die wichtigsten Symbole für einige weiterführende Themen zusammen.
 
 <!--en:b543a219-->
 ## Numerische Objekte
@@ -353,7 +353,7 @@ Diese Symbole führen wir in :numref:`chap_modern_rnn` ein.
 * $\beta_t$: die Stärke des Schreibschritts (Lernrate) der Delta-Regel (:numref:`sec_deltanet`)
 
 <!--en:cbe6efec-->
-## Bestärkendes Lernen
+## Reinforcement Learning
 
 <!--en:c96e7fff-->
 Diese Symbole verwenden wir in :numref:`chap_reinforcement_learning` und :numref:`chap_deep_rl`. Eine vollständige Liste mit dem Abschnitt, in dem wir jedes Symbol definieren, findet sich in :numref:`tab_rl_notation`.

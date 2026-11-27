@@ -1,11 +1,11 @@
 <!--en:5394ee7a-->
-# Funktionsapproximation im bestärkenden Lernen
+# Funktionsapproximation im Reinforcement Learning
 
 <!--en:8f944e82-->
 Bisher stand jede gelernte Größe in einer Tabelle: sechzehn Zeilen für die Felder des Sees, eine Zeile für jeden Prompt der Aufgabe mit Prüfprogramm. Eine Ausnahme waren die Planer aus :numref:`sec_optimal_control`, die bekannte Bewegungsgleichungen nutzten. Stellen Sie sich nun einen Wagen vor, der eine oben am Wagen gelenkig befestigte Stange balanciert. Vier reelle Zahlen beschreiben seinen Zustand: Position und Geschwindigkeit des Wagens sowie Winkel und Winkelgeschwindigkeit der Stange. In tausend Episoden sieht der Agent dieselben vier Zahlen kein zweites Mal. Eine Tabelle für solche Zustände bräuchte bei jedem Besuch eine neue Zeile. Was der Agent bei einem Besuch lernt, würde ihm beim nächsten nichts sagen. Wir suchen eine Funktion, die ähnlichen Zuständen ähnliche Werte zuweist. Was der Agent lernt, wenn die Stange mit einer bestimmten Geschwindigkeit nach links kippt, hilft ihm dann auch bei einer etwas anderen Geschwindigkeit in derselben Richtung.
 
 <!--en:dd86ee45-->
-Das Problem ist so alt wie das Forschungsgebiet. Bellman bezeichnete das Wachstum der Tabellen mit der Anzahl der Zustandsvariablen als *Fluch der Dimensionalität* (engl. curse of dimensionality) :cite:`BellmanDPBook`. Schon 1959 bewertete Arthur Samuels Dameprogramm Brettstellungen anhand einer gewichteten Summe von Merkmalen, statt ihren Wert nachzuschlagen :cite:`Samuel.1959`. Ersetzen wir eine Tabelle durch eine parametrisierte Funktion, sprechen wir von *Funktionsapproximation*. Mit neuronalen Netzen als Funktionen erschloss dieses Verfahren dem bestärkenden Lernen (engl. reinforcement learning) Backgammon :cite:`Tesauro.1995`, Atari-Spiele :cite:`mnih2015human` und Go :cite:`Silver.Huang.Maddison.ea.2016`.
+Das Problem ist so alt wie das Forschungsgebiet. Bellman bezeichnete das Wachstum der Tabellen mit der Anzahl der Zustandsvariablen als *Fluch der Dimensionalität* (engl. curse of dimensionality) :cite:`BellmanDPBook`. Schon 1959 bewertete Arthur Samuels Dameprogramm Brettstellungen anhand einer gewichteten Summe von Merkmalen, statt ihren Wert nachzuschlagen :cite:`Samuel.1959`. Ersetzen wir eine Tabelle durch eine parametrisierte Funktion, sprechen wir von *Funktionsapproximation*. Mit neuronalen Netzen als Funktionen erschloss dieses Verfahren dem Reinforcement Learning Backgammon :cite:`Tesauro.1995`, Atari-Spiele :cite:`mnih2015human` und Go :cite:`Silver.Huang.Maddison.ea.2016`.
 
 <!--en:c7c4d3c3-->
 Für Policy-Gradienten ist der Schritt klein, denn die Herleitungen in :numref:`sec_policygradient` und :numref:`sec_baselines` setzen an keiner Stelle eine Tabelle voraus. REINFORCE braucht nur den Score $\nabla_\theta \log \pi_\theta(a \mid s)$. Ein Netz liefert ihn ebenso leicht wie eine Tabellenzeile. Neu ist, dass eine Aktualisierung nun die Schätzung in jedem Zustand verändert. Die gemeinsamen Parameter ermöglichen das Lernen in kontinuierlichen Zustandsräumen, schaffen aber auch eine neue Fehlerquelle. Wir vollziehen diesen Schritt an zwei kleinen Regelungsaufgaben: einem Wagen mit Stange und einem Pendel mit kontinuierlich wählbarem Drehmoment. Wir messen, wie weit eine Aktualisierung wirkt, und untersuchen zum Schluss, was der Agent damit noch nicht kann.
@@ -363,7 +363,7 @@ Eine Tabelle für kontinuierliche Zustände bräuchte für jeden Besuch eine Zei
 [Diskussionen](https://d2l.discourse.group/t/36800)
 
 <!--en:3120a937-->
-Funktionsapproximation im bestärkenden Lernen<br>**Tabellen als lineare One-Hot-Netze · neuronaler Tangentenkernel · ActorCritic-MLP · Bootstrapping bei Abbruch · Gauß-Strategien · Score- und pfadweise Gradienten**
+Funktionsapproximation im Reinforcement Learning<br>**Tabellen als lineare One-Hot-Netze · neuronaler Tangentenkernel · ActorCritic-MLP · Bootstrapping bei Abbruch · Gauß-Strategien · Score- und pfadweise Gradienten**
 
 <!--en:f4dbbc9d-->
 ::: {.slide title="Warum kontinuierliche Regelung Funktionsapproximation erfordert"}
@@ -453,7 +453,7 @@ Das Training mit 3 Zufallsstartwerten für `ActorCritic.mlp(4, 2)` auf `CartPole
 ::: {.slide title="Warum der Wert des Ersatzverlusts wenig über die Strategie aussagt"}
 
 <!--en:6b4df173-->
-[Das Training beim bestärkenden Lernen verfolgen]{.kicker}
+[Das Training beim Reinforcement Learning verfolgen]{.kicker}
 
 <!--en:431f790d-->
 Deep-Learning-Frameworks berechnen den Policy-Gradienten durch Differenzieren des skalaren **Ersatzverlusts** $L(\theta) = -\frac{1}{N}\sum_t \tilde{w}_t \log \pi_\theta(a_t \mid s_t)$. Dabei ist $\tilde{w}_t$ vom Berechnungsgraphen getrennt:
@@ -540,7 +540,7 @@ Ein einfacher SGD-Schritt erhöht $\hat{V}_w(s_0)$ in einem Zustand $s_0 \in [-1
 [Die zwei Seiten der Funktionsapproximation]{.kicker}
 
 <!--en:2f69fceb-->
-Ein eindimensionaler Schnitt durch die Wertfunktion vor und nach einer einzelnen Aktualisierung um $+0.50$ bei $x_0$ zeigt die Stärke und die Anfälligkeit des bestärkenden Lernens mit Netzen:
+Ein eindimensionaler Schnitt durch die Wertfunktion vor und nach einer einzelnen Aktualisierung um $+0.50$ bei $x_0$ zeigt die Stärke und die Anfälligkeit von Reinforcement Learning mit Netzen:
 
 <!--en:0eb726c9-->
 - **Generalisierung (der positive Buckel um $x_0$):** Erfahrung bei $x_0$ verbessert sofort die Informationsgrundlage für benachbarte Zustände, auch ohne sie zu besuchen.
@@ -561,10 +561,10 @@ Zwei Achsen ordnen jeden Algorithmus aus den Kapiteln §{num:chap_reinforcement_
 - **Durchgezogene Rahmen (Kapitel §{num:chap_reinforcement_learning}):** exakte dynamische Programmierung mit $P$, tabellarische TD-Verfahren (Q-Learning/SARSA), Banditen (UCB/Thompson), Imitation (BC/DAgger), optimale Regelung (LQR/iLQR/MPC) und On-Policy-Verfahren mit Monte-Carlo-Schätzung des Policy-Gradienten (REINFORCE/RLOO/GRPO).
 
 <!--en:906c2821-->
-- **Gestrichelte Rahmen (Kapitel §{num:chap_deep_rl}):** Akteur-Kritiker-Verfahren mit Bootstrapping (A2C), mehrfache Batch-Nutzung mit Begrenzung (PPO), Wertnetze mit Wiedergabespeicher (DQN, SAC), gelernte Dynamikmodelle und pessimistisches bestärkendes Offline-Lernen.
+- **Gestrichelte Rahmen (Kapitel §{num:chap_deep_rl}):** Akteur-Kritiker-Verfahren mit Bootstrapping (A2C), mehrfache Batch-Nutzung mit Begrenzung (PPO), Wertnetze mit Wiedergabespeicher (DQN, SAC), gelernte Dynamikmodelle und pessimistisches Offline Reinforcement Learning.
 
 <!--en:b54c51ac-->
-::: {.slide title="Verständnisfragen zur Funktionsapproximation im bestärkenden Lernen"}
+::: {.slide title="Verständnisfragen zur Funktionsapproximation im Reinforcement Learning"}
 
 <!--en:929b7671-->
 [Wissensprobe]{.kicker}
@@ -594,7 +594,7 @@ Drei Fragen zu Bootstrapping an der Zeitgrenze, Gauß-Scores und pfadweisen Grad
 3. Da $Q'(a) = 0$ überall außer an der Sprungstelle $a = 1$ gilt, liefert der pfadweise Schätzer für jedes Sample $0$ und versagt vollständig. Der Score-Funktionsschätzer differenziert $\log \pi_\theta(a)$ statt $Q(a)$ und bleibt bei unstetigen Belohnungen erwartungstreu.
 
 <!--en:0158bb90-->
-::: {.slide title="Zusammenfassung: Vom tabellarischen bestärkenden Lernen zur Funktionsapproximation"}
+::: {.slide title="Zusammenfassung: Vom tabellarischen Reinforcement Learning zur Funktionsapproximation"}
 
 <!--en:c5a222f8-->
 [Das Wichtigste in Kürze]{.kicker}

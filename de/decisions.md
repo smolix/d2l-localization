@@ -972,7 +972,7 @@
 
 - „actor-critic method“ → „Akteur-Kritiker-Verfahren“, „multi-step return“ → „Mehrschrittertrag“, „one-step target“ → „Einschrittziel“.
 - „rollout“ → „der Rollout“ für eine mit der Strategie erzeugte Folge von Übergängen.
-- „bootstrap“ → „Bootstrap-Wert“ für die eingesetzte Wertschätzung, „Bootstrapping“ für das Verfahren im bestärkenden Lernen.
+- „bootstrap“ → „Bootstrap-Wert“ für die eingesetzte Wertschätzung, „Bootstrapping“ für das Verfahren im Reinforcement Learning.
 
 ## chapter_deep-reinforcement-learning/actor-critic.md#u02 (Codex Astra (medium), 2026-11-26)
 

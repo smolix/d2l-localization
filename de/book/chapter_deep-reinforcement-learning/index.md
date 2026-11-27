@@ -1,5 +1,5 @@
 <!--en:ff4a4c24-->
-# Tiefes bestärkendes Lernen
+# Deep Reinforcement Learning
 
 <!--en:b4a2a305-->
 Der letzte Agent aus :numref:`chap_reinforcement_learning` schwang nach einigen Hunderttausend Schritten ein Pendel auf. Im Simulator kostet das wenig. Ein Roboterarm wäre vorher verschlissen. Auch ein Sprachmodell, das anhand seiner eigenen Antworten lernt, kann es sich nicht leisten, jeden Batch von Antworten nach einer einzigen Aktualisierung zu verwerfen. Der Agent wartete das Ende jeder Episode ab und nutzte jeden Batch nur einmal. Wie stark eine Aktualisierung seine Strategie (engl. policy) veränderte, blieb unbegrenzt. Wie viel lässt sich aus einem einzelnen Sample lernen? Und was geht schief, wenn wir versuchen, mehr daraus zu lernen?
@@ -14,7 +14,7 @@ Wir entwickeln diese Ideen in drei Etappen. Zunächst betrachten wir die On-Poli
 Auf CartPole vergleichen wir die Verfahren für diskrete Aktionen anhand der Anzahl der Umgebungsschritte. Auf Pendulum erproben wir Soft Actor-Critic und das erlernte Modell. Bei der Aufgabe mit Prüfprogramm und in zwei kleinen Gitterwelten können wir die Ergebnisse exakt anhand geschlossener Lösungen überprüfen. Alle Beispiele laufen sowohl in PyTorch als auch in JAX in wenigen Minuten auf der CPU. :numref:`fig_rl_roadmap` und :numref:`tab_rl_map` ordnen alle Verfahren beider Kapitel ein. :numref:`sec_deep_rl-further-reading` gibt einen Überblick über weiterführende Ansätze. Der Buchteil über Sprachmodelle behandelt das präferenzbasierte Post-Training im großen Maßstab.
 
 <!--en:fcb2e89d-->
-Tiefes bestärkendes Lernen: Dateneffizienz und Funktionsapproximation<br>**Kritiker mit Bootstrapping · Trust-Regionen · KL-Strafterme · Replay-Puffer · Weltmodelle · Offline-Protokolle · Post-Training von LLMs**
+Deep Reinforcement Learning: Dateneffizienz und Funktionsapproximation<br>**Kritiker mit Bootstrapping · Trust-Regionen · KL-Strafterme · Replay-Puffer · Weltmodelle · Offline-Protokolle · Post-Training von LLMs**
 
 <!--en:2a2457a4-->
 ::: {.slide title="Warum naive Strategiegradienten Interaktionen verschwenden"}
@@ -65,7 +65,7 @@ Tiefes bestärkendes Lernen: Dateneffizienz und Funktionsapproximation<br>**Krit
 - **3. Off-Policy-Daten:** Die Übergänge stammen aus einem Replay-Puffer oder einem festen Protokoll statt aus der aktuellen Strategie. Schon bei Bairds linearem Markov-Entscheidungsprozess führt das zu $\|\mathbf{w}\|_\infty \to \infty$ (§{sec_dqn}).
 
 <!--en:d8bf700d-->
-::: {.slide title="Einteilung der Verfahren des tiefen bestärkenden Lernens"}
+::: {.slide title="Einteilung der Verfahren von Deep Reinforcement Learning"}
 
 <!--en:abaa9b03-->
 [Algorithmen im Überblick]{.kicker}
@@ -107,7 +107,7 @@ Tiefes bestärkendes Lernen: Dateneffizienz und Funktionsapproximation<br>**Krit
 | **§{sec_ppo} Trust-Regionen und PPO** | Wie viele Aktualisierungen erlaubt ein Batch, ohne die Strategie zu gefährden? | Wichtigkeitsgewicht $\rho_t(\theta)$ pro Schritt und begrenzte Ersatzzielgröße $\min(\rho_t \hat{A}_t, \textrm{clip}(\rho_t)\hat{A}_t)$ |
 
 <!--en:d89282f4-->
-| **§{sec_regularized} KL-regularisiertes bestärkendes Lernen** | Wie weit darf eine Strategie von den Präferenzdaten abweichen? | Exponentielle Umgewichtung der Referenzverteilung $\pi^\star(a) \propto \pi_{\textrm{ref}}(a) e^{r(a)/\beta}$ und weiches Backup $V_\beta = \beta \log \sum_a \pi_{\textrm{ref}} e^{Q_\beta/\beta}$ |
+| **§{sec_regularized} KL-regularisiertes Reinforcement Learning** | Wie weit darf eine Strategie von den Präferenzdaten abweichen? | Exponentielle Umgewichtung der Referenzverteilung $\pi^\star(a) \propto \pi_{\textrm{ref}}(a) e^{r(a)/\beta}$ und weiches Backup $V_\beta = \beta \log \sum_a \pi_{\textrm{ref}} e^{Q_\beta/\beta}$ |
 
 <!--en:6d4eaf3b-->
 | **§{sec_dqn} Deep Q-Networks** | Kann ein Netz aus jedem beliebigen Übergang Werte lernen? | Experience-Replay mit gleichverteilter Ziehung, eingefrorenes Zielnetz $Q_{w^-}$ und Entkopplung von Auswahl und Bewertung durch Double DQN |
@@ -122,4 +122,4 @@ Tiefes bestärkendes Lernen: Dateneffizienz und Funktionsapproximation<br>**Krit
 | **§{sec_offline} Offline-RL** | Was lässt sich ohne neue Versuche lernen? | Verknüpfung beobachteter Teiltrajektorien im empirischen Markov-Entscheidungsprozess und pessimistischer Strafterm $-\kappa/\sqrt{n(s,a)}$ (CQL / TD3+BC) |
 
 <!--en:71cf2b77-->
-| **§{sec_rl_sequences} Bestärkendes Lernen für Sequenzen** | Welche Verfahren bleiben anwendbar, wenn die Aktionen Token sind? | Zuordnung der Erfolgsbeiträge zu einzelnen Token, überprüfbare Belohnungen, GRPO mit $k_3$-KL-Verlust und DPO |
+| **§{sec_rl_sequences} Reinforcement Learning für Sequenzen** | Welche Verfahren bleiben anwendbar, wenn die Aktionen Token sind? | Zuordnung der Erfolgsbeiträge zu einzelnen Token, überprüfbare Belohnungen, GRPO mit $k_3$-KL-Verlust und DPO |

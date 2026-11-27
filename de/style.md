@@ -119,7 +119,7 @@ Wikipedia or a German textbook, and record the choice in DECISIONS.
 |---|---|---|
 | Established German term | Use it. | Schicht (✗ Layer), Gewicht, Faltung (✗ Konvolution), Merkmal (✗ Feature), Verlust (✗ Loss), Einbettung, Lernrate, Gradientenabstieg, Überanpassung, Regularisierung, Zustand, Belohnung, Strategie, Erwartungswert, Datensatz, Genauigkeit, Schrittweite, Ableitung, Kettenregel |
 | No German term, or only a calque | English loan, capitalised, with gender (§3.3). | Dropout (✗ Aussetzen), Batch (✗ Stapel, Charge), Token, Prompt, Pooling (✗ Bündelung), Padding (✗ Auffüllung as a term), Stride, Momentum (✗ Impuls), Backpropagation (✗ Fehlerrückführung), Fine-Tuning, Pre-Training (✗ Vortraining), Post-Training, Attention (✗ Aufmerksamkeit), Early Stopping, Logit, Checkpoint, Sampling |
-| Names of models, architectures, optimizers, libraries, datasets, metrics; acronyms; code | Leave in English; never translate a name in part. | Transformer, ResNet, BERT, Adam, AdamW, PyTorch, ImageNet, BLEU, ReLU, SGD, MLP, LSTM, GPU; Q-Learning (✗ Q-Lernen); Proximal Policy Optimization (✗ Proximale Policy-Optimierung); Long Short-Term Memory |
+| Names of models, architectures, optimizers, libraries, datasets, metrics; acronyms; code | Use the English name unless the glossary specifies a German form. | Transformer, ResNet, BERT, Adam, AdamW, PyTorch, ImageNet, BLEU, ReLU, SGD, MLP, LSTM, GPU, Q-Learning, Long Short-Term Memory |
 | Name or loan + German noun | Hyphenated compound (§3.4). | Adam-Optimierer, ReLU-Aktivierung, Softmax-Funktion, KV-Cache, Transformer-Block, GPU-Speicher |
 
 **Convolution has two word families: the network family is *konvolutionär*;
@@ -154,7 +154,7 @@ A-posteriori-Verteilung · das Residuum (die Residuen) · die Form (shape) · di
 Aktion · der Datensatz · der Tensor (die Tensoren) · die Belohnung · die
 Optimierung · der Ertrag (RL return) · die Präzision · der stochastische
 Gradientenabstieg (SGD) · die Ableitung · die Trefferquote (recall) · das
-bestärkende Lernen · der Kanal · die Aktivierung · die Lernrate · die Epoche ·
+Reinforcement Learning · der Kanal · die Aktivierung · die Lernrate · die Epoche ·
 die Abfrage (query) · die Jacobi-Matrix · die Faltung · die Kreuzentropie · die
 A-priori-Verteilung · die Einbettung · der Erwartungswert · die Maske · die
 Schrittweite (step size) · die Batchgröße · die Klassifikation · die
@@ -166,8 +166,8 @@ Netz (CNN; ✗ Faltungsnetz, §3.1) · der Parameter (die Parameter, no -s) ·
 die Verlustfunktion · die Zielfunktion.
 
 Adjectives in a term are lower case in running text (stochastischer
-Gradientenabstieg, neuronales Netz, konvolutionäres Netz, bestärkendes
-Lernen) and are inflected: *mit dem stochastischen Gradientenabstieg*, *eines
+Gradientenabstieg, neuronales Netz, konvolutionäres Netz) and are inflected:
+*mit dem stochastischen Gradientenabstieg*, *eines
 neuronalen Netzes*, *in konvolutionären Netzen*.
 
 ### 3.3 Loan nouns: gender, genitive, plural
@@ -420,7 +420,9 @@ older text or a reference work differs, these apply.
 | CNN | konvolutionäres neuronales Netz, short konvolutionäres Netz, CNN; the operation and its parts stay *Faltung* (§3.1). | Faltungsnetz, konvolutionäre Schicht |
 | Training stages | Nouns: Fine-Tuning, Pre-Training, Post-Training. Verbs: feinabstimmen, vortrainieren (vortrainiert); none for post-training (§3.5). | Vortraining, Feinabstimmung as the nouns; nachtrainieren |
 | Loans kept | Attention, Backpropagation, Early Stopping, Q-Learning. | Aufmerksamkeit, Fehlerrückführung, Q-Lernen |
-| German kept | Einbettung; versteckte Schicht; bestärkendes Lernen; Strategie (policy); Ertrag (return); Abfrage, Schlüssel, Wert; Form (shape); Gewichtszerfall; Lernratenplan; Präzision, Genauigkeit, Trefferquote; Sequenz (ML) and Folge (mathematics); Kodierung; Differentialgleichung. | Embedding; verborgen, verdeckt; Weight Decay; Lernraten-Schedule |
+| Reinforcement learning | Reinforcement Learning, Deep Reinforcement Learning, Offline Reinforcement Learning. Keep the source abbreviations RL, Deep RL, and Offline RL. Phrase around inflection when necessary to retain the full term unchanged. | |
+| Proximal policy optimization | Proximal Policy Optimierung. Keep PPO where the source uses the abbreviation. | |
+| German kept | Einbettung; versteckte Schicht; Strategie (policy); Ertrag (return); Abfrage, Schlüssel, Wert; Form (shape); Gewichtszerfall; Lernratenplan; Präzision, Genauigkeit, Trefferquote; Sequenz (ML) and Folge (mathematics); Kodierung; Differentialgleichung. | Embedding; verborgen, verdeckt; Weight Decay; Lernraten-Schedule |
 | Token | das Token, plural die Token. Duden also allows *die Tokens*; fixed so that the two do not alternate. | der Token, die Tokens |
 
 ### 8.3 False friends
@@ -573,3 +575,6 @@ in the section named.
     the convolutional family (konvolutionäres neuronales Netz); *Kern* stays in
     Kerndichteschätzer and Übergangskern; *Abbildung* serves for both a figure
     and a mapping.
+21. **Reinforcement Learning:** Retain the English term, including in Deep
+    Reinforcement Learning and Offline Reinforcement Learning (§8.2).
+22. **Proximal policy optimization:** Use Proximal Policy Optimierung (§8.2).

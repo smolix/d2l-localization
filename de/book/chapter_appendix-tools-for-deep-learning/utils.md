@@ -26,13 +26,13 @@ Das `ProgressBoard` aus :numref:`sec_oo-design` zeichnet im aufrufenden Thread. 
 `plot_intervals` zeichnet Schätzwerte mit ihren Intervallen, etwa Genauigkeiten mit Fehlerbalken aus dem Bootstrap-Verfahren. `series` ordnet jeder Bezeichnung drei Sequenzen derselben Länge wie `x` zu. Sie enthalten die Schätzwerte sowie die unteren und oberen Intervallgrenzen. Bei `nan` entfällt der betreffende Punkt. Mit `kind='errorbar'` erscheint jeder Schätzwert als Symbol mit Fehlerbalken. Die Datenreihen stehen an jeder Position `x` nebeneinander, damit sich die Balken nicht verdecken. Mit `kind='band'` erscheint jede Reihe als Linie mit schattiertem Band. `x` enthält Zahlen oder Kategorienamen. `reference` zeichnet eine gestrichelte horizontale Linie, etwa bei der Genauigkeit für zufälliges Raten oder bei null. Für `xscale` stehen `'linear'`, `'log'` und `'log2'` zur Wahl. Die Reihe $i$ erhält die Farbe `Ci`. Die Funktion gibt die Achsen zurück, sodass der aufrufende Code farblich passende Linien ergänzen kann. `marks` fügt den Reihen weitere Punkte hinzu, etwa die eines zweiten Schätzers. Dazu ordnet es einem Namen ein Matplotlib-Format (`'--'`, `'D'`) und für jede Reihe die Punkte `(xs, ys)` zu. Die Punkte erscheinen in der jeweiligen Reihenfarbe, ihr Name einmal in Schwarz in der Legende.
 
 <!--en:8c7c700c-->
-## Hilfsfunktionen für bestärkendes Lernen
+## Hilfsfunktionen für Reinforcement Learning
 
 <!--en:699fc9ea-->
 `run_seeds` führt einen Python-Generator für das Training einmal pro Zufallsstartwert aus. Die ausgegebenen Kurven fasst die Funktion zu einem Array der Form (Zufallsstartwert, Schritt, ...) zusammen, wie es `plot_curves` erwartet. Off-Policy-Agenten liefern einmal pro Episode Messwerte. Je nach Zufallsstartwert schließen sie unterschiedlich viele Episoden ab. `on_grid` überträgt diese Messwerte auf ein gemeinsames Raster von Umgebungsschritten, sodass sie sich ebenfalls in einem Array zusammenfassen und zeichnen lassen.
 
 <!--en:896c846c-->
-Die JAX-Implementierungen der Agenten für bestärkendes Lernen wählen für jeweils einen Zustand eine Aktion. Für die Aktualisierungen verwenden sie Batches, deren Länge von Batch zu Batch variiert. Welche kompilierte Fassung zum Einsatz kommt, hängt von der Netzstruktur, den Formen der Eingaben und dem Optimierer ab. Drei Hilfsfunktionen halten die Zahl der Kompilierungen klein. `forward_np` kompiliert pro Netzstruktur einen Vorwärtsdurchlauf und liest bei jedem Aufruf die aktuellen Netzparameter. Ein Optimierungsschritt erfordert daher keine erneute Kompilierung. `_pad` und `_bucket` füllen einen Batch bis zur nächsten passenden Zweierpotenz auf (mindestens 64 Zeilen). So lässt sich eine kompilierte Aktualisierung für Batches unterschiedlicher Länge verwenden. `padded` füllt mehrere Arrays eines Batches gemeinsam auf und ergänzt eine Maske für die tatsächlichen Datenzeilen. Bei der Aktualisierung lässt sich das Padding so aus den Mittelwerten ausschließen. `shared_adam` hält pro Lernrate eine Instanz von `optax.adam` vor. Agenten mit derselben Lernrate nutzen daher dieselben kompilierten Aktualisierungen. `plain_sgd` leistet dasselbe für den einfachen stochastischen Gradientenabstieg (SGD), den einige Experimente anstelle von Adam verwenden.
+Die JAX-Implementierungen der Agenten für Reinforcement Learning wählen für jeweils einen Zustand eine Aktion. Für die Aktualisierungen verwenden sie Batches, deren Länge von Batch zu Batch variiert. Welche kompilierte Fassung zum Einsatz kommt, hängt von der Netzstruktur, den Formen der Eingaben und dem Optimierer ab. Drei Hilfsfunktionen halten die Zahl der Kompilierungen klein. `forward_np` kompiliert pro Netzstruktur einen Vorwärtsdurchlauf und liest bei jedem Aufruf die aktuellen Netzparameter. Ein Optimierungsschritt erfordert daher keine erneute Kompilierung. `_pad` und `_bucket` füllen einen Batch bis zur nächsten passenden Zweierpotenz auf (mindestens 64 Zeilen). So lässt sich eine kompilierte Aktualisierung für Batches unterschiedlicher Länge verwenden. `padded` füllt mehrere Arrays eines Batches gemeinsam auf und ergänzt eine Maske für die tatsächlichen Datenzeilen. Bei der Aktualisierung lässt sich das Padding so aus den Mittelwerten ausschließen. `shared_adam` hält pro Lernrate eine Instanz von `optax.adam` vor. Agenten mit derselben Lernrate nutzen daher dieselben kompilierten Aktualisierungen. `plain_sgd` leistet dasselbe für den einfachen stochastischen Gradientenabstieg (SGD), den einige Experimente anstelle von Adam verwenden.
 
 <!--en:5c6c9a8f-->
 ## Merkmalsnetze für die Bildbewertung
@@ -83,7 +83,7 @@ Hilfsfunktionen und Hilfsklassen im Paket `d2l`<br>**HyperParameters · plot und
 - **Automatische Extraktion (`make lib`):** Erzeugt `d2l/torch.py`, `d2l/jax.py`, `d2l/tensorflow.py` und `d2l/mxnet.py` direkt aus den Quelldateien der Kapitel.
 
 <!--en:b8f09b09-->
-- **Aktuelle und ältere Hilfsfunktionen:** §{sec_utils} enthält zentrale PyTorch- und JAX-Funktionen für Diagramme, bestärkendes Lernen und Bildverarbeitung sowie ältere Trainingsschleifen für MXNet und TF (`train_ch6`).
+- **Aktuelle und ältere Hilfsfunktionen:** §{sec_utils} enthält zentrale PyTorch- und JAX-Funktionen für Diagramme, Reinforcement Learning und Bildverarbeitung sowie ältere Trainingsschleifen für MXNet und TF (`train_ch6`).
 
 <!--en:5b76091b-->
 ::: {.slide title="Wie HyperParameters Konstruktorargumente automatisch ermittelt"}
@@ -149,10 +149,10 @@ Hilfsfunktionen und Hilfsklassen im Paket `d2l`<br>**HyperParameters · plot und
 - **Referenzwerte und weitere Schätzer:** Unterstützt gestrichelte Referenzlinien mit `reference`, automatisch gedrehte Kategorienamen an der x-Achse und zusätzliche Markierungen mit `marks`.
 
 <!--en:1b576db0-->
-::: {.slide title="Diagramme für bestärkendes Lernen und Auswertung mehrerer Zufallsstartwerte" only="pytorch,jax"}
+::: {.slide title="Diagramme für Reinforcement Learning und Auswertung mehrerer Zufallsstartwerte" only="pytorch,jax"}
 
 <!--en:53350ec9-->
-[Hilfsfunktionen für das Kapitel zum bestärkenden Lernen]{.kicker}
+[Hilfsfunktionen für das Kapitel zum Reinforcement Learning]{.kicker}
 
 <!--en:f17039da-->
 - **Auswertung mehrerer Zufallsstartwerte (`run_seeds` $\to$ `on_grid` $\to$ `plot_curves`):** Führt $K$ Läufe mit vorgegebenen Zufallsstartwerten aus und interpoliert Episoden unterschiedlicher Länge mit kausaler Glättung auf ein gemeinsames Schrittraster. Zeigt den **Median über die Läufe** und ein Band **zwischen den Quartilen (25–75%)** oder **zwischen Minimum und Maximum**.
@@ -161,7 +161,7 @@ Hilfsfunktionen und Hilfsklassen im Paket `d2l`<br>**HyperParameters · plot und
 - **Verteilungen und Gitterwelten:** `plot_hist` legt Histogramme der Erträge übereinander. `show_grid` zeigt $V(s)$ als Heatmap mit Aktionspfeilen für die Greedy-Strategie $\pi(s)$.
 
 <!--en:160241a2-->
-::: {.slide title="Weniger XLA-Neukompilierungen beim bestärkenden Lernen mit JAX" only="jax"}
+::: {.slide title="Weniger XLA-Neukompilierungen beim Reinforcement Learning mit JAX" only="jax"}
 
 <!--en:9626b84e-->
 [JIT-Kompilierung in JAX]{.kicker}
@@ -221,7 +221,7 @@ Prüfen Sie Ihr Verständnis der Implementierung und der numerischen Verfahren i
 1. Warum prüft die Methode `d2l.ProgressBoard.show()` die Bedingung `os.environ.get('D2L_NB_CAPTURE') == '1'` und überspringt bei `final=False` die Darstellung?
 
 <!--en:7a4580ad-->
-2. Beim bestärkenden Lernen mit JAX ruft ein Agent `d2l.padded(states, actions, rewards)` für drei aufeinanderfolgende Episoden-Batches der Längen $n = 19$, $n = 47$ und $n = 58$ auf. Wie viele unterschiedliche Arrayformen entstehen durch das Padding, und warum muss die zurückgegebene Maske `mask` an die Verlustfunktion übergeben werden?
+2. Beim Reinforcement Learning mit JAX ruft ein Agent `d2l.padded(states, actions, rewards)` für drei aufeinanderfolgende Episoden-Batches der Längen $n = 19$, $n = 47$ und $n = 58$ auf. Wie viele unterschiedliche Arrayformen entstehen durch das Padding, und warum muss die zurückgegebene Maske `mask` an die Verlustfunktion übergeben werden?
 
 <!--en:d0f6a0a6-->
 3. Warum wechselt `d2l.Embed` vom One-Hot-Matrixprodukt zurück zur üblichen Scatter-Add-Implementierung `nnx.Embed`, wenn der Umfang des Vokabulars $1{,}024$ übersteigt?
@@ -278,7 +278,7 @@ Warum prüft die Methode `d2l.ProgressBoard.show()` die Bedingung `os.environ.ge
 | **Räumliche Darstellungen und Intervalle** | `show_trace_2d`, `show_images`, `show_heatmaps`, `plot_intervals` | Gemeinsame Farbskalierung für Heatmaps, adaptive Raster für Niveaulinien, nebeneinanderliegende Fehlerbalken und Bänder auf logarithmischer oder linearer Skala |
 
 <!--en:7c6a2c5d-->
-| **Bestärkendes Lernen und JIT in JAX** | `run_seeds`, `on_grid`, `plot_curves`, `show_grid`, `forward_np`, `padded` | Median und Quartilbänder über mehrere Zufallsstartwerte, Strategiepfeile in Gitterwelten, Batchgrößen als Zweierpotenzen zur Wiederverwendung kompilierten XLA-Codes |
+| **Reinforcement Learning und JIT in JAX** | `run_seeds`, `on_grid`, `plot_curves`, `show_grid`, `forward_np`, `padded` | Median und Quartilbänder über mehrere Zufallsstartwerte, Strategiepfeile in Gitterwelten, Batchgrößen als Zweierpotenzen zur Wiederverwendung kompilierten XLA-Codes |
 
 <!--en:c6bbed7a-->
 | **Bild- und Sprachverarbeitung** | `FeatureCNN`, `Embed`, `sequence_mask`, `download_extract` | Wahrnehmungsmerkmale auf CIFAR-10, One-Hot-Rückwärtsdurchlauf für Einbettungen mit `@jax.custom_vjp`, atomarer Cache mit SHA-1 |

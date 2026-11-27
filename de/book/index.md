@@ -47,7 +47,7 @@ pagetitle: "Dive into Deep Learning"
       <p class="range">Kapitel 9&ndash;17 &middot; PyTorch, JAX</p>
 
 <!--en:4c83f596-->
-      <p>Machen Sie hier weiter, wenn Sie mit dem Training neuronaler Netze vertraut sind. Sie lernen moderne Optimierungsverfahren bis hin zu Muon kennen, außerdem Attention und Transformer, Zustandsraummodelle (engl. state space models) von Mamba bis zu hybriden Architekturen, GPU-Leistung und verteiltes Training, bestärkendes Lernen (engl. reinforcement learning), GANs und Diffusionsmodelle.</p>
+      <p>Machen Sie hier weiter, wenn Sie mit dem Training neuronaler Netze vertraut sind. Sie lernen moderne Optimierungsverfahren bis hin zu Muon kennen, außerdem Attention und Transformer, Zustandsraummodelle (engl. state space models) von Mamba bis zu hybriden Architekturen, GPU-Leistung und verteiltes Training, Reinforcement Learning, GANs und Diffusionsmodelle.</p>
 
 <!--en:933fb882-->
       <p class="after">Danach können Sie einen Transformer bauen und trainieren, Engpässe auf einer oder mehreren GPUs erkennen und sowohl RL-Agenten als auch moderne generative Modelle trainieren.</p>
@@ -146,7 +146,7 @@ pagetitle: "Dive into Deep Learning"
         <li><strong>Eigenständige Buchteile:</strong> Das Buch umfasst inzwischen über 3000 Seiten. Es gliedert sich in eigenständige Teile, sodass Sie direkt bei Ihrem Thema einsteigen können. Der Teil <em>Grundlagen</em> eignet sich als eigenständige Begleitlektüre für einen Einführungskurs.</li>
 
 <!--en:d76693e1-->
-        <li><strong>Weitgehend neuer Teil <em>Fortgeschrittene Themen</em>:</strong> Er führt bei Optimierung, Transformern, Zustandsraummodellen, bestärkendem Lernen, GANs und Diffusionsmodellen nahe an den Stand der Forschung heran.</li>
+        <li><strong>Weitgehend neuer Teil <em>Fortgeschrittene Themen</em>:</strong> Er führt bei Optimierung, Transformern, Zustandsraummodellen, Reinforcement Learning, GANs und Diffusionsmodellen nahe an den Stand der Forschung heran.</li>
 
 <!--en:05d5a62f-->
         <li><strong>Erweiterter mathematischer Anhang:</strong> Der Umfang hat sich mehr als verdoppelt. Der Anhang vertieft Optimierung, Informationstheorie und die zeitkontinuierliche Dynamik, die Diffusions- und Flussmodellen zugrunde liegt.</li>
@@ -257,7 +257,7 @@ pagetitle: "Dive into Deep Learning"
   <h3>Beiträge zu Kapiteln und Code</h3>
 
 <!--en:d8c21546-->
-    <li class="d2l-contrib"><img src="static/landing/rasool.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://sites.google.com/site/rfakoor">Rasool Fakoor</a> <span class="affil">Modal</span><span class="what">Bestärkendes Lernen und Diffusionsmodelle</span></span></li>
+    <li class="d2l-contrib"><img src="static/landing/rasool.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://sites.google.com/site/rfakoor">Rasool Fakoor</a> <span class="affil">Modal</span><span class="what">Reinforcement Learning und Diffusionsmodelle</span></span></li>
 
 <!--en:d0d563e2-->
     <li class="d2l-contrib"><img src="static/landing/brent.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://www.linkedin.com/in/brent-werness-1506471b7/">Brent Werness</a> <span class="affil">Amazon</span><span class="what">Mathematik für Deep Learning</span></span></li>
@@ -266,10 +266,10 @@ pagetitle: "Dive into Deep Learning"
     <li class="d2l-contrib"><img src="static/landing/rachel.jpeg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://www.linkedin.com/in/rachelsonghu/">Rachel Hu</a> <span class="affil">Energent.ai</span><span class="what">Mathematik für Deep Learning</span></span></li>
 
 <!--en:48c3ed3b-->
-    <li class="d2l-contrib"><img src="static/landing/pratik.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://pratikac.github.io/">Pratik Chaudhari</a> <span class="affil">University of Pennsylvania</span><span class="what">Bestärkendes Lernen (erste Auflage)</span></span></li>
+    <li class="d2l-contrib"><img src="static/landing/pratik.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://pratikac.github.io/">Pratik Chaudhari</a> <span class="affil">University of Pennsylvania</span><span class="what">Reinforcement Learning (erste Auflage)</span></span></li>
 
 <!--en:a428841a-->
-    <li class="d2l-contrib"><img src="static/landing/kavosh.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://cs.brown.edu/~kasadiat/">Kavosh Asadi</a> <span class="affil">Meta</span><span class="what">Bestärkendes Lernen (erste Auflage)</span></span></li>
+    <li class="d2l-contrib"><img src="static/landing/kavosh.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://cs.brown.edu/~kasadiat/">Kavosh Asadi</a> <span class="affil">Meta</span><span class="what">Reinforcement Learning (erste Auflage)</span></span></li>
 
 <!--en:bb4c7704-->
     <li class="d2l-contrib"><img src="static/landing/andrew.jpg" alt="" width="40" height="40" loading="lazy"><span><a class="name" href="https://cims.nyu.edu/~andrewgw/">Andrew Gordon Wilson</a> <span class="affil">NYU &middot; Perplexity</span><span class="what">Gauß-Prozesse</span></span></li>

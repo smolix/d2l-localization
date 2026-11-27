@@ -26,7 +26,7 @@ In :numref:`sec_regularized` hielten wir eine Strategie nahe an einer festen Ref
 Der Agent erhält in jedem besuchten Zustand $\beta$ Belohnungseinheiten je Nat Entropie. Die *Temperatur* $\beta$ hat also die Einheit Belohnung pro Nat. Wir behalten die Bezeichnung $\beta$ aus :numref:`sec_regularized` bei. Die Arbeiten zu SAC schreiben $\alpha$. In diesem Buch bezeichnet dieser Buchstabe die Schrittweite beim Lernen aus zeitlichen Differenzen.
 
 <!--en:26d25071-->
-Anders als der optionale Entropiebonus im Akteurverlust aus :numref:`sec_ppo` gehört dieser Term zur Zielfunktion. Er verändert das Optimum. Wo mehrere Aktionen annähernd gleich gut sind, bleibt die beste Strategie stochastisch. Bei kontinuierlichen Aktionen ist $H$ eine differentielle Entropie, also das Integral über $-\pi \log \pi$. Für eine Dichte, deren Masse auf einem Intervall der Länge kleiner als eins liegt, ist sie negativ. Bestärkendes Lernen mit maximaler Entropie ist älter als Deep Learning :cite:`Ziebart.Maas.Bagnell.ea.2008`. SAC ist das zugehörige Off-Policy-Akteur-Kritiker-Verfahren.
+Anders als der optionale Entropiebonus im Akteurverlust aus :numref:`sec_ppo` gehört dieser Term zur Zielfunktion. Er verändert das Optimum. Wo mehrere Aktionen annähernd gleich gut sind, bleibt die beste Strategie stochastisch. Bei kontinuierlichen Aktionen ist $H$ eine differentielle Entropie, also das Integral über $-\pi \log \pi$. Für eine Dichte, deren Masse auf einem Intervall der Länge kleiner als eins liegt, ist sie negativ. Reinforcement Learning mit maximaler Entropie ist älter als Deep Learning :cite:`Ziebart.Maas.Bagnell.ea.2008`. SAC ist das zugehörige Off-Policy-Akteur-Kritiker-Verfahren.
 
 <!--en:70fa3051-->
 Wie die anderen Verfahren dieses Kapitels wechselt SAC zwischen zwei Schritten der verallgemeinerten Strategieiteration (:numref:`fig_rl_gpi`). Die Bewertung nähert die Wertschätzungen denen der aktuellen Strategie an. Die Verbesserung verschiebt die Strategie hin zu den Aktionen, die nach diesen Schätzungen besser sind. Die Entropie verändert beide Schritte. Wie das geschieht, sehen wir schon ohne Netz an einem Zustand mit zwei Aktionen.
@@ -344,7 +344,7 @@ SAC maximiert mit einem Off-Policy-Akteur-Kritiker-Verfahren die Summe aus Beloh
 [Diskussion](https://d2l.discourse.group/t/36805)
 
 <!--en:dc7582ed-->
-Kontinuierliche Regelung mit DDPG, TD3 und Soft Actor-Critic<br>**Bestärkendes Lernen mit maximaler Entropie · pfadweise Gradienten · Jacobi-Determinante der gestauchten Gauß-Verteilung · zwei Kritiker · automatische Temperaturwahl · Updates pro Umgebungsschritt**
+Kontinuierliche Regelung mit DDPG, TD3 und Soft Actor-Critic<br>**Reinforcement Learning mit maximaler Entropie · pfadweise Gradienten · Jacobi-Determinante der gestauchten Gauß-Verteilung · zwei Kritiker · automatische Temperaturwahl · Updates pro Umgebungsschritt**
 
 <!--en:1f6db362-->
 ::: {.slide title="Warum kontinuierliche Regelung Replay und pfadweise Ableitungen braucht"}
@@ -374,10 +374,10 @@ Kontinuierliche Regelung mit DDPG, TD3 und Soft Actor-Critic<br>**Bestärkendes 
 - **SAC (2018):** Kombiniert zwei Kritiker mit einem **stochastischen Akteur mit gestauchter Gauß-Verteilung** und der Belohnung $-\beta \log \pi_\theta$ für maximale Entropie.
 
 <!--en:2a328e2a-->
-::: {.slide title="Die Zielfunktion beim bestärkenden Lernen mit maximaler Entropie"}
+::: {.slide title="Die Zielfunktion beim Reinforcement Learning mit maximaler Entropie"}
 
 <!--en:9b0446a6-->
-[Bestärkendes Lernen mit maximaler Entropie]{.kicker}
+[Reinforcement Learning mit maximaler Entropie]{.kicker}
 
 <!--en:e39250ce-->
 - **Temperatur $\beta > 0$:** Legt den Umrechnungskurs in Belohnungseinheiten pro Nat differentieller Entropie $H(\pi) = -\mathbb{E}[\log \pi(a \mid s)]$ fest.

@@ -270,7 +270,7 @@ Ein Übergang hält fest, wie sich die Umgebung verändert. Passen wir ein Netz 
 [Diskussion](https://d2l.discourse.group/t/36872)
 
 <!--en:b5ae5fe4-->
-Modellbasiertes tiefes bestärkendes Lernen: Gelernte Weltmodelle und Planung<br>**Regression der Dynamik · Fehlerfortpflanzung in simulierten Trajektorien · MPC mit Random Shooting · Initialisierung mit dem bisherigen Plan · Strategiedestillation · Dyna und MBPO**
+Modellbasiertes Deep Reinforcement Learning: Gelernte Weltmodelle und Planung<br>**Regression der Dynamik · Fehlerfortpflanzung in simulierten Trajektorien · MPC mit Random Shooting · Initialisierung mit dem bisherigen Plan · Strategiedestillation · Dyna und MBPO**
 
 <!--en:8c9c520e-->
 ::: {.slide title="Was ein Übergang über einen skalaren Wert hinaus verrät"}
@@ -543,7 +543,7 @@ Begründen Sie Ihre Antworten auf diese drei Fragen zum Entwurf modellbasierter 
 3. Im unteren Halbkreis, wo die Trainingsdaten liegen, stimmen die 5 Netze gut überein. **Im unbesuchten oberen Halbkreis weichen ihre Vorhersagen stark voneinander ab.** Die Varianz im Ensemble ist deshalb ein guter Indikator für epistemische Unsicherheit (PETS, Chua et al., 2018).
 
 <!--en:96b6f310-->
-::: {.slide title="Zusammenfassung: Modellbasiertes tiefes bestärkendes Lernen"}
+::: {.slide title="Zusammenfassung: Modellbasiertes Deep Reinforcement Learning"}
 
 <!--en:c5a222f8-->
 [Das Wichtigste in Kürze]{.kicker}

@@ -1529,8 +1529,9 @@
       "total": 1191,
       "statuses": {
         "verified_external": 81,
-        "proposed": 1100,
-        "verified_d2l": 10
+        "proposed": 1097,
+        "verified_d2l": 10,
+        "invariant": 3
       },
       "by_topic": {
         "attention": {
@@ -1562,8 +1563,9 @@
           "proposed": 24
         },
         "deep reinforcement learning": {
-          "proposed": 32,
-          "verified_external": 1
+          "proposed": 31,
+          "verified_external": 1,
+          "invariant": 1
         },
         "diffusion models": {
           "proposed": 102,
@@ -1660,7 +1662,8 @@
         },
         "reinforcement learning": {
           "verified_external": 10,
-          "proposed": 54
+          "invariant": 2,
+          "proposed": 52
         },
         "transformers": {
           "proposed": 51,
@@ -2353,6 +2356,7 @@
     "de/bert: English retained; inspect loanword/name rationale",
     "de/generator: English retained; inspect loanword/name rationale",
     "de/autoencoder: English retained; inspect loanword/name rationale",
+    "de/reinforcement-learning: English retained; inspect loanword/name rationale",
     "de/agent: English retained; inspect loanword/name rationale",
     "de/q-learning: English retained; inspect loanword/name rationale",
     "de/exploration: English retained; inspect loanword/name rationale",
@@ -2381,6 +2385,7 @@
     "de/off-policy: English retained; inspect loanword/name rationale",
     "de/on-policy: English retained; inspect loanword/name rationale",
     "de/regret: English retained; inspect loanword/name rationale",
+    "de/deep-reinforcement-learning: English retained; inspect loanword/name rationale",
     "de/euler-maruyama: English retained; inspect loanword/name rationale",
     "de/mixture-of-experts: English retained; inspect loanword/name rationale",
     "de/adamw: English retained; inspect loanword/name rationale",
@@ -2404,7 +2409,7 @@
     "de/checkpointing: English retained; inspect loanword/name rationale",
     "de/soft-actor-critic: English retained; inspect loanword/name rationale",
     "de/deep-q-network: English retained; inspect loanword/name rationale",
-    "de/proximal-policy-optimization: English retained; inspect loanword/name rationale",
+    "de/offline-reinforcement-learning: English retained; inspect loanword/name rationale",
     "de/bootstrapping: English retained; inspect loanword/name rationale",
     "de/pseudoinverse: English retained; inspect loanword/name rationale",
     "de/affine-transformation: English retained; inspect loanword/name rationale",

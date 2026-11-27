@@ -342,7 +342,7 @@ Deep Q-Networks, Replay-Puffer und Double DQN<br>**tödliche Triade · Bairds Ge
   - *Funktionsapproximation + Off-Policy (ohne Bootstrapping):* **Verhaltensklonen** ist gewöhnliches überwachtes Lernen mit festen Zielwerten.
 
 <!--en:1334c912-->
-- **Gemeinsame Schnittmenge:** DQN und bestärkendes Offline-Lernen verbinden alle drei Bestandteile und brauchen daher eine Architektur, die das Lernen stabilisiert.
+- **Gemeinsame Schnittmenge:** DQN und Offline Reinforcement Learning verbinden alle drei Bestandteile und brauchen daher eine Architektur, die das Lernen stabilisiert.
 
 <!--en:9bd23766-->
 ::: {.slide title="Zwei Elemente der Architektur: Experience-Replay und Zielnetze"}

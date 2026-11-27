@@ -1,5 +1,5 @@
 <!--en:1f5feea4-->
-# Bestärkendes Lernen zur Sequenzgenerierung
+# Reinforcement Learning zur Sequenzgenerierung
 
 <!--en:de3f025a-->
 Jedes Sprachmodell in diesem Buch hat gelernt, Text nachzuahmen. Das ist Verhaltensklonen (engl. behavior cloning, :numref:`sec_imitation`) am Beispiel der Menschen, die das Korpus verfasst haben. Die heute gebräuchlichen Modelle erhalten im weiteren Training ein Signal, das kein Korpus enthält. Ein Prüfprogramm beurteilt, ob das Endergebnis eines Lösungswegs stimmt, oder ein Leser entscheidet, welche von zwei Antworten besser ist. Der Score kommt nur einmal, nachdem das Modell die gesamte Antwort selbst geschrieben hat. Es gibt kein Zieltoken, das es kopieren könnte. In :numref:`sec_policygradient` und :numref:`sec_baselines` haben wir unter diesen Bedingungen eine Strategie (engl. policy) mit vier Rechenaufgaben als Prompts und einem Prüfprogramm trainiert.
@@ -23,7 +23,7 @@ Eine Antwort $y = (a_1, \ldots, a_T)$ auf einen Prompt $x$ ist eine Trajektorie,
 :Autoregressive Textgenerierung als Markov-Entscheidungsprozess.
 
 <!--en:b89d65cb-->
-| Sprachmodellierung | Bestärkendes Lernen |
+| Sprachmodellierung | Reinforcement Learning |
 
 <!--en:0f42cda1-->
 | Prompt $x \sim \mu_0$ | Anfangszustand $s_1$ |
@@ -74,7 +74,7 @@ Bei bekannten Übergängen und einer einzigen terminalen Belohnung (engl. termin
 ## Prüfprogramme, Belohnungsmodelle und ihre Schlupflöcher
 
 <!--en:cab4da86-->
-Die Belohnung kann von einem Modell stammen, das wir an menschliche Vergleiche angepasst haben (:numref:`sec_regularized`). Am unzuverlässigsten ist es dort, wo keine Vergleiche vorlagen. Alternativ liefert eine Prüfung die Belohnung, etwa eine Testumgebung oder ein Programm, das auf exakte Übereinstimmung prüft. Mit solchem *bestärkenden Lernen aus überprüfbaren Belohnungen* (engl. reinforcement learning from verifiable rewards, RLVR) trainiert man neuere Modelle für schlussfolgerndes Denken :cite:`DeepSeekAI.2025`. Ein Prüfprogramm beurteilt genau die Eigenschaft, die es prüft. Das kann eine andere sein als die beabsichtigte.
+Die Belohnung kann von einem Modell stammen, das wir an menschliche Vergleiche angepasst haben (:numref:`sec_regularized`). Am unzuverlässigsten ist es dort, wo keine Vergleiche vorlagen. Alternativ liefert eine Prüfung die Belohnung, etwa eine Testumgebung oder ein Programm, das auf exakte Übereinstimmung prüft. Mit solchem *Reinforcement Learning aus überprüfbaren Belohnungen* (engl. reinforcement learning from verifiable rewards, RLVR) trainiert man neuere Modelle für schlussfolgerndes Denken :cite:`DeepSeekAI.2025`. Ein Prüfprogramm beurteilt genau die Eigenschaft, die es prüft. Das kann eine andere sein als die beabsichtigte.
 
 <!--en:80aa4186-->
 ### Der Gruppenschritt mit KL-Strafterm
@@ -216,7 +216,7 @@ Eine Antwort ist eine Trajektorie aus Token. Beide Sichtweisen liefern denselben
 [Diskussion](https://d2l.discourse.group/t/36807)
 
 <!--en:ad3fc336-->
-Bestärkendes Lernen für Sequenzgenerierung und große Sprachmodelle<br>**Token-MDP · Zerlegung des Erfolgsbeitrags · überprüfbare Belohnungen (RLVR) · GRPO und asymmetrisches Clipping · KL-Strafterm k3 · DPO**
+Reinforcement Learning für Sequenzgenerierung und große Sprachmodelle<br>**Token-MDP · Zerlegung des Erfolgsbeitrags · überprüfbare Belohnungen (RLVR) · GRPO und asymmetrisches Clipping · KL-Strafterm k3 · DPO**
 
 <!--en:e7698634-->
 ::: {.slide title="Von der Imitation des nächsten Tokens zum Post-Training mit Prüfprogramm"}
@@ -287,7 +287,7 @@ Vergleich des Antwortgewichts $r(x, y) - V(x)$ mit den vom Präfix abhängigen T
 [Vereinfachungen der Architektur]{.kicker}
 
 <!--en:a0a2e01f-->
-- **Was beim bestärkenden Lernen mit nur einer LLM-Antwort entfällt:** Die Verkettung von Token ist exakt, daher brauchen wir kein erlerntes Weltmodell. Ein Q-Netz mit Erfahrungswiedergabe entfällt, weil bei $|\mathcal{A}| \sim 10^5$ Token eine starke $\max_a$-Verzerrung entsteht.
+- **Was beim Reinforcement Learning mit nur einer LLM-Antwort entfällt:** Die Verkettung von Token ist exakt, daher brauchen wir kein erlerntes Weltmodell. Ein Q-Netz mit Erfahrungswiedergabe entfällt, weil bei $|\mathcal{A}| \sim 10^5$ Token eine starke $\max_a$-Verzerrung entsteht.
 
 <!--en:79154003-->
 - **Was wesentlich bleibt:** Gruppen-Baselines (GRPO/RLOO) oder Kritiker für Präfixe senken die Varianz. Clipping des Verhältnisses und KL-Strafterme sichern Updates über mehrere Epochen ab und verhindern Reward-Hacking.

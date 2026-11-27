@@ -549,7 +549,7 @@ Welches Verhalten und welche Gradienten ergeben sich in den einzelnen Fällen?
 | **Zurücksetzen / Akkumulieren** | `w.grad.zero_()` (addiert standardmäßig mit `+=`) | Legt fest, ob der neue Gradient zum letzten addiert wird oder ihn ersetzt | Gradienten über Mikrobatches akkumulieren oder neuen Optimierungsschritt beginnen |
 
 <!--en:9e0f8049-->
-| **Teilgraph abtrennen** | `u.detach()` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim bestärkenden Lernen, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
+| **Teilgraph abtrennen** | `u.detach()` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim Reinforcement Learning, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
 
 <!--en:666da2dd-->
 | **Inferenz ohne Gradienten** | `with torch.no_grad():` | Kein Graphaufbau und keine Zwischenspeicherung von Aktivierungen ($3\text{--}10\times$ weniger GPU-Speicher) | Validierungsschleifen, Inferenz im Einsatz, Parameteraktualisierungen |
@@ -573,7 +573,7 @@ Welches Verhalten und welche Gradienten ergeben sich in den einzelnen Fällen?
 | **Zurücksetzen / Akkumulieren** | Keine: neuer Tensor pro Aufruf | Legt fest, ob der neue Gradient zum letzten addiert wird oder ihn ersetzt | Gradienten über Mikrobatches akkumulieren oder neuen Optimierungsschritt beginnen |
 
 <!--en:e2ffcd7f-->
-| **Teilgraph abtrennen** | `tf.stop_gradient(u)` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim bestärkenden Lernen, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
+| **Teilgraph abtrennen** | `tf.stop_gradient(u)` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim Reinforcement Learning, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
 
 <!--en:523fca08-->
 | **Inferenz ohne Gradienten** | Außerhalb von `GradientTape` | Kein Graphaufbau und keine Zwischenspeicherung von Aktivierungen ($3\text{--}10\times$ weniger GPU-Speicher) | Validierungsschleifen, Inferenz im Einsatz, Parameteraktualisierungen |
@@ -597,7 +597,7 @@ Welches Verhalten und welche Gradienten ergeben sich in den einzelnen Fällen?
 | **Zurücksetzen / Akkumulieren** | Keine: neues Array pro Aufruf | Legt fest, ob der neue Gradient zum letzten addiert wird oder ihn ersetzt | Gradienten über Mikrobatches akkumulieren oder neuen Optimierungsschritt beginnen |
 
 <!--en:7ae527b9-->
-| **Teilgraph abtrennen** | `jax.lax.stop_gradient(u)` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim bestärkenden Lernen, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
+| **Teilgraph abtrennen** | `jax.lax.stop_gradient(u)` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim Reinforcement Learning, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
 
 <!--en:cfb2ff22-->
 | **Inferenz ohne Gradienten** | Außerhalb von `jax.grad` | Kein Graphaufbau und keine Zwischenspeicherung von Aktivierungen ($3\text{--}10\times$ weniger GPU-Speicher) | Validierungsschleifen, Inferenz im Einsatz, Parameteraktualisierungen |
@@ -621,7 +621,7 @@ Welches Verhalten und welche Gradienten ergeben sich in den einzelnen Fällen?
 | **Zurücksetzen / Akkumulieren** | Keine: überschreibt standardmäßig `w.grad` | Legt fest, ob der neue Gradient zum letzten addiert wird oder ihn ersetzt | Gradienten über Mikrobatches akkumulieren oder neuen Optimierungsschritt beginnen |
 
 <!--en:9e0f8049-2-->
-| **Teilgraph abtrennen** | `u.detach()` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim bestärkenden Lernen, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
+| **Teilgraph abtrennen** | `u.detach()` | Konstante Sicht ohne Kopie, trennt die Rückwärtskante | Zielnetze beim Reinforcement Learning, Lehrerzweig von BYOL/SimSiam, GAN-Schritte |
 
 <!--en:0bff2f9c-->
 | **Inferenz ohne Gradienten** | Außerhalb von `autograd.record()` | Kein Graphaufbau und keine Zwischenspeicherung von Aktivierungen ($3\text{--}10\times$ weniger GPU-Speicher) | Validierungsschleifen, Inferenz im Einsatz, Parameteraktualisierungen |

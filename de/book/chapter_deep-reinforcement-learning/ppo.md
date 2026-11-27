@@ -1,11 +1,11 @@
 <!--en:ce329911-->
-# Trust-Regionen und Proximal Policy Optimization
+# Trust-Regionen und Proximal Policy Optimierung
 
 <!--en:25d8cdf3-->
 Die Agenten aus :numref:`sec_deeprl` und :numref:`sec_actorcritic` sammeln acht Episoden, machen einen Gradientenschritt und verwerfen den Batch. Sobald der Agent den Stab gut im Gleichgewicht hält, liefern diese acht Episoden viertausend Schritte Erfahrung. All diese Erfahrung fließt in ein einziges Update ein. Zudem ist der Schritt unbeschränkt. Ein großes Update kann die Strategie (engl. policy) beliebig stark verändern. Den nächsten Batch sammelt der Agent dann mit der so entstandenen Strategie. Können wir mit einem Batch mehrere Schritte machen, und wie weit dürfen sie gehen?
 
 <!--en:c14d7554-->
-Die Antwort beginnt mit einer Eigenschaft der Parameter. Je nach Ausgangspunkt lässt dieselbe Parameteränderung das Verhalten einer Strategie fast unverändert oder verändert es vollständig. Die Schrittweite im Parameterraum kontrolliert also die entscheidende Größe nicht, nämlich die Verhaltensänderung. John Schulman und seine Kollegen setzten 2015 direkt an dieser Änderung an. Trust Region Policy Optimization (TRPO) begrenzt die Divergenz zwischen der alten und der neuen Aktionsverteilung in den besuchten Zuständen. Grundlage ist ein Satz darüber, welche Verbesserung ein solcher Schritt garantiert :cite:`Schulman.Levine.Abbeel.ea.2015`. Zwei Jahre später ersetzte Proximal Policy Optimization (PPO) die Nebenbedingung durch eine Zielfunktion mit Clipping, die sich mit jedem gradientenbasierten Optimierer optimieren lässt :cite:`Schulman.Wolski.Dhariwal.ea.2017`. PPO wurde zum Standardverfahren für Strategiegradienten, von simulierten Robotern bis zum Fine-Tuning von Sprachmodellen anhand menschlicher Rückmeldungen :cite:`ouyang2022training`.
+Die Antwort beginnt mit einer Eigenschaft der Parameter. Je nach Ausgangspunkt lässt dieselbe Parameteränderung das Verhalten einer Strategie fast unverändert oder verändert es vollständig. Die Schrittweite im Parameterraum kontrolliert also die entscheidende Größe nicht, nämlich die Verhaltensänderung. John Schulman und seine Kollegen setzten 2015 direkt an dieser Änderung an. Trust Region Policy Optimization (TRPO) begrenzt die Divergenz zwischen der alten und der neuen Aktionsverteilung in den besuchten Zuständen. Grundlage ist ein Satz darüber, welche Verbesserung ein solcher Schritt garantiert :cite:`Schulman.Levine.Abbeel.ea.2015`. Zwei Jahre später ersetzte Proximal Policy Optimierung (PPO) die Nebenbedingung durch eine Zielfunktion mit Clipping, die sich mit jedem gradientenbasierten Optimierer optimieren lässt :cite:`Schulman.Wolski.Dhariwal.ea.2017`. PPO wurde zum Standardverfahren für Strategiegradienten, von simulierten Robotern bis zum Fine-Tuning von Sprachmodellen anhand menschlicher Rückmeldungen :cite:`ouyang2022training`.
 
 <!--en:4bd21aa9-->
 In diesem Abschnitt leiten wir beide Verfahren her. Eine Strategie mit zwei Aktionen zeigt, weshalb der Abstand im Parameterraum die falsche Größe ist. Durch einen Maßwechsel können wir eine neue Strategie anhand eines Batchs der alten Strategie exakt bewerten. Allerdings wächst die Varianz mit der Episodenlänge. Behalten wir pro Schritt nur ein Verhältnis bei, wird die Wiederverwendung praktikabel. Ein kurzes Lemma zeigt, was diese Näherung auslässt. TRPO begrenzt den Fehler, PPO setzt dafür Clipping ein. An CartPole messen wir dann, wie viele Umgebungsschritte die Wiederverwendung spart, was ohne Clipping schiefgeht und welche Kennzahlen beim Training einer Strategie aufschlussreich sind.
@@ -332,7 +332,7 @@ Ein On-Policy-Batch mit Tausenden von Umgebungsschritten sollte mehr als einen G
 [Diskussionen](https://d2l.discourse.group/t/36802)
 
 <!--en:345d6ff1-->
-Trust-Regionen und Proximal Policy Optimization<br>**Parameterabstand und Strategieabstand · Importance-Sampling · Lemma zur Ertragsdifferenz · TRPO · PPO-Clipping · Batchdiagnostik**
+Trust-Regionen und Proximal Policy Optimierung<br>**Parameterabstand und Strategieabstand · Importance-Sampling · Lemma zur Ertragsdifferenz · TRPO · PPO-Clipping · Batchdiagnostik**
 
 <!--en:ec0e327f-->
 ::: {.slide title="Warum ein Gradientenschritt einen Batch von 4000 Schritten kaum ausschöpft"}
@@ -425,7 +425,7 @@ Um das exponentielle Wachstum mit dem Horizont zu vermeiden, lassen wir das Prod
 ::: {.slide title="PPO mit Clipping erster Ordnung für Wahrscheinlichkeitsverhältnisse"}
 
 <!--en:8437012b-->
-[Proximal Policy Optimization]{.kicker}
+[Proximal Policy Optimierung]{.kicker}
 
 <!--en:7a48b182-->
 - **PPO (Schulman et al., 2017)** ersetzt die TRPO-Nebenbedingung zweiter Ordnung, die Fisher-Vektor-Produkte erfordert, durch eine Ersatzzielfunktion mit Clipping für ein Verfahren erster Ordnung ($\epsilon_{\textrm{clip}} = 0.2$):

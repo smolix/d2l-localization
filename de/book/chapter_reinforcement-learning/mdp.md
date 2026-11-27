@@ -14,7 +14,7 @@ Wir betrachten einen zugefrorenen See mit sechzehn Zellen. Er ist klein genug, u
 In diesem Kapitel verwenden wir die Symbole aus :numref:`tab_rl_notation`. Die Symbole für diesen Abschnitt definieren wir im Folgenden. Die übrigen führen wir in späteren Abschnitten jeweils bei der ersten Verwendung ein.
 
 <!--en:cbdc8075-->
-:Symbole der Kapitel zum bestärkenden Lernen. Die Zeilen ab $V^\pi$ gehören zu späteren Abschnitten, die Zeilen ab $\lambda$ zu :numref:`chap_deep_rl`. Die Explorationsrate $\epsilon$ und die Wahrscheinlichkeit einer Abweichung pro Schritt $\varepsilon$ haben unterschiedliche Symbole, ebenso eine Antwort $y$ und ein Zielwert $y_t$. Ein $\mu$ mit einem anderen Index oder Argument als 0 bezeichnet einen Mittelwert (eines Arms oder einer Gauß-Verteilung).
+:Symbole der Kapitel zum Reinforcement Learning. Die Zeilen ab $V^\pi$ gehören zu späteren Abschnitten, die Zeilen ab $\lambda$ zu :numref:`chap_deep_rl`. Die Explorationsrate $\epsilon$ und die Wahrscheinlichkeit einer Abweichung pro Schritt $\varepsilon$ haben unterschiedliche Symbole, ebenso eine Antwort $y$ und ein Zielwert $y_t$. Ein $\mu$ mit einem anderen Index oder Argument als 0 bezeichnet einen Mittelwert (eines Arms oder einer Gauß-Verteilung).
 
 <!--en:b85a0299-->
 | Symbol | Bedeutung | Eingeführt in |

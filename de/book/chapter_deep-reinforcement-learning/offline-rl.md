@@ -1,5 +1,5 @@
 <!--en:2f930a8b-->
-# Bestärkendes Offline-Lernen
+# Offline Reinforcement Learning
 
 <!--en:0cc7f509-->
 Alle bisherigen Verfahren in diesem Kapitel konnten etwas ausprobieren. Wenn Q-Learning eine Aktion überschätzte, führte der Agent sie irgendwann aus, beobachtete das Ergebnis und korrigierte seine Tabelle. Der Planer aus :numref:`sec_model_based` vertraute seinem gelernten Modell nur in der Nähe der Zustände, die er in seinen eigenen Episoden besucht hatte. Bei Bedarf sammelte er weitere Episoden. Nehmen wir nun an, es kommen keine Episoden mehr hinzu. Ein Krankenhaus hat Behandlungsdaten aus vielen Jahren, will aber keine Experimente an seinen Patienten durchführen. Ein Unternehmen hat die Protokolle des Empfehlungssystems, das es im Vorjahr eingesetzt hat. Ein Robotiklabor hat stundenlange Aufzeichnungen von Demonstrationen mit ferngesteuerten Robotern. Lässt sich allein aus solchen Aufzeichnungen eine Strategie (engl. policy) lernen, und wie gut kann sie sein?
@@ -29,7 +29,7 @@ SARSA, die On-Policy-Variante des Q-Learnings aus :numref:`sec_qlearning`, verwe
 Mitteln wir über $a' \sim \pi_e(\cdot \mid s')$, erhalten wir als Zielwert das Bellman-Erwartungswert-Backup von $\pi_e$. SARSA lernt also $Q^{\pi_e}$, die Aktionswerte der Strategie, von der die Daten stammen. Aus einem fremden Protokoll lernt SARSA nur etwas über die fremde Strategie. Q-Learning lernt $Q^*$ aus jedem Protokoll. Übung :exref:`ex_qlearning-cliff-walking` aus :numref:`sec_qlearning` vergleicht beide Verfahren am Beispiel der Klippe.
 
 <!--en:06b062ee-->
-Auch bei einem Off-Policy-Verfahren reichen beliebige Daten nicht aus. Ein Tabelleneintrag beim Q-Learning ist nur so gut wie die Übergänge, auf denen er beruht. Für jeden Zustand, den die gierige Strategie erreicht, muss ihr gewähltes Zustand-Aktion-Paar also schon erprobt sein, und zwar oft genug für eine Wertschätzung. Diese Anforderung heißt *Abdeckungsbedingung* (engl. coverage condition). Online verbessert ein Agent eine lückenhafte Abdeckung, indem er dorthin geht, wo seine Schätzungen unsicher sind. Beim *bestärkenden Offline-Lernen* (engl. offline reinforcement learning) erhält der Agent ausschließlich einen festen Datensatz :cite:`Levine.Kumar.Tucker.ea.2020`. Er muss mit dessen Abdeckung auskommen.
+Auch bei einem Off-Policy-Verfahren reichen beliebige Daten nicht aus. Ein Tabelleneintrag beim Q-Learning ist nur so gut wie die Übergänge, auf denen er beruht. Für jeden Zustand, den die gierige Strategie erreicht, muss ihr gewähltes Zustand-Aktion-Paar also schon erprobt sein, und zwar oft genug für eine Wertschätzung. Diese Anforderung heißt *Abdeckungsbedingung* (engl. coverage condition). Online verbessert ein Agent eine lückenhafte Abdeckung, indem er dorthin geht, wo seine Schätzungen unsicher sind. Beim *Offline Reinforcement Learning* erhält der Agent ausschließlich einen festen Datensatz :cite:`Levine.Kumar.Tucker.ea.2020`. Er muss mit dessen Abdeckung auskommen.
 
 <!--en:382edc4e-->
 ### Zwei Protokolle vom See mit rutschigem Eis
@@ -71,7 +71,7 @@ Für jedes der 40 Protokolle jeder Art passen wir sowohl die naive Tabelle ohne 
 `summary` gibt die Mediane über die 40 Protokolle aus. Außerdem gibt die Funktion an, bei wie vielen Protokollen die Vorhersage das Optimum übersteigt und bei wie vielen sie den exakten Wert der eigenen Strategie übersteigt. `tally` zählt, bei wie vielen Protokollen die Strategie eines lernenden Agenten mehr, weniger oder genauso viel erzielt wie die eines anderen:
 
 <!--en:d495e091-->
-Bei 36 von 40 Protokollen der Gleichverteilungsstrategie sagt die naive Tabelle mehr vorher, als ihre eigene Strategie erzielt. Bei 28 sagt sie sogar mehr vorher, als irgendeine Strategie erzielen kann. Der Median der Vorhersagen liegt mit etwa $0.20$ über dem Optimum $0.18$. Bei den engen Protokollen ist die Lücke größer. Bei 39 von 40 Protokollen übersteigt die Vorhersage $V^*$. Der Median liegt bei $0.25$, während die Strategien nur etwa $0.1$ erzielen. Der Vergleich zwischen Vorhersage und tatsächlichem Ertrag gehört zur üblichen Diagnose beim bestärkenden Offline-Lernen. Bei tiefen Netzen kann die Lücke weit größer sein :cite:`Fujimoto.Meger.Precup.2019`.
+Bei 36 von 40 Protokollen der Gleichverteilungsstrategie sagt die naive Tabelle mehr vorher, als ihre eigene Strategie erzielt. Bei 28 sagt sie sogar mehr vorher, als irgendeine Strategie erzielen kann. Der Median der Vorhersagen liegt mit etwa $0.20$ über dem Optimum $0.18$. Bei den engen Protokollen ist die Lücke größer. Bei 39 von 40 Protokollen übersteigt die Vorhersage $V^*$. Der Median liegt bei $0.25$, während die Strategien nur etwa $0.1$ erzielen. Der Vergleich zwischen Vorhersage und tatsächlichem Ertrag gehört zur üblichen Diagnose beim Offline Reinforcement Learning. Bei tiefen Netzen kann die Lücke weit größer sein :cite:`Fujimoto.Meger.Precup.2019`.
 
 <!--en:193df6b7-->
 Woher kommen die überhöhten Vorhersagen? Wir betrachten das erste enge Protokoll. Für jedes erprobte Paar aus einem nichtterminalen Feld tragen wir auf der waagerechten Achse seine Besuchszahl $n(s, a)$ und auf der senkrechten den Fehler $\hat{Q}(s, a) - Q^*(s, a)$ der naiven Tabelle auf. Für jedes Feld markieren wir das Paar, das die gierige Strategie wählt. Bei Gleichstand markiert `argmax` die erste Aktion, während `greedy` die Wahrscheinlichkeit gleichmäßig verteilt. Ein solcher Gleichstand ist in diesen Protokollen selten:
@@ -200,7 +200,7 @@ Wir können nun aus einem festen Protokoll eine Strategie lernen, ihre Vorhersag
 ## Zusammenfassung
 
 <!--en:acb0f7d6-->
-Beim bestärkenden Offline-Lernen lernt ein Agent eine Strategie aus einem festen Protokoll. Daten einer anderen Strategie sind dafür nur mit Off-Policy-Zielwerten wie beim Q-Learning nutzbar, und auch nur dort, wo das Protokoll die Paare der gelernten Strategie abdeckt. Ohne Interaktion wählt das Maximum im Backup unter den selten erprobten Aktionen gerade diejenigen, deren Schätzwerte zufällig zu hoch sind. Kein neuer Versuch korrigiert sie. Auf dem See mit rutschigem Eis sagt die naive Tabelle bei den meisten Protokollen mehr als das Optimum vorher, und ihre Strategie erzielt weit weniger als vorhergesagt. Pessimismus zieht in jedem Backup einen Unsicherheitsstrafterm $\kappa/\sqrt{n}$ ab, das Spiegelbild des Explorationsbonus. Bei engem Protokoll verbessert er die Strategie. Deckt das Protokoll bereits jede Aktion ab, kostet er Ertrag. Seine Stärke müssen wir ohne die exakte Bewertung wählen, die uns in den Experimenten zur Verfügung stand. Offline-Verfahren mit tiefen Netzen halten die Strategie nahe an den protokollierten Aktionen oder bestrafen unzureichend belegte Werte. Ertragskonditionierte Verfahren umgehen das Maximum. Dafür können sie Teiltrajektorien nur eingeschränkt verknüpfen und vertrauen auch auf Episoden, die nur durch Glück erfolgreich waren.
+Beim Offline Reinforcement Learning lernt ein Agent eine Strategie aus einem festen Protokoll. Daten einer anderen Strategie sind dafür nur mit Off-Policy-Zielwerten wie beim Q-Learning nutzbar, und auch nur dort, wo das Protokoll die Paare der gelernten Strategie abdeckt. Ohne Interaktion wählt das Maximum im Backup unter den selten erprobten Aktionen gerade diejenigen, deren Schätzwerte zufällig zu hoch sind. Kein neuer Versuch korrigiert sie. Auf dem See mit rutschigem Eis sagt die naive Tabelle bei den meisten Protokollen mehr als das Optimum vorher, und ihre Strategie erzielt weit weniger als vorhergesagt. Pessimismus zieht in jedem Backup einen Unsicherheitsstrafterm $\kappa/\sqrt{n}$ ab, das Spiegelbild des Explorationsbonus. Bei engem Protokoll verbessert er die Strategie. Deckt das Protokoll bereits jede Aktion ab, kostet er Ertrag. Seine Stärke müssen wir ohne die exakte Bewertung wählen, die uns in den Experimenten zur Verfügung stand. Offline-Verfahren mit tiefen Netzen halten die Strategie nahe an den protokollierten Aktionen oder bestrafen unzureichend belegte Werte. Ertragskonditionierte Verfahren umgehen das Maximum. Dafür können sie Teiltrajektorien nur eingeschränkt verknüpfen und vertrauen auch auf Episoden, die nur durch Glück erfolgreich waren.
 
 <!--en:2294243a-->
 ## Übungen
@@ -258,7 +258,7 @@ Beim bestärkenden Offline-Lernen lernt ein Agent eine Strategie aus einem feste
 [Diskussion](https://d2l.discourse.group/t/36806)
 
 <!--en:00f52c3d-->
-Bestärkendes Offline-Lernen: Verteilungsverschiebung und Pessimismus<br>**Feste Datensätze · Verknüpfen von Teiltrajektorien · Extrapolation außerhalb der Verteilung · untere Konfidenzschranken · CQL und Nebenbedingungen für Strategien**
+Offline Reinforcement Learning: Verteilungsverschiebung und Pessimismus<br>**Feste Datensätze · Verknüpfen von Teiltrajektorien · Extrapolation außerhalb der Verteilung · untere Konfidenzschranken · CQL und Nebenbedingungen für Strategien**
 
 <!--en:a480379a-->
 ::: {.slide title="Lernen ohne neue Versuche"}
@@ -437,7 +437,7 @@ Was geschieht bei den engen Protokollen mit 100 Episoden, wenn der Strafparamete
 - **Warum sich $\kappa$ offline schwer einstellen lässt:** Ohne Simulator nutzt die Off-Policy-Bewertung Wichtigkeitsgewichte $\prod_t \frac{\pi(a_t \mid s_t)}{\pi_e(a_t \mid s_t)}$ für Trajektorien. Bei einer deterministischen Strategie erhalten die meisten Episoden das Gewicht $0$. Bei den übrigen wächst die Varianz enorm.
 
 <!--en:f6e78aab-->
-::: {.slide title="Tiefes bestärkendes Offline-Lernen: Nebenbedingungen für Strategien und Strafterme für Werte"}
+::: {.slide title="Deep Offline-RL: Nebenbedingungen für Strategien und Strafterme für Werte"}
 
 <!--en:0c75face-->
 [Jenseits tabellarischer Besuchszahlen]{.kicker}
@@ -475,7 +475,7 @@ Was geschieht bei den engen Protokollen mit 100 Episoden, wenn der Strafparamete
 [Wissen überprüfen]{.kicker}
 
 <!--en:9e55f275-->
-Grundlagen des bestärkenden Offline-Lernens überprüfen:
+Grundlagen von Offline Reinforcement Learning überprüfen:
 
 <!--en:b32c4788-->
 1. **Kalibrierung und Ertrag:** Warum ist Verhaltensklonen bei den FrozenLake-Protokollen der Gleichverteilungsstrategie so gut kalibriert ($\text{pred } 0.01 \approx \text{earned } 0.01$), obwohl naives Offline-Q-Learning mehr als das Zehnfache erzielt ($\text{earned } 0.14$)?
@@ -499,7 +499,7 @@ Grundlagen des bestärkenden Offline-Lernens überprüfen:
 3. Die Werte von Aktionen, die $\mu$ *häufiger* wählt als die protokollierte Verhaltensstrategie ($\mu(a \mid s) > \hat{\pi}_e(a \mid s)$), **sinken**. Die Werte der im Protokoll häufigeren Aktionen ($\mu(a \mid s) < \hat{\pi}_e(a \mid s)$) **steigen**.
 
 <!--en:6789a403-->
-::: {.slide title="Zusammenfassung: Verfahren des bestärkenden Offline-Lernens"}
+::: {.slide title="Zusammenfassung: Verfahren von Offline Reinforcement Learning"}
 
 <!--en:c5a222f8-->
 [Das Wichtigste in Kürze]{.kicker}
