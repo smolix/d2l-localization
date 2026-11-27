@@ -148,7 +148,16 @@ translator always works on a whole section and sees more around it.
   appends the choices a later unit must follow: a term chosen without glossary
   support, how a recurring phrase is rendered, a convention for a construct.
   Every later work file includes it, so choices stay consistent across
-  chapters and across agents.
+  chapters and across agents. A log that grows long is compacted into a
+  **lexicon** (Arabic since 2026-11-27): one line per English term and sense,
+  `- english / variant (sense) → term — note`, sorted, between
+  `<!-- l10n:lexicon -->` and `<!-- l10n:lexicon-end -->`; its convention rules
+  move into `style.md`. A work file then carries only the lexicon lines whose
+  English occurs in the unit (matched like glossary terms, outside code and
+  math), plus everything outside the markers verbatim. `apply` still appends
+  unit sections after the lexicon; at each chapter's editorial pass,
+  `l10n fold <lang> <lines>` merges the chapter's terms into the lexicon
+  (`→ (delete)` removes one) and drops those sections.
 - **Editorial pass.** After all units of a chapter are translated, an editor
   (normally a different agent from the translator) reads the whole translated
   chapter against the English for flow, transitions between sections, and

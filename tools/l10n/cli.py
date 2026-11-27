@@ -273,6 +273,17 @@ def cmd_roundtrip(args):
         sys.exit(1)
 
 
+def cmd_fold(args):
+    from .units import fold_lexicon
+    lang = _lang(args)
+    path = lang.root / 'decisions.md'
+    new = Path(args.lines).read_text(encoding='utf-8').splitlines()
+    text, counts = fold_lexicon(path.read_text(encoding='utf-8'), new, args.keep_sections)
+    path.write_text(text, encoding='utf-8')
+    print(f'{path}: ' + ', '.join(f'{v} {k}' for k, v in counts.items())
+          + ('' if args.keep_sections else '; unit sections after the lexicon removed'))
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog='l10n', description='Translation tools for Dive into Deep '
                                  'Learning (see DESIGN.md, TRANSLATING.md).')
@@ -294,6 +305,12 @@ def main(argv=None):
                  rev=False)
     p.add_argument('rev')
     p.add_argument('--force', action='store_true')
+
+    p = lang_cmd('fold', cmd_fold, 'merge lexicon lines into <lang>/decisions.md and drop the '
+                 'unit sections after the lexicon', rev=False)
+    p.add_argument('lines', help='file of lines "- english (sense) → Arabic — note"; '
+                   '"→ (delete)" removes a term')
+    p.add_argument('--keep-sections', action='store_true')
 
     p = lang_cmd('emit', cmd_emit, 'write work files for units that need translation')
     p.add_argument('--files', nargs='*')

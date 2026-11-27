@@ -43,6 +43,7 @@ bin/l10n pin ja en-2026.12.01           # first release a language builds agains
 bin/l10n emit ja --files chapter_linear-regression --units 4   # work files in work/ja/
 bin/l10n apply ja answers/*.md --agent "claude fable-5.2"      # check + merge into ja/book/
 bin/l10n check ja                       # every translated file; --complete for a release
+bin/l10n fold ar lines.md                # merge lexicon lines into ar/decisions.md (chapter check)
 bin/l10n status ja                      # coverage per file (inside the translation scope)
 bin/l10n scope ja                       # which parts/chapters are translated (languages.yml scope:)
 bin/l10n strings ja                     # ja/strings.yml from the tag's i18n/en.yml

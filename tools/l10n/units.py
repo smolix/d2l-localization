@@ -8,7 +8,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from . import config, tfile
-from .glossary import load as load_glossary
+from .glossary import _surface_pattern, load as load_glossary
+from .protect import strip_tokens
 from .segment import FENCE_RE, segment
 
 MIN_WORDS = 1000      # merge `##` sections until a unit has at least this many words
@@ -217,6 +218,80 @@ def glossary_brief(lang, text: str) -> str:
     return '\n'.join(rows)
 
 
+LEXICON_BEGIN = '<!-- l10n:lexicon -->'
+LEXICON_END = '<!-- l10n:lexicon-end -->'
+LEXICON_LINE = re.compile(r'^- (?P<en>.+?) \u2192 ')
+
+
+def lexicon_surfaces(line: str) -> list:
+    """English surface forms of a lexicon line `- en / en2 (sense) → ar — note`."""
+    m = LEXICON_LINE.match(line)
+    if not m:
+        return []
+    en = re.sub(r'\s*\([^()]*\)\s*$', '', m.group('en')).replace('*', '')
+    return [w.strip() for w in en.split(' / ') if w.strip()]
+
+
+def decisions_brief(text: str, unit_text: str) -> str:
+    """The decisions log for one unit: between the lexicon markers, only the lines
+    whose English term occurs in the unit; everything outside them verbatim. A log
+    without the markers is returned unchanged."""
+    if LEXICON_BEGIN not in text or LEXICON_END not in text:
+        return text
+    head, rest = text.split(LEXICON_BEGIN, 1)
+    body, tail = rest.split(LEXICON_END, 1)
+    low = strip_tokens(unit_text)
+    lines = [l for l in body.split('\n') if l.startswith('- ')]
+    keep = []
+    for l in lines:
+        forms = lexicon_surfaces(l)
+        if any(re.search(r'(?<![\w-])' + _surface_pattern(f) + r'(?![\w-])', low, re.I)
+               for f in forms):
+            keep.append(l)
+    note = (f'({len(keep)} of {len(lines)} lexicon entries occur in this unit; the others '
+            f'are omitted. They are binding like the rest of the log.)')
+    return '\n'.join([head.rstrip('\n'), '', note, '', *keep, '', tail.lstrip('\n')])
+
+
+def lexicon_key(line: str) -> str | None:
+    m = LEXICON_LINE.match(line)
+    return ' '.join(m.group('en').replace('*', '').lower().split()) if m else None
+
+
+def fold_lexicon(text: str, new_lines: list, keep_sections: bool = False) -> tuple:
+    """Merge lexicon lines into the log: a line replaces the line with the same English
+    part (term and sense), `- english (sense) → (delete)` removes it, the rest are added;
+    the lexicon is re-sorted by English. Unless keep_sections, everything after the end
+    marker (the unit sections appended by `apply`) is dropped. Returns (text, counts)."""
+    if LEXICON_BEGIN not in text or LEXICON_END not in text:
+        raise config.L10nError('decisions.md has no lexicon markers')
+    head, rest = text.split(LEXICON_BEGIN, 1)
+    body, tail = rest.split(LEXICON_END, 1)
+    entries = {}
+    for l in body.split('\n'):
+        k = lexicon_key(l)
+        if k:
+            entries[k] = l.rstrip()
+    counts = {'added': 0, 'changed': 0, 'deleted': 0, 'unchanged': 0}
+    for l in new_lines:
+        k = lexicon_key(l)
+        if not k:
+            continue
+        if l.rstrip().endswith('\u2192 (delete)'):
+            counts['deleted'] += entries.pop(k, None) is not None
+        elif k not in entries:
+            entries[k] = l.rstrip(); counts['added'] += 1
+        elif entries[k] != l.rstrip():
+            entries[k] = l.rstrip(); counts['changed'] += 1
+        else:
+            counts['unchanged'] += 1
+    lines = [entries[k] for k in sorted(entries)]
+    out = head + LEXICON_BEGIN + '\n' + '\n'.join(lines) + '\n' + LEXICON_END + '\n'
+    if keep_sections and tail.strip():
+        out += tail if tail.startswith('\n') else '\n' + tail
+    return out, counts
+
+
 def previous_unit_translation(lang, rev, u: Unit, units, blocks, entries) -> str:
     prev = None
     if u.index > 1:
@@ -279,8 +354,9 @@ def old_english(e, path: str) -> str | None:
 def work_file(lang, rev: str, u: Unit, units, blocks, entries, code_context='pytorch') -> str:
     style = _read(lang.root / 'style.md', f'(no {lang.code}/style.md yet: follow TRANSLATING.md '
                   'section 8 and record conventions in DECISIONS)')
-    decisions = _read(lang.root / 'decisions.md', '(no decisions recorded yet)')
     unit_text = '\n\n'.join(blocks[k].content for k in u.blocks)
+    decisions = decisions_brief(_read(lang.root / 'decisions.md', '(no decisions recorded yet)'),
+                                unit_text)
     page = page_context(rev, u.path, code_context)
     fence = _fence_for(page)
     return '\n'.join([
