@@ -2771,3 +2771,464 @@
 
 - "shim" → 「シム」 (standard software engineering katakana term for compatibility shims)
 - "(build-only, unlisted)" → 「（ビルド専用、非掲載）」 (consistent with `chapter_appendix-tools-for-deep-learning/hyperparameters-lib.md`)
+
+## chapter_reinforcement-learning/policy-gradient.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "log-derivative trick" → 「対数微分トリック」 (standard Japanese RL/ML term)
+- "stochastic gradient ascent" → 「確率的勾配上昇法」 (paired with glossary `stochastic gradient descent` = 「確率的勾配降下法」 and `decisions.md` `"gradient ascent" → 「勾配上昇法」`)
+- "REINFORCE estimator" → 「REINFORCE 推定量」 (consistent with `baselines.md`)
+
+## chapter_reinforcement-learning/policy-gradient.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "running example(s)" → 「共通例題」 (consistent with `mdp.md`)
+- "exact-match verifier" → 「完全一致の検証器」 (consistent with `mdp.md`)
+
+## chapter_reinforcement-learning/policy-gradient.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "discounted state-occupancy distribution" → 「割引状態占有分布」 (consistent with `ppo.md`)
+
+## chapter_reinforcement-learning/deep-rl.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "tangent kernel" / "neural tangent kernel" → 「接カーネル」 / 「ニューラル接カーネル」 (standard Japanese DL terminology, matching `decisions.md` `"tangent line" → 「接線」` and glossary `kernel` = 「カーネル」)
+- "truncation bootstrap" → 「打ち切りブートストラップ」 (pairs `mdp.md` `"truncation" → 「打ち切り」` with `ppo.md` `"bootstrap" → 「ブートストラップ」`)
+- "interference" (cross-state interference under function approximation) → 「干渉」 (standard Japanese RL/ML term contrasted with generalization = 「汎化」)
+- "explained variance" → 「説明分散」 (standard statistical/RL metric term)
+
+## chapter_reinforcement-learning/deep-rl.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gaussian policy" → 「ガウス方策」 (consistent with `decisions.md` `"squashed Gaussian policy" → 「スクワッシュされたガウス方策」` and `ja/style.md` §5)
+- "deterministic policy gradient" → 「決定論的方策勾配」 (standard Japanese RL terminology)
+
+## chapter_reinforcement-learning/deep-rl.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "state coupling" / "coupling" (across states via shared network parameters) → 「状態間の結合」 / 「結合」
+
+## chapter_deep-reinforcement-learning/dqn.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Baird's counterexample" → 「Baird の反例」 (person name kept in Latin script per `ja/style.md` §5)
+- "frozen copy" → 「凍結コピー」, "frozen target network" → 「凍結ターゲットネットワーク」
+- "coupling" (source of instability in data/targets) → 「結合」
+- "ring buffer" → 「リングバッファ」 (follows `ja/style.md` §3.3 dropping final ー on バッファ)
+
+## chapter_deep-reinforcement-learning/dqn.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "experience replay buffer" → 「経験再生バッファ」 (pairs glossary `experience replay` = 「経験再生」 with `ja/style.md` §3.3 `バッファ`; standalone "replay buffer" uses `decisions.md` 「リプレイバッファ」)
+- "online network" / "online weights" → 「オンラインネットワーク」 / 「オンライン重み」
+- "single estimator" / "double estimator" → 「単一推定量」 / 「二重推定量」
+
+## chapter_deep-reinforcement-learning/dqn.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Double DQN" → 「Double DQN」 (proper method name kept in Latin script per `ja/style.md` §3.2 & §5)
+- "overestimation" / "overrate" → 「過大評価」 / 「過大評価する」
+- "catastrophic forgetting" → 「破滅的忘却」 (standard Japanese DL/RL term)
+
+## chapter_generative-adversarial-networks/gan.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "two-sample test" → 「2 サンプル検定」 (paired with `index.md#u01` `"two-sample comparison" → 「2 サンプル比較」`)
+- "source label" → 「出所ラベル」, "realness logit" → 「真実性ロジット」 (consistent with notation table in `chapter_generative-adversarial-networks/index.md#u01`)
+- "disjoint supports" → 「互いに素な台」 (consistent with `decisions.md` `"support" → 「台」` for probability distributions)
+- "instance noise" → 「インスタンスノイズ」 (standard katakana in GAN literature)
+
+## chapter_generative-adversarial-networks/gan.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "envelope theorem" → 「包絡線定理」 (standard mathematical optimization / economics term)
+- "softened reverse KL divergence" → 「軟化された逆方向 KL ダイバージェンス」（スライド略記では「軟化逆方向 KL」）
+- "explained variance" → 「説明分散」 (standard statistical term pairing with glossary `variance` = 「分散」)
+
+## chapter_generative-adversarial-networks/gan.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Kantorovich–Rubinstein duality" → 「カントロヴィッチ・ルビンシュタイン双対性」 (follows `ja/style.md` §5 katakana rule for theorems named after people)
+- "loader" (minibatch loader) → 「ローダ」 (follows `ja/style.md` §3.3 `-er` rule)
+
+## chapter_generative-adversarial-networks/objectives.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "payoff" / "payoff function" / "expected payoff" → 「利得」 / 「利得関数」 / 「期待利得」
+- "conditional Bayes risk" / "Bayes-risk gap" → 「条件付きベイズリスク」 / 「ベイズリスクギャップ」
+- "link function" / "critic link" → 「リンク関数」 / 「クリティックのリンク」
+- "Fenchel–Young variational bound" / "Fenchel–Young inequality" / "Fenchel conjugate" → 「フェンシェル・ヤング変分下界」 / 「フェンシェル・ヤングの不等式」 / 「フェンシェル共役」
+- "Vincze–Le Cam divergence" → 「Vincze–Le Cam ダイバージェンス」 (keeps less-known statisticians' names in Latin script per `ja/style.md` §5)
+- "squared hinge (loss)" → 「二乗ヒンジ（損失）」
+
+## chapter_generative-adversarial-networks/objectives.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "1-Lipschitz" / "$\kappa$-Lipschitz" / "$\kappa$-Lipschitzness" → 「1 リプシッツ」 / 「$\kappa$ リプシッツ」 / 「$\kappa$ リプシッツ性」 (aligns with glossary `Lipschitz constant` = 「リプシッツ定数」 and `ja/style.md` §2.2 spacing)
+- "Kantorovich–Rubinstein duality" / "Kantorovich potential" → 「カントロヴィチ・ルビンシュタイン双対性」 / 「カントロヴィチポテンシャル」
+- "Earth Mover's distance" → 「アースムーバー距離」
+- "weight clipping" → 「重みクリッピング」
+- "two-sided / one-sided (gradient) penalty" → 「両側 / 片側（勾配）ペナルティ」
+- "median heuristic" / "median-bandwidth MMD" / "multi-bandwidth MMD" → 「中央値ヒューリスティック」 / 「中央値バンド幅 MMD」 / 「マルチバンド幅 MMD」
+
+## chapter_generative-adversarial-networks/relativistic.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "relativistic pairing objective" / "pairing divergence" → 「相対論的ペアリング目的関数」 / 「ペアリングダイバージェンス」 (consistent with `chapter_generative-adversarial-networks/index.md#u01`)
+- "relativistic rank weight" → 「相対論的ランク重み」 (uses binding glossary `rank` = 「ランク」 and `weight` = 「重み」)
+- "product space" / "product measure" / "product distribution" → 「積空間」 / 「積測度」 / 「積分布」 ("lifting" → 「持ち上げ」)
+- "tied pair" / "mixed pair" (in pairwise ranking) → 「同点ペア」 / 「混合ペア」
+- "mode coverage" → 「モード被覆」 (paired with glossary `mode collapse` = 「モード崩壊」 and `mode dropping` = 「モード欠落」)
+- "ranker" → 「ランカ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+
+## chapter_generative-adversarial-networks/relativistic.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "fixed-pairing (objective)" / "collision" (in discrete GAN landscapes) → 「固定ペアリング（目的関数）」 / 「衝突」
+- "best-response (critic / objective)" → 「最適応答（クリティック / 目的関数）」
+- "cycle rule" → 「閉路則」
+
+## chapter_generative-adversarial-networks/convergence.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Dirac-GAN" → 「Dirac-GAN」 (proper model name kept in Latin script per `ja/style.md` §3.2 & §5)
+- "locally asymptotically stable" / "locally exponentially stable" → 「局所漸近安定」 / 「局所指数安定」
+- "linear center" (in ODE phase portraits) → 「線形中心点」
+- "damped harmonic oscillator" → 「減衰調和振動子」
+- "one-centered penalty" → 「1 中心ペナルティ」 (paired with `decisions.md` `"zero-centered gradient penalty" → 「ゼロ中心勾配ペナルティ」`)
+
+## chapter_generative-adversarial-networks/convergence.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "dual Sobolev norm" → 「双対ソボレフノルム」 (follows `ja/style.md` §5 katakana rule for mathematical concepts named after people)
+- "low-pass filter" / "low-pass filtering" → 「ローパスフィルタ」 / 「ローパスフィルタリング」 (drops final `ー` on `フィルタ` per `ja/style.md` §3.3)
+- "mode coverage" / "covered modes" / "on-mode fraction" → 「モード被覆」 / 「被覆モード数」 / 「モード上サンプル比率」
+- "critic steepness" → 「クリティックの急峻さ」
+- "factorial experiment" / "factorial design" → 「要因実験」 / 「要因計画」
+
+## chapter_generative-adversarial-networks/convergence.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "best response" (game theory) → 「最適応答」
+- "one-sided limit" → 「片側極限」
+
+## chapter_generative-adversarial-networks/dcgan.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Deep Convolutional GAN (DCGAN)" → 「Deep Convolutional GAN（DCGAN）」 (kept in Latin script as a proper architecture name per `ja/style.md` §3.2)
+- "normalization-free backbone" → 「正規化なしバックボーン」 (aligned with `chapter_generative-adversarial-networks/index.md`)
+- "fractional-strided convolution" → 「分数ストライド畳み込み」
+- "half-life" (of EMA) → 「半減期」
+- "held-out" (images / sprites) → 「ホールドアウト」
+- "checkerboard artifact(s)" → 「チェッカーボードアーティファクト」
+- "bilinear resampling / upsampling / downsampling" → 「双線形リサンプリング / 双線形アップサンプリング / 双線形ダウンサンプリング」 (paired with glossary `bilinear interpolation` = 「双線形補間」)
+- "He fan-in initialization" → 「He のファンイン初期化」 (person name in Latin script per `ja/style.md` §5, matching `He 初期化`)
+- "Fréchet Distance (FID)" / "Kernel Inception Distance (KID)" → 「フレシェ距離（Fréchet Distance、FID）」 / 「Kernel Inception Distance（KID）」
+
+## chapter_generative-adversarial-networks/dcgan.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "experimental arm" / "arm" → 「実験群」 (paired with `ja/decisions.md` `"control arm" → 「対照群」`)
+- "relativistic pairing loss" → 「相対論的ペアリング損失」 (paired with `ja/decisions.md` `"relativistic pairing objective" → 「相対論的ペアリング目的関数」`)
+- "relativistic rank weight" → 「相対論的ランク重み」
+- "train–holdout gap" → 「訓練・ホールドアウトギャップ」
+
+## chapter_generative-adversarial-networks/dcgan.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Wasserstein-2 distance" → 「2 次ワッサースタイン距離」 (paired with `ja/decisions.md` `"Wasserstein-1 distance" → 「1 次ワッサースタイン距離」`)
+- "non-leaking (augmentation)" / "leak" → 「リークしない（データ拡張）」 / 「リークする」
+- "cross-fade" → 「クロスフェード」
+- "Adaptive Discriminator Augmentation (ADA)" / "DiffAugment" → 「Adaptive Discriminator Augmentation（ADA）」 / 「DiffAugment」 (kept in Latin script per `ja/style.md` §3.2)
+
+## chapter_generative-adversarial-networks/dcgan.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "skewness" → 「歪度」
+
+## chapter_generative-adversarial-networks/conditional.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "unconditional" / "conditional GAN (cGAN)" → 「無条件」 / 「条件付き GAN（cGAN）」
+- "feature modulation" → 「特徴変調」, "conditional batch normalization" → 「条件付きバッチ正規化」
+- "projection discriminator" / "projection discriminator head" / "projection critic" → 「射影識別器」 / 「射影識別器ヘッド」 / 「射影クリティック」
+- "auxiliary classifier GAN (AC-GAN)" → 「補助分類器 GAN（AC-GAN）」
+- "condition alignment" / "class alignment" → 「条件アライメント」 / 「クラスアライメント」
+- "sample fidelity" / "unconditional (sample) realism" → 「サンプル忠実度」 / 「無条件（のサンプル）リアリズム」
+- "within-class diversity" / "intra-class diversity" → 「クラス内多様性」
+- "referee classifier" / "referee" → 「レフェリー分類器」 / 「レフェリー」
+
+## chapter_generative-adversarial-networks/conditional.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "referee classifier" / "referee" → 「レフェリー分類器」 / 「レフェリー」
+- "real floor" / "real floor set" → 「実データ下限」 / 「実データ下限セット」
+- "centroid-prototype baseline" / "prototype baseline" / "centroid" → 「重心プロトタイプベースライン」 / 「プロトタイプベースライン」 / 「重心」
+- "truncation trick" / "truncated sampling" → 「切断トリック」 / 「切断サンプリング」
+
+## chapter_generative-adversarial-networks/adversarial-losses.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "perception–distortion trade-off" → 「知覚・歪みトレードオフ」 (coordinate compound with `・` per `ja/style.md` §2.1)
+- "conditional mean" / "conditional median" → 「条件付き平均」 / 「条件付き中央値」
+- "unimodal" / "bimodal" / "multimodal" (of distributions) → 「単峰性」 / 「二峰性」 / 「多峰性」
+- "Adversarial Diffusion Distillation (ADD)" / "Distribution Matching Distillation (DMD)" → 「敵対的拡散蒸留（ADD）」 / 「分布マッチング蒸留（DMD）」
+- "perceptual loss" → 「知覚損失」
+- "feature-matching loss" → 「特徴マッチング損失」 (follows `ja/style.md` §7.1 using `特徴` in compounds and for learned features)
+- "support" (of a distribution) → 「台」 ("disjoint supports" → 「台が重ならない場合」)
+
+## chapter_generative-adversarial-networks/adversarial-losses.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Kantorovich potential" → 「カントロビッチポテンシャル」 (follows `ja/style.md` §5 katakana rule for mathematical terms named after people)
+- "Implicit Maximum Likelihood Estimation (IMLE)" → 「陰的最尤推定（IMLE）」
+- "Direct Discriminative Optimization (DDO)" → 「直接識別最適化（DDO）」
+- "underdetermined inverse problem" → 「劣決定な逆問題」
+
+## chapter_generative-adversarial-networks/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "one-centered penalty" → 「1 中心ペナルティ」 (paired with `decisions.md` `"zero-centered gradient penalty" → 「ゼロ中心勾配ペナルティ」`)
+- "extragradient method" → 「外挿勾配法」, "optimistic gradient descent" → 「楽観的勾配降下法」, "negative momentum" → 「負のモメンタム」
+- "lazy regularization" → 「遅延正則化」
+- "non-leaking (data augmentation / transformation)" → 「非リーク型データ拡張 / 非リークな変換」
+- "feature modulation layer" → 「特徴変調層」
+
+## chapter_diffusion-models/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "denoising diffusion probabilistic model (DDPM)" → 「ノイズ除去拡散確率モデル（DDPM）」 (combines glossary `denoising` = 「ノイズ除去」, `diffusion` = 「拡散」, `probabilistic model` = 「確率モデル」)
+- "score-based generative modeling" → 「スコアベース生成モデリング」, "score" ($\nabla_{\mathbf{x}} \log p$) → 「スコア関数」 (follows `ja/style.md` §7.1)
+- "stochastic interpolant" → 「確率的補間」
+- "probability-flow ODE" → 「確率フロー ODE」 (inserts half-width space before `ODE` per `ja/style.md` §2.2)
+- "linear path" → 「線形経路」, "variance-preserving (VP) path" → 「分散保持（VP）経路」
+- "Tweedie's formula" / "Tweedie's identity" → 「トゥイーディーの公式」 / 「トゥイーディーの恒等式」 (follows `ja/style.md` §5 katakana rule for classical statistical results named after people)
+- "Fréchet distance (FD)" → 「フレシェ距離（FD）」
+- "variational bound" / "likelihood bound" → 「変分境界」 / 「尤度境界」
+- "few-step distillation" / "few-step" → 「少数ステップ蒸留」 / 「少数ステップ」
+- "token masking" / "absorbing masked diffusion" → 「トークンマスキング」 / 「吸収型マスク付き拡散」
+
+## chapter_diffusion-models/denoising.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "running example" → 「通し例」 (standard Japanese textbook term for an example carried throughout a chapter)
+- "Gaussian mixture" / "mixture of Gaussians" (distribution sense) → 「混合ガウス分布」 (glossary's proposed `混合ガウスモデル` refers to the statistical model; when referring directly to a probability distribution on $\mathbb{R}^d$, 「混合ガウス分布」 is standard in Japanese ML texts such as PRML)
+- "responsibility" (posterior mixture weight $r_k(\mathbf{x})$) → 「負担率」 (established Japanese ML term from Bishop『パターン認識と機械学習』)
+- "mode weights" / "strays" / "spread" (2D Gaussian-mixture benchmark metrics) → 「モード重み」 / 「外れ点」 / 「広がり」
+- "Tweedie's formula" / "Vincent's theorem" / "Hyvärinen's identity" → 「Tweedie の公式」 / 「Vincent の定理」 / 「Hyvärinen の恒等式」 (retains Latin script for person names per `ja/style.md` §5 and §3.2)
+- "noise predictor" → 「ノイズ予測器」 (paired with glossary `denoiser` = 「ノイズ除去器」 and `noise prediction` = 「ノイズ予測」)
+- "normalizer" (of an energy-based model, $Z_{\boldsymbol\theta}$) → 「正規化定数」 (aligned with glossary `normalizing constant` = 「正規化定数」)
+
+## chapter_diffusion-models/denoising.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "blindness (to mode weights)" → 「（モード重みに対する）不感性」 (paired with `decisions.md` `"order blindness" → 「順序への不感性」`)
+- "Kramers escape time" / "Kramers' formula" → 「Kramers の脱出時間」 / 「Kramers の公式」 (retains Latin script for person name per `ja/style.md` §5 and §3.2)
+
+## chapter_diffusion-models/denoising.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Wiener filter" → 「ウィーナーフィルタ」 (established Japanese signal-processing term, dropping final `ー` on `フィルタ` per `ja/style.md` §3.3)
+- "explicit score matching" → 「明示的スコアマッチング」 (standard Japanese ML counterpart to `ノイズ除去スコアマッチング`)
+- "nonlinear manifold" → 「非線形多様体」 (standard mathematical/ML terminology)
+- "moment generating function" → 「積率母関数」 (standard Japanese mathematical statistics term)
+
+## chapter_diffusion-models/gaussian-paths.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "clean point" / "clean data" → 「クリーンな点」 / 「クリーンなデータ」 (standard Japanese diffusion terminology contrasting uncorrupted $\mathbf{x}_0$ with noisy $\mathbf{x}_t$)
+- "rectified flow" → 「レクティファイドフロー」 (katakana matching glossary `flow matching` = 「フローマッチング」)
+- "cosine path" / "cosine schedule" → 「コサイン経路」 / 「コサインスケジュール」 (paired with glossary `Gaussian path` = 「ガウス経路」 and `cosine decay` = 「コサイン減衰」)
+- "ladder" (of discrete noise levels) → 「ラダー」 (standard MCMC/diffusion katakana avoiding collision with algorithmic 「ステップ」)
+- "strays" (samples far from all modes) → 「はぐれ点」 (distinguished from dataset outliers 「外れ値」)
+- "clock" (the shared log-SNR time parameterization) → 「時計」 (retains the operational-clock metaphor across prose and slides without colliding with hardware clock frequency 「クロック」)
+- "angular velocity" → 「角速度」, "$\mathbf{v}$-prediction" → 「$\mathbf{v}$ 予測」
+- "target dictionary" / "target conversion dictionary" → 「目標の辞書」 / 「目標の変換辞書」 (paired with glossary `regression target` = 「回帰目標」)
+
+## chapter_diffusion-models/gaussian-paths.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "score–velocity identity" → 「スコア・速度恒等式」
+- "loss floor" → 「損失の下限」 (consistent with `synthetic-regression-data.md#u01`; target-specific floors rendered as 「ノイズの下限」「速度の下限」)
+- "excess (loss)" (above the loss floor) → 「過剰損失」 (consistent with `linear-regression-scratch.md#u01`)
+- "Tweedie's formula" → 「Tweedie の公式」 (retains person name in Latin script per `ja/style.md` §5)
+
+## chapter_diffusion-models/integration.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "probability-flow ODE" → 「確率フロー ODE」, "reverse-time SDE" / "reverse SDE" → 「逆時間 SDE」 / 「逆 SDE」 (inserts half-width space between Japanese and Latin acronym per `ja/style.md` §2.2, overriding unspaced proposed glossary entries)
+- "linear path" / "VP path" / "VE path" / "cosine path" → 「線形経路」 / 「VP 経路」 / 「VE 経路」 / 「コサイン経路」
+- "path-agnostic" → 「経路に依存しない」（スライド等の簡潔な表現では「経路非依存の」）
+- "ancestral chain" / "ancestral step" → 「祖先連鎖」 / 「祖先ステップ」 (paired with glossary `ancestral sampling` = 「祖先サンプリング」)
+- "Langevin chain" / "Langevin step" / "annealed ladder" → 「ランジュバン連鎖」 / 「ランジュバンステップ」 / 「アニーリングラダー」
+- "Picard–Lindelöf uniqueness" → 「ピカール・リンデレーフの一意性」 (follows `ja/style.md` §5 katakana rule for theorems named after people)
+
+## chapter_diffusion-models/integration.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Euler's method" / "Euler step" → 「オイラー法」 / 「オイラーステップ」
+- "stray(s)" / "stray fraction" → 「逸脱点」 / 「逸脱点の割合」（スライドでは「逸脱率」）
+- "within-mode spread" → 「モード内の広がり」
+
+## chapter_diffusion-models/integration.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "denoising score model" / "noise-conditional score network" → 「ノイズ除去スコアモデル」 / 「ノイズ条件付きスコアネットワーク」
+- "rectified flow" → 「Rectified Flow」 (proper method name kept in Latin script per `ja/style.md` §3.2)
+- "$\mathbf{v}$-prediction" → 「$\mathbf{v}$ 予測」 (with half-width space per `ja/style.md` §2.2)
+- "latent interpolation" → 「潜在空間での補間」（スライドでは「潜在補間」）
+
+## chapter_diffusion-models/integration.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "commitment time" / "speciation time" → 「コミットメント時刻」 / 「種分化時刻」 (dynamical regimes in diffusion models per Biroli et al., 2024)
+- "bimodal" → 「二峰性」
+
+## chapter_diffusion-models/image-diffusion.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "ancestral chain" / "ancestral sampler" → 「祖先連鎖」 / 「祖先サンプラ」 (matches `マルコフ連鎖` in `ja/style.md` §5 and `sampler` = 「サンプラ」 in `ja/decisions.md`)
+- "multi-resolution" → 「多重解像度」
+- "label dropout" → 「ラベルドロップアウト」, "null label" → 「ヌルラベル」
+- "typicality" → 「典型性」 (paired with `diversity` = 「多様性」 in CFG trade-off discussions)
+- "reference floor" / "reference value" (of FD) → 「基準下限」 / 「基準値」
+
+## chapter_diffusion-models/image-diffusion.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "half-life" (of EMA) → 「半減期」, "decay" (EMA factor) → 「減衰率」
+- "Euler step(s)" → 「オイラーステップ」
+
+## chapter_diffusion-models/image-diffusion.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "class agreement" → 「クラス一致率」
+- "dictionary" (of equivalent diffusion targets) → 「変換辞書」
+
+## chapter_diffusion-models/image-diffusion.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "guidance interval" → 「ガイダンス区間」, "autoguidance" → 「オートガイダンス」
+- "tilted density / tilted Gaussian" → 「傾斜密度 / 傾斜ガウス分布」 (aligned with `ja/decisions.md` `"tilted distribution" → 「傾斜分布」`)
+
+## chapter_diffusion-models/image-diffusion.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "static thresholding" / "dynamic thresholding" → 「静的しきい値処理」 / 「動的しきい値処理」
+- "truncation trick" (BigGAN) → 「打ち切りトリック」 (aligned with `ja/decisions.md` `"truncated sampling" → 「打ち切りサンプリング」`)
+
+## chapter_diffusion-models/samplers.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "denoising diffusion implicit model (DDIM)" → 「ノイズ除去拡散陰的モデル（DDIM）」 (aligns with glossary `denoiser` = 「ノイズ除去器」 and `decisions.md` `implicit` = 「陰的」; subsequent uses `DDIM`)
+- "ancestral chain" / "ancestral step" → 「祖先連鎖」 / 「祖先ステップ」 (paired with glossary `ancestral sampling` = 「祖先サンプリング」)
+- "ODE solver" / "solver" → 「ODE ソルバ」 / 「ソルバ」 (follows `ja/style.md` §2.2 spacing and §3.3 dropping final `ー` on `-er` loanwords, consistent with `decisions.md` `固有値ソルバ / 線形ソルバ`)
+- "multistep (method / solver / sampler)" → 「多段（法 / ソルバ / サンプラ）」 (standard Japanese numerical ODE terminology, distinguished from order 「1 次 / 2 次」)
+- "Heun's method" / "Adams–Bashforth" → 「ホイン法」 / 「アダムス・バッシュフォース法」 (standard Japanese numerical analysis terms per `ja/style.md` §5)
+- "inversion" (image-to-noise ODE inversion) → 「逆変換」 (unambiguously distinguishes generative mapping inversion from spatial/color flipping 「反転」)
+- "partial noising" / "inpainting" → 「部分ノイズ付加」 / 「インペインティング」
+- "fresh noise" / "kept noise" → 「新たなノイズ」 / 「保持ノイズ」
+
+## chapter_diffusion-models/samplers.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "exponential integrator" → 「指数積分器」 (matches `decisions.md` `"double integrator" → 「二重積分器」`)
+- "spread" (mean squared distance to nearest mode center) → 「広がり」 (consistent with `decisions.md` `"token spread" → 「トークンの広がり」`)
+- "predictor–corrector" → 「予測子・修正子」 (standard Japanese numerical ODE term)
+- "network function evaluations (NFE)" → 「ネットワーク関数評価回数（NFE）」 (subsequent uses `NFE` or `ネットワーク評価回数`)
+
+## chapter_diffusion-models/samplers.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "null-text inversion" → 「ヌルテキスト逆変換」 (paired with `null label` = 「ヌルラベル」 and `inversion` = 「逆変換」)
+- "spherical (linear) interpolation (Slerp)" → 「球面（線形）補間（Slerp）」 (distinguishes mathematical interpolation 「補間」 from image completion 「補完」)
+- "replacement inpainting" → 「置換インペインティング」
+
+## chapter_diffusion-models/samplers.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "harmonization" (in RePaint inpainting) → 「調和化」
+- "commitment time" → 「コミットメント時刻」
+
+## chapter_diffusion-models/design-space.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "likelihood bound" / "variational bound" → 「尤度境界」 / 「変分境界」 (consistent with `chapter_diffusion-models/index.md`)
+- "forward chain" / "reverse chain" / "ancestral chain" → 「順方向連鎖」 / 「逆方向連鎖」 / 「祖先連鎖」
+- "stray" / "stray samples" (samples far from all mixture modes) → 「逸脱点」 / 「逸脱サンプル」
+- "Runge–Kutta method" / "Heun's method" → 「ルンゲ・クッタ法」 / 「ホイン法」
+
+## chapter_diffusion-models/design-space.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "cosine path" → 「コサイン経路」
+- "$\mathbf{v}$-prediction" / "$\mathbf{v}$-target" / "$\mathbf{v}$-loss" → 「$\mathbf{v}$ 予測」 / 「$\mathbf{v}$ ターゲット」 / 「$\mathbf{v}$ 損失」
+- "logit-normal" → 「ロジット正規分布」 / 「ロジット正規」
+
+## chapter_diffusion-models/design-space.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "preconditioned clean image" → 「前処理付きクリーン画像」
+- "ODE solver" → 「ODE ソルバ」 (follows `ja/style.md` §2.2 spacing and §3.3 `-er` rule)
+- "low-pass filter" → 「ローパスフィルタ」 (follows `ja/style.md` §3.3 dropping final `ー` on `フィルタ`)
+- "Hutchinson trace estimator" → 「Hutchinson トレース推定量」 (person name kept in Latin script per `ja/style.md` §5)
+
+## chapter_diffusion-models/design-space.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Rademacher vector" → 「ラデマッハベクトル」 (paired with `decisions.md` `"Rademacher complexity" → 「ラデマッハ複雑度」`)
+- "bits per dimension" → 「次元あたりビット数」 (paired with `decisions.md` `"bits per byte" → 「バイトあたりビット数」`)
+
+## chapter_diffusion-models/latent-diffusion.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "latent" / "latents" (noun) → 「潜在表現」, "latent number" / "latent value" → 「潜在値」 (pairs with glossary `latent space` = 「潜在空間」, `latent diffusion` = 「潜在拡散」, `latent code` = 「潜在コード」)
+- "diffusion transformer (DiT)" → 「拡散 Transformer（DiT）」 (adds half-width space to proposed glossary `拡散Transformer` per `ja/style.md` §2.2 & §3.2)
+- "rate–distortion theory" / "rate–distortion function" → 「レート・歪み理論」 / 「レート・歪み関数」; "rate", "distortion", "modelability" → 「レート」「歪み」「モデル化のしやすさ」
+- "Fréchet distance (FD)" → 「フレシェ距離（Fréchet distance、FD）」 (follows `ja/style.md` §5 katakana rule for mathematical distances named after people, parallel to 「ワッサースタイン距離」)
+- "excess kurtosis" → 「超過尖度」
+- "masked diffusion" → 「マスク付き拡散」
+- "floor" (baseline FD between two finite real-image splits) → 「フロア」
+
+## chapter_diffusion-models/latent-diffusion.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "decoder tolerance" / "perturbation tolerance" / "intolerance" → 「デコーダの耐性」 / 「摂動耐性」 / 「耐性の低さ（耐性不足）」 (consistent with `decisions.md` `"shift tolerance" → 「シフト耐性」`)
+- "representation autoencoder" → 「表現オートエンコーダ」
+- "unpatchify" → 「アンパッチ化」 (paired with `decisions.md` `"patchify" → 「パッチ化」`)
+
+## chapter_diffusion-models/latent-diffusion.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "multimodal DiT (MM-DiT)" → 「マルチモーダル DiT（MM-DiT）」
+- "null label" (in classifier-free guidance) → 「ヌルラベル」
+- "probability-flow ODE" → 「確率フロー ODE」 (adds half-width space to proposed glossary `確率フローODE` per `ja/style.md` §2.2)
+
+## chapter_diffusion-models/latent-diffusion.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "hourglass transformer" → 「砂時計型 Transformer」
+- "patchification" → 「パッチ化」 (consistent with `decisions.md` `"patchify" → 「パッチ化」`)
+
+## chapter_diffusion-models/few-step.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "few-step generation" / "few-step" → 「少数ステップ生成」 / 「少数ステップ」
+- "probability-flow ODE" → 「確率フロー ODE」（`ja/style.md` §2.2 の半角スペース規則を適用）
+- "teacher" / "student" (in distillation) → 「教師」 / 「生徒」
+- "Euler step" / "Euler's method" → 「オイラーステップ」 / 「オイラー法」（`ja/style.md` §5 の人名由来用語のカタカナ規則に従う）
+- "compositional / Lagrangian / Eulerian identity" → 「合成 / ラグランジュ型 / オイラー型恒等式」（流体力学のラグランジュ・オイラー記述に対応し、最適化の「ラグランジアン」や代数学の恒等式と区別）
+- "flow-map distillation" → 「フロー写像蒸留」（glossary `flow map` = 「フロー写像」および `consistency distillation` = 「一貫性蒸留」に対応）
+- "MeanFlow" / "MeanFlow identity" → 「MeanFlow」 / 「MeanFlow 恒等式」（固有名は `ja/style.md` §3.2 に従いラテン文字維持）
+- "re-noise" / "re-noising" → 「再ノイズ化する」 / 「再ノイズ化」
+- "stray(s)" (samples >3 SD from all mode centers) → 「逸脱サンプル」（割合は「逸脱率」、動詞は「逸脱する」）
+- "spread" (within-mode mean squared distance) → 「広がり」（「モード内の広がり」）
+
+## chapter_diffusion-models/few-step.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Fréchet distance (FD)" → 「フレシェ距離（Fréchet distance、FD）」（以降は「FD」；`ja/style.md` §3.1・§5 に従う）
+- "ODE solver" → 「ODE ソルバ」（`ja/style.md` §2.2 の半角スペース規則および §3.3 の `-er` 長音省略規則に従う）
+- "distribution matching distillation (DMD)" → 「分布マッチング蒸留（DMD）」
+- "adversarial distillation (ADD)" → 「敵対的蒸留（ADD）」
+
+## chapter_diffusion-models/few-step.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "distribution matching" → 「分布マッチング」（`flow matching` = 「フローマッチング」と対応）
+- "distribution matching distillation (DMD)" → 「分布マッチング蒸留（DMD）」
+- "adversarial distillation" → 「敵対的蒸留」
+
+## chapter_diffusion-models/discrete-diffusion.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "discrete diffusion" / "discrete diffusion model" → 「離散拡散」 / 「離散拡散モデル」
+- "masked diffusion" / "masked diffusion model" / "diffusion language model" → 「マスク拡散」 / 「マスク拡散モデル」 / 「拡散言語モデル」 (matches glossary `masked language model` = 「マスク言語モデル」)
+- "absorbing (masking) kernel" / "absorbing chain" → 「吸収（マスキング）カーネル」 / 「吸収連鎖」 ("uniform kernel" → 「一様カーネル」)
+- "transition matrix" → 「遷移行列」
+- "unmask" / "unmasking" / "reveal" (of masked tokens) → 「マスク解除する（マスクを解く）」 / 「マスク解除」
+- "independence error" → 「独立性誤差」
+- "variational bound" / "masked (diffusion) bound" (on negative log-likelihood $L_{\textrm{VLB}}$) → 「変分上界」 / 「マスク拡散の変分上界」 (since $-\log p_{\boldsymbol{\theta}}(\mathbf{x}_0) \leq L_{\textrm{VLB}}$ is an upper bound on NLL, paired with "floor" = 「下限」)
+- "all-mask sequence / state / image" → 「全マスク系列 / 全マスク状態 / 全マスク画像」
+- "time-agnostic" → 「時刻非依存（時刻に依存しない）」
+- "continuous-time Markov chain (CTMC)" → 「連続時間マルコフ連鎖（CTMC）」
+
+## chapter_diffusion-models/discrete-diffusion.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "confidence remasking" / "confidence-ordered" → 「確信度再マスキング」 / 「確信度順の」 (aligns with `decisions.md` `"confidence" → 「確信度」`)
+- "phantom blob" / "phantom mode" → 「偽のブロブ」 / 「偽のモード」
+
+## chapter_diffusion-models/discrete-diffusion.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "speckle(s)" (isolated interior pixel differing from all four neighbors) → 「スペックル」
+- "raster order" → 「ラスタ順」 (follows `ja/style.md` §3.3 `-er` rule)
+- "salt-and-pepper noise" → 「ごま塩ノイズ」 (standard Japanese image-processing term)
+
+## chapter_diffusion-models/discrete-diffusion.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "order-agnostic autoregressive model" → 「順序非依存な自己回帰モデル」 ("order-agnostic" → 「順序非依存」)
+- "parallel decoding" → 「並列デコーディング」 (paired with glossary `autoregressive decoding` = 「自己回帰デコーディング」)
+- "block diffusion" → 「ブロック拡散」
+- "infilling" → 「穴埋め生成」
+
+## chapter_diffusion-models/discrete-diffusion.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "fused attention" → 「融合アテンション」 (paired with `decisions.md` `"fused kernel" → 「融合カーネル」`)
+
+## chapter_diffusion-models/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "ODE solver" → 「ODE ソルバ」 (inserts half-width space per `ja/style.md` §2.2 and drops final `ー` per §3.3, overriding proposed `ODEソルバー`)
+- "diffusion transformer" → 「拡散 Transformer」 (inserts half-width space per `ja/style.md` §2.2, overriding proposed `拡散Transformer`)
+- "rectified flow" → 「レクティファイドフロー」
+- "persistent contrastive divergence" → 「持続的コントラスティブダイバージェンス」, "noise-contrastive estimation" → 「ノイズ対照推定」
+- "empirical Bayes" → 「経験ベイズ」
+- "DDIM inversion" / "null-text inversion" → 「DDIM 反転」 / 「ヌルテキスト反転」
+- "progressive distillation" → 「漸進的蒸留」
+- "remasking" / "unmasking" → 「再マスキング」 / 「アンマスキング」
+
+## chapter_generative-adversarial-networks/convergence-lib.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "launch plumbing" → 「起動処理の内部機構」 (consistent with `chapter_appendix-tools-for-deep-learning/utils.md#u01` `"Internal Plumbing" → 「内部機構」`)
+- "(build-only, unlisted)" → 「（ビルド専用、非掲載）」 (consistent with `chapter_appendix-tools-for-deep-learning/hyperparameters-lib.md#u01`)
