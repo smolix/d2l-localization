@@ -63,7 +63,7 @@
 
 ## chapter_introduction/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
 
-- "Introduction" (chapter heading) → 「はじめに」
+- "Introduction" (chapter heading) → 「イントロダクション」
 - "model family" → 「モデル族」
 - "surrogate loss" → 「代理損失」
 - "wake word" → 「ウェイクワード」
@@ -509,3 +509,620 @@
 - "teacher forcing" / "teacher-forced training" → 「教師強制」 / 「教師強制による訓練」
 - "bits-per-byte" → 「バイトあたりビット数」
 - "stateless" / "stateful" → 「ステートレス」 / 「ステートフル」
+
+## chapter_basics/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Introduction" (Chapter 1) → 「イントロダクション」 (distinguishes Chapter 1 from the Preface)
+- "from scratch" / "concisely" (the recurring two-stage implementation pair) → 「ゼロから」 / 「簡潔に」
+- "*The Time Machine*" → 『The Time Machine』 (book title enclosed in 『』 per ja/style.md §2.1 while keeping the English title of the text dataset)
+
+## chapter_preliminaries/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Preliminaries" (chapter title) → 「準備」 (standard chapter title in Japanese mathematics and ML textbooks)
+- "calculus" → 「微分積分」; "differential calculus" → 「微分法」 (standard Japanese university curriculum terminology)
+- "data preprocessing" → 「データ前処理」 (standard Japanese ML terminology, matching `pandas.md`)
+- "autograd" (shorthand for automatic differentiation) → 「自動微分」 (aligned with glossary entry for automatic differentiation)
+- "foundation model" → 「基盤モデル」 (established Japanese ML term)
+- "Vector–Jacobian Product" → 「ベクトル・ヤコビ行列積」 (aligned with glossary entries ベクトル and ヤコビ行列)
+
+## chapter_preliminaries/ndarray.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Data Manipulation" → 「データ操作」 (section title and recurring concept)
+- "axis" / "order" (of a tensor) → 「軸」 / 「階数」 ($k$ 階テンソル)
+- "reshaping" / "flatten" / "singleton axis" → 「形状変換」 / 「平坦化」 / 「単一軸」
+- "indexing and slicing" / "gather" → 「インデックス参照とスライス」 / 「ギャザー」
+- "row-major order" → 「行優先順」
+- "mutable" / "immutable" / "in-place" / "view" → 「ミュータブル」 / 「イミュータブル」 / 「インプレース」 / 「ビュー」
+
+## chapter_preliminaries/ndarray.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "elementwise" → 「要素ごとの」 / 「要素ごとに」
+- "type promotion" → 「型の昇格」
+- "reduction" (along tensor axes) → 「縮約」
+- "rebinding" → 「再束縛」
+
+## chapter_preliminaries/pandas.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "preprocessing" → 「前処理」
+- "target" (supervised learning target column/tensor) → 「ターゲット」
+- "missing value" → 「欠損値」
+- "imputation" → 「補完」
+- "missingness indicator" → 「欠損性インジケータ」 (dropping final ー per style.md §3.3)
+- "categorical feature" → 「カテゴリ特徴量」 (dropping final ー on カテゴリ per style.md §3.3)
+- "data leakage" → 「データリーケージ」
+
+## chapter_preliminaries/pandas.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "standardization" → 「標準化」, "z-score normalization" → 「z スコア正規化」
+- "design matrix" → 「計画行列」
+
+## chapter_preliminaries/linear-algebra.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "order" (of a tensor, `ndim`) → 「階数」 (`$k$-th order` → 「$k$ 階」, "higher-order tensor" → 「高階テンソル」)
+- "dimensionality" (of a vector) → 「次元数」 (distinguished from informal "dimension" 「次元」 and tensor "order" 「階数」)
+- "reduction" / "axis reduction" → 「リダクション」 / 「軸方向のリダクション」 (distinguished from "aggregate" 「集約する」 and tensor contraction 「縮約」)
+- "elementwise" → 「要素ごとの」
+- "flatten" → 「平坦化する」
+- "matrix--vector product" / "matrix--matrix product" → 「行列・ベクトル積」 / 「行列・行列積」
+- "design matrix" → 「計画行列」
+- "shear" (linear map) → 「せん断」
+
+## chapter_preliminaries/linear-algebra.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Cauchy--Schwarz inequality" → 「コーシー・シュワルツの不等式」
+- "Manhattan distance" → 「マンハッタン距離」
+- "spectral theorem" → 「スペクトル定理」
+- "dominant eigenvector" → 「主固有ベクトル」
+- "orthonormal eigenbasis" → 「正規直交固有基底」
+
+## chapter_preliminaries/linear-algebra.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "gradient clipping" → 「勾配クリッピング」
+
+## chapter_preliminaries/calculus.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Calculus" (section heading) → 「微分積分」; "integral calculus" / "differential calculus" → 「積分法」 / 「微分法」; "matrix calculus" → 「行列微分」
+- "difference quotient" → 「差分商」
+- "secant line" / "tangent line" → 「割線」 / 「接線」
+- "surrogate loss" → 「代理損失」
+- "0–1 error" / "0–1 accuracy" → 「0-1 誤差」 / 「0-1 正解率」
+- "first-order" → 「一次」（一次線形近似、一次テイラー展開、一次最適化；二次関数・二次形式と統一）
+- "catastrophic cancellation" → 「桁落ち」
+- "machine epsilon" → 「計算機イプシロン」
+- "gradient checking" → 「勾配チェック」
+- "steepest ascent" / "steepest descent" → 「最急上昇」 / 「最急降下」
+- "level set" / "level curve" → 「等位集合」 / 「等高線」
+- "Cauchy–Schwarz" → 「コーシー・シュワルツの不等式」
+- "adjoint" (reverse-mode AD) → 「随伴変数」
+
+## chapter_preliminaries/calculus.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "forward difference" / "central difference" → 「前進差分」 / 「中心差分」
+- "Vector–Jacobian Product (VJP)" → 「ベクトル・ヤコビ行列積（VJP）」
+
+## chapter_preliminaries/autograd.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "detach / detaching" (computational graph) → 「切り離す / 切り離し」 (established Japanese term for detaching nodes/subgraphs from a computational graph)
+- "gradient tracking" → 「勾配追跡」
+- "sweep" (forward/backward/reverse sweep) → 「スイープ」（順方向スイープ / 逆方向スイープ）
+- "vector–Jacobian product (VJP)" / "Jacobian–vector product (JVP)" → 「ベクトル・ヤコビ行列積」 / 「ヤコビ行列・ベクトル積」 (aligns with binding glossary entry Jacobian = ヤコビ行列)
+- "micro-batch" → 「マイクロバッチ」
+- "bootstrap target" (RL TD target) → 「ブートストラップターゲット」 (distinct from statistical resampling ブートストラップ法)
+- "leaf tensor" → 「リーフテンソル」
+
+## chapter_preliminaries/autograd.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "control flow" → 「制御フロー」
+- "piecewise linear" → 「区分線形」
+- "Hessian–vector product" → 「ヘッセ行列・ベクトル積」 (aligns with binding glossary entry Hessian = ヘッセ行列)
+- "random vector" (in code, a vector populated with random numbers) → 「ランダムなベクトル」 (distinct from probability theory's 確率ベクトル)
+
+## chapter_preliminaries/probability.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "sample space" → 「標本空間」
+- "event" → 「事象」
+- "running frequency" → 「逐次頻度」
+- "Bessel's correction" → 「ベッセル補正」
+- "error bars" → 「エラーバー」
+- "biased" (of a coin) → 「偏りがある」 (distinct from additive model parameter 「バイアス」 and estimator bias 「統計的バイアス」)
+
+## chapter_preliminaries/probability.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Chebyshev's inequality" → 「チェビシェフの不等式」
+- "explaining away" → 「説明し尽くし」（動詞は「説明し尽くす」）
+- "sensitivity" / "specificity" / "prevalence" → 「感度」 / 「特異度」 / 「有病率」
+- "base-rate neglect" → 「基準率の無視」
+- "paired comparison" / "paired evaluation" → 「対応のある比較」 / 「対応のある評価」
+
+## chapter_linear-regression/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "proving ground" → 「検証の場」 (captures testing/verification role in both body prose and slide kicker)
+- "training harness" → 「訓練ハーネス」 (consistent with 訓練 for training and standard software-engineering usage)
+- "polynomial curve fitting" → 「多項式曲線フィッティング」 (standard term in Japanese ML textbooks)
+- "held-out risk" → 「ホールドアウトリスク」 (keeps risk = リスク per ja/style.md §7.1)
+
+## chapter_linear-regression/linear-regression.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "design matrix" → 「計画行列」 (standard Japanese statistics/ML term)
+- "covariate" → 「共変量」 (standard Japanese statistics/ML term)
+- "target" (regression output variable) → 「目的変数」 (standard Japanese ML/statistics term)
+- "model class" → 「モデルクラス」 (katakana compound)
+- "affine" / "affine combination" / "affine map" → 「アフィン」 / 「アフィン結合」 / 「アフィン写像」
+- "collinearity" → 「多重共線性」
+
+## chapter_linear-regression/linear-regression.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "full-batch gradient descent" / "Full-batch GD" → 「フルバッチ勾配降下法」 / 「フルバッチ GD」
+- "vectorize" / "vectorization" → 「ベクトル化する」 / 「ベクトル化」
+- "warm-up" → 「ウォームアップ」
+- "homoscedastic" → 「等分散」
+- "Laplace distribution" / "Laplace noise" → 「ラプラス分布」 / 「ラプラスノイズ」
+- "dense layer" → 「密結合層」
+
+## chapter_linear-regression/linear-regression.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "quantile" / "$q$-quantile" → 「分位点」 / 「$q$ 分位点」
+- "pinball loss" → 「ピンボール損失」
+- "absolute error" → 「絶対誤差」
+- "input layer" / "output layer" → 「入力層」 / 「出力層」
+
+## chapter_linear-regression/linear-regression.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "centering" → 「中心化」
+- "Black-Scholes model" → 「ブラック・ショールズモデル」
+- "Moore-Penrose pseudoinverse" → 「ムーア・ペンローズ擬似逆行列」
+
+## chapter_linear-regression/synthetic-regression-data.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "design matrix" → 「計画行列」 (standard statistical/ML term in Japanese; "augmented design matrix" → 「拡大計画行列」)
+- "noise floor" / "loss floor" → 「ノイズフロア」 / 「損失の下限」 ("noise floor" is an established katakana term; "loss floor" and standalone "the floor" refer to the lower bound of expected loss, rendered as 「損失の下限」 / 「下限」)
+- "statistical estimation error" → 「統計的推定誤差」
+- "Cramér–Rao bound" → 「クラメール・ラオの下界」 (katakana for person-named mathematical term per ja/style.md §5)
+- "sample size" → 「標本サイズ」 (matches glossary's 「標本分散」 for sample variance and ja/style.md §7.1 「標本」 for statistical sample)
+- "collinear" / "collinearity" → 「多重共線性（を持つ）」 (standard regression terminology in Japanese)
+
+## chapter_linear-regression/linear-regression-scratch.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "implementation from scratch" / "from scratch" → 「スクラッチ実装」 / 「スクラッチで」「スクラッチからの」 (consistent with `LinearRegressionScratch` and `\eta_{\textrm{scratch}}`)
+- "design matrix" → 「計画行列」 (standard statistics/ML term)
+- "noise floor" / "irreducible noise floor" → 「ノイズフロア」 / 「削減不能なノイズフロア」 (established signal-processing and ML term)
+- "excess loss" → 「過剰損失」 (standard learning-theory term)
+- "generator" (Python iterator) → 「ジェネレータ」 (ja/style.md §3.3; distinct from generative-model `生成器`)
+
+## chapter_linear-regression/linear-regression-scratch.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "robust loss" → 「ロバストな損失」 (standard ML term)
+
+## chapter_linear-regression/oo-design.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "object-oriented design" → 「オブジェクト指向設計」 ("object-oriented" → 「オブジェクト指向」)
+- "training harness" / "harness" → 「訓練ハーネス」 / 「ハーネス」
+- "trainer" (lowercase common noun) → 「トレーナ」 (follows ja/style.md §3.3 dropping final ー on -er loanwords)
+- "metric" → 「評価指標」
+- "utility" / "utilities" → 「ユーティリティ」
+- "boilerplate" → 「ボイラープレート」
+- "split" (dataset partition) → 「分割」 ("training split" → 「訓練分割」, "validation split" → 「検証分割」)
+- "generator" (Python iterator) → 「ジェネレータ」 (ja/style.md §3.3; distinguished from generative-model glossary entry 「生成器」)
+
+## chapter_linear-regression/oo-design.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "progress board" → 「プログレスボード」
+- "noise floor" → 「ノイズフロア」
+- "on-the-fly generation" → 「オンザフライ生成」
+- "Planck's law" → 「プランクの法則」, "Planck's constant" → 「プランク定数」, "Boltzmann constant" → 「ボルツマン定数」 (terms named after people in katakana per ja/style.md §5)
+
+## chapter_linear-regression/linear-regression-concise.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "from scratch" / "scratch (implementation)" → 「スクラッチ（スクラッチ実装）」 (established usage in Japanese ML texts)
+- "dense layer" → 「全結合層」 (aligned with "fully connected layer" across frameworks)
+- "lazy shape inference" / "infer (input dimension/shape)" → 「形状の遅延決定」 / 「（自動的に・遅延）決定する」 (per style.md §7.1: avoid 推論 for shape inference)
+- "noise floor" → 「ノイズフロア」 (established technical term)
+
+## chapter_linear-regression/generalization.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "polynomial curve fitting" → 「多項式曲線フィッティング」 (standard Japanese ML terminology, e.g. Bishop PRML)
+- "polynomial features" → 「多項式特徴量」 (following `feature` = 「特徴量」 for input variables in `ja/style.md` §7.1)
+- "design matrix" → 「計画行列」 (standard statistics / regression term)
+- "Vandermonde" (matrix) → 「Vandermonde」（Vandermonde 計画行列、Vandermonde 行列） (person name kept in Latin script per `ja/style.md` §5 & §3.2)
+- "true risk" → 「真のリスク」 (alongside glossary's `population risk` = 「母集団リスク」)
+- "noise floor" → 「ノイズフロア」
+- "irreducible noise" → 「削減不能ノイズ」
+- "held-out" → 「ホールドアウト」（ホールドアウトの / ホールドアウトされた）
+- "$K$-fold cross-validation" / "fold" → 「$K$ 分割交差検証」 / 「フォールド」
+- "leave-one-out (cross-validation)" → 「1 つ抜き（交差検証）」 / 「1 つ抜き法」
+- "sample complexity" → 「サンプル複雑度」
+
+## chapter_linear-regression/generalization.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "repeated cross-validation" → 「反復交差検証」
+- "feature selection" → 「特徴選択」 (standard ML term)
+
+## chapter_linear-regression/generalization.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Chebyshev polynomials / basis" → 「Chebyshev 多項式 / Chebyshev 基底」 (person name kept in Latin script per `ja/style.md` §5 & §3.2)
+- "Sherman--Morrison identity" → 「Sherman–Morrison の恒等式」 (person names kept in Latin script per `ja/style.md` §5)
+
+## chapter_linear-regression/weight-decay.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Tikhonov regularization" → 「Tikhonov 正則化」 (person name kept in Latin script per style.md §5; mixed term glossed on first use)
+- "regularization constant" → 「正則化定数」 (standard ML term)
+- "well-determined / poorly determined / undetermined directions" → 「よく定まる方向 / 定まりの悪い方向 / 定まらない方向」 (consistent across u01–u03)
+- "shrinkage factor" → 「縮小因子」 (uses glossary 「縮小」 while distinguishing from regression coefficients 「係数」)
+- "Lipschitz" → 「Lipschitz」 (person name kept in Latin script per style.md §5)
+
+## chapter_linear-regression/weight-decay.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "effective number of parameters" → 「有効パラメータ数」 (standard statistical learning term)
+- "oracle" (oracle parameters/predictor) → 「オラクル」 (standard ML benchmark term)
+
+## chapter_linear-regression/weight-decay.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "reproducing kernel Hilbert space (RKHS)" → 「再生核ヒルベルト空間」 (standard Japanese ML/math term)
+- "proximal step" → 「近接ステップ」 (standard convex optimization term)
+- "design matrix" → 「計画行列」 (standard statistics/ML term)
+
+## chapter_linear-classification/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "linear classification" → 「線形分類」（no glossary entry; standard ML term）
+- "one-hot" → 「ワンホット」（ワンホットベクトル、ワンホットラベル、ワンホットターゲット；katakana compound per ja/style.md §3.2）
+- "deployment" → 「デプロイ」（デプロイ時のデータ、デプロイ時のシフト、デプロイ時の頑健性；standard ML engineering usage）
+- "importance weighting" → 「重点重み付け」（standard statistical ML term）
+- "error bar" → 「エラーバー」（standard katakana term）
+
+## chapter_linear-classification/softmax-regression.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "hard assignment" / "soft assignment" → 「ハード割り当て」 / 「ソフト割り当て」 (established Japanese ML terminology, e.g., PRML Japanese edition)
+- "multinomial logistic regression" → 「多項ロジスティック回帰」 (standard statistical/ML term)
+- "shift invariance" → 「シフト不変性」 (standard ML term)
+- "decision region" → 「決定領域」 (standard ML term pairing with 決定境界)
+- "ordinal regression" → 「順序回帰」 (standard statistical/ML term)
+- Fashion-MNIST 10 categories → 「T シャツ、ズボン、プルオーバー、ドレス、コート、サンダル、シャツ、スニーカー、バッグ、アンクルブーツ」
+
+## chapter_linear-classification/softmax-regression.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gibbs' inequality" → 「ギブスの不等式」 (standard Japanese information-theory term, following style.md §5 exception for theorems named after people)
+- "Kullback–Leibler divergence" → 「カルバック・ライブラー・ダイバージェンス」 / 「KL ダイバージェンス」 (standard Japanese ML terminology)
+- "error rate" → 「誤り率」 (standard classification metric term pairing with 正解率)
+- "zero-one error" → 「0–1 誤差」 (standard statistical learning term)
+- "surrogate (loss)" → 「代理損失」 (standard ML term for convex surrogate losses)
+- "linearly separable" → 「線形分離可能」 (standard ML term)
+
+## chapter_linear-classification/softmax-regression.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gumbel-max trick" → 「Gumbel-max トリック」; "Gumbel distribution" → 「ガンベル分布」 (standard Japanese ML terminology)
+- "temperature scaling" → 「温度スケーリング」 (standard calibration term)
+- "proper scoring rule" → 「固有スコアリングルール」 (standard statistical decision theory term)
+
+## chapter_linear-classification/image-classification-dataset.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "channel-first" / "channel-last" → 「チャネルファースト」 / 「チャネルラスト」 (standard katakana in Japanese deep learning frameworks and texts)
+- Fashion-MNIST class names ("T-shirt, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, ankle boot") → 「T シャツ、ズボン、プルオーバー、ドレス、コート、サンダル、シャツ、スニーカー、バッグ、アンクルブーツ」
+- "flatten" (tensor reshaping) → 「平坦化」 (standard Japanese DL terminology, distinct from 平滑化 "smoothing")
+
+## chapter_linear-classification/softmax-regression-scratch.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "from scratch" / "from-scratch" / "scratch" → 「スクラッチで」/「スクラッチ実装」/「スクラッチ版の〜」 (consistent across prose, headings, slides, and tables)
+- "concise implementation" → 「簡潔な実装」
+- "template" → 「テンプレート」 (katakana is standard in Japanese CV/ML texts)
+- "one-hot" → 「ワンホット」 (follows ja-corrections.jsonl `one-hot-encoding` → `ワンホットエンコーディング`)
+- "clamp" → 「クランプ」
+- Fashion-MNIST class names: T-shirt → 「T シャツ」, trousers → 「ズボン」, pullover → 「プルオーバー」, dress → 「ドレス」, coat → 「コート」, sandal → 「サンダル」, shirt → 「シャツ」, sneaker → 「スニーカー」, bag → 「バッグ」, ankle boot → 「アンクルブーツ」
+
+## chapter_linear-classification/softmax-regression-scratch.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "LogSumExp trick" → 「LogSumExp トリック」
+- "smooth maximum" → 「滑らかな最大値」 (in Exercise 5)
+- "exponent bits / mantissa bits" → 「指数部…ビット / 仮数部…ビット」
+
+## chapter_linear-classification/classification.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Measuring Classifiers" → 「分類器の評価」 (section heading; concise noun phrase matching Japanese ML textbook usage)
+- "reliability diagram" → 「信頼性図」 (no glossary entry; standard term in Japanese calibration literature)
+- "temperature scaling" → 「温度スケーリング」 (no glossary entry; standard term in Japanese ML literature)
+- "confidence" / "overconfidence" / "underconfidence" → 「確信度」 / 「過信」 / 「過小確信」 (separates prediction confidence from reliability 「信頼性」)
+- "empirical accuracy" → 「経験正解率」 (aligns with statistical learning theory terminology such as 「経験誤差」)
+- "cost-sensitive" → 「コスト考慮型」 (standard term in Japanese ML literature)
+- "prevalence" → 「有病率」（疾患スクリーニングの文脈）/ 「陽性率」（一般のクラス比率の文脈）
+- "false alarm" / "false-alarm rate" → 「誤報」 / 「誤報率」
+- "F1 score" → 「F1 スコア」 (half-width space between Latin/digits and katakana per ja/style.md §2.2)
+- "precision-recall curve" → 「適合率・再現率曲線」 (coordinate compound joined by ・ per ja/style.md §2.1)
+- "reject option" / "abstain" → 「棄却オプション」 / 「棄権」 (standard decision-theory terminology in Japanese ML texts)
+
+## chapter_linear-classification/classification.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "rejection" / "abstain" → 「棄却」 / 「棄権」 (consistent with u01)
+- "precision-recall curve" → 「適合率・再現率曲線」 (consistent with u01)
+
+## chapter_linear-classification/generalization-classification.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "validation split" / "evaluation split" → 「検証分割」 / 「評価分割」
+- "memorization" / "memorizer" → 「暗記」 / 「暗記器」 (contrasts cleanly with 「学習」 and 「分類器」)
+- "empirical error" / "population error" → 「経験誤差」 / 「母集団誤差」; "population distribution" → 「母集団分布」
+- "Hoeffding's inequality", "Radon's theorem", "Sauer's lemma", "Boole" → Latin script for person names per ja/style.md §5 (「Hoeffding の不等式」「Radon の定理」「Sauer の補題」)
+- "coverage" / "empirical coverage" / "undercover" → 「被覆率」 / 「経験被覆率」 / 「被覆率が低下する」
+- "plug-in" (normal interval / radius / variance) → 「プラグイン」（プラグイン正規区間・プラグイン正規半径・プラグイン分散）
+- "shatter" / "shattering" → 「粉砕する」 / 「粉砕」 (standard Japanese statistical learning theory terminology)
+- "vacuous" (bound) → 「自明」（「自明化」）
+- "rule of three" → 「3 の法則」
+- "VC dimension" → 「VC 次元」 (with half-width space per ja/style.md §2.2 and §3.2, overriding glossary's unspaced 「VC次元」)
+
+## chapter_linear-classification/generalization-classification.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "VC bound" → 「VC 上界」
+- "one-vs-rest" → 「1 対他」
+- "convex hull" → 「凸包」
+- "monomial" → 「単項式」
+- "VC dimension" → 「VC 次元」 (with half-width space per ja/style.md §2.2 and §3.2, overriding glossary's unspaced 「VC次元」)
+
+## chapter_linear-classification/environment-and-distribution-shift.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "concept shift" → 「概念シフト」 (paired with 共変量シフト and ラベルシフト; established term in Japanese ML)
+- "source distribution" / "target distribution" → 「ソース分布」 / 「ターゲット分布」
+- "domain classifier" → 「ドメイン分類器」
+- "classifier two-sample test" → 「分類器二標本検定」
+- "support" (of a distribution) → 「サポート」, "support overlap" → 「サポートの重なり」
+- "misspecified (model)" → 「誤特定された（モデル）」 (standard term in Japanese statistics, e.g. Shimodaira)
+- "shift regime" → 「シフトの形態」
+
+## chapter_linear-classification/environment-and-distribution-shift.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "performative prediction" → 「遂行的予測」 (established translation in Japanese ML)
+- "invertible" / "singular" (matrix) → 「正則」 / 「特異」
+
+## chapter_multilayer-perceptrons/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Xavier initialization" / "He initialization" → 「Xavier 初期化」「He 初期化」 (ja/style.md §2.2, §3.2: Latin person name + half-width space + 初期化)
+- "exclusive-OR (XOR)" → 「排他的論理和（XOR）」
+- "linear collapse" → 「線形崩壊」
+- "machine precision" → 「機械精度」 (floating-point precision, distinct from classification precision 適合率)
+
+## chapter_multilayer-perceptrons/mlp.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "exclusive-OR (XOR)" → 「排他的論理和（exclusive-OR、XOR）」 (thereafter XOR)
+- "design matrix" → 「計画行列」
+- "pre-activation" → 「活性化前入力」
+- "rectified linear unit" (spelled-out full form) → 「整流線形ユニット」; "rectifying activation" / "rectifier" → 「整流型活性化関数」
+- "squashing activation" / "squashing function" → 「圧縮型活性化関数」 / 「圧縮関数」
+- "dead ReLU" → 「死んだ ReLU」
+- "space-folding" → 「空間の折りたたみ」 / 「空間を折りたたむ」
+- "tent function" / "tent map" → 「テント関数」 / 「テント写像」
+- "linear piece" / "linear segment" (1D) → 「線形区間」; "linear region" → 「線形領域」
+- "knot" (of a polyline/spline) → 「節点」
+
+## chapter_multilayer-perceptrons/mlp.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "universal approximation theorem" → 「万能近似定理」
+- "Gaussian error linear unit" → 「ガウス誤差線形ユニット」
+- "sawtooth wave" → 「のこぎり波」
+- "ridge function" → 「リッジ関数」
+- "joint" (of a ReLU polyline) → 「折れ点」
+
+## chapter_multilayer-perceptrons/mlp-implementation.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "He initialization" → 「He 初期化」 (with half-width space between Latin name and kanji per ja/style.md §2.2 & §3.2)
+- "multiply-add" → 「積和演算」（演算回数を指す場合は「積和演算数」）
+- "wall-clock time" → 「実時間」
+- "pre-activation" → 「活性化前の値」
+- "sanity check" → 「妥当性確認」
+
+## chapter_multilayer-perceptrons/mlp-implementation.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "multiply-add" → 「積和演算」（演算回数を指す場合は「積和演算数」）
+- "wall-clock time" → 「実時間」
+
+## chapter_multilayer-perceptrons/backprop.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "dead ReLU unit" → 「死んだ ReLU ユニット」 (standard Japanese ML term for dead/dying ReLU)
+- "reverse topological order" → 「逆トポロジカル順序」 (standard graph/autodiff term)
+- "sweep" → 「スイープ」 (consistent with chapter_preliminaries/autograd.md)
+
+## chapter_multilayer-perceptrons/backprop.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "multiply-add" → 「積和演算」 (standard numerical computing term)
+- "central difference" → 「中心差分」 (standard numerical analysis term)
+
+## chapter_multilayer-perceptrons/numerical-stability-and-init.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Xavier initialization" / "Glorot initialization" → 「Xavier 初期化」 / 「Glorot 初期化」 (half-width space between Latin name and kanji per ja/style.md §2.2 & §3.2)
+- "He initialization" / "Kaiming initialization" → 「He 初期化」 / 「Kaiming 初期化」 (half-width space per ja/style.md §2.2 & §3.2)
+- "fan-in" / "fan-out" → 「ファンイン」 / 「ファンアウト」 (established katakana in Japanese ML literature)
+- "pre-activation" → 「活性化前の値」 (pairs cleanly with glossary 「活性化値」 for activation)
+- "mean square" → 「二乗平均」 (standard JIS Z 8101-1 order for E[X^2], avoiding ambiguity with (E[X])^2)
+- "permutation symmetry" → 「置換対称性」
+
+## chapter_multilayer-perceptrons/numerical-stability-and-init.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "submultiplicative" / "submultiplicativity" → 「劣乗法的」 / 「劣乗法性」 (established Japanese linear algebra term)
+- "permutation invariance" → 「置換不変性」
+
+## chapter_multilayer-perceptrons/generalization-deep.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "overparameterization" / "overparameterized" → 「過剰パラメータ化」 / 「過剰パラメータ化された」; "underparameterized" → 「過少パラメータ化された」
+- "interpolation" / "interpolator" / "minimum-norm interpolator" → 「補間」 / 「補間解」 / 「最小ノルム補間解」
+- "capacity" / "capacity bound" / "generalization bound" / "VC bound" → 「容量」 / 「容量上界」 / 「汎化上界」 / 「VC 上界」
+- "vacuous (bound)" → 「空虚な（上界）」; "population error" → 「母集団誤差」
+- "conditioning (numerical)" → 「行列の条件」
+- "maximum-margin separator" → 「最大マージン分離器」
+- "clean (labels/examples)" → 「クリーンな」; "corrupted labels" → 「破損したラベル」 / 「破損ラベル」
+- "grokking" → 「グロッキング」
+
+## chapter_multilayer-perceptrons/generalization-deep.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "patience (early stopping)" → 「ペイシェンス」
+- "grokking" → 「グロッキング」
+
+## chapter_multilayer-perceptrons/dropout.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "co-adaptation" → 「共適応」 (standard Japanese ML term for hidden-unit co-adaptation in dropout)
+- "memorization" / "memorize" (of training quirks or noisy labels) → 「暗記」 / 「暗記する」 (distinguishes rote memorization from memory storage 「メモリ」)
+- "pre-activation" → 「活性化前の値」
+- "He initialization" → 「He 初期化」 (with half-width space per `ja/style.md` §2.2 and §3.2)
+- "trainer" → 「トレーナ」 (drops final ー per `ja/style.md` §3.3 `-er` rule)
+- "warm-up" → 「ウォームアップ」
+
+## chapter_multilayer-perceptrons/dropout.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Monte Carlo dropout" → 「モンテカルロドロップアウト」 (solid katakana compound per `ja/style.md` §3.2)
+
+## chapter_multilayer-perceptrons/kaggle-house-price.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "tabular data" / "tabular" → 「表形式データ」 / 「表形式」 (standard Japanese ML terminology)
+- "data leakage" / "target leakage" → 「データリーク」 / 「ターゲットリーク」 (standard Japanese ML and Kaggle terminology)
+- "$K$-fold cross-validation" / "fold" → 「$K$ 分割交差検証」 / 「フォールド」 (standard Japanese ML terminology)
+- "imputation" / "mean imputation" / "median imputation" / "zero imputation" → 「補完」 / 「平均値補完」 / 「中央値補完」 / 「ゼロ補完」
+- "design matrix" → 「計画行列」 (standard statistics/ML term)
+- "He initialization" → 「He 初期化」 (following ja/style.md §3.2 Latin proper name + Japanese noun)
+- "indicator" → 「インジケータ」 (dropping final ー per ja/style.md §3.3 *-or* rule)
+
+## chapter_multilayer-perceptrons/kaggle-house-price.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "target encoding" → 「ターゲットエンコーディング」 (standard Japanese ML/Kaggle terminology)
+- "leaderboard" → 「リーダーボード」 (standard Kaggle terminology)
+
+## chapter_builders-guide/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Computation" (Chapter title, `chap_computation`) → 「計算」 (concise noun-phrase title matching the shortened 1-word English chapter title, while "Deep Learning Computation" on the cover slide is 「深層学習の計算」)
+- "tree of modules" / "module tree" / "state tree" → 「モジュールの木」 / 「モジュール木」 / 「状態木」 (consistent with earlier chapters' `モジュール木` and `マージ木`)
+- "lazy shape inference" → 「形状の遅延決定」 (avoids `推論` for shape inference per `ja/style.md` §7.1)
+- "master weights" → 「マスター重み」 (standard Japanese ML/NVIDIA mixed-precision terminology)
+- "straight-through estimator" → 「ストレートスルー推定器」
+- "container" / "builder" / "caching allocator" → 「コンテナ」 / 「ビルダ」 / 「キャッシングアロケータ」 (drops final `ー` on *-er*/*-or* loanwords per `ja/style.md` §3.3)
+
+## chapter_builders-guide/model-construction.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "module" → 「モジュール」 (recursive framework abstraction for layers, blocks, and models)
+- "sequential container" → 「逐次コンテナ」 (no glossary entry; glossed on first body occurrence)
+- "registry" / "register" (child modules) → 「レジストリ」 / 「登録（する）」; "unregistered" → 「未登録（の）」
+- "plain list" / "plain Python list" → 「通常のリスト」 / 「通常の Python リスト」
+- "forward method" → 「順伝播メソッド」 (distinguishes the concept from framework method names `forward`, `call`, `__call__`)
+- "lazy initialization" / "lazy layer" → 「遅延初期化」 / 「遅延層」
+- "configuration" / "config" → 「設定」 (glossed on first occurrence)
+
+## chapter_builders-guide/model-construction.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "compiled execution" → 「コンパイル実行」 (paired with glossary's "eager execution" → 「即時実行」)
+- "buffer" (non-trainable tensor state) → 「バッファ」 (drops final ー per `ja/style.md` §3.3)
+- "tracer" (abstract value in graph tracing) → 「トレーサ」 (drops final ー per `ja/style.md` §3.3)
+- "initializer" → 「イニシャライザ」 (drops final ー per `ja/style.md` §3.3)
+- "dry run" → 「ドライラン」
+- "builder" → 「ビルダ」 (drops final ー per `ja/style.md` §3.3)
+- "foundation model" → 「基盤モデル」 (standard Japanese ML term; glossed on first occurrence)
+
+## chapter_builders-guide/parameters-state-memory.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "state tree" → 「状態木」; "module tree" → 「モジュール木」
+- "registration" → 「登録」
+- "non-trainable" → 「訓練対象外の」
+- "running average / running mean / running variance / running statistics" → 「移動平均 / 移動平均 / 移動分散 / 移動統計量」
+- "parameter freezing / freezing" → 「パラメータ凍結 / 凍結」
+
+## chapter_builders-guide/parameters-state-memory.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "meta device / meta tensor" → 「メタデバイス / メタテンソル」
+- "deduplication" → 「重複除外」
+
+## chapter_builders-guide/init.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "initializer" → 「イニシャライザ」 (loanword from -er drops final ー per ja/style.md §3.3; applies uniformly to initializer classes, objects, and functions across frameworks)
+- "gain" (in initialization) → 「ゲイン」 (standard katakana term in Japanese DL/PyTorch documentation)
+- "mean square" → 「二乗平均」 (aligns with glossary `root mean square` = 「二乗平均平方根」)
+- "truncated normal" → 「切断正規分布」 (standard mathematical statistics term in Japanese)
+- "module tree" / "block tree" → 「モジュールツリー」 / 「ブロックツリー」
+- "body" (of a residual block) → 「本体」
+- "residual branch" → 「残差ブランチ」
+- "in place" / "in-place" → 「インプレースで」 / 「インプレースの」
+- "positively homogeneous" → 「正斉次」
+
+## chapter_builders-guide/custom-layers.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "custom layer" / "custom gradient" → 「カスタム層」 / 「カスタム勾配」
+- "gain" (multiplicative scale parameter in normalization/initialization) → 「ゲイン」
+- "straight-through estimator (STE)" → 「ストレートスルー推定器（straight-through estimator、STE）」
+- "surrogate gradient" / "surrogate derivative" → 「代理勾配」 / 「代理導関数」（`ja/decisions.md` の `"surrogate loss" → 「代理損失」` に準拠）
+- "random features" / "random Fourier features" → 「ランダム特徴量」 / 「ランダムフーリエ特徴量」
+- "sequential container" → 「シーケンシャルコンテナ」
+- "fused kernel" → 「融合カーネル」
+
+## chapter_builders-guide/custom-layers.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "running statistics" / "running mean and variance" → 「移動統計量」 / 「移動平均や移動分散」
+- "gradient check" → 「勾配チェック」
+- "clamp" (clipping operation) → 「クランプ」
+
+## chapter_builders-guide/numerics.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "precision" (numerical representation precision) → 「精度」 (glossary only lists classification precision 「適合率」)
+- "mixed-precision training" → 「混合精度訓練」
+- "master weights" → 「マスター重み」
+- "normal number" / "subnormal number" → 「正規化数」 / 「非正規化数」 (standard JIS/IEEE 754 terms)
+- "round-to-nearest" → 「最近傍丸め」
+- "sign" / "exponent" / "mantissa" (floating-point fields) → 「符号」 / 「指数部」 / 「仮数部」
+
+## chapter_builders-guide/numerics.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "dtype promotion" → 「dtype の昇格」
+- "dynamic loss scaling" → 「動的損失スケーリング」
+- "loss scaler" → 「損失スケーラ」 (following ja/style.md §3.3 *-er* rule)
+- "reduction" → 「リダクション」
+
+## chapter_builders-guide/numerics.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "failure modes" → 「失敗モード」
+- "accumulator" / "accumulation" → 「アキュムレータ」 / 「累積」 (following ja/style.md §3.3 *-or* rule)
+- "round-to-nearest-even" → 「最近傍偶数丸め」
+
+## chapter_builders-guide/saving-loading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "state dictionary" / "state dict" → 「状態辞書」
+- "state tree" → 「状態ツリー」
+- "module tree" → 「モジュールツリー」
+- "serialize" / "serialization" → 「シリアライズする」 / 「シリアライズ」
+- "pretrained weights" → 「事前学習済みの重み」
+- "missing keys" / "unexpected keys" → 「欠落キー」 / 「予期しないキー」
+- "crash-safe" → 「クラッシュセーフ」
+- "trust boundary" → 「信頼境界」
+- "allowlist" → 「許可リスト」
+
+## chapter_builders-guide/saving-loading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "stateful optimization" → 「状態を持つ最適化」
+- "running average" → 「移動平均」
+
+## chapter_builders-guide/saving-loading.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "backbone" → 「バックボーン」
+- "classifier head" / "classification head" → 「分類器ヘッド」 / 「分類ヘッド」
+- "freezing" / "unfreezing" → 「凍結」 / 「凍結解除」
+
+## chapter_builders-guide/gpus-devices-memory.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "device placement" → 「デバイス配置」
+- "soft placement" → 「ソフトプレースメント」
+- "synchronization point" → 「同期ポイント」
+- "pinned (page-locked) host memory" → 「ピン留め（ページロック）ホストメモリ」
+- "memory budget" → 「メモリバジェット」
+- "device-aware `Trainer`" → 「デバイス対応の `Trainer`」
+
+## chapter_builders-guide/gpus-devices-memory.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "caching allocator" → 「キャッシングアロケータ」
+- "memory view" → 「メモリビュー」
+- "out-of-memory (OOM)" → 「メモリ不足（out-of-memory、OOM）」
+- "gradient checkpointing" → 「勾配チェックポイント」
+- "rematerialization" → 「再実体化」
+- "step memory" → 「ステップメモリ」
+
+## chapter_builders-guide/reproducibility-inspection.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "inspection" / "model inspection" → 「検査」 / 「モデルの検査」 (no glossary entry; standard Japanese software/ML term for inspecting internal model state)
+- "pseudorandom number generator (PRNG)" → 「擬似乱数生成器（PRNG）」 (extends glossary `乱数生成器` for pseudorandom)
+- "generator object" → 「ジェネレータオブジェクト」 (follows `ja/style.md` §3.3 `ジェネレータ` for PRNG `Generator` objects, distinguishing from GAN `生成器`)
+- "worker" → 「ワーカー」 (retains final ー like `ユーザー`, `サーバー` in `ja/style.md` §3.3; standard in Japanese OS/PyTorch usage)
+- "non-finite value" → 「非有限値」 (concise, exact counterpart to `isfinite`)
+
+## chapter_builders-guide/reproducibility-inspection.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "atomic addition" / "atomic reduction" → 「アトミック加算」 / 「アトミックリダクション」 (standard GPU/parallel computing terminology)
+- "scatter-add" → 「スキャッタ加算」 (parallel reduction into indexed bins)
+- "leaf layer" → 「リーフ層」 (submodule with no children in module tree)
+- "hook" / "pre-hook" → 「フック」 / 「事前フック」 (`register_forward_hook` / `register_forward_pre_hook`)
