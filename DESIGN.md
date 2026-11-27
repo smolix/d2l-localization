@@ -222,7 +222,12 @@ through the `DATA_HUB` URLs and for the language menu.
   tr, vi), then the old editions. Each build carries a static copy
   as fallback. Adding a language does not require rebuilding the others.
 - Order: current languages, a divider, then old editions ("English (old)" at
-  en-v2.d2l.ai, "中文 (第一版)" at zh-v1.d2l.ai, later others).
+  en-v2.d2l.ai, "中文 (第一版)" at zh-v1.d2l.ai, later others). Each group is
+  sorted alphabetically by the name it shows **[ruled 2026-11-27]**, ignoring
+  accents and case (`menu_order` in `tools/l10n/build.py`): Latin-script names
+  first (Deutsch, English, Português, Tiếng Việt, Türkçe), then the other
+  scripts by code point (中文, 日本語, 한국어). The order in `languages.yml` does
+  not matter.
 - Each language in `languages.json` carries `pages`, the list of HTML pages
   its site serves. Every real upload to a language bucket rewrites that
   language's list from the uploaded build (d2l-neu

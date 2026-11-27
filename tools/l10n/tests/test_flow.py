@@ -8,7 +8,7 @@ import yaml
 
 from l10n import cli, config, tfile
 from l10n.answers import apply_answer, check_language, parse_answer
-from l10n.build import menu_data, strings, translated_pages
+from l10n.build import menu_data, menu_order, strings, translated_pages
 from l10n.bump import align
 from l10n.pseudo import pseudo
 from l10n.segment import normalize, segment
@@ -208,6 +208,13 @@ class TestStringsMenu(TempRepo):
         self.assertEqual(m['languages'][1], {'code': 'zh', 'name': '中文', 'url': 'https://zh.d2l.ai'})
         self.assertEqual(m['old_editions'], [{'name': 'English (old)', 'url': 'https://en-v2.d2l.ai'}])
         self.assertEqual(len(menu_data(include_unpublished=True)['languages']), 3)
+
+    def test_menu_order(self):
+        names = ['English', '中文', '日本語', '한국어', 'Português', 'Deutsch',
+                 'Türkçe', 'Tiếng Việt', 'العربية', 'Ελληνικά', 'Español']
+        self.assertEqual(sorted(names, key=menu_order),
+                         ['Deutsch', 'English', 'Español', 'Português', 'Tiếng Việt',
+                          'Türkçe', 'Ελληνικά', 'العربية', '中文', '日本語', '한국어'])
 
 
 if __name__ == '__main__':
