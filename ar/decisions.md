@@ -1785,3 +1785,253 @@ One rendering per term across the seven pages of the chapter; the unit entries a
 - "compact modern recipe" → الوصفة الحديثة المختصرة on every page; مصغر stays for a compact network or roadmap.
 - "the Trainer" (capitalized, in tab notes) → الصنف Trainer; slide kicker "Experimental Evidence" → الدليل التجريبي; concept-check lead-in "Work out these …" → المطلوب حل … / المطلوب إجراء …, without a colon after المطلوب.
 - Kept apart on purpose: "parameter-matched" is المطابق في المعلَمات where it is paired with المطابق في عمليات FLOP (efficient-convnets) and المساوي في عدد المعلَمات for the ConvNeXt control model; "primitives" → لبنات for architectural building blocks, عناصر أولية for low-level features or operations.
+
+## chapter_recurrent-neural-networks/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Chapter title "Sequence Models" → نماذج التسلسل; "sequential data" → البيانات التسلسلية; cover "Sequence Models and Recurrent Neural Networks" → نماذج التسلسل والشبكات العصبية المتكررة.
+- H. G. Wells' *The Time Machine* → رواية *The Time Machine* للكاتب H. G. Wells (title and author in Latin, class noun رواية; "novella" → رواية قصيرة); its quoted opening sentence stays in English inside “…”, because it is the dataset text and the argument counts its English words.
+- "rollout" (feeding a model its own predictions) → التنبؤ المتتابع; "multistep rollout" → التنبؤ المتتابع متعدد الخطوات; "one-step prediction" → التنبؤ بخطوة واحدة; "rollout drift" → انجراف التنبؤ المتتابع.
+- "bits per byte" → البتات لكل بايت (unit on slides: بت/بايت; "bytes/token" → بايت/رمز مميز; bpb and PPL stay Latin where the English writes them); "count-based" → القائم على العد; "count tables" → جداول العد.
+- "subword" alone → كلمة فرعية (كلمات فرعية); "subword tokens" → الرموز المميزة للكلمات الفرعية; "subword tokenization" → التجزئة إلى رموز فرعية (glossary); "tokenizer" → المجزئ; "pre-tokenized" → بعد تجزئة مسبقة; "token granularity" → مستوى تفصيل الرموز المميزة.
+- "truncated sampling", "truncated samplers" → أخذ العينات المبتور، خوارزميات أخذ العينات المبتور; "tail truncation" → بتر الذيل; "truncated BPTT" (slide) → خوارزمية BPTT المقتطعة.
+- "structured state space models" → نماذج فضاء الحالات المهيكلة; "vanilla RNN" → شبكة RNN البسيطة; "Kneser--Ney $n$-grams" → نماذج $n$-gram بطريقة Kneser--Ney; "trigram" → ثلاثية (ثلاثيات الكلمات).
+- "restricting attention to" (everyday sense) → قصر النظر على, to keep الانتباه for the mechanism; "degenerate into" (text) → يتردى إلى (not ينحدر, the regression root).
+- Slides: "feedforward models" → نماذج التغذية الأمامية; "Motivation & Core Problem" → الدافع والمشكلة الأساسية; "Architectural Progression" → المسار المعماري; "Chapter Synthesis" → توليف الفصل; "sequence modeling pipeline" → خط نمذجة التسلسل; "global gradient clipping", "global norm clipping" → قص التدرج الكلي، قص المعيار الكلي; "length-normalized" → المطبَّع بالطول; "open-ended generation" → التوليد المفتوح; "free generation" → التوليد الحر; "repetition loops" → الحلقات المتكررة.
+- English glosses given on this page: language model, token, recurrent neural network (RNN), hidden state, perplexity, byte pair encoding, backpropagation through time, beam search.
+
+## chapter_recurrent-neural-networks/rnn.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "recurrent neural network (RNN)" → الشبكة العصبية المتكررة (glossary), then شبكة RNN (شبكات RNN); "RNN language model" → النموذج اللغوي بشبكة RNN; "recurrent layer / cell / connection / weight" → الطبقة المتكررة / الخلية المتكررة / وصلة متكررة / الوزن المتكرر; "recurrent weight matrix" → مصفوفة أوزان متكررة.
+- "this recurrence" (the update $\mathbf{h}_t = g(\cdot)$) → العلاقة التكرارية (as logged for a mathematical recursion); "recursive hidden state" → حالة مخفية تكرارية; "hidden state recurrence" (cover slide) → تكرار الحالة المخفية.
+- "trigram model" → النموذج الثلاثي (as on the language-model page); "$n$-gram order" → مرتبة نموذج $n$-gram; "count-based language models" → النماذج اللغوية القائمة على العد; "count table" → جدول عد; "contexts" → سياقات.
+- "prefix" (the tokens read so far) → البادئة; "history" → التاريخ; "transition function" → دالة الانتقال; "latent autoregressive model" → نموذج انحدار ذاتي كامن.
+- "unrolled" (an RNN over time) → مفرودة، الصورة المفرودة, "temporal unrolling" → الفرد الزمني (the log's يفرد); "horizontally concatenated" → المربوطة أفقيًا, "vertically stacked" → المكدسة عموديًا.
+- "to batch" (a computation across steps) → يجمع في دفعة واحدة; "batched input projections" (slide title) → إسقاطات المدخلات بالدفعات; "sequential (time) loop" → الحلقة (الزمنية) التسلسلية; "hoist out of the loop" → إخراج … من الحلقة; "known up front" → معروفة سلفًا.
+- "parity" → الزوجية; "bit stream" → دفق من البتات; "running count" → العدد التراكمي; "flip a bit" → قلب بت; "threshold RNN" → شبكة RNN بعتبة.
+- "lossy" → فاقد للمعلومات ("lossy compression" → الضغط الفاقد للمعلومات); "512 bytes" → 512 بايت, "those 512 bytes" → هذه البايتات الـ 512; "state bandwidth" → عرض نطاق الحالة; "horizon reach" → مدى الأفق; "horizon wall" → جدار الأفق.
+- "teacher forcing" → فرض مخرجات المعلم (glossary); "ground-truth token" → الرمز المميز من الحقيقة المرجعية; "rollout" (free-running generation) → التنبؤ المتتابع; "sampled or greedy token" → رمز مميز مسحوب بأخذ العينات أو مختار بالطريقة الجشعة; "multistep sine-wave forecast" → التنبؤ متعدد الخطوات بالموجة الجيبية.
+- "token id" → معرف الرمز المميز (as logged); "vocabulary entries" → بنود المفردات; "special tokens" → الرموز الخاصة; "embedding width" → عرض التضمين; "hidden size" → الحجم المخفي; "vocabulary-sized layers" → الطبقات التي يتبع حجمها حجم المفردات, on slides طبقة إخراج بحجم المفردات، طبقتا المفردات; "output layer" → طبقة الإخراج.
+- "look up rows in the embedding table" → تستخرج الصفوف من جدول التضمين, slide "Embedding lookup" → البحث في جدول التضمين; "per lag" → لكل موضع تأخر; "hard cutoff" → قطع حاد; "impulse trace" → تتبع نبضة; "decay" of the impulse → تتناقص.
+- Table headers: "part" → الجزء, "shape" → الشكل, "parameters" → المعلَمات, "total" → المجموع; "input / output weight" → وزن المدخلات / وزن المخرجات; "hidden bias" → الانحياز المخفي.
+- English glosses given in u01 of this page (do not repeat in later units): latent, hidden state, recurrent neural network (RNN), parity, lossy, embedding table, multiply-adds, ground truth, teacher forcing. Not glossed: hidden layer, attention, perplexity (defined on earlier pages).
+
+## chapter_recurrent-neural-networks/decoding.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "decoding" → فك التشفير (as logged); "decoder" as a decoding algorithm → مفكك التشفير (مفككات التشفير); "greedy decoding" → فك التشفير الجشع, "greedy search" → البحث الجشع; "beam search" → البحث الشعاعي, "beam width" → عرض الشعاع, "a beam" (one kept hypothesis) → شعاع (أشعة); "decoding strategies" → استراتيجيات فك التشفير; decoding token ids into text → فك ترميز.
+- "prefix" → بادئة (بادئات); "continuation" → تكملة (تكملات); "prompt" is left for the next unit; "next-token distribution / logits" → توزيع / لوجيتات الرمز المميز التالي; "candidate" → مرشح; "hypothesis" (beam search) → فرضية.
+- "maximization" (decoding family) → التعظيم; "sampling" (family) → أخذ العينات; "truncated sampling" → أخذ العينات المبتور, "truncation" → البتر; "prune" → يشذب، التشذيب; "expand" a beam or prefix → يمدد، التمديد (التوسيع stays dilation); "unreliable tail" → الذيل غير الموثوق.
+- "open-ended generation / text" → التوليد المفتوح / النص المفتوح; "constrained tasks" → المهام المقيدة; "valid" outputs or continuations → صالحة, "acceptable" → مقبولة; "exact search / maximization" → البحث المضبوط / التعظيم المضبوط; "intractable" → غير عملي; "horizon" → أفق; "search tree" → شجرة البحث.
+- "myopia" → قصر النظر; "neural text degeneration" → انحلال النص العصبي; "repetitive loops" → حلقات متكررة; "attracting cycle" → دورة جاذبة, "limit cycle" → دورة حدية, "attractors" → جواذب; "rollout" (generated continuation, on slides) → التوليد (مسار التوليد، التوليد الجشع); "recurrence" a value is fed back into → العلاقة التكرارية.
+- "model-agnostic interface" → واجهة مستقلة عن النموذج; "invariance" to architecture and framework → الثبات أمام; "1-D NumPy vector" → متجه NumPy أحادي الأبعاد; "prose" (generated) → نص / نثر.
+- Slides: top-k, top-p, min-p, distinct-n stay Latin (أخذ العينات بطرق top-k والنواة (top-p) و min-p; مقياس distinct-n); "nucleus sampling" → أخذ عينات النواة; "Maximization Family I / II" → عائلة التعظيم I / II; "774M parameters" → 774 مليون معلَمة; "interpolating exponent" → الأس … للاستيفاء; "OCR" stays Latin.
+- English glosses given in u01 of this page (do not repeat in later units): decoding, maximization, sampling, prefix, greedy decoding, myopia, neural text degeneration. Beam search, beam width, length normalization and temperature scaling are only named here and take their gloss where later units define them.
+
+## chapter_recurrent-neural-networks/text-sequence.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "tokenizer" → مجزئ (مجزئات), glossed once as مجزئ (tokenizer); from the glossary's التجزئة إلى رموز. "tokenization" → التجزئة إلى رموز, short التجزئة after the first mention in a sentence; "to tokenize" → يجزئ إلى رموز; "character-level / word-level / byte-level tokenization (tokenizer)" → التجزئة (المجزئ) على مستوى المحارف / الكلمات / البايتات; "subword tokenizer" → مجزئ الكلمات الفرعية; "production tokenizer" → مجزئ بيئة الإنتاج.
+- "character" (of text, Unicode) → محرف (محارف); "letter" → حرف (حروف); "accented letters", "Latin diacritics" → الحروف التي تحمل علامات / الحروف اللاتينية ذات العلامات; "diacritics" → علامات التشكيل; "scripts" → أنظمة الكتابة; "emoji" → الرموز التعبيرية; "character encoding" → ترميز محارف; UTF-8, Unicode, ASCII stay Latin after a class noun (الترميز UTF-8، معيار Unicode، محارف ASCII).
+- "byte pair encoding (BPE)" → *ترميز أزواج البايت* (byte pair encoding, BPE), afterwards خوارزمية BPE / مجزئ BPE as the English writes BPE; "merge" → دمج (رتبة الدمج، أشجار الدمج); "greedy" → جشع; "pre-tokenization" → التجزئة المسبقة; "regex" → التعابير النمطية; "special tokens" → الرموز الخاصة.
+- "token index" → فهرس (فهارس صحيحة); "token types" (distinct tokens) → أنواع الرموز المميزة; "symbols" of an alphabet (27 symbols, 256 symbols) → رمز (رموز), kept apart from الرمز المميز; vocabulary "entry" → بند (بنود); "vocabulary size" → حجم المفردات; "base alphabet" → أبجدية أساسية; "universal" → شامل (الشمولية).
+- "out of vocabulary (OOV)" → *خارج المفردات* (out of vocabulary, OOV), then OOV after a class noun where the English writes OOV (حالة OOV); "zero OOV" → انعدام حالات OOV / بلا أي حالة OOV; "unseen" word or token → غير مرئية; "`<unk>` fallback", "falls back to `<unk>`" → الرجوع إلى `<unk>`.
+- "running corpus" → المدونة النصية التي نعتمدها (طوال هذا الفصل); "novella" → رواية قصيرة, "our novella" → روايتنا / الرواية; the title *The Time Machine* stays in Latin after رواية.
+- "interpolate between characters and words / between the extremes" → يتدرج بين (as the log's group-normalization entry; يستوفي stays fitting data); "granularity" → مستوى التفصيل; "operating point" → نقطة العمل; "spectrum" → الطيف.
+- "long-range dependency" → تبعية بعيدة المدى; "subject–verb agreement" → المطابقة بين الفاعل وفعله; "inflection" → صيغة صرفية; "morphological stems" → الجذوع الصرفية; "proper name" → اسم علم; "typographical error", "typo" → خطأ مطبعي; "capitalization" → كتابة الحرف الأول كبيرًا; "case folding" → توحيد حالة الحروف; "whitespace" → الفراغات.
+- text "normalization" → التطبيع (تطبيع النص، نص مطبَّع); "aggressive normalization" → تطبيع شديد; "losslessly" → بلا فقد; "token for token" → رمزًا مميزًا برمز مميز; "effective context horizon" → أفق السياق الفعلي; "open-vocabulary robustness" → المتانة مع المفردات المفتوحة; "parameter footprint" → حجم المعلَمات; "sequence model" → نموذج التسلسل.
+- "NLP" → مجال NLP (Latin acronym after a class noun).
+- English glosses given in u01 of this page (do not repeat in later units): tokens, tokenizer, tokenization, subword, byte pair encoding (BPE), out of vocabulary (OOV), vocabulary.
+
+## chapter_recurrent-neural-networks/language-model.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "$n$-gram language model" → نموذج $n$-gram اللغوي; an "$n$-gram" as an item (a run of $n$ tokens) → تتابع $n$-gram (تتابعات $n$-gram); "unigram / bigram / trigram model" → النموذج الأحادي / الثنائي / الثلاثي; "bigrams / trigrams" as items → الثنائيات / الثلاثيات (ثنائيات الكلمات، ثلاثيات الكلمات), "word pairs / triples" → أزواج الكلمات / ثلاثيات الكلمات.
+- "prefix" (the tokens so far) → البادئة; "continuation" (the token that follows a context) → تتمة; "text continuation" → إكمال نص; "to score a sequence" → يحسب درجة التسلسل; "given $x_1$" → بمعلومية $x_1$; "conditions on" → يشترط على / مشروط بـ.
+- "count(s)" → تعداد (تعدادات), "count-based model" → نموذج قائم على العد, "count sparsity" → تناثر التعدادات; "relative frequencies" → التواترات النسبية (word frequency is the glossary's تواتر).
+- "tokenizer" → المجزئ (المجزئات), from the glossary's تجزئة إلى رموز; "to tokenize into words" → يجزئ إلى كلمات; "tokenized sequences" → التسلسلات المجزأة إلى رموز.
+- "smoothing" → التنعيم (تنعيم لابلاس; Kneser–Ney stays Latin: تنعيم Kneser–Ney); "bits per byte" → البتات لكل بايت.
+- "Zipf's law" → قانون Zipf (Latin name, not in the glossary); "Zipf exponent" → أس Zipf; "power law" → قانون القوة; "heavy-tailed" → ثقيل الذيل; "skewed distribution" → توزيع شديد الالتواء; "rank" (of a word by frequency) → الرتبة; "log–log axes / space" → محوران لوغاريتميان.
+- "stop words" → كلمات التوقف; "function words" → كلمات وظيفية; "singletons" ($n$-grams that occur once) → وحيدة الورود (not مفردات, which is the vocabulary).
+- "verbatim memorization" → الحفظ الحرفي; "longest copied run" → أطول مقطع منسوخ; "contiguous span of words" → سلسلة متصلة من الكلمات; "the sampler" → السحب; "nested hash map" → جدول تجزئة متداخل; "effective branching factor" → عامل التفرع الفعال; "Markov truncation" → اقتطاع ماركوف.
+- Example phrases and prompts quoted from English text stay in English inside “…”.
+- English glosses given in u01 of this page (do not repeat in later units): language model, perplexity, smoothing, bits per byte, unigram, bigram, trigram, sparsity, stop words, power law, heavy-tailed.
+
+## chapter_recurrent-neural-networks/sequence.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Page title "Working with Sequences" → التعامل مع التسلسلات; "sequential data" → البيانات التسلسلية (as on the chapter page).
+- "stationarity" → الاستقرارية, "stationary" → مستقر (ديناميكيات مستقرة); "time-homogeneous" → متجانس زمنيًا; "time-invariant" → ثابت زمنيًا (no glossary entries; the terms of Arabic time-series texts).
+- "Markov condition" → شرط ماركوف; "Markov models" → نماذج ماركوف; "$m^\textrm{th}$-order" → من المرتبة $m^\textrm{th}$, "first-order" → من المرتبة الأولى; "is Markov" (adjective) → ماركوفي.
+- "autoregression" → الانحدار الذاتي; "autoregressive" as an adjective → ذاتي الانحدار (التنبؤ ذاتي الانحدار); "a linear autoregressive model" → نموذج خطي للانحدار الذاتي; "latent autoregressive model" → نموذج انحدار ذاتي كامن (as on the RNN page).
+- "fixed window" → نافذة ثابتة; "window length" → طول النافذة; "latent summary" → ملخص كامن; "running summary" → ملخص تراكمي; "fixed-input model / architecture / predictor" → ثابت المدخلات; "fixed-size" → ثابت الحجم; "hard horizon" → أفق صارم; "memory horizon" → أفق الذاكرة.
+- "chain rule of probability" → قاعدة السلسلة للاحتمالات; "conditionals" → التوزيعات الشرطية (الاحتمالات الشرطية for their values); "factor" (verb, a joint or a sequence) → يتحلل إلى جداء / يحلل إلى عوامل; "this identity is exact" → هذه المتطابقة مضبوطة.
+- "entries" of a sequence → عناصر; "time series" → سلسلة زمنية, "numerical series", "the series" → سلسلة عددية، السلسلة (تسلسل stays the ML sequence); the mathematical index $t$ → الدليل.
+- "sentiment classification" → تصنيف المشاعر; "captioning an image" → كتابة وصف لصورة; "transcribing speech" → تحويل الكلام إلى نص; "two transcriptions for the same audio clip" → نصان حُوّل إليهما المقطع الصوتي نفسه; "waveform samples" → عينات الموجة الصوتية; "spectrogram frames" → إطارات المخطط الطيفي.
+- "email client" → برنامج بريد إلكتروني; "weather service" → خدمة أرصاد جوية; "forecaster" → خبير التنبؤ (as logged); "effect / causes" → الأثر / الأسباب.
+- Slides: "Taxonomy of …" → أصناف … (not تصنيف, which is classification); "Problem Formulation" → صياغة المسألة; "Probabilistic Foundation" → الأساس الاحتمالي; "Statistical Assumptions" → الافتراضات الإحصائية; "Sequence-to-Label" → تسلسل إلى وسم; "Fixed-to-Sequence" → ثابت إلى تسلسل; "unsupervised density estimation" → تقدير الكثافة دون إشراف; "candidate likelihood ranking" → ترتيب المرشحين حسب الإمكان; "ASR rescoring" → إعادة حساب الدرجات في أنظمة ASR; "ancestral generation" → التوليد السلفي; "log-domain scoring" → حساب الدرجات في المجال اللوغاريتمي; "tractable / tractability" (count tables, finite-context models) → عملي / الجدوى العملية (from the log's "intractable" → غير عملي); "training pairs" → أزواج تدريبية; "Strategy 1 — …" → الاستراتيجية 1، … (a comma for the dash).
+- Example phrases quoted from English text (“Thank you for your”, “help”, “time”, “your thank for you”) stay in English inside “…”, as on the language-model page.
+- English glosses given in u01 of this page (do not repeat in later units): sequence modeling, ground truth, sequence, time step, autoregressive model, window length, latent autoregressive model, chain rule of probability, underflow, language modeling. Not glossed here: recurrent neural networks, state space models, hidden state (named in passing; glossed on the pages that define them). Markov condition, stationary and time-homogeneous take their gloss in the next unit, which defines them.
+
+## chapter_recurrent-neural-networks/bptt.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "backpropagation through time" → *الانتشار العكسي عبر الزمن* (backpropagation through time, BPTT), glossed in u01; "BPTT" as the English writes it on slides → خوارزمية BPTT (feminine: خوارزمية BPTT المقتطعة / الكاملة / الخطية); "TBPTT" is copied after the full Arabic term.
+- "lag" (number of steps back in time) → التأخر (التأخرات; "lag $k$" → التأخر $k$; "lag-$k$ operator" → مؤثر التأخر $k$).
+- "horizon" (how far back gradients or learning reach) → أفق (آفاق): أفق التدرج، آفاق الاقتطاع، على أفق أطول.
+- "unroll" (an RNN, a recurrence) → يفرد، الفرد، شبكة مفرودة (as on the numerical-stability page); "backward recursion" → العلاقة التكرارية الخلفية; "scalar recurrence" → علاقة تكرارية قياسية; "structured linear recurrences" → العلاقات التكرارية الخطية المهيكلة, glossed in u01.
+- "state Jacobian" → المصفوفة اليعقوبية للحالة; "step Jacobian" → المصفوفة اليعقوبية للخطوة; "right-multiplication" → ضرب من اليمين; "transposed weight matrix" → منقول مصفوفة الأوزان.
+- "decay" (of the gradient with lag) → تناقص (as "signal decay" on the numerical-stability page); "gradient flow" (how gradients travel backward) → سريان التدرج, as in the MLP chapter (تدفق التدرج stays the continuous-time ODE).
+- "vanilla RNN" → شبكة RNN البسيطة (as decided earlier); "vanilla $\tanh$ RNN" → شبكة RNN البسيطة بدالة $\tanh$; "gated RNNs / gated recurrent cells" → شبكات RNN ذات البوابات / الخلايا المتكررة ذات البوابات, "gated" glossed in u01; "cell state" → حالة الخلية.
+- "global gradient clipping" → قص التدرج الكلي; "safeguard" → احتياط; "exploding spikes" → قفزات الانفجار; "pathologies" (of gradients) → علل (علتا التدرج).
+- "segment" (of a token stream) → مقطع (مقاطع); "stream" → سيل (سيول); "stateful streaming" → السيل ذو الحالة; "segment boundary" → حد المقطع; "truncation" → الاقتطاع; "detach" → الفصل (as on the autograd page).
+- "long-range dependencies" → التبعيات بعيدة المدى; "per-position validation loss" → خسارة التحقق لكل موضع; "Kneser--Ney counts" → تعدادات Kneser--Ney; "a few billionths" → بضعة أجزاء من المليار.
+- "razor's edge" → حد السكين; "leading eigenspace" → الفضاء الذاتي الرئيس; "non-normal" (matrix growth) → غير ناظمي; "unit disk" → قرص الوحدة; "runtime" → زمن التنفيذ; "update latency" → زمن الاستجابة لكل تحديث.
+- Kickers: "Section Takeaways" → خلاصات القسم; "Empirical Probe" → مسبار تجريبي; table headers "Mathematical Expression / Scaling / Asymptotics / Practical Consequence" → التعبير الرياضي / التحجيم / السلوك التقاربي / الأثر العملي.
+- English glosses given in u01 of this page (do not repeat in later units): backpropagation through time (BPTT), exploding gradients, vanishing gradients, spectral radius, gated, structured linear recurrences. Truncated backpropagation through time is not glossed yet (u02 defines it).
+
+## chapter_recurrent-neural-networks/language-model.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "absolute discounting" → الخصم المطلق; "discount" $D$ → الخصم (معلَمة الخصم، الكتلة المخصومة); "interpolation", "interpolated Kneser–Ney" → الاستيفاء، تنعيم Kneser–Ney الاستيفائي; "continuation count" → تعداد التتمات (تعدادات التتمات); "pseudocount", "phantom counts" → تعداد وهمي.
+- "back off", "fall back" (to a shorter context) → يرجع إلى، الرجوع; "uniform floor" → الأرضية المنتظمة; "frees mass" → يحرر كتلة احتمالية; "predecessors" (of a word) → الكلمات السابقة; "successors" → الكلمات / الرموز التالية; "versatile" / "context-bound" word → المتعددة السياقات / المقيدة بسياقها.
+- "add-$\alpha$ smoothing" → تنعيم إضافة $\alpha$; "Laplace-smoothed" → بتنعيم لابلاس; Laplace the person → لابلاس, Shannon → شانون (Arabic letters, as logged); Tolstoy, Saint-Exupéry and their titles stay Latin after رواية … للكاتب.
+- "count models" → نماذج العد; "limiting cases" → حالات حدية; "the scale" (of perplexity or bpb) → السلم; "arithmetic coder" → مشفر حسابي; "spelling cost" (of an unknown word) → كلفة التهجئة; "OOV penalty" → جزاء حالات OOV; "Markov order" → مرتبة ماركوف; "syllable" → مقطع لفظي.
+- "the discount has a closed-form estimate" → تقدير بصيغة مغلقة; "defined recursively" → معرّف تعاوديًا, "the recursion" → العلاقة التكرارية (both as logged).
+- Slides: "Sequence Data Partitioning" → تقسيم بيانات التسلسل; "sliding input–target windows" → نوافذ منزلقة من المدخلات والأهداف; "dense supervision" → إشراف كثيف; "Tokenizer-Invariant Evaluation" → تقييم ثابت أمام المجزئ; "Cross-Granularity Benchmark" → اختبار معياري عبر مستويات التفصيل; "State-of-the-Art Count Smoothing" → أحدث ما وصل إليه تنعيم التعدادات.
+- English glosses given in u02 of this page (do not repeat in later units): surprisal, effective branching factor, Laplace smoothing, absolute discounting, interpolation, continuation count, arithmetic coder.
+
+## chapter_recurrent-neural-networks/decoding.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "prompt" → الموجه (glossary موجه), glossed (prompt) once on this page; "the same two prompts" → الموجهين نفسيهما.
+- "ancestral sampling" → المعاينة السلفية (glossary), glossed once; the general "sampling" stays أخذ العينات; "pure / raw sampling" → أخذ العينات الخالص / الخام.
+- "top-$k$ / top-$p$ / min-$p$ sampling" → أخذ العينات بطريقة top-$k$ / top-$p$ / min-$p$, then طريقة top-$k$ (feminine agreement); Latin names keep the English capitalization (Top-$k$ in slide tables and titles); "nucleus sampling" → أخذ عينات النواة (as logged), glossed (nucleus sampling) here.
+- "cutoff" (truncation rule) → حد البتر (حدود البتر); "threshold" → عتبة; "relative floor" → أرضية نسبية; "truncate by rank / by cumulative mass" → يبتر بحسب الرتبة / الكتلة الاحتمالية التراكمية; "renormalize" → يعيد التطبيع; "surviving support" → الحامل الباقي; "survivors / surviving prefix" → الباقيات / بادئة باقية.
+- "head" of the distribution → رأس التوزيع, "head tokens" → الرموز المميزة في الرأس, "tail tokens" → الرموز المميزة في الذيل; "leading tokens", "the leader" → الرموز المميزة المتصدرة، المتصدر; "runner-up" → وصيف; "plausible / implausible" token → معقول / غير معقول.
+- "widen / expand the beam" → زيادة عرض الشعاع (التوسيع stays dilation, التمديد is expanding a prefix); "active beams" → الأشعة النشطة; "candidate extensions" → التمديدات المرشحة; "completed hypotheses" → الفرضيات المكتملة; "length-normalized score" → الدرجة المطبَّعة بالطول; "length correction" → تصحيح للطول.
+- "interpolates between" (the exponent $\beta$) → يتدرج بين (as logged on the text-sequence page); "blunt instrument" → أداة غليظة; "cooling the softmax" → تبريد softmax; "degrades gracefully" (a threshold) → تتدهور على نحو ألطف.
+- "sampler" → خوارزمية أخذ العينات (as logged), "unified sampler" → خوارزمية موحدة لأخذ العينات; "wrapper" function → الدالة الغلاف; "strategy keyword arguments" → وسائط مسماة تخص الاستراتيجية; "toy distribution" → توزيع مبسط; "on log–log axes" → في رسم لوغاريتمي المحورين; "rank" (position in the sorted distribution) → الرتبة.
+- "rollout error compounding" → تراكم أخطاء التنبؤ المتتابع; "50-token rollouts" (slides) → مسارات التوليد ذات 50 رمزًا مميزًا; "garbled words" → كلمات مشوهة; "tail gibberish" → هذيان الذيل; "fluency" → السلاسة; "non-looping" → لا يدور في حلقات; "within a factor of twenty of the top probability" → لا يقل احتماله عن جزء من عشرين من الاحتمال الأعلى (slides keep $20\times$); "magenta dashed" → الخط الأرجواني المتقطع.
+- Slides: "From-Scratch Implementation & Evaluation" → التنفيذ من الصفر والتقييم; "Sampling Control I / II" → التحكم في أخذ العينات I / II; "Three regimes" → ثلاثة أنماط; "composable" → قابلة للتركيب; "Head-to-Head" → وجهًا لوجه (as logged).
+- English glosses given in u02 of this page (do not repeat in later units): beam search, beam width, prompt, length normalization, ancestral sampling, unreliable tail, temperature scaling, nucleus sampling. End-of-sequence token, exhaustive search and entropy are not glossed.
+
+## chapter_recurrent-neural-networks/rnn.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "gradient spike", "Jacobian spike" → قفزة في التدرج / قفزات التدرج، القفزات في المصفوفة اليعقوبية (the log's قفزة for "spike"); "the basin" → الحوض; "caps … at a threshold" → يضع سقفًا لـ … عند عتبة; "ball of radius $\theta$" → الكرة التي نصف قطرها $\theta$; "radial ball projection" → إسقاط قطري على الكرة.
+- "clipped model / baseline" → النموذج (المرجعي) المدرَّب مع القص; "unclipped" runs or instances → بلا قص; "untrained" → غير المدرب; "plain model" → نموذج بسيط; "wider regularized model" → النموذج الأعرض المنظَّم.
+- "validation perplexity" → حيرة التحقق, "training perplexity" → حيرة التدريب, "initial perplexity" → الحيرة الابتدائية; "2.1 bits per byte" → 2.1 بت لكل بايت (the quantity: البتات لكل بايت); "compression rate" → معدل الضغط; bpb stays Latin on slides.
+- "Kneser--Ney trigram / bigram" → النموذج الثلاثي / الثنائي بطريقة Kneser--Ney (as on the language-model page); "4-gram", "3-gram" → نموذج 4-gram، نموذج 3-gram; "interpolated Kneser--Ney smoothing" → تنعيم Kneser--Ney الاستيفائي; "Kneser–Ney counts" → تعدادات Kneser–Ney.
+- "tie" (two models) → تعادل، يتعادل; "virtual tie" → تعادل شبه تام; "mixture" → خليط, its "members" → مكوّناه; "yardstick" → معيار للمقارنة; "token by token" → رمزًا مميزًا برمز مميز.
+- "batch-major / time-major" → ترتيب الدفعة أولًا / ترتيب الزمن أولًا; "leading time axis" → محور الزمن، وهو المحور الأول; "per-step states" → حالات الخطوات; "batched matrix product" → جداء مصفوفات واحد بالدفعات; "to transpose" token ids → يأخذ منقول.
+- "decays its past state" → تتناقص الحالة الماضية; "per-coordinate step sizes" → أحجام الخطوات لكل إحداثي; "uniform learning rate", "uniform-step SGD" → معدل تعلم موحد، SGD ذات الخطوة الموحدة (منتظم stays the uniform distribution); "densely updated" → تُحدَّث تحديثًا كثيفًا; "random feature basis" → أساس ميزات عشوائية; "long lags" → فترات تأخر طويلة; "saturate" → تتشبع; "relative Euclidean displacement" → الإزاحة الإقليدية النسبية.
+- "raw novella" → الرواية الخام; "capitals, punctuation, line breaks" → الحروف الكبيرة وعلامات الترقيم وفواصل الأسطر; "SGD schedule" (slide) → خطة SGD; "the JAX trainer" → مدرب JAX; "optax transformation" → تحويل optax.
+- Slides: "From-Scratch Implementation" → التنفيذ من الصفر; "Optimization Safeguard" → إجراء وقائي في التحسين; "Ablation:" as a title lead-in → استئصال:; "Complementary errors" → أخطاء متكاملة; "lexical specificity" → تحديد معجمي; "223k / 50k" → 223 ألفًا / 50 ألفًا.
+- English glosses given in u02 of this page (do not repeat in later units): gradient clipping, truncated.
+
+## chapter_recurrent-neural-networks/text-sequence.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "merge rule" → قاعدة الدمج; "a merge" (one learned rule) → دمج, plural عمليات الدمج (ثلاث عمليات دمج; counted after a number or symbol: 768 دمجًا); "merge tree" → *شجرة دمج* (merge tree); "merge table" → جدول الدمج; "merge rank" → رتبة الدمج (as logged).
+- "toy corpus / toy tokenizer" → المدونة النصية المصغرة / المجزئ المصغر; "to trace by hand", "hand trace" → يتتبع يدويًا، التتبع اليدوي; "tie" → تعادل, "break ties" → يحسم التعادل.
+- "trailing space" → *الفراغ اللاحق* (trailing space); "leading space" → *الفراغ السابق* (leading space); "spacing" → الفراغ.
+- "chunk" (pre-tokenization piece) → قطعة (قطع), "text chunks" → القطع النصية, "chunk boundaries" → حدود القطع (مقطع stays "segment"); "vocabulary slots" → بنود المفردات (the log's بند for a vocabulary entry); "composite" (multi-word token) → مركب (مركبات), "boundary-crossing composite / crossers" → مركب عابر للحدود / رموز عابرة للحدود; "straddle word boundaries" → يتخطى حدود الكلمات.
+- "regular expression", "regex" → تعبير نمطي (as logged); "pattern" → النمط; "branches" (of the pattern) → فروع; "run of letters / digits" → سلسلة حروف / سلسلة أرقام; "digits" (characters) → أرقام, "numbers" → أعداد; "English contractions" → صيغ الاختصار الإنجليزية; "Unicode character classes" → فئات محارف Unicode.
+- "to encode / encoding" (text → ids) → يرمّز / الترميز; "to decode / decoding" (ids → text) → يفك الترميز / فك الترميز (as logged; فك التشفير stays the generation-time decoding); "byte sequence" → تسلسل بايتات; "byte string" → سلسلة بايتات; "substring" → سلسلة جزئية.
+- "fragments" (of words, of the corpus) → أجزاء; "occurrences" → مواضع / مرات الورود; "pair counts" → تعدادات الأزواج; "collapse" (a merge collapses occurrences) → يختزل; "a handful" → حفنة.
+- "production BPE trainers" → برامج تدريب BPE في بيئة الإنتاج; "production vocabularies" → مفردات بيئة الإنتاج; "updating incrementally" → يحدّث تحديثًا تزايديًا; "printing helper" → دالة طباعة مساعدة; "wraps long lines" → تطوي الأسطر الطويلة (يغلف stays wrapping a function or object).
+- "sweep vocabulary sizes" → يمر على أحجام المفردات (اجتياز stays the autodiff sweep); "the plot is flattered", "flatters" → يبدو أفضل من حقيقته; "extrapolate blindly" → الاستكمال خارج المدى دون تبصر; "general English prose" → النثر الإنجليزي العام; "multilingual" → متعدد اللغات; "source code" → الشيفرة المصدرية.
+- Slides: "byte fallback" → الرجوع إلى البايتات; "stem + suffix" → جذع + لاحقة; "inflected text" → نص مصرَّف; "primitive" → عملية أولية (as logged); "non-overlapping semantics" → دلالة … بلا تراكب; "bigrams" → الثنائيات; "domain-specific words" → كلمات خاصة بالمجال; "in-domain" → داخل المجال; "diminishing marginal counts" → تعدادات حدية متناقصة; "content words" → كلمات المحتوى; "Subword Generalization" → التعميم بالكلمات الفرعية; "From-Scratch Implementation" → التنفيذ من الصفر; "Encoding & Decoding Mechanics" → آلية الترميز وفك الترميز; "Empirical Behavior on Prose" → السلوك التجريبي على النثر; a slide lead-in "Notice the flaw:" → العيب الظاهر: (noun phrase, no imperative).
+- English glosses given in u02 of this page (do not repeat in later units): merge tree, trailing space, leading space, pre-tokenization.
+
+## chapter_recurrent-neural-networks/bptt.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "truncated backpropagation through time" → *الانتشار العكسي المقتطع عبر الزمن* (truncated backpropagation through time), glossed in u02; "truncated BPTT" where the English writes the acronym → خوارزمية BPTT المقتطعة; "full backpropagation" → الانتشار العكسي الكامل.
+- "caps / bounds memory and compute per update" → يضع سقفًا للذاكرة والحوسبة / تحصر الذاكرة والحوسبة لكل تحديث; "slice a stream into segments" → يقطّع السيل إلى مقاطع; "hard learning horizon" → أفق تعلم صارم; "memory horizon" → أفق الذاكرة; "effective memory" → الذاكرة الفعالة.
+- "well inside the 32-token window" → أقل كثيرًا من طول النافذة المؤلفة من 32 رمزًا مميزًا; "contains exploding spikes" → يكبح قفزات الانفجار; "architectural innovations" → ابتكارات معمارية; "loss sensitivities" → حساسيات الخسارة.
+- "diagonalizable" → قابلة للاستقطار (Arabic Wikipedia's term; no glossary entry); "with probability one" → باحتمال يساوي واحدًا.
+- A vector "becomes aligned with $\mathbf{v}_1$" → يصير محاذيًا للمتجه $\mathbf{v}_1$, "alignment" → المحاذاة (the glossary word, here for directions of vectors).
+- "necessary but not sufficient" → شرط لازم لكنه غير كافٍ; "sufficient" → يكفي; "largest singular value" → القيمة المفردة العظمى (as on the numerical-stability page).
+- "single-step gradients" → تدرجات الخطوة الواحدة; "problem :exref:`…`" → التمرين :exref:`…`; "stretches of validation tokens" → مقاطع من بيانات التحقق (as u01's validation segments); "loss-by-position measurement" → قياس الخسارة لكل موضع; "Argue from …" → استدل بـ ….
+- Credit line: *مقتبس بتصرف من مقرر CMU 11-785، الواجب [Homework 3 Part 1](url).* (as on the conv-layer page).
+- English glosses given in u02 of this page: truncated backpropagation through time. Exercises take no gloss (power iteration, diagonalizable, singular value stay unglossed).
+
+## chapter_recurrent-neural-networks/sequence.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "lag" → تأخر (تأخرات); "lag features" → ميزات التأخر; "one column per lag" → عمود لكل موضع تأخر (as logged); "lag windows" → نوافذ تأخر; "4-lag model" → نموذج على 4 تأخرات.
+- "period" (of a wave) → دورة; "phase" → طور; "phase lag / phase delay" → تأخر الطور; "amplitude" → سعة (as logged); "oscillation" → تذبذب; "oscillator" → مذبذب; "frequency" → تردد.
+- "$k$-step-ahead prediction / forecast" → تنبؤ بـ $k$ خطوة إلى الأمام; "one-step predictions" → تنبؤات الخطوة الواحدة; "1-step MSE" → خطأ MSE بخطوة واحدة; "to roll the model forward / out" → يمضي بالنموذج في تنبؤ متتابع; "horizon" → الأفق; "lookahead horizon" → أفق التنبؤ.
+- "moving average" → متوسط متحرك; "averaging model" → نموذج أخذ المتوسط; "fixed point" of the rollout → النقطة الثابتة; "asymptote" → الخط المقارب (as logged); "baseline floor" → الأرضية الأساسية; "noise floor" → أرضية الضوضاء (as logged).
+- "to damp" → يخمد, "damped" (a forecast) → مخمد, "damped model" (one that damps) → النموذج المخمِد; "runaway accumulation" → تراكم جامح; "errors compound" → تتضاعف / تتراكم الأخطاء; "to diverge" → يتباعد.
+- "learned physical simulators" → برامج المحاكاة الفيزيائية المتعلَّمة; "decoding rule" → قاعدة فك التشفير; "mismatch" → عدم التطابق; "imperfect prefixes" → البادئات المعيبة; "low-probability choices" → الاختيارات ضعيفة الاحتمال.
+- "successor" (the entry that follows a context) → عنصر تالٍ; "extending the context" → إطالة السياق (التوسيع stays dilation); "second-order recurrence" → العلاقة التكرارية من المرتبة الثانية; "conserved invariant" → لامتغير محفوظ.
+- Slides: "Synthetic Benchmark" → اختبار معياري اصطناعي; "data-generating process" → عملية توليد البيانات; "signal-to-noise scale" → مقياس الإشارة إلى الضوضاء; "chronological split" → تقسيم بالترتيب الزمني; "self-conditioned horizon" → أفق الاشتراط الذاتي; "regime shifts" → تبدل النمط; "Section Takeaways" → خلاصات القسم; "magenta dashed curve" → المنحنى الأرجواني المتقطع; "hard blindness" → عمى تام.
+- English glosses given in u02 of this page (do not repeat in later units): Markov condition, time-homogeneous, stationary, rollout.
+
+## chapter_recurrent-neural-networks/language-model.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Partitioning Sequences" → تقسيم التسلسلات; "subsequences" → تسلسلات جزئية; "input window / paired target" → نافذة المدخلات / هدفها المقترن بها; "input–target windows" → نوافذ من المدخلات والأهداف (as on the slide in u02).
+- "starting offset" (of a window in the corpus) → إزاحة بداية; "start position" → موضع بداية; "corpus positions" → مواضع المدونة.
+- "the first `num_train` windows", "the final $T$ tokens" → the noun, then وعددها + the code or symbol (no الـ before code or a symbol, as logged for "the $K$ held-out losses").
+- "buffer of boundary windows" → منطقة عازلة قوامها … نافذة عند الحد (not مخزن مؤقت, the memory buffer); "clean gap" → فاصل نظيف; "leakage guard" → الحماية من التسرب.
+- "integer ids" → معرفات صحيحة; "integer tensors" → موتران من الأعداد الصحيحة; "tokenization modes" → أنماط التجزئة; "decode ids back to text" → فك ترميز المعرفات إلى نص (as logged on the decoding page).
+- "Zipfian heavy tails" → ذيول ثقيلة على نمط قانون Zipf; "vocabulary granularity" → مستوى تفصيل المفردات; "tokenization-invariant" → ثابت أمام التجزئة إلى رموز.
+- Table entries (of a count table) → عنصر (عناصر); vocabulary entries stay بند (بنود); "word types" → أنواع الكلمات; "word tokens" → رموز مميزة على مستوى الكلمات; "5-gram model", "5-grams" → نموذج 5-gram، تتابعات 5-gram.
+- "sweep $\alpha$ over values" → يمسح قيم $\alpha$ على …; "the best $\alpha$" → قيمة $\alpha$ المثلى; "validation score" → درجة التحقق; "skew" → الالتواء (as "skewed distribution" in u01).
+- "Adapted from Daniel Jurafsky and James H. Martin, [Speech and Language Processing](…), 3rd ed. draft, Exercise N" → مقتبس بتصرف من كتاب [Speech and Language Processing](…) لمؤلفيه Daniel Jurafsky و James H. Martin، مسودة الطبعة الثالثة، التمرين N.
+- Slides: "$n$-Gram MLE" → تقدير MLE لنماذج $n$-gram, "unigram MLE" → تقدير MLE الأحادي; "pseudocount dilution" → تخفيف التعدادات الوهمية; "swamp" → تطغى على; "Core Strength / Fundamental Limitation" → نقطة القوة الأساسية / القيد الأساسي; "Model / Metric" → النموذج / المقياس; "Section Takeaways" → خلاصات القسم (as on the BPTT page).
+- No new English glosses in u03 of this page: its terms were glossed in u01 and u02 or on earlier pages (hidden state, end-of-sequence token is only used in an exercise).
+
+## chapter_recurrent-neural-networks/sequence.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "nonlinear autoregressor" → نموذج غير خطي للانحدار الذاتي (as the slide's نموذج خطي للانحدار الذاتي); "small MLP" → شبكة MLP صغيرة (acronym after a class noun, as the English writes MLP).
+- "dilated lags" → التأخرات الموسعة (the log's توسيع for dilation); "averaged lags" → متوسطات التأخرات; "block means" → متوسطات الكتل; "construction" (of features) → بناء.
+- "regime switching" (exercise title) → تبدل النمط (as the slide's "regime shifts"); "regime" of a series → نمط (نمطان); "switching series" → السلسلة المتبدلة; "alternates between" → تتناوب بين.
+- "noise term" → حد الضوضاء; "restore the noise" → أعد الضوضاء; "short-range features" → الميزات قصيرة المدى; "compounding drift" → الانجراف المتراكم (as on the slide).
+- "the curve bends upward", "the bend" → ينعطف المنحنى صعودًا، الانعطاف; "what does a forecast offer over the constant forecast" → ماذا يقدم … زيادةً على التنبؤ الثابت.
+- No English glosses in u03 (summary and exercises).
+
+## chapter_recurrent-neural-networks/rnn.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "warm up the hidden state on the prefix" → يجري إحماءً للحالة المخفية على البادئة; slide "prefix warm-up loop" → حلقة إحماء على البادئة (the log's إحماء).
+- "continuation tokens" → رموز مميزة من التكملة; "greedy continuation" → تكملة جشعة; "greedy argmax" → argmax الجشع; "temperature-scaled softmax" → softmax بعد تحجيمها بدرجة الحرارة.
+- "fuse … into low-level kernels" → تدمج … في نوى منخفضة المستوى; "fused (recurrent) kernel" → النواة (المتكررة) المدمجة; "built-in" layer stays مدمج (في إطار العمل), as logged, also beside "fused"; "swap in" → يضع … مكان / يُحل … محل.
+- "`RNN` module" → الوحدة `RNN`; "scans it over the input sequence" → تمسح بها … تسلسل المدخلات; "input / recurrent term" (of the update) → حد المدخلات / الحد المتكرر; "input / recurrent projection" → إسقاط المدخلات / الإسقاط المتكرر.
+- "derail training" → إخراج التدريب عن مساره; "at a fraction of the … time" → في جزء يسير من ….
+- Exercises: "exposure bias" → انحياز التعرض and "scheduled sampling" → أخذ العينات المجدول (glossary; no gloss in exercises); "the concatenated / separate form" → الصيغة المربوطة / المنفصلة; "factors" of a matrix product → طرفا الجداء (as logged), "factors" of a ratio → عاملان, "factors as" → تتحلل إلى الجداء; "threshold activation" → دالة تفعيل بعتبة; "state units" → وحدات الحالة; "loss by position" → الخسارة لكل موضع; "carried state" → الحالة المحمولة; "training horizon" → أفق التدريب; "ablation" (title) → دراسة استئصال; "split by fraction" → يقسم بالنسبة; "trend" → الاتجاه; "cross-book" → عبر الكتب; "Project Gutenberg ebook 36" → الكتاب الإلكتروني رقم 36 في Project Gutenberg; "drawn uniformly at random" → مسحوب عشوائيًا بانتظام; "time both" → قس زمن الطريقتين, "running time" → زمن التشغيل.
+- Slides: "Inference & Rollout Behavior" → الاستدلال وسلوك التنبؤ المتتابع; "Greedy Loops" → حلقات فك التشفير الجشع; "locks into an infinite periodic cycle" → ينحبس في دورة دورية لا نهائية; "High-Level Framework APIs" → واجهات API عالية المستوى في أطر العمل; "Equivalence & Speedup" → التكافؤ والتسريع; "looping greedy rollout" → التوليد الجشع الدائر في حلقات; "model ensembling" → تكوين مجموعات النماذج; "the better expert" → الخبير الأفضل; "Standalone" → كل نموذج منفردًا; "Summary: … at a Glance" → الملخص: … في لمحة; table heads "Mathematical Form" → الصيغة الرياضية, "Key Systems & Statistical Insight" → أهم ما يُستفاد في الأنظمة والإحصاء; "row gather" → التقاط صفوف.
+- English gloss given in u03 of this page: prompt.
+
+## chapter_recurrent-neural-networks/text-sequence.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "special tokens" → الرموز الخاصة (as logged in u01); "control tokens" → رموز التحكم, glossed (control tokens) once; "control signal / control ID" → إشارة تحكم / معرف تحكم; "special control tokens" → رموز التحكم الخاصة.
+- "prompt injection" → *حقن الموجهات* (prompt injection), from the glossary's موجه; "prompt-injection-safe" → آمنة من حقن الموجهات; "untrusted" → غير موثوق; "system instruction" → تعليمة من النظام; "safety invariant" → لامتغير أمان (the log's لامتغير); "guard" → احتياط (as logged).
+- "fertility" (tokens per word) → *الخصوبة* (fertility); unit on slides: رمز مميز/كلمة; "glitch token" → *الرمز المميز المختل* (glitch token), plural الرموز المميزة المختلة (خلل stays "bug").
+- "rank table" → جدول الرتب (rank table); "lookup table" → جدول بحث (as logged); "special-token registry / map" → سجل / خريطة الرموز الخاصة; "byte permutation" → تبديل البايتات, "permuted order" → ترتيب مبدَّل; "printable ASCII characters" → محارف ASCII القابلة للطباعة; "leading underscore" → الشرطة السفلية في أول الاسم.
+- "encoder" of a tokenizer (text → ids) → مرمّز (from the log's يرمّز / الترميز); مشفر stays the neural encoder. "replay merges" → يعيد تطبيق عمليات الدمج; "pieces" (two parents of a merge) → جزءان (قطعة stays the pre-tokenization chunk); "segmentation" → تقطيع (تقطيعات متنافسة).
+- "compression ratio" → نسبة الضغط; "context window" → نافذة السياق (glossary), glossed once; "effective context length" → طول السياق الفعلي; "web text" → نصوص الويب (WebText, the dataset name, stays Latin); "40 gigabytes" → 40 غيغابايت, "40 GB" on slides is copied.
+- "positional arithmetic" → الحساب الموضعي; "columns / place values" → الخانات / القيم الموضعية للخانات; "ones, tens, hundreds" → آحاد وعشرات ومئات; "carry" → الحمل (عمليات الحمل); "thousands separators" → فواصل الآلاف; "digit cap" → سقف (سقف من ثلاثة محارف); "misaligned" → غير متحاذية.
+- "Tokenizers in the Wild" → المجزئات في الواقع العملي; "widely deployed" → الواسعة الانتشار; "quirks" → غرائب; "evasions" → مراوغات; "username" → اسم مستخدم; "training scrape" → النصوص المجموعة للتدريب.
+- Slides: "Exact parity" → تطابق تام (الزوجية stays bit parity); "Domain adaptation" → التكيف مع المجال; "fertility tax" → ضريبة الخصوبة; "English-centric" → المتمحور حول الإنجليزية; "50k / 200k / 1k" vocabularies → 50 ألفًا / 200 ألف / الألف (as the log's 223 ألفًا); "B/tok", "bytes/token" → بايت/رمز مميز; "Tokenization Scheme" → طريقة التجزئة; "Primary Architectural Trade-Off" → المقايضة المعمارية الرئيسة; "industry standard" → المعيار الصناعي; "(ours) / (prod)" → (مجزئنا) / (بيئة الإنتاج); "leftmost pair / rule" → الزوج الأقصى يسارًا / قاعدة الأقصى يسارًا; "Section Takeaways" → خلاصات القسم (as on the BPTT page).
+- English glosses given in u03 of this page: control tokens, prompt injection, rank table, fertility, context window, glitch token.
+
+## chapter_recurrent-neural-networks/decoding.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "cell update" (one application of the RNN cell) → تحديث للخلية (تحديثات الخلية; "$O(T^2)$ cell updates" → $O(T^2)$ تحديثًا للخلية).
+- "distinct-3" stays Latin after the class noun مقياس at its first mention (مقياس *distinct-3*), then bare distinct-3; "3-grams" → تتابعات 3-gram (as the logged تتابعات $n$-gram); "unique / repeated 3-grams" → الفريدة / المكررة.
+- "held-out human text" → نص بشري محجوز; "tautological(ly)" → تحصيل حاصل; "crown … the winner" → يتوّج … فائزًا; "peak likelihood" → ذروة الإمكان; "likelihood-versus-diversity trade-off" → المقايضة بين الإمكان والتنوع.
+- "coherence, factuality, style" → الاتساق ومطابقة الوقائع والأسلوب; "calibrated proxy evaluators" → مقيِّمون بدلاء معايَرون; "calibrated judge evaluations" → تقييمات محكِّمين معايَرة; "blind human preference" → تفضيل بشري معمّى; "task-specific benchmarks" → الاختبارات المعيارية الخاصة بالمهمة; "reference outputs / metrics" → مخرجات / مقاييس مرجعية; "surface diagnostics" → تشخيصات سطحية; "lexical diversity" → التنوع المعجمي.
+- "stateless" `step_fn` / decoding → عديم الحالة (slides: بلا حالة); "stateful replacement" → بديل ذو حالة; "caching" (past-token computations) → التخزين المؤقت; "quadratic recomputation" → إعادة الحساب التربيعية; "carry the state forward" → حمل الحالة من خطوة إلى خطوة.
+- "untempered probabilities / model" → الاحتمالات قبل تحجيم درجة الحرارة / النموذج دون تحجيم درجة الحرارة; "temperature-scaled distribution" → التوزيع المحجَّم بدرجة الحرارة; "grid of values" (hyperparameter sweep) → شبكة من القيم; "bookkeeping" (per-beam state tracking) → التتبع الإضافي.
+- "Part *Basics*" → جزء *الأساسيات*; "nuance" → الفروق الدقيقة; "Fast baseline" (table) → خط أساس سريع; "Temperature Sampling" → أخذ العينات بدرجة الحرارة; "MT, ASR" stay Latin (MT و ASR); "K/V vectors" → متجهات K/V; "gates/SSMs" → البوابات أو نماذج SSM; "mass-adaptive / confidence-adaptive" → متكيفة مع الكتلة / مع الثقة.
+- No English glosses were added in u03 of this page (perplexity, attention, bottleneck, teacher forcing are defined on earlier pages or only named here).
+
+## chapter_recurrent-neural-networks/text-sequence.md#u04 (claude fable-5.2 (medium), 2026-11-27)
+
+- Exercises of this page: "rank rule" → قاعدة الرتبة; "leftmost rule" → قاعدة الأقصى يسارًا (as on the u03 slide); "to segment a string" → يقطّع (التقطيع); "occurrence" → ورود.
+- "Special-token round trip" (encode, then decode) → ترميز الرموز الخاصة ثم فك ترميزها; "document separator" → فاصل المستندات; "re-encode" → يعيد الترميز; "feeds the text back in as input" → يعيد تغذية النص بوصفه مدخلات; "policy" (of a library's behaviour) → سياسة.
+- "Digit chunking" → تقسيم الأرقام إلى قطع; "addition prompts" → موجهات الجمع; "the two summands" → العددان المجموعان; "place values" → الخانات (as logged in u03); "label each token with" → اكتب بجانب كل رمز مميز.
+- "Pre-tokenization ablation" → استئصال التجزئة المسبقة (the log's استئصال); "held-out text" → النص المحجوز; "fraction" → كسر.
+- Credit line: "Adapted from Andrej Karpathy, [minbpe](…), Step 4." → مقتبس بتصرف من مشروع [minbpe](…) لمؤلفه Andrej Karpathy، الخطوة 4. (as the micrograd line).
+- English glosses in u04 of this page: none (exercises take no gloss).
+
+## chapter_recurrent-neural-networks: chapter check (claude fable-5.2 (medium), 2026-11-27)
+
+- One term per concept across the seven pages; the unit entries above were corrected to match. "rollout" (a model fed its own predictions, numbers or text) → التنبؤ المتتابع; a generated sample counted as an item ("50-token rollouts") → مسار التوليد; "greedy rollout" → التوليد الجشع.
+- "continuation": the single next token after a context (count models, "continuation count" → تعداد التتمات) → تتمة; a generated multi-token text → تكملة.
+- "global gradient clipping" → قص التدرج الكلي (as the logged المعيار $\ell_2$ الكلي; الشامل stays global pooling and global minima); "truncated BPTT" → خوارزمية BPTT المقتطعة (المبتور stays truncated sampling).
+- "tokenizer" → المجزئ; "special tokens" → الرموز الخاصة; vocabulary "entries" → بنود المفردات; "granularity" (of tokens, of a vocabulary) → مستوى التفصيل.
+- "trigram model" → النموذج الثلاثي; "interpolated Kneser–Ney" → تنعيم Kneser–Ney الاستيفائي, after a model name بطريقة Kneser–Ney الاستيفائية.
+- "long-range dependency" → تبعية بعيدة المدى (التبعيات); "loss by position", "per-position loss" → الخسارة لكل موضع; "repetitive / repetition loops" → حلقات متكررة.
+- "autoregressive model" → نموذج الانحدار الذاتي (glossary; with أي: أي نموذج من نماذج الانحدار الذاتي); the adjective on other nouns stays ذاتي الانحدار (التنبؤ، فك التشفير، توليد النص).
