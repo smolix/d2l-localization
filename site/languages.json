@@ -393,6 +393,26 @@
       ]
     },
     {
+      "code": "zh",
+      "name": "中文",
+      "url": "https://zh.d2l.ai"
+    },
+    {
+      "code": "ja",
+      "name": "日本語",
+      "url": "https://ja.d2l.ai"
+    },
+    {
+      "code": "ko",
+      "name": "한국어",
+      "url": "https://ko.d2l.ai"
+    },
+    {
+      "code": "pt",
+      "name": "Português",
+      "url": "https://pt.d2l.ai"
+    },
+    {
       "code": "de",
       "name": "Deutsch",
       "url": "https://de.d2l.ai",
@@ -649,12 +669,26 @@
         "index.html",
         "references.html"
       ]
+    },
+    {
+      "code": "tr",
+      "name": "Türkçe",
+      "url": "https://tr.d2l.ai"
+    },
+    {
+      "code": "vi",
+      "name": "Tiếng Việt",
+      "url": "https://vi.d2l.ai"
     }
   ],
   "old_editions": [
     {
       "name": "English (old)",
       "url": "https://en-v2.d2l.ai"
+    },
+    {
+      "name": "中文 (第一版)",
+      "url": "https://zh-v1.d2l.ai"
     }
   ]
 }

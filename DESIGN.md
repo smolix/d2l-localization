@@ -217,11 +217,12 @@ through the `DATA_HUB` URLs and for the language menu.
 
 - The menu is loaded at runtime from `languages.json` in the `d2l-data` bucket
   **[ruled]**, generated from `languages.yml` by `l10n menu` (`--upload` puts it
-  at `site/languages.json`): English, every language with a pinned tag, then
-  the old editions. Each build carries a static copy
+  at `site/languages.json`): English, every language with a pinned tag or
+  `menu: true` (a host that still serves an earlier edition: zh, ja, ko, pt,
+  tr, vi), then the old editions. Each build carries a static copy
   as fallback. Adding a language does not require rebuilding the others.
 - Order: current languages, a divider, then old editions ("English (old)" at
-  en-v2.d2l.ai, later "中文 (old)" and others).
+  en-v2.d2l.ai, "中文 (第一版)" at zh-v1.d2l.ai, later others).
 - Each language in `languages.json` carries `pages`, the list of HTML pages
   its site serves. Every real upload to a language bucket rewrites that
   language's list from the uploaded build (d2l-neu
