@@ -13,7 +13,7 @@ glossary's verified entries are binding except for the corrections in §7.2
 
 | Where | Rule | Example |
 |---|---|---|
-| Body text, list items, tab notes, notes in the body | です・ます (敬体), throughout. Reason: it is the register of the Japanese introductions this book sits beside (ゼロから作るDeep Learning, 大規模言語モデル入門) and it carries the book's collegial tone; である is the register of graduate monographs (the Japanese Goodfellow et al. and Bishop). | "Linear regression is a single artificial neuron." → 線形回帰は、1 個の人工ニューロンです。 |
+| Body text, list items, tab notes, notes in the body | だ・である (常体)． である is the register of graduate monographs (the Japanese Goodfellow et al. and Bishop). | "Linear regression is a single artificial neuron." → 線形回帰は、1 個の人工ニューロンである。 |
 | Headings, captions, slides, table cells | Noun phrases (体言止め) or plain form (常体); never です・ます (JTF 1.1.2, 1.1.5). See §6. | "Training the Model" → モデルの訓練 |
 | Exercises | Polite requests: 〜してください; questions end in 〜ですか。 See §6. | "Show that …" → …を示してください。 |
 
@@ -295,18 +295,18 @@ at most → 高々 (in mathematics), 多くても; at least → 少なくとも;
 1. **Spaces between Japanese and half-width runs** (§2.2). Required around
    references and after math by the current build; applied to all Latin words
    and digits for one rule. The alternative is JTF's no-space rule with spaces
-   only around references and math.
+   only around references and math.　- OK
 2. **Long-vowel convention** (§3.3): ML usage (パラメータ) rather than JTF and
-   Microsoft usage (パラメーター).
+   Microsoft usage (パラメーター). - OK
 3. **アテンション rather than 注意機構** (§7.1), and 自己アテンション against the glossary's
-   自己注意.
+   自己注意. - OK
 4. **訓練 for "train", 学習 for "learn"** (§7.1) against the glossary's
-   training = 学習.
-5. **The glossary corrections in §7.2**, several against `verified` entries.
-6. **Exercises in 〜してください** rather than 〜せよ (§6).
-7. **People in Latin script** even for Gauss, Bayes, Newton (§5).
+   training = 学習. - OK
+5. **The glossary corrections in §7.2**, several against `verified` entries. - OK
+6. **Exercises in 〜せよ (§6).
+7. **People in Latin script** even for Gauss, Bayes, Newton (§5). - OK
 8. **Checks:** whether `l10n check` may accept a different token order with a
    NOTE (§2.3), whether `N×` and en-dash ranges count as protected tokens (§4),
-   and whether the Japanese build prints 図, 表, 式 before references (§2.2).
+   and whether the Japanese build prints 図, 表, 式 before references (§2.2).  - OK
 9. **Italics:** Japanese fonts have no italic; the Japanese build should style
-   `*…*` as bold or with emphasis dots (a build setting, not a translator rule).
+   `*…*` as bold or with emphasis dots (a build setting, not a translator rule). - OK
