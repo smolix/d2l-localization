@@ -4415,3 +4415,369 @@
 
 - "neural ODE" → 「ニューラル ODE」 (inserts half-width space per `ja/style.md` §2.2, overriding unspaced proposed `ニューラルODE`)
 - "Milstein (scheme)" → 「ミルスタイン法」, "strong and weak orders" → 「強収束次数・弱収束次数」
+
+## chapter_mdl-optimization/mdl-convexity.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "annulus" → 「円環領域」, "crescent" → 「三日月形領域」
+- "norm ball" → 「ノルム球」, "homogeneity" → 「斉次性」
+- "PSD cone" → 「半正定値錐」
+- "sublevel set" → 「劣レベル集合」
+- "Polyak–Łojasiewicz (PL) condition / inequality" → 「Polyak–Łojasiewicz（PL）条件 / 不等式」（略記は「PL 条件」「PL 不等式」；`ja/style.md` §5 および本章の `Robbins–Monro 条件`・`Armijo 条件` に合わせ人名はラテン文字維持）
+
+## chapter_mdl-optimization/mdl-convexity.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "chord condition" / "chord inequality" / "chord gap" → 「弦条件」 / 「弦不等式」 / 「弦ギャップ」
+- "global under-estimator" → 「大域的な下からの評価式」
+- "quadratic floor" → 「二次下界」（`ja/decisions.md` の `"quadratic ceiling" → 「二次上界」` と対）
+- "$\mu$-strongly convex" → 「$\mu$ 強凸」（`ja/decisions.md` の `"$L$-smooth" → 「$L$ 滑らか」` と整合）
+- "difference quotient" → 「差分商」
+
+## chapter_mdl-optimization/mdl-convexity.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Jensen gap" / "Jensen's gap" → 「イェンセンギャップ」
+- "linear rate" / "geometric rate" → 「線形収束率」 / 「幾何収束率」, "sublinear" → 「劣線形」
+- "closure rules" (for convexity) → 「閉包規則」
+
+## chapter_mdl-optimization/mdl-convexity.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "affine pre-composition" → 「アフィン写像との前合成」
+- "upper envelope" → 「上側包絡線」（`ja/decisions.md` の `"lower envelope" → 「下側包絡線」` と対）
+- "monotone composition" → 「単調合成」
+
+## chapter_mdl-optimization/mdl-convexity.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "interpolant" / "minimum-norm interpolant" → 「補間解」 / 「最小ノルム補間解」
+- "maximum-margin separator" → 「最大マージン分離超平面」
+- "full row rank" → 「行フルランク」（`ja/decisions.md` の `"full column rank" → 「列フルランク」` と対）
+
+## chapter_mdl-optimization/mdl-convexity.md#u06 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "active coordinate(s)" → 「有効座標」（`ja/decisions.md` の `"active constraint" → 「有効制約」` と整合）
+- "cyclic coordinate descent" → 「巡回座標降下法」
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "octave" (binary interval $[2^e, 2^{e+1})$) → 「オクターブ」
+- "stochastic rounding" → 「確率的丸め」
+- "unit in the last place (ulp)" → 「最終桁単位（unit in the last place、ulp）」 (abbreviated `ulp` thereafter)
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "max shift" / "max-shifted softmax" → 「最大値シフト」 / 「最大値シフト付きソフトマックス」
+- "log-sum-exp sandwich" → 「log-sum-exp のサンドイッチ不等式」
+- "Sterbenz's lemma" → 「Sterbenz の補題」 (person name kept in Latin script per `ja/style.md` §5)
+- "flush (subnormals) to zero" → 「（非正規化数を）ゼロにフラッシュする」
+- "fused loss" → 「融合損失」
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "relative condition number" → 「相対条件数」
+- "cancellation factor" → 「桁落ち係数」
+- "one-pass variance" / "two-pass (reference)" → 「1 パス分散」 / 「2 パス（の基準値）」
+- "Welford's recursion / algorithm" → 「Welford の漸化式 / アルゴリズム」 (person name kept in Latin script per `ja/style.md` §5)
+- "pairwise summation" / "Kahan's compensated summation" / "in-order summation" → 「ペアワイズ総和法」 / 「Kahan の補償付き総和法」 / 「順次総和法」
+- "forward error" / "backward error" → 「前進誤差」 / 「後退誤差」 (paired with `decisions.md` `後退誤差解析`, `後退安定`)
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gauss–Jordan elimination" → 「ガウス・ジョルダン消去法」
+- "jitter" (added to a kernel matrix) → 「ジッタ」 (drops final `ー` per `ja/style.md` §3.3 `-er` rule)
+- "ridge regularization" → 「リッジ正則化」
+
+## chapter_mdl-optimization/mdl-numerical-stability-conditioning.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "iterative refinement" → 「反復改良法」
+
+## chapter_mdl-information-theory/mdl-divergences-distances.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "f-divergence" → 「f ダイバージェンス」 (adds half-width space per `ja/style.md` §2.2 to glossary's proposed `fダイバージェンス`)
+- "forward KL" / "reverse KL" → 「順方向 KL」 / 「逆方向 KL」
+- "metric" (mathematical distance function satisfying symmetry and triangle inequality) → 「距離関数」, "metric axioms" → 「距離の公理」 (distinguished from evaluation metric `評価指標` and Riemannian metric `計量`)
+- "divergence function" → 「ダイバージェンス関数」
+- "Jensen–Shannon divergence" → 「イェンセン・シャノン・ダイバージェンス」, "squared Hellinger divergence" / "Hellinger distance" → 「二乗ヘリンガーダイバージェンス」 / 「ヘリンガー距離」, "Pearson's $\chi^2$ divergence" → 「ピアソンの $\chi^2$ ダイバージェンス」, "$\alpha$-divergence" → 「$\alpha$ ダイバージェンス」
+- "zero-avoiding" / "mode-covering" → 「ゼロ回避型」 / 「モード被覆型」 (paired with `ja/decisions.md` `"zero-forcing" → 「ゼロ強制型」` and `"mode-seeking" → 「モード探索型」`)
+
+## chapter_mdl-information-theory/mdl-divergences-distances.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "log-sum inequality" → 「対数和不等式」 (standard Japanese information-theory term)
+- "channel" (Markov transition kernel $\kappa(y \mid x)$ in information theory) → 「通信路」 (distinguished from CNN feature dimension `チャネル`)
+- "Fenchel–Young inequality" → 「フェンシェル・ヤングの不等式」, "Legendre–Fenchel conjugate" → 「ルジャンドル・フェンシェル共役」
+
+## chapter_mdl-information-theory/mdl-divergences-distances.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "critic bound" / "f-GAN bound" → 「クリティック下界」 / 「f-GAN 下界」
+
+## chapter_mdl-information-theory/mdl-divergences-distances.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Bhattacharyya coefficient" → 「バタチャリア係数」
+- "Bretagnolle–Huber inequality" → 「ブレタニョール・フーバーの不等式」
+
+## chapter_mdl-information-theory/mdl-scores.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Score-Based Comparisons" (section title) → 「スコアに基づく比較」
+- "attractor" → 「アトラクタ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-or` loanwords)
+- "score field" → 「スコア場」 (paired with glossary `vector field` = 「ベクトル場」)
+- "quartic density / unnormalized quartic" → 「4 次密度 / 非正規化 4 次モデル（非正規化 4 次密度）」
+- "Stein's lemma" → 「スタインの補題」 (paired with `decisions.md` `"Stein's identity" → 「スタインの恒等式」`)
+
+## chapter_mdl-information-theory/mdl-scores.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Stein kernel" → 「スタインカーネル」 (paired with `decisions.md` `"Stein operator" → 「スタイン作用素」` and `"kernel Stein discrepancy" → 「カーネルスタイン不一致度」`)
+
+## chapter_mdl-information-theory/mdl-scores.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "reproducing kernel feature space" → 「再生核特徴空間」
+- "goodness-of-fit test" → 「適合度検定」
+- "Hellinger divergence" → 「ヘリンガーダイバージェンス」
+
+## chapter_mdl-information-theory/mdl-scores.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gamma distribution" → 「ガンマ分布」 (shape / scale parameters → 「形状」 / 「尺度」)
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "pointwise mutual information (PMI)" → 「自己相互情報量」（標準的な自然言語処理・情報理論の訳語。略記 `PMI` / `pmi` は原文の表記に合わせる）
+- "collocation" → 「連語」（自然言語処理における定訳）
+- "flipped bit" (running example) → 「反転ビット」, "fair bit" → 「公平なビット」
+- "Gaussian pair (at $\rho=0.9$)" → 「（$\rho=0.9$ の）ガウス対」, "bivariate Gaussian" → 「2 変量ガウス分布」
+- "binary symmetric channel (BSC)" → 「2 元対称通信路」（`decisions.md` の `2 元符号` と整合）
+- "reparameterization invariance" → 「再パラメータ化不変性」（`decisions.md` の `再パラメータ化` + `不変性`）
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "usable information" → 「利用可能情報量」（Xu et al. 2020 の計算制約付き相互情報量の定訳）
+- "loss certificate" / "certify (a lower bound / information)" → 「損失による保証」 / 「保証する」
+- "synergy" (in XOR / three-variable mutual information) → 「シナジー」
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "channel" (information-theoretic communication channel) → 「通信路」（CNN の特徴チャネル `チャネル` と区別。glossary の `noisy channel` = 「雑音通信路」・`channel capacity` = 「通信路容量」と整合）
+- "Gaussian channel" → 「ガウス通信路」
+- "Shannon's channel coding theorem" / "Shannon's rate–distortion theorem" → 「シャノンの通信路符号化定理」 / 「シャノンのレート・歪み定理」（`decisions.md` の `シャノンの情報源符号化定理` と整合）
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "variational information bottleneck (VIB)" → 「変分情報ボトルネック」
+- "minimal sufficient statistic" → 「最小十分統計量」（glossary `sufficient statistic` = 「十分統計量」に対応）
+- "information plane" → 「情報平面」, "operating point" → 「動作点」, "collapse" (of bottleneck) → 「崩壊（する）」
+
+## chapter_mdl-information-theory/mdl-mutual-information.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "interaction information" → 「交互作用情報量」（McGill の 3 変数情報量の定訳）
+- "Z-channel" → 「Z 通信路」, "binary erasure channel" → 「2 元消失通信路」（情報理論の定訳）
+
+## chapter_mdl-information-theory/mdl-mi-estimation.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "pointwise mutual information" → 「自己相互情報量」 (established Japanese ML/NLP term; `pmi` / `PMI` retained in Latin script matching the English)
+- "mismatched pair(s)" → 「非対応ペア」 (consistent with `chapter_mdl-information-theory/further-reading.md#u03`)
+- "slack" (of an inequality / variational bound) → 「緩み」, "certify" (a lower bound) → 「保証する」
+- "rank" (position in sorted sample, order statistic) → 「順位」 (distinguished from matrix `ランク`)
+- "Chebyshev distance" → 「チェビシェフ距離」
+- "distribution-free" → 「分布によらない」
+- "fitting phase" / "compression phase" → 「適合フェーズ」 / 「圧縮フェーズ」
+- "Barber–Agakov bound", "Donsker–Varadhan (DV) bound", "NWJ bound", "InfoNCE bound" → 「Barber–Agakov 下界」, 「Donsker–Varadhan（DV）下界」, 「NWJ 下界」, 「InfoNCE 下界」 (person names in Latin script per `ja/style.md` §5, consistent with `further-reading.md#u03`)
+- "anchor" / "positive" / "negative" / "distractor" (in contrastive learning) → 「アンカー」 / 「正例」（`positive pair` = 「正のペア」）/ 「負例」 / 「ディストラクタ」
+- "smooth minimum" → 「滑らかな最小値」
+
+## chapter_mdl-information-theory/mdl-mi-estimation.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "MINE (mutual information neural estimation)" → 「MINE（mutual information neural estimation）」
+- "loss certificate" → 「損失による保証」
+
+## chapter_mdl-information-theory/mdl-mi-estimation.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "rare pair(s)" → 「希少ペア」, "starved batch" / "hit batch" → 「枯渇バッチ」 / 「ヒットバッチ」
+- "dual-encoder (critic)" → 「デュアルエンコーダ（型クリティック）」, "separable (critic)" → 「分離可能な（クリティック）」
+- "interquartile range (IQR)" / "upper quartile" → 「四分位範囲」 / 「上側四分位数」
+- "Glorot-uniform initialization" → 「Glorot 一様初期化」 (extends `ja/decisions.md` `"Glorot initialization" → 「Glorot 初期化」`)
+
+## chapter_mdl-information-theory/mdl-mi-estimation.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "precision matrix" → 「精度行列」 (distinguished from classification `precision` = 「適合率」)
+- "information plane" → 「情報平面」
+- "in-batch negatives" → 「バッチ内負例」, "symmetric loss" → 「対称損失」
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Numerical Solvers" (section heading) → 「数値ソルバ」 (follows `ja/style.md` §3.3 and `ja/decisions.md` `"numerical solver" → 「数値ソルバ」`)
+- "forward Euler" → 「前進オイラー法」, "midpoint method" → 「中点法」, "Heun's method" → 「ホイン法」, "classical Runge–Kutta (RK4)" → 「古典的ルンゲ・クッタ法（RK4）」
+- "local error" / "global error" → 「局所誤差」 / 「大域誤差」, "order (of a solver)" → 「次数」
+- "stability function" → 「安定性関数」, "test equation" → 「テスト方程式」
+- "Simpson's rule" / "trapezoid rule" → 「シンプソン則」 / 「台形則」 (paired with `ja/decisions.md` `"midpoint rule" → 「中点則」`)
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "embedded pair" → 「埋め込み型ペア」, "Dormand–Prince" → 「Dormand–Prince」 (person names in Latin script per `ja/style.md` §5)
+- "one-step method" / "multistep method" → 「1 段階法」 / 「多段階法」, "Adams–Bashforth method" → 「アダムス・バッシュフォース法」 (standard Japanese numerical analysis terminology)
+- "backward Euler" → 「後退オイラー法」, "A-stable" / "A-stability" → 「A 安定」 / 「A 安定性」
+- "symplectic Euler" → 「シンプレクティック・オイラー法」, "symplectic integrator" → 「シンプレクティック積分器」
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "implicit (method / step)" / "explicit (method / step)" → 「陰的（手法 / ステップ）」 / 「陽的（手法 / ステップ）」
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "learning-rate ceiling" → 「学習率の上限」
+- "stability disc" → 「安定円板」
+
+## chapter_mdl-dynamics/mdl-numerical-solvers.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "implicit gradient regularization" → 「暗黙的勾配正則化」 (paired with `ja/decisions.md` `"implicit gradient regularizer" → 「暗黙的勾配正則化項」`)
+- "splitting (operator splitting)" → 「作用素分割」
+- "critically damped" → 「臨界減衰」
+
+## chapter_mdl-dynamics/mdl-neural-odes.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Neural ODEs, Adjoints, and Continuous Flows" (section title) → 「ニューラル ODE、随伴法、連続フロー」
+- "adjoint equation" / "adjoint state" / "discrete adjoint" / "continuous adjoint" → 「随伴方程式」 / 「随伴状態」 / 「離散随伴」 / 「連続随伴」
+- "augmentation" (in Augmented Neural ODEs) → 「拡張」
+- "discretize-then-optimize" / "optimize-then-discretize" → 「離散化してから最適化」 / 「最適化してから離散化」
+- "ODE solver" → 「ODE ソルバ」 (inserts half-width space per `ja/style.md` §2.2 and drops final `ー` per §3.3, overriding unspaced proposed `ODEソルバー`)
+
+## chapter_mdl-dynamics/mdl-neural-odes.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "instantaneous change of variables" → 「瞬間的な変数変換」
+
+## chapter_mdl-dynamics/mdl-neural-odes.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "held probe" / "fresh probe" → 「固定プローブ」 / 「新規プローブ」
+- "Rademacher probe" / "Gaussian probe" → 「ラデマッハプローブ」 / 「ガウスプローブ」
+- "kinetic energy regularization" → 「運動エネルギー正則化」
+
+## chapter_mdl-dynamics/mdl-neural-odes.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Liouville's formula" → 「リウヴィルの公式」 (paired with `decisions.md` `"Liouville's trace rule" → 「リウヴィルのトレース則」`)
+- "Banach fixed-point theorem" → 「バナッハの不動点定理」
+- "stability function" → 「安定性関数」
+- "variational equation" → 「変分方程式」
+
+## chapter_mdl-dynamics/mdl-sdes.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Wiener process" → 「ウィーナー過程」, "Wiener's theorem" → 「ウィーナーの定理」, "Donsker's theorem" → 「ドンスカーの定理」 (follows `ja/style.md` §5 katakana rule for processes/theorems named after people)
+- "independent increments" / "Gaussian increments" → 「独立増分」 / 「ガウス増分」, "sample path" → 「見本路（サンプルパス）」
+- "law of the iterated logarithm" → 「重複対数の法則」
+
+## chapter_mdl-dynamics/mdl-sdes.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Itô multiplication table" → 「伊藤の乗積表」, "Itô isometry" → 「伊藤の等長性」, "Itô's lemma" → 「伊藤の補題」, "Itô correction" → 「伊藤補正」
+- "predictable" / "simple predictable process" → 「予測可能」 / 「単純予測可能過程」
+- "mean-square convergence" → 「平均二乗収束」
+- "diffusion coefficient" → 「拡散係数」
+- "Jensen's gap" → 「イェンセンのギャップ」
+- "geometric Brownian motion" → 「幾何ブラウン運動」
+
+## chapter_mdl-dynamics/mdl-sdes.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Ornstein–Uhlenbeck (OU) process" → 「オルンシュタイン・ウーレンベック（OU）過程」
+- "mean reversion" → 「平均回帰」, "relaxation time" → 「緩和時間」
+- "integrating factor" → 「積分因子」
+- "denoising diffusion probabilistic model (DDPM)" → 「ノイズ除去拡散確率モデル（DDPM）」
+- "Rademacher data" → 「ラデマッハデータ」
+
+## chapter_mdl-dynamics/mdl-sdes.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "strong error" / "weak error" → 「強誤差」 / 「弱誤差」, "strong convergence" / "weak convergence" → 「強収束」 / 「弱収束」
+- "multilevel Monte Carlo" → 「マルチレベルモンテカルロ法」
+- "Heun's method" → 「ホイン法」, "predictor-corrector" → 「予測子・修正子法」
+- "ODE solver" → 「ODE ソルバ」 (adds half-width space per `ja/style.md` §2.2 and drops final `ー` per §3.3, overriding glossary's proposed `ODEソルバー`)
+
+## chapter_mdl-dynamics/mdl-sdes.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "stopping time" → 「停止時刻」
+- "excess kurtosis" → 「超過尖度」
+- "semilinear SDE" → 「半線形 SDE」, "exponential Euler–Maruyama" → 「指数オイラー・丸山」
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Fokker–Planck equation" / "Fokker–Planck PDE" → 「フォッカー・プランク方程式」 / 「フォッカー・プランク PDE」 (follows `ja/style.md` §5 katakana rule for named mathematical equations)
+- "Ornstein–Uhlenbeck (OU) process" → 「オルンシュタイン・ウーレンベック（OU）過程」
+- "time-marginal" → 「時間周辺分布」 (paired with `marginal` = 「周辺分布」 and `marginal density` = 「周辺密度」)
+- "divergence theorem" → 「発散定理」 (paired with `decisions.md` `"divergence" (of a vector field) → 「発散」`)
+- "heat equation" → 「熱方程式」, "advection" → 「移流」, "diffusion" → 「拡散」
+- "double-well (drift)" → 「二重井戸（ドリフト）」
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "characteristic(s)" (of a continuity/first-order PDE) → 「特性曲線」
+- "reflecting boundary" / "absorbing boundary" → 「反射境界」 / 「吸収境界」
+- "Kolmogorov–Smirnov distance" → 「コルモゴロフ・スミルノフ距離」
+- "reversed clock" → 「逆向きの時計」
+- "repeller" → 「反発点」
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "watershed" (equal-responsibility boundary) → 「分水嶺」
+- "width excess" → 「幅の超過分」
+
+## chapter_mdl-dynamics/mdl-fokker-planck-probability-flow.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "conservative discretization" → 「保存型離散化」
+- "antisymmetric matrix" → 「反対称行列」
+- "Benamou–Brenier formulation" → 「ベナムー・ブレニエの定式化」
+
+## chapter_mdl-dynamics/mdl-score-matching-diffusion-flow.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "explicit score matching (ESM)" → 「明示的スコアマッチング（ESM）」 (consistent with `decisions.md` `denoising.md#u03`)
+- "implicit score matching (ISM)" → 「陰的スコアマッチング（ISM）」 (consistent with `decisions.md` `further-reading.md#u02`)
+- "Hyvärinen's identity" / "Vincent's theorem" / "Tweedie's formula" → 「Hyvärinen の恒等式」 / 「Vincent の定理」 / 「Tweedie の公式」 (consistent with `decisions.md` `denoising.md#u01` and `ja/style.md` §5)
+- "sink" (inward vector-field sink $\nabla \cdot \mathbf{s} < 0$) → 「吸い込み口（シンク）」 / 「シンク」
+- "Gaussian bump(s)" → 「ガウスバンプ」
+
+## chapter_mdl-dynamics/mdl-score-matching-diffusion-flow.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Ornstein–Uhlenbeck (OU) process" → 「オルンシュタイン・ウーレンベック（OU）過程」 (follows `ja/style.md` §5 katakana rule for stochastic processes named after people)
+- "Fokker–Planck equation" → 「フォッカー・プランク方程式」
+- "Euler–Maruyama (step / scheme / discretization)" → 「オイラー・丸山（ステップ / スキーム / 離散化）」 (established Japanese SDE terminology)
+- "Langevin sampler" → 「ランジュバンサンプラ」 (paired with glossary `Langevin dynamics` = 「ランジュバン動力学」 and `decisions.md` `"sampler" → 「サンプラ」`)
+
+## chapter_mdl-dynamics/mdl-score-matching-diffusion-flow.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "noise-conditional DSM loss" → 「ノイズ条件付き DSM 損失」 (paired with `decisions.md` `"noise-conditional score network" → 「ノイズ条件付きスコアネットワーク」`)
+- "likelihood weighting" → 「尤度重み付け」
+- "forward Euler" → 「前進オイラー法」
+
+## chapter_mdl-dynamics/mdl-score-matching-diffusion-flow.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Kolmogorov–Smirnov (KS) statistic" → 「コルモゴロフ・スミルノフ（KS）統計量」
+- "empirical distribution function" → 「経験分布関数」
+- "ODE solver" → 「ODE ソルバ」 (overrides unspaced/long-vowel proposed glossary `ODEソルバー` per `ja/style.md` §2.2, §3.3 and `decisions.md` `samplers.md#u01`)
+
+## chapter_mdl-dynamics/mdl-score-matching-diffusion-flow.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Metropolis-adjusted Langevin algorithm" → 「メトロポリス調整付きランジュバンアルゴリズム」 (consistent with `decisions.md` `mdl-bayesian-computation.md#u05`)
+- "root-mean-square error" → 「二乗平均平方根誤差」 (combines glossary `root mean square` = 「二乗平均平方根」 and `error` = 「誤差」)
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Rectified Flow" / "rectified flow" → 「Rectified Flow」 (proper method name kept in Latin script per `ja/style.md` §3.2, matching glossary `Reflow` = 「Reflow」)
+- "probability path" → 「確率経路」 (paired with glossary `Gaussian path` = 「ガウス経路」; glossed on first occurrence)
+- "loss floor" / "floor" ($C$) → 「損失の下限」 / 「下限」 (consistent with `ja/decisions.md` `gaussian-paths.md#u02`)
+- "probability-flow ODE" → 「確率フロー ODE」 (with half-width space per `ja/style.md` §2.2, overriding unspaced proposed glossary entry `確率フローODE`)
+- "$\mathbf{v}$-prediction" / "$\mathbf{v}$-target" → 「$\mathbf{v}$ 予測」 / 「$\mathbf{v}$ ターゲット」 (with half-width space after inline math per `ja/style.md` §2.2)
+- "Tweedie's formula" → 「Tweedie の公式」 (person name kept in Latin script per `ja/style.md` §5)
+- "solver" → 「ソルバ」 (drops final `ー` per `ja/style.md` §3.3, consistent with `ja/decisions.md`)
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "squared energy distance" → 「二乗エネルギー距離」 (glossed on first occurrence)
+- "transport cost" → 「輸送コスト」 (glossed on first occurrence)
+- "coupling" → 「カップリング」 (consistent with `ja/decisions.md` `chapter_mdl-dynamics/index.md#u01`)
+- "2-Wasserstein distance" → 「2 次ワッサースタイン距離」 (matches glossary `Wasserstein distance` = 「ワッサースタイン距離」 and `ja/decisions.md` `"Wasserstein-2 distance" → 「2 次ワッサースタイン距離」`)
+- "Brenier's theorem" / "Brenier map" → 「Brenier の定理」 / 「Brenier 写像」 (person name kept in Latin script per `ja/style.md` §5)
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "kinetic energy" → 「運動エネルギー」 (standard physics/OT term; glossed on first occurrence)
+- "Benamou–Brenier theorem" → 「Benamou–Brenier の定理」 (person names kept in Latin script per `ja/style.md` §5)
+- "minibatch optimal-transport" → 「ミニバッチ最適輸送」 (glossed on first occurrence)
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Heun's method" / "Heun" → 「ホイン法」 (established Japanese numerical-analysis term for Heun's method, paired with `オイラー法`)
+- "number of function evaluations (NFE)" → 「関数評価回数（NFE）」
+
+## chapter_mdl-dynamics/mdl-flow-matching-transport.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "stochastic interpolants" → 「確率的補間」
+- "Euler–Maruyama" → 「オイラー・丸山法」 (standard Japanese SDE term named after Gisiro Maruyama 丸山儀四郎)

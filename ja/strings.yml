@@ -227,6 +227,7 @@ notebooks.cpu_note_pytorch: |2+
 
 
 
+
 notebooks.cpu_note_mxnet: |2+
   Apple Silicon 搭載の Mac では、`pylock.cpu.toml` の代わりに `pylock.cpu-macos.toml` を使用すること。
 
