@@ -1282,3 +1282,184 @@ One rendering per term across the seven pages of the chapter; the unit entries a
 - "script" → برنامج (برنامج تدريب، برنامج مستقل); "raise an error" → يثير خطأ; "mode" → نمط (نمط التدريب، نمط tf32، نمط حتمية); "enable", "turn on" → يشغّل، تشغيل (not تفعيل, which is "activation").
 - "placement" on a device → التوضيع; "allocator" → نظام الحجز ("caching allocator" → نظام حجز ذو تخزين مؤقت); "non-invasive" hooks → خطافات لا تمس الشيفرة.
 - Kept apart on purpose: "serialization" as the topic of the saving-loading page → التسلسيل (يسلسل، فك التسلسيل), glossed there; on the other pages "serialize into checkpoints / to disk" is written with يحفظ / يكتب, and "serializable" → قابل للحفظ.
+
+## chapter_convolutional-neural-networks/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Convolutional Neural Networks" (chapter title) → الشبكات العصبية الالتفافية; gloss (convolutional neural network, CNN) once, then شبكة CNN / شبكات CNN; "convnet", "ConvNets" → شبكة التفافية (الشبكات الالتفافية).
+- "locality" → المحلية; "translation equivariance" → تساوق الإزاحة (glossary); "spatial geometry" → الهندسة المكانية; "pixel grid" → الشبكة النقطية من البكسلات; "neighborhood" → جوار.
+- "bank of filters", "filter bank" → مجموعة مرشحات (مجموعات المرشحات); "filter" → مرشح (مرشحات), "filtered responses" → الاستجابات بعد الترشيح; "sweep / slide a filter across" → يمرر على; the kernel "slides" → تزلق.
+- "oriented edges" → حواف موجهة; "bars" → أشرطة; "outline" (of an object) → المحيط الخارجي; "contours" → الحدود; "textures" (of an object) → نسيج السطح, (image features) → أنماط النسيج on every page of the chapter; "pure static" (TV noise) → تشويش محض; "scrambled images" → الصور المبعثرة; "pixel-shuffled images" → صور خُلطت بكسلاتها.
+- "early visual cortex" → المراحل الأولى من القشرة البصرية; "visual field" → المجال البصري; "visual pathway" → المسار البصري; "primates" → الرئيسيات; "neuroscience" → علم الأعصاب; "silicon computation / silicon vision" → الحوسبة على السيليكون / رؤية السيليكون.
+- "field of view" → مجال الرؤية; "feature capacity" → سعة الميزات; "$1 \times 1$ bottlenecks" → أعناق الزجاجة $1 \times 1$; "local and global pooling" → التجميع المحلي والتجميع الشامل; "stem" (first convolutional layer) → جذع; "reach" (of stacked layers) → مدى; "shift tolerance" → التسامح مع الإزاحة (as on the pooling page); "handwritten ZIP codes" → الرموز البريدية المكتوبة بخط اليد.
+- "geometric prior" → الافتراض القبلي الهندسي; "permutation blindness" → العمى عن التبديل; "megapixel" → ميغابكسل; "parameter-free" → بلا معلَمات.
+- Resource lists: "(paywalled)" → (الوصول مدفوع); "free HTML" → نسخة HTML مجانية; "free notes" → ملاحظات مجانية; "Chapter 9 …" of a cited book → الفصل 9 منه; "animations" → رسوم متحركة; an interactive web tool → class noun أداة; "parameter sharing" (Goodfellow's term) → مشاركة المعلَمات, "weight sharing" → مشاركة الأوزان.
+- Slide labels: "Chapter Architecture" → معمارية الفصل; "Mathematical and Architectural Roadmap of Chapter N" → خارطة الطريق الرياضية والمعمارية للفصل N; "Concrete Benchmarks Across Chapter N" → اختبارات معيارية محددة على امتداد الفصل N; "Chapter Study Strategy" → استراتيجية دراسة الفصل; "resource split" → توزيع الموارد.
+- English glosses given on this page: receptive field, convolutional layer, translation equivariance, convolutional neural network (CNN).
+
+## chapter_convolutional-neural-networks/padding-and-strides.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Page title → الحشو وخطوة الانزلاق والتوسيع; "zero padding" → حشو الأصفار; "padding values" → قيم الحشو; "unpadded" → غير محشو, "padded input / tensor" → مدخلات محشوة / موتر محشو; "shape-preserving padding" → الحشو الحافظ للشكل; "symmetric / asymmetric padding" → حشو متناظر / غير متناظر; "same" padding on slides → الحشو “same”.
+- "reflect padding" → حشو الانعكاس; "replicate padding" → حشو التكرار; "boundary condition" → شرط حدي (glossary); "boundary artifacts" → الآثار المصطنعة عند الحدود; "blind spots" → بقع عمياء; "positional cue" → إشارة إلى الموضع; "border darkening" → تعتيم الحدود; "dark frame" → إطار داكن.
+- Pixels by position: "border" (of an image) → الحدود، الحد; "boundary pixels" → بكسلات الحدود; "interior pixel" → بكسل داخلي; "edge pixel" (on the border, not an intensity edge) → بكسل طرفي; "corner pixel" → بكسل ركني; "perimeter" → محيط الصورة.
+- "strided convolution" → الالتفاف بخطوة انزلاق; "stride 1" in prose → خطوة انزلاق مقدارها 1; "vertical / horizontal stride" → خطوة الانزلاق العمودية / الأفقية; "dilation" → التوسيع (glossary), so "expand" (a grid by padding) is rendered with يكبّر / تصير, never يوسع.
+- "field of view" → مجال رؤية; "dense prediction" → التنبؤ الكثيف; "footprint" (of a kernel) → مساحة التغطية; "geometric controls" → ضوابط هندسية; "kernel taps" → أوزان النواة; "fast kernels" (compute kernels) → النوى الحسابية السريعة; "restoration networks" → شبكات ترميم الصور; "grid" (input / output) → شبكة نقطية; "odd / even kernel" → نواة فردية / زوجية.
+- "singleton dimensions" → بُعدان مفردان; "channels-last" → تخطيط القنوات أخيرًا (as on the image-classification page); "per-axis tuple" → مجموعة مرتبة لكل محور.
+- English glosses given in u01 of this page (do not repeat in later units): receptive field, semantic segmentation, padding, stride, dilation, boundary condition, reflect padding, replicate padding.
+
+## chapter_convolutional-neural-networks/pooling.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Pooling terms: "pooling" → التجميع; "max-pooling", "maximum pooling" → التجميع الأقصى (one Arabic term for both; the first mention reads (maximum pooling، واختصاره *max-pooling*)); "average pooling" → تجميع المتوسط; "global pooling" → التجميع الشامل; "global average pooling" → تجميع متوسط شامل (glossary form, used indefinite); "global maximum / global average" of a feature map → القيمة العظمى الشاملة / المتوسط الشامل; "pooled response / output" → الاستجابة المجمَّعة / مخرجات التجميع.
+- "tolerance" to shifts → التسامح مع الإزاحة, "tolerant" → متسامح مع (هامش السماح stays the pass/fail tolerance, تحمل الأعطال fault tolerance); "invariant to shifts" → ثابت تحت الإزاحة, "strictly invariant" → ثابت تمامًا, "exact invariance" → ثبات مضبوط; "shift-equivariant" → متساوق مع الإزاحة (glossary تساوق الإزاحة).
+- "block" (pooling block) → كتلة (كتل); "block boundary" → حد الكتلة; "response" (of a detector) → استجابة; "peak (response)" → ذروة (الاستجابة); "fires" (a detector, a cell) → ينشط; "neighborhood" → جوار; "winning element" → العنصر الفائز; "impulse" → نبضة; "amplitude" → سعة.
+- "absorb" (a shift) → يمتص; "collapse" (spatial coordinates, a channel to a number) → يطوي، طي (الانهيار stays the linear collapse of stacked layers; اختزال stays "reduction"); "dilute" → يخفف; "spatial coverage" → التغطية المكانية; "spatial reach" → المدى المكاني; "spatial extent" → الامتداد المكاني.
+- "aggregation" (spatial aggregation, evidence aggregation) → الإجمال, as on the ndarray slides, so that التجميع names only pooling.
+- "subsampling" → أخذ العينات الفرعية; "naive subsampling" → أخذ العينات الفرعية الساذج; "downsampling" → خفض أخذ العينات, "downsampler" → طبقة تنفذ خفض أخذ العينات; "sampling rate" → معدل أخذ العينات; "smoothing filter" → مرشح تنعيم; "low-pass box filtering" → الترشيح الصندوقي منخفض التمرير; "high-frequency alternating signal" → إشارة متناوبة عالية التردد; "signal processing" → معالجة الإشارات.
+- "stride 2", "stride-2 X" → X بخطوة انزلاق 2; "strided layers" → الطبقات ذات خطوة الانزلاق الأكبر من واحد; "product of the strides" → جداء خطوات الانزلاق; "stride-1 convolutional stacks" → الطبقات الالتفافية المكدسة بخطوة انزلاق 1.
+- "border pixel" → البكسل الطرفي; "corner pixel" → البكسل الركني (as on the padding page); "interior pixel" → البكسل الداخلي; "padded border" → الحد المحشو; "zero-padded" → محشو بالأصفار; "image borders / boundaries" → حدود الصورة (حافة stays the intensity edge); "salient content" → المحتوى البارز.
+- Names: Neocognitron, Fukushima, Waldo, Nyquist, BlurPool, AvgPool, LeNet stay Latin (نموذج Neocognitron الذي وضعه Fukushima); "computational neuroscience" → علم الأعصاب الحاسوبي; "visual cortex" → القشرة البصرية; "conventions" (of an architecture) → اصطلاحات; "dense head" → الرأس الكثيف; "spatial coarsening" → تخشين مكاني.
+- English glosses given in u01 of this page (do not repeat in later units): pooling layer, tolerance, global pooling, pooling window, maximum pooling, max-pooling, average pooling, downsampling, subsampling, aliasing, global average pooling. Translation invariance and equivariance take no gloss here (the why-conv page defines them).
+
+## chapter_convolutional-neural-networks/lenet.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Page title "LeNet" → شبكة LeNet (class noun so that the heading starts in Arabic); in running text LeNet takes شبكة where a sentence or block would otherwise begin with it.
+- "convolutional encoder" → المشفر الالتفافي; "dense (classification) head" → رأس التصنيف الكثيف / الرأس الكثيف; "dense block" → الكتلة الكثيفة; "convolutional block" → كتلة التفاف (كتلتا التفاف; slides: كتلة الالتفاف 1 / 2).
+- "average-pooling layer" → طبقة لتجميع المتوسط (طبقة تجميع المتوسط); slide "AvgPool" → تجميع المتوسط; slide "conv", "Flatten", "Dense", "Sigmoid" as chain items → التفاف، تسطيح، طبقة كثيفة، سيغمويد; the layer labels Conv1, Conv2 and `Dense1` stay Latin after الطبقة.
+- "support vector machines" → آلات متجهات الدعم (from متجهات الدعم and آلة SVM), glossed once; "radial-basis-function units" → وحدات من دوال الأساس الشعاعي, on slides وحدات RBF; "handwritten digits" → الأرقام المكتوبة بخط اليد; "strokes" → ضربات القلم; "ATM" → أجهزة الصراف الآلي.
+- "to assemble" (a network from parts) → يركّب، تركيب (not تجميع, which is pooling); "compressed notation" → صيغة رموز مضغوطة; "pixel-shuffled images" → صور خُلطت بكسلاتها, "pixel-shuffle test" → اختبار خلط البكسلات; "channel depth" → عمق القنوات; "layer widths" → عروض الطبقات; "feature detectors" → كاشفات الميزات.
+- "to trade A for B" → يقايض A بـ B; "shrink" (spatial size) → يقلص، التقليص المكاني; "sparse wiring" → توصيل متناثر, "all-to-all wiring" → توصيل كامل; "memory–compute asymmetry" → اللاتناظر بين الذاكرة والحساب; "bit-for-bit" → بتًا ببت.
+- English glosses given in u01 of this page (do not repeat in later units): convolutional encoder, dense classification head, support vector machines, multiply-adds.
+
+## chapter_convolutional-neural-networks/conv-layer.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Convolutions for Images" → الالتفاف على الصور; "edge map" → خريطة الحواف; "edge detector" → كاشف الحواف; "hand-crafted" → الذي صممناه يدويًا / التصميم اليدوي; "two-weight detector" → الكاشف ذو الوزنين.
+- "sweep / slide a kernel across" → يمرر، تمرير (slides) and نزلق (body, style §9.1); "sliding window" → نافذة منزلقة; "anchoring at the upper-left corner", "top-left anchor" → التثبيت عند الركن العلوي الأيسر; "valid position" → موضع صالح; "the window fits at N positions" → تتسع المدخلات للنافذة في N مواضع.
+- "even-sized kernels" → النوى ذات الأبعاد الزوجية; "center pixel" → بكسل مركزي; "flipped kernel" → نواة مقلوبة; "strict mathematical convolution" → الالتفاف الرياضي بمعناه الدقيق; "family of layers" → عائلة الطبقات.
+- An "$h \times w$ convolutional layer / kernel / input" → طبقة التفافية $h \times w$، نواة $2 \times 2$، مدخلات $3 \times 3$ (the math span directly after the noun); with a code name as well: `X` ذات الأبعاد $6 \times 8$.
+- "input resolution" → دقة المدخلات (style §10.1); "spatial dimensions" → الأبعاد المكانية; "border of zeros" → إطار من الأصفار; "stripe", "band" (of the test image) → شريط; "boundary" (white-to-black) → الحد الفاصل; "brightness" → السطوع; "intensity" → الشدة; "flat / uniform regions" → المناطق المستوية / المتجانسة.
+- "horizontal finite difference" → الفرق المحدود الأفقي (singular, as in style §4; the glossary lemma is فروق محدودة); "horizontal-difference kernel" → نواة الفرق الأفقي; "discrete approximation" → تقريب متقطع.
+- "diagonals" (edges) → الحواف القطرية; "corners" (image features) → الأركان; "textures" → أنماط النسيج; "orientation" → اتجاه, "orientation selectivity" → الانتقائية للاتجاه; "filter banks" → مجموعات المرشحات.
+- "to supervise a layer with `Y`" → يشرف على الطبقة بـ …; "loss signal" → إشارة خسارة; "task loss" → خسارة المهمة; "end to end" → من طرف إلى طرف; "deep CNN" → شبكة CNN عميقة.
+- Slides: "Motivation & Core Mental Model" → الدافع والنموذج الذهني الأساسي; "grid" (of pixels) → شبكة نقطية; "sub-window" → نافذة جزئية; "learnable" → قابل للتعلم; "megapixel" → ميغابكسل; "binary test pattern" → نمط اختبار ثنائي القيم; "piecewise-constant" → ثابت قطعيًا; "signed edge map" → خريطة حواف ذات إشارة; "Layer Module" in a title → طبقة … بصيغة Module; "identical learned class" → الفئة المتعلَّمة نفسها.
+- English glosses given in u01 of this page (do not repeat in later units): edge map, two-dimensional cross-correlation, receptive field, padding, finite difference, backpropagation. Translation equivariance, locality, stride, dilation, dense layer, filter and feature are used in passing and take no gloss here; feature map is defined in a later unit.
+
+## chapter_convolutional-neural-networks/why-conv.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "locality" → المحلية (as "spatial locality" → المحلية المكانية); "translation equivariant" (adjective) → متساوق مع الإزاحة; "translation invariance / invariant" → ثبات الإزاحة / ثابت تحت الإزاحة; plain "equivariance", "invariance" → التساوق، الثبات.
+- "grid" (of pixels, hidden units) → شبكة نقطية (style §10.1), "hidden grid" → شبكة نقطية مخفية; "hidden map" → خريطة مخفية; "response (map)" → (خريطة) الاستجابة; "score map" → خريطة الدرجات.
+- "shift operator" → مؤثر الإزاحة; "commuting diagram" → مخطط تبادلي; "$f$ commutes with shifts" → تتبادل مع الإزاحات; "unit impulse" → نبضة وحدة; "probing" → السبر; "template" → قالب; "Toeplitz matrix" → مصفوفة Toeplitz (name in Latin).
+- "fourth-order tensor" → موتر من المرتبة الرابعة; "re-index" → يعيد الفهرسة; a spatial "index" (subscript) → دليل; "panel (a)" → اللوحة (a); "prune" (weights) → يشذب; "free weights" → الأوزان الحرة; "shared weights" → الأوزان المشتركة.
+- "megapixel" → ميغابكسل (1MP kept on slides); "sample efficiency" → كفاءة العينات; "textures" → أنماط النسيج; "time-delay neural networks" → الشبكات العصبية ذات التأخير الزمني; "Where's Waldo" → “أين Waldo” (the name stays Latin).
+- "sufficiency / necessity" (of a proof) → الكفاية / الضرورة; "converse" → العكس; slide kicker "Commutation invariant" → لامتغير التبادل.
+- English glosses given in u01 of this page (do not repeat in later units): locality, translation equivariance, convolutional layer, translation invariant, convolutional neural networks (CNN), convolution kernel, filter, inductive bias.
+
+## chapter_convolutional-neural-networks/channels.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "input channel(s)" / "output channel(s)" → قناة إدخال / قناة إخراج (قنوات الإدخال، قنوات الإخراج; glossary); "multi-channel" → متعدد القنوات; "multi-input kernel" → نواة متعددة المدخلات; page title → قنوات الإدخال المتعددة وقنوات الإخراج المتعددة.
+- "luminance" → النصوع; "brightness" → السطوع ("equal luminance", "isoluminant" → متساوي النصوع); "boundary" (between colour regions) → حد (حدود); "neutral gray" → الرمادي المحايد; "color opponency" → تضاد الألوان.
+- "third-/fourth-order kernel tensor" → موتر نواة من المرتبة الثالثة / الرابعة (مرتبة as on the linear-algebra page); slides "3D / 4D" → ثلاثي / رباعي الأبعاد.
+- "scalar products" (the single multiplications inside one output entry) → جداءات قياسية.
+- "kernel slice", "filter slice" → شريحة النواة، شريحة المرشح; "filter bank" → مجموعة المرشحات (as on the chapter page).
+- "all-to-all channel wiring" → التوصيل الذي يربط كل قناة بكل قناة (slides: توصيل كل قناة بكل قناة).
+- "to map N channels to M channels" (a layer) → ينقل N قناة إلى M قناة; "256-to-256 layer" → الطبقة التي تنقل 256 قناة إلى 256 قناة.
+- "… contains [display equation] learnable parameters / performs [display equation] multiply-adds": the block after the equation starts with the counted noun in the singular (معلَمة قابلة للتعلم. / عملية ضرب وجمع.), so the content stays in its block.
+- "scales with" (cost) → يتزايد مع; "scaling wall" → جدار التزايد; "output area" → مساحة المخرجات.
+- "receptive window" → نافذة الاستقبال; "mental arithmetic" → الحساب الذهني.
+- "depthwise-separable convolution" → التفاف عمقي قابل للفصل (glossary التفاف عمقي); "grouped convolutions" → التفافات المجموعات.
+- "lightweight mobile models" → النماذج الخفيفة للأجهزة المحمولة; "to project channels down / expand back" → إسقاط … على / التوسيع من جديد إلى; "spatial mixing", "channel mixing" → المزج المكاني، مزج القنوات.
+- "stem" (the first layers of a CNN) → الجذع; "stage" → مرحلة (مراحل); "high-res" → عالي الدقة; "VRAM" → ذاكرة VRAM.
+- "shift pixel-for-pixel" → تنزاح بكسلًا ببكسل; "tolerance to small spatial shifts" → تسامح مع الإزاحات المكانية الصغيرة (as on the pooling page); "translation-invariant" (slides) → ثابت تحت الإزاحة.
+- Kicker "Section Synthesis" → خلاصة القسم; "Solution preview" → لمحة عن الحل; "Roles" → الأدوار.
+- English glosses given in u01 of this page (do not repeat in later units): cross-correlation, feature map, multiply-add, activation memory, fully connected layer, bottleneck, grouped convolutions, depthwise-separable convolutions.
+
+## chapter_convolutional-neural-networks/channels.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "patch matrix" (im2col) → مصفوفة الرقع (glossary رقعة); "input patches" → رقع المدخلات; exercise title "Multi-channel im2col" → طريقة im2col متعددة القنوات (class noun طريقة before the Latin name).
+- "composition" of two convolutions / kernels → تركيب; "intermediate width" → عرض وسيط; "single-channel kernel" → نواة أحادية القناة.
+- "cues" (colour cues across channels) → الدلائل, as on this page's slides; "parameter- and compute-efficient" → مقتصد في المعلَمات وفي الحساب.
+- "output values that training must keep" → قيم المخرجات التي يجب أن يحتفظ بها التدريب; "per image" → للصورة الواحدة; "reproduces `f(X, K)`" → يطابق نتيجة `f(X, K)`.
+- No English glosses in u02 of this page (all key terms were glossed in u01).
+
+## chapter_convolutional-neural-networks/conv-layer.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Convolution as Matrix Multiplication" → الالتفاف بوصفه ضرب مصفوفات; "patch matrix" → مصفوفة الرقع; "workspace memory" → ذاكرة مساحة العمل; "layout transformation" → تحويل التخطيط; im2col stays Latin, with a class noun (تحويل im2col، التحويل `im2col`) where a block or bold lead-in would start with it.
+- "unroll / unfold" (the kernel, the image) → يفرد، فرد; "sparse banded matrix" → مصفوفة شريطية متناثرة; "W multiplying the image" → تُضرب في; "structured dense layer" → طبقة كثيفة ذات بنية; "panel (c)" → اللوحة (c).
+- "theoretical / effective receptive field" → مجال الاستقبال النظري / الفعال; the receptive field or an error "decays" → يتناقص (اضمحلال stays weight decay); "Gaussian bell curve" → منحنى جرس غاوسي; "sensitivity" → حساسية.
+- "reaches $k - 1$ pixels farther" → تمتد $k - 1$ بكسلًا أبعد; "side length" → طول الضلع; "tower" (of stacked layers in a figure) → برج; "chain of connections" → سلسلة من الوصلات; "edge input" (at the edge of a receptive field) → مدخل طرفي; "count paths" → يحصي المسارات; "bars" (of a figure) → الأشرطة; "channel pair" → زوج قنوات.
+- "under-sampling border pixels" → لا يأخذ من بكسلات الحدود إلا عينات أقل مما ينبغي; "hierarchies of filters" → تراتبات من المرشحات.
+- Slides: "Dual View" → النظرة المقابلة; "a single dense GEMM" → عملية GEMM كثيفة واحدة; "GPU Tensor Core" → أنوية الموترات في وحدة GPU; "patch duplication" → نسخ مكررة للرقع; "expressivity" → القدرة التعبيرية; "std" → انحراف معياري; "RF" → مجال الاستقبال (no Latin acronym); "Section Synthesis" → خلاصة القسم; a number list in a caption is joined by free-standing و.
+- English glosses given in u02 of this page (do not repeat in later units): feature map. Receptive field was glossed in u01; "effective receptive field" takes no gloss (only the adjective is emphasized).
+
+## chapter_convolutional-neural-networks/why-conv.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "discrete convolution" → الالتفاف المتقطع; "mathematical convolution" → الالتفاف الرياضي; "flipped kernel / flipped copy" → النواة المقلوبة / النسخة المقلوبة, "the flip", "flipping" → القلب; "unflipped" → غير المقلوب; "overlap" (between two functions) → التراكب.
+- "third-order tensor" → موتر من المرتبة الثالثة (as "fourth-order" in u01); "the leading channel axis" → المحور الأول، وهو محور القنوات; "output-before-input channel convention" → الاصطلاح الذي يقدم قناة الإخراج على قناة الإدخال; "kernel slice" → شريحة من النواة.
+- "the entire stack" (of feature maps) → الخرائط المكدسة كلها (no noun كدسة, style §10.1); "to aggregate feature maps", "pooling evidence" (not the pooling layer) → الإجمال, as on the pooling page; "expand how much of the image units can see" → زيادة ما تراه الوحدات (يوسع is kept for dilation).
+- "volumetric medical scans" → الصور الطبية الحجمية, slide "volumes" → الأحجام; "video frames" → إطارات الفيديو; "color contrasts" → تباينات لونية; "corners" → أركان; "textures" → أنماط نسيج (as in u01 of this page).
+- Exercises: "periodic grid" → شبكة نقطية دورية, "ring" → حلقة, "wraps around" → تتصل نهايتها ببدايتها; "commutative / commutativity" → تبديلي / تبديلية; "spectrogram" → المخطط الطيفي; "hertz" → الهرتز in prose, Hz on slides; "head" (of a classifier) → رأس; "rotate" → يدير (إدارة), "rotation" → دوران; "permutes cyclically" → يبدل تبديلًا دوريًا; "circulant matrix" → مصفوفة دوارة; "the first part" (of an exercise) → الجزء الأول.
+- Slides: "tied weights" → الأوزان المشتركة; "blind spot" → البقعة العمياء; "N-order-of-magnitude collapse" → انخفاض بمقدار N مرتبة مقدار; "harmonic ratios" → النسب التوافقية; "modalities" → أنواع البيانات; "Section Synthesis" → خلاصة القسم; note lead-in "Next (§{…}):" → التالي (§{…}): followed by verbal nouns; table cell "Identical" → متطابق; "intractable" → غير عملي.
+- English glosses given in u02 of this page: convolution, cross-correlation, output channel, feature maps. "channel" (everyday word) takes no gloss.
+
+## chapter_convolutional-neural-networks/pooling.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "neutral element" (of max, of a sum) → العنصر المحايد; "neutral constant" → ثابت محايد; "beat" (a padded cell beating an activation) → يتغلب على.
+- "override the defaults" (of a layer's arguments) → تجاوز القيم الافتراضية (يعيد تعريف stays for overriding a method); "explicit padding" → حشو صريح; windows "tile the input" → تتراصف النوافذ على المدخلات, "tiles" (table) → بلاطات.
+- "minimum pooling", "min-pooling" → التجميع الأدنى; "softmax pooling" → تجميع softmax; "softmax-weighted average" → المتوسط الموزون بأوزان softmax.
+- "blur-pool" stays Latin after the class noun طريقة (طريقة blur-pool); "two-tap box filter" → مرشح صندوقي ذو وزنين; "averaging filter" → مرشح متوسط; "subsampler" → طبقة أخذ عينات فرعية; "cycles per input sample" → عدد الدورات لكل عينة من المدخلات.
+- "shift equivariance in value" → تساوق الإزاحة في القيمة; "strictly negative" → سالبة تمامًا; "genuine input entries" → عناصر المدخلات الفعلية, "real entries / activations" → العناصر / التفعيلات الحقيقية.
+- "two-channel tensor" → موتر ذو قناتين; "channel axis" → محور القنوات; "cross-channel mixing" → المزج بين القنوات (مزج as on the channels page; خلط is shuffling); "pairwise comparisons" → المقارنات الثنائية.
+- Slides: "Section Synthesis" (kicker) → خلاصة القسم; "Systems Pitfall" → مزلق في الأنظمة; "Modern Evolution" → التطور الحديث; "Head aggregation" → الإجمال في الرأس; "dense flatten head" → الرأس الكثيف المسطح; "Test your understanding of …" → اختبار فهم …; "Next (§{…}):" → التالي (§{…}):.
+- CS231n credit: "Assignment 2, ConvolutionalNetworks, …" → الواجب [Assignment 2](url)، دفتر ConvolutionalNetworks، ….
+
+## chapter_convolutional-neural-networks/lenet.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "plateau" (noun: the stretch of a training curve stuck at chance) → الاستواء (الاستواء الابتدائي); "at chance", "near chance" → عند / قرب مستوى الصدفة; "takes off" → تنطلق; "run" (of training) → جولة (جولة نموذجية، من جولة إلى أخرى).
+- "shuffled pixels / images / dataset" → البكسلات / الصور / مجموعة البيانات المخلوطة; "ordered images" → الصور المرتبة; "permuted image" → صورة مبدَّلة; "spatial adjacency" → التجاور المكاني; "destroy" (locality, contours) → يتلف، إتلاف; "white noise" → ضوضاء بيضاء.
+- "foreground detector" → كاشف للمقدمة; "filled silhouette" → الصورة الظلية المملوءة; "bright / dark" (columns, panels) → فاتح / داكن; "panel" (of a figure) → لوحة; "template image" → صورة قالب; "spatial cell" → خلية مكانية; "unconstrained scenes" → المشاهد غير المقيدة.
+- Garments drawn from the data take their English class name once, since the figure titles print it: حذاءً رياضيًا (sneaker، الفئة 7)، قميصًا (shirt، الفئة 6).
+- "spatial prior" → الافتراض القبلي المكاني (as "geometric prior" on the chapter page); "symmetry principles" → مبادئ التناظر; "strictly translation-equivariant / -invariant" → متساوق مع الإزاحة تمامًا / ثابت تحت الإزاحة تمامًا; "shift invariance" (slide) → ثبات الإزاحة (glossary).
+- Slides: "(cont.)" → (تابع); "Section & Chapter Synthesis" → خلاصة القسم والفصل; "blueprint" → مخطط; "Signal propagation" → انتشار الإشارة; "residual skips" → وصلات التخطي ذات البواقي; "residual stages" → مراحل بواقٍ; "GAP" → تجميع GAP; "(Chapter N Preview)" → (لمحة عن الفصل N); table labels "Fashion-MNIST (Ordered / Shuffled)" → بيانات Fashion-MNIST (مرتبة / مخلوطة).
+- English gloss given in u02 of this page: inductive bias.
+
+## chapter_convolutional-neural-networks/padding-and-strides.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "strided stack / dilated stack" → المجموعة المكدسة بخطوة انزلاق / المجموعة المكدسة الموسعة; "tower" (slides) → برج (برج خطوة الانزلاق، برج التوسيع); "top unit" → الوحدة العليا; "top-level units" → وحدات المستوى الأعلى.
+- "effective kernel size" → حجم النواة الفعال; "dilation rate" → معدل التوسيع; "dense kernel / dense convolution" (not dilated) → نواة كثيفة / الالتفاف الكثيف; "dilated layer / kernel" → طبقة / نواة موسعة.
+- "floor term" → حد التدوير إلى الأسفل; "rounding up" → مع التدوير إلى الأعلى.
+- "patchify" → التقطيع إلى رقع; "tiles" → بلاطات; "stem" → جذع (as in the chapter index); "subscripts" → الأدلة السفلية; "zero padding ($p=0$)" in the sense "no padding" → حشو مقداره صفر (not حشو الأصفار, which is padding with zeros).
+- "widen / expand the receptive field" → يزيد مجال الاستقبال; "grow geometrically" → ينمو هندسيًا, "grow exponentially" → ينمو أسيًا (the English uses both for the same growth; each is kept).
+- "gridding" → التشبيك ("gridding artifacts" → آثار التشبيك المصطنعة); "lattice" → شبيكة (شبيكات); "dilation schedule" → جدول التوسيع ("constant schedule" → جدول ثابت, "doubling schedule" → جدول المضاعفة).
+- Slides: "Section Synthesis" → خلاصة القسم; "Next (§…):" → التالي (§…):; "master equation / Master Formula" → معادلة جامعة / الصيغة الجامعة; "regimes" (padding-and-stride settings) → إعدادات; "RF" → مجال الاستقبال (written out); "MACs" → عمليات MAC; "params" → معلَمات; "conv" → التفاف; "panel (a)" → اللوحة (a).
+- "every $s$-th row" → صف واحد من كل $s$ صفًا; "every other pixel" → بكسل واحد من كل بكسلين; "every fourth" → واحد من كل أربعة.
+- English glosses given in u02 of this page (do not repeat in later units): strided convolution, dilated convolution, effective kernel size, patchify, vision transformer, dense prediction, transposed convolution.
+
+## chapter_convolutional-neural-networks/conv-layer.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "blur kernel" → نواة تضبيب; "sharpening kernel" → نواة زيادة الحدة; "identity" (kernel) → النواة المحايدة; "photograph" → صورة فوتوغرافية; "downsample" (an image, in an exercise) → يصغّر بخفض أخذ العينات.
+- "locally connected layer" → طبقة متصلة محليًا (no glossary entry); "sparsity pattern" → نمط التناثر; "nonzero entries" → العناصر غير الصفرية; "dense array" → مصفوفة كثيفة; "ties the weights" → يربط الأوزان بعضها ببعض; "banded matrix" → مصفوفة شريطية.
+- "derivative of order $d$" → مشتق من المرتبة $d$; "directional vector" → متجه اتجاه; "centered finite-difference gradient" → تدرج محسوب بالفروق المحدودة المركزية; "relative error" → خطأ نسبي.
+- "a draw of the kernels" → سحبة للنوى; "unit gradient" → تدرج مقداره واحد; "magnitude" (of a gradient) → مقدار; "support" (of the gradient map) → الحامل; "column profile" → منحنى الأعمدة, "normalized profile" → المنحنى المطبَّع; "expected squared input gradient" → مربع تدرج المدخلات المتوقع; "bounds which inputs can influence" → يحصر المدخلات التي يمكن أن تؤثر.
+- Credit line with a notebook: *مقتبس بتصرف من مقرر Stanford CS231n، الواجب [Assignment 2](url)، دفتر ConvolutionalNetworks.* (as on the pooling page); two sources are joined by ، ومن.
+- No English glosses in u03 of this page (exercises take none).
+
+## chapter_convolutional-neural-networks/padding-and-strides.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "mirror padding" → حشو المرآة (the exercise equates it with "reflect padding" → حشو الانعكاس, as in u01); "ramp" (the input $x_{ij} = j$) → المنحدر; "reproduce" (a ramp, a stack) → يعيد إنتاج.
+- "entries" of a tensor or kernel → عناصر; "border entry" → عنصر الحد; "distinct entries" → عناصر متمايزة; "by hand" → يدويًا; "in the interior" → في الداخل; "ignoring the border" → مع إهمال الحدود.
+- "side" of a receptive field → طول الضلع; "sparse lattice" → شبيكة متناثرة; "the condition suffices" → الشرط كافٍ; "mechanisms" (padding, stride, dilation) → الآليات; "effective footprint" → مساحة تغطية فعالة.
+- "patchify layer" → طبقة التقطيع إلى رقع; "one-dimensional stacks" → المجموعتان المكدستان أحاديتا البُعد.
+- No English glosses in u03 of this page (summary and exercises; all key terms were glossed in u01 and u02).
+
+## chapter_convolutional-neural-networks/lenet.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "modernized LeNet" (exercises) → LeNet المحدَّثة; "variant" (of a model) → صيغة; "reduced heads" → الرأسان المصغران; "ten-way linear output layer" → طبقة إخراج خطية ذات عشرة مخرجات; "flattened 400-dimensional output" → المخرجات المسطحة ذات 400 بُعد.
+- "validation / test error rate" → معدل خطأ التحقق / معدل خطأ الاختبار; "official test set" → مجموعة الاختبار الرسمية; "data class" → صنف بيانات; "the two measures" (difference and ratio) → المقياسان.
+- "problem :exref:`…`" → التمرين :exref:`…` (same word as for "Exercise"); "the text drew / argued" → رسم النص / ذهب النص إلى أن.
+- "shifted" images / garments / set → مزاحة; "translated copies" → نسخ مزاحة; "vacated columns" → الأعمدة التي خلت; "uniform random noise" → ضوضاء عشوائية منتظمة; "pixel range" → مجال قيم البكسلات; "maximum activation" → التفعيل الأقصى; "maxima" → القيم العظمى; "pullovers and coats" → الكنزات والمعاطف.
+- Summary: "encoder-plus-head blueprint" → المخطط العام المؤلف من مشفر ورأس; "heavy dense heads" → الرؤوس الكثيفة الثقيلة; "training plateaus" → فترات استواء; "scale up in depth, width, and resolution" → ازدياد عمق الشبكات وعرضها ودقة مدخلاتها.
+- "Adapted from Michael Nielsen, [book](url), Chapter N" → مقتبس بتصرف من كتاب [book](url) لمؤلفه Michael Nielsen، الفصل N (as on the mlp page).
+- No English glosses in u03 of this page (max-pooling, strided convolution, global average pooling and normalization layers are mentioned in passing in the summary; exercises take none).
+
+## chapter_convolutional-neural-networks (chapter check, 2026-11-27)
+
+- One rendering per term across the chapter's seven pages (the entries above are corrected to match): slide kicker "Section Synthesis" → خلاصة القسم ("Section & Chapter Synthesis" → خلاصة القسم والفصل; ملخص القسم stays "Section Summary", and "Check & Synthesis" stays التحقق والتوليف as in earlier chapters); "filter bank" → مجموعة مرشحات; "textures" as image features → أنماط النسيج (نسيج السطح for the texture of an object); "tolerance" to shifts → التسامح مع الإزاحة (تحمل is not used for it); "translation / shift invariance" (noun) → ثبات الإزاحة, adjective ثابت تحت الإزاحة; "channel mixing" → مزج القنوات (خلط is shuffling); "corners" (image features) → الأركان; by position: "edge / border pixel" → بكسل طرفي, "corner pixel" → بكسل ركني, "boundary pixels" → بكسلات الحدود; "plateau" of a training curve → الاستواء.
+
