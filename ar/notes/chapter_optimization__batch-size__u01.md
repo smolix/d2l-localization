@@ -1,0 +1,29 @@
+# Notes on chapter_optimization/batch-size.md#u01 (claude fable-5.2 (medium), 2026-11-27 22:28 UTC)
+
+- 2485581c, 0088a06a and others: "smoothness" is written الملاسة / ملساء (decisions log, gd page), not the glossary's proposed نعومة.
+- ce4492b4, 1f81038b: "two GPUs" / "2 GPUs" → the dual وحدتي GPU (style §6); the digit 2 of 1f81038b is therefore not in the translation.
+- 85cfdc94, dbd79c7e: "returns" is the verb (تعيد), not the RL return.
+- 9c4ab989, cb84686c, e0019e25 and other blocks: "window", "key", "value", "sequence", "token" glossary matches are the everyday senses where they do not appear as terms.
+- ed60f0a8, 9dab49bd, edf89931: an Arabic word (حيث) was added between two left-to-right items that the English separates only by a bracket or a colon (style §3.2).
+- 47ce57dd: "its ten classes", "factor of two" are written in words as in the English.
+- 754e990d: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 4249b65b: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 1fd356fa: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 9c4ab989: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- f2fe8d67: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 720c7ef6: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- e0019e25: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- cf749ca5: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 01eccfbd: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- cb84686c: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 7a9e2359: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 75643f1f: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 03b6e839: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- d2a0edf1: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 5814ab3c: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 2a3e27f0: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 4739626c: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 83198386: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 362b9bed: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- ce4492b4: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
+- 1f81038b: re-applied; edited to follow decisions logged by other pages of the chapter while this unit was in work (محسن Adam / AdamW, تحجيم الجذر التربيعي, المحسنات ذات التحديث غير المطبَّع, خطوات شبكة القيم, تواترات البايتات).
