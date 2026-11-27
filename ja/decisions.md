@@ -2183,3 +2183,142 @@
 ## chapter_appendix-tools-for-deep-learning/hyperparameters-lib.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
 
 - "base class" → 「基底クラス」 (standard object-oriented terminology in Japanese, consistent with `chapter_linear-regression/oo-design.md`)
+
+## chapter_appendix-tools-for-deep-learning/interactive-development.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "execution counter" → 「実行カウンタ」, "debugger" → 「デバッガ」, "interpreter" → 「インタプリタ」, "variable inspector" → 「変数インスペクタ」, "timer" → 「タイマ」, "worker (process)" → 「ワーカ（プロセス）」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` / `-or` loanwords)
+- "Restart Kernel and Run All Cells" / "restart and run all" → 「カーネルを再起動してすべてのセルを実行」 / 「カーネルの再起動と全セル実行」
+- "orphaned kernel" → 「孤立カーネル」
+- "post-mortem debugging" → 「事後デバッグ」
+
+## chapter_appendix-tools-for-deep-learning/interactive-development.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "loopback (address)" → 「ループバック（アドレス）」, "port forwarding" → 「ポートフォワーディング」
+- "preempted" / "preemption" → 「プリエンプション（強制終了）」
+- "use-before-define" → 「定義前参照」
+- "worker process" → 「ワーカプロセス」 (consistent with `u01` and `ja/style.md` §3.3)
+
+## chapter_appendix-tools-for-deep-learning/hosted-notebooks.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "durable storage" → 「永続ストレージ」 ("durable" → 「永続的な」 / 「永続」)
+- "scratch space" / "scratch disk" → 「スクラッチ領域」 / 「スクラッチディスク」
+- "setup cell" → 「セットアップセル」, "idempotent" → 「べき等」
+- "compute unit(s)" (Google Colab) → 「コンピューティングユニット」 (matches Google Colab's official Japanese UI term, solid katakana per `ja/style.md` §3.2)
+- "runtime version" / "local runtime" → 「ランタイムバージョン」 / 「ローカルランタイム」
+- "free tier" / "paid tier(s)" → 「無料枠」 / 「有料プラン」
+- "provider" / "container" / "pointer" / "importer" → 「プロバイダ」 / 「コンテナ」 / 「ポインタ」 / 「インポータ」 (drops final `ー` per `ja/style.md` §3.3 `-er` rule)
+- "Young's checkpoint law" → 「Young のチェックポイント則」 (person name in Latin script per `ja/style.md` §5)
+
+## chapter_appendix-tools-for-deep-learning/hosted-notebooks.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "portable" / "portability" → 「ポータブル（な）」 / 「ポータビリティ」
+- "secret manager" / "secret store" → 「シークレットマネージャ」 / 「シークレットストア」 (drops final `ー` on `マネージャ` per `ja/style.md` §3.3 `-er` rule)
+- "Poisson process" → 「ポアソン過程」 (standard Japanese probability terminology per `ja/style.md` §5)
+
+## chapter_appendix-tools-for-deep-learning/cloud-instances.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Cloud Computing" (section title, `sec_cloud_instances`) → 「クラウドコンピューティング」
+- "hyperscaler" / "GPU specialist" / "marketplace" → 「ハイパースケーラ」 / 「GPU スペシャリスト」 / 「マーケットプレイス」 (`ja/style.md` §3.3 の `-er` 長音省略規則に従いハイパースケーラ・プロバイダ・コンシューマ・ハイパーバイザ・アロケータ・ドライバと表記)
+- "cost per completed result" → 「完了した結果あたりのコスト」（スライド・表では「完了結果あたりのコスト」）
+- "spot capacity" / "interruptible capacity" → 「スポット容量」 / 「中断可能な容量」
+- "egress" / "egress fees" → 「エグレス」 / 「エグレス料金」
+- "trust boundary" → 「信頼境界」
+- "smoke test" → 「スモークテスト」
+
+## chapter_appendix-tools-for-deep-learning/cloud-instances.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "data iterator" / "iterator" → 「データイテレータ」 / 「イテレータ」（`ja/style.md` §3.3 の `-or` 長音省略規則に従う）
+- "Poisson process" → 「ポアソン過程」（`ja/style.md` §5 の人名由来の数学用語カタカナ表記規則に従う）
+
+## chapter_appendix-tools-for-deep-learning/hardware.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "memory capacity" → 「メモリ容量」, "compute throughput" → 「演算スループット」 (paired with glossary `memory bandwidth` = 「メモリ帯域幅」 and `throughput` = 「スループット」)
+- "discrete GPU" → 「ディスクリート GPU」 (standard hardware counterpart to `unified memory` = 「ユニファイドメモリ」)
+- "decode bound" / "decode bandwidth bound" → 「デコード上限」 / 「デコード帯域幅上限」
+- "tensor cores" / "Tensor Cores" → 「テンソルコア」 (aligns with binding glossary `tensor` = 「テンソル」)
+- "street price" → 「実売価格」, "break-even" → 「損益分岐点」, "total cost of ownership (TCO)" → 「総所有コスト（TCO）」
+
+## chapter_appendix-tools-for-deep-learning/hardware.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "pipeline-parallel" / "pipeline parallelism" → 「パイプライン並列」 (paired with glossary `data parallelism` = 「データ並列」 and `tensor parallelism` = 「テンソル並列」)
+- "productive hour(s)" → 「実稼働時間」, "resale value" → 「再販価値」, "wall power" → 「コンセント消費電力」
+
+## chapter_appendix-tools-for-deep-learning/software-ecosystem.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Ecosystem" (section title, `sec_software_ecosystem`) → 「エコシステム」
+- "contamination" / "benchmark contamination" → 「データ汚染」 / 「ベンチマーク汚染」 ("contamination-resistant" → 「データ汚染に強い」)
+- "model card" / "dataset card" → 「モデルカード」 / 「データセットカード」
+- "revealed preference" → 「顕示選好」
+- "immutable revision" → 「不変のリビジョン」 (concise slide form: 「不変リビジョン」)
+
+## chapter_appendix-tools-for-deep-learning/software-ecosystem.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "deserialization" → 「デシリアライズ」 (paired with `ja/decisions.md` `"serialization" → 「シリアライズ」`)
+- "derived artifact" → 「派生アーティファクト」
+- "header" / "loader" → 「ヘッダ」 / 「ローダ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+
+## chapter_appendix-tools-for-deep-learning/training-systems.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Distributed Model Training" (section heading, `sec_training_systems`) → 「分散モデル訓練」
+- "scaling ladder" / "rung" → 「スケーリングラダー」 / 「段」（「第 2 段」「第 3 段」）
+- "fully sharded data parallelism (FSDP)" → 「完全シャーディングデータ並列」 (paired with glossary `data parallelism` = 「データ並列」 and `decisions.md` `sharding` = 「シャーディング」)
+- "context parallelism" → 「コンテキスト並列」 (paired with glossary `tensor parallelism` = 「テンソル並列」, `pipeline parallelism` = 「パイプライン並列」, `expert parallelism` = 「エキスパート並列」)
+- "collective(s)" (collective communication operations) → 「集団通信」
+- "launcher" → 「ランチャ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+- "global batch" / "global batch size" → 「グローバルバッチ」 / 「グローバルバッチサイズ」
+- "bubble" / "bubble fraction" (pipeline parallelism) → 「バブル」 / 「バブル率」
+- "fault tolerance" → 「耐障害性」
+- "elastic resumption" → 「エラスティックな再開」
+
+## chapter_appendix-tools-for-deep-learning/training-systems.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "data-bound" / "I/O-bound" → 「データ律速」 / 「I/O 律速」 (paired with glossary `compute-bound` = 「計算律速」 and `decisions.md` `memory-bandwidth bound` = 「メモリ帯域幅律速」)
+- "spot-priced instance(s)" → 「スポット価格のインスタンス」
+
+## chapter_appendix-tools-for-deep-learning/training-systems.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "interleaved assignment" (pipeline parallelism) → 「インターリーブ割り当て」
+- "delayed parameter update" → 「遅延パラメータ更新」
+
+## chapter_appendix-tools-for-deep-learning/model-serving.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Model Serving" / "Local Serving" → 「モデルサービング」 / 「ローカルサービング」 (consistent with `decisions.md` `"serving" → 「サービング」`)
+- "time per output token (TPOT)" → 「出力トークンあたりの時間（TPOT）」 (paired with glossary `time to first token` = 「最初のトークンまでの時間」)
+- "service level objective (SLO)" → 「サービスレベル目標（SLO）」, "goodput" → 「グッドプット」
+- "paged KV cache" → 「ページド KV キャッシュ」, "prefix caching / prefix cache" → 「プレフィックスキャッシュ」
+- "radix tree" → 「基数木」
+- "conformance test" → 「適合性テスト」
+- "draft model" / "target model" → 「ドラフトモデル」 / 「ターゲットモデル」
+- "chunked prefill" → 「チャンク化プレフィル」, "admission control" → 「受付制御」
+- "wrapper" / "provider" / "datacenter" → 「ラッパ」 / 「プロバイダ」 / 「データセンタ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+
+## chapter_appendix-tools-for-deep-learning/model-serving.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Operations" (section heading) → 「運用」
+- "tail-latency monitoring" → 「テールレイテンシの監視」
+- "client cancellation propagation" → 「クライアントのキャンセル伝播」
+- "co-pinned" → 「一括ピン留め」 (extends `decisions.md` `"pinning" → 「ピン留め」`)
+- "first come, first served" → 「先着順」, "preempt" → 「プリエンプトする」
+- "speculative sampling" → 「投機的サンプリング」 (paired with `decisions.md` `"speculative decoding" → 「投機的デコーディング」`)
+
+## chapter_appendix-tools-for-deep-learning/developers-guide.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Contributor Guide" → 「貢献者ガイド」, "contributor" → 「貢献者」 (matches `index.md` and `chapter_appendix-tools-for-deep-learning/index.md`)
+- "source of truth" / "single source of truth" → 「唯一の正本」 ("single-source" → 「シングルソース」)
+- "coding agent" → 「コーディングエージェント」 (solid katakana compound per `ja/style.md` §3.2)
+- "stale" / "staleness" (of cached notebook outputs) → 「陳腐化した（陳腐化）」 (consistent noun/verb/adjective across prose, slides, and exercises; glossed in `u02` body text)
+- "maintainer" / "counter" / "extractor" / "helper" → 「メンテナ」 / 「カウンタ」 / 「抽出器」 / 「ヘルパ」 (drops final `ー` on `-er` loanwords per `ja/style.md` §3.3)
+
+## chapter_appendix-tools-for-deep-learning/developers-guide.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "stale" / "staleness" → 「陳腐化した（陳腐化）」 (glossed on first body-text occurrence as `陳腐化（stale）`)
+- "probabilistic bisection" → 「確率的二分法」
+- "binary entropy" → 「二値エントロピー」
+- "linter" / "tracer" / "reviewer" → 「リンタ」 / 「トレーサ」 / 「レビュア」 (drops final `ー` on `-er` loanwords per `ja/style.md` §3.3)
+
+## chapter_appendix-tools-for-deep-learning/utils.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "helper" / "helper function" → 「ヘルパ」 / 「ヘルパ関数」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+- "marker" (plot marker / completion marker) → 「マーカ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+- "introspection" → 「イントロスペクション」 (standard OOP/Python term in Japanese)
+- "bucketing" → 「バケッティング」 (batch bucketing for JIT compilation)
