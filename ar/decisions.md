@@ -964,3 +964,321 @@ One rendering per term across the seven pages of the chapter; the unit entries a
 - "contrast" (bright next to dark in an image) → تضاد (كاشفات تضاد، أنماط التضاد); التباين is variance only.
 - "linear baseline" → النموذج الخطي المرجعي; "floats" → أعداد بالفاصلة العائمة.
 - Kept apart on purpose: "regime" → نطاق for a range of model size (النطاق الكلاسيكي، نطاق فرط المعلَمات) and نمط for a kind of behaviour (أنماط التهيئة، نمط الانزياح); "head-to-head" → وجهًا لوجه in slide kickers and comparisons of models, مباشرةً as an adverb in running text.
+
+## chapter_builders-guide/parameters-state-memory.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "buffer" in the framework sense (a registered, persistent, non-trainable tensor: `register_buffer`, BatchNorm running statistics) → مخزن حالة (مخازن الحالة), glossed (buffers) once per page; the earlier مخزن مؤقت stays the memory-buffer sense (a "persistent مخزن مؤقت" would contradict itself).
+- "state tree" → شجرة الحالة; "module tree" → شجرة الوحدات, a framework "module" → وحدة; "registration" → التسجيل; "full-tree traversal" → اجتياز للشجرة كاملة; "leaf" (of the tree) → ورقة (أوراق); "dotted path" → المسار المنقط.
+- "residual MLP" → شبكة MLP ذات بواقٍ (definite: شبكة MLP ذات البواقي); "residual block" → كتلة البواقي (glossary), indefinite dual كتلتا بواقٍ; "body" (of a block) → جسم.
+- "checkpoint" → نقطة استعادة, glossed (checkpoints) once on this page; "checkpoint savers / writers" → أدوات حفظ / كتابة نقاط الاستعادة; "device transfer / device move" → النقل بين الأجهزة; "GPU transfer" → النقل إلى وحدة GPU; "dtype casting" → تحويل نوع البيانات.
+- "running averages / means / variances / stats" (Adam, BatchNorm) → المتوسطات / التباينات / الإحصاءات المتحركة (المجموع التراكمي stays "running sum").
+- "plain (Python) attribute" → سمة عادية (سمات Python عادية); "local variable" → متغير محلي; "persistent" (tensor) → دائم; "inventory" → قائمة الجرد; "parameter freezing" → تجميد المعلَمات; "language modeling" → نمذجة اللغة; "static floor" → الأرضية الثابتة; "full-precision" → بالدقة الكاملة.
+- Slides and prose: "8B model", "8-billion-parameter" → نموذج بـ 8 مليارات معلَمة / ذو 8 مليارات معلَمة (no Latin "8B", which collides with B = bytes).
+- Tab notes "In <framework> it is `x`" → في <framework> هذا الاجتياز هو `x`.
+- English glosses given in u01 of this page (do not repeat in later units): checkpoints, registration, state tree, buffers, weight tying, parameter freezing, body.
+
+## chapter_builders-guide/numerics.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Numerical Formats" (page title) → الصيغ العددية; "floating-point formats" → صيغ الفاصلة العائمة (glossary); fp32, bf16, fp16, tf32, NaN stay Latin; in running text a format name takes the class noun الصيغة (في الصيغة fp16) at the first mention in a sentence, and may then stand alone after a preposition (في fp32).
+- "32-bit floating point" → الفاصلة العائمة ذات 32 بتًا; "16-bit formats / matrix multiplications" → الصيغ ذات 16 بتًا / عمليات ضرب المصفوفات ذات 16 بتًا; "in 16 bits" → في 16 بتًا; "bit width" → عرض البتات; "bit budget" → ميزانية البتات; "bit layout" → تخطيط البتات.
+- "dtype" → نوع البيانات, glossed (dtype); "dtype promotion" → ترقية النوع; "model casting" → تحويل نوع النموذج (cast → يحول النوع, as on the ndarray page).
+- "precision" (floating point) → الدقة (style §10.1; the glossary's إحكام is the classification metric); "relative precision" → الدقة النسبية; "coarser / finer" → أخشن / أدق; "half precision" → نصف الدقة; "brain floating point" stays Latin as the name of the format (*brain floating point*).
+- "mixed-precision training" → التدريب بالدقة المختلطة; "master weights", "master copy" → الأوزان الرئيسية، نسخة رئيسية; "loss scaling" → تحجيم الخسارة, "dynamic loss scaling" → تحجيم الخسارة الديناميكي.
+- "rounding", "rounds to" → التدوير، يُدوَّر إلى (glossary خطأ التدوير); "rounds back to 1" → يعود بالتدوير إلى 1; "round-to-nearest" → التدوير إلى الأقرب; "rounding noise" → ضوضاء تدوير; "quantization noise" → ضوضاء تكميم.
+- "sign bit" → بت الإشارة; "exponent" → الأس; "mantissa" → الجزء الكسري (as on the calculus slides), glossed (mantissa); "significant digit / bit" → خانة معنوية / بت معنوي; "decimal digits" → خانات عشرية.
+- "normal" (floating-point number) → نظامي, glossed (normal); "subnormal" → دون نظامي (الأعداد دون النظامية), glossed (subnormal). Not طبيعي (the normal distribution) and not مطبَّع (normalized layers).
+- "spacing" (between adjacent representable numbers) → المسافة (بين القيم المتجاورة); "grid" (of representable values) → شبكة القيم; "grid spacing" → مسافة الشبكة; "grid point" → نقطة الشبكة; "grid step" → خطوة من خطوات الشبكة. Not تباعد (divergence) and not الفاصل (too close to الفاصلة).
+- "overflows to `inf`" → يطفح إلى `inf`; "underflow to zero" → يطفح سفليًا إلى الصفر; "running out of range" → نفاد المدى; "ceiling" (largest value) → سقف; "octave" (slide) → فترة تضاعف.
+- "silently stalling learning", "stall" (training, optimization) → يتوقف التعلم بصمت، يوقف تقدم التحسين، يعطّل التدريب; "frozen" (weight) → مجمد; "swamping" (of an update) → ابتلاع; "hazard" → خطر (مخاطر).
+- "GPU matrix units" → وحدات المصفوفات في معالجات GPU; "the 8-billion-parameter model" → النموذج ذو 8 مليارات معلَمة; "field" (of `finfo`) → حقل.
+- English glosses given in u01 of this page (do not repeat in later units): dtype, dynamic range, precision, mixed-precision training, loss scaling, half precision, normal, mantissa, subnormal.
+
+## chapter_builders-guide/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Chapter title "Computation" → الحوسبة; cover slide "Deep Learning Computation" → الحوسبة في التعلم العميق.
+- "Resources and Further Reading" (chapter index heading) → المصادر وقراءات إضافية; its bold groups: "Books" → الكتب; "Courses and video lectures" → المقررات والمحاضرات المصورة; "Tutorials, notes, and interactive" → الدروس والملاحظات والمواد التفاعلية; "Foundational papers" → الأوراق البحثية التأسيسية.
+- Resource list items start with a class noun before the link (كتاب، مقرر، سلسلة، مقالة، صفحة، دليل، صيغة، ورقة), style §3.2; the link text (title and authors) stays in English; several references in one parenthesis are separated by ، ; "free online" → متاح مجانًا على الإنترنت; "archived copy" → نسخة مؤرشفة; "video series" → مقاطع مصورة; "survey" (paper) → مسح; "vendor guide" → دليل الشركة المصنعة.
+- "module" (a framework building block in this chapter) → وحدة (وحدات); "tree of modules", "module tree" → شجرة من الوحدات، شجرة الوحدات; "root module" → الوحدة الجذر; "leaves" → الأوراق; "module hierarchies" → تراتبات الوحدات; "module registry" → سجل الوحدات; "registration" → التسجيل; "registered children" → الأبناء المسجلون; "state tree" → شجرة الحالة; "addressed by its path" → عنوانه مساره، العنونة بالمسارات.
+- "buffer" (non-trainable state) → مخزن حالة (مخازن حالة ثابتة، غير قابلة للتدريب); "trainable" → قابل للتدريب; "share weights" → يشارك الأوزان; "freeze" → يجمد; "memory floor" → أرضية الذاكرة; "allocate storage" → حجز ذاكرة; "caching allocator" → نظام حجز الذاكرة ذو التخزين المؤقت.
+- "lazy shape inference" → الاستنتاج المؤجل للأشكال; "lazy shapes" → الأشكال المؤجلة; "config-driven builders" → دوال البناء التي تقودها الإعدادات ("config" → الإعدادات); "list containers" → حاويات القوائم.
+- "residual branch" → فرع البواقي (فروع البواقي); "residual skip connections" → وصلات التخطي ذات البواقي; "residual initialization" → تهيئة شبكات البواقي; "residual variance scaling" → تحجيم تباين البواقي; "Residual MLP" → شبكة MLP ذات بواقٍ; "unscaled" → غير محجَّم / دون تحجيم; "deep stacks" → المجموعات المكدسة العميقة; "block" → كتلة.
+- "stateless / parameterized / fixed-buffer layers" → طبقات عديمة الحالة / ذات معلَمات / ذات مخازن حالة ثابتة; "custom" (layer, gradient, backward rule) → مخصص; "backward rule" → قاعدة خلفية; "straight-through estimator" → مقدر العبور المباشر (not التمرير المباشر, which is the feedthrough term); its English gloss is left to the custom-layers page.
+- "persistence", "persist models" → الحفظ الدائم، تحفظ النماذج; "serialization" → الحفظ بصيغة …; "archive" → أرشيف; "code-free" → خالٍ من الشيفرة; "atomic checkpoint" → نقطة استعادة ذرية; "five-part" → من خمسة أجزاء; "resume bit for bit" → يستأنف بتًا ببت; "missing / unexpected keys" → المفاتيح المفقودة / غير المتوقعة; "pretrained backbones" → الهياكل المدرَّبة مسبقًا; "safe checkpointing" → حفظ نقاط الاستعادة الآمن; "RCE" stays Latin after ثغرة.
+- "master weights" → الأوزان الرئيسية; "16-bit compute" → حساب ذو 16 بتًا; "round away" (small updates) → تمحو … عند التدوير; "rounding" → التدوير; fp32, fp16, bf16 stay Latin, joined by و ; "numerics" (slide) → الصيغ العددية; numeric "precision" → الدقة.
+- "command queue" → طابور أوامر (طوابير); "to time" → يقيس زمن; "timer" → مؤقت; "synced" → مزامَن; "placement" (on a GPU) → التوضيع على وحدات GPU; "peak RAM" → ذروة ذاكرة RAM; "segment" (of blocks) → مقطع; "$O(\sqrt{K})$ activation checkpointing" → نقاط استعادة التفعيلات من مرتبة $O(\sqrt{K})$.
+- "seed control" → التحكم في البذور; "PRNG seeding" → بذور PRNG; "GPU determinism" → حتمية وحدات GPU; "determinism flags" → رايات الحتمية; "hook" → خطاف (forward / backward hooks → خطافات أمامية / خلفية); "non-invasive" → لا تمس الشيفرة; "diagnostics" → التشخيص، تشخيصات.
+- "textbook prototypes" → النماذج الأولية التي تعرضها الكتب الدراسية; "production-scale systems" → أنظمة بحجم بيئة الإنتاج; "behind the scenes" → من وراء الستار; "black box" → الصندوق الأسود; "hardware failures" → أعطال العتاد; "fault tolerance" → تحمل الأعطال; "security" → الأمان; "foundation model" → نموذج تأسيسي; "8B" on slides → 8 مليارات (معلَمة); only the model name Llama 3 8B keeps the Latin "8B".
+- "data pipelines" → خطوط معالجة البيانات; "training infrastructure" → البنية التحتية للتدريب; "training loop" → حلقة تدريب; "plain Python" → Python الخالصة; "dispatch" → الإرسال; "framework overhead" → العبء الإضافي لإطار العمل; "gotchas" → مزالق; "imperative style" → الأسلوب الأمري; "design rationale" → مبررات التصميم; "I/O" → الإدخال والإخراج; "recursively" → تعاوديًا; "idioms" → أساليب.
+- Slide labels: "The Systems Challenge" → تحدي الأنظمة; "Core Mental Model" → النموذج الذهني الأساسي; "Architectural & Systems Roadmap" → خارطة طريق المعمارية والأنظمة; "Quantitative Anchors" → مرتكزات كمية; "Study & Engineering Guide" → دليل الدراسة والهندسة; slide instructions ("Read …", "Pay close attention …", "Count …") are verbal nouns (قراءة، التنبه، عد); a comma between two § references becomes و.
+- English glosses given on this page: tree of modules, state.
+
+## chapter_builders-guide/custom-layers.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "custom layer / function" → طبقة مخصصة / دالة مخصصة; "built-in" (layer, library) → مدمج (الطبقات المدمجة، المكتبة المدمجة في إطار العمل); "native" (implementation, equivalent) → أصلي (الطبقة الأصلية، مكافئ أصلي); "first-class" → من الدرجة الأولى; "third-party" → من طرف ثالث; "codebase" → قاعدة شيفرة; "release cycle" → دورة إصدار.
+- Section headings of this page are indefinite noun phrases: طبقات بلا معلَمات، طبقات ذات معلَمات، طبقات ذات حالة ثابتة.
+- "module" (framework building block) → وحدة; "base module" → الوحدة الأساسية; "module tree" → شجرة الوحدات; "module interface" → واجهة الوحدات; "to subclass the base module" → يشتق صنفًا فرعيًا من الوحدة الأساسية; "register / registration" → يسجل / التسجيل; "sequential container" → حاوية تسلسلية; "composability" → قابلية التركيب; "slot into a container" → تأخذ مكانها في.
+- "serialize into checkpoints", "checkpoint serialization" → تُحفظ في نقاط الاستعادة / الحفظ في نقاط الاستعادة (no separate word for "serialize"); "serialization round-trip" → دورة حفظ وتحميل; "device migration / movement" → الانتقال بين الأجهزة / النقل بين الأجهزة; "clone" (of a model) → نسخة مستنسخة; "bit for bit" → بتًا ببت.
+- "buffer" (registered non-trainable state) → مخزن حالة (مخازن حالة غير قابلة للتدريب), as on the parameters page; "random features" → ميزات عشوائية; "random Fourier features" → ميزات فورييه العشوائية; "linear head" → رأس خطي; "Gaussian RBF kernel" → نواة RBF الغاوسية.
+- "gain" (RMSNorm's learned vector) → كسب (متجه الكسب), glossed once; "its RMS" → قيمة RMS له (the full term is جذر متوسط المربعات); "mean-centering" → مركزة المتوسط; "activation vector" → متجه تفعيلات; "activation scales" → مقاييس التفعيلات; "learned scale parameter" → معلَمة مقياس متعلَّمة; "stretch" (an axis, a circle) → يمط; "ray from the origin" → شعاع منطلق من نقطة الأصل; "semi-axes" → نصفا المحورين; "ellipsoid" → مجسم قطع ناقص; "axis-aligned" → محاوره موازية لمحاور الإحداثيات.
+- "quantize / quantized" → يكمّم / مكمَّم (glossary تكميم); "rounding" → التدوير; "4-bit integers" → أعداد صحيحة من 4 بتات; "straight-through estimator" → مقدر العبور المباشر, glossed once; "surrogate backward pass" → تمرير خلفي بديل; "gradients flow through" → تسري التدرجات عبر, and "gradient flow" on slides → سريان التدرج (as in the MLP chapter; the glossary's تدفق التدرج is the continuous-time system).
+- "non-trivial weights / gain" → أوزان غير تافهة / كسب غير تافه; "integration checks" → فحوص التكامل; "numerical sanity check" → فحص السلامة العددي; "analytical hand-check" → فحص تحليلي يدوي; "normalization sites" → مواضع التطبيع; "the gain moves off ones" → يبتعد الكسب عن قيم الواحد.
+- The heading and slide titles that begin with RMSNorm take the class noun طبقة (طبقة RMSNorm) so that the block starts in Arabic; NNX, Gluon, Keras stay Latin (مكتبة NNX where a class noun is needed).
+- English glosses given in u01 of this page (do not repeat in later units): normalization layer, root mean square, quantization, straight-through estimator, gain, layer normalization.
+
+## chapter_builders-guide/reproducibility-inspection.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "reproducibility" → قابلية إعادة الإنتاج (glossary); "repeatable" (runs) → قابلة للتكرار; "run" → جولة (جولة تدريب; "rerun" → الجولة المعادة، يعيد تشغيل); "training script" → برنامج تدريب.
+- "to seed" → يضبط بذرة (ضبط البذور; "seeded source" → مصدر مضبوط البذرة); "re-seed" → يعيد ضبط البذرة; "global seed" → البذرة العامة.
+- "pseudorandom number generator (PRNG)" → مولد أعداد شبه عشوائية, then مولد PRNG; "RNG" → مولد الأعداد العشوائية (no Latin acronym in body text); "generator object" → كائن المولد (كائنات المولدات); "private" (generator) → خاص.
+- "stream" (of random numbers) → سيل (سيول); "key" (JAX) → مفتاح, "split a key" → يقسم المفتاح; "draw" → سحبة.
+- "worker processes" → عمليات العمال; "process" (OS) → عملية; "thread" → خيط (خيوط); "fork" as a noun/verb in prose → التفريع، العمال المتفرعون (the call itself stays `fork`); "OS entropy" → إنتروبيا نظام التشغيل.
+- "bit for bit" → بتًا ببت; "down to the last bit" → حتى البت الأخير; "non-finite value" → قيمة غير منتهية; "non-associativity" → عدم التجميعية (غير تجميعي); "atomic reductions / atomics" → الاختزالات الذرية / العمليات الذرية.
+- "inspection" (of a model) → فحص النماذج; "hook" → خطاف (glossed here); "forward & backward hooks" → الخطافات الأمامية والخلفية; "non-invasive hooks" → خطافات لا تمس الشيفرة; "activation scales" → مقاييس التفعيلات.
+- "seed-to-seed variance" → التباين من بذرة إلى أخرى; "spread" → التشتت; "crash" (of a training run) → انهيار; "failure mode" → نمط إخفاق; "functional random APIs" → واجهات API العشوائية الوظيفية.
+- Slides: "Coverage caveat" → تنبيه حول التغطية; "(Row 1)/(Row 2)" → (السطر 1) / (السطر 2); "The fix" → الإصلاح; "bug hunting" → اصطياد الأخطاء.
+- English glosses given in u01 of this page (do not repeat in later units): hooks, pseudorandom number generator (PRNG), seed, key, generator object, workers.
+
+## chapter_builders-guide/init.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Initialization" (page title) → التهيئة; "initializer" → مهيئ (مهيئات), "default initializer" → المهيئ الافتراضي, "built-in initializers" → المهيئات المدمجة, "custom initializer" → مهيئ مخصص; slide "framework defaults" → القيم الافتراضية في أطر العمل.
+- "gain" $g$ → الكسب (from the earlier كسب الطبقة), "gain-parameterized" → ذو معلَمة كسب / بمعلَمة كسب; "gain schedule" (how $g$ depends on depth) → قاعدة كسب (قواعد الكسب).
+- "truncated normal" → التوزيع الطبيعي المبتور (التوزيعات الطبيعية المبتورة); "truncate" → يبتر، البتر; "cutoffs" → حدا البتر; "clipping the tails" → بتر الذيلين (قص stays gradient clipping); "bounding extreme draws" → تقييد السحبات المتطرفة (الحصر stays "clamp").
+- "module tree" → شجرة الوحدات (as in the regression chapter); "walk the tree" → السير في شجرة الوحدات; looping over an iterable → نمر على; "submodule" → وحدة فرعية; Gluon "block tree" → شجرة الكتل; "tree-wide" → على الشجرة كلها.
+- Residual terms: "residual network" → شبكة البواقي; "residual block" → كتلة البواقي, indefinite or counted كتلة بواقٍ (32 كتلة بواقٍ), plural كتل البواقي; "ResNets" → شبكات ResNet; "body" (of a block) → الجسم; "output projection" → إسقاط المخرجات; "expansion layer" → طبقة التوسيع; "residual branch" → فرع بواقٍ; "residual stack" → مجموعة بواقٍ مكدسة; "depth-dependent residual scaling" → تحجيم البواقي المعتمد على العمق; "scaling down" → تصغير; "zeroing" → تصفير; "architecture's wiring" → توصيلات المعمارية.
+- "mean square" → متوسط المربع (متوسط مربع المدخلات / المخرجات), as on the numerical-stability page; "variance multiplier" → العامل الضربي للتباين; "uncorrelated" → غير مرتبط; "compound" (a factor across layers) → يتراكم; "balloons / blows up by" → يتضخم / ينفجر بمعامل.
+- "positively homogeneous" → متجانسة إيجابيًا; "identity map" → دالة محايدة (as الدالة المحايدة); "symmetry trap" → فخ التناظر; "wake-up" → استيقاظ; "paradox" → مفارقة.
+- "kernel" as Keras/NNX name of a dense layer's weight matrix → النواة (النوى), without الالتفاف; "random key" → مفتاح عشوائي, "split a key" → يشتق مفتاحًا; "unseeded" → لا بذرة له; "trailing underscore" → شرطة سفلية في آخر الاسم; "in place" → في الموضع / في موضعه; "tracked variable" → المتغير المتتبَّع; "recipes" → وصفات; "variance-preserving schemes" → الطرق الحافظة للتباين.
+- "the Vision Transformer" → محول الرؤية (Vision Transformer, ViT) at first mention, then ViT as the slides write it.
+- Slide lead-ins that begin with a code span get the class noun الطبقة; a parenthesis holding only a math span after another math span gets أي / حيث (style §3.2).
+- English glosses given in u01 of this page (do not repeat in later units): initializer, gain, residual network, residual block, output projection, Vision Transformer (ViT), truncated normal, positively homogeneous.
+
+## chapter_builders-guide/saving-loading.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "pretrained weights" → الأوزان المدرَّبة مسبقًا; "pre-training" → التدريب المسبق; "fine-tune" → يضبط ضبطًا دقيقًا (style §5.3)
+- "serialization", "serialize" → التسلسيل، يسلسل (not التسلسل, which is the glossary's "sequence"); "serialization format" → صيغة تسلسيل; "file format" → صيغة ملفات
+- "state dictionary" → قاموس الحالة; "state tree" → شجرة الحالة; "buffers" (of a module) → مخازن الحالة ("raw tensor buffers" of a file stay المخازن المؤقتة الخام); "keys" (of a state dictionary) → المفاتيح; "missing / unexpected keys" → المفاتيح المفقودة / غير المتوقعة
+- "a mapping from names to tensors" → تقابل من الأسماء إلى الموترات; "to map X to Y" → يقرن X بـ Y (not ربط, which stays concatenation, and not دالة)
+- "checkpoint" → نقطة استعادة; "checkpointing" → حفظ نقاط الاستعادة (glossary); "training checkpoint" → نقطة استعادة التدريب; "resume", "resumption" → يستأنف، الاستئناف; "resumable" → قابلة للاستئناف; "interruption" → انقطاع; "crash" → انهيار (عطل stays a hardware "failure"); "crash-safe" → آمن من الانهيار
+- "atomic" (write, checkpoint) → ذري (كتابة ذرية); "commits atomically" → يثبت ذريًا; "bit-for-bit" → بتًا ببت; "byte by byte" → بايتًا ببايت; "round trip" (save, then load) → الحفظ ثم التحميل / الحفظ والاسترجاع
+- pickle stays in Latin: "pickle files", "pickles" → ملفات pickle; "unpickling" → فك pickle; "unpickler" → دالة فك pickle; "loaders" (`np.load`, `torch.load`) → دوال التحميل (محمل stays the data loader); "restricted / hardened loader" → دالة تحميل مقيدة / محصنة
+- "allowlist" → قائمة السماح; "attack surface" → سطح الهجوم; "payload" → الحمولة; "malicious" → خبيث; "arbitrary code / objects" → شيفرة اعتباطية / كائنات اعتباطية; "vulnerabilities" → ثغرات; "trust boundary" → حد ثقة; "cryptographic checksum" → مجموع اختباري تشفيري; "integrity" → السلامة
+- "bytecode" → الشيفرة البايتية; "callable" → كائن قابل للاستدعاء; "opcode parser" → محلل رموز العمليات; "stack-based virtual machine" → آلة افتراضية مبنية على مكدس; "shell commands" → أوامر shell; "passive data" → بيانات خاملة
+- "metadata" → بيانات وصفية; "little-endian" → بترتيب النهاية الصغرى; "unsigned integer" → عدد صحيح بلا إشارة; "byte offsets" → إزاحات البايتات; "byte range / interval" → نطاق بايتات; "segment" → مقطع; "memory-mapping" → تعيين الملف في الذاكرة; "zero-copy" → بلا نسخ; "random access" → الوصول العشوائي; "packed back to back" → مرصوصة واحدًا تلو الآخر; "raw" → خام
+- "process" (operating system) → العملية; "script" → البرنامج; "preemptible cloud instance" → مثيل سحابي قابل للانتزاع; "public hub" → مستودع عام, the Hugging Face Hub → منصة Hugging Face Hub; "the web" → الإنترنت (شبكة stays the network)
+- "running moments" (Adam) → العزوم المتحركة; "step counter" → عداد الخطوات; "architecture configuration / config" → إعدادات المعمارية; "converged basin" → حوض التقارب; "toy models" → النماذج المصغرة; "standard" (format, library) → معياري (المكتبة المعيارية في Python)
+- Headings and titles that begin with a Latin name get a class noun: "Pickle and safetensors" → صيغتا pickle و safetensors; "The safetensors Format" → صيغة safetensors
+- English glosses given in u01 of this page (do not repeat in later units): checkpointing, state, serialization, atomic, state dictionary, bytecode, allowlist, attack surface, metadata, little-endian, cryptographic checksum
+
+## chapter_builders-guide/gpus-devices-memory.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "device" → جهاز (أجهزة), glossed once; "device placement", "placement" → التوضيع (توضيع الموترات على الأجهزة), verb يضع / توضع; "soft placement" → التوضيع المرن; "device scope" → نطاق جهاز; "device-aware" → المدرك للأجهزة; "co-located" → مجتمعة على جهاز واحد.
+- "the GPU / the CPU" → وحدة GPU / وحدة CPU (plural وحدات); "GPU $i$" → وحدة GPU رقم $i$; "GPU 0" in captions and slides → وحدة GPU 0; "host" → المضيف (ذاكرة RAM للمضيف); "onboard memory" → الذاكرة المدمجة; "card" → بطاقة.
+- "operands" → أطراف العملية (الأطراف), glossed (operands) once; معامل stays the coefficient and عامل the operator.
+- "fall back to CPU", "fallback" → يرجع إلى وحدة CPU، الرجوع (الاحتياطي); "degrades gracefully" → ترجع بسلاسة.
+- "execution queue" → طابور التنفيذ; "command queue" → طابور الأوامر; "enqueue" → يضيف إلى الطابور (الإضافة إلى الطابور); "queued work" → العمل المصطف; "drain the queue" → تفرغ طابورها; "block" (CPU, a call) → يتوقف / يوقف البرنامج حتى …; "idle" → خامل.
+- "synchronization point" → نقطة مزامنة; "synchronization bubble" → فجوة مزامنة; "asynchronous dispatch" → الإرسال غير المتزامن; "pipelining" → التتابع على هيئة خط معالجة; "pipeline" (CPU–GPU) → خط المعالجة.
+- "to benchmark", "benchmarks" (timing code) → قياس الأداء، قياسات أداء; the `Benchmark` class → الصنف (المساعد) `Benchmark`; "timer" → المؤقت; "wall clock" → الزمن الفعلي; "resolution" (of a timer) → دقة زمنية.
+- "milliseconds" written out → ميلي ثانية (ميلي ثوان); the symbols ms and s are copied.
+- "static state" (weights plus optimizer state) → الحالة الثابتة; "optimizer moments" → عزوم المحسن; "in bf16 / fp32 / tf32" → بصيغة bf16 / fp32 / tf32; "16-bit precision" → دقة 16 بتًا; "tensor cores" → أنوية الموترات.
+- "pinned (page-locked) memory" → ذاكرة مثبَّتة (pinned، أي مقفلة الصفحات), "pre-pinning" → التثبيت المسبق; "DMA engine" → محرك DMA; "no-op" → عملية بلا أثر; "inner loop" → الحلقة الداخلية; "handle" → مقبض (مقابض); "multiply-adds" → عملية ضرب وجمع.
+- "matrix multiplication" → ضرب المصفوفات (glossary); "product", "matmul" → جداء (جداء المصفوفات), as on the linear-algebra page.
+- Slide "3 memory views" → 3 منظورات للذاكرة (عرض stays the tensor view).
+- English glosses given in u01 of this page (do not repeat in later units): device placement, asynchronous execution, activation checkpointing, device, operands, soft placement, kernel launch, synchronization point, pinned.
+
+## chapter_builders-guide/model-construction.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "module" (the framework abstraction of this chapter: a layer, block or model) → وحدة (وحدات), glossed once as *الوحدة* (module); "module tree" → شجرة الوحدات (as on the linear-regression-concise page); "child module" → وحدة ابنة, "children" → الأبناء / الوحدات الأبناء; "parent" → الوحدة الأم; "base module (class)" → الوحدة الأساسية / صنف الوحدة الأساسي. A hidden "unit" stays وحدة too (256 وحدة ReLU); the context separates them.
+- "register / registration / registered" → يسجل / التسجيل / مسجل; "registry" → سجل (سجل الوحدة، سجل الأبناء); "partly registered" → مسجل جزئيًا; "unregistered" → غير مسجل.
+- "sequential container" → حاوية تسلسلية; "module container" → حاوية وحدات; "to chain" (layers, children) → يصل … في سلسلة; "straight chain" → سلسلة مستقيمة; "linear chains" → السلاسل الخطية; "insertion order" → ترتيب الإدراج.
+- "forward method" → دالة التمرير الأمامي; "backward method" → دالة للتمرير الخلفي; "forward computation" → حساب أمامي; "invoke / call a module" → يستدعي; "dispatches to" → ينتقل التنفيذ إلى.
+- "recursive" → عودي; "bookkeeping (problem, abstraction)" → الحصر (مشكلة الحصر، تجريد للحصر); "tree traversal" → اجتياز الشجرة; "leaf parameter" → معلَمة ورقية; tree "edge" → ضلع; "root" → الجذر; "path" → مسار.
+- "serialize" (weights to disk, into checkpoints) → يكتب … على القرص / في نقاط الاستعادة (سلسلة would read as "chain"); "saving checkpoints" → حفظ نقاط الاستعادة.
+- "plain / ordinary Python `list`" → قائمة `list` عادية من قوائم Python (القائمة العادية); "string index" → فهرس على هيئة سلسلة نصية; "integer index" → فهرس صحيح; "weak references" → مراجع ضعيفة; "graph-tracked container" → حاوية يتتبعها المخطط; "to track" (layers, parameters) → يتتبع; "attribute scan" → فحص السمات; "attach a layer" → إلحاق طبقة; "deferred variables" → المتغيرات المؤجلة.
+- "residual MLP" → شبكة MLP ذات البواقي; "skip paths" → مسارات التخطي; "identity map / identity baseline" → الدالة المحايدة; "incremental refinements" → تحسينات تراكمية; "feature width" → عرض الميزات; "shape invariant" → لامتغير الشكل.
+- "configuration object", "configs" → كائن إعدادات، الإعدادات; "lazy initialization" → التهيئة المؤجلة; "lazy shapes" → الأشكال المؤجلة; "hands-on" (section) → تطبيقي; "syntax error" → خطأ نحوي.
+- Slides: "pitfall" → مزلق; "trap" → فخ; "all-or-nothing" → بمنطق الكل أو لا شيء; "lifecycle" → دورة حياة; "modules all the way down" → وحدات حتى القاع; "mode/hook toggling" → تبديل النمط والخطافات; "builders" (Keras deferred build) → دوال البناء; "wiring" → توصيل; "frozen" (weights) → مجمدة; capitalized "Dropout" as a layer kind → طبقات الحذف العشوائي. A slide title that begins with a Latin name gets a class noun (مكتبة Keras، مكتبة Flax NNX); a code name in a title gets الدالة / الصنف.
+- Llama 3 8B stays Latin with the class noun نموذج where grammar needs one; Gluon, Keras, Flax NNX stay Latin.
+- English glosses given in u01 of this page (do not repeat in later units): module, registered, residual connections, lazy initialization, sequential container, registry.
+
+## chapter_builders-guide/init.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- Section heading "Initialization of Residual Networks" → تهيئة شبكات البواقي; "deep residual stack" → مجموعة البواقي المكدسة العميقة; "unscaled / scaled stack" → المجموعة غير المحجَّمة / المحجَّمة.
+- "skip connection" → وصلة التخطي (glossed once here); "skip signal" → إشارة التخطي; "identity path" (figure) → المسار المحايد; "the sum" (node of the block) → نقطة الجمع.
+- "well scaled" (activations) → في مقياس سليم; "signal scale" → مقياس الإشارة; "additive / multiplicative growth" → نمو جمعي / ضربي.
+- "the all-zeros trap" → فخ الأصفار الكاملة; "zero-initialized branches" → الفروع المهيأة بالأصفار; "zero output projections" → إسقاطات المخرجات الصفرية; "depth engages" → يدخل العمق في العمل.
+- "right-skewed distribution" → توزيع ملتوٍ نحو اليمين (الالتواء = skewness); "depth profile" → منحنى العمق; "configurable" → قابل للضبط; "broken initializations" → التهيئات المعطوبة; "forward-pass diagnostic" → تشخيص بالتمرير الأمامي.
+- Fixup takes the class noun طريقة (طريقة Fixup); slide kickers "Experimental Setup" → إعداد التجربة, "Theory Meets Measurement" → النظرية تلتقي بالقياس; slide title "Summary: Parameter Initialization" → الملخص: تهيئة المعلَمات.
+- English glosses given in u02 of this page: skip connection.
+
+## chapter_builders-guide/saving-loading.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "running averages" (Adam's $\mathbf{m}$, $\mathbf{v}$) → المتوسطان المتحركان (as on the parameters page); "moments" → العزوم (two moments → عزمان); "smoothed gradient" → التدرج الممهَّد (أملس stays "smooth" for functions); "hats" → علامات القبعة; "bias-correction factors" → عوامل تصحيح الانحياز (معامل stays the coefficient)
+- "stateful optimization" → التحسين ذو الحالة; "bare weights file" → ملف أوزان مجرد; "compartments" (of a checkpoint) → أقسام; "components" → مكونات; "model configuration", "config" → إعدادات النموذج، الإعدادات
+- "crash-safe" → آمن من الانهيار, glossed (crash-safe) here; "job" → المهمة; "temporary file" → ملف مؤقت; "atomically rename over the destination" → يعيد تسميته ذريًا ليحل محل الملف الهدف; "rename" → إعادة تسمية; "power loss" → انقطاع التيار الكهربائي; "directory" → مجلد; "manifest" → ملف بيان, glossed (manifest); "gap" → فجوة (ثغرة stays a vulnerability)
+- "dataclass" → صنف بيانات, glossed (dataclass) with المسمى before the code name; "regressor" → نموذج انحدار; "dedicated random generator seeded at 0" → مولد عشوائي خاص بذرته 0; "ground truth" (the reference run) → الحقيقة المرجعية; "uninterrupted" → غير منقطع / دون انقطاع
+- "RNG state" → حالة مولد الأعداد العشوائية in body text and captions, حالة مولد RNG on slides; "replays the first minibatches" → تعيد أولى الدفعات المصغرة نفسها; "freshly constructed / fresh Adam" → محسن Adam أُنشئ من جديد / Adam جديد; "loss spike" → قفزة الخسارة; "blows the loss up a thousandfold" → تضخم الخسارة ألف مرة; "three orders of magnitude" → ثلاث مراتب مقدار; "lazily" (variable creation) → إنشاءً مؤجلًا
+- English glosses given in u02 of this page (do not repeat in later units): crash-safe, manifest, dataclass
+
+## chapter_builders-guide/parameters-state-memory.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "output head" → رأس المخرجات (then الرأس); "backbone" → الهيكل (as in the introduction); "pretrained" → مدرَّب مسبقًا; "transfer learning" → نقل التعلم.
+- Adam "moments" → عزما Adam / عزوم Adam (العزم الأول، العزم الثاني); "running moments" → العزوم المتحركة.
+- "allocate" → يحجز (حجز); "counting without allocating" → العد دون حجز; the verb "count" → يحصي where نعد could read as "prepare"; "storage" (of a tensor) → مساحة التخزين; "allocator fragmentation" → تجزؤ الذاكرة لدى نظام الحجز; "kernel workspaces" → مساحات العمل المؤقتة للنوى.
+- "tied / untied" (parameters, model, table) → مربوط / غير مربوط; "to alias A and B to one tensor" → يجعلهما اسمين لـ … واحد; "call site" → موضع استدعاء (مواضع الاستدعاء); "deduplicate" → إزالة التكرار; "tree walkers" → أدوات اجتياز الشجرة.
+- "freezing" → التجميد, "frozen" → مجمد; "to lock" (parameters, a BatchNorm layer, running statistics) → يقفل، إقفال; "pitfall" → مزلق (مزلقان).
+- "training mode / evaluation mode / inference mode" → نمط التدريب / نمط التقييم / نمط الاستدلال; "stateful layers" → الطبقات ذات الحالة.
+- "meta tensors", "meta device" → موترات *meta*، جهاز meta (Latin); "materialize" (a meta-device model) → تحويل … إلى نموذج فعلي; "trace abstractly" → يتتبع تتبعًا مجردًا; "master copies" → نسخ رئيسية; "serialize" → يحفظ في ملف.
+- "fp32" stays Latin, after بصيغة where grammar needs a noun; "practical baseline" → خط الأساس العملي; "strict lower bound" → حد أدنى صارم; a framework "filter" object (NNX) → مرشح, "filtering the optimizer" → تصفية معلَمات المحسن.
+- Slides: "8B backbone", "all 8B parameters" → الهيكل ذو 8 مليارات معلَمة، المعلَمات الـ 8 مليارات كلها; "Llama 3 8B" (a model name) is copied; "OOM" → خطأ OOM; slide answers that begin with a math span get the lead word المطلوب.
+- English glosses given in u02 of this page (do not repeat in later units): activations, mixed precision, token, embedding.
+
+## chapter_builders-guide/reproducibility-inspection.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Deterministic Arithmetic" (heading) → الحساب الحتمي; "determinism mode" → نمط حتمية; "bitwise determinism / reproducibility" → الحتمية على مستوى البتات / قابلية إعادة الإنتاج بتًا ببت; "deterministic kernel" (GPU) → نواة حتمية (نوى حتمية); "switch" (determinism) → مفتاح.
+- "atomic additions" → عمليات جمع ذرية, glossed once; "scatter-add" → الجمع المبعثر (جمع مبعثر), glossed once; "bins" (of a scatter-add) → خانات; "partial results / sums" → النتائج / المجاميع الجزئية; "reduction tree" → شجرة اختزال; "fixed-order reduction" → اختزال ثابت الترتيب; "floating-point reassociation" → تغير ترتيب تجميع الفاصلة العائمة.
+- "to bisect" (the step where runs diverge) → يحدد … بالبحث التنصيفي; "bug bisection" → البحث التنصيفي عن الخلل; "diverge" (two runs) → تفترق; "software stack" → حزمة برمجيات; "hardware configuration" → تهيئة العتاد.
+- "callback" → دالة رد نداء (دوال رد النداء), glossed once; "hook handle" → مقبض الخطاف (مقابض), glossed once in tab notes; "pre-hooks" → الخطافات القبلية; "execution hooks" → خطافات التنفيذ; "to attach a hook to" → يلحق خطافًا بـ; "hooks fire" → تنطلق الخطافات; "wrapper" → غلاف; "observer" → مراقب.
+- "residual stack" → مجموعة مكدسة من كتل البواقي ("eight-block residual stack" → مجموعة مكدسة من ثماني كتل بواقٍ; kicker: مجموعة بواقٍ مكدسة); "head" (output layer) → رأس; "leaf layer" → طبقة ورقية; "top-level module" → وحدة في المستوى الأعلى; "submodule" → وحدة فرعية.
+- "finiteness hook / check" → خطاف / فحص يتحقق من انتهاء القيم (after "non-finite" → غير منتهية); "NaN finder" → كاشف قيم NaN; "NaN traps" → مصائد NaN; "planted NaN" → قيمة NaN مزروعة; "symptom" → عرَض; "culprit" → الجاني.
+- "autograd graph", "backward computation graph" → مخطط الاشتقاق التلقائي، مخطط الحساب الخلفي (as المخطط الحسابي); "leak-free" (hooks) → بلا تسرب / تحفظ من تسرب الذاكرة; "out-of-memory (OOM) crash" → انهيار بسبب نفاد الذاكرة (OOM).
+- "activation profile" → منحنى (نمو) التفعيلات; "profiling" in slide titles → قياس; "variance-growth analysis" → تحليل نمو التباين; "scaled-down output projections" → إسقاطات مخرجات مصغَّرة المقياس; "branch gradient / Jacobian" → تدرج الفرع / المصفوفة اليعقوبية للفرع; "typical ranges" → مجالات نموذجية.
+- "resumable checkpoints" → نقاط الاستعادة القابلة للاستئناف; "crash-safe checkpoints" → نقاط استعادة آمنة من الانهيار; "engineering toolkit" → العدة الهندسية; "job" (training) → مهمة.
+- English glosses given in u02 of this page (do not repeat in later units): atomic additions, scatter-add, callback, handle.
+
+## chapter_builders-guide/gpus-devices-memory.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "caching allocator" → نظام حجز ذو تخزين مؤقت (as on the chapter index), then نظام الحجز; "slab" → لوح (ألواح); "reserved pool" → المخزون المحجوز (التجميع stays pooling); "live tensors / bytes" → الموترات الحية / البايتات الحية; "CUDA driver" → برنامج تشغيل CUDA; "layer of the stack" (software) → طبقة من طبقات البرمجيات.
+- "peak memory" → ذروة الذاكرة; "out-of-memory (OOM)" → نفاد الذاكرة, slide "Activation OOMs" → نفاد الذاكرة بسبب التفعيلات; "step memory" → ذاكرة الخطوة; "activation footprint" → بصمة التفعيلات; "lever" → وسيلة; "memory leak" → تسرب; "computation graphs" → مخططات حسابية.
+- "activation checkpointing" → نقاط استعادة التفعيلات (also as the subject of a verb, feminine plural agreement in the singular); "gradient checkpointing" → نقاط استعادة التدرج; "rematerialization" → إعادة التكوين, "rematerializes" → يعيد تكوين; "segment" → مقطع (مقاطع), "segment boundaries" → حدود المقاطع, "active segment" → المقطع النشط; "interior activations" → التفعيلات الداخلية; "checkpoint wrapper" → مغلِّف نقاط الاستعادة.
+- "deep stack of N blocks" → مجموعة مكدسة من N كتلة; "group blocks into segments" → يضم الكتل في مقاطع; "standard backpropagation" → الانتشار العكسي المعياري; "forward-pass equivalents" → مكافئات للتمرير الأمامي; "back-of-the-envelope bound" → الحد التقريبي السريع; "correctness check" → فحص الصحة.
+- "hybridized graphs" (MXNet) → المخططات المهجَّنة; "profilers" → أدوات تحليل الأداء; "temporary workspace" → مساحة العمل المؤقتة; "process-wide flag" → راية على مستوى العملية كلها; "RNG state" → حالة مولد الأعداد العشوائية.
+- Slides: "head-only (fine-tuning)" → (الضبط الدقيق) للرأس وحده; "Dissecting memory" → تشريح الذاكرة; "Measured:" → بالقياس:; "physical minibatch size" → الحجم الفعلي للدفعة المصغرة; "effective step" → الخطوة الفعالة; "half-batches" → أنصاف الدفعات; the 8B model on slides → نموذج بـ 8 مليارات معلَمة.
+- English glosses given in u02 of this page (do not repeat in later units): caching allocator, slabs, out-of-memory (OOM), gradient checkpointing, rematerialization, step memory.
+
+## chapter_builders-guide/model-construction.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Forward Computation" (heading) → الحساب الأمامي; "Eager and Compiled Execution" → التنفيذ الفوري والتنفيذ المصرَّف; "compiled execution / graph / step" → التنفيذ المصرَّف / المخطط المصرَّف / الخطوات المصرَّفة; "eagerly" → فوريًا.
+- "to trace" (a computation, for compilation) → يتتبع, "tracing" → التتبع, "trace time" → وقت التتبع; "tracer" (JAX) → متتبِّع (متتبِّعات), glossed (tracers) in the JAX tab note; "symbolic tensor" → موتر رمزي; "concrete values" → قيم فعلية; "symbolic control flow" → تدفق تحكم رمزي; "data-dependent" → المعتمد على البيانات; "unroll" (a static loop) → تنفرد.
+- "dry run" → تشغيل تجريبي, glossed (dry run) once; "dummy minibatch / data / forward pass" → دفعة مصغرة وهمية / بيانات وهمية / تمرير أمامي وهمي; "materialize" (shapes, weights) → تتحدد الأشكال، تنشأ الأوزان، تحديد الأشكال; "parameter placeholders" → عناصر نائبة للمعلَمات; "cascade shapes" → انتقال الأشكال تتابعًا; "recorded up front" → يُسجل مسبقًا.
+- "initializer callback" → دالة رد نداء للتهيئة; "Xavier's uniform initializer" → مهيئ Xavier المنتظم; "variance-scaling initializers" → مهيئات تحجيم التباين.
+- "Models from a Config" → النماذج من الإعدادات; "config" → الإعدادات (grammatically a feminine plural used for one object: إعدادات واحدة، الإعدادات الأكبر), "configuration object (config)" → كائن *إعدادات* مخصص (*config*); "config field" → حقل في الإعدادات; "configuration file" → ملف إعدادات; "builder code" → شيفرة البناء; "factory function" → دالة مصنع (دالة المصنع `build`).
+- "topology" → الطوبولوجيا; "hardcoded" → مثبت مباشرةً في; "output head" → رأس المخرجات; "input projection" → إسقاط المدخلات; "implementation code" → شيفرة التنفيذ; "version control" → نظام إدارة الإصدارات; "rapid prototyping" → بناء النماذج الأولية بسرعة; "production models / code" → نماذج / شيفرة بيئة الإنتاج; "programmatically" → برمجيًا; "convention" → العرف.
+- "serializable" (`@dataclass`) → قابل للحفظ (following this page's rule of no سلسلة-word for "serialize").
+- "buffers" on this page → مخازن الحالة (buffers), as in the section it points to (:numref:`subsec_params_buffers`).
+- Slides: "Forward Is Just Python" → التمرير الأمامي شيفرة Python فحسب; "Graph Compilation Limits" → حدود تصريف المخطط الحسابي; "Forward Execution Modes" → أنماط تنفيذ التمرير الأمامي; "Deferred Shape Inference" → الاستنتاج المؤجل للأشكال; "Eager Parameter Allocation" → الحجز الفوري للمعلَمات; "Dataclass Configurations" → إعدادات بأصناف dataclass; "Analytical vs. Tree-Walk Counts" → العد التحليلي مقابل العد باجتياز الشجرة; "Parameter Scaling" → تحجيم عدد المعلَمات; table heads "Module Component / Shape Formula / Parameter Count" → مكون الوحدة / صيغة الشكل / عدد المعلَمات, "Concept / Mechanism / Rule / Practical Systems Implication" → المفهوم / الآلية / القاعدة / الأثر العملي في الأنظمة.
+- English glosses given in u02 of this page (do not repeat in later units): body, buffers, compiled execution, eagerly / eager execution, tracers, dry run, config.
+
+## chapter_builders-guide/init.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "callback" → دالة رد النداء (دوال رد النداء); "tree-wide callbacks" → دوال رد النداء على الشجرة كلها; "constructor arguments" → وسائط المُنشئ.
+- "elementary closed form" → صيغة مغلقة بدوال أولية; "standard normal density and distribution function" → دالة الكثافة ودالة التوزيع للتوزيع الطبيعي المعياري; "tabulated values" → القيم المجدولة; "plain normal draw" → السحبة الطبيعية غير المبتورة; "the cut discards" → يستبعدها البتر.
+- "normalized inputs / unnormalized blocks" → المدخلات المطبَّعة / الكتل غير المطبَّعة; "measured plot / curve" → الرسم المقيس / منحنى مقيس; "scaled normal initializer" → المهيئ الطبيعي المحجَّم; "uniform initializer" → المهيئ المنتظم; "range" (of weight values) → المدى.
+- "Kaiming initialization" → تهيئة Kaiming (name stays Latin, like He); "transposed Jacobian" → منقول المصفوفة اليعقوبية; "argument" (a derivation) → حجة, (of a function) → وسيط.
+- "data-driven calibration" → المعايرة المعتمدة على البيانات; "calibrate block by block" → يعاير كتلة بكتلة; "unit-variance inputs" → مدخلات تباينها واحد; "layer-sequential unit-variance initialization" → التهيئة المتتابعة على الطبقات بتباين مقداره واحد.
+- Credit line: *مقتبس بتصرف من مقرر CMU 10-714، الواجب [Homework 2](url) والواجب [Homework 4](url).* (the class noun الواجب before each Latin link text).
+- English glosses in u03 of this page: none (summary and exercises).
+
+## chapter_builders-guide/custom-layers.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "buffer" on this page stays مخزن حالة (as in u01 of the page), glossed (buffers) once at "register them as buffers"; "fixed-state buffers" → مخازن الحالة الثابتة.
+- "random features" → *الميزات العشوائية* (random features), glossed here; "random phases" → أطوار عشوائية; "evenly spaced points" → نقاط موزعة على مسافات متساوية; "lifetime of the model" → عمر النموذج.
+- "staircase" (the function round) → الدالة السلمية; "step function" stays الدالة الدرجية; "piecewise constant" → ثابتة قطعيًا; "half-integers" → أنصاف الأعداد الصحيحة.
+- "surrogate" (derivative, gradient, backward pass) → بديل (مشتق بديل، تدرج بديل، البدائل); "identity surrogate" → بديل محايد; "non-identity surrogates" → البدائل غير المحايدة; "the identity (function / map)" → الدالة المحايدة.
+- "stop-gradient operator / operation" → مؤثر / عملية *إيقاف التدرج* (stop-gradient), glossed here; "gradient check" → *فحص التدرجات* (gradient check), glossed here; "finite-difference slope" → الميل المحسوب بالفروق المحدودة.
+- "static method" → دالة ساكنة (method → دالة); "closure" → دالة مغلقة; "decorated function" → الدالة المزخرفة; "one-element tuple" → مجموعة مرتبة من عنصر واحد; "the tape" (TensorFlow) → الشريط.
+- "quantizer" → مكمِّم (مكمِّمات); "clipped quantizers" → المكمِّمات ذات القص; "clamp" → يحصر، الحصر; "representable range" → المدى القابل للتمثيل; "saturated exterior" → المنطقة الخارجية المشبعة; "4-bit signed range" → مدى الأعداد ذات الإشارة من 4 بتات; "quantization-aware" → المدرك للتكميم.
+- "rounded true weights" → الأوزان الحقيقية بعد تدويرها; "reference point" → نقطة مرجعية; "constant zero baseline" → نموذج مرجعي ثابت يتنبأ بالصفر; "explode" (MSE) → ينفجر; "MSE" on slides and after the full term → خطأ MSE.
+- "custom GPU kernels" → نوى GPU مخصصة; "tensor primitives" → عمليات أولية على الموترات; "systems discipline" → تخصص في هندسة الأنظمة; "output head" → رأس المخرجات; "the CPU" → وحدة CPU.
+- Slide lead-in "Answer these … questions:" → المطلوب: الإجابة عن …; "Summary: …" → الملخص: …; "Key Takeaways" → أهم الخلاصات; "Pitfall:" → مزلق:; "8B" on slides → 8 مليارات (معلَمة); only the model name Llama 3 8B keeps the Latin "8B".
+- English glosses given in u02 of this page (do not repeat in later units): random features, buffers, stop-gradient, gradient check.
+
+## chapter_builders-guide/numerics.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "operands" → أطراف (أطراف العملية); not معاملات, which is the coefficient word. "mismatched operands" → أطراف غير متطابقة الأنواع; "promotes to" → يرقّي إلى / يُرقّى إلى (with the shadda; يرقى is "rises"); "stray" (tensor, buffer) → شارد.
+- "master weights" → أوزان رئيسية, glossed (master weights) in this unit; "underflow" (verb) → تطفح سفليًا, glossed (underflow) here; "dynamic loss scaling" glossed (dynamic loss scaling) here. Do not repeat these glosses in later units of the page.
+- "block tree" (Gluon) → شجرة الكتل; "global policy" (Keras) → السياسة العامة; "eligible ops" → العمليات المؤهلة; "context manager" → مدير سياق, `torch.autocast` / `autocast` take the class noun السياق; "autocast" as a common noun (kicker) → التحويل التلقائي للنوع.
+- "scaled up / scaled back down" (loss, gradients) → تُكبَّر بالتحجيم / تعاد إلى مقياسها الأصلي; "unscale" (gradients) → يلغي تحجيم; "loss scaler" → أداة لتحجيم الخسارة; "scale factor" → معامل تحجيم; "streak of clean steps" → سلسلة من الخطوات السليمة; "skip" (the optimizer step) → يتخطى.
+- "enable" (a mode, loss scaling) → يشغّل (not يفعّل, to keep it apart from التفعيل "activation"); "tf32 mode" → نمط tf32; "strict fp32" → fp32 الصارمة; "truncate" (inputs) → يقتطع; "native bf16 support" → الدعم الأصلي للصيغة bf16; "server CPUs" → وحدات CPU في الخوادم.
+- "update mass / magnitude" → المقدار الكلي للتحديث, with the printout word “mass” kept in Latin; "share" → حصة; "variants" (of a run) → الحالات; "apples-to-apples comparison" → المقارنة المتكافئة; "trained to convergence" → دُرّب حتى التقارب; "lags behind / trails" → تتأخر / تتخلف.
+- "caveats" (running text) → تنبيهان; "underflow zone" → منطقة الطفح السفلي; "subnormal or zero regimes" → نطاق الأعداد دون النظامية / نطاق الصفر; "attenuate" (gradients across layers) → تضعف; "linearity of differentiation" → خطية الاشتقاق; "brittle" → هش; "task accuracy" → الدقة في المهمة; "weight footprint" → بصمة الأوزان في الذاكرة.
+- Slides: "Pure bf16 Weights Stall" → أوزان bf16 الخالصة تتعثر; "non-negotiable" → لا غنى عن; "Where mixed precision wins" → موضع تفوق الدقة المختلطة; kicker with two Latin names → [الصنفان GradScaler و LossScaleOptimizer].
+
+## chapter_builders-guide/parameters-state-memory.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "helper" (a small function the reader writes) → دالة مساعدة; "state entries" (scalar elements of the state) → عناصر الحالة, "bytes per entry" → البايتات لكل عنصر; "top-level block" → كتلة من المستوى الأعلى; "share of the total" → الحصة من مجموع …
+- "can the head still adapt?" → هل ما زال الرأس قادرًا على التكيف؟; "leave `x` alone" → اترك `x` على حاله; "does the state still fit?" → هل ما زال للحالة متسع؟
+- Exercises "Find a loss …" → أوجد خسارة …; "read off the value" → استخرج قيمة; "Suppose you …" in an exercise → افترض أنك ….
+
+## chapter_builders-guide/reproducibility-inspection.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- Exercise titles: "Residual variance budget" → ميزانية التباين في كتل البواقي; "Seeds and data loading" → البذور وتحميل البيانات; "Divergence monitor" → راصد التباعد ("monitor" as a tool → راصد, since مراقب is the hook "observer"; the verb "to monitor" → يراقب); "Gradient norms" → معايير التدرجات.
+- "the stream" (the residual stream that each block adds its body's output to) → مجرى الإشارة (سيل stays the stream of random numbers); "the term this equation omits" → الحد الذي تغفله هذه المعادلة.
+- "the pre-hook receives the argument tuple, so unpack it" → يتلقى الخطاف القبلي الوسائط في مجموعة مرتبة، ففكها ("unpack" → يفك); "stash" (a value inside `call`) → يحتفظ بـ; "freshly built model" → نموذج مبني من جديد.
+- "shuffle order" → ترتيب الخلط; "base seed" → البذرة الأساسية, "base key" → مفتاح أساسي; the worker "initializer" (`worker_init_fn`) → دالة التهيئة (مهيئ stays the weight initializer); "seeding" → ضبط البذور; "standalone script" → برنامج مستقل; "dataset class" → صنف مجموعة بيانات; "dataset's constructor" → مُنشئ مجموعة البيانات.
+- JAX: "fold X into a key" (`fold_in`) → يدمج X في المفتاح (دمج); "per-worker keys" → مفاتيح للعمال; "shard" → حصة (حصص); "derivation" (of keys) → اشتقاق; "four-worker input pipeline" → مسار معالجة مدخلات بأربعة عمال (glossary); a `tf.data` "pipeline" → خط معالجة `tf.data`; "element" (of a `tf.data` dataset) → عنصر.
+- "families of norms" (output-gradient norms and parameter-gradient norms) → عائلتا المعايير; "plot against depth" → يرسم مقابل العمق; "depth profiles" → منحنيا العمق; "exploding backward signal" → إشارة خلفية منفجرة; "express A through B" → يعبّر عن A بدلالة B.
+- "Adapted from the PyTorch documentation [title](url)" → مقتبس بتصرف من وثائق PyTorch، صفحة [title](url), the page title in English.
+- "non-finite" keeps غير منتهية; "by depth" → بحسب العمق; "standard normal targets / inputs" → أهداف / مدخلات تتبع التوزيع الطبيعي المعياري.
+
+## chapter_builders-guide/custom-layers.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "fold a bias into another" (absorb $\mathbf{b}$ into $\mathbf{c}$) → يضم إلى (ضمه إلى); "the folded bias" → الانحياز الناتج عن الضم (not يطوي, which is folding the input space, and not يدمج, which is "fuse").
+- "entry" (of a saved file / state dict / weight list) → بند (يزيد بالبند المتوقع); "parameter state" (JAX) → حالة المعلَمات; "state dict" → قاموس الحالة (as on the saving-loading page).
+- "strictly inside" (a range) → داخل … تمامًا; "exactly on the boundary" → على حده بالضبط; "convention" (at a boundary) → عرف; "clamp range" → مدى الحصر.
+- "uninformative" (derivative) → لا يفيدنا بشيء; "stop-gradient shortcut" → اختصاره بإيقاف التدرج; "fused-kernel speed" → سرعة النوى المدمجة; "specification" → مواصفات.
+- "save `X` as a residual" (JAX custom_vjp) → يحفظ الموتر `X` ضمن البواقي; "gradient closure" → الدالة المغلقة التي تحسب التدرج.
+- "Adapted from the PyTorch tutorial [title](…) and the JAX notebook [title](…)" → مقتبس بتصرف من دليل PyTorch التعليمي [title](…) ومن دفتر JAX المعنون [title](…), titles kept in English.
+- Exercise title "Random features approximate a kernel" → الميزات العشوائية تقرّب دالة نواة (kernel-methods sense: دالة النواة).
+- English glosses on this page: none added in u03 (summary and exercises).
+
+## chapter_builders-guide/model-construction.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "to log" (a config, an architecture) in a sentence that also speaks of registration → يدوّن / تدوين (u02 wrote يمكن تسجيله where no registered module was near); "easy to log, scale, and reproduce" → يجعل تدوين المعماريات وتحجيمها وإعادة إنتاجها أمرًا سهلًا.
+- Exercise titles: "Unregistered modules / containers" → الوحدات / الحاويات غير المسجلة; "Widening a residual block" → توسيع كتلة البواقي; "A module from scratch" → وحدة من الصفر; "Lazy input width" → عرض المدخلات المؤجل; "Shared children" → الأبناء المشتركون.
+- "Predict, then verify, what …" → توقع ما …، ثم تحقق من توقعك; "Predict, then verify:" before a question → توقع ثم تحقق:; "a fresh `X`" (newly constructed model) → نموذج `X` جديد.
+- "silent failure / raises an error" → إخفاق صامت / يثير خطأ; "from the same missing registration" → بغياب التسجيل نفسه; "repairs" (named by an error message) → حلول, as in u01.
+- "method" of a class → دالة (as دالة التمرير الأمامي); "is the inverse of" (load/save) → هي معكوس; "base class" → صنف أساسي; "subclass" → صنف فرعي; "instance" → مثيل; "minimal" (class) → في أبسط صورة; "recurses into" → تنزل عوديًا إلى; "wrapped in" → مغلف بـ.
+- "site" (where a child module is used) → موضع (مواضع); the module tree turned "graph" → مخطط; "static graph definition" → تعريف مخطط ثابت; "round trip" (`nnx.split` then `nnx.merge`) → دورة فصل ودمج; the operator `is` → العامل `is`.
+- "skip path" → مسار التخطي; "identity path" → المسار المحايد; "output coordinates" → إحداثيات المخرج; "a $d'$-wide layer" → طبقة عرضها $d'$; "sharing every layer after the first" → تكون كل طبقاته بعد الأولى مشتركة.
+- "Adapted from CMU 10-714, [Homework 2](…), Question 2." → مقتبس بتصرف من مقرر CMU 10-714، الواجب [Homework 2](…)، السؤال 2. (as on the chapter index page).
+
+## chapter_builders-guide/saving-loading.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "backbone" → الهيكل; classifier / classification "head" → رأس المصنف / رأس التصنيف, then الرأس (glossed (head) once here); "stage" (of a ResNet backbone) → مرحلة
+- "mismatch" (file vs model) → عدم تطابق (حالات عدم التطابق); "mismatched checkpoint" → نقطة استعادة غير مطابقة; "audit" (keys, a partial load) → يدقق / تدقيق; "careful loader" → دالة تحميل حريصة; "partial loading / transfer" → التحميل الجزئي / النقل الجزئي; "non-strictly" → تحميلًا غير صارم
+- "red flag" → إنذار خطر; "production code" → شيفرة الإنتاج; "assert explicitly" → تحقق تحققًا صريحًا; "raise an error" → يثير خطأ; "unfreeze" → يلغي تجميد
+- "length prefix" → بادئة طول; "header" (safetensors) → الترويسة; "file seeks" → تحريك موضع القراءة في الملف; "decode the bytes" → فك ترميز البايتات; "deserialize" → فك التسلسيل; "object graph" → مخطط الكائنات
+- "key-set merge" → دمج لمجموعات المفاتيح; "assign" (a variable) → إسناد قيمة إلى; "file entries" → عناصر الملف; "truncation" (of a file) → بتر; "publish" (a checkpoint via its manifest) → ينشر; "directory entries" → عناصر مجلد; "buffered writes" → الكتابات المخزنة مؤقتًا
+- "Dtype round trip" (exercise title) → حفظ نوع البيانات واسترجاعه; "Adapted from <author>, [tutorial], "section"" → مقتبس بتصرف من درس [title] الذي أعده <author>، قسم “section”
+- Slide "for 8B" → لنموذج بـ 8 مليارات معلَمة (no Latin "8B" next to B = bytes, as on the parameters page); slide answers that begin with a math span get a class noun (الحجم، المعيار)
+- English glosses given in u03 of this page: head, transfer learning
+
+## chapter_builders-guide/gpus-devices-memory.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- Heading and kicker "(The) Device-Aware Trainer" → الصنف Trainer المدرك للأجهزة (class noun first, name in Latin, as in the page introduction); slide title "Wiring … Into d2l.Trainer" → وصل … بالصنف d2l.Trainer; "to wire X into Y" → يصل X بـ Y.
+- "reality check" → تذكير بالواقع; "speedup", "gain" (of speed) → تسريع (كسب stays the gain of a layer); "underutilized" (GPU) → يبقى معظم قدرتها معطلًا; "GPU utilization" → استغلال وحدة GPU; "workload" → حجم العمل; "pay off" → تؤتي ثمارها.
+- "data loading" → تحميل البيانات; "Python dispatch" → الإرسال في Python; "kernel-launch overhead / latency" → العبء الإضافي لإطلاق النواة / زمن استجابة إطلاق النواة; "post-warmup epoch" → حقبة بعد الإحماء.
+- "CPU-only machines" → الحواسيب التي ليس فيها إلا وحدة CPU (جهاز stays "device"); "gigabytes to spare" → غيغابايتات فائضة; "memory budgeting" → حساب ميزانية الذاكرة.
+- Exercises: "schedule" (of checkpointing) → خطة; "round trip" (CPU to GPU and back) → رحلة الذهاب والإياب; "extrapolate" → يستكمل خارج المدى; "crossover" → نقطة التقاطع; "host-to-device bandwidth" → عرض نطاق النقل من المضيف إلى الجهاز; "scaling" (with the number of GPUs) → تناسب الأداء مع عدد الأجهزة, "linear scaling" → التناسب الخطي; "instrumentation artifact" → أثر جانبي لأدوات القياس; "readout" → القراءة; "guard with" → احمِ … بالشرط.
+- Slides: "systems intuition" → الحدس في الأنظمة; "scenarios" → حالات; "allocated-memory counter" → عداد الذاكرة المخصصة للموترات; "live allocated bytes" → البايتات الحية المخصصة; "host synchronization stalls" → توقفات المزامنة مع المضيف; "Fix:" → الإصلاح:.
+
+## chapter_builders-guide/numerics.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "failure mode" (numerical) → نمط إخفاق (أنماط الإخفاق العددي); "numerical bugs" → مواطن الخلل العددية; "root cause" → السبب الجذري; "indeterminate arithmetic" (`inf - inf`) → العمليات الحسابية غير المعيَّنة; "poisoned" (steps, Adam) → تتسمم / يسمم; "value ranges" → مجالات القيم.
+- "accumulator" → مركم (مراكم), glossed (accumulator) in u03; "to accumulate (a sum) in fp32" → يراكم بالصيغة fp32, heading "Accumulation in fp32" → المراكمة بالصيغة fp32; "running total / running sum" → المجموع التراكمي; "summand" → حد مضاف; "stall" (a sum) → يتوقف; "freezes at 2" → يتجمد عند 2.
+- "round-to-nearest-even" → التدوير إلى الأقرب الزوجي, glossed (round-to-nearest-even); "midpoint" → نقطة المنتصف; "exact / exactly represented" → مضبوط / ممثَّل تمامًا.
+- "shifted log-sum-exp" → لوغاريتم مجموع الأسيات المزاح, glossed (log-sum-exp) once in the summary; "unshifted exponential" → دالة أسية غير مزاحة; "exponentiating" → حساب الدالة الأسية; "nonpositive" → غير موجب; log-softmax stays Latin after دوال.
+- "exponent bias" (fp8 exercise) → انحياز الأس (4 بتات للأس بانحياز 7); "all-ones exponent" → الأس الذي كل بتاته آحاد; "IEEE convention" → عرف IEEE; "largest finite value" → أكبر قيمة منتهية; exercise title "The e4m3fn format" → الصيغة e4m3fn.
+- "unscaled gradients" (after dividing by $S$) → التدرجات بعد إلغاء التحجيم; "the scale" (loss scaling) → معامل التحجيم; "replace X by zeros" → وضع أصفار مكان X; "persistent training state" → حالة التدريب الدائمة.
+- Slides: "Guarding 16-Bit Range" → حماية مدى 16 بتًا; "Stable reductions" → اختزالات مستقرة; "Format trade-offs" → مقايضات الصيغ; "running-sum stagnation" → توقف المجاميع التراكمية.
+- English glosses given in u03 of this page: accumulator, round-to-nearest-even, log-sum-exp.
+
+## chapter_builders-guide: chapter check (claude fable-5.2 (medium), 2026-11-27)
+- One rendering per term across the chapter's nine pages; the entries above were corrected in place.
+- "buffer" in the framework sense (a registered, persistent, non-trainable tensor) → مخزن حالة (مخازن الحالة; dual مخزني حالة) on every page; مخزن مؤقت stays the memory buffer (raw tensor buffers of a file, buffered writes).
+- "crash" (of a process, a job, a training run) → انهيار, "crash-safe" → آمن من الانهيار; عطل (أعطال العتاد، تحمل الأعطال) stays "failure" and "fault".
+- A parameter count written "8B" in English → 8 مليارات (معلَمة) in body text and on slides (B would read as bytes next to GB); only the model name Llama 3 8B keeps the Latin "8B".
+- "running" (averages, moments, statistics of Adam and BatchNorm) → متحرك (العزوم المتحركة); تراكمي stays "running sum".
+- "script" → برنامج (برنامج تدريب، برنامج مستقل); "raise an error" → يثير خطأ; "mode" → نمط (نمط التدريب، نمط tf32، نمط حتمية); "enable", "turn on" → يشغّل، تشغيل (not تفعيل, which is "activation").
+- "placement" on a device → التوضيع; "allocator" → نظام الحجز ("caching allocator" → نظام حجز ذو تخزين مؤقت); "non-invasive" hooks → خطافات لا تمس الشيفرة.
+- Kept apart on purpose: "serialization" as the topic of the saving-loading page → التسلسيل (يسلسل، فك التسلسيل), glossed there; on the other pages "serialize into checkpoints / to disk" is written with يحفظ / يكتب, and "serializable" → قابل للحفظ.
