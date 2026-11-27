@@ -1209,3 +1209,5 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | dense layer |  | unresolved | dense-layer: A layer in which every output depends on every input through a learned weight. |  |
 | vertical |  | unresolved | vertical: Running from top to bottom, as a vertical edge or axis. |  |
 | notebook |  | unresolved | jupyter-notebook: An interactive document of code cells and their outputs, such as a Jupyter notebook. |  |
+| image |  | unresolved | image: A two-dimensional array of pixel values, such as a photograph, given to a model as input. |  |
+| locality |  | unresolved | locality: The principle that a hidden unit depends only on inputs within a small neighbourhood of its position. |  |

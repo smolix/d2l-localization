@@ -129,12 +129,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pooling | पूलिंग | proposed | pooling: An operation that aggregates values over local regions. |  |
 | max pooling | अधिकतम पूलिंग | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
 | average pooling | औसत पूलिंग | proposed | average-pooling: Pooling that averages values in each region. |  |
-| receptive field | ग्रहणशील क्षेत्र | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
-| translation equivariance | स्थानांतरण समचरता | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
+| receptive field | रिसेप्टिव फ़ील्ड | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
+| translation equivariance | ट्रांसलेशन इक्विवेरिएंस | verified_external | translation-equivariance: The property that translating an input translates its representation correspondingly. | author-ruling-hi-2026-11-27: hi/style.md §14 |
 | residual connection | रेज़िडुअल कनेक्शन | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
-| residual network | अवशिष्ट नेटवर्क | proposed | residual-network: A neural network built using residual connections. |  |
+| residual network | रेज़िडुअल नेटवर्क | proposed | residual-network: A neural network built using residual connections. |  |
 | skip connection | स्किप कनेक्शन | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
-| image augmentation | छवि संवर्धन | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
+| image augmentation | इमेज ऑगमेंटेशन | proposed | image-augmentation: A technique that creates varied training images through transformations. |  |
 | transfer learning | ट्रांसफ़र लर्निंग | proposed | transfer-learning: Reusing knowledge learned on one task to improve learning on another. |  |
 | fine-tuning | फ़ाइन-ट्यूनिंग | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | [google-ml-hi-generative](https://developers.google.com/machine-learning/glossary/generative?hl=hi#fine-tuning) |
 | pretraining | प्री-ट्रेनिंग | verified_external | pretraining: Training a model on an initial task or dataset before adaptation. | [google-ml-hi-generative](https://developers.google.com/machine-learning/glossary/generative?hl=hi#pre-training) |
@@ -143,7 +143,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | intersection over union | IoU (intersection over union) | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
 | semantic segmentation | सिमेंटिक सेगमेंटेशन | proposed | semantic-segmentation: The task of assigning a semantic class to each image pixel. |  |
 | instance segmentation | इंस्टेंस सेगमेंटेशन | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
-| image classification | छवि वर्गीकरण | proposed | image-classification: The task of assigning a class to an image. |  |
+| image classification | इमेज वर्गीकरण | proposed | image-classification: The task of assigning a class to an image. |  |
 | computer vision | कंप्यूटर विज़न | proposed | computer-vision: The study of extracting information and making predictions from visual data. |  |
 | recurrent neural network | रिकरेंट न्यूरल नेटवर्क (RNN) | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
 | hidden state | हिडन अवस्था | proposed | hidden-state: An internal representation carried between steps of a sequential model. |  |
@@ -174,13 +174,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | masked language model | मास्क्ड भाषा मॉडल | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
 | BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
 | generative model | जनरेटिव मॉडल | proposed | generative-model: A model that describes or generates samples from a data distribution. |  |
-| discriminative model | विभेदक मॉडल | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. |  |
+| discriminative model | डिस्क्रिमिनेटिव मॉडल | proposed | discriminative-model: A model that predicts targets or distinguishes classes given inputs. |  |
 | generator | जनरेटर | proposed | generator: A model component that produces synthetic samples. |  |
 | discriminator | डिस्क्रिमिनेटर | proposed | discriminator: A model component trained to distinguish classes of samples, often real and generated. |  |
 | autoencoder | ऑटोएन्कोडर | proposed | autoencoder: A model trained to reconstruct inputs through an encoded representation. |  |
 | latent variable | लेटेंट चर | proposed | latent-variable: An unobserved variable used to explain or generate observed data. |  |
 | latent space | लेटेंट समष्टि | proposed | latent-space: A space of unobserved representations used by a model. |  |
-| diffusion model | विसरण मॉडल | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
+| diffusion model | डिफ़्यूज़न मॉडल | proposed | diffusion-model: A generative model that learns to reverse a gradual noising process. |  |
 | noise schedule | शोर शेड्यूल | proposed | noise-schedule: A specification of how noise levels change across diffusion steps. |  |
 | denoising | डीनॉइज़िंग | proposed | denoising: Recovering a cleaner signal from a noisy observation. |  |
 | score function | स्कोर फलन | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
@@ -263,14 +263,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | robustness | सुदृढ़ता | proposed | robustness: The ability of a system to maintain performance under perturbations or changes. |  |
 | privacy | निजता | verified_external | privacy: Protection against unwanted disclosure of information about individuals. | review-hi-62556808d4: page |
 | fairness | निष्पक्षता | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
-| parallelism | समांतरता | proposed | parallelism: Executing multiple computations concurrently. |  |
-| data parallelism | डेटा समांतरता | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
+| parallelism | पैरेललिज़्म | proposed | parallelism: Executing multiple computations concurrently. |  |
+| data parallelism | डेटा पैरेललिज़्म | proposed | data-parallelism: Parallel computation in which workers process different data with replicated models. |  |
 | GPU | GPU | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
 | memory bandwidth | मेमोरी बैंडविड्थ | proposed | memory-bandwidth: The rate at which data can be transferred to or from memory. |  |
 | throughput | थ्रूपुट | proposed | throughput: The amount of work completed per unit time. |  |
 | latency | लेटेंसी | proposed | latency: The elapsed time required to complete a task or operation. |  |
 | quantization | क्वांटाइज़ेशन | proposed | quantization: Representing numerical values using a reduced set of discrete values. |  |
-| knowledge distillation | ज्ञान आसवन | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
+| knowledge distillation | नॉलेज डिस्टिलेशन | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
 | probability mass function | प्रायिकता द्रव्यमान फलन | proposed | probability-mass-function: A function assigning probabilities to individual discrete outcomes. |  |
 | cumulative distribution function | संचयी वितरण फलन | proposed | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. |  |
 | conditional distribution | सशर्त वितरण | proposed | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. |  |
@@ -287,7 +287,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sufficient statistic | पर्याप्त सांख्यिक | proposed | sufficient-statistic: A statistic retaining all information in data relevant to a specified parameter. |  |
 | Fisher information | Fisher सूचना | proposed | fisher-information: A measure of how much an observation reveals about a parameter. |  |
 | point estimate | बिंदु आकलन | proposed | point-estimate: A single value used to estimate an unknown quantity. |  |
-| bias-variance decomposition | अभिनति-प्रसरण अपघटन | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
+| bias-variance decomposition | बायस-प्रसरण अपघटन | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
 | mean | माध्य | proposed | mean: A measure of central tendency given by an average or expectation. |  |
 | median | माध्यिका | proposed | median: A value that divides a distribution or ordered sample into two halves. |  |
 | quantile | क्वांटाइल | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
@@ -330,32 +330,32 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Xavier initialization | Xavier इनिशियलाइज़ेशन | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
 | weight sharing | भार साझाकरण | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | पैरामीटर गणना | proposed | parameter-count: The number of parameters in a model. |  |
-| computational complexity | संगणकीय जटिलता | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
+| computational complexity | कंप्यूटेशनल जटिलता | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
 | backward pass | बैकवर्ड पास | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
 | forward pass | फ़ॉरवर्ड पास | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
-| computational efficiency | संगणकीय दक्षता | proposed | computational-efficiency: The effectiveness with which computation uses time or resources. |  |
+| computational efficiency | कंप्यूटेशनल दक्षता | proposed | computational-efficiency: The effectiveness with which computation uses time or resources. |  |
 | loss landscape | लॉस परिदृश्य | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
 | inductive bias | इंडक्टिव बायस | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
 | universal approximation | सार्वत्रिक सन्निकटन | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
 | feature extraction | फ़ीचर एक्सट्रैक्शन | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
 | representation learning | रिप्रेज़ेंटेशन लर्निंग | proposed | representation-learning: Learning useful features or representations from data. |  |
-| self-supervised learning | स्व पर्यवेक्षित लर्निंग | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
-| supervised learning | पर्यवेक्षित लर्निंग | proposed | supervised-learning: Learning a mapping from inputs to observed targets. |  |
-| unsupervised learning | अपर्यवेक्षित लर्निंग | proposed | unsupervised-learning: Learning structure from data without task labels. |  |
+| self-supervised learning | सेल्फ़-सुपरवाइज़्ड लर्निंग | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
+| supervised learning | सुपरवाइज़्ड लर्निंग | proposed | supervised-learning: Learning a mapping from inputs to observed targets. |  |
+| unsupervised learning | अनसुपरवाइज़्ड लर्निंग | proposed | unsupervised-learning: Learning structure from data without task labels. |  |
 | in-context learning | इन-कॉन्टेक्स्ट लर्निंग | proposed | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. |  |
 | prompt | प्रॉम्प्ट | verified_external | prompt: An input that guides a model's response or behavior. | [google-ml-hi-generative](https://developers.google.com/machine-learning/glossary/generative?hl=hi#prompt) |
 | context window | कॉन्टेक्स्ट विंडो | verified_external | context-window: The amount of context a model can process in a single input. | [google-ml-hi-generative](https://developers.google.com/machine-learning/glossary/generative?hl=hi#context-window) |
 | next-token prediction | अगला टोकन पूर्वानुमान | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
 | autoregressive model | ऑटोरिग्रेसिव मॉडल | proposed | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. |  |
 | autoregressive generation | ऑटोरिग्रेसिव जनरेशन | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
-| causal attention | कारणात्मक अटेंशन | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
+| causal attention | कॉज़ल अटेंशन | proposed | causal-attention: Attention restricted so positions cannot access future positions. |  |
 | cross-attention | क्रॉस-अटेंशन | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
 | scaled dot-product attention | स्केल्ड डॉट गुणनफल अटेंशन | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | सॉफ़्टमैक्स अटेंशन | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
 | position embedding | पोज़िशन एंबेडिंग | proposed | position-embedding: A representation of position used in a sequence model. |  |
 | rotary position embedding | RoPE (रोटरी पोज़िशन एंबेडिंग) | proposed | rotary-position-embedding: A positional method that rotates query and key representations according to position. |  |
 | feedforward network | फ़ीडफ़ॉरवर्ड नेटवर्क | proposed | feedforward-network: A network whose computation proceeds from input to output without recurrent cycles. |  |
-| residual block | अवशिष्ट ब्लॉक | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
+| residual block | रेज़िडुअल ब्लॉक | proposed | residual-block: A network block combining a transformation with a shortcut connection. |  |
 | normalization layer | नॉर्मलाइज़ेशन लेयर | proposed | normalization-layer: A layer that rescales or centers activations according to specified statistics. |  |
 | root mean square | RMS (वर्ग-माध्य-मूल) | proposed | root-mean-square: The square root of the mean of squared values. |  |
 | encoder-decoder | एन्कोडर-डीकोडर | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
@@ -366,9 +366,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | dot-product attention | डॉट गुणनफल अटेंशन | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
 | masked attention | मास्क्ड अटेंशन | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
 | byte pair encoding | बाइट-पेयर एन्कोडिंग (BPE) | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
-| subword | उपशब्द | proposed | subword: A token unit that can represent part of a word. |  |
+| subword | सबवर्ड | proposed | subword: A token unit that can represent part of a word. |  |
 | n-gram | n-ग्राम | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
-| corpus | पाठ संग्रह | proposed | corpus: A collection of texts used for language analysis or model training. |  |
+| corpus | कॉर्पस | proposed | corpus: A collection of texts used for language analysis or model training. |  |
 | word frequency | शब्द आवृत्ति | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
 | embedding matrix | एंबेडिंग आव्यूह | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
 | cosine similarity | कोज्या समानता | proposed | cosine-similarity: A similarity measure based on the angle between vectors. |  |
@@ -380,8 +380,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | next sentence prediction | अगला वाक्य पूर्वानुमान | proposed | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. |  |
 | question answering | प्रश्नोत्तर | proposed | question-answering: The task of producing an answer to a question, often using a supplied context. |  |
 | text classification | पाठ वर्गीकरण | proposed | text-classification: The task of assigning categories to text. |  |
-| named entity recognition | नामित सत्ता पहचान | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. |  |
-| semantic similarity | अर्थगत समानता | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
+| named entity recognition | नेम्ड एंटिटी रिकग्निशन | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. |  |
+| semantic similarity | सिमेंटिक समानता | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
 | convolutional layer | कन्वोल्यूशनल लेयर | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | फ़ीचर मैप | proposed | feature-map: An array of activations representing features across positions. |  |
 | pooling layer | पूलिंग लेयर | proposed | pooling-layer: A layer that aggregates local groups of activations. |  |
@@ -390,17 +390,17 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | dilated convolution | डाइलेटेड कन्वोल्यूशन | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
 | depthwise convolution | डेप्थवाइज़ कन्वोल्यूशन | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
 | pointwise convolution | पॉइंटवाइज़ कन्वोल्यूशन | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
-| image resolution | छवि रिज़ॉल्यूशन | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
+| image resolution | इमेज रिज़ॉल्यूशन | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
 | pixel | पिक्सेल | proposed | pixel: An individual sample in a digital image. |  |
-| image recognition | छवि पहचान | verified_external | image-recognition: The task of identifying visual content in images. | [cbse-ai-integration-hi](https://cbseacademic.nic.in/web_material/Curriculum20/AI_Integration_Manual_Hindi.pdf#page=125) |
-| image segmentation | छवि सेगमेंटेशन | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
+| image recognition | इमेज पहचान | proposed | image-recognition: The task of identifying visual content in images. | [cbse-ai-integration-hi](https://cbseacademic.nic.in/web_material/Curriculum20/AI_Integration_Manual_Hindi.pdf#page=125) |
+| image segmentation | इमेज सेगमेंटेशन | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
 | region proposal | रीजन प्रपोज़ल | proposed | region-proposal: A candidate image region that may contain an object. |  |
 | anchor box | एंकर बॉक्स | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
 | non-maximum suppression | नॉन-मैक्सिमम सप्रेशन | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
-| data augmentation | डेटा संवर्धन | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
+| data augmentation | डेटा ऑगमेंटेशन | proposed | data-augmentation: Creating varied training examples by transforming existing data. |  |
 | random crop | यादृच्छिक क्रॉप | proposed | random-crop: A data augmentation that selects a random subregion of an input. |  |
 | super-resolution | सुपर रिज़ॉल्यूशन | proposed | super-resolution: The task of producing a higher-resolution image from a lower-resolution input. |  |
-| image generation | छवि जनरेशन | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
+| image generation | इमेज जनरेशन | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
 | feature pyramid | फ़ीचर पिरामिड | proposed | feature-pyramid: A collection of feature representations at multiple spatial scales. |  |
 | multi-scale | बहु-पैमाने वाला | proposed | multi-scale: Using or representing information at multiple resolutions or sizes. |  |
 | transition model | संक्रमण मॉडल | proposed | transition-model: A model describing how a system changes state. |  |
@@ -422,7 +422,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | deep reinforcement learning | डीप रीइन्फ़ोर्समेंट लर्निंग | proposed | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. |  |
 | target network | लक्ष्य नेटवर्क | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
 | experience replay | एक्सपीरियंस रीप्ले | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
-| diffusion process | विसरण प्रक्रिया | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
+| diffusion process | डिफ़्यूज़न प्रक्रिया | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
 | forward process | फ़ॉरवर्ड प्रक्रिया | proposed | forward-process: A process that progressively transforms data, such as by adding noise in diffusion models. |  |
 | reverse process | रिवर्स प्रक्रिया | proposed | reverse-process: A process intended to reverse the transformation of a forward process. |  |
 | score matching | स्कोर मैचिंग | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
@@ -440,7 +440,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adjoint method | सहयुग्मी विधि | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | आव्यूह चरघातांकी | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | फूरिये रूपांतरण | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
-| bias | अभिनति | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
+| bias | बायस | proposed | statistical-bias: The difference between an estimator’s expected value and the true parameter. |  |
 | mixture of experts | विशेषज्ञों का मिश्रण | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. | [google-ml-hi-generative](https://developers.google.com/machine-learning/glossary/generative?hl=hi#mixture-of-experts) |
 | transition kernel | संक्रमण कर्नेल | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | प्रत्याशित पुरस्कार | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
@@ -524,7 +524,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Wasserstein distance | Wasserstein दूरी | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
 | mode collapse | मोड कोलैप्स | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
 | conditional generation | सशर्त जनरेशन | proposed | conditional-generation: Generating samples conditioned on specified information. |  |
-| image-to-image translation | एक छवि से दूसरी छवि में रूपांतरण | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
+| image-to-image translation | इमेज-टू-इमेज ट्रांसलेशन | proposed | image-to-image-translation: Generating an image in a target domain from an input image. |  |
 | cycle consistency | चक्र संगति | proposed | cycle-consistency: A constraint that translating an input through a cycle of mappings reconstructs the input. |  |
 | critic loss | क्रिटिक लॉस | proposed | critic-loss: An objective used to train a critic to assess samples or outcomes. |  |
 | KV cache | KV कैश | proposed | kv-cache: Stored attention keys and values reused during autoregressive generation. |  |
@@ -566,7 +566,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | linear recurrence | रैखिक रिकरेंस | proposed | linear-recurrence: A recurrence whose new state is a linear function of the previous state and input. |  |
 | input-dependent | इनपुट आश्रित | proposed | input-dependent: Describing a quantity whose value changes with the input. |  |
 | selective scan | चयनात्मक स्कैन | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
-| parallel scan | समांतर स्कैन | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
+| parallel scan | पैरेलल स्कैन | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
 | recurrent state | रिकरेंट अवस्था | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
 | forget gate | फ़ॉरगेट गेट | proposed | forget-gate: A gate that controls how much of a previous state is retained. |  |
 | input gate | इनपुट गेट | proposed | input-gate: A gate that controls how much new information enters a recurrent state. |  |
@@ -579,16 +579,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sequence modeling | अनुक्रम मॉडलिंग | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. |  |
 | beam width | बीम चौड़ाई | proposed | beam-width: The number of candidate sequences retained at each step of beam search. |  |
 | greedy decoding | लालची डीकोडिंग | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
-| causal language model | कारणात्मक भाषा मॉडल | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
+| causal language model | कॉज़ल भाषा मॉडल | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
 | masked token | मास्क्ड टोकन | proposed | masked-token: A token hidden or replaced so a model must infer it from context. |  |
 | context length | कॉन्टेक्स्ट लंबाई | proposed | context-length: The number of input tokens available to a sequence model. |  |
 | attention head | अटेंशन हेड | proposed | attention-head: One independently parameterized attention operation in multi-head attention. |  |
 | attention map | अटेंशन मैप | proposed | attention-map: A matrix or array of attention weights between queries and keys. |  |
-| causal mask | कारणात्मक मास्क | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
+| causal mask | कॉज़ल मास्क | proposed | causal-mask: A mask preventing a sequence position from accessing future positions. |  |
 | router | राउटर | proposed | router: A component that assigns inputs to experts in a mixture-of-experts model. |  |
 | load balancing | लोड बैलेंसिंग | proposed | load-balancing: Distributing work across resources or experts to avoid disproportionate assignment. |  |
 | capacity factor | क्षमता गुणक | proposed | capacity-factor: A setting controlling how many tokens each expert can receive relative to average load. |  |
-| scaling law | पैमाना परिवर्तन नियम | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
+| scaling law | स्केलिंग लॉ | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
 | compute-optimal | कंप्यूट-इष्टतम | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
 | floating-point precision | फ़्लोटिंग-पॉइंट परिशुद्धता | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
 | memory footprint | मेमोरी फ़ुटप्रिंट | proposed | memory-footprint: The amount of memory occupied by data or a computation. |  |
@@ -598,17 +598,17 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | compute-bound | कंप्यूट-सीमित | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
 | graph compilation | ग्राफ़ कंपाइलेशन | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
 | just-in-time compilation | JIT कंपाइलेशन | proposed | just-in-time-compilation: Compiling code at runtime when needed for execution. |  |
-| asynchronous execution | असिंक्रोनस निष्पादन | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
+| asynchronous execution | असिंक्रोनस एक्ज़ीक्यूशन | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
 | synchronization | सिंक्रोनाइज़ेशन | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. |  |
 | all-reduce | ऑल-रिड्यूस | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | ग्रेडिएंट संचय | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
-| pipeline parallelism | पाइपलाइन समांतरता | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
-| tensor parallelism | टेंसर समांतरता | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
+| pipeline parallelism | पाइपलाइन पैरेललिज़्म | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
+| tensor parallelism | टेंसर पैरेललिज़्म | proposed | tensor-parallelism: Partitioning individual tensor operations across multiple devices. |  |
 | checkpointing | चेकपॉइंटिंग | proposed | checkpointing: Saving state so that a computation can be resumed or parts can be recomputed. |  |
 | reproducibility | पुनरुत्पादकता | proposed | reproducibility: The ability to obtain consistent results when repeating an experiment under specified conditions. |  |
 | random number generator | यादृच्छिक संख्या जनरेटर | proposed | random-number-generator: An algorithm or device producing a sequence of random or pseudorandom values. |  |
 | rounding error | पूर्णांकन त्रुटि | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
-| dynamic range | गतिशील परास | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
+| dynamic range | डायनेमिक रेंज | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | प्रशिक्षण थ्रूपुट | proposed | training-throughput: The amount of training work completed per unit time. |  |
 | soft actor-critic | SAC (soft actor-critic) | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | DQN (deep Q-network) | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
@@ -698,7 +698,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | population mean | समष्टि माध्य | proposed | population-mean: The expected value of a variable in the population under study. |  |
 | sampling error | सैंपलिंग त्रुटि | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
 | estimator variance | आकलक प्रसरण | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
-| unbiased estimator | अनभिनत आकलक | proposed | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. |  |
+| unbiased estimator | बायस-रहित आकलक | proposed | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. |  |
 | consistent estimator | संगत आकलक | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
 | maximum likelihood estimator | अधिकतम संभाविता आकलक | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
 | test statistic | परीक्षण सांख्यिक | proposed | test-statistic: A quantity computed from data and used by a statistical test. |  |
@@ -722,8 +722,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | simple loss | सरल लॉस | proposed | simple-loss: The noise-prediction training objective used in a diffusion model. |  |
 | flow map | फ़्लो मैप | proposed | flow-map: A mapping from a state at one time to its position at another time under a velocity field. |  |
 | average velocity | औसत वेग | proposed | average-velocity: The average displacement per unit time along a trajectory over a specified interval. |  |
-| consistency model | संगति मॉडल | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
-| consistency distillation | संगति आसवन | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
+| consistency model | कंसिस्टेंसी मॉडल | proposed | consistency-model: A model trained to give consistent outputs at points on the same generation trajectory. |  |
+| consistency distillation | कंसिस्टेंसी डिस्टिलेशन | proposed | consistency-distillation: Training a consistency model using neighboring trajectory points produced by a teacher model. |  |
 | adaptive layer norm | एडैप्टिव लेयर नॉर्म (adaLN) | proposed | adaptive-layer-norm: Layer normalization whose scale and shift are computed from conditioning information. |  |
 | adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | मॉडलेबिलिटी | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
@@ -795,7 +795,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | network depth | नेटवर्क गहराई | proposed | network-depth: The number of successive computational layers in a network. |  |
 | network width | नेटवर्क चौड़ाई | proposed | network-width: The number of units or features in a network layer. |  |
 | training dynamics | प्रशिक्षण गतिकी | proposed | training-dynamics: The evolution of model parameters and performance during training. |  |
-| parameter update | पैरामीटर अद्यतन | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
+| parameter update | पैरामीटर अपडेट | proposed | parameter-update: A change to model parameters made by an optimization algorithm. |  |
 | optimizer state | ऑप्टिमाइज़र की अवस्था | proposed | optimizer-state: Auxiliary information retained by an optimizer between parameter updates. |  |
 | minibatch gradient | मिनी-बैच ग्रेडिएंट | proposed | minibatch-gradient: A gradient estimate computed using a subset of training examples. |  |
 | full gradient | पूर्ण ग्रेडिएंट | proposed | full-gradient: The gradient of an objective computed over the full dataset. |  |
@@ -803,18 +803,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | stochastic approximation | स्टोकेस्टिक सन्निकटन | proposed | stochastic-approximation: An iterative method using noisy information to approach a solution. |  |
 | training iteration | प्रशिक्षण पुनरावृत्ति | proposed | training-iteration: One step of a training procedure, often processing one batch and updating parameters. |  |
 | exponential decay | चरघातांकी क्षय | verified_external | exponential-decay: A reduction by a constant multiplicative factor over equal intervals. | review-hi-645e0afcfc: page |
-| decoupled weight decay | पृथक्कृत भार क्षय | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
+| decoupled weight decay | डीकपल्ड भार क्षय | proposed | decoupled-weight-decay: Weight decay applied separately from the gradient transformation of an optimizer. |  |
 | second moment | द्वितीय आघूर्ण | proposed | second-moment: The expectation or average of the square of a quantity. |  |
 | first moment | प्रथम आघूर्ण | proposed | first-moment: The expectation or average of a quantity. |  |
-| bias correction | अभिनति सुधार | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
+| bias correction | बायस सुधार | proposed | bias-correction: An adjustment intended to compensate for systematic bias in an estimate. |  |
 | cross-correlation | क्रॉस-सहसंबंध | proposed | cross-correlation: An operation that combines a local input window with a kernel without reversing the kernel. |  |
 | kernel size | कर्नेल का आकार | proposed | kernel-size: The spatial dimensions of a convolution or pooling kernel. |  |
 | input channel | इनपुट चैनल | proposed | input-channel: A channel in the input to an operation or network layer. |  |
 | output channel | आउटपुट चैनल | proposed | output-channel: A channel produced by an operation or network layer. |  |
-| spatial resolution | स्थानिक रिज़ॉल्यूशन | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
-| local receptive field | स्थानीय ग्रहणशील क्षेत्र | proposed | local-receptive-field: The local input region influencing a particular network activation. |  |
-| translation invariance | स्थानांतरण निश्चरता | proposed | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. |  |
-| spatial invariance | स्थानिक निश्चरता | proposed | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. |  |
+| spatial resolution | स्पेशियल रिज़ॉल्यूशन | proposed | spatial-resolution: The number of spatial samples in a representation. |  |
+| local receptive field | लोकल रिसेप्टिव फ़ील्ड | proposed | local-receptive-field: The local input region influencing a particular network activation. |  |
+| translation invariance | ट्रांसलेशन इनवेरिएंस | verified_external | translation-invariance: The property that a representation or prediction remains unchanged when an input is translated. | author-ruling-hi-2026-11-27: hi/style.md §14 |
+| spatial invariance | स्पेशियल इनवेरिएंस | proposed | spatial-invariance: Insensitivity of a representation or prediction to specified changes in spatial position. |  |
 | zero padding | शून्य पैडिंग | proposed | zero-padding: Padding an input with zeros around its boundary. |  |
 | dilation | डाइलेशन | proposed | dilation: Spacing inserted between sampled positions of a convolutional kernel. |  |
 | downsampling | डाउनसैंपलिंग | proposed | downsampling: Reducing the spatial or temporal resolution of a representation. |  |
@@ -827,27 +827,27 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | nearest-neighbor interpolation | निकटतम पड़ोसी अंतर्वेशन | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
 | random horizontal flip | रैंडम हॉरिज़ॉन्टल फ़्लिप | proposed | random-horizontal-flip: An augmentation that reverses an image horizontally with a chosen probability. |  |
 | random resized crop | रैंडम रिसाइज़्ड क्रॉप | proposed | random-resized-crop: An augmentation that crops a randomly selected region and resizes it. |  |
-| color jitter | रंग परिवर्तन | proposed | color-jitter: An augmentation that randomly changes image color properties. |  |
+| color jitter | कलर जिटर | proposed | color-jitter: An augmentation that randomly changes image color properties. |  |
 | synthetic data | कृत्रिम डेटा | proposed | synthetic-data: Artificially generated examples used for training, testing, or analysis. |  |
 | training recipe | प्रशिक्षण की कार्यविधि | proposed | training-recipe: A combination of training choices such as optimization, augmentation, and schedules. |  |
-| identity shortcut | तत्समक संक्षिप्त मार्ग | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
+| identity shortcut | आइडेंटिटी शॉर्टकट | proposed | identity-shortcut: A skip connection that passes its input unchanged to an addition. |  |
 | bottleneck block | बॉटलनेक ब्लॉक | proposed | bottleneck-block: A network block that uses a narrower intermediate representation to reduce cost or parameters. |  |
 | convolutional block | कन्वोल्यूशनल ब्लॉक | proposed | convolutional-block: A network component grouping convolutional and often other operations. |  |
 | network in network | NiN (Network in Network) | proposed | network-in-network: An architecture using learned channelwise transformations within convolutional networks. |  |
-| image patch | छवि पैच | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
+| image patch | इमेज पैच | proposed | image-patch: A local region of an image used as an input unit or representation. |  |
 | patch embedding | पैच एंबेडिंग | proposed | patch-embedding: A vector representation computed from an image patch. |  |
-| image classifier | छवि क्लासिफ़ायर | proposed | image-classifier: A model that assigns categories to images. |  |
+| image classifier | इमेज क्लासिफ़ायर | proposed | image-classifier: A model that assigns categories to images. |  |
 | ground truth | ग्राउंड ट्रुथ | proposed | ground-truth: Observed or reference annotations treated as targets for a task. |  |
 | ground-truth bounding box | ग्राउंड-ट्रुथ बाउंडिंग बॉक्स | proposed | ground-truth-bounding-box: A reference bounding box describing an annotated object. |  |
 | region of interest | रुचि का क्षेत्र | proposed | region-of-interest: An image region selected for further processing or prediction. |  |
 | region proposal network | रीजन प्रपोज़ल नेटवर्क (RPN) | proposed | region-proposal-network: A network that generates candidate regions for object detection. |  |
 | single shot multibox detection | SSD (single shot multibox detection) | proposed | single-shot-multibox-detection: An object-detection method predicting classes and boxes across multiple feature-map scales. |  |
 | style transfer | स्टाइल ट्रांसफ़र | proposed | style-transfer: Generating an image that combines the content of one image with the style of another. |  |
-| content loss | सामग्री लॉस | proposed | content-loss: A loss measuring differences in content representations between images. |  |
-| style loss | शैली लॉस | proposed | style-loss: A loss measuring differences in style representations between images. |  |
+| content loss | कंटेंट लॉस | proposed | content-loss: A loss measuring differences in content representations between images. |  |
+| style loss | स्टाइल लॉस | proposed | style-loss: A loss measuring differences in style representations between images. |  |
 | total variation | टोटल वेरिएशन | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
-| perceptual loss | बोधात्मक लॉस | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
-| latent diffusion | लेटेंट विसरण | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
+| perceptual loss | पर्सेप्चुअल लॉस | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
+| latent diffusion | लेटेंट डिफ़्यूज़न | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
 | recommendation | अनुशंसा | proposed | recommendation: Selecting or ranking items to present to a user. |  |
 | user-item interaction | उपयोगकर्ता आइटम परस्पर क्रिया | proposed | user-item-interaction: An observed relationship or action involving a user and an item. |  |
 | explicit feedback | स्पष्ट प्रतिक्रिया | proposed | explicit-feedback: Directly supplied preference information such as a rating. |  |
@@ -864,7 +864,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayesian personalized ranking | BPR (Bayesian personalized ranking) | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
 | cold start | कोल्ड स्टार्ट | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
 | sparsity | विरलता | proposed | sparsity: The condition in which most entries or interactions in a representation are absent or zero. |  |
-| subword tokenization | उपशब्द टोकनाइज़ेशन | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
+| subword tokenization | सबवर्ड टोकनाइज़ेशन | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
 | token frequency | टोकन आवृत्ति | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
 | out-of-vocabulary | शब्दावली से बाहर | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
 | unknown token | अज्ञात टोकन | proposed | unknown-token: A special token representing an item not present in a vocabulary. |  |
@@ -874,12 +874,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | embedding dimension | एंबेडिंग विमा | proposed | embedding-dimension: The number of components in each embedding vector. |  |
 | center word | केंद्रीय शब्द | proposed | center-word: The word used as the central item in a word-context training example. |  |
 | context word | कॉन्टेक्स्ट शब्द | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
-| co-occurrence | सह-घटन | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
+| co-occurrence | को-ऑकरेंस | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
 | global vectors | GloVe | proposed | global-vectors: A word embedding method trained using global word co-occurrence statistics. |  |
 | subsampling | सबसैंपलिंग | proposed | subsampling: Selecting a subset of observations according to a sampling rule. |  |
 | word similarity | शब्द समानता | proposed | word-similarity: A measure of how closely related two words are in meaning or representation. |  |
 | decoder state | डीकोडर अवस्था | proposed | decoder-state: The internal state used by a decoder while producing an output sequence. |  |
-| alignment | संरेखण | proposed | alignment: A relationship linking positions or elements across two sequences. |  |
+| alignment | अलाइनमेंट | proposed | alignment: A relationship linking positions or elements across two sequences. |  |
 | sequence decoding | अनुक्रम डीकोडिंग | proposed | sequence-decoding: The process of selecting an output sequence from a model's predictions. |  |
 | greedy search | लालची खोज | proposed | greedy-search: A search procedure selecting the locally best choice at each step. |  |
 | length normalization | लंबाई नॉर्मलाइज़ेशन | proposed | length-normalization: Adjusting a sequence score to reduce systematic preference for particular sequence lengths. |  |
@@ -887,18 +887,18 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | scheduled sampling | शेड्यूल्ड सैंपलिंग | proposed | scheduled-sampling: A training method that varies between observed and model-generated previous tokens. |  |
 | translation quality | अनुवाद गुणवत्ता | proposed | translation-quality: The degree to which a translation preserves meaning and satisfies linguistic criteria. |  |
 | brevity penalty | संक्षिप्तता दंड | proposed | brevity-penalty: A factor reducing a translation score when the generated text is too short relative to references. |  |
-| bidirectional context | द्विदिश कॉन्टेक्स्ट | proposed | bidirectional-context: Context available from both before and after a position in a sequence. |  |
-| downstream task | अनुवर्ती कार्य | proposed | downstream-task: A task for which a pretrained representation or model is subsequently used. |  |
+| bidirectional context | बाइडायरेक्शनल कॉन्टेक्स्ट | proposed | bidirectional-context: Context available from both before and after a position in a sequence. |  |
+| downstream task | डाउनस्ट्रीम कार्य | proposed | downstream-task: A task for which a pretrained representation or model is subsequently used. |  |
 | sequence classification | अनुक्रम वर्गीकरण | proposed | sequence-classification: Assigning a label to an entire input sequence. |  |
 | sentiment classification | भाव वर्गीकरण | proposed | sentiment-classification: Assigning a sentiment category to text. |  |
-| textual entailment | पाठीय निहितार्थ | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
+| textual entailment | टेक्स्चुअल एंटेलमेंट | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
 | premise | आधार वाक्य | proposed | premise: A statement given as the basis for assessing another statement in natural language inference. |  |
 | hypothesis | परिकल्पना | proposed | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. |  |
 | contradiction | अंतर्विरोध | proposed | contradiction: A relationship in which one statement is incompatible with another. |  |
 | attention weight | अटेंशन भार | proposed | attention-weight: A coefficient controlling a value's contribution to an attention output. |  |
 | softmax temperature | सॉफ़्टमैक्स तापमान | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
 | attention masking | अटेंशन मास्किंग | proposed | attention-masking: Restricting which positions can contribute to attention outputs. |  |
-| causal masking | कारणात्मक मास्किंग | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
+| causal masking | कॉज़ल मास्किंग | proposed | causal-masking: Preventing a sequence position from using information from future positions. |  |
 | padding mask | पैडिंग मास्क | proposed | padding-mask: A mask preventing padding positions from contributing to a computation. |  |
 | absolute position | निरपेक्ष स्थिति | proposed | absolute-position: A position represented relative to the beginning or another fixed reference. |  |
 | transformer encoder | ट्रांसफ़ॉर्मर एन्कोडर | proposed | transformer-encoder: A transformer component that builds contextual representations of an input sequence. |  |
@@ -952,11 +952,11 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | noise level | शोर स्तर | proposed | noise-level: A quantity specifying the magnitude of random corruption applied to data. |  |
 | signal-to-noise ratio | संकेत-शोर अनुपात | proposed | signal-to-noise-ratio: A ratio comparing signal strength with noise strength. |  |
 | clean sample | शुद्ध नमूना | proposed | clean-sample: An uncorrupted data example used as a target or starting point for a noising process. |  |
-| forward diffusion | फ़ॉरवर्ड विसरण | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
+| forward diffusion | फ़ॉरवर्ड डिफ़्यूज़न | proposed | forward-diffusion: The process that progressively adds noise to data in a diffusion model. |  |
 | reverse-time SDE | रिवर्स-टाइम SDE | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
 | reverse transition | रिवर्स संक्रमण | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
 | forward transition | फ़ॉरवर्ड संक्रमण | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
-| ancestral sampling | पूर्वज आधारित सैंपलिंग | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
+| ancestral sampling | एंसेस्ट्रल सैंपलिंग | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
 | DDPM | DDPM | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
 | DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
 | variance schedule | प्रसरण शेड्यूल | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
@@ -967,7 +967,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | conditional denoising | सशर्त डीनॉइज़िंग | proposed | conditional-denoising: Denoising while using additional conditioning information. |  |
 | guidance scale | गाइडेंस स्केल | proposed | guidance-scale: A parameter controlling the strength of conditional guidance during generation. |  |
 | class conditioning | क्लास कंडीशनिंग | proposed | class-conditioning: Using a class label to guide a model's predictions or generation. |  |
-| diffusion transformer | विसरण ट्रांसफ़ॉर्मर | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
+| diffusion transformer | डिफ़्यूज़न ट्रांसफ़ॉर्मर | proposed | diffusion-transformer: A transformer architecture used as a network in a diffusion model. |  |
 | variational autoencoder | वेरिएशनल ऑटोएन्कोडर | proposed | variational-autoencoder: A latent-variable generative model trained using a variational objective. |  |
 | reconstruction error | पुनर्निर्माण त्रुटि | proposed | reconstruction-error: A measure of the difference between a reconstruction and the original or target. |  |
 | bottleneck | बॉटलनेक | proposed | bottleneck: A constrained intermediate representation that limits information or computation. |  |
@@ -977,8 +977,8 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sample diversity | नमूना विविधता | proposed | sample-diversity: The range of distinct outcomes represented by generated samples. |  |
 | Fréchet Inception Distance | FID (Fréchet Inception Distance) | proposed | frechet-inception-distance: A metric comparing feature distributions of generated and real images. |  |
 | maximum mean discrepancy | MMD (maximum mean discrepancy) | proposed | maximum-mean-discrepancy: A distribution discrepancy based on differences in mean feature embeddings in a reproducing kernel space. |  |
-| adversarial training | प्रतिद्वंद्वी प्रशिक्षण | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
-| adversarial objective | प्रतिद्वंद्वी उद्देश्य | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
+| adversarial training | ऐडवर्सेरियल प्रशिक्षण | proposed | adversarial-training: Training a model against an adversary that selects difficult inputs or a competing objective. |  |
+| adversarial objective | ऐडवर्सेरियल उद्देश्य | proposed | adversarial-objective: An objective defined through competition between model components or opposing distributions. |  |
 | minimax game | मिनिमैक्स खेल | proposed | minimax-game: An optimization problem in which one player minimizes while another maximizes an objective. |  |
 | Wasserstein GAN | Wasserstein GAN | proposed | wasserstein-gan: A generative adversarial framework using a critic related to Wasserstein distance. |  |
 | gradient penalty | ग्रेडिएंट दंड | proposed | gradient-penalty: A loss term penalizing selected properties of a model's gradient. |  |
@@ -1061,7 +1061,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | log marginal likelihood | लॉग सीमांत संभाविता | proposed | log-marginal-likelihood: The logarithm of the marginal likelihood of observed data. |  |
 | hyperparameter optimization | हाइपरपैरामीटर इष्टतमीकरण | proposed | hyperparameter-optimization: The process of choosing hyperparameter settings using performance evidence. |  |
 | search space | खोज समष्टि | proposed | search-space: The set of configurations or solutions considered by a search procedure. |  |
-| configuration space | विन्यास समष्टि | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
+| configuration space | कॉन्फ़िगरेशन समष्टि | proposed | configuration-space: The set of possible settings for configurable parameters. |  |
 | validation metric | वैलिडेशन मापदंड | proposed | validation-metric: A performance measure computed on validation data. |  |
 | acquisition function | एक्विज़िशन फलन | proposed | acquisition-function: A criterion for selecting the next candidate to evaluate in Bayesian optimization. |  |
 | expected improvement | प्रत्याशित सुधार | proposed | expected-improvement: An acquisition criterion measuring expected improvement over the current best value. |  |
@@ -1070,7 +1070,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | successive halving | क्रमिक अर्धीकरण | proposed | successive-halving: A procedure that repeatedly allocates more resources to a shrinking set of candidates. |  |
 | Hyperband | Hyperband | proposed | hyperband: A hyperparameter optimization method combining random search with successive resource allocation. |  |
 | noisy objective | शोरयुक्त उद्देश्य | proposed | noisy-objective: An objective whose observed evaluations vary because of randomness or measurement noise. |  |
-| hyperparameter configuration | हाइपरपैरामीटर विन्यास | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
+| hyperparameter configuration | हाइपरपैरामीटर कॉन्फ़िगरेशन | proposed | hyperparameter-configuration: A particular selection of hyperparameter values. |  |
 | asynchronous scheduling | असिंक्रोनस शेड्यूलिंग | proposed | asynchronous-scheduling: Allocating work as resources become available without requiring all concurrent jobs to finish together. |  |
 | rating matrix | रेटिंग आव्यूह | proposed | rating-matrix: A matrix of user ratings for items. |  |
 | interaction matrix | परस्पर क्रिया आव्यूह | proposed | interaction-matrix: A matrix recording interactions between two sets of entities such as users and items. |  |
@@ -1081,7 +1081,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pointwise loss | बिंदुवार लॉस | proposed | pointwise-loss: A loss evaluated individually on examples or items. |  |
 | negative feedback | नकारात्मक प्रतिक्रिया | proposed | negative-feedback: An observation indicating dislike or lack of preference under a specified interpretation. |  |
 | item ranking | आइटम रैंकिंग | proposed | item-ranking: Ordering items by predicted relevance or preference. |  |
-| retrieval | पुनर्प्राप्ति | proposed | retrieval: Selecting candidate items or documents for further ranking or presentation. |  |
+| retrieval | रिट्रीवल | proposed | retrieval: Selecting candidate items or documents for further ranking or presentation. |  |
 | user behavior | उपयोगकर्ता व्यवहार | proposed | user-behavior: Actions or interactions performed by a user in a system. |  |
 | next-item prediction | अगला आइटम पूर्वानुमान | proposed | next-item-prediction: Predicting the next item a user will interact with based on available context. |  |
 | selection bias | चयन बायस | proposed | selection-bias: Systematic distortion caused by the process selecting observations into a dataset. |  |
@@ -1125,7 +1125,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Itô process | इतो प्रक्रिया | proposed | ito-process: A stochastic process represented using drift and diffusion integrals with respect to Brownian motion. |  |
 | Itô integral | इतो समाकल | proposed | ito-integral: A stochastic integral defined for suitable adapted processes with respect to Brownian motion. |  |
 | drift | बहाव | proposed | drift: The systematic component of motion in a stochastic or dynamical process. |  |
-| diffusion coefficient | विसरण गुणांक | proposed | diffusion-coefficient: A coefficient controlling the random fluctuations in a stochastic differential equation. |  |
+| diffusion coefficient | डिफ़्यूज़न गुणांक | proposed | diffusion-coefficient: A coefficient controlling the random fluctuations in a stochastic differential equation. |  |
 | noise coefficient | शोर गुणांक | proposed | noise-coefficient: A coefficient controlling the magnitude of stochastic forcing. |  |
 | local truncation error | स्थानीय छंटाई त्रुटि | proposed | local-truncation-error: The error incurred in one numerical step when starting from an exact state. |  |
 | global error | वैश्विक त्रुटि | proposed | global-error: The accumulated difference between a numerical solution and the exact solution over an interval. |  |
@@ -1154,10 +1154,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | embedding table | एंबेडिंग तालिका | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
 | output projection | आउटपुट प्रक्षेपण | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | इंडक्शन परिपथ | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
-| attention pattern | अटेंशन प्रतिरूप | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
+| attention pattern | अटेंशन पैटर्न | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
 | softmax normalization | सॉफ़्टमैक्स नॉर्मलाइज़ेशन | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
 | top-k routing | टॉप-k राउटिंग | proposed | top-k-routing: Routing each input to the k experts with the highest selection scores. |  |
-| expert parallelism | विशेषज्ञ समांतरता | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
+| expert parallelism | विशेषज्ञ पैरेललिज़्म | proposed | expert-parallelism: Distributing expert components or their computation across devices. |  |
 | shared expert | साझा विशेषज्ञ | proposed | shared-expert: An expert component used across inputs or routes in a mixture-of-experts system. |  |
 | compute budget | कंप्यूट बजट | proposed | compute-budget: The computational resources allocated to a training or inference task. |  |
 | training compute | प्रशिक्षण कंप्यूट | proposed | training-compute: The amount of computation used to train a model. |  |
@@ -1176,10 +1176,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | all-gather | ऑल-गैदर | proposed | all-gather: A collective operation that gathers contributions from all workers and distributes them to each. |  |
 | reduce-scatter | रिड्यूस-स्कैटर | proposed | reduce-scatter: A collective operation that reduces worker contributions and distributes result partitions. |  |
 | batching | बैच बनाना | proposed | batching: Grouping multiple examples or requests for joint processing. |  |
-| perceptual compression | बोधात्मक संपीड़न | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
-| semantic compression | अर्थगत संपीड़न | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
+| perceptual compression | पर्सेप्चुअल संपीड़न | proposed | perceptual-compression: Compression that preserves perceptually important information while discarding less visible detail. |  |
+| semantic compression | सिमेंटिक संपीड़न | proposed | semantic-compression: Compression that retains higher-level content while reducing lower-level detail. |  |
 | Reflow | रीफ़्लो | proposed | reflow: A procedure that uses generated trajectories to construct straighter generative paths. |  |
-| consistency training | संगति प्रशिक्षण | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
+| consistency training | कंसिस्टेंसी प्रशिक्षण | proposed | consistency-training: Training a model to produce consistent outputs at related points along a trajectory. |  |
 | reference velocity | संदर्भ वेग | proposed | reference-velocity: A target velocity used to train or compare a learned flow model. |  |
 | stop-gradient | स्टॉप-ग्रेडिएंट | proposed | stop-gradient: An operation that treats a quantity as fixed when derivatives are computed. |  |
 | prior term | पूर्व-वितरण पद | proposed | prior-term: The term of a diffusion likelihood bound comparing the forward chain endpoint with the prior. |  |
@@ -1209,3 +1209,5 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | dense layer |  | unresolved | dense-layer: A layer in which every output depends on every input through a learned weight. |  |
 | vertical |  | unresolved | vertical: Running from top to bottom, as a vertical edge or axis. |  |
 | notebook |  | unresolved | jupyter-notebook: An interactive document of code cells and their outputs, such as a Jupyter notebook. |  |
+| image | इमेज | verified_external | image: A two-dimensional array of pixel values, such as a photograph, given to a model as input. | author-ruling-hi-2026-11-27: hi/style.md §14 |
+| locality | लोकैलिटी | verified_external | locality: The principle that a hidden unit depends only on inputs within a small neighbourhood of its position. | author-ruling-hi-2026-11-27: hi/style.md §14 |

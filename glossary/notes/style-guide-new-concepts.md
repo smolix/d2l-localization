@@ -1,6 +1,6 @@
 # Concepts the style guides propose adding
 
-Collected 2026-11-26 from the style-guide glossary passes (`<locale>-style-guide-corrections.md`). A new concept needs an entry in all 13 locales, so these wait for native-speaker review of the guides. **Added on 2026-11-27** (Arabic author rulings): `input`, `output`, `parameter`, `window`, `patch`, `edge`, `stack`, `framework`, `program-code`, `dense-layer`, `vertical`, `jupyter-notebook`, marked † below. They have an Arabic term; in the other twelve languages they are `unresolved` (no preferred term), and the proposals in this table are the starting point for filling them. Ids with the same meaning from several languages are merged (e.g. `image-edge` → `edge`).
+Collected 2026-11-26 from the style-guide glossary passes (`<locale>-style-guide-corrections.md`). A new concept needs an entry in all 13 locales, so these wait for native-speaker review of the guides. **Added on 2026-11-27** (Arabic author rulings): `input`, `output`, `parameter`, `window`, `patch`, `edge`, `stack`, `framework`, `program-code`, `dense-layer`, `vertical`, `jupyter-notebook`, marked † below. They have an Arabic term; in the other twelve languages they are `unresolved` (no preferred term), and the proposals in this table are the starting point for filling them. Ids with the same meaning from several languages are merged (e.g. `image-edge` → `edge`). Also added on 2026-11-27 (Hindi native-speaker review): `image` (hi इमेज, replacing the guide's earlier छवि) and `locality` (hi लोकैलिटी), marked ‡; they have a Hindi term only and are `unresolved` elsewhere.
 
 Aliases proposed for existing concepts: `image-patch` += "patch" (pt-BR, vi, zh-Hans, ar; el and ru want a separate generic patch); `fully-connected-layer` += "dense layer" (vi, zh-Hans, ru, ar; hi wants a separate concept); `model-parameter` += "parameter" (ar). On 2026-11-27 these three became separate concepts (`patch`, `dense-layer`, `parameter`) instead: an alias would have made the check demand, for example, Japanese モデルパラメータ (verified) wherever the English says "parameter".
 
@@ -35,7 +35,8 @@ Aliases proposed for existing concepts: `image-patch` += "patch" (pt-BR, vi, zh-
 | `figure-panel` | panel | el: μέρος |
 | `flipped-kernel` | flipped kernel | el: ανακλασμένος πυρήνας |
 | `gpu-memory` | GPU memory | zh-Hans: 显存 |
-| `image` | image | hi: छवि |
+| `image` ‡ | image | hi: इमेज (was छवि) |
+| `locality` ‡ | locality | hi: लोकैलिटी |
 | `implement` | implement | vi: lập trình |
 | `index` | index | hi: इंडेक्स |
 | `input` † | input | ar: مدخلات (was الدخل) |

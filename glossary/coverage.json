@@ -1,13 +1,13 @@
 {
-  "concepts": 1203,
+  "concepts": 1205,
   "locales": {
     "zh-Hans": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_d2l": 267,
         "proposed": 886,
         "verified_external": 38,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -39,7 +39,7 @@
           "verified_d2l": 8,
           "verified_external": 2,
           "proposed": 15,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 29,
@@ -164,12 +164,12 @@
       }
     },
     "ja": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_external": 159,
         "verified_d2l": 159,
         "proposed": 873,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -201,7 +201,7 @@
           "verified_external": 3,
           "verified_d2l": 11,
           "proposed": 11,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 31,
@@ -332,12 +332,12 @@
       }
     },
     "ko": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_external": 98,
         "verified_d2l": 160,
         "proposed": 933,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -370,7 +370,7 @@
           "proposed": 14,
           "verified_external": 6,
           "verified_d2l": 5,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 32,
@@ -499,12 +499,12 @@
       }
     },
     "es": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_external": 107,
         "verified_d2l": 26,
         "proposed": 1058,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -533,7 +533,7 @@
         "convolutional neural networks": {
           "proposed": 24,
           "verified_external": 1,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -652,11 +652,12 @@
       }
     },
     "ar": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_external": 162,
         "proposed": 1040,
-        "verified_d2l": 1
+        "verified_d2l": 1,
+        "unresolved": 2
       },
       "by_topic": {
         "attention": {
@@ -684,7 +685,8 @@
         "convolutional neural networks": {
           "verified_external": 11,
           "proposed": 22,
-          "verified_d2l": 1
+          "verified_d2l": 1,
+          "unresolved": 2
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -793,12 +795,12 @@
       }
     },
     "pt-BR": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_d2l": 14,
         "verified_external": 79,
         "proposed": 1098,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -827,7 +829,7 @@
         "convolutional neural networks": {
           "proposed": 20,
           "verified_external": 5,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -941,13 +943,13 @@
       }
     },
     "vi": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_d2l": 180,
         "verified_external": 75,
         "proposed": 933,
         "invariant": 3,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -979,7 +981,7 @@
         "convolutional neural networks": {
           "verified_d2l": 8,
           "proposed": 17,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "verified_external": 1,
@@ -1111,11 +1113,11 @@
       }
     },
     "fr": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_external": 106,
         "proposed": 1085,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -1142,7 +1144,7 @@
         "convolutional neural networks": {
           "verified_external": 4,
           "proposed": 21,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -1251,10 +1253,10 @@
       }
     },
     "hi": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
-        "verified_external": 49,
-        "proposed": 1142,
+        "verified_external": 52,
+        "proposed": 1141,
         "unresolved": 12
       },
       "by_topic": {
@@ -1277,11 +1279,11 @@
           "verified_external": 5
         },
         "convolutional modern": {
-          "proposed": 32,
-          "verified_external": 1
+          "proposed": 33
         },
         "convolutional neural networks": {
-          "proposed": 25,
+          "proposed": 24,
+          "verified_external": 3,
           "unresolved": 9
         },
         "deep reinforcement learning": {
@@ -1292,8 +1294,8 @@
           "verified_external": 1
         },
         "gaussian processes": {
-          "proposed": 33,
-          "verified_external": 1
+          "proposed": 32,
+          "verified_external": 2
         },
         "generative adversarial networks": {
           "proposed": 30
@@ -1387,12 +1389,12 @@
       }
     },
     "tr": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "proposed": 962,
         "verified_d2l": 140,
         "verified_external": 89,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -1424,7 +1426,7 @@
           "verified_d2l": 8,
           "verified_external": 2,
           "proposed": 15,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -1550,13 +1552,13 @@
       }
     },
     "de": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_external": 81,
         "proposed": 1097,
         "verified_d2l": 10,
         "invariant": 3,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -1586,7 +1588,7 @@
         "convolutional neural networks": {
           "verified_external": 1,
           "proposed": 24,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 31,
@@ -1700,11 +1702,11 @@
       }
     },
     "ru": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "verified_d2l": 7,
         "proposed": 1184,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -1727,7 +1729,7 @@
         },
         "convolutional neural networks": {
           "proposed": 25,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 33
@@ -1821,10 +1823,10 @@
       }
     },
     "el": {
-      "total": 1203,
+      "total": 1205,
       "statuses": {
         "proposed": 1191,
-        "unresolved": 12
+        "unresolved": 14
       },
       "by_topic": {
         "attention": {
@@ -1847,7 +1849,7 @@
         },
         "convolutional neural networks": {
           "proposed": 25,
-          "unresolved": 9
+          "unresolved": 11
         },
         "deep reinforcement learning": {
           "proposed": 33
