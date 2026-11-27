@@ -318,7 +318,6 @@ as proposed.
    its anchor (§2.3), and it counts `N×` and en-dash ranges by their digits
    only, so 2 倍 and 40〜55 pass (§4). Whether the Japanese build prints 図, 表,
    式 before references (§2.2) is to be confirmed on the first Japanese build.
-9. **Italics:** decided that the Japanese build styles `*…*` without italics,
-   since Japanese fonts have none. Whether it uses bold or emphasis dots (傍点)
-   is still to choose. This is build work, not a translator rule: translators
-   keep the markers as §2.1 says.
+9. **Italics:** decided that the Japanese build sets `*…*` in bold (author,
+   2026-11-27), since Japanese fonts have no italic. This is build work, not a
+   translator rule: translators keep the markers as §2.1 says.

@@ -5,7 +5,7 @@ Settings, string overrides, checker/build code and glossary corrections proposed
 ## ja (ja/style.md; reviewed by a native speaker, PR #2, 2026-11-27)
 - languages.yml ja: translator gemini-4-carbon (done). No check/typography settings needed.
 - ja/strings.yml (new, `l10n strings ja`): confirm on the first Japanese build that references print 図, 表, 式 (and 第 N 章 / N 節) from Quarto's Japanese defaults; pin them in strings.yml if not.
-- New code (confirmed): the Japanese build styles `*…*` without italics (CSS `em` in HTML; xeCJK in the PDFs and Beamer decks). Bold or emphasis dots (傍点) is still to choose.
+- New code (decided 2026-11-27): the Japanese build sets `*…*` in bold, in HTML, the PDFs and the Beamer decks (d2l-neu catalog setting `fonts.emphasis: bold`).
 - Checker: nothing new; reordered tokens with a NOTE and `N×`/en-dash ranges are already handled (protect.py).
 - Glossary: nothing; 訓練, 自己アテンション and the §7.2 corrections are already in ja.jsonl.
 
