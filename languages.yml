@@ -29,7 +29,7 @@ languages:
   - {code: ru, locale: ru,      name: Русский,    bucket: d2l-ru, hosts: [ru.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: el, locale: el,      name: Ελληνικά,   bucket: d2l-el, hosts: [el.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: hi, locale: hi,      name: हिन्दी,      bucket: d2l-hi, hosts: [hi.d2l.ai], dir: ltr, pinned: null, forum: english}
-  - {code: ar, locale: ar,      name: العربية,    bucket: d2l-ar, hosts: [ar.d2l.ai], dir: rtl, pinned: null, forum: english}
+  - {code: ar, locale: ar,      name: العربية,    bucket: d2l-ar, hosts: [ar.d2l.ai], dir: rtl, pinned: en-2026.11.27, menu: false, forum: english, translator: "claude fable-5.2 (medium)"}
 
 # Earlier editions, listed after a divider at the bottom of the menu.
 old_editions:
