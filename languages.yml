@@ -18,7 +18,7 @@ scope: [chapter_preface, chapter_basics, chapter_advanced,
 languages:
   - {code: en, locale: en,      name: English,    bucket: d2l-en, hosts: [d2l.ai, en.d2l.ai], dir: ltr, pinned: null, forum: english}
   - {code: zh, locale: zh-Hans, name: 中文,        bucket: d2l-zh, hosts: [zh.d2l.ai], dir: ltr, pinned: null, menu: true, forum: own, forum_category: 16}
-  - {code: ja, locale: ja,      name: 日本語,      bucket: d2l-ja, hosts: [ja.d2l.ai], dir: ltr, pinned: null, menu: true, forum: english, translator: "gemini gemini-4-carbon (medium)"}
+  - {code: ja, locale: ja,      name: 日本語,      bucket: d2l-ja, hosts: [ja.d2l.ai], dir: ltr, pinned: en-2026.11.27, menu: true, forum: english, translator: "gemini gemini-4-carbon (medium)"}
   - {code: ko, locale: ko,      name: 한국어,      bucket: d2l-ko, hosts: [ko.d2l.ai], dir: ltr, pinned: null, menu: true, forum: english}
   - {code: pt, locale: pt-BR,   name: Português,  bucket: d2l-pt, hosts: [pt.d2l.ai], dir: ltr, pinned: null, menu: true, forum: english}
   - {code: es, locale: es,      name: Español,    bucket: d2l-es, hosts: [es.d2l.ai], dir: ltr, pinned: null, forum: english}
