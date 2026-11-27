@@ -3232,3 +3232,1186 @@
 
 - "launch plumbing" → 「起動処理の内部機構」 (consistent with `chapter_appendix-tools-for-deep-learning/utils.md#u01` `"Internal Plumbing" → 「内部機構」`)
 - "(build-only, unlisted)" → 「（ビルド専用、非掲載）」 (consistent with `chapter_appendix-tools-for-deep-learning/hyperparameters-lib.md#u01`)
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "displacement" (vector geometry) → 「変位」
+- "Pythagoras' theorem" → 「ピタゴラスの定理」 (`ja/style.md` §5 katakana rule for theorems named after people)
+- "signed length" → 「符号付き長さ」 (paired with "signed distance" → 「符号付き距離」)
+- "collinear" (of two vectors, one a scalar multiple of the other) → 「共線」 (distinguished from regression feature `collinearity` = 「多重共線性」)
+- "QR factorization" → 「QR 分解」
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "linear combination" → 「線形結合」
+- "basis" / "standard basis" → 「基底」 / 「標準基底」
+- "spanning list / spanning set" → 「生成系」
+- "oblique projector" → 「斜射影行列」
+- "Gram–Schmidt process" / "Gram–Schmidt" → 「グラム・シュミットの直交化法」 / 「グラム・シュミット法」 ("classical Gram–Schmidt" → 「古典的グラム・シュミット法」)
+- "reflection" (orthogonal reflection in QR) → 「鏡映」
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "near-orthogonality" → 「概直交性」
+- "positive orthant" / "non-negative orthant" → 「正象限」 / 「非負象限」
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "hyperplane" → 「超平面」, "half-space" → 「半空間」, "normal vector" / "normal" → 「法線ベクトル」 / 「法線」
+- "signed distance" → 「符号付き距離」
+- "nearest-mean classifier" → 「最近傍平均分類器」
+- "perpendicular bisector (hyperplane)" → 「垂直二等分（超平面）」
+- "Fisher's linear discriminant" → 「フィッシャーの線形判別」
+- "idempotent" → 「べき等」
+- "Householder reflection(s)" / "Householder QR" → 「Householder 鏡映」 / 「Householder QR」
+- "concentration of measure" → 「測度の集中」
+
+## chapter_mdl-linear-algebra/mdl-geometry-linear-algebraic-ops.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "within-class covariance matrix" / "within-class variance" → 「クラス内共分散行列」 / 「クラス内分散」
+- "modified Gram–Schmidt (MGS)" → 「修正グラム・シュミット法（MGS）」 (paired with "classical Gram–Schmidt (CGS)" → 「古典的グラム・シュミット法（CGS）」)
+- "Hilbert matrix" → 「ヒルベルト行列」
+- "Welch bound" → 「Welch の下界」 (person name kept in Latin script per `ja/style.md` §5, matching `Gershgorin の円盤` and `Eckart–Young–Mirsky の定理` in `chapter_mdl-linear-algebra/index.md#u01`)
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Matrices as Linear Maps" (section heading, `sec_mdl-linear-maps`) → 「線形変換としての行列」 (follows binding glossary entry `linear transformation (linear map)` = 「線形変換」)
+- "running matrix" → 「通しで用いる行列」 (consistent with `chapter_mdl-linear-algebra/index.md#u01`)
+- "hyperplane test" → 「超平面判定」
+- "shear" → 「せん断」, "reflection" (geometric linear map) → 「鏡映」, "rigid motion" → 「剛体運動」
+- "Einstein summation" / "Einstein notation" → 「アインシュタインの総和規約」 / 「アインシュタイン記法」
+- "contraction" (tensor index contraction) → 「縮約」 (distinguished from RL contraction mapping 「縮小写像」)
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "null vector" (vector in $\ker\mathbf{A}$, distinct from zero vector $\mathbf{0}$) → 「零空間のベクトル」
+- "row rank" / "column rank" → 「行ランク」 / 「列ランク」
+- "onto" / "one-to-one" → 「全射」 / 「単射」
+- "LU factorization" → 「LU 分解」, "backward stable" / "backward stability" → 「後退安定」 / 「後退安定性」, "machine precision" → 「計算機精度」
+- "Hilbert matrix" → 「ヒルベルト行列」
+- "multilinear" / "multilinearity" → 「多重線形」 / 「多重線形性」, "alternating" → 「交代的」 / 「交代性」
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "permutation formula" → 「置換公式」, "cofactor expansion" → 「余因子展開」
+- "block upper triangular" → 「ブロック上三角」
+- "multiplicativity" → 「乗法性」, "similarity invariance" → 「相似不変性」
+- "Schur complement" → 「シューア補行列」, "Woodbury identity" → 「ウッドベリーの恒等式」, "Sherman–Morrison formula" → 「シャーマン・モリソンの公式」
+
+## chapter_mdl-linear-algebra/mdl-linear-maps.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Householder reflection" → 「ハウスホルダー鏡映」
+- "planar flow" → 「プレーナーフロー」
+
+## chapter_mdl-linear-algebra/mdl-eigendecomposition.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "characteristic polynomial" → 「特性多項式」
+- "eigenpair" / "eigenspace" / "eigenbasis" / "eigen-coordinate" / "eigen-expansion" → 「固有対」 / 「固有空間」 / 「固有基底」 / 「固有座標」 / 「固有展開」
+- "diagonalizable" / "diagonalization" → 「対角化可能」 / 「対角化」
+- "similar (matrices)" / "similarity invariant" → 「相似」 / 「相似不変量」
+- "algebraic multiplicity" / "geometric multiplicity" → 「代数的重複度」 / 「幾何学的重複度」
+- "Jordan block" / "Jordan normal form" / "real Jordan form" → 「ジョルダンブロック」 / 「ジョルダン標準形」 / 「実ジョルダン標準形」
+- "nilpotent" → 「べき零」
+- "indefinite" (quadratic form / matrix) → 「不定値」
+
+## chapter_mdl-linear-algebra/mdl-eigendecomposition.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Hermitian inner product" / "conjugate transpose" → 「エルミート内積」 / 「共役転置」
+- "orthogonal complement" → 「直交補空間」
+- "Cholesky factorization" → 「コレスキー分解」 (paired with glossary `Cholesky factor` = 「コレスキー因子」)
+- "full column rank" → 「列フルランク」
+- "Rayleigh quotient" → 「レイリー商」
+- "Courant–Fischer theorem" → 「クーラン・フィッシャーの定理」
+- "sample covariance" / "sample covariance matrix" → 「標本共分散」 / 「標本共分散行列」 (paired with glossary `sample variance` = 「標本分散」 and `sample mean` = 「標本平均」)
+- "Marchenko–Pastur bulk" → 「マルチェンコ・パスツールのバルク」 (paired with `decisions.md` `"Marchenko–Pastur law" → 「マルチェンコ・パスツール則」`)
+- "aspect ratio" ($c = d/n$) → 「アスペクト比」
+
+## chapter_mdl-linear-algebra/mdl-eigendecomposition.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "centering matrix" → 「中心化行列」 (paired with `decisions.md` `"centering" → 「中心化」`)
+- "backward stable" → 「後退安定」
+- "Weyl's inequality" → 「ワイルの不等式」
+
+## chapter_mdl-linear-algebra/mdl-spectra-in-practice.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Spectra in Practice" (section heading) → 「実践におけるスペクトル」
+- "Jordan block" → 「ジョルダンブロック」
+- "strictly diagonally dominant" → 「狭義対角優位」
+- "strictly dominant" (eigenvalue) → 「狭義優位」, "dominant eigenvalue / eigenpair" → 「主固有値 / 主固有対」 (paired with `decisions.md` `"dominant eigenvector" → 「主固有ベクトル」`)
+- "Rayleigh quotient" → 「レイリー商」
+- "irreducible" (non-negative matrix) → 「既約」
+- "Perron–Frobenius theorem" → 「ペロン・フロベニウスの定理」
+- "column-stochastic (matrix)" → 「列確率（行列）」 (paired with `decisions.md` `"row-stochastic matrix" → 「行確率行列」`)
+- "damped (matrix)" / "damping" → 「減衰付き（行列）」 / 「減衰」
+- "Gelfand's formula" → 「ゲルファントの公式」
+- "normal / non-normal (matrix)" → 「正規 / 非正規（行列）」
+
+## chapter_mdl-linear-algebra/mdl-spectra-in-practice.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "complex spectral theorem" / "real spectral theorem" → 「複素スペクトル定理」 / 「実スペクトル定理」 (extends `decisions.md` `"spectral theorem" → 「スペクトル定理」`)
+- "submultiplicativity" → 「劣乗法性」
+- "$\varepsilon$-pseudospectrum" → 「$\varepsilon$ 擬スペクトル」 (extends `decisions.md` `"pseudospectrum" → 「擬スペクトル」`)
+- "resolvent" / "resolvent norm" → 「レゾルベント」 / 「レゾルベントノルム」
+- "Kreiss matrix theorem" / "Kreiss constant" → 「Kreiss の行列定理」 / 「Kreiss 定数」 (follows `ja/style.md` §5 and `mdl-linear-algebra/index.md` keeping person names in Latin script)
+- "nilpotent" → 「べき零」
+- "top Lyapunov exponent" → 「最大リアプノフ指数」
+- "orthogonal initialization" → 「直交初期化」
+- "Ginibre ensemble" → 「Ginibre アンサンブル」
+- "circular law" → 「円則」 (paired with `decisions.md` `"Wigner's semicircle law" → 「ウィグナーの半円則」`)
+
+## chapter_mdl-linear-algebra/mdl-spectra-in-practice.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "digamma function" → 「ディガンマ関数」
+- "Euler's constant" → 「オイラー定数」
+- "renormalization" → 「再正規化」
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "full SVD" / "thin SVD" / "compact SVD" / "truncated SVD" → 「完全 SVD」 / 「薄い SVD」 / 「コンパクト SVD」 / 「打ち切り SVD」
+- "dyad" / "dyadic sum" → 「ダイアド」 / 「ダイアド和」
+- "orthonormal frame" → 「正規直交フレーム」
+- "four fundamental subspaces" ("row space", "column space", "null space", "left null space") → 「4 つの基本部分空間」（「行空間」、「列空間」、「零空間」、「左零空間」）
+- "rank-deficient" / "full column rank" / "numerical rank" → 「ランク落ち」 / 「列フルランク」 / 「数値ランク」
+- "deflation" → 「デフレーション」
+- "Golub–Kahan bidiagonalization" → 「Golub–Kahan 二重対角化」, "Weyl's inequality / Weyl's lemma" → 「Weyl の不等式 / Weyl の補題」
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "energy ratio" → 「エネルギー比」
+- "hard threshold" / "hard thresholding" → 「ハード閾値」 / 「ハード閾値処理」
+- "centering" / "centered" → 「中心化」 / 「中心化した（中心化データ）」
+- "principal direction" / "principal axis" → 「主方向」 / 「主軸」
+- "explained-variance ratio" → 「説明分散比」
+- "filter factor" → 「フィルタ係数」
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "overdetermined" / "underdetermined" → 「過剰決定」 / 「劣決定」
+- "truncated pseudoinverse" → 「打ち切り擬似逆行列」
+- "well-conditioned" / "ill-conditioned" → 「良条件」 / 「悪条件」
+- "polar decomposition" / "polar factor" → 「極分解」 / 「極因子」
+- "Newton–Schulz iteration" → 「Newton–Schulz 反復」
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "immediate basin" / "basin" → 「直接吸引領域」 / 「吸引領域」
+- "randomized SVD" / "range finder" / "randomized range finder" → 「ランダム化 SVD」 / 「値域探索」 / 「ランダム化値域探索」
+- "randomized sketching" → 「ランダム化スケッチング」
+
+## chapter_mdl-linear-algebra/mdl-svd-low-rank.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "stable rank" → 「安定ランク」
+- "interlacing inequalities" → 「交錯不等式」
+- "ridgeless limit" → 「リッジなし極限」
+- "singular triple" → 「特異三つ組」
+
+## chapter_mdl-linear-algebra/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Further Reading" (page heading) → 「関連文献」 (consistent with `decisions.md`)
+- "random projection" → 「ランダム射影」, "sketching" → 「スケッチング」
+- "Johnson–Lindenstrauss lemma" → 「Johnson–Lindenstrauss の補題」, "Kreiss matrix theorem" / "Kreiss constant" → 「Kreiss の行列定理」 / 「Kreiss 定数」, "Cheeger's inequality" → 「Cheeger の不等式」, "Hessenberg form" → 「Hessenberg 形」, "Tucker decomposition" → 「Tucker 分解」 (person names in Latin script per `ja/style.md` §5, consistent with `chapter_mdl-linear-algebra/index.md`)
+- "Gaussian elimination with partial pivoting" → 「部分ピボット選択付きガウスの消去法」, "shifted QR algorithm" → 「シフト付き QR 法」
+- "CP decomposition" → 「CP 分解」, "tensor train" → 「テンソルトレイン」
+- "spectral gap" → 「スペクトルギャップ」, "conductance" (of a Markov chain) → 「コンダクタンス」, "lazy chain" → 「怠惰な連鎖」
+- "free probability" → 「自由確率論」, "dynamical isometry" → 「動的等長性」
+- "implicit self-regularization" → 「暗黙的な自己正則化」, "tail exponent" → 「裾指数」
+
+## chapter_mdl-linear-algebra/further-reading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "truncated SVD" → 「打ち切り SVD」
+- "CUR decomposition" → 「CUR 分解」, "leverage score" → 「レバレッジスコア」, "randomized range finder" → 「ランダム化値域探索」
+- "polar factor" → 「極因子」
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "sum rule" / "product rule" / "quotient rule" / "power rule" → 「和の微分公式」 / 「積の微分公式」 / 「商の微分公式」 / 「べき乗の微分公式」 (consistent with `chapter_preliminaries/calculus.md`)
+- "inverse function theorem" → 「逆関数定理」
+- "Fermat's lemma" / "Rolle's theorem" → 「フェルマーの補題」 / 「ロルの定理」 (person-named theorems in katakana per `ja/style.md` §5)
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "extreme value theorem" → 「最大値・最小値の定理」
+- "chord" → 「弦」
+- "strictly increasing" / "strictly decreasing" → 「狭義単調増加」 / 「狭義単調減少」
+- "strict local minimum" / "strict local maximum" → 「狭義の極小点」 / 「狭義の極大点」
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "second-derivative test" → 「二階微分判定法」
+- "inflection point" → 「変曲点」
+- "quadratic convergence" → 「二次収束」
+- "damping" / "damped (Newton step)" → 「減衰」 / 「減衰付き（ニュートンステップ）」
+- "$L$-Lipschitz" → 「$L$-Lipschitz」 (follows `ja/style.md` §5 and `decisions.md` `"Lipschitz" → 「Lipschitz」`)
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "one-sided derivative(s)" → 「片側導関数」
+- "supporting line" → 「支持直線」
+- "kink" (nondifferentiable point of ReLU/abs/hinge) → 「折れ点」 (distinguished from geometric `corner` = 「角」)
+
+## chapter_mdl-calculus/mdl-single-variable-calculus.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "binary entropy" → 「二値エントロピー」
+- "edge of stability" → 「安定性の縁」
+- "period-2 orbit" → 「周期 2 の軌道」
+- "double well" → 「二重井戸関数」
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "differentiable" / "differentiability" → 「微分可能」 / 「微分可能性」
+- "second-derivative test" → 「二階微分判定法」
+- "level set" / "level curve" → 「等位集合」 / 「等位曲線」 (distinguished from `contour` = 「等高線」)
+- "tangent plane" → 「接平面」
+- "steepest ascent" / "steepest descent" → 「最急上昇」 / 「最急降下」
+- "Cauchy–Schwarz inequality" → 「コーシー・シュワルツの不等式」, "Clairaut–Schwarz theorem" → 「クレロー・シュワルツの定理」, "Extreme Value Theorem" → 「最大値・最小値の定理」
+- "local minimum / maximum" (point vs. value) → 「極小点 / 極大点」（点）vs.「極小値 / 極大値」（値）; "global minimum / maximum" → 「大域的最小点 / 大域的最大点」（点）vs.「大域的最小値 / 大域的最大値」（値）
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "collinear" → 「共線」
+- "adaptive optimizer" → 「適応的オプティマイザ」
+- "contour map" / "contour" → 「等高線図」 / 「等高線」
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "mixed partial (derivative)" → 「混合偏微分」
+- "second directional derivative" → 「二階方向微分」
+- "spectral theorem" → 「スペクトル定理」
+- "indefinite" / "semidefinite" / "singular" (matrix) → 「不定値」 / 「半定値」 / 「特異」
+- "inconclusive" (second-derivative test) → 「判定不能」
+- "Gaussian orthogonal ensemble (GOE)" → 「ガウス直交アンサンブル（Gaussian orthogonal ensemble、GOE）」
+
+## chapter_mdl-calculus/mdl-multivariable-calculus.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "constraint surface" → 「制約曲面」
+- "Lagrange condition" → 「ラグランジュ条件」
+- "monkey saddle" → 「猿の鞍」
+- "Rayleigh quotient" → 「レイリー商」
+- "whitened inputs" → 「白色化された入力」
+- "index" (fraction of negative eigenvalues of the Hessian at a critical point) → 「指数」
+
+## chapter_mdl-calculus/mdl-chain-rule-graphs.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "directed acyclic graph (DAG)" → 「有向非巡回グラフ」（略記 `DAG` はラテン文字維持）
+- "dependency graph" → 「依存関係グラフ」
+- "edge derivative" → 「エッジ微分」（`partial derivative` = 「偏微分」、`total derivative` = 「全微分」と対）
+- "directed edge" / "skip edge" → 「有向エッジ」 / 「スキップエッジ」
+- "residual stack" → 「残差スタック」
+
+## chapter_mdl-calculus/mdl-chain-rule-graphs.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "topological order" → 「トポロジカル順序」（`ja/decisions.md` の `"reverse topological order" → 「逆トポロジカル順序」` と対）
+- "subtractive cancellation" → 「減算による桁落ち」（`ja/decisions.md` の `"catastrophic cancellation" → 「桁落ち」` と整合）
+
+## chapter_mdl-calculus/mdl-matrix-calculus.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "numerator layout" / "denominator layout" → 「分子レイアウト」 / 「分母レイアウト」 (standard Japanese matrix calculus terms)
+- "backward rule" → 「逆伝播則」 (paired with glossary `backward pass` = 「逆伝播」)
+- "Clairaut–Schwarz theorem" → 「クレロー・シュワルツの定理」 (follows `ja/style.md` §5 katakana rule for theorems named after people)
+
+## chapter_mdl-calculus/mdl-matrix-calculus.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "parenthesization" / "bracketing" (in matrix chain multiplication) → 「括弧の付け方」
+- "move rule" / "trace move rule" → 「移動則」 / 「トレースの移動則」
+- "linear form" → 「線形形式」 (paired with glossary `quadratic form` = 「二次形式」)
+- "nonsymmetric matrix" → 「非対称行列」 (paired with glossary `symmetric matrix` = 「対称行列」)
+
+## chapter_mdl-calculus/mdl-matrix-calculus.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "two-hot" → 「ツーホット」 (paired with `decisions.md` `"one-hot" → 「ワンホット」`)
+- "shape rule" / "$1\times1$ check" → 「形状規則」 / 「$1\times1$ チェック」
+
+## chapter_mdl-calculus/mdl-matrix-calculus.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "alternating least-squares" → 「交互最小二乗法」 (paired with glossary `least squares` = 「最小二乗法」)
+- "Jacobi's formula" / "Hellmann–Feynman theorem" → 「ヤコビの公式」 / 「ヘルマン・ファインマンの定理」 (follows `ja/style.md` §5 katakana rule for mathematical formulas/theorems named after people)
+- "simple eigenvalue" → 「単純固有値」 (standard Japanese linear algebra term)
+- "implicit function theorem" → 「陰関数定理」 (paired with `decisions.md` `"implicit differentiation" → 「陰関数微分」`)
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "tangent" (forward-mode AD derivative component $\dot v$, paired with `adjoint` = 「随伴変数」) → 「タンジェント」 ("vector tangent" → 「ベクトルタンジェント」)
+- "seed" (AD input/output perturbation direction) → 「シード」 ("seed vector" → 「シードベクトル」)
+- "structural induction" → 「構造的帰納法」
+- "operator overloading" → 「演算子オーバーロード」
+- "primitive" (elementary function/operation in AD) → 「プリミティブ」
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "eager tape" → 「即時テープ」 (paired with glossary `eager execution` = 「即時実行」 and `decisions.md` `"tracer" → 「トレーサ」`)
+- "double where" → 「ダブル where」
+- "Baur–Strassen bound" → 「Baur–Strassen の上界」 (person names in Latin script per `ja/style.md` §5)
+- "AM–GM inequality" → 「相加・相乗平均の不等式」
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "implicit function theorem" → 「陰関数定理」
+- "deep equilibrium model(s)" / "deep equilibrium layer" / "equilibrium layer" → 「深層平衡モデル」 / 「深層平衡層」 / 「平衡層」
+- "Newton–CG" / "truncated Newton" → 「ニュートン CG 法」 / 「打ち切りニュートン法」
+- "reverse-over-reverse" → 「リバース・オーバー・リバース」 (paired with `decisions.md` `"forward-over-reverse" → 「フォワード・オーバー・リバース」`)
+- "numerical solver" / "ODE solver" → 「数値ソルバ」 / 「ODE ソルバ」 (drops final `ー` per `ja/style.md` §3.3 and spaces `ODE` per §2.2)
+
+## chapter_mdl-calculus/mdl-matrix-calculus-autodiff.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "complex-step (estimate)" → 「複素ステップ（推定値）」
+- "Neumann series" → 「ノイマン級数」 (follows `ja/style.md` §5 katakana rule for mathematical terms named after people)
+- "phantom gradient" → 「ファントム勾配」
+- "Jacobian-free backpropagation" → 「ヤコビ行列フリー誤差逆伝播法」
+- "polarization" (of a quadratic form) → 「偏極恒等式」
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Integral Calculus" (section heading) → 「積分法」 (paired with `differential calculus` = 「微分法」)
+- "left-endpoint rule" / "left rule" → 「左端点則」, "left sum" → 「左端点和」
+- "partition" / "tag" / "mesh" / "Riemann integrable" → 「分割」 / 「代表点」 / 「分割の幅」 / 「リーマン積分可能」
+- "signed area" → 「符号付き面積」
+- "area-so-far function" → 「累積面積関数」
+- "evaluation rule" (FTC Part 2) → 「評価公式」
+- "Lebesgue integral" → 「ルベーグ積分」
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "improper integral" → 「広義積分」
+- "heavy-tailed (distribution)" → 「裾の重い（分布）」
+- "discretization error" → 「離散化誤差」 (paired with glossary `truncation error` = 「打ち切り誤差」)
+- "Substitution" (integration technique / heading) → 「置換積分」
+- "stretch factor" / "local stretch factor" → 「伸縮率」 / 「局所伸縮率」
+- "Multiple Integrals" / "double integral" / "iterated integral" → 「重積分」 / 「二重積分」 / 「累次積分」
+- "absolutely integrable" → 「絶対可積分」, "Tonelli's theorem" → 「トネリの定理」
+- "$C^1$-diffeomorphism" → 「$C^1$ 級微分同相写像」
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "zero-extension" → 「ゼロ拡張」
+- "error function" → 「誤差関数」
+- "polar coordinates" → 「極座標」
+
+## chapter_mdl-calculus/mdl-integral-calculus.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Pareto density" / "Cauchy density" → 「パレート密度」 / 「コーシー密度」 (follows `ja/style.md` §5 katakana rule for mathematical terms named after people)
+- "unit step" → 「単位ステップ関数」
+
+## chapter_mdl-calculus/mdl-expectation-gradients.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "differentiation under the integral sign" → 「積分記号下の微分」
+- "swap" (of derivative and integral) → 「順序交換」
+- "dominated convergence theorem" → 「優収束定理」, "dominating bound" → 「優関数による上界」
+- "regularity condition" → 「正則性条件」
+- "exponentially tilted density" / "tilted density" / "tilted mean" → 「指数的に傾斜させた密度」 / 「傾斜密度」 / 「傾斜平均」
+- "control-variate baseline" → 「制御変量ベースライン」
+
+## chapter_mdl-calculus/mdl-expectation-gradients.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "log-derivative identity" / "log-derivative trick" → 「対数微分の恒等式」 / 「対数微分トリック」
+- "score-function identity" / "score-function estimator" → 「スコア関数恒等式」 / 「スコア関数推定量」
+- "pathwise identity" → 「パスワイズ恒等式」
+- "reparameterization trick" → 「再パラメータ化トリック」
+- "infinitesimal-perturbation derivative" → 「微小摂動微分」
+- "normal location family" → 「正規位置族」
+- "straight-through estimator" → 「ストレートスルー推定量」
+
+## chapter_mdl-calculus/mdl-expectation-gradients.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "continuous relaxation" / "relaxed estimator" / "relaxed objective" → 「連続緩和」 / 「緩和推定量」 / 「緩和目的関数」
+- "hard sample" / "relaxed sample" → 「ハードサンプル」 / 「緩和サンプル」
+
+## chapter_mdl-calculus/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Further Reading" (page heading) → 「関連文献」
+- "kink(s)" (nondifferentiable corner of ReLU / $|x|$) → 「折れ点」
+- "conservative field(s)" → 「保存場」
+- "Rademacher's theorem" → 「ラデマッハの定理」, "Lipschitz function" → 「リプシッツ関数」
+- "mean value inequality" → 「平均値不等式」
+- "matrix-chain multiplication problem" → 「連鎖行列積問題」
+- "derivative compiler" → 「微分コンパイラ」
+- "recursive checkpointing" → 「再帰的チェックポイント保存」, "binomial checkpointing" → 「二項チェックポイント保存」
+- "Taylor mode" → 「テイラーモード」
+- "forward gradient(s)" → 「フォワード勾配」
+
+## chapter_mdl-calculus/further-reading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Lebesgue integral" / "Riemann integral" → 「ルベーグ積分」 / 「リーマン積分」
+- "Fubini–Tonelli" → 「フビニ・トネリの定理」, "monotone convergence theorem" → 「単調収束定理」, "dominated convergence theorem" → 「優収束定理」
+- "quasi-Monte Carlo" / "randomized quasi-Monte Carlo" → 「準モンテカルロ法」 / 「ランダム化準モンテカルロ法」
+- "low-discrepancy (point set)" → 「低食い違い量（点集合）」, "Sobol sequence" / "Halton sequence" / "lattice rule" → 「ソボル列」 / 「ハルトン列」 / 「格子則」
+- "continuous relaxation" → 「連続緩和」, "Gumbel-softmax" → 「Gumbel-softmax」, "measure-valued derivative(s)" → 「測度値微分」
+
+## chapter_mdl-optimization/mdl-gradient-based-optimization.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "quadratic ceiling" → 「二次上界」 (distinguishes the parabolic upper bound on $f$ from the step-size "stability ceiling" = 「安定性の上限」)
+- "Armijo condition" / "sufficient decrease condition" → 「Armijo 条件」 / 「十分減少条件」 (person name kept in Latin script per `ja/style.md` §5, matching `Robbins–Monro 条件`)
+- "$(L_0, L_1)$-smooth" / "relaxed smoothness" → 「$(L_0, L_1)$ 滑らか」 / 「緩和された滑らかさ」 (parallels `decisions.md` `"$L$-smooth" → 「$L$ 滑らか」`)
+- "bowl" (geometric loss surface) → 「ボウル」 (consistent with `momentum.md#u01` 「二次ボウル」)
+- "stiff (mode / axis)" → 「硬い（モード / 軸）」 (standard numerical-analysis / optimization term, distinguished from geometric `steep` = 「急峻な」)
+- "global minimum" → 「大域的最小点」（点を指す場合） / 「大域的最小値」（関数値を指す場合） (parallels `decisions.md` distinction between 「極小点」 and 「極小値」)
+
+## chapter_mdl-optimization/mdl-gradient-based-optimization.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "convergence factor" → 「収束因子」 (distinguished from `contraction factor / rate` = 「縮小率」 and `convergence rate` = 「収束率」)
+- "self-stabilization" → 「自己安定化」
+- "Nemirovski–Yudin lower bound" → 「Nemirovski–Yudin の下界」 (person names kept in Latin script per `ja/style.md` §5)
+
+## chapter_mdl-optimization/mdl-gradient-based-optimization.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "damped harmonic oscillator" → 「減衰調和振動子」
+- "first-order method" / "first-order lower bound" → 「一次手法」 / 「一次手法の下界」 (matches `chapter_mdl-optimization/index.md#u01` 「一次手法」)
+
+## chapter_mdl-optimization/mdl-gradient-based-optimization.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "polar factor" → 「極因子」 (standard linear-algebra term for the orthogonal factor in polar decomposition)
+- "tridiagonal" → 「三重対角」
+- "suboptimality gap" → 「最適性ギャップ」
+
+## chapter_mdl-optimization/mdl-curvature-methods.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "curvature methods" → 「曲率法」
+- "affine-invariant" / "affine invariance" → 「アフィン不変」 / 「アフィン不変性」
+- "damping" / "damped Newton" → 「ダンピング」 / 「ダンピング付きニュートン法」 (consistent with `chapter_optimization/gd.md#u03`)
+- "Armijo condition" / "Armijo rule" / "Wolfe condition" → 「Armijo 条件」 / 「Armijo 則」 / 「Wolfe 条件」 (keeps person names in Latin script per `ja/style.md` §5, matching `Robbins–Monro 条件`)
+- "secant method" / "secant equation" / "secant pair" → 「割線法」 / 「割線方程式」 / 「割線ペア」 (established Japanese numerical optimization terminology)
+- "superlinear convergence" → 「超一次収束」
+- "curvature condition" → 「曲率条件」
+- "Mahalanobis norm" → 「マハラノビスノルム」, "Kronecker preconditioner" → 「クロネッカー前処理行列」
+
+## chapter_mdl-optimization/mdl-curvature-methods.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "subproblem" (in trust-region optimization) → 「部分問題」
+- "hard case" (degenerate trust-region boundary case) → 「ハードケース」
+- "agreement ratio" → 「一致比」
+- "spectral damping" → 「スペクトルダンピング」
+
+## chapter_mdl-optimization/mdl-curvature-methods.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "reparametrization" → 「再パラメータ化」 (follows `ja/style.md` §3.3 `パラメータ`)
+- "hereditary property" (of quasi-Newton updates) → 「遺伝性」
+- "symmetric rank-one (SR1) update" → 「対称ランク 1 更新」
+
+## chapter_mdl-optimization/mdl-stochastic-gradient-methods.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Stochastic Gradient Methods" (section title) → 「確率的勾配法」
+- "running example" / "running benchmark" → 「通し例」 / 「通しベンチマーク」
+- "transient" (transient term of SGD dynamics) → 「過渡項」
+- "stiff coordinate" / "slow coordinate" → 「硬い座標」 / 「遅い座標」
+
+## chapter_mdl-optimization/mdl-stochastic-gradient-methods.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "suboptimality gap" → 「準最適性ギャップ」
+- "telescoping (sum)" → 「望遠鏡和」
+
+## chapter_mdl-optimization/mdl-stochastic-gradient-methods.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "averaged iterate" / "random iterate" → 「平均反復点」 / 「ランダム反復点」
+- "subgradient inequality" → 「劣勾配不等式」
+
+## chapter_mdl-optimization/mdl-stochastic-gradient-methods.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "SVRG (stochastic variance-reduced gradient)" → 「SVRG（確率的分散低減勾配）」
+
+## chapter_mdl-optimization/mdl-stochastic-gradient-methods.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "iterate averaging" → 「反復点平均化」
+
+## chapter_mdl-optimization/mdl-adaptive-stochastic-methods.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Adaptive Methods" (section title) → 「適応的手法」 (consistent with `chapter_mdl-optimization/index.md`)
+- "heavy-ball method" → 「ヘビーボール法」 (paired with glossary `heavy-ball momentum` = 「ヘビーボールモメンタム」)
+- "online convex optimization" → 「オンライン凸最適化」 (standard Japanese ML/optimization terminology)
+- "sign step" → 「符号ステップ」 (paired with `decisions.md` `"sign descent" → 「符号降下法」`)
+- "structured preconditioner" → 「構造化前処理行列」 (paired with glossary `preconditioner` = 「前処理行列」)
+
+## chapter_mdl-optimization/mdl-adaptive-stochastic-methods.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "rotation sensitivity" / "rotation-invariant" → 「回転感度」 / 「回転不変」
+- "running maximum" → 「累積最大値」 (in AMSGrad, $\tilde{\mathbf{v}}_t = \max(\tilde{\mathbf{v}}_{t-1}, \mathbf{v}_t)$)
+
+## chapter_mdl-optimization/mdl-adaptive-stochastic-methods.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "coupled rule" / "decoupled rule" → 「結合型の更新則」 / 「分離型の更新則」 (paired with `decisions.md` `結合型` and glossary `分離型重み減衰`)
+
+## chapter_mdl-optimization/mdl-adaptive-stochastic-methods.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Kronecker factor(s)" / "Kronecker factorization" → 「クロネッカー因子」 / 「クロネッカー分解」 (paired with glossary `Kronecker product` = 「クロネッカー積」)
+- "two-sided preconditioning" → 「両側前処理」 / 「両側からの前処理」
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "constraint qualification" → 「制約想定」 (standard Japanese optimization term, e.g. 福島『非線形最適化の基礎』)
+- "active" / "inactive" (constraint) → 「有効」 / 「非有効」 ("active constraint" / "inactive constraint" → 「有効制約」 / 「非有効制約」)
+- "obtuse-angle inequality" → 「鈍角不等式」
+- "proximal step" → 「近接ステップ」 (paired with glossary `proximal operator` = 「近接作用素」)
+- "norm budget" → 「ノルムバジェット」 (consistent with `chapter_mdl-optimization/index.md`)
+- "tangency condition" → 「接条件」
+- "local minimum" / "global minimum" (point $\mathbf{x}^\star$, vs. value $f^\star$) → 「極小点」 / 「大域的最小点」 (distinguishing point from value 「極小値」 / 「大域的最小値」, consistent with `chapter_mdl-optimization/index.md` and `chapter_mdl-calculus/mdl-multivariable-calculus.md`)
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "active set" → 「有効制約集合」
+- "stationarity" / "primal feasibility" / "dual feasibility" → 「停留性」 / 「主実行可能性」 / 「双対実行可能性」
+- "normal cone" → 「法線錐」
+- "linear independence constraint qualification (LICQ)" → 「線形独立制約想定（LICQ）」
+- "Slater's condition" → 「スレーター条件」
+- "nonexpansive" / "nonexpansiveness" → 「非拡大」 / 「非拡大性」
+- "Cauchy–Schwarz (inequality)" → 「コーシー・シュワルツの不等式」
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "variational inequality" → 「変分不等式」
+- "supporting hyperplane" / "supporting line" → 「支持超平面」 / 「支持直線」
+- "half-space" → 「半空間」
+- "nonnegative orthant" → 「非負象限」
+- "quadratic program (QP)" → 「二次計画問題（QP）」
+- "sparsemax" → 「sparsemax」 (kept in Latin script per `ja/style.md` §3.2)
+- "support" (set of nonzero coordinates $\{i : x_i \neq 0\}$) → 「サポート」
+- "adversarial example" → 「敵対的サンプル」
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "subgradient descent" → 「劣勾配降下法」
+- "dead zone" → 「不感帯」
+- "proper closed convex" → 「真閉凸」, "epigraph" → 「エピグラフ」
+- "proximal gradient descent" → 「近接勾配降下法」
+- "ISTA (iterative shrinkage-thresholding algorithm)" → 「ISTA（反復縮小閾値アルゴリズム）」
+- "Gauss–Seidel iteration" → 「ガウス・ザイデル反復」
+- "Fermat's rule" → 「フェルマーの規則」
+
+## chapter_mdl-optimization/mdl-constrained-optimization-duality.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "group lasso" → 「グループ Lasso」
+- "Moreau decomposition" → 「モロー分解」
+- "accelerated proximal gradient" → 「加速近接勾配法」
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "solver" / "numerical solver" / "iterative solver" → 「ソルバ」 / 「数値ソルバ」 / 「反復ソルバ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords, consistent with `decisions.md` `固有値ソルバ / 線形ソルバ`)
+- "strictly feasible point" → 「狭義実行可能点」, "primal-feasible" / "dual-feasible" → 「主実行可能」 / 「双対実行可能」
+- "Lagrange dual function" → 「ラグランジュ双対関数」
+- "Slater's condition" → 「スレーター条件」, "Fenchel conjugate" → 「フェンシェル共役」 (katakana for mathematical terms named after people per `ja/style.md` §5)
+- "water-filling" → 「注水法」 (established Japanese information-theory and communications term, e.g. Cover & Thomas)
+- "effective domain" → 「実効定義域」, "hypograph" / "epigraph" → 「ハイポグラフ」 / 「エピグラフ」, "lower envelope" → 「下側包絡線」, "supporting line" → 「支持直線」
+- "gradient descent–ascent" → 「勾配降下上昇法」, "extragradient" → 「外挿勾配法」
+- "norm budget" → 「ノルムバジェット」 (consistent with `chapter_mdl-optimization/index.md#u01`)
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "constraint qualification" → 「制約想定」 (standard Japanese mathematical optimization term)
+- "relative interior" → 「相対的内部」 (standard convex analysis term)
+- "stopping criterion" → 「停止基準」
+- "linear program" → 「線形計画問題」, "convex quadratic program" → 「凸二次計画問題」
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "biconjugate" / "biconjugacy" → 「二重共役」 / 「二重共役性」, "self-conjugate" → 「自己共役」
+- "Fenchel–Young inequality" → 「フェンシェル・ヤングの不等式」, "Fenchel–Legendre transform" → 「フェンシェル・ルジャンドル変換」
+- "proper" / "closed" (convex function) → 「固有」 / 「閉」 (standard convex analysis terminology: 固有閉凸関数)
+- "support vector" → 「サポートベクター」, "hard-margin SVM" → 「ハードマージン SVM」, "kernel trick" → 「カーネルトリック」
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "convex envelope" → 「凸包絡関数」 (standard convex analysis terminology)
+- "double well" → 「二重井戸関数」
+- "generator (of an $f$-divergence)" → 「生成関数」 (distinguished from generative-model `生成器`)
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "nonnegative orthant" / "orthant" → 「非負象限」 / 「象限」
+- "projected gradient ascent" → 「射影勾配上昇法」 (paired with glossary `projected gradient descent` = 「射影勾配降下法」 and `decisions.md` `"gradient ascent" → 「勾配上昇法」`)
+- "minimax training" → 「ミニマックス訓練」
+
+## chapter_mdl-optimization/mdl-lagrangian-duality.md#u06 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "basis pursuit" → 「基底追跡法」 (standard sparse-optimization and compressed-sensing term in Japanese)
+- "entropic optimal transport" / "entropic regularization" → 「エントロピー正則化付き最適輸送」 / 「エントロピー正則化」
+- "Sinkhorn iteration(s)" / "Sinkhorn's algorithm" → 「シンクホーン反復」 / 「シンクホーンのアルゴリズム」 (consistent with `decisions.md` `"Sinkhorn OT" → 「シンクホーン OT」`)
+- "block-coordinate ascent" → 「ブロック座標上昇法」
+
+## chapter_mdl-optimization/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Chebyshev polynomial" → 「チェビシェフ多項式」 (follows `ja/style.md` §5 katakana rule for classical mathematical concepts named after people)
+- "semidefinite program (SDP)" → 「半正定値計画問題（SDP）」 (heading: 「半正定値計画」)
+- "performance estimation" → 「性能推定」
+- "iterate averaging" → 「反復点の平均化」 (consistent with `decisions.md` `"iterate(s)" → 「反復点」`)
+- "strong growth condition" → 「強増大条件」
+- "empirical Fisher" → 「経験フィッシャー行列」
+- "mirror descent" → 「ミラー降下法」, "Bregman divergence" → 「ブレグマンダイバージェンス」, "exponentiated gradient rule" → 「指数勾配則」
+
+## chapter_mdl-optimization/further-reading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "saddle-point method" → 「鞍点法」, "extragradient method" → 「外挿勾配法」, "optimistic method" → 「楽観的手法」
+- "linear program" / "quadratic program" / "second-order cone program" / "semidefinite program" → 「線形計画問題」 / 「二次計画問題」 / 「二次錐計画問題」 / 「半正定値計画問題」
+- "logarithmic barrier" → 「対数バリア」, "central path" → 「中心パス」
+- "Fenchel dual" → 「フェンシェル双対」, "alternating direction method of multipliers (ADMM)" → 「交互方向乗数法（ADMM）」
+- "Frank–Wolfe method" → 「フランク・ウルフ法」
+- "growth factor" → 「増大係数」, "iterative refinement" → 「反復改良法」
+
+## chapter_mdl-probability-statistics/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Probability and Statistical Learning" (chapter title) → 「確率と統計学習」 (consistent with `index.md` and glossary `statistical learning` = 「統計学習」)
+- "estimator" (statistical function mapping a sample to an estimate) → 「推定量」 (distinguished from `estimate` = 「推定値」)
+- "expectation–maximization (EM)" → 「期待値最大化法」
+- "Eve's law" → 「イブの法則」 (law of total variance)
+- "benign overfitting" → 「良性過学習」 (paired with glossary `overfitting` = 「過学習」)
+- "multiple testing" → 「多重検定」
+- "heavy tail(s)" → 「重い裾」
+
+## chapter_mdl-probability-statistics/mdl-random-variables.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "bin" (histogram/interval bin) → 「ビン」 ("bin width" → 「ビン幅」 / 「ビンの幅」)
+- "atom" (point with positive probability mass) → 「アトム」 ("three-atom example" → 「3 アトムの例」, "three-atom distribution" → 「3 アトム分布」)
+- "right-continuous" → 「右連続」
+- "quantile function" → 「分位点関数」, "quartile(s)" → 「四分位点」
+- "inverse-transform sampling" → 「逆変換サンプリング」, "generalized inverse" → 「一般化逆関数」
+- "rectified Gaussian" → 「整流ガウス分布」
+- "law of the unconscious statistician (LOTUS)" → 「無意識な統計学者の法則」（スライド中の略記 `LOTUS` はそのまま維持）
+- "Markov's inequality" → 「マルコフの不等式」 (`ja/style.md` §5 の人名由来定理のカタカナ規則に従う)
+- "tail" / "tail bound" / "heavy tails" / "heavy-tailed" → 「裾」 / 「裾の上界」 / 「重い裾」 / 「裾が重い（裾の重い）」
+- "Cauchy distribution" → 「コーシー分布」
+
+## chapter_mdl-probability-statistics/mdl-random-variables.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "linearity of expectation" → 「期待値の線形性」
+- "indicator variable" → 「指示変数」 (paired with `ja/decisions.md` `"indicator function" → 「指示関数」`)
+- "running mean" (cumulative sample average $\frac{1}{n}\sum_{i=1}^n X_i$) → 「逐次平均」 (aligned with `ja/decisions.md` `"running frequency" → 「逐次頻度」` and distinguished from EMA 「移動平均」)
+- "power-law tail(s)" → 「べき乗則の裾」
+- "log-normal distribution" → 「対数正規分布」
+
+## chapter_mdl-probability-statistics/mdl-random-variables.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "logistic distribution" → 「ロジスティック分布」
+- "Cantelli's inequality" → 「カンテリの不等式」, "Pareto density" → 「パレート密度」 (`ja/style.md` §5 の人名由来数学用語のカタカナ規則に従う)
+- "$\alpha$-stable distribution" → 「$\alpha$ 安定分布」, "tail index" → 「裾指数」
+- "Hill estimator" → 「Hill 推定量」 (`ja/style.md` §5 の人名ラテン文字維持規則に従う)
+
+## chapter_mdl-probability-statistics/mdl-joint-distributions.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "joint density" / "marginal density" / "conditional density" → 「同時密度」 / 「周辺密度」 / 「条件付き密度」
+- "integrate out" → 「積分消去する」
+- "tower property" → 「塔性質」
+- "Eve's law" → 「イブの法則」 (preserves the `EVVE` mnemonic explained in the text)
+- "analysis of variance" → 「分散分析」
+- "whitening" → 「白色化」
+
+## chapter_mdl-probability-statistics/mdl-joint-distributions.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "correlation coefficient" → 「相関係数」
+- "uncorrelated" → 「無相関」
+- "Cauchy distribution" → 「コーシー分布」 (follows `ja/style.md` §5 katakana rule for distributions named after people)
+
+## chapter_mdl-probability-statistics/mdl-joint-distributions.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "inverse-transform sampling" → 「逆変換サンプリング」
+- "point atom" / "atom" (of a probability distribution) → 「点質量」
+- "log-normal (distribution / density)" → 「対数正規（分布 / 密度）」
+- "heavy-tailed" → 「裾が重い」
+- "coupling layer" / "affine coupling layer" → 「カップリング層」 / 「アフィンカップリング層」 (distinguished from `結合層` = connected layer)
+- "Cartesian coordinates" / "polar coordinates" → 「デカルト座標」 / 「極座標」
+
+## chapter_mdl-probability-statistics/mdl-joint-distributions.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "explained variance" → 「説明分散」
+- "Box--Muller method" → 「ボックス・ミュラー法」 (follows `ja/style.md` §5 katakana rule for named mathematical methods)
+
+## chapter_mdl-probability-statistics/mdl-distributions.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "binomial distribution" → 「二項分布」, "multinomial distribution" → 「多項分布」, "discrete uniform distribution" → 「離散一様分布」, "Gamma distribution" → 「ガンマ分布」 (standard Japanese probability terminology)
+- "law of rare events" → 「希少事象の法則」
+- "Poisson process" → 「ポアソン過程」
+- "overdispersion" → 「過分散」, "unimodality" → 「単峰性」
+- "tail probability" → 「裾確率」
+
+## chapter_mdl-probability-statistics/mdl-distributions.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "memorylessness" / "memoryless property" → 「無記憶性」
+- "inverse-transform method" / "inverse-transform sampling" → 「逆変換法」 / 「逆変換サンプリング」
+- "de Moivre–Laplace theorem" → 「ド・モアブル・ラプラスの定理」 (katakana for person-named theorem per `ja/style.md` §5)
+- "standard Gaussian" → 「標準ガウス分布」
+- "sample median" → 「標本中央値」 (paired with glossary `sample mean` = 「標本平均」)
+- "eigen-ellipsoid" → 「固有楕円体」
+
+## chapter_mdl-probability-statistics/mdl-distributions.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "reparameterization trick" → 「再パラメータ化トリック」
+- "eigen-coordinates" → 「固有座標」, "eigen-factor" → 「固有因子」
+- "Schur complement" → 「シューア補行列」 (standard Japanese linear-algebra terminology)
+- "jointly Gaussian" / "joint Gaussianity" → 「同時ガウス分布に従う」 / 「同時ガウス性」
+
+## chapter_mdl-probability-statistics/mdl-distributions.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "negative binomial (distribution)" → 「負の二項分布」, "geometric (distribution)" → 「幾何分布」, "log-normal (distribution)" → 「対数正規分布」, "Beta (distribution)" → 「ベータ分布」, "Dirichlet (distribution)" → 「ディリクレ分布」, "Student's $t$ (distribution)" → 「スチューデントの $t$ 分布」
+- "survival function" → 「生存関数」
+- "burstiness" → 「バースト性」
+- "whitening" / "whiten" → 「白色化」 / 「白色化する」
+- "superposition" / "thinning" (of Poisson processes) → 「重ね合わせ」 / 「間引き」
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "canonical form" → 「正準形」 (standard Japanese mathematical statistics term for exponential-family canonical form)
+- "log-partition function" → 「対数分配関数」 (standard Japanese ML/statistics term paired with partition function = 分配関数)
+- "base measure" → 「基底測度」
+- "support" (of a probability distribution/measure) → 「台」
+- "moment matching" → 「モーメントマッチング」
+- "exponential tilt" → 「指数傾斜」
+- "loaded die" → 「偏りのあるサイコロ」
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gibbs' inequality" → 「ギブスの不等式」 (follows `ja/style.md` §5 katakana rule for named mathematical inequalities)
+- "geometric distribution" → 「幾何分布」
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "moment property" → 「モーメントの性質」
+- "minimal" (parameterization/representation of an exponential family) → 「最小」（最小表現）
+- "canonical link" → 「正準リンク」 (standard Japanese GLM terminology)
+- "Poisson regression" → 「ポアソン回帰」
+- "Gumbel" (distribution / noise / random variable) → 「ガンベル」（ガンベル分布・ガンベルノイズ）; "Gumbel-max trick" → 「Gumbel-max トリック」
+- "probit" → 「プロビット」
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "extreme-value theory" → 「極値理論」
+- "Boltzmann's constant" → 「ボルツマン定数」
+- "Laplace's rule of succession" → 「ラプラスの継起則」
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "pseudo-data" → 「擬似データ」 (paired with `decisions.md` `"pseudo-count" → 「擬似カウント」`)
+- "Dirichlet distribution" → 「ディリクレ分布」, "concentration parameter" → 「集中度パラメータ」
+- "Gamma distribution" → 「ガンマ分布」
+- "add-one smoothing" → 「プラス 1 平滑化」
+
+## chapter_mdl-probability-statistics/mdl-exponential-family.md#u06 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "overdispersed" → 「過分散」 (standard Japanese statistical term for overdispersion)
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Statistics" (section heading, `sec_mdl-statistics`) → 「統計学」
+- "estimator" / "estimate" → 「推定量」 / 「推定値」
+- "sample proportion" / "sample median" → 「標本比率」 / 「標本中央値」
+- "plug-in variance" / "plug-in principle" → 「プラグイン分散」 / 「プラグイン原理」
+- "shrunk mean" / "shrinkage factor" → 「縮小平均」 / 「縮小係数」, "James–Stein shrinkage" → 「ジェームズ・スタイン縮小」
+- "Bessel's correction" → 「ベッセルの補正」, "degrees of freedom" → 「自由度」
+- "weak law of large numbers" → 「大数の弱法則」, "converges in probability" → 「確率収束する」
+- "error bar" → 「エラーバー」
+- "midpoint rule" / "left-endpoint rule" → 「中点則」 / 「左端点則」
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "alternative hypothesis" → 「対立仮説」, "null distribution" → 「帰無分布」
+- "reject" / "fail to reject" → 「棄却する」 / 「棄却しない」
+- "permutation test" / "sign-flip permutation test" → 「並べ替え検定」 / 「符号反転並べ替え検定」
+- "significance level" → 「有意水準」, "rejection region" → 「棄却域」
+- "standardized effect" / "effect size" → 「標準化効果量」 / 「効果量」
+- "sample size" → 「標本サイズ」
+- "paired comparison" / "unpaired" → 「対応のある比較」 / 「対応のない」
+- "multiple testing" / "$p$-hacking" → 「多重検定」 / 「$p$ ハッキング」
+- "Bonferroni correction" → 「ボンフェローニ補正」, "Benjamini–Hochberg procedure" → 「ベンジャミニ・ホッホバーグ法」, "false discovery rate" → 「偽発見率」
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "coverage" (of a confidence interval) → 「被覆率」 ("coverage guarantee" → 「被覆保証」)
+- "studentized statistic" → 「スチューデント化された統計量」, "Student's $t$ distribution" → 「スチューデントの $t$ 分布」
+- "Wald interval" → 「ワルド区間」
+- "confidence set" → 「信頼集合」
+- "delta method" → 「デルタ法」
+- "with replacement" → 「復元抽出」
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "bootstrap resample" → 「ブートストラップリサンプル」, "replicate" → 「レプリケート」
+- "percentile confidence interval" → 「パーセンタイル信頼区間」
+- "cluster bootstrap" → 「クラスタ・ブートストラップ」
+
+## chapter_mdl-probability-statistics/mdl-statistics.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Stein's paradox" / "Stein's lemma" → 「スタインのパラドックス」 / 「スタインの補題」
+- "law of the iterated logarithm" → 「重複対数の法則」, "Ville's inequality" → 「ヴィルの不等式」, "martingale" → 「マルチンゲール」
+- "sequential test" → 「逐次検定」
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "The Maximum Likelihood Principle" → 「最尤法の原理」 (paired with glossary `maximum likelihood` = 「最尤法」)
+- "maximum likelihood estimate" / "maximum likelihood estimator" (MLE) → 「最尤推定値」 / 「最尤推定量」（略記は `MLE`）
+- "fair coin" / "biased coin" / "coin's bias" → 「公平なコイン」 / 「偏りのあるコイン」 / 「コインの偏り」 (distinguishes coin probability $\theta$ from additive model parameter 「バイアス」 and estimator bias 「統計的バイアス」)
+- "sample median" → 「標本中央値」 (paired with glossary `sample mean` = 「標本平均」 and `median` = 「中央値」)
+- "score" / "score function" ($\nabla_{\boldsymbol{\theta}} \log p$) → 「スコア関数」 / 「スコア」 (follows `ja/style.md` §7.1)
+- "information identity" → 「情報量恒等式」
+- "Cauchy location model" → 「コーシー位置モデル」
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "empirical distribution" / "empirical frequency" → 「経験分布」 / 「経験頻度」
+- "i.i.d." → 「独立同分布（i.i.d.）」
+- "Categorical (distribution)" → 「カテゴリカル分布」
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "regularity conditions" → 「正則条件」
+- "identifiable" / "non-identifiable" → 「識別可能」 / 「識別不能」 (paired with glossary `identifiability` = 「識別可能性」)
+- "consistency" / "consistent" (of an estimator) → 「一致性」 / 「一致推定量（である）」
+- "converges in distribution" ($\xrightarrow{d}$) / "converges in probability" ($\xrightarrow{P}$) → 「分布収束する」 / 「確率収束する」
+- "Fisher scoring" → 「フィッシャースコアリング」
+- "asymptotically efficient" / "asymptotic efficiency" → 「漸近有効」 / 「漸近有効性」
+- "misspecification" / "misspecified" → 「（モデルの）誤特定」 / 「誤特定された」
+- "sandwich covariance" → 「サンドイッチ共分散」 ("Huber–White sandwich covariance" → 「フーバー・ホワイトのサンドイッチ共分散」)
+- "overdispersed" → 「過分散な」
+- "Laplace's rule of succession" → 「ラプラスの継起則」
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "evidence" (marginal likelihood $P(X)$) → 「エビデンス」 (follows `ja/style.md` §7.1)
+- "add-one smoothing" → 「1 加算平滑化」 (aligned with `ja/decisions.md` `"add-one smoothed" → 「1 加算平滑化を用いた」`)
+- "equivariant" (of an estimator under reparameterization) → 「同変」
+
+## chapter_mdl-probability-statistics/mdl-maximum-likelihood.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "skewness" → 「歪度」
+- "inverse-transform sampling" → 「逆変換サンプリング」
+- "pseudo-true parameter" → 「擬真のパラメータ」
+- "negative binomial distribution" → 「負の二項分布」
+
+## chapter_mdl-probability-statistics/mdl-latent-em-elbo.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "expectation–maximization (EM)" → 「期待値最大化法」（「**期待値最大化**（EM）アルゴリズム」）
+- "Gaussian mixture model (GMM)" → 「混合ガウスモデル（Gaussian mixture model、GMM）」 (aligned with glossary `mixture of Gaussians` = 「混合ガウスモデル」)
+- "complete-data" → 「完全データ」 ("expected complete-data log-likelihood" → 「期待完全データ対数尤度」)
+- "responsibility / responsibilities" (in mixture models / EM) → 「負担率」 (standard Japanese ML terminology, e.g., Bishop PRML)
+- "coordinate ascent" → 「座標上昇法」 (paired with `decisions.md` `"gradient ascent" → 「勾配上昇法」`)
+- "K-means" → 「K-means」 (kept in Latin script per `ja/style.md` §3.2)
+
+## chapter_mdl-probability-statistics/mdl-latent-em-elbo.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "responsibility / responsibilities" → 「負担率」
+- "coordinate ascent" → 「座標上昇法」
+- "label switching" → 「ラベルスイッチング」, "non-identifiability" → 「識別不能性」
+- "variance spike" / "variance floor" → 「分散スパイク」 / 「分散の下限」
+- "amortized variational inference" / "amortized encoder" → 「償却変分推論」 / 「償却エンコーダ」 (aligned with `decisions.md` `"amortize" → 「償却する」`)
+- "reparameterization" / "reparameterize" → 「再パラメータ化」 / 「再パラメータ化する」 (follows `ja/style.md` §3.3 `パラメータ`)
+
+## chapter_mdl-probability-statistics/mdl-latent-em-elbo.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "observed information" / "complete-data information" → 「観測情報量」 / 「完全データ情報量」 (paired with glossary `Fisher information` = 「フィッシャー情報量」)
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Bayesian computation" → 「ベイズ計算」
+- "Laplace approximation" → 「ラプラス近似」（人名単体の Laplace は `ja/style.md` §5 に従いラテン文字維持、手法名はベイズ統計の定着訳に従いカタカナ）
+- "conjugate (prior)" → 「共役（事前分布）」
+- "unnormalized posterior / unnormalized joint density" → 「未正規化事後分布 / 未正規化同時密度」（glossary `unnormalized density` = 「未正規化密度」に対応）
+- "skewness / skew" → 「歪度 / 歪み」
+- "plug-in (prediction)" → 「プラグイン（予測）」
+- "moderate (predictions) / predictive moderation" → 「（予測を）穏健化する / 予測の穏健化」
+- "error bar" → 「エラーバー」
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "proposal (distribution)" → 「提案分布」
+- "self-normalized importance sampling" → 「自己正規化重要度サンプリング」
+- "defensive mixture" → 「防御的混合分布」
+- "weight degeneracy" → 「重みの退化」
+- "Student-$t$ (proposal)" → 「スチューデント $t$（提案分布）」
+- "Metropolis / Metropolis–Hastings (algorithm / rule)" → 「メトロポリス法 / メトロポリス規則 / メトロポリス・ヘイスティングス法」
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "transition rule" → 「遷移規則」
+- "mixing" (of Markov chains) → 「混合」
+- "warm-up" → 「ウォームアップ」
+- "over-dispersed" → 「過分散（な）」
+- "trace plot" → 「トレースプロット」
+- "split $\widehat R$" → 「分割 $\widehat R$」（スライド見出しの `Split R-Hat` は「分割 R-hat」）, "potential scale reduction factor" → 「潜在的スケール縮小因子」
+- "integrated autocorrelation time" → 「積分自己相関時間」
+- "first-order autoregressive process, AR(1)" → 「1 次自己回帰過程 AR(1)」
+- "Monte Carlo standard error (MCSE)" → 「モンテカルロ標準誤差（MCSE）」
+- "zero-forcing" / "mass-covering" → 「ゼロ強制型」 / 「質量被覆型」（`decisions.md` の `mode-seeking` = 「モード探索型」と対）
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "mean-field (Gaussian / variational inference)" → 「平均場（ガウス分布 / 変分推論）」
+- "precision matrix" → 「精度行列」（分類評価指標の `precision` = 「適合率」と区別）
+- "full-covariance Gaussian" / "diagonal Gaussian" → 「完全共分散ガウス分布」 / 「対角ガウス分布」
+
+## chapter_mdl-probability-statistics/mdl-bayesian-computation.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "deep ensemble" → 「深層アンサンブル」
+- "independence sampler" → 「独立サンプラ」（`ja/style.md` §3.3 の `-er` 長音省略規則に従う）
+- "Barker's rule" → 「Barker の規則」（人名は `ja/style.md` §5 に従いラテン文字維持）
+- "probit approximation" → 「プロビット近似」
+- "Mahalanobis distance" → 「マハラノビス距離」
+- "Metropolis-adjusted Langevin algorithm" / "unadjusted Langevin algorithm" → 「メトロポリス調整付きランジュバンアルゴリズム」 / 「未調整ランジュバンアルゴリズム」
+
+## chapter_mdl-probability-statistics/mdl-concentration-generalization.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Chernoff method" / "Chernoff bound" → 「チェルノフ法」 / 「チェルノフ限界」（上界を強調する文脈では「チェルノフ上界」）
+- "Hoeffding's lemma" / "Hoeffding's inequality" / "Bernstein's inequality" → 「ヘフディングの補題」 / 「ヘフディングの不等式」 / 「ベルンシュタインの不等式」（`ja/style.md` §5 の人名由来用語のカタカナ規則に従う）
+- "moment generating function (MGF)" / "log-MGF" / "cumulant generating function" → 「モーメント母関数（MGF）」 / 「対数 MGF」 / 「キュムラント母関数」
+- "majorant" → 「優関数」
+- "sub-Gaussian" / "sub-exponential" → 「準ガウス」 / 「準指数」, "variance proxy" → 「分散プロキシ」
+- "thin shell" → 「薄い球殻」, "near-orthogonality" → 「近似直交性」
+- "plug-in" → 「プラグイン」, "finite-sample" → 「有限標本」
+
+## chapter_mdl-probability-statistics/mdl-concentration-generalization.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "LeCun initialization" → 「LeCun 初期化」（`ja/decisions.md` の `"He initialization" → 「He 初期化」` および `ja/style.md` §5・§2.2 と整合）
+- "Johnson–Lindenstrauss lemma" → 「ジョンソン・リンデンシュトラウスの補題」
+- "spherical interpolation (Slerp / slerp)" / "linear interpolation (Lerp / lerp)" → 「球面補間（Slerp / slerp）」 / 「線形補間（Lerp / lerp）」
+- "null model" → 「帰無モデル」
+- "random projection" → 「ランダム射影」
+
+## chapter_mdl-probability-statistics/mdl-generalization-bounds.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "empirical Rademacher complexity" → 「経験ラデマッハ複雑度」 (paired with `decisions.md` `"Rademacher complexity" → 「ラデマッハ複雑度」`)
+- "symmetrization" → 「対称化」, "ghost sample" → 「ゴースト標本」
+- "Hoeffding's inequality" / "Hoeffding radius" → 「ヘフディングの不等式」 / 「ヘフディング半径」 (follows `ja/style.md` §5 katakana rule for theorems/concepts named after people, aligned with `イェンセンの不等式` and `チェビシェフの不等式`)
+- "Massart's lemma" → 「マサールの補題」, "McDiarmid's inequality" → 「マクダイアミッドの不等式」, "Talagrand's contraction lemma" → 「タラグランの縮小補題」
+- "singleton class" → 「単一要素クラス」
+- "ramp loss" → 「ランプ損失」, "margin bound" → 「マージン上界」
+- "benign overfitting" → 「良性過学習」
+- "winner's curse" → 「勝者の呪い」
+
+## chapter_mdl-probability-statistics/mdl-generalization-bounds.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Rademacher variables" → 「ラデマッハ変数」
+- "covering numbers" → 「被覆数」
+- "predictor class" / "loss class" → 「予測器クラス」 / 「損失クラス」
+- "contraction lemma" → 「縮小補題」
+- "thin-shell phenomenon" → 「薄殻現象」
+
+## chapter_mdl-probability-statistics/mdl-generalization-bounds.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "capacity product" → 「容量積」
+- "clean part" / "noise part" (of test error) → 「クリーン成分」 / 「ノイズ成分」
+- "effective rank(s)" → 「有効ランク」 (retains binding glossary `rank` = 「ランク」)
+- "structural risk minimization" → 「構造的リスク最小化」
+
+## chapter_mdl-probability-statistics/mdl-generalization-bounds.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "bounded differences" → 「有界差分」
+- "sub-Gaussian" → 「サブガウス」, "variance proxy" → 「分散プロキシ」
+- "excess risk" → 「過剰リスク」 (paired with `decisions.md` `"excess loss" → 「過剰損失」`)
+- "boosting attack" → 「ブースティング攻撃」
+- "power-law spectra" → 「べき乗則スペクトル」
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "naive Bayes" / "naive Bayes rule" → 「ナイーブベイズ」 / 「ナイーブベイズ則」
+- "generative classifier" / "discriminative classifier" → 「生成分類器」 / 「識別分類器」
+- "generative route" / "discriminative route" → 「生成ルート」 / 「識別ルート」
+- "Bayes numerator" → 「ベイズ分子」
+- "inked" / "blank" (of binary Fashion-MNIST pixels) → 「塗られている（塗られた）」 / 「空白」
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Bernoulli naive Bayes" / "Gaussian naive Bayes" → 「ベルヌーイナイーブベイズ」 / 「ガウスナイーブベイズ」
+- "rule of succession" → 「継起の法則」
+- "class score" → 「クラススコア」
+- "event model" (for text in naive Bayes) → 「事象モデル」
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "ink fraction" → 「インク率」
+
+## chapter_mdl-probability-statistics/mdl-naive-bayes.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "multinomial model" / "Bernoulli model" → 「多項モデル」 / 「ベルヌーイモデル」
+- "Sheppard's formula" → 「Sheppard の公式」 (follows `ja/style.md` §5 keeping less-common person names in Latin script)
+
+## chapter_mdl-probability-statistics/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "conformal prediction" / "split conformal prediction" → 「コンフォーマル予測」 / 「分割コンフォーマル予測」
+- "confidence sequence" → 「信頼列」
+- "atom" (of a probability measure, i.e., point mass) → 「アトム」
+- "Lebesgue decomposition" → 「ルベーグ分解」, "singular continuous" → 「特異連続」, "absolutely continuous" → 「絶対連続」, "Radon–Nikodym theorem" → 「ラドン・ニコディムの定理」
+- "heavy tail(s)" / "stable law(s)" / "$\alpha$-stable law" → 「重い裾」 / 「安定法則」 / 「$\alpha$ 安定法則」
+- "independence of irrelevant alternatives" → 「無関係な選択肢からの独立性」
+- "studentized bootstrap" / "BCa (bias-corrected and accelerated) interval" → 「スチューデント化ブートストラップ法」 / 「BCa（バイアス補正・加速）区間」
+- "sub-Gaussian" → 「準ガウス」
+- "supermartingale" → 「優マルチンゲール」
+
+## chapter_mdl-probability-statistics/further-reading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Hamiltonian Monte Carlo" → 「ハミルトニアンモンテカルロ」
+- "stochastic-gradient Langevin dynamics" → 「確率的勾配ランジュバン動力学」
+- "bounded differences" → 「有界差分」, "McDiarmid's inequality" → 「マクディアミッドの不等式」
+- "covering number(s)" → 「被覆数」, "Sauer's lemma" → 「ザウアーの補題」, "chaining" → 「チェイニング」
+- "PAC-Bayes bound" → 「PAC-Bayes 限界」 (paired with `decisions.md` `"generalization bound" → 「汎化限界」`)
+- "algorithmic stability" → 「アルゴリズム的安定性」
+- "Platt scaling" → 「Platt スケーリング」, "isotonic regression" → 「アイソトニック回帰」
+- "naive Bayes" → 「ナイーブベイズ」
+
+## chapter_mdl-probability-statistics/further-reading.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "General Probability and Statistics Resources" → 「確率・統計の一般的な参考資料」
+- "margin bound(s)" → 「マージン限界」 (paired with `decisions.md` `"generalization bound" → 「汎化限界」`)
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "self-information" → 「自己情報量」 (distinguished from synonymous *surprisal* = 「サプライザル」 where the English explicitly introduces both terms)
+- "binary entropy" → 「2 値エントロピー」
+- "binary code" / "codeword" → 「2 元符号」 / 「符号語」
+- "clean class" / "clean label" → 「クリーンなクラス」 / 「クリーンなラベル」 (distinguished from the noisy true distribution $p$)
+- "log-gamma function" → 「対数ガンマ関数」
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "log-softmax" → 「対数ソフトマックス」
+- "marginal (distribution)" → 「周辺分布」
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "population loss" → 「母集団損失」
+- "Bayes predictor" / "Bayes-optimal" → 「ベイズ予測器」 / 「ベイズ最適」
+- "scoring rule" / "proper" / "strictly proper" → 「スコアリングルール」 / 「固有」 / 「狭義固有」 (extends `ja/decisions.md` `"proper scoring rule" → 「固有スコアリングルール」`)
+- "log score" / "Brier score" → 「対数スコア」 / 「ブライアスコア」
+- "teacher (network)" / "student (network)" → 「教師（ネットワーク）」 / 「生徒（ネットワーク）」
+- "dark knowledge" → 「ダークナレッジ」
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u04 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "geometric distribution" → 「幾何分布」
+- "Riemann-integrable" → 「リーマン可積分」
+
+## chapter_mdl-information-theory/mdl-information-theory.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "linear score" → 「線形スコア」
+- "Laplace density" → 「ラプラス密度」
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "symbol code" / "stream code" / "block code" → 「記号符号」 / 「ストリーム符号」 / 「ブロック符号」
+- "codeword" → 「符号語」, "prefix-free" → 「プレフィックスフリー」, "uniquely decodable" → 「一意復号可能」
+- "Kraft inequality" / "Kraft's inequality" → 「クラフトの不等式」 (aligns with `decisions.md` `chapter_mdl-information-theory/index.md#u01` over proposed glossary `クラフト不等式`)
+- "dyadic interval" → 「2 進区間」 (paired with `decisions.md` `"dyadic source" → 「2 進情報源」`)
+- "Shannon code" / "Shannon lengths" → 「シャノン符号」 / 「シャノン長」, "Huffman code" / "Huffman's algorithm" → 「ハフマン符号」 / 「ハフマンのアルゴリズム」, "McMillan's theorem" → 「マクミランの定理」
+- "bits per character" / "bits per symbol" → 「文字あたりビット数」 / 「記号あたりビット数」 (paired with `decisions.md` `"bits per byte" → 「バイトあたりビット数」`)
+- "compressor" / "symbol coder" → 「圧縮器」 / 「記号符号器」
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "significand" → 「仮数部」 (consistent with `decisions.md` `"mantissa" → 「仮数部」`)
+- "Bayesian information criterion (BIC)" → 「ベイズ情報量規準（BIC）」
+- "Occam's razor" → 「オッカムの剃刀」
+- "Cesàro average" → 「チェザロ平均」
+- "prequential" / "prequential code" → 「逐次予測（prequential）」 / 「逐次予測符号」
+- "asymptotic equipartition property (AEP)" → 「漸近的等分配性（AEP）」, "typical set" / "typical sequence" → 「典型集合」 / 「典型系列」
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Shannon's source-coding theorem" → 「シャノンの情報源符号化定理」
+- "converge in probability" → 「確率収束する」
+- "stationary ergodic source" → 「定常エルゴード情報源」
+- "rate" (of a source code) → 「レート」
+- "perplexity floor" → 「パープレキシティの下限」 (paired with `decisions.md` `"loss floor" → 「損失の下限」`)
+
+## chapter_mdl-information-theory/mdl-coding-compression.md#u05 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "linear guessing code" → 「線形推測符号」
+- "exit probability" (of a Markov chain state) → 「離脱確率」
+
+## chapter_mdl-information-theory/mdl-test-functions-transport.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "test function" → 「テスト関数」
+- "auditor" / "panel of auditors" (IPM metaphor) → 「監査人」 / 「監査人のパネル」
+- "mean feature" → 「平均特徴」, "feature map" (kernel mapping $\boldsymbol{\varphi}(x)$) → 「特徴写像」 (distinguished from CNN activation array `特徴マップ`)
+- "characteristic (kernel)" → 「特性的」 / 「特性カーネル」
+- "two-sample test" → 「2 標本検定」, "U-statistic" → 「U 統計量」
+
+## chapter_mdl-information-theory/mdl-test-functions-transport.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "transport plan" → 「輸送計画」, "monotone plan" → 「単調計画」
+- "Kantorovich–Rubinstein duality" → 「カントロヴィッチ・ルビンシュタイン双対性」 (mathematical duality named after people per `ja/style.md` §5)
+- "1-Lipschitz" → 「1 リプシッツ」 (`ja/style.md` §2.2 spacing between half-width digit and katakana, paired with `decisions.md` `"Lipschitz continuous" → 「リプシッツ連続」`)
+- "Wasserstein-2 distance" → 「2 次ワッサースタイン距離」 (paired with `decisions.md` `"Wasserstein-1 distance" → 「1 次ワッサースタイン距離」` and glossary `ワッサースタイン距離`)
+- "entropic regularization" → 「エントロピー正則化」, "Sinkhorn iterations" → 「シンクホーン反復」, "Gibbs kernel" → 「ギブスカーネル」, "entropic cost" → 「エントロピーコスト」
+
+## chapter_mdl-information-theory/mdl-test-functions-transport.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Sinkhorn divergence" → 「シンクホーンダイバージェンス」, "energy distance" → 「エネルギー距離」, "Fréchet distance" → 「フレシェ距離」
+- "Kernel Inception Distance" → 「Kernel Inception Distance」 (proper metric name kept in Latin script per `ja/style.md` §3.2, matching `Fréchet Inception Distance`)
+
+## chapter_mdl-information-theory/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "bits-back coding" → 「ビッツバック符号化」
+- "two-part code" → 「2 部符号」, "prequential code / coding" → 「逐次予測符号 / 逐次予測符号化」, "normalized maximum likelihood" → 「正規化最尤法」
+- "asymmetric numeral systems" → 「非対称記数系」
+- "stationary ergodic source" → 「定常エルゴード情報源」, "Huffman coding" → 「ハフマン符号化」
+- "post-hoc recalibration" → 「事後的な再較正」, "miscalibration" → 「較正のずれ」
+
+## chapter_mdl-information-theory/further-reading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Rényi divergence" → 「レーニイダイバージェンス」, "Rényi differential privacy" → 「レーニイ差分プライバシー」, "differential privacy" → 「差分プライバシー」
+- "Chentsov's theorem" → 「チェンツォフの定理」, "Riemannian manifold / metric" → 「リーマン多様体 / リーマン計量」
+- "Sinkhorn divergence" → 「シンクホーンダイバージェンス」, "sliced Wasserstein distance" → 「スライスワッサースタイン距離」
+- "Kantorovich–Rubinstein dual" → 「カントロヴィチ・ルビンシュタイン双対」, "1-Lipschitz function" → 「リプシッツ定数 1 の関数」
+- "kernel Stein discrepancy" → 「カーネルスタイン不一致度」, "Stein variational gradient descent" → 「スタイン変分勾配降下法」, "Stein operator" → 「スタイン作用素」
+
+## chapter_mdl-information-theory/further-reading.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "low-density parity-check (LDPC) code" → 「低密度パリティ検査（LDPC）符号」, "polar code" → 「ポーラ符号」
+- "learned lossy compression" → 「学習型非可逆圧縮」, "entropy model" → 「エントロピーモデル」
+- "contrastive log-ratio upper bound (CLUB)" → 「対照対数比上界（CLUB）」
+- "Fenchel conjugate" → 「フェンシェル共役」
+
+## chapter_mdl-dynamics/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Dynamics: Differential Equations and Generative Flows" (chapter title) → 「ダイナミクス：微分方程式と生成フロー」
+- "solver" (ODE/SDE numerical solver) → 「ソルバ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords, consistent with `固有値ソルバ / 線形ソルバ`)
+- "Euler (step / method)", "Runge–Kutta (solver / method)", "Picard–Lindelöf", "Liouville's trace rule" → 「オイラー（ステップ / 法）」, 「ルンゲ・クッタ（法のソルバ / 法）」, 「ピカール・リンデレーフ」, 「リウヴィルのトレース則」 (follows `ja/style.md` §5 katakana rule for classical mathematical methods/theorems)
+- "stochastic calculus" → 「確率解析」, "quadratic variation" → 「二次変分」
+- "stiff (ODE)" / "stiffness" → 「硬い（ODE）」 / 「硬さ」 (standard Japanese numerical analysis terminology)
+- "probability current" → 「確率流」 (distinguished from glossary `probability flow` = 「確率フロー」)
+- "zero-order hold" → 「ゼロ次ホールド」
+
+## chapter_mdl-dynamics/mdl-odes-solvers.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "initial-value problem" / "initial value" → 「初期値問題」 / 「初期値」
+- "autonomous" (ODE / vector field) → 「自律的」
+- "Picard iteration" / "Picard operator" / "Picard–Lindelöf theorem" → 「Picard 反復」 / 「Picard 作用素」 / 「Picard–Lindelöf の定理」 (person names in Latin script per `ja/style.md` §5)
+- "globally Lipschitz" / "locally Lipschitz" → 「大域的リプシッツ連続」 / 「局所的リプシッツ連続」（スライド等の略記では「大域リプシッツ」 / 「局所リプシッツ」）
+- "bijection" / "bijective" → 「全単射」 / 「全単射な」
+- "well-posed" → 「適定」
+- "blow up" / "blow-up" (finite-time blow-up of an ODE) → 「爆発する」 / 「有限時間爆発」
+- "linear system" (dynamical system $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x}$) → 「線形系」 (distinguished from algebraic simultaneous equations `連立一次方程式`)
+- "activation" (in "Lipschitz activations", $\tanh$) → 「活性化関数」 (glossary's proposed `活性化値` refers to unit outputs)
+
+## chapter_mdl-dynamics/mdl-odes-solvers.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "asymptotically stable" / "unstable" → 「漸近安定」 / 「不安定」
+- "stable node" / "unstable node" / "saddle" / "stable spiral" / "unstable spiral" / "center" (planar phase-portrait fixed-point classes) → 「安定ノード」 / 「不安定ノード」 / 「鞍点」 / 「安定スパイラル」 / 「不安定スパイラル」 / 「渦心点」
+- "variation of constants" → 「定数変化法」
+- "zero-order hold (ZOH)" → 「ゼロ次ホールド（ZOH）」
+- "hyperbolic (fixed point)" → 「双曲型（不動点）」, "topologically conjugate" → 「位相共役」
+- "Hartman–Grobman theorem" → 「Hartman–Grobman の定理」, "Lyapunov function" → 「Lyapunov 関数」 (person names in Latin script per `ja/style.md` §5)
+- "Neural ODE" → 「ニューラル ODE」 (adds half-width space per `ja/style.md` §2.2 to glossary's proposed `ニューラルODE`)
+
+## chapter_mdl-dynamics/mdl-odes-solvers.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Torricelli's law" → 「Torricelli の法則」 (person name in Latin script per `ja/style.md` §5)
+- "nonnormal" / "nonnormality" → 「非正規」 / 「非正規性」
+- "closed orbit" → 「閉軌道」
+
+## chapter_mdl-dynamics/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "exponential integrator" → 「指数積分器」, "zero-order hold" → 「ゼロ次ホールド」, "variation-of-constants formula" → 「定数変化法の公式」
+- "probability-flow ODE" → 「確率フロー ODE」 (inserts half-width space per `ja/style.md` §2.2, overriding unspaced proposed `確率フローODE`)
+- "geometric integration" → 「幾何学的数値積分」, "symplectic" → 「シンプレクティック」, "leapfrog" → 「リープフロッグ法」, "backward error analysis" → 「後退誤差解析」
+- "implicit gradient regularizer" → 「暗黙的勾配正則化項」
+- "coupling layer" → 「カップリング層」, "invertible residual network" → 「可逆残差ネットワーク」
+- "reversible solver" → 「可逆ソルバ」 (drops final `ー` per `ja/style.md` §3.3)
+- "latent ODE" → 「潜在 ODE」, "neural controlled differential equation" → 「ニューラル制御微分方程式」
+- "Wasserstein gradient flow" → 「ワッサースタイン勾配フロー」, "Schrödinger bridge" → 「シュレーディンガーブリッジ」
+
+## chapter_mdl-dynamics/further-reading.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Wasserstein-2 distance" → 「2 次ワッサースタイン距離」 (paired with `decisions.md` `"Wasserstein-1 distance" → 「1 次ワッサースタイン距離」`), "JKO scheme" → 「JKO スキーム」
+- "Stratonovich integral" → 「ストラトノビッチ積分」, "Wong–Zakai theorem" → 「ウォン・ザカイの定理」, "Girsanov's theorem" → 「ギルサノフの定理」
+- "additive noise" / "multiplicative noise" → 「加法的ノイズ」 / 「乗法的ノイズ」
+- "backward SDE" → 「後向き SDE」, "quadratic variation" → 「二次変分」, "path law" → 「経路法則」
+- "implicit score matching" / "sliced score matching" → 「陰的スコアマッチング」 / 「スライススコアマッチング」
+- "sampling error" (discretization/truncation error of a generative sampler) → 「サンプリング誤差」 (distinguished from statistical survey `標本誤差`)
+- "entropic transport" / "entropy-regularized optimal transport" → 「エントロピー輸送」 / 「エントロピー正則化最適輸送」
+
+## chapter_mdl-dynamics/further-reading.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "neural ODE" → 「ニューラル ODE」 (inserts half-width space per `ja/style.md` §2.2, overriding unspaced proposed `ニューラルODE`)
+- "Milstein (scheme)" → 「ミルスタイン法」, "strong and weak orders" → 「強収束次数・弱収束次数」
