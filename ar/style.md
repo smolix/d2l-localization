@@ -132,6 +132,7 @@ instead:
 | **Name the thing, then give its symbol.** Where two math spans of one noun follow each other, join them with هو / هي, ذات, بحجم or المسمى. | The noun carries case, gender and the article, which a symbol cannot; and the protected tokens keep the English order, so the check stays silent. | "a $3 \times 3$ input tensor `X`" → موتر مدخلات $3 \times 3$ هو `X` ; "the kernel $\mathbf{K}$ be a $k_\textrm{h} \times k_\textrm{w}$ matrix" → النواة $\mathbf{K}$ مصفوفة أبعادها $k_\textrm{h} \times k_\textrm{w}$ |
 | **Keep a number with its Latin unit or name in the English order**, as one piece. | It is one left-to-right run and displays as written. | 24 GiB, 5 ms, Python 3.12, GPT-2, RTX 4090 |
 | **Write ranges in prose with words.** Keep the en dash only in slides, tables and captions. | In right-to-left text `40–55` is drawn with 40 on the right, `40-55` with 40 on the left; من … إلى … cannot be misread. | "40–55 epochs" → من 40 إلى 55 حقبة ; table cell: 40–55 |
+| **Arrows in Arabic text point in the reading direction** (author, 2026-11-27): an arrow that means "next", "leads to" or "becomes" between Arabic words, or after an Arabic link text, is ← (`&larr;`); one that means "back" is →. Arrows inside math, code, or a Latin run (a menu path such as **File → Save a copy in Drive**) stay as written. | Unicode arrows are not mirrored by the bidirectional algorithm, and the site's style sheet does not mirror them either, so an English → would point backwards in right-to-left text. | "Start with the Introduction&nbsp;&rarr;" → ابدأ بالمقدمة&nbsp;&larr; ; "state → action → reward" → الحالة ← الفعل ← المكافأة |
 | **Geometry is copied, not mirrored.** Left, right, top-left, "left to right" in the English describe figures, matrices, equations and code, which are not mirrored. | The figure the reader sees is the English one. | "the upper-left corner" → الركن العلوي الأيسر ; "left to right" → من اليسار إلى اليمين |
 
 If the English order of protected tokens gives wrong Arabic, write correct
@@ -331,7 +332,7 @@ units or currencies.
 - **Languages and places:** Arabic (الإنجليزية، الولايات المتحدة); programming
   languages stay in Latin (Python, ✗ بايثون).
 - **Structure words:** chapter الفصل, section القسم, subsection القسم الفرعي,
-  appendix الملحق, part الجزء; Summary → الملخص, Exercises → تمارين,
+  appendix الملحق, part الجزء, the Attic part → الأرشيف (author, 2026-11-27; not the literal العلية); Summary → الملخص, Exercises → تمارين,
   Discussions → النقاشات; Theorem → مبرهنة, Proposition → قضية, Lemma →
   توطئة, Corollary → نتيجة, Definition → تعريف, Proof → برهان, Remark →
   ملاحظة, Example → مثال. The heading "تمارين" and the link text "النقاشات" are
