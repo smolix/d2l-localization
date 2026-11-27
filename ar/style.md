@@ -114,7 +114,7 @@ libraries, datasets, optimizers, metrics and hardware (PyTorch, ResNet, BERT,
 Adam, ReLU, softmax, GPU, Fashion-MNIST, im2col) stay as in English
 (TRANSLATING.md §4, §7). Never write them in Arabic letters (✗ بايثون،
 ✗ تينسرفلو، ✗ باي تورش، ✗ جوبيتر، ✗ ريزنت، ✗ جي بي يو), although SDAIA does
-(سوفت ماكس، تينسرفلو). Terms follow §5; well-known companies follow §7.
+(سوفت ماكس، تينسرفلو). Terms follow §5; companies and people follow §7.
 
 ### 3.2 Order: how to write a sentence that displays correctly
 
@@ -305,12 +305,11 @@ units or currencies.
   script, exactly as in English, also for versioned model names: Fashion-MNIST,
   RTX 4090, GPT-2, GPT-4o, Llama-8B, PyTorch, Python, Jupyter, Stanford
   CS231n (✗ بايثون، ✗ تينسرفلو، ✗ باي تورش، ✗ جوبيتر).
-- **Well-known companies and products** (author, §12.7): Arabic letters, with
-  the Latin in parentheses at the first mention on a page, then Arabic only:
-  إنفيديا (Nvidia)، جوجل (Google)، مايكروسوفت (Microsoft)، ميتا (Meta). This is
-  what SDAIA and MBZUAI print (مايكروسوفت (Microsoft)، وجوجل (Google)). Use the
-  spelling they use (جوجل, not غوغل); a name with no settled Arabic spelling
-  stays in Latin.
+- **Companies and products** (author, 2026-11-27): the same rule as for
+  people. They stay in Latin script, as in the English: أعلنت Nvidia …،
+  خدمات Amazon … (✗ إنفيديا، ✗ جوجل، ✗ مايكروسوفت). SDAIA and MBZUAI write
+  them in Arabic letters (مايكروسوفت (Microsoft)); the book does not, so that
+  company, product, model and library names all read the same way.
 - **People** (author, §12.7): a person whose name is part of a glossary term
   is written in Arabic letters, with the glossary's spelling, everywhere: غاوس،
   بايز، ماركوف، نيوتن، لاغرانج، تايلور، فورييه، برنولي، بواسون، ليبشيتز،
@@ -323,7 +322,7 @@ units or currencies.
   (✗ الدكتور، ✗ البروفيسور).
 - **Transliteration, where a person's name is in Arabic letters:** /g/ is غ
   (غاوس، لاغرانج، غرام); /v/ is ف; /p/ is ب; no ڤ، پ، گ. This is the
-  glossary's practice. Company names keep their established spelling (جوجل).
+  glossary's practice.
 - **Terms named after people:** as the glossary has them: التوزيع الغاوسي،
   مبرهنة بايز، سلسلة ماركوف، مضاعف لاغرانج، طريقة نيوتن، مفكوك تايلور، ثابت
   ليبشيتز، المصفوفة الهيسية، المصفوفة اليعقوبية.
@@ -571,12 +570,12 @@ this guide follow the decisions. One point is open (16).
    (مُعامِل) and MBZUAI (معامل 45:2) use one word for both; it is recorded in
    the glossary notes, not as an alternative, because the check would then
    accept the coefficient word for "parameter".
-7. **Names** (§7): changed. The two-tier rule for people stands (Arabic letters
-   for names inside glossary terms, Latin for cited authors; mixing is fine).
-   Well-known companies and products are written in Arabic letters with the
-   Latin in parentheses at the first mention (إنفيديا (Nvidia)), as SDAIA and
-   MBZUAI print them (جوجل، مايكروسوفت، ميتا); versioned model names (GPT-4o,
-   Llama-8B), libraries and tools stay in Latin.
+7. **Names** (§7): the two-tier rule for people stands (Arabic letters for
+   names inside glossary terms, Latin for cited authors; mixing is fine).
+   Companies and products follow the same rule as people, so they stay in
+   Latin (Nvidia, Google), although SDAIA and MBZUAI write them in Arabic
+   letters (author, 2026-11-27). Versioned model names (GPT-4o, Llama-8B),
+   libraries and tools stay in Latin.
 8. **المحول for the Transformer architecture** (§5.1): accepted. Taima
    writes المحول 217 times, SDAIA مُحوِّل, Wikipedia محول 101.
 9. **Kernel plural** (§5.2): changed to نوى. Taima writes نوى for kernels and
@@ -613,7 +612,8 @@ this guide follow the decisions. One point is open (16).
     used, since Hsoub's المرمز is the tokenizer.
 22. **Maximum likelihood** (§10.1): الإمكان الأعظم, one form.
 23. **stack** (§10.1): تكديس for stacking layers, مكدس for the data structure.
-    Neither SDAIA nor MBZUAI has the word.
+    Neither SDAIA nor MBZUAI has the word; accepted by the author with the
+    other thinly attested new entries (2026-11-27).
 24. **Additions from the editions report** (§1, §5.1, §7, §10): ✗ دعونا
     (Taima 213×) → لنـ; ✗ قم بـ in exercises (140×); fewer يتم (782×); no
     Latin plural acronyms in prose (✗ CNNs); library and tool names in Latin
@@ -648,7 +648,8 @@ and lists are in `glossary/notes/ar-style-guide-corrections.md`. Arabic now has
 9. **Headwords without the article** (149 entries); التفاف keeps its ال, which
    belongs to the word.
 10. **Decided terms:** token رمز مميز, precision إحكام, LSTM ذاكرة قصيرة المدى
-    مطولة (SDAIA and Wikipedia), kernel plural نوى (أنوية removed).
+    مطولة (SDAIA and Wikipedia; accepted by the author, 2026-11-27), kernel
+    plural نوى (أنوية removed).
 11. **SDAIA forms as alternatives** where practice won: معامل ضبط
     (hyperparameter), خاصية (feature), خلية عصبية (neuron), ترشيح
     (convolution), تقدير الأرجحية الأعلى (MLE).
