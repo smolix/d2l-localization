@@ -1197,3 +1197,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | batch | lot | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
 | advantage | avantage | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
 | cost | coût | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |
+| input |  | unresolved | input: The data or values fed into a model, layer or operation. |  |
+| output |  | unresolved | output: The values a model, layer or operation produces. |  |
+| parameter |  | unresolved | parameter: A quantity of a model or distribution that is learned or set; in code, an argument a function takes. |  |
+| window |  | unresolved | window: A region of fixed shape that slides over an input, or the span of context a model sees. |  |
+| patch |  | unresolved | patch: A small rectangular region of an input image or feature map. |  |
+| edge |  | unresolved | edge: A boundary in an image where intensity changes sharply. |  |
+| stack |  | unresolved | stack: To place layers or tensors one after another or on top of each other; the resulting sequence. |  |
+| framework |  | unresolved | framework: A software library for building and training models, such as PyTorch or JAX. |  |
+| code |  | unresolved | program-code: Program text written in a programming language. |  |
+| dense layer |  | unresolved | dense-layer: A layer in which every output depends on every input through a learned weight. |  |
+| vertical |  | unresolved | vertical: Running from top to bottom, as a vertical edge or axis. |  |
+| notebook |  | unresolved | jupyter-notebook: An interactive document of code cells and their outputs, such as a Jupyter notebook. |  |

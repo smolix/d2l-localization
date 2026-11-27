@@ -4,7 +4,7 @@
   "local_git_head": "6c51fd3c5857bb23a6ff2e8bd0ef71e8b2aa2a77",
   "live_toc_html_sha256": "9217cdcc078e879ccbd7cecdfb05192fe634a6c829accce3276bb4900da5ea35",
   "scope_note": "Live navigation mapped by URL stem to local .md, then .qmd. Matching a path does not prove content identity. Counts reflect references, not completeness or semantic review.",
-  "concept_count": 1184,
+  "concept_count": 1203,
   "live_pages": [
     {
       "title": "Preface",
@@ -18,7 +18,7 @@
       "url": "https://d2l.smola.org/chapter_installation/index.html",
       "local_source": "chapter_installation/index.md",
       "sha256": "0c213c54528cd441ef92cd4c558ef58b37a2847521ba6b81498bab6f01e3e50a",
-      "referenced_concepts": 0
+      "referenced_concepts": 1
     },
     {
       "title": "Notation",
@@ -32,7 +32,7 @@
       "url": "https://d2l.smola.org/chapter_introduction/index.html",
       "local_source": "chapter_introduction/index.md",
       "sha256": "492e372eb18d565e2da7c38cfd3c5dfe508812417ab0fe52d0258bbbec623f33",
-      "referenced_concepts": 1
+      "referenced_concepts": 3
     },
     {
       "title": "Basics",
@@ -53,7 +53,7 @@
       "url": "https://d2l.smola.org/chapter_preliminaries/ndarray.html",
       "local_source": "chapter_preliminaries/ndarray.md",
       "sha256": "88a83fee19375787f0bb0d183bdbd2e3a6faef4caed1242ba4f76a63546deb04",
-      "referenced_concepts": 2
+      "referenced_concepts": 3
     },
     {
       "title": "1.2 Data Preprocessing",
@@ -67,7 +67,7 @@
       "url": "https://d2l.smola.org/chapter_preliminaries/linear-algebra.html",
       "local_source": "chapter_preliminaries/linear-algebra.md",
       "sha256": "40bdb3a8fb053a84feb9578d8d20d28309974fc11c5da5f968f929b37b236db9",
-      "referenced_concepts": 5
+      "referenced_concepts": 4
     },
     {
       "title": "1.4 Calculus",
@@ -88,7 +88,7 @@
       "url": "https://d2l.smola.org/chapter_preliminaries/probability.html",
       "local_source": "chapter_preliminaries/probability.md",
       "sha256": "8c07933d874cfc6291204f0d4f77470abc85f035d5774d1febf333ed6867ddee",
-      "referenced_concepts": 19
+      "referenced_concepts": 17
     },
     {
       "title": "1.7 Documentation",
@@ -109,7 +109,7 @@
       "url": "https://d2l.smola.org/chapter_linear-regression/linear-regression.html",
       "local_source": "chapter_linear-regression/linear-regression.md",
       "sha256": "f55f039128b78c2458e4cdf6d71b74cea0cb9878178f728320f662cf52322387",
-      "referenced_concepts": 14
+      "referenced_concepts": 13
     },
     {
       "title": "2.2 Object-Oriented Design for Implementation",
@@ -123,7 +123,7 @@
       "url": "https://d2l.smola.org/chapter_linear-regression/synthetic-regression-data.html",
       "local_source": "chapter_linear-regression/synthetic-regression-data.md",
       "sha256": "005c43f974ef08e8bc5b6b35727c63c0255c89b9e6ad03c318e46122d7b26962",
-      "referenced_concepts": 2
+      "referenced_concepts": 1
     },
     {
       "title": "2.4 Implementation from Scratch",
@@ -144,7 +144,7 @@
       "url": "https://d2l.smola.org/chapter_linear-regression/generalization.html",
       "local_source": "chapter_linear-regression/generalization.md",
       "sha256": "4b7eaf61282692326f32fbc1f6d51715f52eecb416e5f53d4a3793665df160e8",
-      "referenced_concepts": 9
+      "referenced_concepts": 8
     },
     {
       "title": "2.7 Weight Decay",
@@ -165,7 +165,7 @@
       "url": "https://d2l.smola.org/chapter_linear-classification/softmax-regression.html",
       "local_source": "chapter_linear-classification/softmax-regression.md",
       "sha256": "3ceee1565ae828b843b1266920ebec3426ac7fc7ff089e5354aaacaf099e61a8",
-      "referenced_concepts": 7
+      "referenced_concepts": 6
     },
     {
       "title": "3.2 Image Classification Data",
@@ -179,7 +179,7 @@
       "url": "https://d2l.smola.org/chapter_linear-classification/classification.html",
       "local_source": "chapter_linear-classification/classification.md",
       "sha256": "7aca9327a16b38527c1c46116ae6e0957644285947dbafa6a5c5cd052c9202a4",
-      "referenced_concepts": 14
+      "referenced_concepts": 15
     },
     {
       "title": "3.4 Softmax Regression from Scratch",
@@ -193,7 +193,7 @@
       "url": "https://d2l.smola.org/chapter_linear-classification/softmax-regression-concise.html",
       "local_source": "chapter_linear-classification/softmax-regression-concise.md",
       "sha256": "c1f9e21a48c1464145981346b7d730ecab550abc0152678a8bdd24b28b163258",
-      "referenced_concepts": 2
+      "referenced_concepts": 1
     },
     {
       "title": "3.6 Generalization in Classification",
@@ -207,7 +207,7 @@
       "url": "https://d2l.smola.org/chapter_linear-classification/environment-and-distribution-shift.html",
       "local_source": "chapter_linear-classification/environment-and-distribution-shift.md",
       "sha256": "69ab327130c6023b7430632f86d104f3f34b70d967e8940d72c88abcd3fb8bf3",
-      "referenced_concepts": 5
+      "referenced_concepts": 4
     },
     {
       "title": "4 Multilayer Perceptron",
@@ -221,7 +221,7 @@
       "url": "https://d2l.smola.org/chapter_multilayer-perceptrons/mlp.html",
       "local_source": "chapter_multilayer-perceptrons/mlp.md",
       "sha256": "eee61726b5b8106b93478d3c89d17d407c638f727c0e70fd971857e9825a0c1e",
-      "referenced_concepts": 9
+      "referenced_concepts": 8
     },
     {
       "title": "4.2 Implementation",
@@ -263,7 +263,7 @@
       "url": "https://d2l.smola.org/chapter_multilayer-perceptrons/kaggle-house-price.html",
       "local_source": "chapter_multilayer-perceptrons/kaggle-house-price.md",
       "sha256": "14a246ff41e3f291060b03babab2e1b3e5511deea8031aa549a05e67a38bea59",
-      "referenced_concepts": 2
+      "referenced_concepts": 1
     },
     {
       "title": "5 Computation",
@@ -319,7 +319,7 @@
       "url": "https://d2l.smola.org/chapter_builders-guide/gpus-devices-memory.html",
       "local_source": "chapter_builders-guide/gpus-devices-memory.md",
       "sha256": "dd3e30732ae0c7887fc3da1ef8994578677ee4019b9767922d6902014e639f3c",
-      "referenced_concepts": 0
+      "referenced_concepts": 1
     },
     {
       "title": "5.8 Reproducibility and Inspection",
@@ -340,14 +340,14 @@
       "url": "https://d2l.smola.org/chapter_convolutional-neural-networks/why-conv.html",
       "local_source": "chapter_convolutional-neural-networks/why-conv.md",
       "sha256": "3c68161beb02d7e9eaf5b31626679de2f61a23d6c0ae987040f13ecce516e6dc",
-      "referenced_concepts": 5
+      "referenced_concepts": 3
     },
     {
       "title": "6.2 Convolutions for Images",
       "url": "https://d2l.smola.org/chapter_convolutional-neural-networks/conv-layer.html",
       "local_source": "chapter_convolutional-neural-networks/conv-layer.md",
       "sha256": "acf2e65d147bb40fa331c705cf4f7765369b5414a2e4af491a66e49220921297",
-      "referenced_concepts": 4
+      "referenced_concepts": 14
     },
     {
       "title": "6.3 Padding, Stride, and Dilation",
@@ -368,7 +368,7 @@
       "url": "https://d2l.smola.org/chapter_convolutional-neural-networks/pooling.html",
       "local_source": "chapter_convolutional-neural-networks/pooling.md",
       "sha256": "c72af773a3944bdde19045079df94e277246b107f628649bdbef2c1cfee7b30d",
-      "referenced_concepts": 7
+      "referenced_concepts": 5
     },
     {
       "title": "6.6 Convolutional Neural Networks (LeNet)",
@@ -389,7 +389,7 @@
       "url": "https://d2l.smola.org/chapter_convolutional-modern/alexnet.html",
       "local_source": "chapter_convolutional-modern/alexnet.md",
       "sha256": "a20cde0b5570d324acee164d3f7423086f59a3dcbd815389b398379b5eb7713f",
-      "referenced_concepts": 2
+      "referenced_concepts": 0
     },
     {
       "title": "7.2 Blocks, Bottlenecks, and Branches: VGG, NiN, GoogLeNet",
@@ -403,14 +403,14 @@
       "url": "https://d2l.smola.org/chapter_convolutional-modern/batch-norm.html",
       "local_source": "chapter_convolutional-modern/batch-norm.md",
       "sha256": "f0f2c34665679aa8bfcaa9f1fc817f4508ae3a25656c9e5ff37883531688aa44",
-      "referenced_concepts": 6
+      "referenced_concepts": 5
     },
     {
       "title": "7.4 Residual Networks: ResNet, ResNeXt, and DenseNet",
       "url": "https://d2l.smola.org/chapter_convolutional-modern/resnet.html",
       "local_source": "chapter_convolutional-modern/resnet.md",
       "sha256": "b32470342862443443251a45e509b272e368b88942fee14c89c414de932c26be",
-      "referenced_concepts": 6
+      "referenced_concepts": 3
     },
     {
       "title": "7.5 Efficient Convnets",
@@ -424,7 +424,7 @@
       "url": "https://d2l.smola.org/chapter_convolutional-modern/training-recipes.html",
       "local_source": "chapter_convolutional-modern/training-recipes.md",
       "sha256": "52e1087942d543b784211c735597870c83611198c04b25d6178633da9502918b",
-      "referenced_concepts": 3
+      "referenced_concepts": 4
     },
     {
       "title": "7.7 ConvNeXt: A ConvNet for the 2020s",
@@ -438,70 +438,70 @@
       "url": "https://d2l.smola.org/chapter_convolutional-modern/cnn-design.html",
       "local_source": "chapter_convolutional-modern/cnn-design.md",
       "sha256": "35d3e8f6e8d13e3165ad099d7e6d90127024ddbb6943a39882e9f34a02cc248a",
-      "referenced_concepts": 4
+      "referenced_concepts": 2
     },
     {
       "title": "8 Sequence Models",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/index.html",
       "local_source": "chapter_recurrent-neural-networks/index.md",
       "sha256": "2a3972455b7e95f4080222263532a2a1335fda5db20db2f09b644d6d905c4765",
-      "referenced_concepts": 1
+      "referenced_concepts": 3
     },
     {
       "title": "8.1 Working with Sequences",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/sequence.html",
       "local_source": "chapter_recurrent-neural-networks/sequence.md",
       "sha256": "e9491eedc86aaf167fa1555e8cfda8e0b18d291b7c05480815cfda0dd5a72ec6",
-      "referenced_concepts": 4
+      "referenced_concepts": 2
     },
     {
       "title": "8.2 From Text to Tokens",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/text-sequence.html",
       "local_source": "chapter_recurrent-neural-networks/text-sequence.md",
       "sha256": "309fb93c6c900ffc8cbbf81530696a78d9e3204872c36ce158275b5c0319d64a",
-      "referenced_concepts": 2
+      "referenced_concepts": 1
     },
     {
       "title": "8.3 Language Models",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/language-model.html",
       "local_source": "chapter_recurrent-neural-networks/language-model.md",
       "sha256": "1ea407a259ec1ba5b5181c390d6536465fb68a34205b4653bd6a5d333479fc92",
-      "referenced_concepts": 7
+      "referenced_concepts": 5
     },
     {
       "title": "8.4 Recurrent Neural Networks",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/rnn.html",
       "local_source": "chapter_recurrent-neural-networks/rnn.md",
       "sha256": "480ed498da50ca71dd83f1de08d330916e32a5565662b77ec6fb93253b747b94",
-      "referenced_concepts": 7
+      "referenced_concepts": 6
     },
     {
       "title": "8.5 Implementing RNNs",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/rnn-implementation.html",
       "local_source": "chapter_recurrent-neural-networks/rnn-implementation.md",
       "sha256": "30c7cc6e9d1ef3c6ea524d4d9d984b3d26f2e4566ce48f329c00790793a09c40",
-      "referenced_concepts": 2
+      "referenced_concepts": 0
     },
     {
       "title": "8.6 Backpropagation Through Time",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/bptt.html",
       "local_source": "chapter_recurrent-neural-networks/bptt.md",
       "sha256": "d14f511b8f36bb9ada079278d2d3720cb2df781c83e66fd717e22f98d7cb2a48",
-      "referenced_concepts": 4
+      "referenced_concepts": 5
     },
     {
       "title": "8.7 Decoding and Generation",
       "url": "https://d2l.smola.org/chapter_recurrent-neural-networks/decoding.html",
       "local_source": "chapter_recurrent-neural-networks/decoding.md",
       "sha256": "17651cf315f6e8990825d9a180e7d8d0699744bac503bef43f1713e40988db81",
-      "referenced_concepts": 3
+      "referenced_concepts": 4
     },
     {
       "title": "Advanced",
       "url": "https://d2l.smola.org/chapter_advanced/index.html",
       "local_source": "chapter_advanced/index.md",
       "sha256": "64cd0419600ba4c74b63fb084df4a6e38dd6f0de851a38d200fa61a689601233",
-      "referenced_concepts": 0
+      "referenced_concepts": 3
     },
     {
       "title": "9 Optimization Algorithms",
@@ -515,42 +515,42 @@
       "url": "https://d2l.smola.org/chapter_optimization/optimization-intro.html",
       "local_source": "chapter_optimization/optimization-intro.md",
       "sha256": "dac27a480845a61943912f8a58dafd34c9fdad860db9cf2dfdd7796e40929f06",
-      "referenced_concepts": 3
+      "referenced_concepts": 0
     },
     {
       "title": "9.2 Gradient Descent",
       "url": "https://d2l.smola.org/chapter_optimization/gd.html",
       "local_source": "chapter_optimization/gd.md",
       "sha256": "6bad960826a077c08646969d4a9a3c2000fa3ec2ee20c5ba2937d065ed24debd",
-      "referenced_concepts": 27
+      "referenced_concepts": 20
     },
     {
       "title": "9.3 Stochastic and Minibatch Gradient Descent",
       "url": "https://d2l.smola.org/chapter_optimization/sgd.html",
       "local_source": "chapter_optimization/sgd.md",
       "sha256": "2e67a875856765aaf08a240b49594a641d7ac4b168f22a0081a2f7e6114c8b24",
-      "referenced_concepts": 18
+      "referenced_concepts": 12
     },
     {
       "title": "9.4 Momentum",
       "url": "https://d2l.smola.org/chapter_optimization/momentum.html",
       "local_source": "chapter_optimization/momentum.md",
       "sha256": "82265baa81f9b4c138d49738a3a51c9a3ecb71742070ff67053181d01428b5cb",
-      "referenced_concepts": 6
+      "referenced_concepts": 3
     },
     {
       "title": "9.5 Adam and AdamW",
       "url": "https://d2l.smola.org/chapter_optimization/adam.html",
       "local_source": "chapter_optimization/adam.md",
       "sha256": "8bc6e97e4e78228edf786212b8a5a403317f93166cff08079e6acfaa962b9615",
-      "referenced_concepts": 13
+      "referenced_concepts": 12
     },
     {
       "title": "9.6 Schedules",
       "url": "https://d2l.smola.org/chapter_optimization/lr-scheduler.html",
       "local_source": "chapter_optimization/lr-scheduler.md",
       "sha256": "5a9a24bde6344eb60f4b8f62bc9a24500b8e2c078d7395d8c275c3abb9c83d1e",
-      "referenced_concepts": 4
+      "referenced_concepts": 2
     },
     {
       "title": "9.7 Muon",
@@ -606,7 +606,7 @@
       "url": "https://d2l.smola.org/chapter_attention/attention-scoring.html",
       "local_source": "chapter_attention/attention-scoring.md",
       "sha256": "2428edeae3f60f52c8164dab26356bbc7fced1caa8facf848645a67b40d80472",
-      "referenced_concepts": 8
+      "referenced_concepts": 12
     },
     {
       "title": "10.3 Multi-Head and Cross-Attention",
@@ -627,21 +627,21 @@
       "url": "https://d2l.smola.org/chapter_attention/attention-at-scale.html",
       "local_source": "chapter_attention/attention-at-scale.md",
       "sha256": "522a814ca34ae7b0d65da21bd2739f00e003e7c2898dd893e7ccecf37a87d87d",
-      "referenced_concepts": 8
+      "referenced_concepts": 9
     },
     {
       "title": "10.6 Attention Circuits",
       "url": "https://d2l.smola.org/chapter_attention/what-attention-computes.html",
       "local_source": "chapter_attention/what-attention-computes.md",
       "sha256": "130000e921299f860b28eef5ba7bb0e1a531e1351f16a6b0a70fe40c184ff98d",
-      "referenced_concepts": 7
+      "referenced_concepts": 8
     },
     {
       "title": "10.7 Further Reading",
       "url": "https://d2l.smola.org/chapter_attention/further-reading.html",
       "local_source": "chapter_attention/further-reading.md",
       "sha256": "f9d252efd0506abdab794bb94100a8e54270777f57cf75a4b22b2cb5f951e2f9",
-      "referenced_concepts": 7
+      "referenced_concepts": 8
     },
     {
       "title": "11 Transformers",
@@ -676,7 +676,7 @@
       "url": "https://d2l.smola.org/chapter_transformers/encoders-decoders.html",
       "local_source": "chapter_transformers/encoders-decoders.md",
       "sha256": "7db03557f328775b51c1a3f7a8d4a5b7e384ce10a25c4f86f922f7a475512eed",
-      "referenced_concepts": 6
+      "referenced_concepts": 7
     },
     {
       "title": "11.5 Vision Transformer",
@@ -711,14 +711,14 @@
       "url": "https://d2l.smola.org/chapter_recurrent-modern/index.html",
       "local_source": "chapter_recurrent-modern/index.md",
       "sha256": "59a7ab337d32c5bbddb00f568bde7eaf2ac3f5b7e7197fe33e2dc40354828a90",
-      "referenced_concepts": 1
+      "referenced_concepts": 0
     },
     {
       "title": "12.1 Gated Recurrent Networks",
       "url": "https://d2l.smola.org/chapter_recurrent-modern/lstm.html",
       "local_source": "chapter_recurrent-modern/lstm.md",
       "sha256": "0b433b238f096e4ef73ce60dfc2647ac7e81335a027b9611363a36e08d40d201",
-      "referenced_concepts": 8
+      "referenced_concepts": 4
     },
     {
       "title": "12.2 Linear Recurrences and State Space Models",
@@ -781,7 +781,7 @@
       "url": "https://d2l.smola.org/chapter_computational-performance/hardware.html",
       "local_source": "chapter_computational-performance/hardware.md",
       "sha256": "f33c77a941906d3c45715898a553153f6fffe2beac40c91826ba0d93685fd021",
-      "referenced_concepts": 3
+      "referenced_concepts": 2
     },
     {
       "title": "13.3 Compute Graphs and Compilation",
@@ -844,7 +844,7 @@
       "url": "https://d2l.smola.org/chapter_reinforcement-learning/value-iter.html",
       "local_source": "chapter_reinforcement-learning/value-iter.md",
       "sha256": "7f6cc62895096eadc8b0960accb492e4c1f6c0a6bf09dea0cbadf332647cf2a6",
-      "referenced_concepts": 10
+      "referenced_concepts": 9
     },
     {
       "title": "14.3 Temporal-Difference Learning",
@@ -900,7 +900,7 @@
       "url": "https://d2l.smola.org/chapter_deep-reinforcement-learning/actor-critic.html",
       "local_source": "chapter_deep-reinforcement-learning/actor-critic.md",
       "sha256": "1f5a041705d31245c1f69692503cbf13ffcc68c4437b824331f3c48453e97a00",
-      "referenced_concepts": 4
+      "referenced_concepts": 5
     },
     {
       "title": "15.2 Trust Regions and Proximal Policy Optimization",
@@ -970,7 +970,7 @@
       "url": "https://d2l.smola.org/chapter_generative-adversarial-networks/gan.html",
       "local_source": "chapter_generative-adversarial-networks/gan.md",
       "sha256": "7535082baa2a85d3450c0a31bc6c0cdb967b14b40523a2e1c9e8f24255d61732",
-      "referenced_concepts": 6
+      "referenced_concepts": 5
     },
     {
       "title": "16.2 Adversarial Objectives and Divergences",
@@ -1110,14 +1110,14 @@
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/seq2seq.html",
       "local_source": "chapter_natural-language-processing-pretraining/seq2seq.md",
       "sha256": "77650beb6394ebf1f108e26dd5a7b6c8b0e66b66029b39afa951281caf01385e",
-      "referenced_concepts": 3
+      "referenced_concepts": 0
     },
     {
       "title": "18.2 Word Embedding (word2vec)",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/word2vec.html",
       "local_source": "chapter_natural-language-processing-pretraining/word2vec.md",
       "sha256": "f43e4941f55e60258b3e43f8050a5a729426a63f18434c77f992211672837138",
-      "referenced_concepts": 6
+      "referenced_concepts": 0
     },
     {
       "title": "18.3 Approximate Training",
@@ -1131,49 +1131,49 @@
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/word-embedding-dataset.html",
       "local_source": "chapter_natural-language-processing-pretraining/word-embedding-dataset.md",
       "sha256": "fcca9f2bec8402068fb1536971734335225e732386843798b76fd976a7dff86e",
-      "referenced_concepts": 1
+      "referenced_concepts": 0
     },
     {
       "title": "18.5 Pretraining word2vec",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/word2vec-pretraining.html",
       "local_source": "chapter_natural-language-processing-pretraining/word2vec-pretraining.md",
       "sha256": "77dea48179ab911acf2dfeabc15ba01d3cb44671d11e5735506b626d61929e1d",
-      "referenced_concepts": 1
+      "referenced_concepts": 0
     },
     {
       "title": "18.6 Word Embedding with Global Vectors (GloVe)",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/glove.html",
       "local_source": "chapter_natural-language-processing-pretraining/glove.md",
       "sha256": "5c5c630a0ae230c0d895a2be6a9d3f118ddfab2ef1c24f828b42ac115b4db179",
-      "referenced_concepts": 2
+      "referenced_concepts": 0
     },
     {
       "title": "18.7 Subword Embedding",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/subword-embedding.html",
       "local_source": "chapter_natural-language-processing-pretraining/subword-embedding.md",
       "sha256": "45bd49185cef2adb7266f5900fe84d7eb0edf2a5636197025c5d1dbb7b53a8db",
-      "referenced_concepts": 4
+      "referenced_concepts": 0
     },
     {
       "title": "18.8 Word Similarity and Analogy",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/similarity-analogy.html",
       "local_source": "chapter_natural-language-processing-pretraining/similarity-analogy.md",
       "sha256": "316bfae177741f870731794f9e07976226f005c78fb628117016dd47ca279cd4",
-      "referenced_concepts": 3
+      "referenced_concepts": 0
     },
     {
       "title": "18.9 Bidirectional Encoder Representations from Transformers (BERT)",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/bert.html",
       "local_source": "chapter_natural-language-processing-pretraining/bert.md",
       "sha256": "294e27c1d6d4b36149ca982f5635d38a33a53706681db21c8fc35df688c4e85c",
-      "referenced_concepts": 7
+      "referenced_concepts": 0
     },
     {
       "title": "18.10 The Dataset for Pretraining BERT",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-pretraining/bert-dataset.html",
       "local_source": "chapter_natural-language-processing-pretraining/bert-dataset.md",
       "sha256": "a2b7b33dfba316ce4f48648e47cc60fc76724bae223ee846c6f5ca4eb9cd7c88",
-      "referenced_concepts": 1
+      "referenced_concepts": 0
     },
     {
       "title": "18.11 Pretraining BERT",
@@ -1194,14 +1194,14 @@
       "url": "https://d2l.smola.org/chapter_natural-language-processing-applications/sentiment-analysis-and-dataset.html",
       "local_source": "chapter_natural-language-processing-applications/sentiment-analysis-and-dataset.md",
       "sha256": "19fe98312629bfe445d20bbb786b6eae34729b42258dfb3e342479d72c5e994f",
-      "referenced_concepts": 1
+      "referenced_concepts": 0
     },
     {
       "title": "19.2 Sentiment Analysis: Using Recurrent Neural Networks",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-applications/sentiment-analysis-rnn.html",
       "local_source": "chapter_natural-language-processing-applications/sentiment-analysis-rnn.md",
       "sha256": "ce4f66f716f0811ce59009e8fc7d65cf01fbf2c39dba33120d54ed1c8dcc0699",
-      "referenced_concepts": 2
+      "referenced_concepts": 0
     },
     {
       "title": "19.3 Sentiment Analysis: Using Convolutional Neural Networks",
@@ -1215,28 +1215,28 @@
       "url": "https://d2l.smola.org/chapter_natural-language-processing-applications/natural-language-inference-and-dataset.html",
       "local_source": "chapter_natural-language-processing-applications/natural-language-inference-and-dataset.md",
       "sha256": "d2b431f35e9aa99c20cc0dc44d462eeb4d70e5f91f4de47d3c8fd08dd49a1bc1",
-      "referenced_concepts": 3
+      "referenced_concepts": 0
     },
     {
       "title": "19.5 Natural Language Inference: Using Attention",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-applications/natural-language-inference-attention.html",
       "local_source": "chapter_natural-language-processing-applications/natural-language-inference-attention.md",
       "sha256": "4592a71f18c6884a3d4068e93200ce4b38bfde05fb455a1412e8570d33ccb513",
-      "referenced_concepts": 1
+      "referenced_concepts": 0
     },
     {
       "title": "19.6 Fine-Tuning BERT for Sequence-Level and Token-Level Applications",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-applications/finetuning-bert.html",
       "local_source": "chapter_natural-language-processing-applications/finetuning-bert.md",
       "sha256": "30b3dc3b9b781caae3188cb547e7cd6746315554000540dbdfdca794dcac3874",
-      "referenced_concepts": 2
+      "referenced_concepts": 0
     },
     {
       "title": "19.7 Natural Language Inference: Fine-Tuning BERT",
       "url": "https://d2l.smola.org/chapter_natural-language-processing-applications/natural-language-inference-bert.html",
       "local_source": "chapter_natural-language-processing-applications/natural-language-inference-bert.md",
       "sha256": "8c2cb8a8d04f74ff5f528ec85b4730f377be249b800ac1b6a45083bf5723cc52",
-      "referenced_concepts": 2
+      "referenced_concepts": 0
     },
     {
       "title": "Image Models",
@@ -1271,7 +1271,7 @@
       "url": "https://d2l.smola.org/chapter_computer-vision/bounding-box.html",
       "local_source": "chapter_computer-vision/bounding-box.md",
       "sha256": "89d1b84896613793462d4ac6f95b262a33cca1db5b77441fb80fd6ba8d2a1713",
-      "referenced_concepts": 1
+      "referenced_concepts": 2
     },
     {
       "title": "20.4 Anchor Boxes",
@@ -1397,14 +1397,14 @@
       "url": "https://d2l.smola.org/chapter_hyperparameter-optimization/hyperopt-intro.html",
       "local_source": "chapter_hyperparameter-optimization/hyperopt-intro.md",
       "sha256": "8be1ea41a91cc6463d64c58ffe9b847b4f7dd5d4225be0d4b6a02744bc83f8c3",
-      "referenced_concepts": 4
+      "referenced_concepts": 5
     },
     {
       "title": "22.2 Hyperparameter Optimization API",
       "url": "https://d2l.smola.org/chapter_hyperparameter-optimization/hyperopt-api.html",
       "local_source": "chapter_hyperparameter-optimization/hyperopt-api.md",
       "sha256": "71ad33cf0db7bc8363eef50212af8fc6ab468d1cb78797d5aabe2d71d20fcb3b",
-      "referenced_concepts": 2
+      "referenced_concepts": 3
     },
     {
       "title": "22.3 Asynchronous Random Search",
@@ -1453,7 +1453,7 @@
       "url": "https://d2l.smola.org/chapter_recommender-systems/mf.html",
       "local_source": "chapter_recommender-systems/mf.md",
       "sha256": "14a5e4082bac08beb66f0de1b1cfe1df6a91ef7f29625ee13c8d3ddeec0439ba",
-      "referenced_concepts": 6
+      "referenced_concepts": 1
     },
     {
       "title": "23.4 AutoRec: Rating Prediction with Autoencoders",
@@ -1467,14 +1467,14 @@
       "url": "https://d2l.smola.org/chapter_recommender-systems/ranking.html",
       "local_source": "chapter_recommender-systems/ranking.md",
       "sha256": "6ceb0e745e3b89ea92c4e081fb98ec6587d9f2b5d0a5bf7db736e9070b07d908",
-      "referenced_concepts": 4
+      "referenced_concepts": 3
     },
     {
       "title": "23.6 Neural Collaborative Filtering for Personalized Ranking",
       "url": "https://d2l.smola.org/chapter_recommender-systems/neumf.html",
       "local_source": "chapter_recommender-systems/neumf.md",
       "sha256": "d120aac2dc59279ffe73c3efba0161f665df8bade72d9da88d5580f38af3cccf",
-      "referenced_concepts": 15
+      "referenced_concepts": 14
     },
     {
       "title": "23.7 Sequence-Aware Recommender Systems",
@@ -1488,7 +1488,7 @@
       "url": "https://d2l.smola.org/chapter_recommender-systems/ctr.html",
       "local_source": "chapter_recommender-systems/ctr.md",
       "sha256": "f9bf4c3771f7651b044f9ffb586e5d475e0f3f491afffc870d964282d5479277",
-      "referenced_concepts": 5
+      "referenced_concepts": 2
     },
     {
       "title": "23.9 Factorization Machines",
@@ -1572,7 +1572,7 @@
       "url": "https://d2l.smola.org/chapter_mdl-calculus/mdl-multivariable-calculus.html",
       "local_source": "chapter_mdl-calculus/mdl-multivariable-calculus.md",
       "sha256": "973a3d7e216cbe7045811ef512818240bc40d5945b3c7e04f0d0fac8f4fad6fe",
-      "referenced_concepts": 2
+      "referenced_concepts": 3
     },
     {
       "title": "25.3 Matrix Calculus",
@@ -1859,7 +1859,7 @@
       "url": "https://d2l.smola.org/chapter_appendix-tools-for-deep-learning/index.html",
       "local_source": "chapter_appendix-tools-for-deep-learning/index.md",
       "sha256": "4b87a0d9f41e777322f48f5bce2b4ce6a9ddccb2ca2f122585fe387240ed2ee6",
-      "referenced_concepts": 0
+      "referenced_concepts": 1
     },
     {
       "title": "30.1 Notebooks",
@@ -1873,21 +1873,21 @@
       "url": "https://d2l.smola.org/chapter_appendix-tools-for-deep-learning/hosted-notebooks.html",
       "local_source": "chapter_appendix-tools-for-deep-learning/hosted-notebooks.md",
       "sha256": "502e4c7d7f0b27c6db61e085a5be745a2eb0f0813542df951b584af3b51fc3eb",
-      "referenced_concepts": 0
+      "referenced_concepts": 1
     },
     {
       "title": "30.3 Cloud Computing",
       "url": "https://d2l.smola.org/chapter_appendix-tools-for-deep-learning/cloud-instances.html",
       "local_source": "chapter_appendix-tools-for-deep-learning/cloud-instances.md",
       "sha256": "2eb0bec0717b2166ec22e7fa6aa3ec3205508848c36cc6d272885276aae83c73",
-      "referenced_concepts": 0
+      "referenced_concepts": 3
     },
     {
       "title": "30.4 Hardware",
       "url": "https://d2l.smola.org/chapter_appendix-tools-for-deep-learning/hardware.html",
       "local_source": "chapter_appendix-tools-for-deep-learning/hardware.md",
       "sha256": "652c42dbd847871cfdb07813c7f0761089fe2e6bf5ce59e853e0cb03efea4c20",
-      "referenced_concepts": 0
+      "referenced_concepts": 1
     },
     {
       "title": "30.5 Ecosystem",

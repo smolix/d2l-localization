@@ -6,171 +6,171 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 
 | English | Preferred | Status | Concept / sense | Evidence |
 | --- | --- | --- | --- | --- |
-| linear regression | الانحدار الخطّي | verified_external | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L151) |
-| regression | الانحدار | verified_d2l | regression: The task of predicting a numerical outcome. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=124) |
-| classification | التصنيف | verified_d2l | classification: The task of assigning an input to a category. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=39) |
-| feature | ميزة | verified_external | feature: An observed input variable used by a model. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#feature) |
-| label | الوسم | proposed | label: The target value associated with an example. |  |
+| linear regression | انحدار خطي | verified_external | linear-regression: A model that predicts a continuous target using a linear combination of inputs. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L151) |
+| regression | انحدار | verified_external | regression: The task of predicting a numerical outcome. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=124); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/regression) |
+| classification | تصنيف | verified_external | classification: The task of assigning an input to a category. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=39); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/classification) |
+| feature | ميزة | verified_external | feature: An observed input variable used by a model. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#feature); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/feature) |
+| label | وسم | proposed | label: The target value associated with an example. |  |
 | training example | مثال تدريب | proposed | training-example: An observation used to fit a model. |  |
-| dataset | مجموعة البيانات | verified_d2l | dataset: A collection of examples used for analysis or learning. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=124) |
+| dataset | مجموعة البيانات | verified_external | dataset: A collection of examples used for analysis or learning. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=124); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/dataset-or-data-set) |
 | training set | مجموعة التدريب | verified_external | training-set: The portion of data used to fit model parameters. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#training-set) |
-| validation set | مجموعة التحقّق | verified_external | validation-set: Data used to select models or tune settings during development. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#validation-set) |
-| test set | مجموعة الاختبار | verified_d2l | test-set: Data held out to assess a fitted model. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=35) |
+| validation set | مجموعة التحقق | verified_external | validation-set: Data used to select models or tune settings during development. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#validation-set) |
+| test set | مجموعة الاختبار | verified_external | test-set: Data held out to assess a fitted model. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=35); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%86%D8%B8%D8%B1%D8%A9-%D8%B9%D8%A7%D9%85%D8%A9-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B5%D9%86%D9%81-trainer-%D9%81%D9%8A-%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%AD%D9%88%D9%84%D8%A7%D8%AA-transformers-r2492/) |
 | model parameter | معلَمة النموذج | proposed | model-parameter: A value learned or fitted as part of a model. |  |
-| weight | الوزن | verified_external | weight: A coefficient that scales an input or connection in a model. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#weight) |
+| weight | وزن | verified_external | weight: A coefficient that scales an input or connection in a model. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#weight) |
 | bias | انحياز | proposed | bias: An additive offset in a model or prediction. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L294) |
-| prediction | التنبؤ | verified_external | prediction: A model's estimate of an outcome for an input. | review-ar-3518bb0b5f: page |
+| prediction | تنبؤ | verified_external | prediction: A model's estimate of an outcome for an input. | review-ar-3518bb0b5f: page |
 | loss function | دالة الخسارة | verified_external | loss-function: A function measuring the error of a prediction or model. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L81) |
 | objective function | دالة الهدف | verified_external | objective-function: The quantity an optimization procedure seeks to minimize or maximize. | [google-ml-ar-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ar#objective-function) |
-| squared error | الخطأ التربيعي | proposed | squared-error: The square of the difference between a prediction and its target. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_introduction/index.md#L101) |
+| squared error | خطأ تربيعي | proposed | squared-error: The square of the difference between a prediction and its target. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_introduction/index.md#L101) |
 | mean squared error | متوسط الخطأ التربيعي | proposed | mean-squared-error: The average squared difference between predictions and targets. |  |
-| empirical risk | الخطر التجريبي | verified_d2l | empirical-risk: The average loss measured on a finite dataset. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=219) |
+| empirical risk | خطر تجريبي | verified_external | empirical-risk: The average loss measured on a finite dataset. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=219); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L550) |
 | minibatch | دفعة مصغرة | proposed | minibatch: A subset of examples processed together in an update. |  |
 | batch size | حجم الدفعة | verified_external | batch-size: The number of examples processed in a batch. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#batch-size) |
 | epoch | حقبة | verified_external | epoch: A pass through the training dataset. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#epoch) |
-| gradient descent | النزول التدرجي | verified_external | gradient-descent: An optimization method that moves parameters against the objective gradient. | review-ar-b576866c54: page; review-ar-ba098d601e: page |
-| stochastic gradient descent | النزول التدرجي العشوائي | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. |  |
-| learning rate | معدّل التعلّم | verified_external | learning-rate: The step-size setting used in an optimization update. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#learning-rate) |
-| optimization | التحسين | verified_d2l | optimization: The process of finding values that improve an objective. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=98) |
-| gradient | التدرج | verified_d2l | gradient: The vector of partial derivatives of a scalar function. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=97) |
-| derivative | المشتق | verified_d2l | derivative: The rate of change of a function with respect to an input. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=92) |
-| partial derivative | المشتق الجزئي | verified_d2l | partial-derivative: A derivative with respect to one variable while others are held fixed. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=97) |
-| chain rule | قاعدة السلسلة | verified_d2l | chain-rule: A rule for differentiating compositions of functions. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=98) |
-| backpropagation | الانتشار العكسي | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#backpropagation) |
-| automatic differentiation | الاشتقاق التلقائي | proposed | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. |  |
-| computational graph | المخطط الحسابي | proposed | computational-graph: A representation of a computation as connected operations and values. |  |
+| gradient descent | نزول تدرجي | verified_external | gradient-descent: An optimization method that moves parameters against the objective gradient. | review-ar-b576866c54: page; review-ar-ba098d601e: page |
+| stochastic gradient descent | نزول تدرجي عشوائي | proposed | stochastic-gradient-descent: A gradient method using a randomly sampled estimate of the gradient. |  |
+| learning rate | معدل التعلم | verified_external | learning-rate: The step-size setting used in an optimization update. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#learning-rate) |
+| optimization | تحسين | verified_external | optimization: The process of finding values that improve an objective. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=98); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/optimization) |
+| gradient | تدرج | verified_external | gradient: The vector of partial derivatives of a scalar function. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=97); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/gradient) |
+| derivative | مشتق | verified_external | derivative: The rate of change of a function with respect to an input. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=92); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%85%D9%81%D8%A7%D9%87%D9%8A%D9%85-%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A9-%D9%84%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84-%D9%85%D8%B9-%D8%A8%D8%A7%D9%8A-%D8%AA%D9%88%D8%B1%D8%B4-pytorch-r2540/) |
+| partial derivative | مشتق جزئي | verified_external | partial-derivative: A derivative with respect to one variable while others are held fixed. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=97); [ibm-think-ar](https://www.ibm.com/ae-ar/think/topics/backpropagation) |
+| chain rule | قاعدة السلسلة | verified_external | chain-rule: A rule for differentiating compositions of functions. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=98); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%A2%D9%84%D8%A9-%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-%D9%88%D9%83%D9%8A%D9%81%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%B3%D8%B9-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%84-r1010/) |
+| backpropagation | انتشار عكسي | verified_external | backpropagation: An algorithm that propagates derivatives backward through a computation. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#backpropagation) |
+| automatic differentiation | اشتقاق تلقائي | proposed | automatic-differentiation: The systematic computation of derivatives by composing elementary operations. |  |
+| computational graph | مخطط حسابي | proposed | computational-graph: A representation of a computation as connected operations and values. |  |
 | vector | متجه | verified_external | vector: An ordered collection of numerical components. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L25) |
 | matrix | مصفوفة | verified_external | matrix: A rectangular array of numerical entries. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L32) |
 | tensor | موتر | proposed | tensor: A multidimensional array generalizing scalars, vectors, and matrices. |  |
 | scalar | عدد قياسي | proposed | scalar: A single numerical quantity. |  |
-| transpose | المنقول | verified_external | transpose: An operation that exchanges the row and column axes of a matrix. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L161) |
-| dot product | الجداء النقطي | verified_external | dot-product: The sum of componentwise products of two vectors. | review-ar-f91ceb7cf7: page |
+| transpose | منقول | verified_external | transpose: An operation that exchanges the row and column axes of a matrix. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L161) |
+| dot product | جداء نقطي | verified_external | dot-product: The sum of componentwise products of two vectors. | review-ar-f91ceb7cf7: page |
 | matrix multiplication | ضرب المصفوفات | proposed | matrix-multiplication: A product combining rows of one matrix with columns of another. |  |
-| eigenvalue | القيمة الذاتية | proposed | eigenvalue: A scaling factor associated with an eigenvector of a linear map. |  |
-| eigenvector | المتجه الذاتي | proposed | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L318) |
+| eigenvalue | قيمة ذاتية | proposed | eigenvalue: A scaling factor associated with an eigenvector of a linear map. |  |
+| eigenvector | متجه ذاتي | proposed | eigenvector: A nonzero vector whose direction is preserved by a linear map up to scaling. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L318) |
 | singular value decomposition | تحليل القيم المفردة | proposed | singular-value-decomposition: A factorization of a matrix into singular vectors and singular values. |  |
-| norm | المعيار | verified_external | norm: A function measuring the size of a vector or other mathematical object. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L248) |
-| Euclidean distance | المسافة الإقليدية | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
-| linear algebra | الجبر الخطي | verified_d2l | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=70) |
-| linear transformation | التحويل الخطي | verified_d2l | linear-transformation: A mapping that preserves vector addition and scalar multiplication. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=235) |
-| identity matrix | مصفوفة الوحدة | verified_d2l | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=36) |
-| determinant | المحدد | verified_external | determinant: A scalar associated with a square matrix that describes signed volume scaling. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L205) |
+| norm | معيار | verified_external | norm: A function measuring the size of a vector or other mathematical object. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L248) |
+| Euclidean distance | مسافة إقليدية | proposed | euclidean-distance: The straight-line distance between points in Euclidean space. |  |
+| linear algebra | جبر خطي | verified_external | linear-algebra: The mathematics of vectors, matrices, and linear mappings. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=70); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/linear-algebra) |
+| linear transformation | تحويل خطي | verified_external | linear-transformation: A mapping that preserves vector addition and scalar multiplication. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=235); [ibm-think-ar](https://www.ibm.com/ae-ar/think/topics/neural-networks) |
+| identity matrix | مصفوفة الوحدة | verified_external | identity-matrix: A square matrix that leaves vectors unchanged under multiplication. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=36); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L53) |
+| determinant | محدد | verified_external | determinant: A scalar associated with a square matrix that describes signed volume scaling. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L205) |
 | rank | رتبة | proposed | rank: The dimension of the span of a matrix's columns or rows. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L297) |
 | trace | أثر المصفوفة | verified_external | trace: The sum of the diagonal entries of a square matrix. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-linear-algebra.md#L191) |
 | orthogonal | متعامد | proposed | orthogonal: Having zero inner product, or preserving inner products for a transformation. |  |
 | positive definite | موجب التعريف | proposed | positive-definite: Having a strictly positive quadratic form for every nonzero vector. |  |
 | probability | احتمال | proposed | probability: A numerical measure of the likelihood of an event. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L585) |
-| random variable | المتغير العشوائي | verified_d2l | random-variable: A quantity whose value is determined by a random outcome. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=109) |
+| random variable | متغير عشوائي | verified_external | random-variable: A quantity whose value is determined by a random outcome. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=109); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L216) |
 | probability distribution | توزيع احتمالي | proposed | probability-distribution: A specification of probabilities for possible outcomes. |  |
 | probability density | كثافة الاحتمال | proposed | probability-density: A function whose integral over a region gives its probability. |  |
-| conditional probability | الاحتمال الشرطي | verified_external | conditional-probability: The probability of an event given another event. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L73) |
-| joint distribution | التوزيع المشترك | proposed | joint-distribution: A probability distribution over multiple random variables together. |  |
-| marginal distribution | التوزيع الهامشي | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
-| independence | الاستقلال | verified_d2l | independence: A property where knowing one event or variable does not change the distribution of another. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=113) |
-| expectation | التوقع | verified_d2l | expectation: The probability-weighted average of a random quantity. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=116) |
-| variance | التباين | verified_d2l | variance: The expected squared deviation from the mean. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117) |
-| standard deviation | الانحراف المعياري | verified_d2l | standard-deviation: The square root of variance. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117) |
-| covariance | التغاير | verified_d2l | covariance: A measure of how two random variables vary together. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117) |
-| correlation | الارتباط | verified_external | correlation: A normalized measure of association between variables. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L252) |
-| Gaussian distribution | التوزيع الغاوسي | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. |  |
-| normal distribution | التوزيع الطبيعي | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
-| Bernoulli distribution | توزيع برنولي | verified_d2l | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=52) |
-| Poisson distribution | توزيع بواسون | verified_d2l | poisson-distribution: A discrete distribution often used to model event counts. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=138) |
+| conditional probability | احتمال شرطي | verified_external | conditional-probability: The probability of an event given another event. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L73) |
+| joint distribution | توزيع مشترك | proposed | joint-distribution: A probability distribution over multiple random variables together. |  |
+| marginal distribution | توزيع هامشي | proposed | marginal-distribution: A distribution obtained by summing or integrating out other variables. |  |
+| independence | استقلال | verified_external | independence: A property where knowing one event or variable does not change the distribution of another. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=113); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L109) |
+| expectation | توقع | verified_external | expectation: The probability-weighted average of a random quantity. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=116); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L163) |
+| variance | تباين | verified_external | variance: The expected squared deviation from the mean. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L260) |
+| standard deviation | انحراف معياري | verified_external | standard-deviation: The square root of variance. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA-%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-scikit-learn-%D9%85%D8%B9-pandas-r2554/) |
+| covariance | تغاير | verified_external | covariance: A measure of how two random variables vary together. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L246) |
+| correlation | ارتباط | verified_external | correlation: A normalized measure of association between variables. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L252) |
+| Gaussian distribution | توزيع غاوسي | proposed | gaussian-distribution: A continuous distribution characterized by a mean and variance. |  |
+| normal distribution | توزيع طبيعي | proposed | normal-distribution: The same distribution as the Gaussian distribution, named "normal"; most languages have a distinct word for it (正态分布, 正規分布, Normalverteilung). |  |
+| Bernoulli distribution | توزيع برنولي | proposed | bernoulli-distribution: A distribution over two outcomes determined by a success probability. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=52) |
+| Poisson distribution | توزيع بواسون | verified_external | poisson-distribution: A discrete distribution often used to model event counts. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=138); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L256) |
 | Bayes' theorem | مبرهنة بايز | proposed | bayes-theorem: A rule relating conditional probabilities through prior and evidence. |  |
 | prior | توزيع قبلي | proposed | prior: A probability distribution expressing uncertainty before observing data. |  |
-| posterior | التوزيع البعدي | proposed | posterior: A probability distribution updated after observing data. |  |
-| likelihood | الإمكان | verified_external | likelihood: The probability or density of observed data viewed as a function of model parameters. | review-ar-12cebaca75: page; review-ar-b825352385: page |
-| maximum likelihood | الإمكان الأعظم | proposed | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. |  |
-| maximum likelihood estimation | تقدير الإمكان الأعظم | proposed | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. |  |
-| sampling | أخذ العينات | verified_d2l | sampling: The process of drawing observations from a distribution or population. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=62) |
+| posterior | توزيع بعدي | proposed | posterior: A probability distribution updated after observing data. |  |
+| likelihood | إمكان | verified_external | likelihood: The probability or density of observed data viewed as a function of model parameters. | review-ar-12cebaca75: page; review-ar-b825352385: page |
+| maximum likelihood | إمكان أعظم | proposed | maximum-likelihood: The principle of choosing parameters that maximize the likelihood of observed data. |  |
+| maximum likelihood estimation | تقدير الإمكان الأعظم | proposed | maximum-likelihood-estimation: The process of estimating parameters by maximizing data likelihood. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/maximum-likelihood-estimation-mle) |
+| sampling | أخذ العينات | verified_external | sampling: The process of drawing observations from a distribution or population. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=62); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D9%84%D8%AE%D9%8A%D8%B5-%D8%A7%D9%84%D9%86%D8%B5%D9%88%D8%B5-%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-r2315/) |
 | Monte Carlo | مونت كارلو | proposed | monte-carlo: A family of methods that use random samples to estimate quantities. |  |
-| entropy | الإنتروبيا | verified_external | entropy: A measure of uncertainty in a probability distribution. | [google-ml-ar-df](https://developers.google.com/machine-learning/glossary/df?hl=ar#entropy) |
-| cross-entropy | الإنتروبيا المتقاطعة | verified_external | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [google-ml-ar-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ar#cross-entropy) |
+| entropy | إنتروبيا | verified_external | entropy: A measure of uncertainty in a probability distribution. | [google-ml-ar-df](https://developers.google.com/machine-learning/glossary/df?hl=ar#entropy) |
+| cross-entropy | إنتروبيا متقاطعة | verified_external | cross-entropy: The expected negative log probability assigned by one distribution to outcomes from another. | [google-ml-ar-metrics](https://developers.google.com/machine-learning/glossary/metrics?hl=ar#cross-entropy) |
 | mutual information | معلومات متبادلة | proposed | mutual-information: A measure of statistical dependence between random variables. |  |
 | softmax | softmax | proposed | softmax: A function converting real-valued scores into a probability distribution. |  |
-| logistic regression | الانحدار اللوجستي | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L207) |
+| logistic regression | انحدار لوجستي | verified_external | logistic-regression: A probabilistic linear model commonly used for binary classification. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L207) |
 | sigmoid | دالة سيغمويد | proposed | sigmoid: A bounded nonlinear function often used to map real values to probabilities. |  |
 | cross-entropy loss | خسارة الإنتروبيا المتقاطعة | proposed | cross-entropy-loss: A loss measuring the negative log probability assigned to target outcomes. |  |
-| accuracy | الدقة | verified_external | accuracy: The proportion of predictions that are correct. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#accuracy) |
-| precision | الإحكام | proposed | precision: The fraction of predicted positives that are true positives. |  |
-| recall | الاستدعاء | verified_external | recall: The fraction of actual positives that are correctly identified. | review-ar-3518bb0b5f: page |
+| accuracy | دقة | verified_external | accuracy: The proportion of predictions that are correct. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#accuracy) |
+| precision | إحكام | verified_external | precision: The fraction of predicted positives that are true positives. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/precision) |
+| recall | استدعاء | verified_external | recall: The fraction of actual positives that are correctly identified. | review-ar-3518bb0b5f: page |
 | confusion matrix | مصفوفة الالتباس | proposed | confusion-matrix: A table comparing predicted and actual class counts. |  |
 | neural network | شبكة عصبية | proposed | neural-network: A model composed of interconnected parameterized transformations. |  |
-| neuron | عصبون | verified_external | neuron: A computational unit that transforms inputs into an output. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#neuron) |
+| neuron | عصبون | verified_external | neuron: A computational unit that transforms inputs into an output. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#neuron); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/neuron) |
 | layer | طبقة | verified_external | layer: A stage of a neural network that transforms its input. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#layer) |
-| hidden layer | الطبقة المخفية | verified_external | hidden-layer: A network layer between the input and output layers. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#hidden-layer) |
-| activation function | دالّة التفعيل | verified_external | activation-function: A function applied to a unit's input to produce its activation. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#activation-function) |
-| nonlinearity | اللاخطية | verified_d2l | nonlinearity: A transformation that is not linear in its input. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=230) |
+| hidden layer | طبقة مخفية | verified_external | hidden-layer: A network layer between the input and output layers. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#hidden-layer) |
+| activation function | دالة التفعيل | verified_external | activation-function: A function applied to a unit's input to produce its activation. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#activation-function) |
+| nonlinearity | لاخطية | verified_external | nonlinearity: A transformation that is not linear in its input. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=230); [ibm-think-ar](https://www.ibm.com/ae-ar/think/topics/convolutional-neural-networks) |
 | multilayer perceptron | بيرسبترون متعدد الطبقات | proposed | multilayer-perceptron: A feedforward neural network with multiple layers of learned transformations. |  |
 | rectified linear unit | ReLU | proposed | rectified-linear-unit: An activation function that outputs the larger of zero and its input. |  |
 | overfitting | فرط الملاءمة | verified_external | overfitting: Fitting training data so closely that performance on unseen data suffers. | review-ar-da1bdeb51a: page; review-ar-3518bb0b5f: page |
 | underfitting | نقص الملاءمة | proposed | underfitting: Failing to capture important structure even in the training data. |  |
-| generalization | التعميم | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#generalization) |
-| regularization | التنظيم | verified_d2l | regularization: A method that constrains or modifies learning to improve generalization. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=175) |
+| generalization | تعميم | verified_external | generalization: The ability of a learned model to perform well on unseen examples. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#generalization) |
+| regularization | تنظيم | verified_external | regularization: A method that constrains or modifies learning to improve generalization. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=175); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85_(%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA)) |
 | weight decay | اضمحلال الأوزان | proposed | weight-decay: A regularization method that shrinks model weights during training. |  |
-| dropout | الحذف العشوائي | proposed | dropout: A training method that randomly masks activations to regularize a network. |  |
-| early stopping | الإيقاف المبكر | verified_external | early-stopping: Stopping training based on validation performance before fitting continues too far. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#early-stopping) |
-| hyperparameter | المعلَمة الفائقة | verified_external | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#hyperparameter) |
-| model selection | اختيار النموذج | verified_d2l | model-selection: The process of choosing a model or configuration using available evidence. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=166) |
-| cross-validation | التحقق المتقاطع | verified_external | cross-validation: A method for evaluating configurations across different train-validation splits. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L204) |
-| initialization | التهيئة | verified_d2l | initialization: The choice of initial parameter values before training. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=34) |
+| dropout | حذف عشوائي | proposed | dropout: A training method that randomly masks activations to regularize a network. |  |
+| early stopping | إيقاف مبكر | verified_external | early-stopping: Stopping training based on validation performance before fitting continues too far. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#early-stopping) |
+| hyperparameter | معلَمة فائقة | verified_external | hyperparameter: A setting chosen outside the ordinary parameter-learning process. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#hyperparameter); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/hyperparameter) |
+| model selection | اختيار النموذج | verified_external | model-selection: The process of choosing a model or configuration using available evidence. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=166); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L155) |
+| cross-validation | تحقق متقاطع | verified_external | cross-validation: A method for evaluating configurations across different train-validation splits. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L204) |
+| initialization | تهيئة | verified_external | initialization: The choice of initial parameter values before training. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=34); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D8%A8%D9%86%D9%8A%D8%A9-%D9%85%D8%AE%D8%B5%D8%B5%D8%A9-%D9%84%D9%86%D9%85%D8%A7%D8%B0%D8%AC-transformers-%D9%81%D9%8A-hugging-face-r2476/) |
 | vanishing gradient | تلاشي التدرجات | proposed | vanishing-gradient: A gradient that becomes very small as it propagates through a network. |  |
-| exploding gradient | انفجار التدرجات | verified_d2l | exploding-gradient: A gradient that grows excessively large during propagation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=210) |
-| gradient clipping | قص التدرج | verified_d2l | gradient-clipping: Limiting gradient magnitude to stabilize optimization. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=211) |
+| exploding gradient | انفجار التدرجات | verified_external | exploding-gradient: A gradient that grows excessively large during propagation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=210); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/exploding-gradient-problem) |
+| gradient clipping | قص التدرج | proposed | gradient-clipping: Limiting gradient magnitude to stabilize optimization. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=211) |
 | batch normalization | تطبيع الدفعات | proposed | batch-normalization: A normalization method using statistics of activations in a batch. |  |
 | layer normalization | تطبيع الطبقات | proposed | layer-normalization: A normalization method using activation statistics within an example. |  |
-| convolution | التفاف | proposed | convolution: An operation that combines local input values with shared kernel weights. |  |
-| convolutional neural network | الشبكة العصبية الالتفافية | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
-| kernel | نواة الالتفاف | verified_d2l | kernel: A set of weights applied locally in a convolution. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=60) |
+| convolution | التفاف | proposed | convolution: An operation that combines local input values with shared kernel weights. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/convolution) |
+| convolutional neural network | شبكة عصبية التفافية | proposed | convolutional-neural-network: A neural network using convolutional layers to process structured data. |  |
+| kernel | نواة الالتفاف | verified_external | kernel: A set of weights applied locally in a convolution. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=60); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%B4%D8%A8%D9%83%D8%A9_%D8%B9%D8%B5%D8%A8%D9%88%D9%86%D9%8A%D8%A9_%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D9%81%D9%8A%D8%A9) |
 | filter | مرشح | proposed | filter: A learned set of local weights used to extract a pattern. |  |
 | channel | قناة | proposed | channel: A feature dimension in a structured representation such as an image. |  |
 | stride | خطوة الانزلاق | proposed | stride: The spacing between successive positions of an operation on an input. |  |
-| padding | الحشو | verified_d2l | padding: Extra values added around an input to control an operation's boundary or output size. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=70) |
-| pooling | التجميع | verified_d2l | pooling: An operation that aggregates values over local regions. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=82) |
-| max pooling | التجميع الأقصى | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
-| average pooling | تجميع المتوسط | verified_d2l | average-pooling: Pooling that averages values in each region. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=82) |
+| padding | حشو | verified_external | padding: Extra values added around an input to control an operation's boundary or output size. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=70); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D9%81%D9%8A%D8%A9-cnns-r2597/) |
+| pooling | تجميع | verified_external | pooling: An operation that aggregates values over local regions. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=82); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%88%D9%84_%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9) |
+| max pooling | تجميع أقصى | proposed | max-pooling: Pooling that selects the maximum value in each region. |  |
+| average pooling | تجميع المتوسط | proposed | average-pooling: Pooling that averages values in each region. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=82) |
 | receptive field | مجال استقبال | proposed | receptive-field: The region of an input that can influence a particular activation. |  |
 | translation equivariance | تساوق الإزاحة | proposed | translation-equivariance: The property that translating an input translates its representation correspondingly. |  |
 | residual connection | وصلة البواقي | proposed | residual-connection: A connection that adds an earlier representation to a later transformation. |  |
 | residual network | شبكة البواقي | proposed | residual-network: A neural network built using residual connections. |  |
 | skip connection | وصلة تخط | proposed | skip-connection: A connection that bypasses one or more intermediate layers. |  |
-| image augmentation | زيادة الصور | verified_d2l | image-augmentation: A technique that creates varied training images through transformations. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185) |
-| transfer learning | نقل التعلم | verified_d2l | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=202) |
-| fine-tuning | الضبط الدقيق | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#fine-tuning) |
-| pretraining | التدريب المسبق | verified_d2l | pretraining: Training a model on an initial task or dataset before adaptation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=342) |
-| object detection | اكتشاف الكائنات | verified_d2l | object-detection: The task of locating and classifying objects in an image. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185) |
+| image augmentation | زيادة الصور | proposed | image-augmentation: A technique that creates varied training images through transformations. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185) |
+| transfer learning | نقل التعلم | verified_external | transfer-learning: Reusing knowledge learned on one task to improve learning on another. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=202); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D8%B5%D9%86%D9%8A%D9%81-%D8%A7%D9%84%D8%B5%D9%88%D8%B1-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%88%D8%AC%D9%87-%D9%81%D9%8A-%D9%85%D8%AC%D8%A7%D9%84-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-r1197/) |
+| fine-tuning | ضبط دقيق | verified_external | fine-tuning: Further training a pretrained model for a particular task or dataset. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#fine-tuning) |
+| pretraining | تدريب مسبق | verified_external | pretraining: Training a model on an initial task or dataset before adaptation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=342); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8_%D8%A7%D9%84%D9%85%D8%B3%D8%A8%D9%82_%D8%A7%D9%84%D8%AA%D9%82%D8%A7%D8%A8%D9%84%D9%8A_%D8%A8%D9%8A%D9%86_%D8%A7%D9%84%D9%84%D8%BA%D8%A9_%D9%88%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9) |
+| object detection | اكتشاف الكائنات | verified_external | object-detection: The task of locating and classifying objects in an image. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A3%D9%81%D9%83%D8%A7%D8%B1-%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%AA%D9%86%D8%A7%D8%B3%D8%A8-%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86-r2535/) |
 | bounding box | صندوق الإحاطة | proposed | bounding-box: A rectangle specifying the location and extent of an object. |  |
-| intersection over union | التقاطع على الاتحاد | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
-| semantic segmentation | التجزئة الدلالية | verified_d2l | semantic-segmentation: The task of assigning a semantic class to each image pixel. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185) |
+| intersection over union | تقاطع على الاتحاد | proposed | intersection-over-union: The ratio of the overlap area to the union area of two regions. |  |
+| semantic segmentation | تجزئة دلالية | verified_external | semantic-segmentation: The task of assigning a semantic class to each image pixel. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=185); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9-%D8%A7%D9%84%D9%85%D9%8F%D8%B3%D8%A8%D9%82%D8%A9-%D9%84%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%82%D8%A8%D9%84-%D8%AA%D9%85%D8%B1%D9%8A%D8%B1%D9%87%D8%A7-%D9%84%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-r2365/) |
 | instance segmentation | تجزئة المثيلات | proposed | instance-segmentation: The task of identifying individual object instances at pixel level. |  |
-| image classification | تصنيف الصور | verified_d2l | image-classification: The task of assigning a class to an image. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=179) |
-| computer vision | الرؤية الحاسوبية | verified_d2l | computer-vision: The study of extracting information and making predictions from visual data. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=29) |
+| image classification | تصنيف الصور | verified_external | image-classification: The task of assigning a class to an image. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=179); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/image-classification) |
+| computer vision | رؤية حاسوبية | verified_external | computer-vision: The study of extracting information and making predictions from visual data. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=29); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%B1%D8%A4%D9%8A%D8%A9_%D8%AD%D8%A7%D8%B3%D9%88%D8%A8%D9%8A%D8%A9) |
 | recurrent neural network | شبكة عصبية متكررة | proposed | recurrent-neural-network: A neural network that updates a hidden state as it processes a sequence. |  |
-| hidden state | حالة مخفية | verified_d2l | hidden-state: An internal representation carried between steps of a sequential model. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=200) |
+| hidden state | حالة مخفية | verified_external | hidden-state: An internal representation carried between steps of a sequential model. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=200); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D8%A8%D9%86%D9%8A%D8%A9-%D9%85%D8%AE%D8%B5%D8%B5%D8%A9-%D9%84%D9%86%D9%85%D8%A7%D8%B0%D8%AC-transformers-%D9%81%D9%8A-hugging-face-r2476/) |
 | time step | خطوة زمنية | proposed | time-step: A position in a sequential or temporal computation. |  |
 | sequence | تسلسل | proposed | sequence: An ordered collection of elements. |  |
-| language model | النموذج اللغوي | proposed | language-model: A model assigning probabilities to sequences of language tokens. |  |
-| token | رمز | proposed | token: A unit into which text is divided for processing. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_preface/index.md#L117) |
+| language model | نموذج لغوي | proposed | language-model: A model assigning probabilities to sequences of language tokens. |  |
+| token | رمز مميز | verified_external | token: A unit into which text is divided for processing. | [ibm-think-ar](https://www.ibm.com/ae-ar/think/topics/transformer-model) |
 | tokenization | تجزئة إلى رموز | proposed | tokenization: The process of dividing text into tokens. |  |
 | vocabulary | مفردات | verified_external | vocabulary: The set of tokens available to a language model. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L162) |
-| embedding | التضمين | verified_d2l | embedding: A learned numerical representation of a discrete item or other object. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=263) |
-| word embedding | تضمين الكلمات | verified_d2l | word-embedding: A numerical vector representing a word. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=315) |
+| embedding | تضمين | verified_external | embedding: A learned numerical representation of a discrete item or other object. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=263); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/embedding) |
+| word embedding | تضمين الكلمات | verified_external | word-embedding: A numerical vector representing a word. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=315); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%AA%D8%B6%D9%85%D9%8A%D9%86_%D8%A7%D9%84%D9%83%D9%84%D9%85%D8%A7%D8%AA) |
 | sequence-to-sequence | تسلسل إلى تسلسل | proposed | sequence-to-sequence: A modeling approach that maps an input sequence to an output sequence. |  |
-| encoder | المشفر | verified_d2l | encoder: A component that converts an input into an internal representation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=258) |
+| encoder | مشفر | verified_external | encoder: A component that converts an input into an internal representation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=258); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%85%D8%B1%D9%85%D8%B2_%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A_%D9%85%D8%AA%D8%BA%D9%8A%D8%B1) |
 | decoder | مفكك التشفير | proposed | decoder: A component that produces an output from an internal representation or context. |  |
 | teacher forcing | فرض مخرجات المعلم | proposed | teacher-forcing: Training a sequence decoder using observed previous tokens as inputs. |  |
-| beam search | البحث الشعاعي | verified_d2l | beam-search: A decoding method that retains a limited number of candidate sequences at each step. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=275) |
-| perplexity | الحيرة | proposed | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. |  |
-| long short-term memory | الذاكرة قصيرة المدى الطويلة | proposed | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. |  |
+| beam search | بحث شعاعي | proposed | beam-search: A decoding method that retains a limited number of candidate sequences at each step. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=275) |
+| perplexity | حيرة | proposed | perplexity: An exponentiated average negative log-likelihood used to evaluate language models. |  |
+| long short-term memory | ذاكرة قصيرة المدى مطولة | verified_external | long-short-term-memory: A gated recurrent architecture designed to retain information over long intervals. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/long-short-term-memory-lstm) |
 | gated recurrent unit | وحدة متكررة ذات بوابات | proposed | gated-recurrent-unit: A recurrent architecture that uses gates to control state updates. |  |
-| attention | الانتباه | verified_d2l | attention: A mechanism that forms a context-dependent weighted combination of values. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=87) |
+| attention | انتباه | verified_external | attention: A mechanism that forms a context-dependent weighted combination of values. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=87); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%A7%D9%86%D8%AA%D8%A8%D8%A7%D9%87_(%D8%AA%D8%B9%D9%84%D9%85_%D8%A7%D9%84%D8%A2%D9%84%D8%A9)) |
 | self-attention | انتباه ذاتي | proposed | self-attention: Attention in which queries, keys, and values are derived from the same sequence. |  |
-| multi-head attention | الانتباه متعدد الرؤوس | verified_d2l | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=279) |
-| query | الاستعلام | verified_d2l | query: A representation used to select relevant information in attention. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=87) |
+| multi-head attention | انتباه متعدد الرؤوس | verified_external | multi-head-attention: Attention computed in several learned representation subspaces and then combined. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=279); [ibm-think-ar](https://www.ibm.com/ae-ar/think/topics/transformer-model) |
+| query | استعلام | verified_external | query: A representation used to select relevant information in attention. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=87); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%88%D9%84_%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9) |
 | key | مفتاح | proposed | key: A representation compared with a query to determine attention weights. |  |
 | value | قيمة | proposed | value: A representation combined according to attention weights. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_preface/index.md#L402) |
-| positional encoding | ترميز موضعي | verified_d2l | positional-encoding: Information added to representations to communicate sequence position. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=316) |
-| transformer | المحوّل | verified_d2l | transformer: A neural architecture built around attention and feedforward layers. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=172) |
+| positional encoding | ترميز موضعي | verified_external | positional-encoding: Information added to representations to communicate sequence position. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=316); [ibm-think-ar](https://www.ibm.com/ae-ar/think/topics/encoder-decoder-model) |
+| transformer | محول | verified_external | transformer: A neural architecture built around attention and feedforward layers. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=172); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/transformer) |
 | masked language model | نموذج لغوي مقنع | proposed | masked-language-model: A language model trained to predict hidden tokens from context. |  |
 | BERT | BERT | proposed | bert: A bidirectional transformer model pretrained using masked language modeling. |  |
 | generative model | نموذج توليدي | proposed | generative-model: A model that describes or generates samples from a data distribution. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L53) |
@@ -186,7 +186,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | score function | دالة الدرجة | proposed | score-function: The gradient of the log probability density with respect to its input. |  |
 | Markov chain | سلسلة ماركوف | proposed | markov-chain: A stochastic process whose next state depends on the present state. |  |
 | Markov decision process | عملية قرار ماركوف | proposed | markov-decision-process: A framework for sequential decisions with states, actions, rewards, and transitions. |  |
-| reinforcement learning | التعلم المعزز | verified_d2l | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=49) |
+| reinforcement learning | تعلم معزز | verified_external | reinforcement-learning: Learning behavior through interaction with an environment and reward feedback. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=49); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%86%D8%B8%D8%B1%D8%A9-%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9-%D8%B9%D9%84%D9%89-%D9%85%D8%AC%D8%A7%D9%84-%D8%AA%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%A2%D9%84%D8%A9-r1933/) |
 | agent | وكيل | verified_external | agent: An entity that chooses actions in an environment. | [google-ml-ar-agent](https://developers.google.com/machine-learning/glossary/agent?hl=ar#agent) |
 | environment | بيئة | proposed | environment: The external system with which an agent interacts. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_preliminaries/ndarray.md#L15) |
 | state | حالة | proposed | state: A representation of the situation relevant to a sequential decision process. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_preface/index.md#L298) |
@@ -203,12 +203,12 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | policy gradient | تدرج السياسة | proposed | policy-gradient: A method that optimizes a parameterized policy using gradient estimates. |  |
 | convex function | دالة محدبة | proposed | convex-function: A function whose value along a line segment is no greater than the corresponding linear interpolation. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-unsupervised-learning.md#L28) |
 | convex optimization | تحسين محدب | proposed | convex-optimization: Optimization of a convex objective over a convex feasible set. |  |
-| convexity | التحدب | verified_d2l | convexity: A geometric property governing line segments in sets or functions. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=28) |
-| local minimum | قيمة صغرى محلية | verified_d2l | local-minimum: A point whose objective value is no greater than values at nearby points. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=25) |
-| global minimum | القيمة الصغرى الشاملة | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
+| convexity | تحدب | proposed | convexity: A geometric property governing line segments in sets or functions. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=28) |
+| local minimum | قيمة صغرى محلية | verified_external | local-minimum: A point whose objective value is no greater than values at nearby points. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=25); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%83%D9%8A%D9%81%D9%8A%D8%A9-%D8%A8%D9%86%D8%A7%D8%A1-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B9%D8%B5%D8%A8%D9%8A%D8%A9-%D9%84%D8%AA%D8%B1%D8%AC%D9%85%D8%A9-%D9%84%D8%BA%D8%A9-%D8%A7%D9%84%D8%A5%D8%B4%D8%A7%D8%B1%D8%A9-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%84%D8%BA%D8%A9-%D8%A7%D9%84%D8%A5%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9-r2259/) |
+| global minimum | قيمة صغرى شاملة | proposed | global-minimum: A point whose objective value is no greater than values at all feasible points. |  |
 | saddle point | نقطة سرج | proposed | saddle-point: A stationary point that is not a local extremum in all directions. |  |
-| Hessian | المصفوفة الهيسية | verified_d2l | hessian: The matrix of second partial derivatives of a scalar function. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=28) |
-| Jacobian | المصفوفة اليعقوبية | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
+| Hessian | مصفوفة هيسية | verified_external | hessian: The matrix of second partial derivatives of a scalar function. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=28); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%A7%D9%86%D8%AD%D8%AF%D8%A7%D8%B1_%D9%84%D9%88%D8%AC%D8%B3%D8%AA%D9%8A) |
+| Jacobian | مصفوفة يعقوبية | proposed | jacobian: The matrix of first partial derivatives of a vector-valued function. |  |
 | momentum | زخم | proposed | momentum: An optimization technique that accumulates past gradients in an update direction. |  |
 | learning rate schedule | جدول معدل التعلم | proposed | learning-rate-schedule: A rule for changing the learning rate during training. |  |
 | Adam | Adam | proposed | adam: An optimization algorithm using adaptive estimates of gradient moments. |  |
@@ -224,15 +224,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Bayesian optimization | تحسين بايزي | proposed | bayesian-optimization: An optimization method using a probabilistic surrogate to choose evaluations. |  |
 | grid search | بحث شبكي | proposed | grid-search: A search over a predefined grid of hyperparameter settings. |  |
 | random search | بحث عشوائي | proposed | random-search: A search that samples hyperparameter configurations at random. |  |
-| recommender system | نظام التوصية | verified_d2l | recommender-system: A system that predicts or ranks items for users. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=173) |
+| recommender system | نظام التوصية | verified_external | recommender-system: A system that predicts or ranks items for users. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=173); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%83%D9%8A%D9%81-%D9%8A%D9%82%D8%AA%D8%B1%D8%AD-%D8%B9%D9%84%D9%8A%D9%83-%D8%AA%D9%8A%D9%83%D8%AA%D9%88%D9%83-%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D9%87%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%8A-%D8%AA%D8%B1%D9%8A%D8%AF%D9%87%D8%A7-%D9%82%D8%A8%D9%84-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86%D9%87%D8%A7%D8%9F-r2566/) |
 | collaborative filtering | تصفية تعاونية | verified_external | collaborative-filtering: A recommendation approach using patterns of user-item interactions. | review-ar-7f0df51f96: page |
 | matrix factorization | تحليل المصفوفة إلى عوامل | proposed | matrix-factorization: A representation of a matrix as a product of lower-dimensional matrices. |  |
 | implicit feedback | تغذية راجعة ضمنية | proposed | implicit-feedback: Behavioral evidence of preference without an explicit rating. |  |
 | word2vec | word2vec | proposed | word2vec: A family of methods for learning word vectors from context. |  |
 | negative sampling | أخذ العينات السالبة | proposed | negative-sampling: A training technique contrasting observed examples with sampled negative examples. |  |
-| sentiment analysis | تحليل المشاعر | verified_d2l | sentiment-analysis: The task of identifying sentiment expressed in text. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=384) |
+| sentiment analysis | تحليل المشاعر | verified_external | sentiment-analysis: The task of identifying sentiment expressed in text. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=384); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/sentiment-analysis) |
 | natural language inference | استدلال اللغة الطبيعية | proposed | natural-language-inference: The task of determining a logical relationship between text statements. |  |
-| machine translation | الترجمة الآلية | verified_external | machine-translation: The automatic conversion of text from one language to another. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#machine-translation) |
+| machine translation | ترجمة آلية | verified_external | machine-translation: The automatic conversion of text from one language to another. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#machine-translation) |
 | BLEU | درجة BLEU | proposed | bleu: A metric comparing generated translations with reference translations using n-gram overlap. |  |
 | state space | فضاء الحالات | proposed | state-space: The set or representation of possible states of a system. |  |
 | ordinary differential equation | معادلة تفاضلية عادية | proposed | ordinary-differential-equation: An equation relating a function to its derivatives with respect to one variable. |  |
@@ -247,15 +247,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | principal component analysis | تحليل المكونات الرئيسية | proposed | principal-component-analysis: A dimensionality-reduction method based on directions of maximal variance. |  |
 | dimensionality reduction | خفض الأبعاد | proposed | dimensionality-reduction: The transformation of data into a representation with fewer dimensions. |  |
 | principal component | مكون رئيسي | proposed | principal-component: A direction capturing variance under the constraints of principal component analysis. |  |
-| convergence | التقارب | verified_external | convergence: The approach of a sequence or process toward a limiting value or behavior. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#convergence) |
+| convergence | تقارب | verified_external | convergence: The approach of a sequence or process toward a limiting value or behavior. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#convergence) |
 | empirical risk minimization | تصغير الخطر التجريبي | proposed | empirical-risk-minimization: The principle of minimizing average loss over observed training examples. |  |
 | statistical learning | تعلم إحصائي | proposed | statistical-learning: Learning models from data using statistical principles. |  |
 | Bayesian inference | استدلال بايزي | proposed | bayesian-inference: Inference that updates probability distributions using observations. |  |
 | confidence interval | فترة ثقة | proposed | confidence-interval: An interval constructed by a procedure with a specified long-run coverage rate. |  |
 | hypothesis testing | اختبار الفرضيات | proposed | hypothesis-testing: A statistical procedure for assessing evidence against a hypothesis. |  |
-| bootstrap | البوتستراب | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
+| bootstrap | بوتستراب | proposed | bootstrap: A resampling method that estimates variability by sampling from observed data. |  |
 | central limit theorem | مبرهنة النهاية المركزية | verified_external | central-limit-theorem: A result describing the limiting distribution of standardized sums under suitable conditions. | review-ar-109a28de93: page |
-| law of large numbers | قانون الأعداد الكبيرة | verified_d2l | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=107) |
+| law of large numbers | قانون الأعداد الكبيرة | proposed | law-of-large-numbers: A result stating that sample averages approach expectations under suitable conditions. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=107) |
 | variance reduction | خفض التباين | proposed | variance-reduction: Methods that reduce the variability of an estimator. |  |
 | causality | سببية | proposed | causality: The relationship in which changes to one variable bring about changes in another. |  |
 | distribution shift | انزياح التوزيع | proposed | distribution-shift: A change in the data distribution between settings such as training and deployment. |  |
@@ -264,14 +264,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | privacy | خصوصية | proposed | privacy: Protection against unwanted disclosure of information about individuals. |  |
 | fairness | إنصاف | proposed | fairness: The study or assessment of equitable behavior and outcomes in a system. |  |
 | parallelism | توازي | proposed | parallelism: Executing multiple computations concurrently. |  |
-| data parallelism | توازي البيانات | verified_d2l | data-parallelism: Parallel computation in which workers process different data with replicated models. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=159) |
+| data parallelism | توازي البيانات | verified_external | data-parallelism: Parallel computation in which workers process different data with replicated models. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=159); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/data-parallelism) |
 | GPU | GPU | proposed | gpu: A processor designed for highly parallel numerical computation. |  |
 | memory bandwidth | عرض نطاق الذاكرة | verified_external | memory-bandwidth: The rate at which data can be transferred to or from memory. | review-ar-cd98b640fb: page |
 | throughput | إنتاجية | proposed | throughput: The amount of work completed per unit time. |  |
 | latency | زمن الاستجابة | proposed | latency: The elapsed time required to complete a task or operation. |  |
-| quantization | التكميم | verified_d2l | quantization: Representing numerical values using a reduced set of discrete values. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=37) |
+| quantization | تكميم | verified_external | quantization: Representing numerical values using a reduced set of discrete values. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=37); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D8%B5%D8%AF%D9%8A%D8%B1-%D9%86%D9%85%D8%A7%D8%B0%D8%AC-transformers-%D9%84%D8%B5%D9%8A%D8%BA%D8%AA%D9%8A-onnx-%D9%88-tflite-r2497/) |
 | knowledge distillation | تقطير المعرفة | proposed | knowledge-distillation: Training a student model using information supplied by a teacher model. |  |
-| probability mass function | دالة الكتلة الاحتمالية | verified_d2l | probability-mass-function: A function assigning probabilities to individual discrete outcomes. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=174) |
+| probability mass function | دالة الكتلة الاحتمالية | proposed | probability-mass-function: A function assigning probabilities to individual discrete outcomes. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=174) |
 | cumulative distribution function | دالة التوزيع التراكمي | proposed | cumulative-distribution-function: A function giving the probability that a random variable is at most a given value. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L133) |
 | conditional distribution | توزيع شرطي | proposed | conditional-distribution: A probability distribution given the value or occurrence of another variable or event. |  |
 | log-likelihood | لوغاريتم الإمكان | proposed | log-likelihood: The logarithm of a likelihood function. |  |
@@ -290,7 +290,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | bias-variance decomposition | تحليل الانحياز والتباين | proposed | bias-variance-decomposition: A decomposition of expected prediction error into bias, variance, and potentially irreducible noise. |  |
 | mean | متوسط | proposed | mean: A measure of central tendency given by an average or expectation. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L536) |
 | median | وسيط | proposed | median: A value that divides a distribution or ordered sample into two halves. |  |
-| quantile | التجزيء | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
+| quantile | تجزيء | proposed | quantile: A value corresponding to a specified cumulative probability. |  |
 | standard error | خطأ معياري | proposed | standard-error: The standard deviation of a sampling distribution of an estimator. |  |
 | sampling distribution | توزيع المعاينة | proposed | sampling-distribution: The probability distribution of a statistic across repeated samples. |  |
 | statistical significance | دلالة إحصائية | proposed | statistical-significance: A characterization of evidence against a statistical null hypothesis under a specified test. |  |
@@ -303,16 +303,16 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mixture model | نموذج خليط | proposed | mixture-model: A probability model combining multiple component distributions. |  |
 | mixture of Gaussians | خليط غاوسي | proposed | mixture-of-gaussians: A probability distribution formed as a weighted combination of Gaussian components. |  |
 | variational inference | استدلال تغيري | proposed | variational-inference: Approximate inference that optimizes a tractable distribution to approximate a posterior. |  |
-| evidence lower bound | الحد الأدنى للدليل | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
+| evidence lower bound | حد أدنى للدليل | proposed | evidence-lower-bound: A variational objective that lower-bounds the log evidence of observed data. |  |
 | log probability | لوغاريتم الاحتمال | proposed | log-probability: The logarithm of a probability or probability density. |  |
 | log-sum-exp | لوغاريتم مجموع الأسيات | proposed | log-sum-exp: A numerically stable expression for the logarithm of a sum of exponentials. |  |
-| numerical stability | الاستقرار العددي | verified_d2l | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=203) |
-| floating point | الفاصلة العائمة | verified_d2l | floating-point: A finite-precision numerical representation using a significand and exponent. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=187) |
+| numerical stability | استقرار عددي | verified_external | numerical-stability: The ability of a computation to avoid excessive error from finite-precision arithmetic. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=203); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%AA%D8%B9%D9%84%D9%85_%D9%85%D8%B1%D8%A7%D9%82%D8%A8) |
+| floating point | فاصلة عائمة | verified_external | floating-point: A finite-precision numerical representation using a significand and exponent. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=187); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%88%D8%AD%D8%AF%D8%A9_%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9_%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%85%D9%8A%D8%A7%D8%AA) |
 | underflow | طفح سفلي | proposed | underflow: A numerical condition in which a magnitude is too small to represent accurately. |  |
 | overflow | طفح | verified_external | overflow: A numerical condition in which a magnitude exceeds the representable range. | review-ar-824ac4e8db: page |
 | condition number | عدد الشرط | proposed | condition-number: A measure of how sensitive a mathematical problem is to perturbations. |  |
 | convergence rate | معدل التقارب | proposed | convergence-rate: The speed at which an iterative procedure approaches a limit or solution. |  |
-| line search | البحث الخطي | verified_d2l | line-search: A method that chooses a step size along a search direction. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=53) |
+| line search | بحث خطي | verified_external | line-search: A method that chooses a step size along a search direction. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=53); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A9_%D8%A3%D8%B5%D9%84_%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D8%AC) |
 | Newton's method | طريقة نيوتن | proposed | newton-s-method: An iterative method using derivatives or curvature to find a root or optimum. |  |
 | quasi-Newton | شبه نيوتن | proposed | quasi-newton: An optimization approach that approximates curvature rather than computing the full Hessian. |  |
 | subgradient | تدرج تحتي | proposed | subgradient: A generalization of a gradient applicable to certain nondifferentiable functions. |  |
@@ -321,34 +321,34 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | strong convexity | تحدب قوي | proposed | strong-convexity: A strengthened form of convexity with a positive quadratic lower bound. |  |
 | convex set | مجموعة محدبة | proposed | convex-set: A set containing every line segment between any two of its points. |  |
 | feasible region | منطقة ممكنة | proposed | feasible-region: The set of points satisfying an optimization problem's constraints. |  |
-| duality | الثنوية | proposed | duality: A relationship between an optimization problem and an associated dual problem. |  |
-| Lagrangian | اللّاغرانجي | verified_external | lagrangian: A function combining an objective with weighted constraint terms. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L361) |
-| coordinate descent | النزول الإحداثي | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
+| duality | ثنوية | proposed | duality: A relationship between an optimization problem and an associated dual problem. |  |
+| Lagrangian | لاغرانجي | verified_external | lagrangian: A function combining an objective with weighted constraint terms. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L361) |
+| coordinate descent | نزول إحداثي | proposed | coordinate-descent: An optimization method that updates one coordinate or a subset at a time. |  |
 | learning rate decay | اضمحلال معدل التعلم | proposed | learning-rate-decay: A reduction in learning rate over the course of training. |  |
-| warmup | الإحماء | verified_d2l | warmup: A training phase in which a setting such as learning rate is gradually increased. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=108) |
+| warmup | إحماء | proposed | warmup: A training phase in which a setting such as learning rate is gradually increased. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=108) |
 | weight initialization | تهيئة الأوزان | proposed | weight-initialization: The choice of starting values for model weights. |  |
 | Xavier initialization | تهيئة Xavier | proposed | xavier-initialization: An initialization method that scales weights to control activation variance across layers. |  |
 | weight sharing | مشاركة الأوزان | proposed | weight-sharing: Using the same parameters in multiple parts of a model. |  |
 | parameter count | عدد المعلَمات | proposed | parameter-count: The number of parameters in a model. |  |
 | computational complexity | تعقيد حسابي | proposed | computational-complexity: A characterization of how computational cost scales with problem size. |  |
-| backward pass | التمرير الخلفي | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
-| forward pass | التمرير الأمامي | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
-| computational efficiency | الكفاءة الحسابية | verified_d2l | computational-efficiency: The effectiveness with which computation uses time or resources. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=65) |
+| backward pass | تمرير خلفي | proposed | backward-pass: The computation that propagates derivatives from outputs toward inputs. |  |
+| forward pass | تمرير أمامي | proposed | forward-pass: The computation that evaluates a model from inputs to outputs. |  |
+| computational efficiency | كفاءة حسابية | verified_external | computational-efficiency: The effectiveness with which computation uses time or resources. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=65); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9-%D9%88%D8%A5%D8%AC%D8%A7%D8%A8%D8%A7%D8%AA-%D8%AD%D9%88%D9%84-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%88%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9-%D8%A7%D9%84%D9%84%D8%BA%D8%A9-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-nlp-r2496/) |
 | loss landscape | مشهد الخسارة | proposed | loss-landscape: The loss or objective value viewed as a function of a model's parameters. |  |
-| inductive bias | الانحياز الاستقرائي | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
+| inductive bias | انحياز استقرائي | proposed | inductive-bias: Assumptions or preferences that guide a learning method toward certain solutions. |  |
 | universal approximation | تقريب شامل | proposed | universal-approximation: The ability of a class of models to approximate broad classes of functions under suitable conditions. |  |
 | feature extraction | استخراج الميزات | proposed | feature-extraction: The process of deriving informative representations from raw inputs. |  |
 | representation learning | تعلم التمثيلات | proposed | representation-learning: Learning useful features or representations from data. |  |
 | self-supervised learning | تعلم ذاتي الإشراف | proposed | self-supervised-learning: Learning from supervisory signals constructed from the data itself. |  |
-| supervised learning | التعلم الخاضع للإشراف | verified_d2l | supervised-learning: Learning a mapping from inputs to observed targets. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=32) |
+| supervised learning | تعلم خاضع للإشراف | verified_external | supervised-learning: Learning a mapping from inputs to observed targets. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=32); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D9%85%D9%83%D8%AA%D8%A8%D8%A9-scikit-learn-%D9%88%D8%A3%D9%87%D9%85-%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A7%D8%AA%D9%87%D8%A7-r2485/) |
 | unsupervised learning | تعلم غير خاضع للإشراف | proposed | unsupervised-learning: Learning structure from data without task labels. |  |
-| in-context learning | التعلّم داخل السياق | verified_external | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#in-context-learning) |
+| in-context learning | تعلم داخل السياق | verified_external | in-context-learning: Conditioning a model on examples or instructions supplied in its input context. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#in-context-learning) |
 | prompt | موجه | proposed | prompt: An input that guides a model's response or behavior. |  |
 | context window | نافذة السياق | proposed | context-window: The amount of context a model can process in a single input. |  |
 | next-token prediction | تنبؤ بالرمز التالي | proposed | next-token-prediction: Predicting the next token given preceding context. |  |
-| autoregressive model | نموذج الانحدار الذاتي | verified_d2l | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=216) |
+| autoregressive model | نموذج الانحدار الذاتي | verified_external | autoregressive-model: A model that factors a sequence distribution into conditional predictions of successive elements. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=216); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/autoregressive-model) |
 | autoregressive generation | توليد ذاتي الانحدار | proposed | autoregressive-generation: Producing a sequence one element at a time conditioned on earlier elements. |  |
-| causal attention | انتباه سببي | verified_d2l | causal-attention: Attention restricted so positions cannot access future positions. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=346) |
+| causal attention | انتباه سببي | proposed | causal-attention: Attention restricted so positions cannot access future positions. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=346) |
 | cross-attention | انتباه متقاطع | proposed | cross-attention: Attention in which queries and key-value representations come from different sources. |  |
 | scaled dot-product attention | انتباه الجداء النقطي المقيس | proposed | scaled-dot-product-attention: Attention using query-key dot products scaled before normalization. |  |
 | softmax attention | انتباه softmax | proposed | softmax-attention: Attention that converts relevance scores into weights using softmax. |  |
@@ -361,43 +361,43 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | encoder-decoder | مشفر–مفكك تشفير | proposed | encoder-decoder: An architecture that encodes an input and decodes a corresponding output. |  |
 | sequence length | طول التسلسل | proposed | sequence-length: The number of elements in a sequence. |  |
 | attention score | درجة الانتباه | proposed | attention-score: A numerical measure of compatibility between a query and a key. |  |
-| attention pooling | تجميع الانتباه | verified_d2l | attention-pooling: Combining values using weights determined by an attention mechanism. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=282) |
-| additive attention | الانتباه الجمعي | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
+| attention pooling | تجميع الانتباه | verified_external | attention-pooling: Combining values using weights determined by an attention mechanism. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=282); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%88%D9%84_%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9) |
+| additive attention | انتباه جمعي | proposed | additive-attention: An attention mechanism that computes relevance using a learned additive transformation. |  |
 | dot-product attention | انتباه الجداء النقطي | proposed | dot-product-attention: Attention based on dot products between queries and keys. |  |
 | masked attention | انتباه مقنع | proposed | masked-attention: Attention that prevents selected positions from contributing. |  |
 | byte pair encoding | ترميز أزواج البايت | proposed | byte-pair-encoding: A tokenization method that repeatedly merges frequent symbol pairs. |  |
-| subword | الكلمات الفرعية | verified_d2l | subword: A token unit that can represent part of a word. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=350) |
+| subword | كلمات فرعية | verified_external | subword: A token unit that can represent part of a word. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=350); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%A8%D9%8A%D8%B1%D8%AA_(%D9%86%D9%85%D9%88%D8%B0%D8%AC_%D9%84%D8%BA%D9%88%D9%8A)) |
 | n-gram | n-gram | proposed | n-gram: A contiguous sequence of n items, often words or tokens. |  |
 | corpus | مدونة نصية | proposed | corpus: A collection of texts used for language analysis or model training. |  |
 | word frequency | تواتر الكلمة | proposed | word-frequency: The number or rate of occurrences of a word in a corpus. |  |
 | embedding matrix | مصفوفة التضمين | proposed | embedding-matrix: A matrix whose rows or columns represent learned embeddings of discrete items. |  |
-| cosine similarity | تشابه جيب التمام | verified_d2l | cosine-similarity: A similarity measure based on the angle between vectors. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=316) |
+| cosine similarity | تشابه جيب التمام | verified_external | cosine-similarity: A similarity measure based on the angle between vectors. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=316); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%83%D9%8A%D9%81-%D9%8A%D9%82%D8%AA%D8%B1%D8%AD-%D8%B9%D9%84%D9%8A%D9%83-%D8%AA%D9%8A%D9%83%D8%AA%D9%88%D9%83-%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D9%87%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%8A-%D8%AA%D8%B1%D9%8A%D8%AF%D9%87%D8%A7-%D9%82%D8%A8%D9%84-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86%D9%87%D8%A7%D8%9F-r2566/) |
 | nearest neighbor | أقرب جار | proposed | nearest-neighbor: An item closest to a query according to a chosen distance or similarity measure. |  |
 | word analogy | تناظر الكلمات | proposed | word-analogy: A relationship between words expressed by corresponding semantic or vector differences. |  |
 | skip-gram | skip-gram | proposed | skip-gram: A word embedding model and objective that predict context words from a center word. |  |
 | continuous bag of words | حقيبة كلمات مستمرة | proposed | continuous-bag-of-words: A word embedding method that predicts a center word from its context. |  |
 | masked language modeling | نمذجة اللغة المقنعة | proposed | masked-language-modeling: A training task that predicts tokens hidden in an input sequence. |  |
 | next sentence prediction | تنبؤ بالجملة التالية | proposed | next-sentence-prediction: A pretraining task that assesses the relationship between pairs of text segments. |  |
-| question answering | الإجابة عن الأسئلة | proposed | question-answering: The task of producing an answer to a question, often using a supplied context. |  |
+| question answering | إجابة عن الأسئلة | proposed | question-answering: The task of producing an answer to a question, often using a supplied context. |  |
 | text classification | تصنيف النصوص | proposed | text-classification: The task of assigning categories to text. |  |
-| named entity recognition | التعرف على الكيانات المسماة | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. |  |
+| named entity recognition | تعرف على الكيانات المسماة | proposed | named-entity-recognition: The task of identifying and categorizing named entities in text. |  |
 | semantic similarity | تشابه دلالي | proposed | semantic-similarity: The degree to which expressions have similar meanings. |  |
-| convolutional layer | الطبقة الالتفافية | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
+| convolutional layer | طبقة التفافية | proposed | convolutional-layer: A layer that applies learned convolutional filters to its input. |  |
 | feature map | خريطة الميزات | proposed | feature-map: An array of activations representing features across positions. |  |
-| pooling layer | طبقة التجميع | verified_d2l | pooling-layer: A layer that aggregates local groups of activations. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=253) |
+| pooling layer | طبقة التجميع | verified_external | pooling-layer: A layer that aggregates local groups of activations. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=253); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/pooling-layer) |
 | strided convolution | التفاف بخطوة انزلاق | proposed | strided-convolution: A convolution evaluated at positions separated by a stride greater than one. |  |
-| transposed convolution | الالتفاف المنقول | verified_d2l | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=271) |
+| transposed convolution | التفاف منقول | proposed | transposed-convolution: An operation related to the transpose of a convolution's linear map, often used for upsampling. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=271) |
 | dilated convolution | التفاف موسع | proposed | dilated-convolution: A convolution whose kernel samples input positions with gaps between them. |  |
 | depthwise convolution | التفاف عمقي | proposed | depthwise-convolution: A convolution applied separately to individual input channels. |  |
 | pointwise convolution | التفاف نقطي | proposed | pointwise-convolution: A convolution using a kernel with one spatial position. |  |
 | image resolution | دقة الصورة | proposed | image-resolution: The number of pixels or samples along an image's spatial dimensions. |  |
 | pixel | بكسل | proposed | pixel: An individual sample in a digital image. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_introduction/index.md#L81) |
-| image recognition | التعرف على الصور | proposed | image-recognition: The task of identifying visual content in images. |  |
+| image recognition | تعرف على الصور | proposed | image-recognition: The task of identifying visual content in images. |  |
 | image segmentation | تجزئة الصور | proposed | image-segmentation: Partitioning an image into regions or pixel-level categories. |  |
 | region proposal | اقتراح المناطق | proposed | region-proposal: A candidate image region that may contain an object. |  |
 | anchor box | صندوق الإرساء | proposed | anchor-box: A reference bounding box used to formulate object localization predictions. |  |
 | non-maximum suppression | كبت غير الأقصى | proposed | non-maximum-suppression: A procedure that removes overlapping lower-scoring detection candidates. |  |
-| data augmentation | زيادة البيانات | verified_d2l | data-augmentation: Creating varied training examples by transforming existing data. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=235) |
+| data augmentation | زيادة البيانات | verified_external | data-augmentation: Creating varied training examples by transforming existing data. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=235); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/data-augmentation) |
 | random crop | اقتصاص عشوائي | proposed | random-crop: A data augmentation that selects a random subregion of an input. |  |
 | super-resolution | دقة فائقة | proposed | super-resolution: The task of producing a higher-resolution image from a lower-resolution input. |  |
 | image generation | توليد الصور | proposed | image-generation: The production of images by an algorithm or model, potentially conditioned on inputs. |  |
@@ -419,7 +419,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | Markov reward process | عملية مكافأة ماركوف | proposed | markov-reward-process: A Markov process equipped with rewards and a return criterion. |  |
 | Bellman optimality equation | معادلة بيلمان للمثالية | proposed | bellman-optimality-equation: A recursive equation characterizing optimal values in a decision process. |  |
 | policy gradient theorem | مبرهنة تدرج السياسة | proposed | policy-gradient-theorem: A result expressing a policy objective's gradient in terms of policy and value quantities. |  |
-| deep reinforcement learning | التعلم المعزز العميق | verified_d2l | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=49) |
+| deep reinforcement learning | تعلم معزز عميق | verified_external | deep-reinforcement-learning: Reinforcement learning using deep neural networks for functions such as policies or values. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=49); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%86%D8%B8%D8%B1%D8%A9-%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9-%D8%B9%D9%84%D9%89-%D9%85%D8%AC%D8%A7%D9%84-%D8%AA%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%A2%D9%84%D8%A9-r1933/) |
 | target network | شبكة هدف | proposed | target-network: A delayed copy of a network used to stabilize learning targets. |  |
 | experience replay | إعادة عرض الخبرات | proposed | experience-replay: Reusing stored transitions sampled from past experience during training. |  |
 | diffusion process | عملية انتشار | proposed | diffusion-process: A stochastic process involving gradual random perturbations over time. |  |
@@ -428,19 +428,19 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | score matching | مطابقة الدرجة | proposed | score-matching: An estimation method that fits gradients of log densities. |  |
 | Langevin dynamics | ديناميكيات لانجفان | proposed | langevin-dynamics: Stochastic dynamics that combine gradient-driven motion with random noise. |  |
 | noise prediction | تنبؤ بالضوضاء | proposed | noise-prediction: The task of estimating noise added to a signal. |  |
-| Gaussian noise | الضوضاء الغاوسية | verified_d2l | gaussian-noise: Random perturbation drawn from a Gaussian distribution. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=39) |
+| Gaussian noise | ضوضاء غاوسية | proposed | gaussian-noise: Random perturbation drawn from a Gaussian distribution. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=39) |
 | flow matching | مطابقة التدفق | proposed | flow-matching: A generative modeling approach that learns a vector field transporting one distribution to another. |  |
 | probability flow | تدفق احتمالي | proposed | probability-flow: The evolution of a probability distribution under a dynamical process. |  |
 | vector field | حقل متجهات | proposed | vector-field: A function assigning a vector to each point in a domain. |  |
 | continuous-time | زمن مستمر | proposed | continuous-time: Describing a process indexed by a continuously varying time variable. |  |
-| discretization | التقطيع | proposed | discretization: Approximation of a continuous object or process using discrete steps or values. |  |
+| discretization | تقطيع | proposed | discretization: Approximation of a continuous object or process using discrete steps or values. |  |
 | Euler-Maruyama | أويلر ماروياما | proposed | euler-maruyama: A numerical method for approximating solutions of stochastic differential equations. |  |
 | Itô calculus | حساب إيتو | proposed | ito-calculus: Calculus for stochastic processes such as Brownian motion. |  |
 | ODE solver | حالّ معادلات تفاضلية عادية | proposed | ode-solver: A numerical algorithm that approximates solutions of ordinary differential equations. |  |
 | adjoint method | طريقة المؤثر القرين | proposed | adjoint-method: A method for calculating sensitivities by solving an auxiliary system backward. |  |
 | matrix exponential | أسي المصفوفة | proposed | matrix-exponential: A matrix function defined by the exponential power series. |  |
 | Fourier transform | تحويل فورييه | proposed | fourier-transform: A transformation representing a function in terms of frequency components. |  |
-| bias | الانحياز | verified_external | statistical-bias: The difference between an estimator’s expected value and the true parameter. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L294) |
+| bias | انحياز | verified_external | statistical-bias: The difference between an estimator’s expected value and the true parameter. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L294) |
 | mixture of experts | خليط الخبراء | proposed | mixture-of-experts: An architecture that routes inputs to a subset of specialized model components. |  |
 | transition kernel | نواة انتقال | proposed | transition-kernel: A conditional distribution specifying the next state given the current state and action. |  |
 | expected reward | مكافأة متوقعة | proposed | expected-reward: The mean reward associated with a state and action under the transition model. |  |
@@ -449,7 +449,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | target policy | سياسة الهدف | proposed | target-policy: The policy whose value or behavior an algorithm seeks to learn. |  |
 | temporal-difference error | خطأ الفرق الزمني | proposed | temporal-difference-error: The difference between a value estimate and a target based on a subsequent estimate. |  |
 | reward-to-go | مكافأة مستقبلية متراكمة | proposed | reward-to-go: The sum of rewards obtained from a given time onward. |  |
-| dynamic programming | البرمجة الديناميكية | verified_d2l | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=177) |
+| dynamic programming | برمجة ديناميكية | verified_external | dynamic-programming: A family of methods solving a problem through recursive subproblems. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=177); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%82%D8%B1%D8%A7%D8%B1%D8%A7%D8%AA_%D8%B9%D9%85%D9%84%D9%8A%D8%A9_%D9%85%D8%A7%D8%B1%D9%83%D9%88%D9%81) |
 | contextual bandit | ماكينة قمار سياقية | proposed | contextual-bandit: A sequential decision problem in which an action is chosen after observing context and receives a reward. |  |
 | control variate | متغير ضبط | proposed | control-variate: An auxiliary random quantity used to reduce the variance of an estimator. |  |
 | function approximation | تقريب الدالة | proposed | function-approximation: Representing an unknown function using a parameterized family of functions. |  |
@@ -482,10 +482,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | dual problem | مسألة ثنوية | proposed | dual-problem: An optimization problem constructed from another problem that can provide bounds on its solution. |  |
 | shadow price | سعر الظل | proposed | shadow-price: The sensitivity of an optimal objective value to a change in a constraint. |  |
 | Lasso | Lasso | proposed | lasso: A regression method using an absolute-value penalty to encourage sparsity. |  |
-| ridge regression | انحدار ريدج | verified_d2l | ridge-regression: A regression method using a squared-weight penalty. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=170) |
+| ridge regression | انحدار ريدج | verified_external | ridge-regression: A regression method using a squared-weight penalty. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=170); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A3%D8%AF%D9%88%D8%A7%D8%AA-%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%AA%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%A2%D9%84%D8%A9-r1938/) |
 | Gram matrix | مصفوفة غرام | proposed | gram-matrix: A matrix of inner products or kernel evaluations between pairs of objects. |  |
 | column space | فضاء الأعمدة | proposed | column-space: The set of all linear combinations of a matrix's columns. |  |
-| null space | الفضاء الصفري | proposed | null-space: The set of vectors mapped to zero by a linear transformation. |  |
+| null space | فضاء صفري | proposed | null-space: The set of vectors mapped to zero by a linear transformation. |  |
 | spectral radius | نصف القطر الطيفي | proposed | spectral-radius: The largest absolute value among a matrix's eigenvalues. |  |
 | spectral norm | معيار طيفي | proposed | spectral-norm: The largest singular value of a matrix. |  |
 | nuclear norm | معيار نووي | proposed | nuclear-norm: The sum of a matrix's singular values. |  |
@@ -493,17 +493,17 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | projection | إسقاط | proposed | projection: A mapping that sends a point onto a specified subspace or set. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-unsupervised-learning.md#L215) |
 | span | فضاء مولد | proposed | span: The set of all linear combinations of a collection of vectors. |  |
 | linear independence | استقلال خطي | proposed | linear-independence: The property that no vector in a collection is a linear combination of the others. |  |
-| covariance matrix | مصفوفة التغاير | verified_d2l | covariance-matrix: A matrix containing covariances between pairs of random variables. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117) |
-| normal equations | المعادلات الناظمية | proposed | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. |  |
-| one-hot encoding | الترميز الأحادي | verified_external | one-hot-encoding: A representation of a category as a vector with one active component. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#one-hot-encoding) |
+| covariance matrix | مصفوفة التغاير | verified_external | covariance-matrix: A matrix containing covariances between pairs of random variables. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=117); [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D8%AA%D8%AD%D9%84%D9%8A%D9%84_%D8%A7%D9%84%D8%B9%D9%86%D8%B5%D8%B1_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A) |
+| normal equations | معادلات ناظمية | proposed | normal-equations: Equations whose solution gives the least-squares fit under suitable conditions. |  |
+| one-hot encoding | ترميز أحادي | verified_external | one-hot-encoding: A representation of a category as a vector with one active component. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#one-hot-encoding) |
 | concatenation | ربط | proposed | concatenation: The operation of joining arrays or sequences along an axis. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L333) |
-| broadcasting | البث | verified_d2l | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=74) |
-| shape | الشكل | proposed | shape: The sizes of the axes of an array or tensor. |  |
+| broadcasting | بث | verified_external | broadcasting: Applying array operations across compatible shapes by implicitly expanding dimensions. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=74); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/broadcasting) |
+| shape | شكل | proposed | shape: The sizes of the axes of an array or tensor. |  |
 | slice | شريحة | proposed | slice: A selected portion of an array or sequence. |  |
 | forward mode | نمط أمامي | proposed | forward-mode: A differentiation method that propagates derivative information in the direction of computation. |  |
 | reverse mode | نمط عكسي | proposed | reverse-mode: A differentiation method that propagates derivative information backward from outputs. |  |
 | truncation error | خطأ القطع | proposed | truncation-error: The error caused by replacing an exact mathematical operation with a finite approximation. |  |
-| finite difference | الفروق المحدودة | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
+| finite difference | فروق محدودة | proposed | finite-difference: An approximation to a derivative based on changes over a finite input interval. |  |
 | mean value theorem | مبرهنة القيمة المتوسطة | verified_external | mean-value-theorem: A theorem relating a function's change over an interval to a derivative at an intermediate point. | review-ar-1c006552a3: page |
 | Taylor expansion | مفكوك تايلور | proposed | taylor-expansion: A local approximation to a function expressed in powers of displacement from a point. |  |
 | conditional entropy | إنتروبيا شرطية | proposed | conditional-entropy: The uncertainty remaining in one random variable after another is known. |  |
@@ -519,7 +519,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | variance-exploding | مفجر للتباين | proposed | variance-exploding: Describing a diffusion process whose noise variance grows over time. |  |
 | classifier guidance | توجيه المصنف | proposed | classifier-guidance: A technique that steers a generative process using gradients from a classifier. |  |
 | classifier-free guidance | توجيه بلا مصنف | proposed | classifier-free-guidance: A technique that combines conditional and unconditional model predictions to steer generation. |  |
-| probability-flow ODE | المعادلة التفاضلية العادية لتدفق الاحتمال | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
+| probability-flow ODE | معادلة تفاضلية عادية لتدفق الاحتمال | proposed | probability-flow-ode: An ordinary differential equation whose evolving marginals match those of a related diffusion process. |  |
 | optimal transport | نقل أمثل | proposed | optimal-transport: The problem of moving probability mass between distributions while minimizing a transport cost. |  |
 | Wasserstein distance | مسافة فاسرشتاين | proposed | wasserstein-distance: A distance between probability distributions based on optimal transport costs. |  |
 | mode collapse | انهيار الأنماط | proposed | mode-collapse: A generative-model failure in which generated samples cover too few modes of the data distribution. |  |
@@ -541,21 +541,21 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | roofline | خط السقف | proposed | roofline: A performance model relating achievable computation rate to arithmetic intensity and hardware limits. |  |
 | arithmetic intensity | كثافة حسابية | proposed | arithmetic-intensity: The ratio of computational operations to data transferred from memory. |  |
 | mixed precision | دقة مختلطة | proposed | mixed-precision: Using more than one numerical precision within a computation. |  |
-| eager execution | التنفيذ الفوري | verified_external | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. | [google-ml-ar-tensorflow](https://developers.google.com/machine-learning/glossary/tensorflow?hl=ar#eager-execution) |
+| eager execution | تنفيذ فوري | verified_external | eager-execution: Execution of operations as they are invoked rather than as a previously compiled graph. | [google-ml-ar-tensorflow](https://developers.google.com/machine-learning/glossary/tensorflow?hl=ar#eager-execution) |
 | activation checkpointing | نقاط استعادة التفعيلات | proposed | activation-checkpointing: Saving selected activations and recomputing others during the backward pass to reduce memory use. |  |
-| data loader | محمّل البيانات | verified_d2l | data-loader: A component that prepares and supplies batches of data to a training process. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=198) |
+| data loader | محمل البيانات | verified_external | data-loader: A component that prepares and supplies batches of data to a training process. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=198); [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D8%B5%D9%82%D9%84-fine-tune-%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%85%D9%8F%D8%AF%D8%B1%D9%91%D9%8E%D8%A8-%D9%85%D9%8F%D8%B3%D8%A8%D9%82%D9%8B%D8%A7-r2367/) |
 | input pipeline | مسار معالجة المدخلات | proposed | input-pipeline: The sequence of operations that reads and prepares data for computation. |  |
 | stochastic depth | عمق عشوائي | proposed | stochastic-depth: A training technique that randomly skips network layers or blocks. |  |
-| global average pooling | التجميع المتوسط الشامل | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
+| global average pooling | تجميع متوسط شامل | proposed | global-average-pooling: Pooling that averages each feature channel over its spatial positions. |  |
 | grouped convolution | التفاف مجموعات | proposed | grouped-convolution: A convolution that partitions input and output channels into groups. |  |
 | exponential moving average | متوسط متحرك أسي | proposed | exponential-moving-average: A weighted average assigning exponentially decreasing weight to older observations. |  |
-| inverted dropout | الحذف العشوائي المعكوس | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
+| inverted dropout | حذف عشوائي معكوس | proposed | inverted-dropout: A dropout variant that rescales retained activations during training. |  |
 | He initialization | تهيئة He | proposed | he-initialization: A weight initialization method designed to preserve signal scale in rectifier networks. |  |
 | GELU | GELU | proposed | gelu: An activation function that smoothly weights an input by a Gaussian cumulative probability. |  |
-| generalization gap | فجوة التعميم | verified_d2l | generalization-gap: The difference between a model's training performance and its performance on unseen data. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=209) |
+| generalization gap | فجوة التعميم | proposed | generalization-gap: The difference between a model's training performance and its performance on unseen data. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=209) |
 | hypothesis class | فئة الفرضيات | proposed | hypothesis-class: The set of candidate functions or models considered by a learning method. |  |
 | uniform convergence | تقارب منتظم | proposed | uniform-convergence: Convergence that holds uniformly across a specified class of functions. |  |
-| VC dimension | بعد VC | proposed | vc-dimension: A measure of the capacity of a class of binary classifiers. |  |
+| VC dimension | بُعد VC | proposed | vc-dimension: A measure of the capacity of a class of binary classifiers. |  |
 | adaptive overfitting | فرط الملاءمة التكيفي | proposed | adaptive-overfitting: Overfitting that arises from repeatedly making decisions using the same evaluation data. |  |
 | interpolation threshold | عتبة الاستيفاء | proposed | interpolation-threshold: A model-capacity threshold at which a model can fit the training data exactly. |  |
 | logit | لوجيت | proposed | logit: An unnormalized score used as an input to a probability transformation. |  |
@@ -568,15 +568,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | selective scan | مسح انتقائي | proposed | selective-scan: An algorithm computing an input-dependent recurrence efficiently across a sequence. |  |
 | parallel scan | مسح متواز | proposed | parallel-scan: An algorithm that computes prefix results using parallel associative operations. |  |
 | recurrent state | حالة متكررة | proposed | recurrent-state: Information carried from one time step to the next in a recurrent model. |  |
-| forget gate | بوابة النسيان | verified_d2l | forget-gate: A gate that controls how much of a previous state is retained. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=228) |
-| input gate | بوابة الإدخال | verified_d2l | input-gate: A gate that controls how much new information enters a recurrent state. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=228) |
-| output gate | بوابة الإخراج | verified_d2l | output-gate: A gate that controls how a recurrent state contributes to the output. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=229) |
+| forget gate | بوابة النسيان | verified_external | forget-gate: A gate that controls how much of a previous state is retained. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=228); [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/forget-gate) |
+| input gate | بوابة الإدخال | verified_external | input-gate: A gate that controls how much new information enters a recurrent state. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=228); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-deep-learning.md#L207) |
+| output gate | بوابة الإخراج | verified_external | output-gate: A gate that controls how a recurrent state contributes to the output. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=229); [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-deep-learning.md#L207) |
 | update gate | بوابة التحديث | proposed | update-gate: A gate that controls the blend of previous state and candidate state in a recurrent model. |  |
-| reset gate | بوابة إعادة الضبط | verified_d2l | reset-gate: A gate that controls how previous state influences a candidate recurrent update. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=236) |
+| reset gate | بوابة إعادة الضبط | proposed | reset-gate: A gate that controls how previous state influences a candidate recurrent update. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=236) |
 | backpropagation through time | انتشار عكسي عبر الزمن | proposed | backpropagation-through-time: Applying backpropagation to a recurrent model unrolled over time. |  |
 | truncated backpropagation through time | انتشار عكسي مقتطع عبر الزمن | proposed | truncated-backpropagation-through-time: Backpropagation through time restricted to a limited sequence of steps. |  |
 | sequence transduction | تحويل التسلسلات | proposed | sequence-transduction: The task of converting an input sequence into an output sequence. |  |
-| sequence modeling | نمذجة التسلسل | verified_d2l | sequence-modeling: Modeling dependencies within or between ordered sequences. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=174) |
+| sequence modeling | نمذجة التسلسل | proposed | sequence-modeling: Modeling dependencies within or between ordered sequences. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=174) |
 | beam width | عرض الشعاع | proposed | beam-width: The number of candidate sequences retained at each step of beam search. |  |
 | greedy decoding | فك تشفير جشع | proposed | greedy-decoding: Generating each next token by selecting the highest-scoring available token. |  |
 | causal language model | نموذج لغوي سببي | proposed | causal-language-model: A language model that predicts each token using only preceding context. |  |
@@ -591,15 +591,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | scaling law | قانون التحجيم | proposed | scaling-law: An empirical or theoretical relationship describing how performance changes with scale. |  |
 | compute-optimal | أمثل حسابيًا | proposed | compute-optimal: Describing a choice that optimizes performance for a given computational budget. |  |
 | floating-point precision | دقة الفاصلة العائمة | proposed | floating-point-precision: The representational accuracy available in a floating-point format. |  |
-| memory footprint | بصمة الذاكرة | verified_d2l | memory-footprint: The amount of memory occupied by data or a computation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=80) |
+| memory footprint | بصمة الذاكرة | proposed | memory-footprint: The amount of memory occupied by data or a computation. | [taima-ar-part2](https://drive.google.com/file/d/1UqEu0amRfAvJD0L1HosIn3UJi0FkNemU/view#page=80) |
 | memory hierarchy | هرمية الذاكرة | proposed | memory-hierarchy: The organization of memory into levels with differing capacities and access speeds. |  |
 | memory access | وصول إلى الذاكرة | proposed | memory-access: A read from or write to a memory location. |  |
 | memory-bound | مقيد بالذاكرة | proposed | memory-bound: Describing a computation limited primarily by data movement rather than arithmetic throughput. |  |
 | compute-bound | مقيد بالحوسبة | proposed | compute-bound: Describing a computation limited primarily by arithmetic throughput. |  |
 | graph compilation | تصريف المخطط الحسابي | proposed | graph-compilation: Transforming a computation graph into an optimized executable form. |  |
-| just-in-time compilation | التصريف في أثناء التنفيذ (JIT) | verified_external | just-in-time-compilation: Compiling code at runtime when needed for execution. | review-ar-339021f726: page |
+| just-in-time compilation | تصريف في أثناء التنفيذ | verified_external | just-in-time-compilation: Compiling code at runtime when needed for execution. | review-ar-339021f726: page |
 | asynchronous execution | تنفيذ غير متزامن | proposed | asynchronous-execution: Execution in which a caller can proceed without waiting for an operation to finish. |  |
-| synchronization | المزامنة | verified_d2l | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=158) |
+| synchronization | مزامنة | proposed | synchronization: Coordinating concurrent computations so that required ordering or data dependencies hold. | [taima-ar-part3](https://drive.google.com/file/d/1-HlY2IqKIIEKfFrxebBu51z9oAPftLfA/view#page=158) |
 | all-reduce | all-reduce | proposed | all-reduce: A collective operation that combines values across workers and distributes the result to each. |  |
 | gradient accumulation | تراكم التدرجات | proposed | gradient-accumulation: Combining gradients across several batches before applying an optimizer update. |  |
 | pipeline parallelism | تواز أنبوبي | proposed | pipeline-parallelism: Partitioning computation into stages that can process different microbatches concurrently. |  |
@@ -610,7 +610,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | rounding error | خطأ التدوير | proposed | rounding-error: The discrepancy introduced when a value is approximated by a representable number. |  |
 | dynamic range | مدى ديناميكي | proposed | dynamic-range: The range of magnitudes that a numerical representation or signal can accommodate. |  |
 | training throughput | إنتاجية التدريب | proposed | training-throughput: The amount of training work completed per unit time. |  |
-| soft actor-critic | الفاعل–الناقد اللين | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
+| soft actor-critic | فاعل–ناقد لين | proposed | soft-actor-critic: An off-policy actor-critic algorithm that incorporates entropy into its objective. |  |
 | deep Q-network | شبكة Q العميقة | proposed | deep-q-network: A neural network trained to approximate action values for Q-learning. |  |
 | proximal policy optimization | تحسين السياسة التقاربي | proposed | proximal-policy-optimization: A policy optimization method that limits the effect of overly large policy updates. |  |
 | trust region | منطقة ثقة | proposed | trust-region: A neighborhood within which an optimization update is constrained or its approximation is trusted. |  |
@@ -620,10 +620,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | advantage estimate | تقدير الأفضلية | proposed | advantage-estimate: An estimate of how much better an action is than a reference action value. |  |
 | generalized advantage estimation | تقدير الأفضلية المعمم | proposed | generalized-advantage-estimation: A method that combines temporal-difference residuals to estimate advantages. |  |
 | reward model | نموذج المكافأة | proposed | reward-model: A learned model that predicts a reward or preference signal. |  |
-| reward hacking | التحايل على المكافأة | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
+| reward hacking | تحايل على المكافأة | proposed | reward-hacking: Achieving a high measured reward through behavior that does not satisfy the intended objective. |  |
 | planning horizon | أفق التخطيط | proposed | planning-horizon: The number of future steps considered in a planning computation. |  |
 | Bellman operator | مؤثر بيلمان | proposed | bellman-operator: An operator that maps a value function to an updated value function using a Bellman relationship. |  |
-| bootstrapping | التمهيد الذاتي | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
+| bootstrapping | تمهيد ذاتي | proposed | bootstrapping: Updating an estimate using other learned estimates as part of its target. |  |
 | Monte Carlo return | عائد مونت كارلو | proposed | monte-carlo-return: A return computed from observed rewards along a sampled trajectory. |  |
 | terminal reward | مكافأة نهائية | proposed | terminal-reward: A reward received at the end of an episode or trajectory. |  |
 | exploration bonus | مكافأة استكشاف إضافية | proposed | exploration-bonus: An additional reward or score that encourages visiting uncertain or underexplored choices. |  |
@@ -640,7 +640,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | subspace | فضاء جزئي | proposed | subspace: A subset that is itself a vector space under the inherited operations. |  |
 | inner product | جداء داخلي | proposed | inner-product: An operation generalizing the dot product and inducing notions of length and angle. |  |
 | outer product | جداء خارجي | proposed | outer-product: A matrix formed by multiplying each component of one vector by each component of another. |  |
-| quadratic form | الشكل التربيعي | verified_d2l | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=127) |
+| quadratic form | شكل تربيعي | proposed | quadratic-form: A scalar expression formed from a vector and a matrix as a bilinear product. | [taima-ar-part1](https://drive.google.com/file/d/1SrmT_r8dNK42IqyS0gwXtbLCZbk5G8eu/view#page=127) |
 | quadratic function | دالة تربيعية | proposed | quadratic-function: A function containing terms of degree at most two. |  |
 | linear system | نظام خطي | proposed | linear-system: A collection of linear equations to be satisfied simultaneously. |  |
 | least squares | مربعات صغرى | proposed | least-squares: A method for fitting a model by minimizing a sum of squared residuals. |  |
@@ -676,7 +676,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | indefinite integral | تكامل غير محدد | proposed | indefinite-integral: A family of antiderivatives of a function. |  |
 | definite integral | تكامل محدد | proposed | definite-integral: An integral over a specified domain, representing accumulated quantity. |  |
 | integration by parts | تكامل بالتجزئة | proposed | integration-by-parts: An integration rule derived from the product rule for derivatives. |  |
-| fundamental theorem of calculus | المبرهنة الأساسية للتفاضل والتكامل | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
+| fundamental theorem of calculus | مبرهنة أساسية للتفاضل والتكامل | proposed | fundamental-theorem-of-calculus: A result connecting differentiation and integration. |  |
 | implicit differentiation | اشتقاق ضمني | proposed | implicit-differentiation: Computing derivatives from an equation relating dependent variables without explicitly solving it. |  |
 | Lipschitz constant | ثابت ليبشيتز | proposed | lipschitz-constant: A bound on the ratio of a function's output change to its input change. |  |
 | Lipschitz continuous | مستمر ليبشيتزيًا | proposed | lipschitz-continuous: Describing a function whose change is bounded by a constant multiple of its input change. |  |
@@ -692,13 +692,13 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | posterior variance | تباين بعدي | proposed | posterior-variance: The variance of an unknown quantity under its posterior distribution. |  |
 | independent samples | عينات مستقلة | proposed | independent-samples: Samples whose values do not provide information about each other under the model. |  |
 | identically distributed | متماثل التوزيع | proposed | identically-distributed: Having the same probability distribution. |  |
-| random sample | العينة العشوائية | verified_external | random-sample: A collection of observations drawn according to a sampling procedure. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L282) |
+| random sample | عينة عشوائية | verified_external | random-sample: A collection of observations drawn according to a sampling procedure. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L282) |
 | sample mean | متوسط العينة | verified_external | sample-mean: The arithmetic average of observed sample values. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L312) |
 | sample variance | تباين العينة | verified_external | sample-variance: A statistic measuring dispersion of observed values around their sample mean. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-probability.md#L336) |
 | population mean | متوسط المجتمع | proposed | population-mean: The expected value of a variable in the population under study. |  |
 | sampling error | خطأ المعاينة | proposed | sampling-error: The difference between a sample-based estimate and the corresponding population quantity due to sampling. |  |
 | estimator variance | تباين المقدر | proposed | estimator-variance: The variance of an estimator's sampling distribution. |  |
-| unbiased estimator | مقدّر غير منحاز | verified_external | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. | review-ar-ff3dc43953: page |
+| unbiased estimator | مقدر غير منحاز | verified_external | unbiased-estimator: An estimator whose expected value equals the parameter being estimated. | review-ar-ff3dc43953: page |
 | consistent estimator | مقدر متسق | proposed | consistent-estimator: An estimator that converges to the true parameter under a specified asymptotic regime. |  |
 | maximum likelihood estimator | مقدر الإمكان الأعظم | proposed | maximum-likelihood-estimator: A parameter estimate that maximizes the likelihood of the observed data. |  |
 | test statistic | إحصائية اختبار | proposed | test-statistic: A quantity computed from data and used by a statistical test. |  |
@@ -728,7 +728,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | adaLN-Zero | adaLN-Zero | proposed | adaln-zero: An adaptive layer-normalization design initialized so transformer blocks start as identity mappings. |  |
 | modelability | قابلية النمذجة | proposed | modelability: The ease with which a representation can be learned by a generative model. |  |
 | forward posterior | توزيع بعدي أمامي | proposed | forward-posterior: The conditional distribution reversing a forward noising step given the clean data point. |  |
-| binary classification | التصنيف الثنائي | verified_external | binary-classification: The task of assigning each input to one of two classes. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#binary-classification) |
+| binary classification | تصنيف ثنائي | verified_external | binary-classification: The task of assigning each input to one of two classes. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#binary-classification) |
 | multiclass classification | تصنيف متعدد الفئات | proposed | multiclass-classification: The task of choosing one class from more than two possible classes. |  |
 | multi-label classification | تصنيف متعدد الوسوم | proposed | multi-label-classification: The task of assigning any subset of multiple labels to an input. |  |
 | binary cross-entropy | إنتروبيا متقاطعة ثنائية | proposed | binary-cross-entropy: A cross-entropy loss for a binary target. |  |
@@ -741,7 +741,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | false negative | سالب كاذب | proposed | false-negative: A positive example incorrectly classified as negative. |  |
 | F1 score | مقياس F1 | proposed | f1-score: The harmonic mean of precision and recall. |  |
 | receiver operating characteristic | خاصية تشغيل المستقبل | proposed | receiver-operating-characteristic: A curve showing true-positive rate against false-positive rate across thresholds. |  |
-| area under the curve | المساحة تحت المنحنى | proposed | area-under-the-curve: A scalar summary obtained by integrating a performance curve. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L106) |
+| area under the curve | مساحة تحت المنحنى | proposed | area-under-the-curve: A scalar summary obtained by integrating a performance curve. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L106) |
 | class probability | احتمال الفئة | proposed | class-probability: The probability assigned to a class for an input. |  |
 | class label | وسم الفئة | proposed | class-label: A category used as the target for a classification example. |  |
 | class imbalance | اختلال توازن الفئات | proposed | class-imbalance: Unequal representation of classes in a dataset. |  |
@@ -758,7 +758,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | model complexity | تعقيد النموذج | proposed | model-complexity: A measure of the flexibility or structural richness of a model. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L267) |
 | regularization path | مسار التنظيم | proposed | regularization-path: The sequence of fitted models obtained as regularization strength changes. |  |
 | learning curve | منحنى التعلم | proposed | learning-curve: A plot of model performance or loss as training or data size changes. |  |
-| double descent | النزول المزدوج | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
+| double descent | نزول مزدوج | proposed | double-descent: A pattern in which test error decreases, rises, and then decreases as model capacity or training increases. |  |
 | validation error | خطأ التحقق | proposed | validation-error: The prediction error measured on validation data. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-machine-learning-tips-and-tricks.md#L225) |
 | held-out data | بيانات محجوزة | proposed | held-out-data: Data set aside from fitting for evaluation or model selection. |  |
 | covariate shift | انزياح المتغيرات المصاحبة | proposed | covariate-shift: A change in the distribution of inputs while the conditional target distribution is assumed unchanged. |  |
@@ -767,7 +767,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | in-distribution | ضمن التوزيع | proposed | in-distribution: Describing data drawn from the same relevant distribution as a reference dataset. |  |
 | Bayes error | خطأ بايز | proposed | bayes-error: The minimum achievable classification error under the data-generating distribution. |  |
 | regression target | هدف الانحدار | proposed | regression-target: The numerical value a regression model is trained to predict. |  |
-| feature vector | متّجه الميزات | verified_external | feature-vector: A vector containing the input features of an example. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#feature-vector) |
+| feature vector | متجه الميزات | verified_external | feature-vector: A vector containing the input features of an example. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#feature-vector) |
 | target variable | متغير الهدف | proposed | target-variable: The quantity a model is intended to predict. |  |
 | intercept | مقطع | proposed | intercept: The additive constant in a regression or other linear model. |  |
 | coefficient | معامل | proposed | coefficient: A numerical factor multiplying a variable or term. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-unsupervised-learning.md#L181) |
@@ -782,14 +782,14 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | mean absolute error | متوسط الخطأ المطلق | proposed | mean-absolute-error: The average absolute difference between predictions and targets. |  |
 | root mean squared error | جذر متوسط مربع الخطأ | proposed | root-mean-squared-error: The square root of the average squared prediction error. |  |
 | classification loss | خسارة التصنيف | proposed | classification-loss: A loss used to evaluate classification predictions against targets. |  |
-| hinge loss | الخسارة المفصلية | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L326) |
-| squared loss | الخسارة التربيعية | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#squared-loss) |
+| hinge loss | خسارة مفصلية | verified_external | hinge-loss: A margin-based loss that penalizes insufficient separation in classification. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L326) |
+| squared loss | خسارة تربيعية | verified_external | squared-loss: A loss proportional to the square of a prediction error. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#squared-loss) |
 | Huber loss | خسارة هوبر | proposed | huber-loss: A loss quadratic for small errors and linear for large errors. |  |
 | regularized objective | هدف منظم | proposed | regularized-objective: An objective combining a data-fitting term with a regularization term. |  |
 | random initialization | تهيئة عشوائية | proposed | random-initialization: Choosing initial parameter values using a random procedure. |  |
 | gradient norm | معيار التدرج | proposed | gradient-norm: The magnitude of a gradient measured using a chosen norm. |  |
 | leaky ReLU | Leaky ReLU | proposed | leaky-relu: A rectified activation with a small nonzero slope for negative inputs. |  |
-| hyperbolic tangent | الظل الزائدي | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
+| hyperbolic tangent | ظل زائدي | proposed | hyperbolic-tangent: A smooth activation mapping real inputs to values between negative one and one. |  |
 | fully connected layer | طبقة كاملة الاتصال | proposed | fully-connected-layer: A layer in which each output unit receives a learned connection from every input unit. |  |
 | hidden unit | وحدة مخفية | proposed | hidden-unit: A computational unit in a network layer between input and output. |  |
 | network depth | عمق الشبكة | proposed | network-depth: The number of successive computational layers in a network. |  |
@@ -821,7 +821,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | upsampling | زيادة أخذ العينات | proposed | upsampling: Increasing the spatial or temporal resolution of a representation. |  |
 | aliasing | تراكب الترددات | proposed | aliasing: Distortion caused when different signals become indistinguishable after sampling. |  |
 | pooling window | نافذة تجميع | proposed | pooling-window: The local region over which a pooling operation aggregates values. |  |
-| global pooling | التجميع الشامل | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
+| global pooling | تجميع شامل | proposed | global-pooling: Pooling over all positions in a spatial or temporal dimension. |  |
 | fully convolutional network | شبكة التفاف بالكامل | proposed | fully-convolutional-network: A network using convolutional operations to produce spatially structured predictions. |  |
 | bilinear interpolation | استيفاء ثنائي الخطية | proposed | bilinear-interpolation: Interpolation that combines nearby grid values linearly along two axes. |  |
 | nearest-neighbor interpolation | استيفاء أقرب جار | proposed | nearest-neighbor-interpolation: Interpolation that uses the value of the nearest sampled point. |  |
@@ -845,7 +845,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | style transfer | نقل الأسلوب | proposed | style-transfer: Generating an image that combines the content of one image with the style of another. |  |
 | content loss | خسارة المحتوى | proposed | content-loss: A loss measuring differences in content representations between images. |  |
 | style loss | خسارة الأسلوب | proposed | style-loss: A loss measuring differences in style representations between images. |  |
-| total variation | التغير الكلي | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
+| total variation | تغير كلي | proposed | total-variation: A measure of variation between neighboring values used to encourage smoothness. |  |
 | perceptual loss | خسارة إدراكية | proposed | perceptual-loss: A loss comparing learned feature representations rather than only raw pixels. |  |
 | latent diffusion | انتشار كامن | proposed | latent-diffusion: Generating samples by running a diffusion process in a learned latent space. |  |
 | recommendation | توصية | proposed | recommendation: Selecting or ranking items to present to a user. |  |
@@ -863,7 +863,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pairwise ranking | ترتيب زوجي | proposed | pairwise-ranking: Learning to order pairs of items according to relative preference. |  |
 | Bayesian personalized ranking | ترتيب شخصي بايزي | proposed | bayesian-personalized-ranking: A pairwise ranking objective for personalized recommendations from implicit feedback. |  |
 | cold start | بداية باردة | proposed | cold-start: The difficulty of making predictions for a new user or item with little interaction data. |  |
-| sparsity | التناثر | proposed | sparsity: The condition in which most entries or interactions in a representation are absent or zero. |  |
+| sparsity | تناثر | proposed | sparsity: The condition in which most entries or interactions in a representation are absent or zero. |  |
 | subword tokenization | تجزئة إلى رموز فرعية | proposed | subword-tokenization: Dividing text into units that can represent words or parts of words. |  |
 | token frequency | تواتر الرمز | proposed | token-frequency: The number or rate of appearances of a token in a corpus. |  |
 | out-of-vocabulary | خارج المفردات | proposed | out-of-vocabulary: Describing an item absent from a model's fixed vocabulary. |  |
@@ -871,7 +871,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | beginning-of-sequence token | رمز بداية التسلسل | proposed | beginning-of-sequence-token: A special token indicating the start of a sequence. |  |
 | end-of-sequence token | رمز نهاية التسلسل | proposed | end-of-sequence-token: A special token indicating the end of a sequence. |  |
 | embedding layer | طبقة التضمين | verified_external | embedding-layer: A layer mapping discrete indices to learned vector representations. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#embedding-layer) |
-| embedding dimension | بعد التضمين | proposed | embedding-dimension: The number of components in each embedding vector. |  |
+| embedding dimension | بُعد التضمين | proposed | embedding-dimension: The number of components in each embedding vector. |  |
 | center word | كلمة مركزية | proposed | center-word: The word used as the central item in a word-context training example. |  |
 | context word | كلمة سياق | proposed | context-word: A word appearing near a selected center word in a corpus. |  |
 | co-occurrence | تلازم | proposed | co-occurrence: The occurrence of two items within a defined context or window. |  |
@@ -893,7 +893,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | sentiment classification | تصنيف المشاعر | proposed | sentiment-classification: Assigning a sentiment category to text. |  |
 | textual entailment | استتباع نصي | proposed | textual-entailment: A relationship where one text implies that another text is true. |  |
 | premise | مقدمة | proposed | premise: A statement given as the basis for assessing another statement in natural language inference. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_preliminaries/index.md#L16) |
-| hypothesis | الفرضية | verified_external | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L74) |
+| hypothesis | فرضية | verified_external | hypothesis: A statement whose relationship to a premise is assessed in natural language inference. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L74) |
 | contradiction | تناقض | proposed | contradiction: A relationship in which one statement is incompatible with another. |  |
 | attention weight | وزن الانتباه | proposed | attention-weight: A coefficient controlling a value's contribution to an attention output. |  |
 | softmax temperature | درجة حرارة softmax | proposed | softmax-temperature: A scale parameter controlling the sharpness of a softmax distribution. |  |
@@ -906,7 +906,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | autoregressive decoding | فك تشفير انحدار ذاتي | proposed | autoregressive-decoding: Generating a sequence one element at a time using previously generated elements as context. |  |
 | text generation | توليد النص | proposed | text-generation: Producing text with a model, optionally conditioned on a prompt or context. |  |
 | sequence generation | توليد التسلسل | proposed | sequence-generation: Producing an ordered sequence of model outputs. |  |
-| large language model | النموذج اللغوي الكبير | verified_external | large-language-model: A language model with substantial capacity trained on broad text data. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#large-language-model) |
+| large language model | نموذج لغوي كبير | verified_external | large-language-model: A language model with substantial capacity trained on broad text data. | [google-ml-ar-generative](https://developers.google.com/machine-learning/glossary/generative?hl=ar#large-language-model) |
 | long-context | سياق طويل | proposed | long-context: Describing a model or task involving unusually long input sequences. |  |
 | label smoothing | تنعيم الوسوم | proposed | label-smoothing: A training technique replacing hard target probabilities with softened values. |  |
 | expected calibration error | خطأ المعايرة المتوقع | proposed | expected-calibration-error: A measure summarizing the discrepancy between predicted confidence and observed accuracy across bins. |  |
@@ -956,7 +956,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | reverse-time SDE | معادلة تفاضلية عشوائية بزمن عكسي | proposed | reverse-time-sde: A stochastic differential equation describing dynamics run backward in time under suitable conditions. |  |
 | reverse transition | انتقال عكسي | proposed | reverse-transition: A transition used to move from a noisier state toward a less noisy state. |  |
 | forward transition | انتقال أمامي | proposed | forward-transition: A transition that advances the forward noising process by one step. |  |
-| ancestral sampling | المعاينة السلفية | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
+| ancestral sampling | معاينة سلفية | proposed | ancestral-sampling: Sampling sequentially from conditional distributions in a probabilistic model. |  |
 | DDPM | DDPM | proposed | ddpm: A denoising diffusion probabilistic model trained to reverse a noising process. |  |
 | DDIM | DDIM | proposed | ddim: A diffusion sampling framework whose deterministic form adds no fresh noise at each step. |  |
 | variance schedule | جدول التباين | proposed | variance-schedule: A sequence specifying the variance of noise across steps. |  |
@@ -986,7 +986,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | pixel-space | فضاء البكسل | proposed | pixel-space: The representation domain consisting of image pixel values. |  |
 | critical point | نقطة حرجة | proposed | critical-point: A point at which a derivative is zero or otherwise fails to define a regular direction. |  |
 | local maximum | قيمة عظمى محلية | proposed | local-maximum: A point with objective value no smaller than nearby feasible points. |  |
-| global maximum | القيمة العظمى الشاملة | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
+| global maximum | قيمة عظمى شاملة | proposed | global-maximum: A point with objective value no smaller than all feasible points. |  |
 | strict convexity | تحدب صارم | proposed | strict-convexity: A form of convexity with a strict inequality between distinct points. |  |
 | smoothness | نعومة | proposed | smoothness: A bound or regularity condition on how a function or its derivatives change. |  |
 | convex objective | هدف محدب | proposed | convex-objective: An optimization objective that is a convex function. |  |
@@ -1003,7 +1003,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | complementary slackness | ركود تكميلي | proposed | complementary-slackness: A condition connecting constraint slack with its associated dual multiplier. |  |
 | subgradient method | طريقة التدرج التحتي | proposed | subgradient-method: An optimization method that updates using subgradients. |  |
 | projection operator | مؤثر الإسقاط | proposed | projection-operator: An operator mapping a point to a closest point in a specified set under a chosen distance. |  |
-| projected gradient descent | النزول التدرجي المسقط | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
+| projected gradient descent | نزول تدرجي مسقط | proposed | projected-gradient-descent: Gradient descent with each iterate projected back into a feasible set. |  |
 | backtracking line search | بحث خطي بالتراجع | proposed | backtracking-line-search: A line search that repeatedly reduces a trial step until a condition is met. |  |
 | descent direction | اتجاه النزول | proposed | descent-direction: A direction along which an objective decreases for sufficiently small steps. |  |
 | descent lemma | توطئة النزول | proposed | descent-lemma: A bound on a smooth function's change using its gradient and a quadratic term. |  |
@@ -1018,7 +1018,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | momentum buffer | مخزن الزخم | proposed | momentum-buffer: A stored quantity accumulating past gradients or updates for momentum optimization. |  |
 | Nesterov momentum | زخم نيستيروف | proposed | nesterov-momentum: A momentum method that evaluates or adjusts a gradient using a look-ahead point. |  |
 | stochastic gradient | تدرج عشوائي | proposed | stochastic-gradient: A random estimate of an objective's gradient. |  |
-| minibatch gradient descent | النزول التدرجي بالدفعات المصغرة | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
+| minibatch gradient descent | نزول تدرجي بالدفعات المصغرة | proposed | minibatch-gradient-descent: Gradient descent using a batch of examples to estimate each update. |  |
 | gradient variance | تباين التدرج | proposed | gradient-variance: The variance of a stochastic gradient estimator. |  |
 | convergence guarantee | ضمان التقارب | proposed | convergence-guarantee: A mathematical result specifying conditions under which an algorithm approaches a target. |  |
 | optimization landscape | مشهد التحسين | proposed | optimization-landscape: The objective viewed as a function of model parameters. |  |
@@ -1033,10 +1033,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | maximizer | نقطة التعظيم | proposed | maximizer: A point at which a function achieves a maximum over a specified domain. |  |
 | risk minimization | تصغير الخطر | proposed | risk-minimization: Choosing a model or decision rule to minimize an expected or empirical loss. |  |
 | nonconvex optimization | تحسين غير محدب | proposed | nonconvex-optimization: Optimization involving a nonconvex objective or feasible region. |  |
-| shrinkage | التقليص | proposed | shrinkage: Pulling estimates or parameters toward a reference value, often zero. |  |
+| shrinkage | تقليص | proposed | shrinkage: Pulling estimates or parameters toward a reference value, often zero. |  |
 | outlier | قيمة شاذة | proposed | outlier: An observation that differs substantially from the bulk of the data under a relevant criterion. |  |
 | generalized linear model | نموذج خطي معمم | proposed | generalized-linear-model: A model relating a linear predictor to an outcome distribution through a link function. |  |
-| exponential family | العائلة الأُسيّة | verified_external | exponential-family: A family of probability distributions with a common exponential-form representation. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L235) |
+| exponential family | عائلة أسية | verified_external | exponential-family: A family of probability distributions with a common exponential-form representation. | [amidi-ar-teaching](https://github.com/shervinea/cheatsheet-translation/blob/99f45b6d65b8e60f637d8ac0db15f76327197c23/ar/cs-229-supervised-learning.md#L235) |
 | Fisher information matrix | مصفوفة معلومات فيشر | proposed | fisher-information-matrix: A matrix measuring information about a parameter vector in a probability model. |  |
 | asymptotic normality | طبيعية تقاربية | proposed | asymptotic-normality: Convergence of a suitably normalized estimator's distribution to a Gaussian distribution. |  |
 | identifiability | قابلية التعرف | proposed | identifiability: The property that distinct parameter values lead to distinguishable model distributions. |  |
@@ -1104,7 +1104,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | total variation distance | مسافة التغير الكلي | proposed | total-variation-distance: A measure of the largest difference in probability assigned to the same event by two distributions. |  |
 | f-divergence | تباعد f | proposed | f-divergence: A family of divergences defined using a convex function of a density ratio. |  |
 | density ratio | نسبة الكثافة | proposed | density-ratio: The ratio of two probability densities evaluated at the same point. |  |
-| rate-distortion | المعدل–التشويه | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
+| rate-distortion | معدل–تشويه | proposed | rate-distortion: The tradeoff between compression rate and reconstruction distortion. |  |
 | distortion measure | مقياس التشويه | proposed | distortion-measure: A function quantifying the difference between an original object and its reconstruction. |  |
 | channel capacity | سعة القناة | proposed | channel-capacity: The maximum reliable communication rate of a channel under specified constraints. |  |
 | noisy channel | قناة مشوشة | proposed | noisy-channel: A communication channel whose output is randomly perturbed relative to its input. |  |
@@ -1134,7 +1134,7 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | numerical solver | حلال عددي | proposed | numerical-solver: An algorithm that approximates the solution of a mathematical problem. |  |
 | linear stability | استقرار خطي | proposed | linear-stability: The behavior of small perturbations determined by the linearization around a solution. |  |
 | continuous normalizing flow | تدفق تطبيعي مستمر | proposed | continuous-normalizing-flow: A generative model using continuous-time invertible dynamics to transform a distribution. |  |
-| Jacobian determinant | المحدد اليعقوبي | proposed | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. |  |
+| Jacobian determinant | محدد يعقوبي | proposed | jacobian-determinant: The determinant of a transformation's Jacobian, describing local volume scaling. |  |
 | continuity equation | معادلة الاستمرارية | proposed | continuity-equation: An equation describing conservation of probability or mass as it flows through space. |  |
 | Kolmogorov forward equation | معادلة كولموغوروف الأمامية | proposed | kolmogorov-forward-equation: An equation describing the evolution of a stochastic process's probability distribution. |  |
 | multi-query attention | انتباه متعدد الاستعلامات | proposed | multi-query-attention: An attention variant in which multiple query heads share a single key-value head. |  |
@@ -1149,10 +1149,10 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | linear attention | انتباه خطي | proposed | linear-attention: An attention formulation designed to reduce scaling cost by changing the computation's factorization. |  |
 | quadratic complexity | تعقيد تربيعي | proposed | quadratic-complexity: Cost that grows proportionally to the square of a problem-size measure. |  |
 | tokens per second | رموز في الثانية | proposed | tokens-per-second: A throughput measure counting tokens processed or generated per unit time. |  |
-| head dimension | بعد الرأس | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
+| head dimension | بُعد الرأس | proposed | head-dimension: The dimension of the representation associated with an attention head. |  |
 | weight tying | ربط الأوزان | proposed | weight-tying: Sharing parameters between two or more model components, such as input and output embeddings. |  |
 | embedding table | جدول التضمين | proposed | embedding-table: A table mapping discrete items to learned vectors. |  |
-| output projection | إسقاط الخرج | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
+| output projection | إسقاط المخرجات | proposed | output-projection: A learned transformation mapping internal representations to an output space. |  |
 | induction circuit | دائرة الاستقراء | proposed | induction-circuit: A mechanism associated with retrieving and continuing repeated patterns in a sequence. |  |
 | attention pattern | نمط الانتباه | proposed | attention-pattern: The distribution of attention weights across sequence positions. |  |
 | softmax normalization | تطبيع softmax | proposed | softmax-normalization: Transforming scores to nonnegative values that sum to one using softmax. |  |
@@ -1186,9 +1186,9 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | denoising term | حد إزالة الضوضاء | proposed | denoising-term: A term of a diffusion likelihood bound comparing learned reverse steps with forward posteriors. |  |
 | reconstruction term | حد إعادة البناء | proposed | reconstruction-term: A term of a diffusion likelihood bound measuring reconstruction of the data from a latent state. |  |
 | Mamba | Mamba | proposed | mamba: A sequence architecture using input-dependent selective state space dynamics. |  |
-| critic | الناقد | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
+| critic | ناقد | proposed | critic-generative: A learned function that scores real and generated samples in an adversarial objective. |  |
 | model | نموذج | verified_external | model: A mathematical or computational representation used to describe data or make predictions. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#model) |
-| training | التدريب | verified_external | training: The process of fitting a model using data and a learning objective. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#training) |
+| training | تدريب | verified_external | training: The process of fitting a model using data and a learning objective. | [google-ml-ar-fundamentals](https://developers.google.com/machine-learning/glossary/fundamentals?hl=ar#training) |
 | activation | تفعيل | proposed | activation: The output of a neural network unit or activation function for a given input. |  |
 | mask | قناع | proposed | mask: A pattern of values specifying which entries are retained or suppressed in a computation. |  |
 | sample | عينة | proposed | sample: One draw from a probability distribution: a data example drawn from the data distribution, or an output drawn from a generative model. (A set of observations is a statistical sample; see random-sample.) |  |
@@ -1197,3 +1197,15 @@ Only `verified_d2l`, `verified_external`, and reviewed `invariant` entries are i
 | batch | دفعة | proposed | batch: A set of examples processed together in one forward/backward pass (the full dataset in batch gradient descent, or a minibatch). |  |
 | advantage | أفضلية | proposed | advantage: In reinforcement learning, how much better an action is than the policy's average action in a state: A(s, a) = Q(s, a) - V(s). |  |
 | cost | كلفة | proposed | cost: The resources an operation consumes: time, memory, energy or money (computational cost). |  |
+| input | مدخلات | verified_external | input: The data or values fed into a model, layer or operation. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/input-data-or-input) |
+| output | مخرجات | verified_external | output: The values a model, layer or operation produces. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/output-data-or-output) |
+| parameter | معلَمة | verified_d2l | parameter: A quantity of a model or distribution that is learned or set; in code, an argument a function takes. | [d2l-ar-source](https://github.com/mohamed-ali/d2l-ar/blob/71cbd6268af46f447805d8f508686745b71aedd9/chapter_introduction/index.md#L36) |
+| window | نافذة | verified_external | window: A region of fixed shape that slides over an input, or the span of context a model sees. | [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A7%D8%B3%D8%AA%D9%83%D8%B4%D9%81-%D9%85%D8%B5%D8%B7%D9%84%D8%AD%D8%A7%D8%AA-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%A7%D9%84%D8%AA%D9%88%D9%84%D9%8A%D8%AF%D9%8A-r2399/) |
+| patch | رقعة | verified_external | patch: A small rectangular region of an input image or feature map. | [wikipedia-ar-ml](https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%88%D9%84_%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9) |
+| edge | حافة | verified_external | edge: A boundary in an image where intensity changes sharply. | [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86-r2239/) |
+| stack | تكديس | proposed | stack: To place layers or tensors one after another or on top of each other; the resulting sequence. |  |
+| framework | إطار عمل | verified_external | framework: A software library for building and training models, such as PyTorch or JAX. | [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D9%86%D8%B8%D8%A7%D9%85-rag-%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-deepseek-%D9%88ollama-r2562/) |
+| code | شيفرة | verified_external | program-code: Program text written in a programming language. | [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D9%88%D8%A7%D9%84%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-r1814/) |
+| dense layer | طبقة كثيفة | verified_external | dense-layer: A layer in which every output depends on every input through a learned weight. | [icaire-sdaia-ar-glossary](https://icaire.org/ar/glossary/dense-layer) |
+| vertical | عمودي | verified_external | vertical: Running from top to bottom, as a vertical edge or axis. | [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D9%86%D8%AD%D8%AF%D8%A7%D8%B1-%D8%A7%D9%84%D9%84%D9%88%D8%AC%D8%B3%D8%AA%D9%8A-logistic-regression-%D9%81%D9%8A-scikit-learn-r2563/) |
+| notebook | دفتر | verified_external | jupyter-notebook: An interactive document of code cells and their outputs, such as a Jupyter notebook. | [hsoub-academy-ar-ai](https://academy.hsoub.com/programming/artificial-intelligence/%D9%85%D8%A7-%D9%87%D9%8A-%D9%85%D9%86%D8%B5%D8%A9-hugging-face-%D9%84%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-r2449/) |
