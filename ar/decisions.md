@@ -1463,3 +1463,325 @@ One rendering per term across the seven pages of the chapter; the unit entries a
 
 - One rendering per term across the chapter's seven pages (the entries above are corrected to match): slide kicker "Section Synthesis" → خلاصة القسم ("Section & Chapter Synthesis" → خلاصة القسم والفصل; ملخص القسم stays "Section Summary", and "Check & Synthesis" stays التحقق والتوليف as in earlier chapters); "filter bank" → مجموعة مرشحات; "textures" as image features → أنماط النسيج (نسيج السطح for the texture of an object); "tolerance" to shifts → التسامح مع الإزاحة (تحمل is not used for it); "translation / shift invariance" (noun) → ثبات الإزاحة, adjective ثابت تحت الإزاحة; "channel mixing" → مزج القنوات (خلط is shuffling); "corners" (image features) → الأركان; by position: "edge / border pixel" → بكسل طرفي, "corner pixel" → بكسل ركني, "boundary pixels" → بكسلات الحدود; "plateau" of a training curve → الاستواء.
 
+
+## chapter_convolutional-modern/index.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Chapter title "Modern Convolutional Neural Networks" → الشبكات العصبية الالتفافية الحديثة; "efficient convnets" → الشبكات الالتفافية الكفؤة (فعال stays "effective").
+- "shortcut" (ResNet) → وصلة تخطٍ, as the glossary's identity-shortcut entry: "additive shortcuts" → وصلات التخطي الجمعية, "residual shortcuts / skips" → وصلات التخطي ذات البواقي; "identity mapping" → الدالة المحايدة; "optimization degradation" → تدهور التحسين, "degradation" → التدهور; "plain network / plain stack" → شبكة عادية / المجموعة المكدسة العادية.
+- "stem--body--head layout / template" → تخطيط / قالب من جذع وجسم ورأس (the one form for the whole chapter); "modular building blocks" → لبنات بناء قابلة للتركيب; "hand-wired" → موصول يدويًا; "repeatable blocks" → كتل قابلة للتكرار; "toolkit" → العدة ("Architectural Toolkit" → العدة المعمارية).
+- "warmup-and-cosine learning-rate schedule" → جدول معدل التعلم القائم على الإحماء وجيب التمام; "cosine warmup" → الإحماء مع جيب التمام; "weight averaging" → حساب متوسط الأوزان; Mixup, CutMix, RandAugment, LAMB, EMA, BCE stay Latin (طريقتا Mixup و CutMix، خسارة BCE); a slash-joined run of names (RandAugment/Mixup/CutMix, AdamW/Mixup/EMA) is copied as one Latin run.
+- "depthwise-separable factorization" → التحليل إلى التفاف عمقي قابل للفصل (slides "depthwise factorization" → التحليل العمقي); "inverted bottleneck" → عنق الزجاجة المعكوس; "compound scaling" → التحجيم المركب; "squeeze-and-excitation gates" → بوابات الضغط والإثارة; "structural re-parameterization" → إعادة تحديد المعلَمات البنيوية; "RepVGG fusion" → دمج RepVGG; "intensity" (arithmetic intensity, slides) → الكثافة الحسابية (glossary).
+- "Network in Network (NiN)" → شبكة داخل الشبكة (Network in Network, NiN) at first mention (glossary term), then NiN; "hierarchical Vision Transformers" → محولات الرؤية الهرمية; "design space" → فضاء التصميم; "sampled populations" (of networks) → مجتمعات من الشبكات المسحوبة بأخذ العينات; "population error CDFs" → دوال التوزيع التراكمي للخطأ على مجتمعات الشبكات; "landmark model" → نموذج فارق.
+- "hardware efficiency" → كفاءة استخدام العتاد; "operation counts" → عدد العمليات; "usable learning rates / LR band" → معدلات التعلم الصالحة للاستخدام / نطاقها; "energy" (cost of a network) → الطاقة; "dense-head bloat" → تضخم الرأس الكثيف; "confounded recipes" → التباس أثر الوصفات.
+- Slides: "The Central Problem" → المشكلة المركزية; "Core Mental Models" → النماذج الذهنية الأساسية; "Empirical Comparison" → مقارنة تجريبية; "Design Invariants" → لامتغيرات تصميم; "nested classes" → الفئات المتداخلة; a lead-in that is a section range is moved into parentheses after its Arabic label, as on the earlier chapter pages; "43M-param" → 43 مليون معلَمة; LR → معدل التعلم, RF → مجال الاستقبال (written out), BN, GAP, MAC, FLOP stay Latin with a class noun (تجميع GAP، عمليات MAC، عمليات FLOP).
+- English glosses given on this page: vision transformer, dropout, Network in Network (NiN), squeeze-and-excitation, structural re-parameterization. Section topics (normalization layers, residual networks, training recipes) take their gloss on their own pages.
+
+## chapter_convolutional-modern/batch-norm.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "group normalization" → تطبيع المجموعات (no glossary entry; parallel to تطبيع الدفعات and تطبيع الطبقات); on slides LayerNorm, GroupNorm, BatchNorm and BN stay Latin.
+- "scale" and "shift" of a normalization layer ($\gamma$, $\beta$) → المقياس والإزاحة ("learned scale and shift" → مقياس وإزاحة متعلَّمان); "scale invariance" → الثبات أمام التحجيم, "invariant to weight rescaling" → ثابت أمام إعادة تحجيم الأوزان (as on the linear-algebra page).
+- "scales drift" → تنجرف المقاييس، انجراف المقاييس (glossary انجراف); "fragility" (of a learning rate) → الهشاشة; "usable learning rate" → معدل التعلم الصالح للاستخدام; "peak learning rate of 0.1" → معدل تعلم ذروته 0.1; "to train cleanly" → يتدرب تدريبًا سليمًا.
+- "the *decay* $\rho$" of the running statistics → معامل التناقص (اضمحلال stays weight decay); "exponential moving averages" → المتوسطات المتحركة الأسية; "running statistics / estimates" → الإحصاءات / التقديرات المتحركة (as in the builders' guide); "effective window" → النافذة الفعلية.
+- "training mode / prediction mode" → نمط التدريب / نمط التنبؤ ("eval" on slides → التقييم).
+- "pool" (statistics over a batch and spatial positions; not the pooling layer) → يضم، ضم القيم; "spatial locations" → المواضع المكانية; "output unit" (of a fully connected layer) → وحدة من وحدات المخرجات.
+- "to score one image" (a deployed model) → يحسب درجات صورة; "$N=1$ scoring" → حساب الدرجات عند $N=1$.
+- "radial ray of $\mathbf{w}$" → الشعاع القطري للمتجه; "strictly increases" → يزيد زيادة تامة; "self-stabilizing" → ذاتي الاستقرار; "mixing weight" → وزن المزج; "minibatch moments" → عزوم الدفعة المصغرة; "representational freedom" → الحرية التمثيلية.
+- English glosses given in u01 of this page (do not repeat in later units): batch normalization, layer normalization, group normalization, pre-activation, scale, shift, scale invariance, training mode, exponential moving averages, decay, prediction mode.
+
+## chapter_convolutional-modern/efficient-convnets.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Page title "Efficient Convnets" → الشبكات الالتفافية الكفؤة; "efficient networks" → الشبكات الكفؤة.
+- "factorization" (of a convolution) → التحليل إلى عوامل; "depthwise-separable factorization" → التحليل العمقي القابل للفصل; "factored form" → الصيغة المحللة إلى عوامل; "rank-1 restriction" → قيد الرتبة 1.
+- "depthwise convolution" → الالتفاف العمقي; "pointwise convolution" → الالتفاف النقطي; "depthwise-separable convolution / pair / block / layer" → التفاف عمقي قابل للفصل / الزوج القابل للفصل / كتلة عمقية قابلة للفصل / الطبقة القابلة للفصل; "grouped convolution" → التفاف المجموعات, "grouping" → التقسيم إلى مجموعات; "channel mixer" → مازج قنوات.
+- "inverted bottleneck" → عنق الزجاجة المعكوس (as the glossary's "inverted dropout" → معكوس), "inverts" → تعكس; "expansion" of channels → طبقة توسعة / يعرّض، زيادة العرض (not التوسيع, which is dilation); "narrowing" a network → التضييق; "thin ends" → الطرفان الرفيعان; "residual highway" → مسار البواقي الرئيسي; "residual shortcut" → وصلة التخطي ذات البواقي.
+- "scaling and search" → التحجيم والبحث; "compound scaling" → التحجيم المركب; "architecture search" → البحث عن المعمارية, "latency-aware NAS" → بحث NAS المراعي لزمن الاستجابة; "structural re-parameterization" → إعادة تحديد المعلَمات البنيوية; "branch fusion" → دمج الفروع, "fused convolutions" → التفافات مدمجة; "SE gates" → بوابات SE.
+- "arithmetic" (amount of computation) → العمليات الحسابية / الحساب; "at equal / matched arithmetic" → عند تساوي العمليات الحسابية; "parameter-matched / FLOP-matched" → المطابق في المعلَمات / المطابق في عمليات FLOP; "proxy" → بديل; "memory-bandwidth bound" → مقيد بعرض نطاق الذاكرة.
+- "edge hardware", "edge" (devices) → العتاد الطرفي، الأجهزة الطرفية; "mobile-grade", "mobile processors" → للأجهزة المحمولة، معالجات الأجهزة المحمولة; "embedded boards" → اللوحات المدمجة (not مضمنة: التضمين is embedding); "smartphones" → الهواتف الذكية; "hard budgets" → ميزانيات صارمة; "ship" (a model) → ينشر; "battery draw" → استهلاك البطارية; "flash storage" → تخزين الفلاش; "activation RAM" → ذاكرة RAM المخصصة للتفعيلات.
+- "top-1 accuracy" → دقة top-1 (as "top-5 error rate" → معدل خطأ top-5); "accuracy leaderboards" → لوحات المتصدرين في الدقة; "real time" → الزمن الحقيقي; "frames per second" → إطارًا في الثانية.
+- "block-diagonal" → قطري كتلي; "channel-connectivity matrix" → مصفوفة الاتصال بين القنوات; "all-to-all coupling" → الاقتران بين كل قناة وكل قناة; "kernel stack" → مجموعة نوى مكدسة.
+- "half-cosine" → نصف دورة من جيب التمام; "cosine scheduler" → مجدول جيب التمام; "training schedule" → جدول التدريب; "SGD with momentum 0.9" → خوارزمية SGD مع زخم 0.9.
+- "VGG-style network" → شبكة على نمط VGG; table row labels take the class noun شبكة (شبكة Mini-MobileNet، شبكة على نمط VGG، ضيقة); the code label `VGG-style, narrow` stays as written.
+- Counts: "50M multiply-adds", "76K parameters", "~550K parameters" in body text → 50 مليون عملية ضرب وجمع، 76 ألف معلَمة، نحو 550 ألف معلَمة; slides keep the math spans ($542\text{K}$, $50.3\text{M}$) and "MACs" → عمليات MAC; "15B" in a slide title → 15 مليار.
+- Headings of model names take the class noun: "MobileNet" → شبكة MobileNet; "A Mini-MobileNet" → شبكة Mini-MobileNet.
+- English glosses given in u01 of this page (do not repeat in later units): multiply-adds, factorization, scaling and search, structural re-parameterization, grouped convolution, depthwise convolution, pointwise, depthwise-separable convolution, inverted bottleneck, arithmetic intensity.
+
+## chapter_convolutional-modern/resnet.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Residual Networks" (page title) → شبكات البواقي, glossed (residual network, ResNet); "residual block" → كتلة البواقي, "residual branch" → فرع البواقي (فرع بواقٍ), "residual mapping" → دالة الباقي, "residual networks" (indefinite) → شبكات بواقٍ; ResNet with a class noun → شبكة ResNet.
+- "shortcut" and "skip connection" → one Arabic term, وصلة التخطي (وصلة تخطٍ), as in the glossary's identity-shortcut entry and the earlier وصلة التخطي; the first mention gives both English names. "identity shortcut" → وصلة التخطي المحايدة (the log's الدالة المحايدة / المسار المحايد for "identity"; not the glossary proposal وصلة تخطي هوية); "projection shortcut" → وصلة التخطي بالإسقاط (slide title: وصلة الإسقاط); "additive shortcuts" → وصلات التخطي الجمعية.
+- "plain network / block / layer" → شبكة / كتلة / طبقة عادية; "regular block" → الكتلة المعتادة; "degradation (problem)" → (مشكلة) التدهور, "degradation paradox" → مفارقة التدهور, "to degrade" → تتدهور.
+- "identity mapping", "the identity" → الدالة المحايدة; "nested function classes" → فئات الدوال المتداخلة; "input–output mappings" → الدوال من المدخلات إلى المخرجات; "target mapping" → الدالة المستهدفة.
+- "reparameterization", "reparameterize" → إعادة صياغة المعلَمات، يعيد صياغة معلَمات …; "bias-free" (convolution) → بلا انحياز; "zero out" → يصفّر; "ensemble" (of shallow networks) → مجموعة نماذج; "batch-normalized networks" → الشبكات المزودة بتطبيع الدفعات; "the second batch norm" → تطبيع الدفعات الثاني; slide "BatchNorm" → طبقة BatchNorm (Latin, as the English slide writes it).
+- "to widen blocks" → زيادة عرض الكتل (يوسع stays dilation); "at matched cost" → بكلفة مماثلة; "to concatenate" (feature maps) → يربط (glossary ربط), against يجمع for adding; "descendants" (of an architecture) → نماذج انحدرت منها.
+- "Euler discretization" → تقطيع بطريقة أويلر (the name is in the glossary term طريقة أويلر, so Arabic letters); "an ODE" → معادلة تفاضلية عادية (ODE); "unit-step" → بخطوة مقدارها واحد.
+- "gradients decorrelate" → يضعف الارتباط بين التدرجات; "rough" (loss surface) → وعر, "smooth" → أملس; "large-scale recipes" → وصفات التدريب واسعة النطاق; "gradient highway" → الطريق السريع للتدرج; "eval mode" → نمط التقييم; kicker "Code Implementation" → التنفيذ في الشيفرة.
+- English glosses given in u01 of this page (do not repeat in later units): degradation problem, identity mapping, residual network (ResNet), reparameterization, function class, nested, residual, shortcut connection, skip connection.
+
+## chapter_convolutional-modern/alexnet.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Page title "AlexNet and Learned Image Representations" → شبكة AlexNet وتمثيلات الصور المتعلَّمة (class noun شبكة so that the heading starts in Arabic; in running text AlexNet is feminine, as LeNet).
+- "top-5 error" → خطأ top-5 (from the log's معدل خطأ top-5); "top five predictions" → أفضل خمسة تنبؤات; "competition entry" → مشاركتها في المسابقة; "ensemble of seven networks" → مجموعة من سبع شبكات; "watershed" → نقطة التحول; "catalyst" → محفز (محفزات); "breakthrough" → اختراق.
+- "bags of visual words" → حقائب الكلمات البصرية; "kernel classifier" → مصنف بدالة نواة; "hand-engineered" → مهندَس يدويًا, "hand-crafted" → مصمَّم يدويًا (as in the log); "human feature engineering" → هندسة الميزات بأيدي البشر.
+- "color-opponent blobs" → بقع متضادة الألوان (slide title "color blobs" → البقع اللونية); "frequency detectors" → كاشفات الترددات; "parts" (of objects) → أجزاء; "category templates" → قوالب الفئات; "Gabor-like" → شبيهة بمرشحات Gabor; "wavelets" → المويجات.
+- "crops" → مقاطع (اقتصاص مقاطع عشوائية); "horizontal reflections / flips" → انعكاسات أفقية; "views" (augmented versions of an image) → منظورات; "effective sample diversity" → تنوع العينات الفعال; "on-the-fly augmentation" → زيادة البيانات الآنية; "geometric augmentation" → الزيادة الهندسية; "photometric PCA jitter" → الاهتزاز الضوئي بطريقة PCA; "illumination invariance" → الثبات تحت تغير الإضاءة.
+- "graphics processing units (GPUs)" → وحدات معالجة الرسوميات (graphics processing units, GPUs); "quad-core CPU" → وحدة CPU رباعية الأنوية; "high-bandwidth memory" → ذاكرة عالية عرض النطاق; "throughput" → الإنتاجية; "memory-bandwidth bound" → مقيد بعرض نطاق الذاكرة; TFLOPS, GB/s, MB stay Latin.
+- "thumbnails" (small $28 \times 28$ images) → الصور المصغرة; "overlapping max-pooling" → تجميع أقصى متداخل; "parameterized layers" → طبقات ذات معلَمات; "local response normalization" → تطبيع الاستجابة المحلية; "historical artifacts" (of the 2012 design) → تفاصيل تاريخية; "saturating / non-saturating" → المتشبعة / غير المتشبعة; "active units" → الوحدات النشطة; "by a factor $4^{-K}$" → بعامل (معامل stays "coefficient").
+- "ReLU activations" → التفعيل بدالة ReLU; "classifier head" → رأس المصنف, "classification head" → رأس التصنيف; "trunk" (the convolutional part before the head) → هيكل (الهيكل الالتفافي), since جذع is the stem; "body" → جسم; "macro template / architecture" → القالب الكلي / المعمارية الكلية.
+- "dummy image / tensor" → صورة وهمية / موتر وهمي (as the log's دفعة مصغرة وهمية); "unseeded initializer" → مهيئ لا بذرة له; "ledger" (parameter and compute ledger) → سجل; "lopsided" → مختل (أشد اختلالًا); "the arithmetic" → العمل الحسابي (as in the log).
+- Table rows: "$k\times k$ convolution, a to b, stride s" → التفاف $k\times k$، من a إلى b، بخطوة انزلاق s; "fully connected, a to b" → كاملة الاتصال، من a إلى b; "total" → المجموع (as on the LeNet page). Slide table labels Conv1 … Dense3 stay Latin after الطبقة / الطبقتان.
+- Slide kickers: "Motivation & Historical Bottleneck" → الدافع وعنق الزجاجة التاريخي; "Learned Representations" → التمثيلات المتعلَّمة; "Data vs. Capacity" → البيانات مقابل السعة; "Hardware Scaling" → تحجيم العتاد; "Macro Architecture" → المعمارية الكلية; "Structural Upgrades" → ترقيات بنيوية; "Optimization & Regularization" → التحسين والتنظيم; "Model Definition" → تعريف النموذج; "Shape Verification" → التحقق من الأشكال; "Resource Accounting" → محاسبة الموارد; "Systems Bottleneck" → عنق زجاجة في الأنظمة; slide "Catalyst N: …" → المحفز N: …; "cosine warmup" on the cover → جدول جيب التمام مع الإحماء.
+- English glosses given in u01 of this page (do not repeat in later units): bags of visual words, data augmentation, multiply-adds, graphics processing units (GPUs), local response normalization, dropout. top-5 error keeps its Latin "top-5" and takes no gloss; warmup is defined in a later unit.
+
+## chapter_convolutional-modern/cnn-design.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "design space" → فضاء التصميم (فضاءات التصميم), glossed (design spaces) once; "the AnyNet design space" → فضاء التصميم AnyNet; "population" (of sampled networks) → مجتمع (مجتمعات من الشبكات), as the statistical population on the generalization pages
+- "neural architecture search (NAS)" → البحث عن المعمارية العصبية (neural architecture search, NAS), then NAS
+- "bottleneck ratio" → نسبة عنق الزجاجة; "bottleneck width" → عرض عنق الزجاجة; "group width" → عرض المجموعة; "group count" → عدد المجموعات; "inverted bottleneck" → عنق زجاجة معكوس
+- "stem / body / head / stage" → الجذع / الجسم / الرأس / المرحلة (earlier pages), glossed once here because the page defines them; "stem--body--head template" → القالب ثلاثي الأجزاء، جذع وجسم ورأس; "macro template / layout" → القالب الكلي / المخطط الكلي
+- "residual shortcut" → وصلة تخطٍ ذات بواقٍ; "project the shortcut", "project $c_i$ channels to …" → يسقط
+- "exhaustive search" → البحث الاستقصائي; "brute force" → القوة الغاشمة; "point solution" → حل نقطي
+- "stochastic dominance" → الهيمنة العشوائية; "error CDF" on slides → دالة CDF للخطأ (دوال CDF); "refinement" (of a design space) → تنقيح
+- "half-cosine" → نصف دورة جيب تمام; "Recipe A" → الوصفة A; "training protocol" → بروتوكول التدريب
+- "multi-scale pyramid" → هرم متعدد المقاييس; "segmentation heads" → رؤوس التجزئة; "downstream" (tasks) → المهام اللاحقة
+- Slide bullets whose bold lead-in is a math transition ($\text{AnyNetX}_A \to \text{AnyNetX}_B$) start with الانتقال so that the block opens with an Arabic word
+
+## chapter_convolutional-modern/convnext.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "roadmap" → خارطة الطريق; "modernization" → التحديث ("The Modernization Roadmap" → خارطة طريق التحديث; "modernizations" → تحديثات); the page title takes the class noun: شبكة ConvNeXt: ….
+- "ablation" → دراسة الاستئصال (ablation), short الاستئصال; "controlled ablation" → استئصال مضبوط; "cumulative ablation" → استئصال تراكمي; "controlled experiment" → تجربة محكمة (as logged).
+- "top-1 accuracy" → دقة top-1 (parallel to معدل خطأ top-5); table head "Top-1" → دقة top-1.
+- "leaderboard" → لوحة المتصدرين; "pre-training set" → مجموعة تدريب مسبق; "obsolete" → عفا عليه الزمن.
+- "stage ratio" → نسبة المراحل; "patchify stem" → جذع التقطيع إلى رقع; "patch stem" → جذع رقع; "patch-merging layers" → طبقات دمج الرقع; "token vector" → متجه رمز مميز.
+- "inverted bottleneck" → عنق الزجاجة المعكوس (أعناق الزجاجة المعكوسة); "layer scale" → مقياس الطبقة; "separate downsampling (layers)" → خفض أخذ العينات المنفصل / طبقات منفصلة لخفض أخذ العينات.
+- "macro design" → التصميم الكلي ("macro structure" → البنية الكلية); "micro design" → التصميم التفصيلي.
+- "activations" meaning activation functions → دوال التفعيل; "normalizations", "normalizer" → طبقات التطبيع، طبقة التطبيع.
+- "sublayer" → طبقة فرعية; "pointwise MLP" → شبكة MLP نقطية; "hierarchical structure" → البنية التراتبية; "grid of patches" → رقع مرتبة في شبكة نقطية.
+- "spatial filtering" (by a convolution filter) → الترشيح المكاني (التصفية stays for filtering a list); "nominal receptive field" → مجال الاستقبال الاسمي; "dense" convolution or layer as opposed to depthwise → كثيف, as logged.
+- "design hygiene", "Block Hygiene", "Micro Hygiene" → تهذيب التصميم، تهذيب الكتلة، التهذيب التفصيلي (not نظافة).
+- "confounded" → خلط أثر … بأثر …; slide "Confounded variables" → متغيرات متداخلة; "paradigms" → النهجان; "primitives" (building blocks) → لبنات; "thumbnails" → الصور المصغرة.
+- "stem--body--head" → جذع وجسم ورأس; "linear head" → الرأس الخطي; "backbone" → الهيكل (as logged).
+- Table cells "ReLU $\to$ GELU" and "BN $\to$ LN" are copied as they are (one left-to-right run); "LN" in a table takes طبقة.
+- English glosses given in u01 of this page (do not repeat in later units): attention, vision transformer (ViT), pointwise, downsampling, patch stem, ablation, patchify, depthwise, inverted bottleneck, effective receptive field, layer normalization.
+
+## chapter_convolutional-modern/blocks.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- "classification head" → رأس التصنيف (glossed (classification head) once); "fully connected head" → الرأس كامل الاتصال; "dense head" → الرأس الكثيف (as in the decisions log)
+- "convolutional trunk" → الهيكل الالتفافي (glossed (trunk) once); "body" of the network (stem–body–head) → جسم الشبكة; "stem–body–head layout" → تخطيط من جذع وجسم ورأس
+- "multiply-adds" → عمليات الضرب والجمع, glossed (multiply-adds) once on this page; after a number: N عملية ضرب وجمع; slide "MACs" → عمليات MAC
+- "cosine schedule" → جدول جيب التمام; "warmup-and-cosine schedule", "cosine warmup schedule" → جدول الإحماء وجيب التمام
+- "peak learning rate" → ذروة معدل التعلم ("at a peak of 0.1" → عند ذروة مقدارها 0.1)
+- "quarter-width VGG" → VGG بربع العرض; "channel width" → عرض القنوات; "channel counts" → أعداد القنوات
+- "VGG block" → كتلة VGG; "repeatable blocks" → كتل قابلة للتكرار; "reusable" → قابل لإعادة الاستخدام; "modular" (code, data) → تركيبي
+- "parameterized family" → عائلة معلَمية; "parameterized layers" (layers that have weights) → طبقات ذات معلَمات; "variant" (of a network) → نسخة
+- "landmark architectures" → معماريات فارقة; "bloated" (head) → متضخم; "class scores" → درجات الفئات; "in parallel" → على التوازي; "side by side" → جنبًا إلى جنب
+- "hand-wired code" → شيفرة موصولة يدويًا; "ad-hoc" (layer lists) → ارتجالي; "systematic" → منهجي
+- "He-normal weights" → أوزان من تهيئة He الطبيعية; "unseeded initializer" → مهيئ لا بذرة له
+- "stalling at chance" → تعلق عند مستوى الصدفة; "validation trajectory" → مسار دقة التحقق
+- "Blocks regularized the body" (made it regular, not regularization) → أضفت الكتل الانتظام على جسم الشبكة
+- Headings and slide kickers that begin with a model name get the class noun: "VGG: …" → شبكة VGG: …; slide kickers "Resource Ledger" → سجل الموارد, "Experimental Evidence" → الدليل التجريبي
+
+## chapter_convolutional-modern/resnet.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- Headings of model names take the class noun: "ResNet-18" → شبكة ResNet-18; in running text ResNet-18, ResNet-34 stay bare unless a block or bold lead-in would start with them.
+- "plain block" → الكتلة العادية, glossed (plain block); "bypass addition" → الجمع عبر وصلة التخطي; "matched pair" (of networks) → الزوج المتطابق; "paired experiment" → تجربة الأزواج; "controlled test" → اختبار مضبوط.
+- "stem / body / head" → الجذع / الجسم / الرأس, "stage" → مرحلة, each glossed once on this page; "stem--body--head architecture / template" → المعمارية المؤلفة من جذع وجسم ورأس / القالب المؤلف من جذع وجسم ورأس; "entry module" (the stem) → الجزء الافتتاحي (وحدة stays the Python module); "projection block" → كتلة إسقاط; "pooled head" → رأس تجميعي; "linear classifier" → مصنف خطي.
+- "configurations" (the four depth-and-shortcut settings) → الإعدادات الأربعة; "training histories" → سجلات التدريب; "runs" → جولات; "logarithmic y-axis" → محور عمودي لوغاريتمي; curve colours and styles on slides → (الأحمر المتقطع)، (الأزرق المتقطع)، (الأحمر المتصل).
+- "weight layer" (a layer counted because it has weights) → طبقة ذات أوزان; "parameterized layers" → طبقات ذات معلَمات; "trunk" (main path of a residual network) → المسار الرئيسي.
+- "bottleneck block" → كتلة عنق الزجاجة, glossed (bottleneck); the elliptic list "ResNet-50, -101, and -152" is written out as ResNet-50 و ResNet-101 و ResNet-152, since a bare "-101" is unreadable in right-to-left text.
+- "cardinality" (ResNeXt: the number of groups) → الأصلية (the set-theory word, as the paper borrows it); kicker "ResNeXt & Cardinality" → شبكة ResNeXt والأصلية.
+- "quarter-width VGG" → شبكة VGG بربع العرض; "over-interpret a comparison" → يحمّل المقارنة أكثر مما تحتمل; "cross-family comparison" → مقارنة بين عائلتين; "memorization gap" → فجوة حفظ; kicker "Experimental Evidence" → الدليل التجريبي; "Reproducing Degradation" → إعادة إنتاج التدهور; "Stage Template & Shapes" → قالب المرحلة والأشكال.
+- MXNet tab: "`hybridize()` compiles it into a single graph" → تصرّفها في مخطط واحد; "one operator at a time" → تنفيذ العمليات واحدةً تلو الأخرى; "the Trainer" → الصنف Trainer.
+- English glosses given in u02 of this page (do not repeat in later units): plain block, stem, body, stages, head, bottleneck.
+
+## chapter_convolutional-modern/training-recipes.md#u01 (claude fable-5.2 (medium), 2026-11-27)
+
+- Page title "Modern Training Recipes for Convnets" → وصفات التدريب الحديثة للشبكات الالتفافية; "ingredient" (of a recipe) → مكون (مكونات); "training practices" → ممارسات التدريب; "outdated recipe" → وصفة متقادمة; "recipe menu" → قائمة الوصفة.
+- "early 2020s" → مطلع عشرينيات القرن الحادي والعشرين (decades in words, style §6); "the 2015 baseline" (a recipe) → الوصفة المرجعية لعام 2015; "baseline" (a network compared against) → نموذج مرجعي.
+- "step-wise learning-rate decay" → اضمحلال معدل التعلم على درجات; "step decay" → اضمحلال درجي; "step schedule" → جدول درجي; "drop" (of the rate) → الخفض (حقب الخفض، عتبات الخفض); table row label "Schedule" → جدول معدل التعلم (so that it is not read as الجدول "table").
+- "half-cosine decay" → اضمحلال جيب التمام بنصف دورة (keeps the glossary's اضمحلال جيب التمام; body text: اضمحلال أملس بنصف دورة من جيب التمام); "peak rate" → ذروة المعدل; the EMA "decay $\rho$" → معامل التناقص (as on the batch-norm page).
+- "horizontal flips" → الانعكاس الأفقي; "random erasing" → المحو العشوائي; "evaluated weights" → الأوزان المقيَّمة.
+- "hard target" → هدف قاطع; "softened / soft target distribution" → توزيع ملين / توزيع مستهدف لين; "smoothed / unsmoothed cross-entropy" → الإنتروبيا المتقاطعة المنعمة / غير المنعمة; "finite logits / margin" → لوجيتات منتهية / هامش منته; "overconfident" → مفرط الثقة (فرط الثقة، الإفراط في الثقة); "poorly calibrated" → سيئ المعايرة.
+- Mixup, CutMix and RandAugment take the feminine class noun طريقة; "mixing coefficient" → معامل المزج; "to mix / blend" → يمزج; "superposed mixtures" → نواتج المزج المتراكبة; "shuffled partner" → شريك مخلوط; "ghostly double exposures" → صور شبحية مزدوجة التعريض; "alpha-blending" → مزج ألفا.
+- "to drop" (a residual branch, an example) → يحذف, "drop probability" → احتمال الحذف, as الحذف العشوائي; "bypass" → يتجاوز; "per-example masking" → التقنيع لكل مثال; "ensemble of shallower subnetworks" → مجموعة نماذج من شبكات جزئية أقل عمقًا.
+- "stochastic weight averaging (SWA)" → حساب متوسط الأوزان العشوائي; "exponential weight averaging" → المتوسط الأسي للأوزان; "shadow copy" → نسخة ظل, "shadow weight" → وزن الظل; "snapshots" → لقطات; "averaging horizon" → أفق حساب المتوسط, "memory horizon" → أفق الذاكرة; "low-loss basin" → حوض منخفض الخسارة; "recursion" → علاقة تكرارية; "tradeoff" → المفاضلة; "to damp" → يخمد; "ramp" → المنحدر.
+- Slides: "11.2M ResNet-18" → شبكة ResNet-18 ذات 11.2 مليون معلَمة; "ep" → حقبة; "1-hot CE" → خسارة CE بالترميز الأحادي; "Head-to-Head Comparison" → مقارنة مباشرة; "Optimizer Mechanics" → آلية عمل المحسن; "Iterate Averaging" → حساب متوسط نواتج التكرار.
+- English glosses given in u01 of this page (do not repeat in later units): training recipe, data augmentation, one-hot, label smoothing, warmup, decay, stochastic depth, checkpoint, stochastic weight averaging (SWA), exponential moving average (EMA), shadow copy.
+
+## chapter_convolutional-modern/batch-norm.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "instance normalization" → تطبيع المثيلات (no glossary entry; parallel to تطبيع الدفعات / الطبقات / المجموعات); slide acronyms LN, GN, IN stay Latin in parentheses after the Arabic name.
+- "internal covariate shift" → انزياح المتغيرات المصاحبة الداخلي (glossary انزياح المتغيرات المصاحبة), glossed once in u02.
+- "the Trainer" (capitalized, without backticks) in tab notes → الصنف Trainer; "flag" (training-mode flag) → راية; "training / prediction view of the model" → عرض للنموذج خاص بالتدريب / بالتنبؤ.
+- "warmup-and-cosine schedule" (short form) → جدول الإحماء وجيب التمام; "warming up over the first tenth" → بإحماء يمتد على العُشر الأول; "decay the learning rate to zero" → يجعل معدل التعلم يضمحل إلى الصفر; "anneals to zero" → يتناقص تدريجيًا إلى الصفر (slides: الخفض التدريجي).
+- "learning-rate sweep" → مسح (نمسح قيم ذروة معدل التعلم); "band" of learning rates → نطاق; "a 300-fold span" → مدى يتسع 300 ضعف; "within a factor of three" → ضمن معامل مقداره ثلاثة.
+- "stalls at chance" → تتعثر عند مستوى الصدفة; "erratic" (training) → يضطرب سلوكها، تضطرب الجولات; "clears 70%" → يتخطى 70%; "stale snapshot" → لقطة قديمة; "running averages lag / lock onto" → تتأخر / تثبت على.
+- "single-precision roundoff" → خطأ التدوير في الدقة المفردة; "representational capacity" → السعة التمثيلية; "micro-batch" in the sense of a very small batch ($m \le 2$) → الدفعات بالغة الصغر (دفعة جزئية stays the gradient-accumulation micro-batch).
+- "normalizer" on slides → طبقة تطبيع ("Single-Example Normalizers" → طبقات التطبيع على المثال الواحد); "the module" meaning the BatchNorm layer itself → الطبقة.
+- English glosses given in u02 of this page (do not repeat in later units): buffers, internal covariate shift.
+
+## chapter_convolutional-modern/efficient-convnets.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "compound scaling" → التحجيم المركب, glossed once here; "neural architecture search (NAS)" → البحث عن المعمارية العصبية (neural architecture search, NAS), then البحث عن المعمارية / NAS; "squeeze-and-excitation (SE) gate" → بوابة الضغط والإثارة (squeeze-and-excitation, SE), then بوابة SE; "squeezes" → تضغط, "the excitation" → الإثارة; "SE module / block" → وحدة SE / كتلة SE.
+- "reduction ratio" $r$ → نسبة التخفيض; "reweight channels" → يعيد ترجيح القنوات; "channel-wise" → على مستوى القنوات; "global image context" → السياق الشامل للصورة; "predicted gate" → قيمة البوابة المتنبأ بها; "bottleneck MLP" → شبكة MLP على هيئة عنق زجاجة; "gating MLP" → شبكة MLP للبوابات.
+- "to fuse / fusion" (branches into one convolution) → يدمج / الدمج, "fused kernel / bias / weights" → النواة المدمجة / الانحياز المدمج / الأوزان المدمجة; "to fold / BN folding" → يضم / ضم BN (ضم تطبيع الدفعات), "folded kernels / biases" → النوى / الانحيازات الناتجة عن الضم (as the log's الانحياز الناتج عن الضم); "collapsing" the branches into one layer → اختزال … في.
+- "training topology / inference topology" → طوبولوجيا التدريب / طوبولوجيا الاستدلال; "single-path" → وحيد المسار; "plain sequential stack" → المجموعة المكدسة العادية المتتابعة; "the best of both worlds" → أفضل ما في العالمين; "train-time block / deploy-time fusion" → كتلة التدريب / الدمج عند النشر.
+- "running mean / variance / stats" on this page → المتوسط المتحرك / التباين المتحرك / الإحصاءات المتحركة (as on the batch-norm page); "frozen running stats" → الإحصاءات المتحركة المجمدة; "center tap" → الوزن المركزي (log: taps → أوزان النواة); "identity kernel" → النواة المحايدة; "zero-padded kernel" → نواة محشوة بالأصفار.
+- "live activation buffer / tensor" → مخزن مؤقت حي للتفعيلات / موتر تفعيلات حي; "systems overhead" → عبء إضافي على مستوى الأنظمة; "hardware utilization" → استغلال العتاد; "inference compilers" → مصرِّفات الاستدلال; "edge accelerators" → المسرعات الطرفية.
+- "8-bit integers" → أعداد صحيحة من 8 بتات; "levels" (of a quantizer) → مستويات, "bins" → خانات; "heavy-tailed dynamic range / outliers" → مدى ديناميكي ثقيل الذيل / قيم شاذة ثقيلة الذيل; "post-training quantization" → التكميم بعد التدريب; "naive quantization" → التكميم الساذج; "low-precision quantization" → التكميم منخفض الدقة; "exact (functional) equivalence" → التكافؤ (الدالي) المضبوط; QAT, FP32, INT8, TF32 stay Latin.
+- "in lockstep" → بخطى متلازمة; "integer knob" → مقبض قيمته عدد صحيح; "thumbnails" → صور مصغرة; "core primitives" → العناصر الأولية الأساسية; "measured training speed" → سرعة التدريب المقيسة; "search objective" → دالة هدف البحث; "base architecture / network" → المعمارية الأساسية / الشبكة الأساسية.
+- Slides: "Work out these …" → المطلوب حل هذه المسائل …; "compare" in a concept-check item → المطلوب مقارنة …; table headers "Technique" → التقنية, "Mathematical / Structural Form" → الصيغة الرياضية / البنيوية, "Efficiency Gain & Practical Caveat" → مكسب الكفاءة والتنبيه العملي.
+- English glosses given in u02 of this page (do not repeat in later units): compound scaling, neural architecture search (NAS), squeeze-and-excitation (SE).
+
+## chapter_convolutional-modern/alexnet.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "warmup" → الإحماء (glossary), glossed once here (*إحماء* (warmup) خطي); "linear warmup" → إحماء خطي; "peak learning rate", "peak rate" → ذروة معدل التعلم / ذروة المعدل (as on the blocks page); "half-cosine decay" → اضمحلال على نصف دورة من جيب التمام (slide: اضمحلال جيب التمام بنصف دورة); "cosine schedule" → جدول جيب التمام; "cosine warmup schedule" → جدول الإحماء وجيب التمام; "cosine term" → حد جيب التمام.
+- "multiplicative schedule factor" → العامل الضربي للجدول; "hands-free schedule" → جدول لا يحتاج إلى تدخل يدوي; "anneal" (the learning rate) → يخفض تدريجيًا (slide: خفض سلس); "ramp" (of the rate) → يرفع، صعود خطي; "validation error plateaued" → استقر خطأ التحقق; "bouncing around a minimum" → تتأرجح حول نقطة صغرى.
+- "to upsample" → يكبّر بزيادة أخذ العينات (upsampling glossed once here); "upsampling 64-fold / eightfold" → زيادة أخذ العينات 64 مرة / ثماني مرات (slides keep $64\times$); "resized dataset" → مجموعة البيانات التي غُيّر حجم صورها; "to survive" (layers, said of small images) → تصمد أمام.
+- "fit `AlexNet` on the dataset" → يدرب (the log's يلائم stays for fitting a model or curve to data); "snapshot" (the initial kernels) → يحفظ نسخة من; "compute profile" → توزيع الكلفة الحسابية; "calibrate expectations" → نضبط توقعاتنا; "edges ahead" → تتقدم.
+- "weight updates" → تحديثات الأوزان; "weight difference" → فرق في الأوزان; "structured" (updates) → ذات بنية; "brightness gradients / ramps" → تدرجات سطوع / منحدرات سطوع; "oriented bars" → أشرطة موجهة; "low-frequency counterparts" → نظائر منخفضة التردد; "crisp edge filters" → مرشحات الحواف الحادة; "grayscale range" → مجال من تدرج الرمادي; "spatial statistics" → الإحصاءات المكانية; "relative displacement" → إزاحة نسبية; "He-normal" → تهيئة He الطبيعية.
+- Slides: kickers "Optimization Schedule" → جدول التحسين, "Optimizer Configuration" → ضبط المحسن, "Experimental Evidence" → الدليل التجريبي, "Inspecting Weight Updates" → فحص تحديثات الأوزان; "diagnostic convenience" → تسهيل تشخيصي; "Summary: Key Takeaways from X" → الملخص: أهم الخلاصات من X; table header "Role & Systems Takeaway" → الدور والخلاصة من منظور الأنظمة; "MACs/byte" → عملية MAC لكل بايت; "float32 parameters" → معلَمة float32; concept-check lead-in "Work out these two questions" → المطلوب حل هذين السؤالين.
+- English glosses given in u02 of this page: upsampling, warmup.
+
+## chapter_convolutional-modern/convnext.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "mixin" → صنف مزيج (mixin), glossed once; slide title: الصنف المزيج. No glossary entry.
+- "channels-first" → تخطيط القنوات أولًا (parallel to the logged تخطيط القنوات أخيرًا); "permutes to channels-last and back" → يبدل ترتيب المحاور إلى … ثم يعيده.
+- "training stabilizers" → عاملا استقرار للتدريب (as the logged عوامل استقرار); "drop probabilities" (stochastic depth) → احتمالات الحذف; slide "drop-path" → حذف المسار; LayerScale and DropPath stay Latin on slides (مقياس LayerScale).
+- "the compact ConvNeXt-atto profile" → الصيغة المصغرة ConvNeXt-atto; "compact" (roadmap, ResNet-18) → مصغر; the "compact modern recipe" of the training-recipes page → الوصفة الحديثة المختصرة (متراص stays the mathematical sense).
+- "parameter-matched" → المساوي في عدد المعلَمات; "control" (model in an experiment) → نموذج ضابط; "baseline" model → نموذج مرجعي (as logged); "narrowed" → ضُيّقت; "the two families" (of architectures) → العائلتان.
+- "mixed training step" (Mixup) → خطوة التدريب الممزوجة; "toggling `norm`" → تبديل قيمة `norm`; "order-independent" → لا تتوقف على الترتيب.
+- Parameter counts: body text "3.35M parameters" → 3.35 مليون معلَمة; table cells keep 3.35M and slides keep the math span $3.38\textrm{M}$.
+- "neutral" (a step with no effect on accuracy) → محايد الأثر; "transfer" (design choices to another domain) → ينتقل; "low-resolution domains" → المجالات منخفضة دقة الصورة.
+- Slides: "Backbone Implementation" → تنفيذ الهيكل; "Fair Ablation" → استئصال منصف; "Controlled Training Protocol" → بروتوكول تدريب مضبوط; "Local Modernization Roadmap" → خارطة طريق التحديث المحلية; "Frontiers" → الآفاق; "Open Questions" → أسئلة مفتوحة; "Design Dimension" → بُعد التصميم; "Impact & Principle" → الأثر والمبدأ.
+- "masked pretraining" → التدريب المسبق المقنع (glossary مقنع); "sparse MAE pretraining" → تدريب مسبق متناثر بطريقة MAE; "submanifold sparse convs" → الالتفافات المتناثرة على المتشعبات الجزئية; "Global Response Norm (GRN)" → تطبيع الاستجابة الشامل (GRN), parallel to تطبيع الاستجابة المحلية; "dead/collapsed channels" → القنوات الميتة/المنهارة.
+- "step decay" (learning-rate schedule) → اضمحلال درجي; "crops/flips" → مقاطع/انعكاسات; "deterministic multiplier" → عامل ضربي حتمي; "random gate" → بوابة عشوائية; "at eval" → عند التقييم.
+- English glosses given in u02 of this page (do not repeat in later units): layer scale, stochastic depth, mixin.
+
+## chapter_convolutional-modern/blocks.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Inception block" → كتلة Inception (Latin name after the class noun; no gloss); "branch widths" → عروض الفروع; "four-branch" → رباعي الفروع; "multi-branch blocks" → الكتل متعددة الفروع.
+- "channel reduction" ($1 \times 1$) → خفض القنوات (slides: خفض $1\times 1$), parallel to خفض الأبعاد; "project 192 channels down to 16" → إسقاط … إلى; "narrow projection" → إسقاط ضيق.
+- "pooled head" → رأس تجميعي; "pooling head" → رأس التجميع; "global-pooling head" → رأس التجميع الشامل; "convolutional body" → الجسم الالتفافي.
+- "standard convolution" → الالتفاف المعتاد (قياسي is "scalar"); "thresholded linear filter" → مرشح خطي ذو عتبة; "per-pixel channel mixing" → مزج القنوات عند كل بكسل.
+- "score maps" → خرائط درجات; "collapses to ten logits" → يطويها إلى عشرة لوجيتات (as logged for "collapse"); a training run that "collapses" → ينهار; "vanish identically" → ينعدم انعدامًا تامًا; "killing a class", "dead class" → موت الفئة، الفئة الميتة; "clamped to 0" → تُقصر على 0.
+- "invariant to permutations" → ثابت تحت التبديل; "objects" in images → الأجسام; "up to border and striding effects" → بصرف النظر عن آثار الحدود وخطوة الانزلاق.
+- "primitives" → لبنات (as logged); "tuning knobs" → مقابض ضبط; "stem--body--head blueprint" → المخطط … جذع وجسم ورأس, slide "Macro Blueprint" → المخطط الكلي, "macro template" → القالب الكلي; "vision backbones" → هياكل الرؤية; "3-part backbone layout" → تخطيط الهيكل ثلاثي الأجزاء.
+- "its score" (a network's accuracy result) → نتيجتها; "override `VGG.head`" → نعيد تعريف; "matched peak learning rate" → ذروة معدل التعلم المتطابقة; "runs" → جولات (as logged).
+- The meme "we need to go deeper" → “علينا أن نتعمق أكثر” (we need to go deeper): Arabic in curly quotes with the English original once in parentheses, since the phrase is known in English.
+- Slides: "(result)" in a slide title → (النتيجة); "Head Ablation" → استئصال الرأس; "weight layers" → طبقات ذات أوزان; "1024-vector" → متجه من 1024 عنصرًا; "pixelwise channel features" → ميزات القنوات عند كل بكسل; "conv", "ch", "reduction" in list items → التفاف، قناة، خفض; "Same" padding → الحشو “same”; table headers Model / Input / Params / MACs / Peak / Val Acc → النموذج / المدخلات / المعلَمات / عمليات MAC / ذروة / دقة التحقق; "LeNet (30 ep)" → LeNet (30 حقبة); "Quarter-VGG" → VGG بربع العرض; table cells keep 0.06M, 938M as written.
+- English glosses given in u02 of this page (do not repeat in later units): stem, body. Network in Network, global average pooling, bottleneck, classification head, multiply-adds and receptive field were glossed in u01; the name Inception takes none.
+
+## chapter_convolutional-modern/alexnet.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- Exercise titles: "Memory and compute ledger" → سجل الذاكرة والحساب (as the slide title سجل المعلَمات والحساب); "parameter memory" → ذاكرة المعلَمات; "parameter count" (the act, "repeat the parameter count") → إحصاء المعلَمات.
+- "compute throughput" → إنتاجية الحوسبة; "single-image inference" → الاستدلال على صورة واحدة; "compute time / parameter-read time" → زمن حسابها / زمن قراءة معلَماتها; "takes the maximum of" (two times) → تستغرق أكبر الزمنين.
+- "throughput (images/second)" → الإنتاجية (بالصور في الثانية), as on the minibatch page; "throughput plateaus" → تستقر الإنتاجية; "trains without running out of memory" → يجري معه التدريب دون نفاد الذاكرة; "starting from … and doubling" → ابدأ بـ … وضاعفه مرة بعد مرة; "gap against your prediction" → فرق عن تنبؤك.
+- "the ImageNet version" (of the network) → صيغة ImageNet; "fraction of the input side … spans" → أي كسر من ضلع المدخلات … يغطيه.
+
+## chapter_convolutional-modern/efficient-convnets.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "width multiplier" → مضاعف العرض (no glossary entry; مضاعف as in مضاعف لاغرانج); "scales every stage's channel count by $m$" → يضرب عدد قنوات كل مرحلة في $m$.
+- "channel permutation" (ShuffleNet) → تبديل القنوات; "intermediate channels" → القنوات الوسيطة.
+- "first-class design objectives" → أهداف التصميم الأساسية (ترفع … إلى مصاف); "peak activation memory" → ذروة ذاكرة التفعيلات; "bottlenecked by memory bandwidth" → يخنقها عرض نطاق الذاكرة; "arithmetic budget" → ميزانية العمليات الحسابية.
+- "inference engine" → محرك استدلال; "to tile" (a computation channel-by-channel) → يقسم إلى بلاطات; "materialize" (a tensor in RAM) → ينشئ … كاملًا; "expanded tensor" → الموتر الموسع (as u01's الفضاء الموسع); "expansion by factor $t$" → طبقة توسعة بعامل $t$.
+- "symmetric per-tensor scaling" → تحجيم متناظر لكل موتر; "deployed networks" → الشبكتان المنشورتان; "accuracy drop" → انخفاض الدقة; "weight-distribution analysis" → تحليل توزيع الأوزان; "inference mode" → نمط الاستدلال (as in u02).
+- "population-level architecture design spaces" → فضاءات تصميم المعماريات على مستوى مجتمعات الشبكات; "single-model search" → البحث عن نموذج واحد.
+- No English glosses in u03 of this page (summary and exercises; all key terms were glossed in u01 and u02).
+
+## chapter_convolutional-modern/resnet.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- Headings: "ResNeXt and DenseNet" → شبكتا ResNeXt و DenseNet; "ResNeXt", "DenseNet" → شبكة ResNeXt، شبكة DenseNet (class noun, as for ResNet-18); in running text both are feminine and bare.
+- "grouped convolution" → التفاف المجموعات (glossary), glossed here; "grouped $3 \times 3$ convolution / layer" → التفاف مجموعات $3 \times 3$ / طبقة المجموعات $3 \times 3$; "dense $1 \times 1$ convolutions" → التفافان كثيفان; "uniform structure" → بنية متجانسة; "topology" → الطوبولوجيا; "multi-branch" → متعدد الفروع (as logged).
+- "wall-clock speedup" → التسريع في الزمن الفعلي; "memory traffic" → حركة البيانات في الذاكرة; "trade" (wider at matched cost) → المقايضة; "top-1 error" → خطأ top-1; "successors" (of an architecture) → معماريتان خلفتاها.
+- DenseNet: "dense block" → الكتلة الكثيفة (as logged); "growth rate" → معدل النمو; "transition layer" → طبقة انتقال; "channel(-wise) concatenation" → ربط القنوات / الربط على امتداد القنوات; "concatenative skip connections" → وصلات التخطي بالربط; "feature reuse" → إعادة استخدام الميزات; "distinct feature maps" → خرائط الميزات المتمايزة; "quadratically" → تربيعيًا; "overwritten" → يُمحى بالكتابة فوقه.
+- "pre-activation ordering" (BN → ReLU → conv; not the value before the activation, which stays قيمة ما قبل التفعيل) → ترتيب التفعيل المسبق; "pre-activation ResNet" → شبكة ResNet ذات التفعيل المسبق; "post-add ReLU" → دالة ReLU التي بعد الجمع.
+- "U-Net backbone" → هيكل U-Net; "backbone of nearly every modern architecture" (figurative) → عماد; "universal default" → الخيار الافتراضي العام; "spatial scale" → مقياس مكاني; "upsampled feature map" → خريطة ميزات مكبَّرة.
+- Slides: "ResNeXt Code" → شيفرة ResNeXt; "DenseNet & Skip Topologies" → شبكة DenseNet وطوبولوجيات التخطي; "Variants & Extensions" → نسخ وامتدادات; "Memory Pitfall" → مزلق الذاكرة; "naive DenseNet" → تنفيذ DenseNet الساذج; "Summary: Key Takeaways on …" → الملخص: أهم الخلاصات عن …; "Work out these three design calculations" → المطلوب إجراء حسابات التصميم الثلاثة التالية; "AvgPool" stays Latin after طبقة; "parameter-free" → لا معلَمات لها.
+- English glosses given in u03 of this page (do not repeat in later units): grouped convolution, dense convolutional network, pre-activation, growth rate, transition layer.
+
+## chapter_convolutional-modern/cnn-design.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "empirical cumulative distribution function (CDF)" → دالة التوزيع التراكمي التجريبية, glossed (empirical cumulative distribution function, CDF) once; afterwards دالة CDF (دالتا CDF، دوال CDF), "empirical CDF" → دالة CDF التجريبية, "CDF curve" → منحنى دالة CDF; slide "EDFs" → دوال EDF
+- "working assumptions" → افتراضات عملية; "short-run ranking transfers" → الترتيب بعد تدريب قصير ينتقل; "error threshold" → عتبة خطأ; "lies uniformly above" / "uniform stochastic dominance" → فوق … عند كل عتبة / الهيمنة العشوائية عند كل عتبة
+- "nondecreasing widths / depths" → عروض / أعماق غير متناقصة; "growing / shrinking widths" → العروض المتزايدة / المتناقصة; "stage widths" → عروض المراحل; "monotonic stages" → مراحل رتيبة; "mean population error" → متوسط خطأ المجتمع
+- "linear ramp" (of block widths) → منحدر خطي; "staircase" (of quantized widths) → درج (درج منتظم، الدرج المكمَّم); "snaps to" → يُقرَّب إلى; "geometric grid" → شبكة نقطية هندسية; "quantized linear widths" → العروض الخطية المكمَّمة (as on the u01 cover)
+- "multiply-adds" → عمليات الضرب والجمع, no gloss on this page (glossed on the earlier pages of the chapter); "400 MFLOPs" copied; "112M" in body text → 112 مليون, in slide kickers 112 مليون عملية MAC
+- "at matched compute" → عند تساوي العمليات الحسابية; "to match compute budgets" → يوحد الميزانيات الحسابية; "compute-matched" (slide title) → متساوية في كلفة الحساب; "FLOP-matched" → متطابق في عمليات FLOP
+- "legends" (of a plot) → مفاتيح الرسم; "upsampled images" → الصور المكبَّرة; "nuances" → اعتبارات دقيقة; "dataset ceiling" → سقف مجموعة البيانات, "plateaus at" → يستوي عند; "memory traffic" → حركة البيانات في الذاكرة; "GPU runtime" → زمن التشغيل على وحدة GPU; "sobering" → تدعو إلى التواضع
+- "cardinality" (number of parallel groups, ResNeXt) → الأصلية; "outlier model" → نموذج هو قيمة شاذة; "lucky point sample" → عينة نقطية محظوظة
+- Headings and slide labels: "RegNet" → شبكة RegNet; "RegNetX32 on Fashion-MNIST" → شبكة RegNetX32 على Fashion-MNIST; "Experimental Evidence" → الدليل التجريبي; "Matched-Protocol Baseline" → نموذج مرجعي بالبروتوكول نفسه; "FLOP Budget Accounting" → محاسبة ميزانية عمليات FLOP; "Scientific takeaway" → الخلاصة العلمية; in running text `RegNetX32` is feminine when it stands alone (شبكة) and masculine after النموذج
+- English glosses given in u02 of this page (do not repeat in later units): empirical cumulative distribution function (CDF)
+
+## chapter_convolutional-modern/batch-norm.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "normalizer-free networks (NFNets)" → الشبكات الخالية من طبقات التطبيع (normalizer-free networks, NFNets), then شبكات NFNets; "adaptive gradient clipping" → قص التدرج التكيفي (glossary قص التدرج); "weight standardization" → توحيد الأوزان معياريًا.
+- "state-of-the-art accuracy" → دقة في مستوى أحدث ما وصل إليه المجال; "top-1 error" → خطأ top-1 (as خطأ top-5).
+- "this is :eqref: transposed" → هذا منقول …; "(second / rightmost) panel" of a figure → اللوحة (الثانية / في أقصى اليمين); "variant" (of a normalization layer) → نسخة.
+- "interpolates between two extremes" (group normalization between $G=1$ and $G=c$) → يتدرج بين حالتين حديتين (يستوفي stays fitting data); "memory-heavy tasks" → المهام كثيرة استهلاك الذاكرة; "fine-tuning across domains" → ضبط دقيق على مجال آخر; "hard to debug" → صعب التنقيح.
+- "train--test mode split", "train/eval split" → الانقسام بين نمطي التدريب والاختبار / بين التدريب والتقييم; "at inference time" → عند الاستدلال; "frozen" (averages, weights) → مجمدة.
+- Exercises: "learning-rate ceiling" → سقف معدل التعلم; "horizon" (of the running average) → أفق; "training-mode passes overwrite" → تكتب التمريرات … فوق; "identically" ($= 0$) → تطابقًا; "to machine precision" → حتى دقة الآلة.
+- Slides: "Takeaway" → الخلاصة; "Work out these … problems" → المطلوب حل هذه المسائل; "Eval Bugs" → أخطاء التقييم; "Alternative Scale Control" → ضبط بديل للمقياس; "folds into conv weights" → تُدمج في أوزان الالتفاف; BatchNorm, GroupNorm, LayerNorm, InstanceNorm, LN, IN in bold lead-ins take the class noun طبقة.
+- English glosses given in u03 of this page: instance normalization, normalizer-free networks (NFNets).
+
+## chapter_convolutional-modern/blocks.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- Table rows of the comparison table take the class noun شبكة (شبكة LeNet، شبكة VGG بربع العرض، برأس تجميعي); cells keep 0.06M, 938M and the en-dash ranges as written; "(30 epochs)" → (30 حقبة); header "peak rate" → ذروة المعدل.
+- Body text: "6.0M vs. 46.8M" → 6.0 مليون مقابل 46.8 مليون; "276M multiply-adds" → 276 مليون عملية ضرب وجمع; "~1.5B" → نحو 1.5 مليار; "144M-parameter VGG models" → نماذج VGG ذات 144 مليون معلَمة. A parenthesis joined by a math arrow (43.1M $\to$ 0.6M) is copied as one left-to-right run, as the logged table cells "ReLU $\to$ GELU".
+- "raw arithmetic" → حجم العمل الحسابي وحده; "pixel budget" → ميزانية البكسلات; "slash" → يقلص تقليصًا شديدًا; "trades A for B" → يقايض A بـ B; "shared ceiling" → سقف مشترك; "auxiliary heads" → رؤوس مساعدة; "staged pretraining" → تدريب مسبق على مراحل; "scale fragility" → الهشاشة أمام تغير المقياس.
+- "as ranges over repeated runs" → في صورة مدى على جولات متكررة; "agree to within half a point" → تتفق في حدود نصف نقطة; "layer counts" (per-layer tallies of parameters and multiply-adds) → إحصاءات الطبقات; "native resolution" → دقة الصورة الأصلية; "epoch time" → زمن الحقبة; "every stride-2 step" → كل عملية خطوة انزلاقها 2; "to tie" → تتعادل.
+- Exercise titles: "Where the savings come from." → مصدر التوفير.; "Single-branch Inception ablation." → استئصال: كتلة Inception بفرع واحد.
+
+## chapter_convolutional-modern/convnext.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "Limits and Open Problems" → الحدود والمسائل المفتوحة; "active frontiers" (of research) → آفاق بحثية نشطة (as the slide's الآفاق); "at frontier scale" → عند أحجام نماذج الصدارة (from the logged نماذج الصدارة).
+- "masked autoencoders" → المشفرات التلقائية المقنعة (glossary مشفر تلقائي + مقنع), glossed once; "masked self-supervised pretraining" → التدريب المسبق المقنع ذاتي الإشراف; "masked holes" → الثغرات المقنعة; "bleed across" → يتسرب أثرها عبر.
+- "sparse convolutions" → الالتفافات المتناثرة; "deformable convolutions" → الالتفافات القابلة للتشوه (no glossary entry); "ultra-large kernels" → نوى فائقة الكبر; "hybrid conv--attention stacks" → المجموعات المكدسة الهجينة من الالتفاف والانتباه; "sliding convolutions" → الالتفافات المنزلقة.
+- "Global Response Normalization" → تطبيع الاستجابة الشامل, glossed once in body text; with the acronym: تطبيع GRN; "relative response" → الاستجابة النسبية; "residual" (the added $\mathbf{X}_c$ term) → وصلة بواقٍ.
+- "Swin-inspired upgrades" → ترقيات مستوحاة من Swin; "enlarge a kernel", "kernel enlargement" → يكبر النواة، تكبير النواة; "the depthwise move" → نقل الالتفاف العمقي; enlarging "in place" → في موضعه; "net change" → التغير الصافي.
+- "kernel size sweep" → مسح حجم النواة (as the logged مسح for a learning-rate sweep); "ablation square" → مربع الاستئصال; "architecture-by-recipe" → بين المعمارية والوصفة; "retune" → يعيد ضبط; "momentum SGD" → خوارزمية SGD مع الزخم.
+- "asymptotic factor" → عامل تقاربي; "parameter-efficient" → كفء في استخدام المعلَمات (كفاءة استخدام المعلَمات); "evaluation-time network" → الشبكة المستخدمة عند التقييم; "(default)" after a value → (القيمة الافتراضية).
+- Enumerations "(i) …, (ii) …" inside an exercise keep the Latin markers, joined by a free-standing و.
+- English glosses given in u03 of this page: masked autoencoders, Global Response Normalization.
+
+## chapter_convolutional-modern/training-recipes.md#u02 (claude fable-5.2 (medium), 2026-11-27)
+
+- "compact modern recipe" → الوصفة الحديثة المختصرة (متراص stays the mathematical "compact"); "a lean subset" → مجموعة جزئية مقتصدة; "compact subset" → مجموعة جزئية مختصرة.
+- "coupled weight decay" → اضمحلال أوزان مقترن (as the earlier التحديث المقترن); "10-fold drops" of the learning rate → قسمة المعدل على 10 (as u01).
+- "step schedules" (computed per step from `lr` and `num_steps`) → جدول معدل التعلم خطوةً بخطوة; "Schedule" as a recipe ingredient in prose and slide titles → جدول معدل التعلم (not الجدول alone, which reads as "table").
+- "paired run" → جولة مقترنة; "repeated runs" → جولات متكررة; "run-to-run standard deviation / noise floor" → الانحراف المعياري / أرضية الضوضاء من جولة إلى أخرى.
+- "bundled comparisons" → المقارنات المجمّعة; "one-at-a-time ablation" → دراسة استئصال تغيّر مكونًا واحدًا في كل مرة (exercise title: استئصال مكونات الوصفة واحدًا واحدًا); ablation glossed (ablation) once on this page.
+- "to retune" → يعيد ضبط (إعادة ضبط معدل التعلم); "optimizer swap" → تبديل المحسن; "to sweep" a hyperparameter in exercises → امسح.
+- "multi-object ambiguity" → التباس تعدد الكائنات; "transfer to detection or segmentation" → النقل إلى الاكتشاف أو التجزئة; "downstream transfer" → النقل إلى المهام اللاحقة; "multi-label floor" → الأرضية متعددة الوسوم; "sub-point deltas" → فروق تقل عن نقطة.
+- "drop-in variant" → بديل مباشر; "clipping the rectangle to the image borders" → حصر المستطيل داخل حدود الصورة (قص stays gradient clipping); "one-hot labels" → وسوم الترميز الأحادي.
+- "effective horizon" of an EMA → الأفق الفعلي, "effective window" → النافذة الفعلية (as u01 and the batch-norm page; the glossary's أفق فعال is the RL discount horizon).
+- "to extend" a class in an exercise → عمّم (يوسع stays dilation); "live weights" → الأوزان الحية; "BN buffers" → مخازن حالة BN; "frozen" → مع تجميد.
+- Slides: "Recipe Implementation" → تنفيذ الوصفتين; "Baseline Trajectory" → المسار المرجعي; "Diagnostic Pitfall" → مزلق تشخيصي, "diagnostic trap" → فخ تشخيصي; "Benchmark Methodology" → منهجية الاختبارات المعيارية; table head "Mathematical Formulation / Practical Role & Tuning Rule" → الصياغة الرياضية / الدور العملي وقاعدة الضبط; summary-table row labels take a class noun (المحسن AdamW، طريقتا Mixup و CutMix، متوسط EMA للأوزان).
+
+## chapter_convolutional-modern/cnn-design.md#u03 (claude fable-5.2 (medium), 2026-11-27)
+
+- "parameterized template" → قالب معلَمي (as the logged عائلة معلَمية); "structural primitives" → اللبنات البنيوية; "activation normalization" → تطبيع التفعيلات; "the discipline of separating …" → الانضباط في فصل … عن …
+- "at matched budget" (exercise title) → بميزانية متساوية; "at roughly matched parameter counts" → بأعداد معلَمات متقاربة; "time per epoch" → زمن الحقبة; "spatial feature-map resolution" → الدقة المكانية لخرائط الميزات
+- "parameterize the block widths via the linear ramp" → يعبّر عن عروض الكتل بمعلَمات المنحدر الخطي; "rounded to the nearest multiple of 8" → مدوَّرة إلى أقرب مضاعف للعدد 8; "staircase approximation" → تقريب الدرج; "divisible by" → يقبل القسمة على; "from (a)" → في الجزء (a)
+- "stage configuration" → إعداد المراحل; "measurable wall-clock time" → زمن فعلي يمكن قياسه; "violate a rule" / "violation" → يخرق قاعدة / خرق; "hand-picked network" → شبكة منتقاة يدويًا; "contrast your findings with" → قابل ما تجده بـ
+- "expansion ratio" $t$ → نسبة التوسعة; "degrees of freedom" → درجات الحرية; "depthwise separability" → قابلية الفصل العمقية; "principles carry over to" → المبادئ تنتقل إلى; the exercise tags [code] and [extended] are copied
+- No English glosses in u03 of this page (summary and exercises).
+
+## chapter_convolutional-modern/resnet.md#u04 (claude fable-5.2 (medium), 2026-11-27)
+
+- Exercises of this page: "identity shortcut" → وصلة تخطٍ محايدة (as u01); "untouched identity highway" → مسار محايد رئيسي لا يمسه شيء; "post-activation block" → كتلة ذات تفعيل لاحق, "pre-activation block" → كتلة ذات تفعيل مسبق / كتلة التفعيل المسبق; "standard" block → معتادة (قياسي stays "scalar").
+- "multiply-adds per output pixel" → عمليات الضرب والجمع لكل بكسل من المخرجات; "512 input / output channels" → 512 قناة إدخال / قناة إخراج (glossary); "additive term" → حد جمعي; "layer index" → فهرس الطبقة; "the $i$-th convolution" → الالتفاف رقم $i$.
+- "samples one of every four positions" → يأخذ عيناته من موضع واحد من كل أربعة مواضع; "ResNet-D downsampling shortcut" → وصلة التخطي عند خفض أخذ العينات في ResNet-D; "$2 \times 2$ stride-2 average pooling" → تجميع متوسط $2 \times 2$ بخطوة انزلاق 2 (as in u03); "stage depths" → أعماق المراحل; "catch up with" → تلحق بـ; "across several runs" → على امتداد عدة جولات; "time per epoch" → زمن الحقبة.
+- "account for its parameters and activation memory" → احسب معلَماتها وذاكرة التفعيلات فيها; "assemble" (a network from parts) → ركّب; "to halve channels" → تنصّف عدد القنوات.
+- No English glosses in u04 of this page (exercises take none).
+
+## chapter_convolutional-modern: chapter check (claude fable-5.2 (medium), 2026-11-27)
+- One rendering per term across the chapter's nine pages; the entries above were corrected in place.
+- "efficient convnets" → الشبكات الالتفافية الكفؤة (the title of the page), also in the chapter introduction; "structural re-parameterization" → إعادة تحديد المعلَمات البنيوية.
+- "stem--body--head" (layout, template, blueprint) → جذع وجسم ورأس (تخطيط من جذع وجسم ورأس، القالب ثلاثي الأجزاء، جذع وجسم ورأس); no dashes between the three words.
+- "expansion" of channels (inverted bottleneck, ConvNeXt block) → توسعة (طبقة توسعة، نسبة التوسعة); "to widen" a stage or the channels → زيادة العرض; "to enlarge a kernel" → تكبير النواة; توسيع stays dilation.
+- "shortcut", "skip connection" → وصلة تخطٍ / وصلة التخطي, written without a shadda; "pooled head" → رأس تجميعي; "quarter-width VGG" → VGG بربع العرض; "hand-wired" → موصول يدويًا; "unseeded initializer" → مهيئ لا بذرة له.
+- "horizontal flips" (augmentation) → الانعكاس الأفقي (انعكاسات أفقية); القلب stays the flip of a kernel or a bit.
+- "half-cosine decay" as a slide lead-in → اضمحلال جيب التمام بنصف دورة; body text may write اضمحلال على نصف دورة من جيب التمام.
+- "compact modern recipe" → الوصفة الحديثة المختصرة on every page; مصغر stays for a compact network or roadmap.
+- "the Trainer" (capitalized, in tab notes) → الصنف Trainer; slide kicker "Experimental Evidence" → الدليل التجريبي; concept-check lead-in "Work out these …" → المطلوب حل … / المطلوب إجراء …, without a colon after المطلوب.
+- Kept apart on purpose: "parameter-matched" is المطابق في المعلَمات where it is paired with المطابق في عمليات FLOP (efficient-convnets) and المساوي في عدد المعلَمات for the ConvNeXt control model; "primitives" → لبنات for architectural building blocks, عناصر أولية for low-level features or operations.
