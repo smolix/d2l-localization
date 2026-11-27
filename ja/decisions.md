@@ -2322,3 +2322,452 @@
 - "marker" (plot marker / completion marker) → 「マーカ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
 - "introspection" → 「イントロスペクション」 (standard OOP/Python term in Japanese)
 - "bucketing" → 「バケッティング」 (batch bucketing for JIT compilation)
+
+## chapter_transformers/gpt.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "weight tying" / "tying" (output projection to input embeddings) → 「重み共有」 (consistent with `chapter_transformers/index.md#u01` decision over proposed glossary `重み結合`)
+- "selective weight decay" → 「選択的重み減衰」
+- "byte-level" → 「バイトレベル」
+- "run-to-run spread" → 「実行間のばらつき」
+
+## chapter_transformers/gpt.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "weight tying" → 「重み共有」 (consistent with `u01` and `chapter_transformers/index.md#u01`)
+- "top-$k$" / "Top-$p$ (nucleus) sampling" → 「top-$k$」 / 「Top-$p$（ニュークリアス）サンプリング」
+- "low-rank latent compression (MLA)" → 「低ランク潜在圧縮（low-rank latent compression、MLA）」
+- "decoupled RoPE" → 「分離型 RoPE」
+
+## chapter_transformers/vision-transformer.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Vision Transformer (ViT)" → 「Vision Transformer（ViT）」 (architecture proper name kept in Latin script per `ja/style.md` §3.2 and `ja/decisions.md`)
+- "grid topology" → 「グリッドのトポロジー」
+- "bag of patches" → 「パッチの集合（bag of patches）」 (body) / 「Bag-of-Patches」 (slide)
+- "sinusoidal code" → 「正弦波符号」
+- "masked patch reconstruction" → 「マスク付きパッチ再構成」
+
+## chapter_transformers/vision-transformer.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "permutation test" → 「置換検定」
+- "mean attention distance" → 「平均アテンション距離」
+
+## chapter_transformers/scaling-laws.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "neural scaling laws" → 「ニューラルスケーリング則」 (extends glossary `scaling law` = 「スケーリング則」)
+- "non-embedding parameters" → 「非埋め込みパラメータ」 (pairs `embedding` = 「埋め込み」 with `parameter` = 「パラメータ」)
+- "power law" / "power-law" → 「べき乗則」 (standard mathematical and ML terminology)
+- "data budget" / "token budget" / "step budget" / "FLOP budget" → 「データ予算」 / 「トークン予算」 / 「ステップ予算」 / 「FLOP 予算」 (consistent with glossary `compute budget` = 「計算予算」)
+- "over-training" / "over-trained" (training past the Chinchilla optimum) → 「過剰訓練」 / 「過剰訓練された」 (distinguished from `overfitting` = 「過学習」)
+- "lifetime compute" / "lifetime inference compute" → 「生涯計算量」 / 「生涯推論計算量」 (paired with glossary `training compute` = 「訓練計算量」)
+- "IsoFLOP" (contours / budget lines / trade-off) → 「IsoFLOP」（「IsoFLOP 等高線」「IsoFLOP 予算線」「IsoFLOP トレードオフ」）
+- "counter" (hardware / operator counter) → 「カウンタ」 (drops final `ー` per `ja/style.md` §3.3 `-er` rule)
+
+## chapter_transformers/scaling-laws.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "nonlinear least squares" → 「非線形最小二乗法」 (extends glossary `least squares` = 「最小二乗法」)
+- "lifetime inference compute" → 「生涯推論計算量」 (consistent with `u01` `"lifetime compute" → 「生涯計算量」`)
+
+## chapter_transformers/moe.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Sparse Mixture-of-Experts (MoE)" → 「スパース混合エキスパート（MoE）」（glossary `mixture of experts` = 「混合エキスパート」および `chapter_transformers/index.md` と統一）
+- "stored parameters" / "active parameters" → 「保持パラメータ（保持パラメータ数）」 / 「アクティブパラメータ（アクティブパラメータ数）」
+- "Top-$k$ routing" / "Top-k routing" → 「Top-$k$ ルーティング」 / 「Top-k ルーティング」（`ja/style.md` §2.2 の半角英数・数式と日本語の間の半角スペース規則に従う）
+- "dispatch" / "scatter" / "gather" → 「ディスパッチ（する）」 / 「スキャッタ（する）」 / 「ギャザー（する）」
+- "token dropping" / "drop" → 「トークンドロップ」 / 「ドロップ（する）」
+- "routing collapse" → 「ルーティング崩壊」（`token collapse` = 「トークン崩壊」と対）
+- "Switch auxiliary (load-balancing) loss" → 「Switch 補助（負荷分散）損失」
+- "loss-free dynamic router bias control" / "loss-free bias controller" → 「損失不要の動的ルータバイアス制御」 / 「損失不要（の）バイアスコントローラ」（`ja/style.md` §3.3 の `-er` 長音省略規則に従う）
+- "frozen router" → 「凍結ルータ」
+
+## chapter_transformers/moe.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "fine-grained expert segmentation" / "fine-grained" / "coarse" → 「細粒度エキスパート分割」 / 「細粒度」 / 「粗粒度」
+- "IsoFLOP" → 「IsoFLOP」（スケーリング則の専門用語としてラテン文字表記を維持）
+
+## chapter_transformers/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Further Reading" (page/section heading) → 「関連文献」 (consistent with `decisions.md`)
+- "post-sublayer normalization" → 「サブ層後正規化」, "Sandwich-LN / Peri-LN" → 「Sandwich-LN / Peri-LN」
+- "soft-capping" / "soft-capped logits" → 「ソフトキャッピング」 / 「ロジットのソフトキャッピング」
+- "parallel Transformer block" → 「並列 Transformer ブロック」
+- "weight absorption" (in MLA decoding) → 「重み吸収」
+- "self-distillation" → 「自己蒸留」
+- "over-train" (training past the Chinchilla compute-optimal ratio) → 「過剰に訓練する」 (distinguished from `overfit` = 「過学習」)
+- "sparse upcycling" → 「スパースアップサイクリング」
+
+## chapter_recurrent-modern/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Gated Recurrent Networks" (section heading, `sec_lstm`) → 「ゲート付きリカレントネットワーク」
+- "linear dynamical system" / "linear system (in continuous time)" → 「線形力学系」 / 「（連続時間の）線形システム」 (control-theory dynamical system sense, distinct from glossary's proposed algebraic `連立一次方程式`)
+- "mixer" / "sequence mixer" → 「ミキサ」 / 「系列ミキサ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+- "delta rule" → 「デルタ則」
+- "exact recall" / "Delayed Recall" / "Associative Recall" → 「正確な想起」 / 「遅延想起」 / 「連想想起」 (memory retrieval sense of *recall*, distinct from classification metric `再現率`)
+- "Selective Copying" / "String Reversal" / "Key Rebinding" → 「選択的コピー」 / 「文字列反転」 / 「キー再束縛」
+- "zero-order-hold discretization" → 「ゼロ次ホールド離散化」
+- "block-semiseparable" → 「ブロック準分離」
+- "LeCun initialization" → 「LeCun 初期化」 (follows `ja/style.md` §5 and §2.2)
+
+## chapter_recurrent-modern/lstm.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "plain recurrent network" / "plain RNN" → 「素のリカレントネットワーク」 / 「素の RNN」 (aligns with `bptt.md` `"vanilla RNN" → 「素の RNN」`)
+- "memory cell" → 「記憶セル」, "additive memory" → 「加法的な記憶」 (aligns with glossary `long short-term memory` = 「長・短期記憶」 and temporal memory = 「記憶」)
+- "input node" → 「入力ノード」
+- "delayed recall" → 「遅延想起」 (memory recall sense, paired with `decisions.md` `"associative recall" → 「連想想起」`, distinguished from classification recall = 「再現率」)
+- "half-life" → 「半減期」
+- "sequence mixer" / "mixer" → 「系列ミキサ」 / 「ミキサ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+
+## chapter_recurrent-modern/lstm.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "candidate state" → 「候補状態」
+- "chrono initialization" → 「クロノ初期化」
+- "keep-gate" → 「保持ゲート」 (e.g. `Keep-gate LSTM and GRU` → 「保持ゲート付き LSTM と GRU」)
+- "LeCun normal initialization" / "LeCun normal" → 「LeCun 正規初期化」 (`ja/style.md` §5・§2.2 に従い人名ラテン文字＋半角スペースを維持、`He 初期化`・`Xavier 初期化` と統一)
+- "nats/byte" → 「nat/byte」 (`ja/decisions.md` の `"nat / nats" → 「nat」` および `ja/style.md` §4 の単位記号維持規則に従う)
+
+## chapter_recurrent-modern/lstm.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "bidirectional (network / mixer / predictor)" → 「双方向（ネットワーク / ミキサ / 予測器）」
+
+## chapter_recurrent-modern/seq2seq.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Sequence-to-Sequence Learning" (page/section heading) → 「系列対系列学習」 (matches `ja/decisions.md` `"sequence-to-sequence" (modifier) → 「系列対系列」`)
+- "source (sequence / sentence / token / string)" / "target (sequence / token)" → 「ソース（系列 / 文 / トークン / 文字列）」 / 「ターゲット（系列 / トークン）」
+- "reference (translation)" / "candidate (translation)" → 「参照訳」 / 「候補訳」
+- "near miss" / "paraphrase" → 「ニアミス」 / 「言い換え」
+- "string reversal" → 「文字列反転」
+- "LLM judge(s)" → 「LLM ジャッジ」
+- "free-running decoding" → 「フリーランニングのデコーディング」
+
+## chapter_recurrent-modern/seq2seq.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "near miss" / "paraphrase" → 「ニアミス」 / 「言い換え」 (consistent with `u01`)
+- "Fano's inequality" → 「ファノの不等式」 (follows `ja/style.md` §5 and `ja/decisions.md`)
+- "binary entropy" → 「二値エントロピー」
+
+## chapter_recurrent-modern/linear-recurrence.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "affine recurrence" → 「アフィン漸化式」 (paired with glossary `linear recurrence` = 「線形漸化式」)
+- "minimal GRU (`minGRU` / `MinGRU`)" → 「最小 GRU」（略称 `minGRU` およびクラス名 `` `MinGRU` `` はラテン文字維持）
+- "write vector / write(s)" → 「書き込みベクトル / 書き込み」
+- "doubling schedule / doubling scan" (Hillis–Steele) → 「倍増スケジュール / 倍増スキャン」
+- "work-efficient (scan / tree schedule)" → 「演算量効率的（なスキャン / 木スケジュール）」; "work" (in work–depth model) → 「演算量」
+- "up-sweep/down-sweep tree" → 「アップスイープ・ダウンスイープ木」
+- "combine" (binary associative scan operator $\bullet$) → 「結合演算」（動詞は「結合する」）
+- "sequence mixer / mixer" → 「系列ミキサ / ミキサ」（`ja/style.md` §3.3 の `-er` 長音省略規則に従う）
+
+## chapter_recurrent-modern/linear-recurrence.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "log–log axes" → 「両対数軸」 (consistent with `decisions.md` `"log–log slope" → 「両対数傾き」`)
+- "continuous-time state space model" → 「連続時間状態空間モデル」 (combines glossary `continuous-time` = 「連続時間」, `state space` = 「状態空間」, `model` = 「モデル」)
+
+## chapter_recurrent-modern/ssm.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Structured State Space Models" → 「構造化状態空間モデル」 (extends `decisions.md` `"state space model" → 「状態空間モデル」`)
+- "zero-order hold (ZOH)" → 「ゼロ次ホールド（ZOH）」 (standard control-engineering term)
+- "linear time-invariant (LTI)" / "time-invariant" → 「線形時不変（LTI）」 / 「時不変」 (standard signal-processing and control term)
+- "causal convolution" → 「因果畳み込み」 ("circular convolution" → 「巡回畳み込み」)
+- "timescale" / "multi-timescale" → 「時間スケール」 / 「多重時間スケール」
+- "half-life" → 「半減期」
+- "rate" (SSM continuous-time eigenvalue $\lambda_n$) → 「レート」 ("real rate" → 「実レート」, "complex rate" → 「複素レート」, "decay rate" → 「減衰率」)
+- "leaky integrator" → 「漏れ積分器」
+- "impulse response" → 「インパルス応答」
+- "delayed recall" / "long-range recall" → 「遅延想起」 / 「長距離想起」 (sequence-memory recall, aligned with `decisions.md` `"associative recall" → 「連想想起」`)
+
+## chapter_recurrent-modern/ssm.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "diagonal state space layer" → 「対角状態空間層」
+- "forward Euler rule" / "backward Euler rule" / "bilinear rule" → 「前進オイラー法」 / 「後退オイラー法」 / 「双一次法」 (standard Japanese numerical ODE discretization terms)
+- "content blindness" → 「内容への不感性」 (paired with `decisions.md` `"order blindness" → 「順序への不感性」`)
+
+## chapter_recurrent-modern/mamba.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "selective copying" → 「選択的コピー」
+- "content-based selection" / "content selection" / "content-selective" → 「内容に基づく選択」 / 「内容選択」 / 「内容選択的」
+- "marked symbol" → 「マーク付き記号」
+- "time-invariant" → 「時不変」
+- "zero-order hold (ZOH)" → 「ゼロ次ホールド（ZOH）」
+- "half-life" → 「半減期」, "multi-timescale" → 「多重時間スケール」
+- "write vector" / "read vector" → 「書き込みベクトル」 / 「読み出しベクトル」
+- "sequence mixer" → 「系列ミキサ」（`ja/style.md` §3.3 の `-er` 長音省略規則に従う）
+- "parallel associative scan" → 「並列結合スキャン」, "adjoint scan" → 「随伴スキャン」, "doubling scan / doubling round" → 「倍増スキャン / 倍増ラウンド」
+
+## chapter_recurrent-modern/mamba.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "depthwise causal convolution" → 「デプスワイズ因果畳み込み」
+- "spike ratio" → 「スパイク比」
+- "reverse-time" → 「逆時間」
+
+## chapter_recurrent-modern/matrix-state.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Matrix-State Recurrences" / "matrix recurrence" → 「行列状態漸化式」 / 「行列漸化式」 (paired with glossary `linear recurrence` = 「線形漸化式」)
+- "state space duality (SSD)" → 「状態空間双対性（SSD）」 (paired with glossary `state space` = 「状態空間」 and `duality` = 「双対性」)
+- "gated linear attention (GLA)" → 「ゲート付き線形アテンション（GLA）」
+- "block-semiseparable" / "semiseparable" → 「ブロック半分離可能」 / 「半分離可能」
+- "codebook" → 「コードブック」
+- "nearest-neighbor recall" / "recall" (memory recall metric) → 「最近傍想起率」 / 「想起率」 (distinguished from binary classification `recall` = 「再現率」, aligning with `decisions.md` `"associative recall" → 「連想想起」`)
+
+## chapter_recurrent-modern/matrix-state.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "dual form" / "primal" → 「双対形式」 / 「主（形式・漸化式）」
+- "sequence mixer" → 「系列ミキサ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+- "multi-query associative recall" → 「マルチクエリ連想想起」 (extends `decisions.md` `"associative recall" → 「連想想起」`)
+- "rebound key" → 「再束縛キー」 (extends `decisions.md` `"rebinding" → 「再束縛」`)
+
+## chapter_recurrent-modern/deltanet.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "delta rule" → 「デルタ則」 (established Japanese ML term for Widrow–Hoff delta rule, matching `decisions.md` `"delta update rule" → 「デルタ更新則」`)
+- "additive matrix memory" / "additive writes" → 「加算型行列メモリ」 / 「加算的書き込み」
+- "bind" / "rebind" / "rebinding" → 「束縛する」 / 「再束縛する」 / 「再束縛」 (matches `decisions.md` `"rebinding" → 「再束縛」`)
+- "read before writing" / "read-before-write" → 「書き込み前に読み出す」 / 「書き込み前読み出し」
+- "write strength" → 「書き込み強度」
+- "Householder reflection" → 「ハウスホルダー鏡映」 (standard Japanese numerical linear algebra term, following `ja/style.md` §5 katakana rule for mathematical concepts named after people)
+- "signal erosion" → 「信号浸食」 (distinguished from `decay` = 「減衰」 and `interference` = 「干渉」)
+- "WY representation" / "WY form" → 「WY 表現」 / 「WY 形式」
+- "solver" → 「ソルバ」 (follows `ja/style.md` §3.3 `-er` rule and `decisions.md` `"linear solver" → 「線形ソルバ」`)
+
+## chapter_recurrent-modern/deltanet.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "effective corrected value" → 「実効補正値」
+- "strictly lower-triangular" / "unit-lower-triangular" → 「狭義下三角」 / 「単位下三角」 (standard Japanese linear algebra terminology)
+- "state tracking" → 「状態追跡」
+- "mixer" / "sequence mixer" → 「ミキサ」 / 「系列ミキサ」 (follows `ja/style.md` §3.3 `-er` rule)
+- "gated linear attention" → 「ゲート付き線形アテンション」 (aligned with glossary `linear attention` = 「線形アテンション」)
+
+## chapter_recurrent-modern/deltanet.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "cross-moment" → 「交差モーメント」, "Gram inverse" → 「グラム逆行列」
+- "proximal implicit step" / "implicit step" → 「近接陰的ステップ」 / 「陰的ステップ」
+- "recursive least squares" → 「逐次最小二乗法」 (established Japanese signal-processing/control/ML term for RLS)
+- "fast weights" / "slow weights" → 「高速重み」 / 「低速重み」 (paired with `decisions.md` `"fast weight(s)" → 「高速重み」`)
+- "bit capacity" → 「ビット容量」
+
+## chapter_recurrent-modern/hybrids.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "hybrid architecture" / "hybrid" → 「ハイブリッドアーキテクチャ」 / 「ハイブリッド」
+- "in-context retrieval" → 「コンテキスト内検索」 (paired with glossary `retrieval` = 「検索」 and `context length` = 「コンテキスト長」)
+- "multi-query associative recall" → 「マルチクエリ連想想起」; "recall" (memory recall task/metric) → 「想起」 / 「想起率」 (distinguished from binary classification `recall` = 「再現率」)
+- "bit-counting bound" / "counting bound" → 「ビット数え上げ限界」 / 「数え上げ限界」
+- "Welch's bound" / "Welch floor" → 「Welch の下界」 / 「Welch の下限」 (person name kept in Latin script per `ja/style.md` §5)
+- "mixer" / "sequence mixer" → 「ミキサ」 / 「系列ミキサ」 (drops final `ー` per `ja/style.md` §3.3 `-er` rule)
+- "pair load" / "load" → 「ペア負荷」 / 「負荷」
+
+## chapter_recurrent-modern/hybrids.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "gated linear attention" → 「ゲート付き線形アテンション」
+- "bands of positions" / "position band" → 「位置の帯域」
+- "lagging run" → 「遅れをとった実行」
+
+## chapter_recurrent-modern/hybrids.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "selective copying" → 「選択的コピー」
+- "triangular solve" → 「三角求解」
+
+## chapter_recurrent-modern/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "long convolution(s)" → 「長い畳み込み」 (paired with glossary `convolution` = 「畳み込み」)
+- "log-linear attention" → 「対数線形アテンション」 (paired with glossary `linear attention` = 「線形アテンション」)
+- "constant-depth threshold circuit class" → 「定数深さしきい値回路クラス」, "logarithmic-depth circuits" → 「対数深さ回路」
+- "reflection" (orthogonal reflection matrix $\mathbf{I} - 2\mathbf{k}\mathbf{k}^\top$) → 「鏡映」 (consistent with `deltanet.md`)
+- "trapezoidal discretization" → 「台形離散化」 (paired with glossary `discretization` = 「離散化」)
+- "reverse-complement-equivariant" → 「逆相補鎖同変」 (genomics reverse complement 「逆相補鎖」 + `decisions.md` `equivariance` = 「同変性」)
+
+## chapter_computational-performance/index.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Computational Performance" (chapter title, `chap_performance`) → 「計算性能」 (consistent with `ja/style.md` §7.1 and `chapter_advanced/index.md`)
+- "The Performance Model" (section title, `sec_perf_model`) → 「性能モデル」
+- "bandwidth roof" / "compute roof" → 「帯域幅ルーフ」 / 「計算ルーフ」 (paired with `decisions.md` `"compute roof" → 「計算ルーフ」` and glossary `roofline` = 「ルーフライン」)
+- "host dispatch" / "dispatch" → 「ホストディスパッチ」 / 「ディスパッチ」
+- "operator fusion" / "operation fusion" → 「演算融合」
+- "CUDA graph(s)" → 「CUDA グラフ」
+- "collective(s)" (distributed communication primitives) → 「集合通信」
+- "ring allreduce" → 「リング allreduce」 (`allreduce` kept in Latin script)
+
+## chapter_computational-performance/performance-model.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "performance model" → 「性能モデル」 (standard Japanese HPC/systems term, avoiding katakana パフォーマンス per `ja/style.md` §7.1)
+- "bandwidth-bound" / "overhead-bound" → 「帯域幅律速」 / 「オーバーヘッド律速」 (paired symmetrically with glossary `compute-bound` = 「計算律速」)
+- "bandwidth roof" / "compute roof" → 「帯域幅ルーフ」 / 「計算ルーフ」 (consistent with `ja/decisions.md` `kv-cache.md#u01`)
+- "tensor core(s)" / "Tensor Cores" → 「テンソルコア」
+- "host dispatch" / "enqueue" → 「ホストディスパッチ」 / 「エンキュー」
+- "device barrier" → 「デバイスバリア」
+
+## chapter_computational-performance/performance-model.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "kernel fusion" / "operator fusion" → 「カーネル融合」 / 「演算子融合」 (consistent with `ja/decisions.md` `"fused kernel" → 「融合カーネル」`)
+- "profiler" / "profiling" → 「プロファイラ」 / 「プロファイリング」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+
+## chapter_computational-performance/performance-model.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "streaming multiprocessor (SM)" → 「ストリーミングマルチプロセッサ（SM）」 (follows `ja/style.md` §3.3 dropping final `ー` on `プロセッサ`)
+- "wave" (GPU thread-block wave) → 「ウェーブ」
+
+## chapter_computational-performance/hardware.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "arithmetic intensity" / "intensity" ($I$) → 「演算密度」 (consistent with `attention-at-scale`, `kv-cache`, and `appendix-tools-for-deep-learning/hardware`)
+- "bandwidth-bound" / "latency-bound" → 「帯域幅律速」 / 「レイテンシ律速」 (paired with glossary `compute-bound` = 「計算律速」 and `memory-bound` = 「メモリ律速」)
+- "sector" (GPU memory transaction unit) → 「セクタ」 (drops final `ー` per `ja/style.md` §3.3), "DRAM row" → 「DRAM 行」（初出「*行*（row）」）
+- "shoreline" (die perimeter for I/O) → 「ショアライン」
+- "silicon interposer" → 「シリコンインターポーザ」 (drops final `ー` per `ja/style.md` §3.3)
+- "reticle limit" → 「レチクル限界」
+- "kernel fusion" / "operator fusion" → 「カーネル融合」 / 「演算子融合」 (paired with `decisions.md` `"fused kernel" → 「融合カーネル」`)
+- "activation recomputation" → 「活性化値の再計算」
+- "tensor core(s)" / "Tensor Core(s)" → 「テンソルコア」
+
+## chapter_computational-performance/hardware.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "streaming multiprocessor (SM)" → 「ストリーミングマルチプロセッサ（SM）」 (drops final `ー` on `プロセッサ` per `ja/style.md` §3.3)
+- "warp" → 「ワープ」
+- "Little's law" → 「リトルの法則」 (person-named law in katakana per `ja/style.md` §5)
+- "in flight" (bytes/requests in flight) → 「インフライト」
+- "systolic array" → 「シストリックアレイ」
+- "fused multiply-add" → 「融合積和演算」 (paired with `decisions.md` `"multiply-add" → 「積和演算」`)
+- "microscaling" → 「マイクロスケーリング」
+- "pageable (memory)" → 「ページャブル（メモリ）」 (paired with `decisions.md` `"pinned (page-locked) host memory" → 「ピン留め（ページロック）ホストメモリ」`)
+- "copy engine" → 「コピーエンジン」, "staging buffer" → 「ステージングバッファ」
+- "peer-to-peer (P2P)" → 「ピアツーピア（P2P）」
+- "memory sweep time" ($C/\beta$) → 「メモリスイープ時間」
+- "rules of thumb" → 「経験則」
+
+## chapter_computational-performance/hardware.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "allreduce" → 「オールリデュース（allreduce）」
+- "pointer chasing" → 「ポインタチェイシング（ポインタ追跡）」 (drops final `ー` on `ポインタ` per `ja/style.md` §3.3)
+- "cache line" → 「キャッシュライン」
+- "latency hiding" → 「レイテンシ隠蔽」
+
+## chapter_computational-performance/compilation.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "computation graph" → 「計算グラフ」
+- "graph capture" → 「グラフキャプチャ」, "graph break" → 「グラフブレーク」 (standard Japanese PyTorch / Dynamo terminology)
+- "operation fusion" / "operator fusion" → 「演算融合」 / 「演算子融合」 (paired with `decisions.md` `"fused kernel" → 「融合カーネル」`)
+- "kernel replay" → 「カーネルリプレイ」 (paired with `decisions.md` `"replay" → 「リプレイ」`)
+- "bandwidth-bound" / "overhead-bound" → 「帯域幅律速」 / 「オーバーヘッド律速」 (paired with glossary `compute-bound` = 「計算律速」)
+- "placeholder" / "compiler" / "register" → 「プレースホルダ」 / 「コンパイラ」 / 「レジスタ」 (drops final `ー` per `ja/style.md` §3.3)
+- "lowering" / "lower" (a compiler IR to kernels) → 「ローワリング」 / 「ローワリングする」
+- "bucketing" / "bucket" → 「バケット化」 / 「バケット化する」
+
+## chapter_computational-performance/compilation.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "CUDA graph" → 「CUDA グラフ」, "XLA command buffer" → 「XLA コマンドバッファ」
+- "break-even" → 「損益分岐点」 / 「損益分岐」 ("break-even step $n^*$" → 「損益分岐ステップ $n^*$」)
+- "wrapper" / "pointer" / "counter" / "scheduler" / "driver" → 「ラッパ」 / 「ポインタ」 / 「カウンタ」 / 「スケジューラ」 / 「ドライバ」 (drops final `ー` per `ja/style.md` §3.3)
+
+## chapter_computational-performance/memory-precision.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "global batch" → 「グローバルバッチ」 (paired with `ja/decisions.md` `"micro-batch" → 「マイクロバッチ」` and `"full-batch" → 「フルバッチ」`)
+- "measured peak memory" → 「実測ピークメモリ」, "planned peak memory" → 「計画ピークメモリ」
+- "Tensor Core" / "tensor cores" → 「Tensor Core」 (hardware unit name kept in Latin script per `ja/style.md` §5)
+- "allocator" → 「アロケータ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-or` loanwords, consistent with `キャッシングアロケータ`)
+
+## chapter_computational-performance/memory-precision.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "selective recomputation" → 「選択的再計算」 (glossed on first occurrence)
+- "chunked cross-entropy loss" → 「チャンク化交差エントロピー損失」
+- "roofline floor" → 「ルーフライン下限」 (paired with glossary `roofline` = 「ルーフライン」 and `ja/decisions.md` `"loss floor" → 「損失の下限」`)
+- "significand" → 「仮数部」 (IEEE 754 standard Japanese term, matching `ja/decisions.md` `"mantissa" → 「仮数部」`)
+
+## chapter_computational-performance/memory-precision.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "buffer donation" → 「バッファ譲渡」 (JAX `donate_argnums` terminology)
+- "unscale" → 「アンスケール」 (loss scaling inverse step in mixed-precision training)
+
+## chapter_computational-performance/multiple-gpus.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "multi-GPU" → 「マルチ GPU」 (`ja/style.md` §2.2・§3.2 のカタカナ＋ラテン文字間スペース規則に従う)
+- "collective communication" / "collective primitives" → 「集団通信」 / 「集団通信プリミティブ」
+- "allreduce" / "ring allreduce" / "star allreduce" → 「allreduce」 / 「リング allreduce」 / 「スター allreduce」 (glossary の `reduce-scatter` = 「reduce-scatter」・`all-gather` = 「all-gather」と統一)
+- "broadcast" → 「ブロードキャスト」 (日本語の並列計算・深層学習で定着したカタカナ表記)
+- "host dispatch" → 「ホストディスパッチ」
+- "bus bandwidth" → 「バス帯域幅」
+- "start-up latency" → 「起動レイテンシ」
+
+## chapter_computational-performance/multiple-gpus.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "latency–bandwidth model" → 「レイテンシ・帯域幅モデル」
+- "gradient fusion" → 「勾配融合」 (`decisions.md` の `"fused kernel" → 「融合カーネル」` と整合)
+- "overhead-bound" / "host-bound" → 「オーバーヘッド律速」 / 「ホスト律速」 (`compute-bound` = 「計算律速」・`memory-bandwidth bound` = 「メモリ帯域幅律速」と対)
+- "launcher" / "host launcher" / "single-launcher" → 「ランチャ」 / 「ホストランチャ」 / 「単一ランチャ」 (`ja/style.md` §3.3 の `-er` 長音省略規則に従う)
+- "strong scaling" / "weak scaling" → 「強スケーリング」 / 「弱スケーリング」
+- "Amdahl's law" / "Gustafson's law" → 「アムダールの法則」 / 「グスタフソンの法則」 (`ja/style.md` §5 の人名由来法則のカタカナ規則に従う)
+- "speedup" → 「高速化率」（定量的な倍率 $R(k)$）/ 「高速化」（定性的な速度向上）
+
+## chapter_computational-performance/multi-gpu-practice.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "allreduce" / "ring allreduce" → 「オールリデュース」 / 「リングオールリデュース」 (standard katakana in Japanese distributed DL/HPC literature, paired with 「ブロードキャスト」「ギャザー」「スキャッタ」「リダクション」)
+- "collective (operation / library)" → 「集団通信（集団通信演算 / 集団通信ライブラリ）」 (established MPI/NCCL/HPC term in Japanese)
+- "bucket" / "bucketing" / "bucket model" → 「バケット」 / 「バケット化」 / 「バケットモデル」
+- "overlap" (of communication and computation) → 「オーバーラップ」 / 「オーバーラップさせる」
+- "exposed communication (time)" / "exposed overhead" → 「露出通信（時間）」 / 「露出オーバーヘッド」
+- "weak scaling" / "strong scaling" / "scaling efficiency" → 「弱スケーリング」 / 「強スケーリング」 / 「スケーリング効率」
+- "single program, multiple data (SPMD)" → 「単一プログラム複数データ（single program, multiple data、SPMD）」
+- "device mesh" / "partitioner" → 「デバイスメッシュ」 / 「パーティショナ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+- "streaming multiprocessor (SM)" / "SM contention" → 「ストリーミングマルチプロセッサ（SM）」 / 「SM 競合」 (follows `ja/style.md` §3.3 `プロセッサ`)
+- "bus bandwidth" → 「バス帯域幅」, "copy engine" → 「コピーエンジン」, "peer-to-peer (P2P)" → 「ピアツーピア（P2P）」
+- "one-step check" → 「1 ステップチェック」 (consistent with `decisions.md` 「勾配チェック」「座標チェック」)
+
+## chapter_computational-performance/multi-gpu-practice.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "synchronized batch normalization" → 「同期バッチ正規化」
+- "checksum" → 「チェックサム」
+- "calibrate" → 「較正する」
+
+## chapter_computational-performance/sharding.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "training state" → 「訓練状態」 (glossed on first occurrence)
+- "Fully Sharded Data Parallelism (FSDP)" → 「完全シャーディングデータ並列（Fully Sharded Data Parallelism、FSDP）」 (slides/tables thereafter use `FSDP` or `完全シャーディングデータ並列`)
+- "collective" / "collective operation(s)" / "collective phase(s)" → 「集団通信」 / 「集団通信演算」 / 「集団通信フェーズ」; individual primitives `allreduce`, `ring allreduce`, `reduce-scatter`, `all-gather`, `all-to-all` → 「allreduce」, 「リング allreduce」, 「reduce-scatter」, 「all-gather」, 「all-to-all」 (aligned with glossary `all-gather` and `reduce-scatter`)
+- "bus bandwidth" → 「バス帯域幅」 (paired with `memory bandwidth` = 「メモリ帯域幅」)
+- "mixture(s) of experts" → 「混合エキスパート」
+- "paper prediction" → 「机上予測」
+
+## chapter_computational-performance/sharding.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "buffer donation" / "donate" → 「バッファ譲渡」 / 「譲渡する（バッファ譲渡する）」
+- "prefetching" → 「プリフェッチ」
+- "column-wise" / "row-wise" → 「列方向」 / 「行方向」
+- "link-bound" → 「リンク律速」 (paired with `compute-bound` = 「計算律速」 and `memory-bandwidth bound` = 「メモリ帯域幅律速」)
+
+## chapter_computational-performance/fast-transformer.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "Amdahl's law" → 「アムダールの法則」 (follows `ja/style.md` §5 katakana rule for laws named after people)
+- "kernel fusion" → 「カーネル融合」 (paired with `decisions.md` `"fused kernel" → 「融合カーネル」`)
+- "bandwidth-bound" → 「帯域幅律速」 (paired with glossary `compute-bound` = 「計算律速」 and `decisions.md` `"memory-bandwidth bound" → 「メモリ帯域幅律速」`)
+- "tensor core(s)" / "Tensor Core(s)" → 「テンソルコア」
+- "allreduce" → 「オールリデュース」 (consistent with katakana collective terms `シャーディング`, `ギャザー`, `スキャッタ`)
+- "reduced precision" → 「低精度化」
+- "rung" (optimization stage in prose/slides) → 「段階」 (avoids literal metaphor translationese and distinguishes stages from training `ステップ`)
+
+## chapter_computational-performance/fast-transformer.md#u02 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "model FLOPs utilization (MFU)" → 「モデル FLOPs 利用率（MFU）」
+- "weak scaling" / "strong scaling" → 「弱スケーリング」 / 「強スケーリング」
+- "peer-to-peer access" → 「ピアツーピアアクセス」
+- "log-perplexity" → 「対数パープレキシティ」
+
+## chapter_computational-performance/fast-transformer.md#u03 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "causality gate" (autoregressive causal-mask check) → 「因果性ゲート」 (distinguished from statistical causality = 「因果関係」)
+
+## chapter_computational-performance/further-reading.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "collective algorithm" / "collective library" → 「集合通信アルゴリズム」 / 「集合通信ライブラリ」
+- "cache-aware roofline" → 「キャッシュ考慮型ルーフライン」
+- "Hardware FLOPs utilization (HFU)" → 「ハードウェア FLOPs 利用率（HFU）」
+- "block-scaled format" / "microscaling" → 「ブロックスケール形式」 / 「マイクロスケーリング」
+- "regional compilation" → 「領域コンパイル」
+- "selective recomputation" → 「選択的再計算」
+- "recursive halving and doubling" → 「再帰的半減・倍増法」
+- "parameter server" → 「パラメータサーバー」（`ja/style.md` §3.3 に従い `パラメータ` は長音省略、`サーバー` は長音維持）
+
+## chapter_computational-performance/legacy-multigpu-lib.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "multi-GPU" → 「マルチ GPU」 (follows `ja/style.md` §2.2 spacing between katakana and `GPU`)
+- "helper" → 「ヘルパ」 (follows `ja/style.md` §3.3 dropping final `ー` on `-er` loanwords)
+
+## chapter_optimization/legacy-timer-lib.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "(build-only, unlisted)" → 「（ビルド専用、非掲載）」 (consistent with `chapter_appendix-tools-for-deep-learning/hyperparameters-lib.md#u01`)
+
+## chapter_recurrent-modern/legacy-tokenizer-lib.md#u01 (gemini gemini-4-carbon (medium), 2026-11-27)
+
+- "shim" → 「シム」 (standard software engineering katakana term for compatibility shims)
+- "(build-only, unlisted)" → 「（ビルド専用、非掲載）」 (consistent with `chapter_appendix-tools-for-deep-learning/hyperparameters-lib.md`)
