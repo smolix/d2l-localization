@@ -299,7 +299,10 @@ FONT_DEFAULTS = {
                               "'Hiragino Sans', 'Yu Gothic', sans-serif",
            'fonts.html.google': ['Noto Sans JP:wght@400;500;700'],
            'fonts.pdf.cjk': 'Noto Serif CJK JP', 'fonts.pdf.cjk_sans': 'Noto Sans CJK JP',
-           'fonts.pdf.cjk_mono': 'Noto Sans Mono CJK JP'},
+           'fonts.pdf.cjk_mono': 'Noto Sans Mono CJK JP',
+           # *…* in bold: Japanese fonts have no italic (ja/style.md §9.9);
+           # used from the first English tag whose en.yml has the key
+           'fonts.emphasis': 'bold'},
     'zh': {'fonts.html.sans': "'Source Sans 3', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "
                               "'PingFang SC', 'Microsoft YaHei', sans-serif",
            'fonts.html.google': ['Noto Sans SC:wght@400;500;700'],
