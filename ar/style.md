@@ -790,7 +790,8 @@ These recur on every page; write them identically.
   colon: "Work out these 3 problems." → المطلوب حل هذه المسائل الثلاث.
   "Predict …" → المطلوب: توقع …; "You want …" → المطلوب …; "You must **lower**
   …" → الواجب هو **خفض** …. Drop "our" on slides: "our valley" → الوادي نفسه.
-- **Slide enumerators** "(a)", "(b)" → في الحالة (a); "Model A / Model B" →
+- **Slide enumerators** "(a)", "(b)" → في الحالة (a); on reinforcement learning
+  pages, where حالة is the state (§15.10), في (a)، وفي (b)، وفي (c). "Model A / Model B" →
   النموذج A / النموذج B. Free-standing slide labels "Hypothesis A / B — …" take
   Arabic letters: الفرضية أ / ب، ….
 - **Lead words before math at a block start** (§3.2): "**$k = 1$:**" →
@@ -816,6 +817,8 @@ These recur on every page; write them identically.
   (اختياري.).
   Where the build numbers the parts and the English writes "part b" without
   parentheses, the letter is copied bare: الجزء b.
+- **A plain-text "n-step" in an exercise title** keeps the Latin letter without
+  a math span: الأهداف ذات n خطوة.
 - **Exercise titles** are noun phrases with the English full stop: "Where the
   savings come from." → مصدر التوفير.; "Why reshuffle." → لماذا نعيد الخلط. (no
   ؟); "X ablation" → استئصال X.
@@ -852,7 +855,10 @@ word separates the source's Latin name from its Latin link text.
 - **A :citet: with its English title** is the subject: يُعد :citet:`…`
   (*Title*) المرجع …; "A and :citet:`…`" → … وكذلك :citet:`…`; an acronym and
   its citation in one parenthesis: (**L-BFGS**، وقد اقترحها :citet:`…`).
-- **Slide citations** stay Latin: (Bernstein & Newhouse, 2024). After a math span
+- **A reference page that "accompanies" or "continues" a section** → يرافق /
+  يكمل ما في :numref:`…`, so that nothing has to agree with the printed prefix.
+- **Slide citations** stay Latin: (Bernstein & Newhouse, 2024). After a Latin
+  method name too: (طريقة GSPO وفق Zheng et al., 2025). After a math span
   or as a clause, add وفق / لدى: (وفق Yang et al., 2022); "Polyak's method
   (1964)" → الطريقة لدى Polyak (1964); "Wen et al. (2024) explain" → تفسير Wen et
   al. (2024) لـ …. A kicker that is only a citation takes بحث: [بحث Loshchilov
@@ -876,7 +882,7 @@ word separates the source's Latin name from its Latin link text.
   (T-shirt), حذاءً رياضيًا (sneaker، الفئة 7), الصورة (heads); a class named in
   quotes as the code prints it stays Latin after الفئة.
 - **Table cells:** a model or method name in the first cell takes its class
-  noun, outside the bold (المحسن **AdamW**، وحدة GPU 0); a code label is copied
+  noun, outside the bold and before a :cite: (المحسن **AdamW**، وحدة GPU 0، طريقة BCQ :cite:`…`); a code label is copied
   (`VGG-style, narrow`، `d2l.Module`). "**Framework** `layer`" → الطبقة `layer`
   في **Framework**; "A + B" between code → A مع B; "None" → لا شيء; "Standard
   for" → الخيار المعياري لـ; "predicted sick" → التنبؤ: مريض; "$3\times 3$ conv,
@@ -926,7 +932,7 @@ word separates the source's Latin name from its Latin link text.
 | Quoted example word; a letter | الكلمة; الرمز | الكلمة *gave*، الكلمتان *Alice* و *Bob* |
 | Books, novels | كتاب، رواية | رواية *The Time Machine* للكاتب H. G. Wells |
 | Games, datasets | لعبة; بيانات / مجموعة بيانات | لعبة Go، بيانات Fashion-MNIST |
-| Reinforcement learning | طريقة for an update rule or estimator; خوارزمية for DAgger, Rainbow, SAC; قاعدة for UCB; بيئة for an environment, also as a heading; المنظم / تحكم / تتبع for LQR, MPC, TV-LQR | طريقة REINFORCE، طريقة SARSA، طريقة TD(0)، خوارزمية DAgger، قاعدة UCB، بيئة CartPole، بيئة `Pendulum-v1`، المنظم LQR، تحكم MPC |
+| Reinforcement learning | طريقة for an update rule or estimator (also GRPO, DPO, CQL, MBPO, REDQ); خوارزمية for DAgger, Rainbow, SAC, PPO, TRPO, TD3; شبكة for DQN and Double DQN; البرنامج for AlphaZero; معمارية for Dyna and IMPALA; النموذج for Decision Transformer; قاعدة for UCB; بيئة for an environment, also as a heading; المنظم / تحكم / تتبع for LQR, MPC, TV-LQR | طريقة REINFORCE، طريقة SARSA، طريقة TD(0)، خوارزمية DAgger، قاعدة UCB، بيئة CartPole، بيئة `Pendulum-v1`، المنظم LQR، تحكم MPC |
 
 - **Agreement follows the class noun**, also for the bare name later (يحقق Muon،
   خوارزمية BPTT المقتطعة). The noun is needed at the start of a block, clause or
@@ -985,6 +991,12 @@ Additions to §5.4:
 - **English plural acronyms in a gloss become singular:** (multilayer
   perceptron, MLP); a method name's expansion: Arabic, then English (*الانتباه
   بانحيازات خطية*، Attention with Linear Biases).
+- **Method names in a gloss are lower case** like any glossary term, also where
+  the English capitalizes them: (proximal policy optimization, PPO)، (trust region
+  policy optimization, TRPO)، (deep Q-network, DQN)، (group relative policy
+  optimization, GRPO).
+- **A :cite: right after a glossed term** moves to the end of its clause, so
+  that two parentheses do not touch.
 - **A synonym in the source** ("the *label* (or *target*)") → *الوسم* (label)،
   ويسمى أيضًا *الهدف* (target), so that two parentheses do not touch.
 - **Inside one parenthesis**, Arabic commas join a gloss to more glosses or to
