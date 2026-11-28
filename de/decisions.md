@@ -703,7 +703,7 @@ compaction is in git history.
 - multiply-add → Multiplikationsaddition
 - multistep method → Mehrschrittverfahren
 - multivariable calculus → Analysis mehrerer Variablen
-- Nadaraya-Watson kernel regression → Nadaraya-Watson-Kernel-Regression
+- Nadaraya-Watson kernel regression → Nadaraya-Watson Kernel-Regression — name pair written apart from the compound (style §1, ruling 23); Nadaraya-Watson-Schätzer, Nadaraya-Watson-Regression stay hyphenated
 - narrow log → enges Protokoll
 - nearest-mean classifier → Klassifikator nach dem nächsten Klassenmittelwert — als Verfahrensbezeichnung „Klassifikation nach dem nächsten Klassenmittelwert“
 - nested function classes → geschachtelte Funktionenklassen

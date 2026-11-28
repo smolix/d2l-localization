@@ -46,6 +46,10 @@ addresses the reader; most "you" sentences are general statements.
   English sentences at "which", "where", "so that".
 - **No more than two genitives in a row, no compound of more than three parts.**
   ✗ Lernratenanpassungsverfahren ✓ Verfahren zur Anpassung der Lernrate.
+  A hyphenated name pair counts as one part (Cauchy-Schwarz-Ungleichung,
+  Nadaraya-Watson-Schätzer). Where a name pair would join a compound that
+  already has two parts, write the name pair apart (author, 2026-11-27):
+  ✓ Nadaraya-Watson Kernel-Regression ✗ Nadaraya-Watson-Kernel-Regression.
 - **No filler particles** (*ja*, *halt*, *eben*, *eigentlich*, *quasi*) and no
   literal "simply"/"just": drop it or write *nur*, *direkt*.
 - **No Denglisch beyond the loan list in §3.** In particular never Layer, Loss,
@@ -213,7 +217,7 @@ Duden D 41/D 42 leave a choice in most cases; these rules fix it.
 
 | Case | Rule | Examples |
 |---|---|---|
-| Never a space inside a compound | A German compound is one word or hyphenated throughout. | ✗ Batch Größe, ✗ Attention Mechanismus, ✗ Deep Learning Modell ✓ Batchgröße, Attention-Mechanismus, Deep-Learning-Modell |
+| Never a space inside a compound | A German compound is one word or hyphenated throughout; the one exception is a name pair before a two-part compound (§1). | ✗ Batch Größe, ✗ Attention Mechanismus, ✗ Deep Learning Modell ✓ Batchgröße, Attention-Mechanismus, Deep-Learning-Modell |
 | Assimilated loan + German noun: closed | Only these first parts: Batch, Minibatch, Token, Label, Pixel, Tensor, Training(s), Test, Modell, Code. | Batchgröße, Tokenfolge, Labelverteilung, Trainingsverlust, Testfehler, Modellgröße |
 | Any other loan + German noun: hyphen | Also every name, acronym, symbol or number. | Attention-Gewicht, Pooling-Schicht, Dropout-Rate, Padding-Maske, Prompt-Länge, Stride-Wert, Momentum-Term, Sampling-Verfahren, Kernel-Trick, GPU-Speicher, Adam-Optimierer |
 | English noun + noun | Hyphen, both capitalised. | Score-Matching, Label-Smoothing, Teacher-Forcing, Flow-Matching, Max-Pooling |
@@ -334,8 +338,10 @@ markup (`*`) and screen readers.
   Cauchy-Schwarz-Ungleichung, Kullback-Leibler-Divergenz, Monte-Carlo-Schätzer.
   With *Satz*: Satz von Bayes (✗ Bayes' Theorem, ✗ Bayes-Theorem).
 - **Adjectives from names** (Duden D 91): lower case, no apostrophe, and only
-  where the glossary has the adjective or no compound exists: gaußsches
-  Rauschen, bayessche Inferenz, euklidische Norm, boolesche Ungleichung.
+  where the glossary has the adjective, no compound exists, or the adjective is
+  the established German term: gaußsches Rauschen, bayessche Inferenz,
+  euklidische Norm, boolesche Ungleichung, jordansche Normalform, einsteinsche
+  Summenkonvention (author, 2026-11-27).
   ✗ Gauß'sches, ✗ Bayes'sche, ✗ Gaußsches (mid-sentence).
 - **German spelling of the name inside German terms:** Gauß (not Gauss), Hesse
   (Hesse-Matrix, not Hessian), Jacobi.
@@ -578,6 +584,11 @@ in the section named.
 21. **Reinforcement Learning:** Retain the English term, including in Deep
     Reinforcement Learning and Offline Reinforcement Learning (§8.2).
 22. **Proximal policy optimization:** Use Proximal Policy Optimierung (§8.2).
+23. **Name pairs before a compound** (2026-11-27): Nadaraya-Watson
+    Kernel-Regression, with the name pair written apart; a three-part compound
+    keeps the hyphens (Nadaraya-Watson-Schätzer) (§1, §3.4).
+24. **Established name adjectives** (2026-11-27): jordansche Normalform and
+    einsteinsche Summenkonvention are correct (§6).
 
 ## 11. Conventions from the translated chapters
 

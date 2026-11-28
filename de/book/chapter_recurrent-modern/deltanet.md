@@ -191,7 +191,7 @@ Dabei ersetzen wir $(\mathbf{K}_t^\top \mathbf{K}_t)^{-1}$ durch die Pseudoinver
 - **Die Delta-Regel** geht online für jedes Token einen stochastischen Gradientenschritt in Richtung :eqref:`eq_dn-least-squares`. **Gated DeltaNet** ergänzt vor jedem Schritt einen Gewichtszerfall ($a_t < 1$). Ersetzen wir den expliziten Gradientenschritt durch den proximalen impliziten Schritt $\arg\min_{\mathbf{S}} \frac{1}{2}\|\mathbf{S} - \mathbf{S}_{t-1}\|^2 + \frac{\beta_t}{2}\|\mathbf{S}\mathbf{k}_t - \mathbf{v}_t\|^2$, erhalten wir die normierte Schrittweite $\beta_t / (1 + \beta_t\|\mathbf{k}_t\|^2)$ von Longhorn :cite:`Liu.Wang.Wu.ea.2024` (Übung :exref:`ex_dn-implicit`). Führen wir dagegen $(\mathbf{K}_t^\top \mathbf{K}_t + \lambda\mathbf{I})^{-1}$ explizit mit, erhalten wir die rekursive Methode der kleinsten Quadrate (Übung :exref:`ex_dn-rls`).
 
 <!--en:83f55fe6-->
-- **Softmax-Attention** berechnet bei jeder Abfrage eine *nichtparametrische* Nadaraya-Watson-Kernel-Regression (:numref:`sec_attention-pooling`) über alle gespeicherten Paare. Sie kommt ohne parametrische Kompression aus, benötigt dafür aber einen KV-Cache der Größe $O(t)$.
+- **Softmax-Attention** berechnet bei jeder Abfrage eine *nichtparametrische* Nadaraya-Watson Kernel-Regression (:numref:`sec_attention-pooling`) über alle gespeicherten Paare. Sie kommt ohne parametrische Kompression aus, benötigt dafür aber einen KV-Cache der Größe $O(t)$.
 
 <!--en:ab92c337-->
 Auch die exakte Lösung lässt sich mit jedem neuen Paar aktualisieren. Jedes Paar ändert $\mathbf{K}_t^\top \mathbf{K}_t$ nur um den Rang-eins-Term $\mathbf{k}_t\mathbf{k}_t^\top$. Mit der Sherman-Morrison-Formel (:numref:`subsec_mdl-block-matrices`) aktualisieren wir daher die Inverse, ohne erneut eine Matrix zu invertieren. Das ist die rekursive Methode der kleinsten Quadrate. Sie führt neben dem Speicher einen zweiten Zustand der Größe $d_k \times d_k$ mit (Übung :exref:`ex_dn-rls`).
@@ -501,7 +501,7 @@ Wir vergleichen 1 Block `GatedLinearAttention` mit 1 Block `GatedDeltaNet` ($d =
 | **Rekursive kleinste Quadrate** | Exakte Ridge-Regression $\mathbf{V}_t^\top\mathbf{K}_t(\mathbf{K}_t^\top\mathbf{K}_t + \lambda\mathbf{I})^{-1}$ | Aktualisierung nach Sherman und Morrison entlang $\mathbf{P}_t\mathbf{k}_t$ | $d_v d_k + d_k^2$ |
 
 <!--en:e3054842-->
-| **Softmax-Attention** | Nichtparametrische Nadaraya-Watson-Kernel-Regression | Hängt $(\mathbf{k}_t, \mathbf{v}_t)$ an den Cache an und wertet ihn bei der Abfrage aus | $t \times (d_k + d_v)$ |
+| **Softmax-Attention** | Nichtparametrische Nadaraya-Watson Kernel-Regression | Hängt $(\mathbf{k}_t, \mathbf{v}_t)$ an den Cache an und wertet ihn bei der Abfrage aus | $t \times (d_k + d_v)$ |
 
 <!--en:d9a85aa2-->
 ::: {.slide title="Verständnisfragen zu Delta-Übergängen und blockweisem Lösen"}

@@ -8,7 +8,7 @@ Ein rekurrentes neuronales Netz (engl. recurrent neural network, RNN) (:numref:`
 Eine Datenbank vermeidet diese vorzeitige Verdichtung. Sie speichert jeden Datensatz unverändert und entscheidet erst bei einer Abfrage (engl. query), welche Daten sie abruft. Das exakte Nachschlagen in einer Datenbank ist jedoch unstetig. Betrachten wir die Paare aus Schlüssel (engl. key) und Wert (engl. value) $\mathcal{D}=\{(2,10),(5,20)\}$. Die exakte Abfrage $q=5$ liefert $20$, während $q=4$ zu keinem Schlüssel passt. Für das Training mit Gradientenabstieg ersetzen wir das harte Nachschlagen durch *weiches* Nachschlagen (engl. soft lookup). Dabei erhält jeder Schlüssel einen Score, etwa das negative Abstandsquadrat $a(q,k)=-(q-k)^2$. Die Softmax-Funktion rechnet die Scores in Gewichte für eine Konvexkombination um. Bei $q=4$ erhalten die Schlüssel $2$ und $5$ die Scores $-4$ und $-1$. Daraus ergeben sich die Gewichte $e^{-4}/(e^{-4}+e^{-1}) \approx 0.05$ und $0.95$ und der gewichtete Wert $0.05 \cdot 10 + 0.95 \cdot 20 \approx 19.5$. Die Ausgabe hängt glatt von der Abfrage ab. Das Verfahren funktioniert für beliebig viele gespeicherte Datensätze und kommt vor der Abfrage ohne Flaschenhals fester Größe aus.
 
 <!--en:00de58de-->
-Dieses differenzierbare Nachschlagen in Schlüssel-Wert-Paaren ist der *Attention-Mechanismus* :cite:`Bahdanau.Cho.Bengio.2014`. Zunächst formulieren wir das Attention-Pooling für Abfragen, Schlüssel und Werte in Vektorform. Dann untersuchen wir seinen klassischen nichtparametrischen Vorläufer, die Nadaraya-Watson-Kernel-Regression (engl. Nadaraya–Watson kernel regression). Dort bestimmt ein einziger Parameter, die Bandbreite (engl. bandwidth), die Schärfe des Nachschlagens.
+Dieses differenzierbare Nachschlagen in Schlüssel-Wert-Paaren ist der *Attention-Mechanismus* :cite:`Bahdanau.Cho.Bengio.2014`. Zunächst formulieren wir das Attention-Pooling für Abfragen, Schlüssel und Werte in Vektorform. Dann untersuchen wir seinen klassischen nichtparametrischen Vorläufer, die Nadaraya-Watson Kernel-Regression (engl. Nadaraya–Watson kernel regression). Dort bestimmt ein einziger Parameter, die Bandbreite (engl. bandwidth), die Schärfe des Nachschlagens.
 
 <!--en:347f47f9-->
 ## Attention als differenzierbares Nachschlagen
@@ -49,7 +49,7 @@ Die Attention-Regel :eqref:`eq_attention_pooling` gilt unverändert für jede An
 ## Attention-Pooling mit festen Kerneln
 
 <!--en:265b8c11-->
-Lange vor dem Deep Learning verwendete die *Nadaraya-Watson-Kernel-Regression* :cite:`Nadaraya.1964,Watson.1964` bereits :eqref:`eq_attention_pooling` für die nichtparametrische Regression. Die Trainingseingaben dienen als Schlüssel, die Trainingslabel als Werte. Ein fester Ähnlichkeitskernel liefert die Scores.
+Lange vor dem Deep Learning verwendete die *Nadaraya-Watson Kernel-Regression* :cite:`Nadaraya.1964,Watson.1964` bereits :eqref:`eq_attention_pooling` für die nichtparametrische Regression. Die Trainingseingaben dienen als Schlüssel, die Trainingslabel als Werte. Ein fester Ähnlichkeitskernel liefert die Scores.
 
 <!--en:d880db0d-->
 ### Kernel und der Nadaraya-Watson-Schätzer
@@ -107,7 +107,7 @@ Bei der Betrachtung von Attention-Heatmaps in tiefen Netzen sind zwei Einschrän
 ## Zusammenfassung
 
 <!--en:940d33e8-->
-Attention-Pooling berechnet eine Konvexkombination von Wertvektoren $\sum_i \alpha(\mathbf{q}, \mathbf{k}_i)\mathbf{v}_i$. Ihre Softmax-Gewichte $\alpha(\mathbf{q}, \mathbf{k}_i)$ ermöglichen einen glatten Übergang zwischen exaktem Nachschlagen in einem Wörterbuch und Average-Pooling mit einheitlichen Gewichten. Anders als ein rekurrenter Zustand fester Größe ermöglicht Attention direkten Zugriff auf alle gespeicherten Schlüssel-Wert-Paare. Die Regel dafür ist unabhängig von der Anzahl $m$ der Paare, der Arbeitsspeicherbedarf wächst linear mit $m$. Die Nadaraya-Watson-Kernel-Regression entspricht einem Attention-Pooling mit festem euklidischem Ähnlichkeitskernel. Seine Bandbreite $\sigma$ wirkt als Softmax-Temperatur und steuert den Zielkonflikt zwischen Verzerrung und Varianz. Attention-Heatmaps veranschaulichen das Alignment zwischen Abfragen und Schlüsseln. Um über einen festen Abstand im Eingaberaum hinauszugehen, brauchen wir trainierbare Projektionen und erlernte Score-Funktionen.
+Attention-Pooling berechnet eine Konvexkombination von Wertvektoren $\sum_i \alpha(\mathbf{q}, \mathbf{k}_i)\mathbf{v}_i$. Ihre Softmax-Gewichte $\alpha(\mathbf{q}, \mathbf{k}_i)$ ermöglichen einen glatten Übergang zwischen exaktem Nachschlagen in einem Wörterbuch und Average-Pooling mit einheitlichen Gewichten. Anders als ein rekurrenter Zustand fester Größe ermöglicht Attention direkten Zugriff auf alle gespeicherten Schlüssel-Wert-Paare. Die Regel dafür ist unabhängig von der Anzahl $m$ der Paare, der Arbeitsspeicherbedarf wächst linear mit $m$. Die Nadaraya-Watson Kernel-Regression entspricht einem Attention-Pooling mit festem euklidischem Ähnlichkeitskernel. Seine Bandbreite $\sigma$ wirkt als Softmax-Temperatur und steuert den Zielkonflikt zwischen Verzerrung und Varianz. Attention-Heatmaps veranschaulichen das Alignment zwischen Abfragen und Schlüsseln. Um über einen festen Abstand im Eingaberaum hinauszugehen, brauchen wir trainierbare Projektionen und erlernte Score-Funktionen.
 
 <!--en:2294243a-->
 ## Übungen
@@ -165,7 +165,7 @@ Attention-Pooling berechnet eine Konvexkombination von Wertvektoren $\sum_i \alp
 [Diskussion](https://d2l.discourse.group/t/36768)
 
 <!--en:8f9a1575-->
-Abfragen, Schlüssel und Werte: von der nichtparametrischen Glättung zur Attention<br>**Differenzierbares Nachschlagen · Konvexkombinationen · Nadaraya-Watson-Kernel-Regression · Bandbreite als Temperatur**
+Abfragen, Schlüssel und Werte: von der nichtparametrischen Glättung zur Attention<br>**Differenzierbares Nachschlagen · Konvexkombinationen · Nadaraya-Watson Kernel-Regression · Bandbreite als Temperatur**
 
 <!--en:19722da5-->
 ::: {.slide title="Warum rekurrente Zustände fester Größe frühen Kontext verlieren"}
