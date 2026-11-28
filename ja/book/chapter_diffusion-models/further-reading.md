@@ -50,7 +50,7 @@
 **ノイズラダーのヒューリスティクス：**:citet:`Song.Ermon.2020` は、幾何ノイズラダー（:numref:`sec_diffusion-gaussian-paths`）に対して 4 つの実践的な規則を与えた。すなわち、最大ノイズスケールを訓練データ間の最大ペアワイズ距離に設定すること、高確率シェルが重なり合うほど隣接レベルを十分に近づけて選ぶこと（演習問題 :exref:`ex_gaussian-paths-ladder-spacing`、:numref:`sec_diffusion-gaussian-paths`）、ランジュバン法のステップサイズを調整すること、および重みに指数移動平均を適用することである。
 
 <!--en:43c71512-->
-**経験ベイズ：**トゥイーディーの公式は経験ベイズ推定（empirical Bayes estimation）に端を発しており :cite:`Robbins.1956`、:citet:`Efron.2011` が高次元推定における選択バイアスの補正にこれを用いる手法を広めた。
+**経験ベイズ：**Tweedie の公式は経験ベイズ推定（empirical Bayes estimation）に端を発しており :cite:`Robbins.1956`、:citet:`Efron.2011` が高次元推定における選択バイアスの補正にこれを用いる手法を広めた。
 
 <!--en:6b534ab1-->
 ## 画像ネットワークとガイダンス

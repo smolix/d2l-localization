@@ -62,7 +62,7 @@
 二乗誤差は入力が与えられたもとでの条件付き期待値によって最小化されるため、訓練例ごとの目標で訓練すると事後平均 $\hat{\mathbf{x}}_0(\mathbf{x}_t) = \mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_t]$ が復元される。
 
 <!--en:0c6810e1-->
-- **トゥイーディーの恒等式：**クリーンなデータ点の事後平均とノイズの事後平均 $\hat{\boldsymbol\epsilon} = \mathbb{E}[\boldsymbol\epsilon \mid \mathbf{x}_t]$ から、周辺密度 $p_t$ のスコア関数が次のように定まる
+- **Tweedie の恒等式：**クリーンなデータ点の事後平均とノイズの事後平均 $\hat{\boldsymbol\epsilon} = \mathbb{E}[\boldsymbol\epsilon \mid \mathbf{x}_t]$ から、周辺密度 $p_t$ のスコア関数が次のように定まる
   $$\nabla_{\mathbf{x}_t} \log p_t(\mathbf{x}_t) = -\frac{\hat{\boldsymbol\epsilon}(\mathbf{x}_t)}{\sigma_t}$$
 
 <!--en:e7977c67-->
@@ -114,7 +114,7 @@
 [学習ガイド]{.kicker}
 
 <!--en:61afbee2-->
-- **§{sec_diffusion-denoising}〜§{num:sec_diffusion-integration} 基礎理論：**ノイズ除去スコアマッチング、トゥイーディーの公式、ガウス経路（$\lambda_t$）、逆時間 ODE・SDE 輸送（訓練済み MLP が厳密な 2D オラクル重みに誤差 $0.004$ 以内で一致）
+- **§{sec_diffusion-denoising}〜§{num:sec_diffusion-integration} 基礎理論：**ノイズ除去スコアマッチング、Tweedie の公式、ガウス経路（$\lambda_t$）、逆時間 ODE・SDE 輸送（訓練済み MLP が厳密な 2D オラクル重みに誤差 $0.004$ 以内で一致）
 
 <!--en:a2ad194e-->
 - **§{sec_diffusion-images}〜§{num:sec_diffusion-design-space} 画像・高速ソルバ・設計空間：**U-Net + CFG（クラス一致率 $\approx 90\%$）、20 NFE のホイン法および多段ソルバ、連続時間 ELBO（$w(\lambda) \equiv 1$）、EDM 前処理

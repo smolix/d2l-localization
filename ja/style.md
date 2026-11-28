@@ -46,8 +46,8 @@ paragraph is not a run of 〜である。 Use 〜のである sparingly. Never m
 | Semicolon, em dash | Not used. Split the sentence, or use 、 or （）. | "the bias—an offset—shifts the plane" → バイアス（オフセット）は平面を平行移動させる |
 | Quotation marks | 「」 for quotations, scare quotes and words mentioned as words; 『』 for book titles and for quotes inside 「」. No “ ” in Japanese text. | the "attention" weights → 「アテンション」の重み ; *Deep Learning* (book) → 『Deep Learning』 |
 | ? and ! | End body questions with 〜か。 and exclamations with 。 (JTF 3.2.1–3.2.2). ？ is allowed only in a heading or slide title that is a question. | "Why does this work?" → なぜこれでうまくいくのだろうか。 |
-| Coordinate compounds | ・ joins parallel items inside one term; no slash. | "queries, keys, and values" as one notion → クエリ・キー・値 |
-| Emphasis | Keep `*…*` and `**…**` exactly on the corresponding word(s). Do not replace emphasis with 「」 and do not add any. The English gloss and particles stay outside the markers. | "*regression* predicts …" → *回帰*は…を予測する ; `*重み減衰*（weight decay）` |
+| Coordinate compounds | ・ joins parallel items inside one term; no slash inside a term. Between whole terms, a slash stays where the English writes "A / B" (author, 2026-11-27). | "queries, keys, and values" as one notion → クエリ・キー・値 ; "forward / reverse KL" → 順方向 KL / 逆方向 KL |
+| Emphasis | Keep `*…*` and `**…**` exactly on the corresponding word(s). Do not replace emphasis with 「」 and do not add any. The English gloss and particles stay outside the markers. A word or sentence mentioned as a word that the English also italicizes keeps both the 「」 and the markers (author, 2026-11-27). | "*regression* predicts …" → *回帰*は…を予測する ; `*重み減衰*（weight decay）` ; "the word *the*" → 「*the*」という語 |
 
 ### 2.2 Spacing: one rule
 
@@ -177,6 +177,9 @@ units or currencies.
   names are unreliable.
 - **Exception: terms named after people** follow the glossary, in katakana:
   ガウス分布, ベイズの定理, ヤコビアン, ヘッセ行列, マルコフ連鎖, ラグランジュ乗数, ランジュバン動力学.
+  A name the glossary does not list stays in Latin script, with a space before
+  the Japanese (author, 2026-11-27): Tweedie の公式, Armijo 条件, Tikhonov 正則化
+  (✗ トゥイーディーの公式).
 - **The book:** *Dive into Deep Learning* stays in English; "this book" → 本書.
 - **Languages and places:** Japanese (英語, 米国); programming languages stay
   (Python).
@@ -321,6 +324,12 @@ as proposed.
 9. **Italics:** decided that the Japanese build sets `*…*` in bold (author,
    2026-11-27), since Japanese fonts have no italic. This is build work, not a
    translator rule: translators keep the markers as §2.1 says.
+10. **Conflicts from the log compaction** (author, 2026-11-27): acronyms keep
+    the §3.1 form 日本語（English、ABBR） at the first mention in body text
+    (pages that dropped the English were swept); 「*…*」 is right for an
+    italicized word mentioned as a word (§2.1); names the glossary lacks stay
+    in Latin script: Tweedie の公式, not トゥイーディー (§5); a slash between
+    whole terms where the English has one (§2.1).
 
 ## 10. Conventions from the translated chapters
 
@@ -349,7 +358,7 @@ earlier section disagree, the earlier section wins.
 |---|---|
 | A long term has a full form in the body and may take a shorter compound in slides and tables. Use the short form only there. | body 有意性のしきい値 → slide 有意性しきい値 ; body 軟化された逆方向 KL ダイバージェンス → slide 軟化逆方向 KL |
 | "X-agnostic / -independent" is X に依存しない in prose and X 非依存 on slides. | 経路に依存しない (prose) / 経路非依存の (slide) |
-| Slides and tables use the bare acronym and keep a source abbreviation that prose spells out. | slide MAC, prose 積和演算（MAC）; slide bpb, prose バイトあたりビット数 (with a number: バイトあたり 2.1 ビット) |
+| Slides and tables use the bare acronym and keep a source abbreviation that prose spells out. | slide MAC, prose 積和演算（multiply-accumulate、MAC） at the first mention (§3.1), then 積和演算 or MAC as the English writes; slide bpb, prose バイトあたりビット数 (with a number: バイトあたり 2.1 ビット) |
 | Where the body glosses a term, the slide may keep the English label instead. | body パッチの集合（bag of patches）→ slide Bag-of-Patches |
 | A slide heading or mnemonic that the text explains keeps the English token. | LOTUS, EVVE; slide 分割 R-hat, body 分割 $\widehat R$ |
 | Width or fraction qualifiers: prose puts the qualifier before the name, tables put it in parentheses after. | prose 1/4 幅の VGG ; table VGG（1/4 幅） |
