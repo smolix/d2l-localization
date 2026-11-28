@@ -23,7 +23,7 @@
 * **ZeRO Stage 2** は勾配も分割する（パラメータあたり $4 + 12/k$ バイト）。逆伝播中に各勾配バケットが埋まり次第すぐに reduce-scatter され、自身が所有しない $1 - 1/k$ の勾配シャードは解放される。これもデータ並列に対する追加の通信バイトコストはゼロである。
 
 <!--en:146dff2a-->
-* **ZeRO Stage 3**、すなわち*完全シャーディングデータ並列*（Fully Sharded Data Parallelism、FSDP）:cite:`Zhao.Gu.Varma.ea.2023` は、重みもシャーディングする（パラメータあたり $16/k$ バイト）。順伝播または逆伝播でブロックを実行する直前に all-gather でそのブロックの重み全体を組み立て、ブロックが完了した直後に所有しない重みシャードを解放し、そのブロックの勾配は reduce-scatter する（:numref:`fig_fsdp_lifecycle`）。
+* **ZeRO Stage 3**、すなわち*完全シャーディングデータ並列*（fully sharded data parallelism、FSDP）:cite:`Zhao.Gu.Varma.ea.2023` は、重みもシャーディングする（パラメータあたり $16/k$ バイト）。順伝播または逆伝播でブロックを実行する直前に all-gather でそのブロックの重み全体を組み立て、ブロックが完了した直後に所有しない重みシャードを解放し、そのブロックの勾配は reduce-scatter する（:numref:`fig_fsdp_lifecycle`）。
 
 <!--en:d07e7ede-->
 :$k$ 基の GPU 上で fp32 の Adam を用いた場合の逆伝播終了時点における GPU あたりの訓練状態、および $k = 2$ における 36 ブロック・19.2 億パラメータの GPT での値。

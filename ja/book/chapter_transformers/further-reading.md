@@ -14,7 +14,7 @@ Pre-Norm（各サブ層の前に `RMSNorm` を配置する方式）は、出力�
 ![サブ層 $f$ の前後に正規化を配置する 4 つの方法。Post-LN は残差ストリーム自体を正規化する。Pre-LN はサブ層の入力のみを正規化する。サブ層後正規化（OLMo 2）はストリームへ戻して加算する前にサブ層の出力のみを正規化する。Peri-LN（Sandwich-LN、Gemma 3）はサブ層の入力と出力の両方を正規化する。](../img/mdl-transformers-norm-taxonomy.svg)
 
 <!--en:ee13b226-->
-- **サブ層出力の正規化（Sandwich-LN / Peri-LN）と Post-Norm の派生形：**各サブ層の入力と出力の両方を正規化する構成（$x + \operatorname{Norm}(f(\operatorname{Norm}(x)))$）は、恒等スキップ接続（skip connection）を損なわずに各残差更新の大きさを有界に保つものであり、CogView :cite:`Ding.Yang.Hong.ea.2021` や Gemma 2/3 :cite:`Gemma.Team.2024,Gemma.Team.2025` で採用されている。一方、OLMo 2 :cite:`OLMo.2025` は RMSNorm を各サブ層の出力側へ移し（$x + \operatorname{Norm}(f(x))$）、これを QK-Norm と組み合わせることで、加算後の正規化によって恒等経路を遮ることなく残差ストリームの増大を有界に抑えている。
+- **サブ層出力の正規化（Sandwich-LN / Peri-LN）と Post-Norm の派生形：**各サブ層の入力と出力の両方を正規化する構成（$x + \operatorname{Norm}(f(\operatorname{Norm}(x)))$）は、恒等スキップ接続（skip connection）を損なわずに各残差更新の大きさを有界に保つものであり、CogView :cite:`Ding.Yang.Hong.ea.2021` や Gemma 2/3 :cite:`Gemma.Team.2024,Gemma.Team.2025` で採用されている。一方、OLMo 2 :cite:`OLMo.2025` は RMSNorm を各サブ層の出力側へ移し（$x + \operatorname{Norm}(f(x))$）、これをクエリ・キー正規化（query–key normalization、QK-Norm）と組み合わせることで、加算後の正規化によって恒等経路を遮ることなく残差ストリームの増大を有界に抑えている。
 
 <!--en:98fd5eb8-->
 - **クエリ・キー正規化（QK-Norm）：**ヘッドごとにクエリとキーへ RMSNorm を適用してから $QK^\top / \sqrt{d_h}$ を計算すると（:numref:`subsec_qk-norm`）、残差ストリームの増大にかかわらず、コーシー・シュワルツの不等式によってソフトマックス前のロジットが有界に保たれる :cite:`Henry.Dachapally.Pawar.ea.2020,Dehghani.Djolonga.Mustafa.ea.2023`。この手法は ViT-22B、Gemma 3、Qwen3、OLMo 2 で標準となっている。

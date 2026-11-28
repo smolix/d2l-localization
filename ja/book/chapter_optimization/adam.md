@@ -5,7 +5,7 @@
 :numref:`sec_test_models` では、単純なミニバッチ SGD は `TinyLM` において学習率 $\eta = 0.5$ を用いてようやく約 $2.1$ nats/byte の損失に到達した。これに対し、100 分の 1 未満の学習率である $\eta = 3 \times 10^{-3}$ を用いた Adam は、以下で測定するように $1.59$ nats/byte という損失に同じ $2{,}000$ ステップで到達する。公称学習率が 100 分の 1 ほど小さいオプティマイザがなぜより速く訓練を進められるのか、そしてなぜ Transformer における普遍的なデフォルトとなっているのだろうか。
 
 <!--en:894e3ede-->
-モメンタム（:numref:`sec_momentum`）は勾配を時間方向に平均化するが、それでもすべてのパラメータに単一のスカラーのステップサイズを適用する。しかし深層ネットワーク、とりわけ Transformer では、埋め込み、アテンション射影、MLP 層、正規化パラメータの間で勾配の大きさが何桁も異なる。**Adam**（*Adaptive Moment Estimation*、:citet:`Kingma.Ba.2014`）は、モメンタムと、**AdaGrad** :cite:`Duchi.Hazan.Singer.2011` および **RMSProp** :cite:`Tieleman.Hinton.2012` を経て発展した座標ごとの二乗平均平方根（root mean square、RMS）勾配の前処理行列（preconditioner）を組み合わせる。各座標の更新量をその座標自身の過去の勾配スケールで割ることにより、学習率 $\eta$ は生の勾配に対する乗数ではなく、パラメータ空間における直接的なステップ長となる。
+モメンタム（:numref:`sec_momentum`）は勾配を時間方向に平均化するが、それでもすべてのパラメータに単一のスカラーのステップサイズを適用する。しかし深層ネットワーク、とりわけ Transformer では、埋め込み、アテンション射影、MLP 層、正規化パラメータの間で勾配の大きさが何桁も異なる。**Adam**（*Adaptive Moment Estimation*、:citet:`Kingma.Ba.2014`）は、モメンタムと、**AdaGrad** :cite:`Duchi.Hazan.Singer.2011` および **RMSProp** :cite:`Tieleman.Hinton.2012` を経て発展した座標ごとの二乗平均平方根（root-mean-square、RMS）勾配の前処理行列（preconditioner）を組み合わせる。各座標の更新量をその座標自身の過去の勾配スケールで割ることにより、学習率 $\eta$ は生の勾配に対する乗数ではなく、パラメータ空間における直接的なステップ長となる。
 
 <!--en:8315c05e-->
 しかし、まさにこの座標ごとの除算が標準的な $\ell_2$ 正則化（regularization）を破綻させる。損失に $\frac{\lambda}{2}\|\mathbf{x}\|^2$ を加えると、各重みの減衰率がその勾配スケールの逆数で再スケーリングされてしまうからである。:citet:`Loshchilov.Hutter.2019` は重み減衰（weight decay）を適応的な前処理行列から分離することでこの問題を解決し、**AdamW** を生み出した。本節では、AdaGrad と RMSProp から Adam への発展をたどり、`TinyLM` 上で座標ごとの勾配スケールを測定してモメンタム付き SGD と Adam を比較し、さらに AdamW とその重み減衰のタイムスケール $\tau = 1/(\eta\lambda)$ および平衡ノルムを導出したうえで、どのパラメータグループを重み減衰の対象外とすべきかを詳しく述べる。

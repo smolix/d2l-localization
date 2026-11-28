@@ -170,7 +170,7 @@ GPT-2 :cite:`Radford.Wu.Child.ea.2019` および :numref:`subsec_signal-propagat
 3. **フィードフォワードネットワーク：**バイアスなしのゲート付き **`SwiGLU`**（または `GeGLU`）を、2 層の `GELU` MLP の代わりに用いる。
 
 <!--en:13a78e81-->
-4. **推論キャッシュとモデル容量のスケーリング：**KV キャッシュを縮小する（:numref:`sec_kv-cache`）ための**グループ化クエリアテンション（GQA）**、**スライディングウィンドウアテンション**、または**低ランク潜在圧縮**（low-rank latent compression、MLA）と、トークンあたりの FLOP 数を増やさずに総パラメータ数を拡大する**混合エキスパート**（mixture of experts、MoE）層（:numref:`sec_moe`）。
+4. **推論キャッシュとモデル容量のスケーリング：**KV キャッシュを縮小する（:numref:`sec_kv-cache`）ための**グループ化クエリアテンション**（grouped-query attention、GQA）、**スライディングウィンドウアテンション**、または**低ランク潜在圧縮**（low-rank latent compression、MLA）と、トークンあたりの FLOP 数を増やさずに総パラメータ数を拡大する**混合エキスパート**（mixture of experts、MoE）層（:numref:`sec_moe`）。
 
 <!--en:6e007488-->
 :2023〜2025 年の技術報告書で報告された 7 つのオープンウェイトモデル族のアーキテクチャ。アテンションとキャッシュ：:numref:`sec_kv-cache-reduction`。正規化：:numref:`sec_transformer-block`。位置表現：:numref:`sec_positional-information`。混合エキスパート：:numref:`sec_moe`。

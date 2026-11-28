@@ -59,7 +59,7 @@
 ### 多項式射影による記憶
 
 <!--en:7f7109f7-->
-:numref:`sec_ssm` では、S4D のレートを $\lambda_n = -n$ と初期化した。この選択は HiPPO :cite:`Gu.Dao.Ermon.ea.2020` に由来する。HiPPO は、次数 $(N-1)$ の直交多項式による入力履歴 $x(s)$（$s \le t$）の最良近似の係数を保持する手法である。これらの係数は、固定された下三角の HiPPO 行列 $\mathbf{A}$ を持つ線形常微分方程式（ODE）を満たす。S4 :cite:`Gu.Goel.Re.2022` はこの系を時不変にし（指数関数的に時間伸縮された履歴上の Legendre 多項式に対応する :cite:`Gu.Johnson.Timalsina.ea.2023`）、高速なカーネル評価のために $\mathbf{A}$ を正規行列（normal matrix）と低ランク補正の和へと分解した。S4D :cite:`Gu.Gupta.Goel.Re.2022` は、対角成分（複素固有値、または実対角成分 $-1, \ldots, -N$）のみを残すだけで、はるかに単純な仕組みでほぼ同等の性能を回復できることを示した。S5 :cite:`Smith.Warrington.Linderman.2023` はチャネルごとのスカラー SSM を、並列スキャン（:numref:`subsec_parallel-scans`）で評価される単一の多入力・多出力対角 SSM に置き換えており、Gu の博士論文 :cite:`Gu.2023` がこの一連の研究を体系的にまとめている。
+:numref:`sec_ssm` では、S4D のレートを $\lambda_n = -n$ と初期化した。この選択は HiPPO :cite:`Gu.Dao.Ermon.ea.2020` に由来する。HiPPO は、次数 $(N-1)$ の直交多項式による入力履歴 $x(s)$（$s \le t$）の最良近似の係数を保持する手法である。これらの係数は、固定された下三角の HiPPO 行列 $\mathbf{A}$ を持つ線形常微分方程式（ordinary differential equation、ODE）を満たす。S4 :cite:`Gu.Goel.Re.2022` はこの系を時不変にし（指数関数的に時間伸縮された履歴上の Legendre 多項式に対応する :cite:`Gu.Johnson.Timalsina.ea.2023`）、高速なカーネル評価のために $\mathbf{A}$ を正規行列（normal matrix）と低ランク補正の和へと分解した。S4D :cite:`Gu.Gupta.Goel.Re.2022` は、対角成分（複素固有値、または実対角成分 $-1, \ldots, -N$）のみを残すだけで、はるかに単純な仕組みでほぼ同等の性能を回復できることを示した。S5 :cite:`Smith.Warrington.Linderman.2023` はチャネルごとのスカラー SSM を、並列スキャン（:numref:`subsec_parallel-scans`）で評価される単一の多入力・多出力対角 SSM に置き換えており、Gu の博士論文 :cite:`Gu.2023` がこの一連の研究を体系的にまとめている。
 
 <!--en:b85a1f39-->
 ### Mamba の後継モデル、直接的な線形漸化式、長い畳み込み
