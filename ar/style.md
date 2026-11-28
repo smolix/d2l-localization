@@ -127,8 +127,8 @@ instead:
 
 | Rule | Reason | Example |
 |---|---|---|
-| **Start every block with an Arabic word** (a verb, a preposition, or the class noun of the thing named): paragraphs, list items, captions, headings, slide titles. | A block that starts with a Latin letter is shown left-to-right by every tool that guesses the direction from the first letter (editors, diffs, exported slides). A class noun (الدالة، المكتبة، الشبكة، النموذج، الصنف) is grammar, not added content. | "`Conv2D` registers both parameters" → يسجل الصنف `Conv2D` المعلَمتين كلتيهما ; "PyTorch's `nn.LazyLinear(1)` requires …" → تحتاج الطبقة `nn.LazyLinear(1)` في PyTorch إلى … |
-| **Put an Arabic word between two left-to-right items** (code, a Latin name, a number with its unit). Never leave only a space, a comma or a bracket between them. | Two Latin runs with only neutral characters between them join into one left-to-right run, which then reads in the opposite order to the sentence. | "the input tensor `X` and kernel `K`" → موتر المدخلات `X` والنواة `K` ; "`X` and `Y`" → `X` و `Y` ; "Adam, RMSProp, and SGD" → Adam و RMSProp و SGD ✗ Adam، RMSProp، SGD |
+| **Start every block with an Arabic word** (a verb, a preposition, or the class noun of the thing named): paragraphs, list items, captions, headings, slide titles. | A block that starts with a Latin letter is shown left-to-right by every tool that guesses the direction from the first letter (editors, diffs, exported slides). A class noun (الدالة، المكتبة، الشبكة، النموذج، الصنف) is grammar, not added content. Exception (author, 2026-11-27): a symbol list (the notation page, `* $x$: عدد قياسي`) starts with the symbol, as in English. | "`Conv2D` registers both parameters" → يسجل الصنف `Conv2D` المعلَمتين كلتيهما ; "PyTorch's `nn.LazyLinear(1)` requires …" → تحتاج الطبقة `nn.LazyLinear(1)` في PyTorch إلى … |
+| **Put an Arabic word between two left-to-right items** (code, a Latin name, a number with its unit). Never leave only a space, a comma or a bracket between them. | Two Latin runs with only neutral characters between them join into one left-to-right run, which then reads in the opposite order to the sentence. Exception (author, 2026-11-27): an all-Latin list of names or credits (contributors and GitHub IDs, image credits) is copied as one Latin run with its Latin punctuation; only the final "and" becomes و. | "the input tensor `X` and kernel `K`" → موتر المدخلات `X` والنواة `K` ; "`X` and `Y`" → `X` و `Y` ; "Adam, RMSProp, and SGD" → Adam و RMSProp و SGD ✗ Adam، RMSProp، SGD |
 | **Name the thing, then give its symbol.** Where two math spans of one noun follow each other, join them with هو / هي, ذات, بحجم or المسمى. | The noun carries case, gender and the article, which a symbol cannot; and the protected tokens keep the English order, so the check stays silent. | "a $3 \times 3$ input tensor `X`" → موتر مدخلات $3 \times 3$ هو `X` ; "the kernel $\mathbf{K}$ be a $k_\textrm{h} \times k_\textrm{w}$ matrix" → النواة $\mathbf{K}$ مصفوفة أبعادها $k_\textrm{h} \times k_\textrm{w}$ |
 | **Keep a number with its Latin unit or name in the English order**, as one piece. | It is one left-to-right run and displays as written. | 24 GiB, 5 ms, Python 3.12, GPT-2, RTX 4090 |
 | **Write ranges in prose with words.** Keep the en dash only in slides, tables and captions. | In right-to-left text `40–55` is drawn with 40 on the right, `40-55` with 40 on the left; من … إلى … cannot be misread. | "40–55 epochs" → من 40 إلى 55 حقبة ; table cell: 40–55 |
@@ -161,7 +161,7 @@ number, except next to punctuation. Nothing is attached to them.**
 
 | Item | Rule | Example |
 |---|---|---|
-| Comma, semicolon, question mark | Arabic ، ؛ ؟ in Arabic text. The Latin `,` `;` `?` only inside math, code, numbers (10,000) and an all-Latin parenthesis. | هل يستطيع النزول التدرجي أن يستعيد النواة؟ ; (convolutional neural network, CNN) |
+| Comma, semicolon, question mark | Arabic ، ؛ ؟ in Arabic text. The Latin `,` `;` `?` only inside math, code, numbers (10,000), an all-Latin parenthesis and an all-Latin list of names or credits (§3.2). | هل يستطيع النزول التدرجي أن يستعيد النواة؟ ; (convolutional neural network, CNN) |
 | Full stop, colon, exclamation mark, parentheses | `.` `:` `!` `( )`. Brackets are typed in logical order; the display mirrors them. | |
 | Comma after a fronted phrase | None. Do not copy the English comma after "In this section," or "In :numref:`x`,". | ✓ ``في :numref:`sec_why-conv` اشتققنا الطبقة الالتفافية`` ✗ ``في :numref:`sec_why-conv`، اشتققنا …`` |
 | Comma before و | None between words; allowed between clauses. | ننفذ الارتباط المتقاطع، ونختبر كاشف الحواف، ونبين … |
@@ -265,6 +265,9 @@ not repeat it.
   (*padding*)" → إطار من الأصفار (*الحشو*، padding).
 - **Never** in headings, captions, slides, exercises or table cells, and never
   with a label such as بالإنجليزية.
+  An acronym that the page never introduces with its gloss is written out in
+  Arabic, even where the English uses it (author, 2026-11-27): "reverse-mode
+  AD" → الاشتقاق التلقائي بالنمط العكسي ; "95% CI" → فترة ثقة 95%.
 
 Reason: readers go on to English papers, documentation and code, and the Latin
 script already says that the word is English.
@@ -620,6 +623,14 @@ this guide follow the decisions. One point is open (16).
     Latin plural acronyms in prose (✗ CNNs); library and tool names in Latin
     (✗ بايثون، تينسرفلو، باي تورش، جوبيتر); a glossary term for notebook
     (دفتر); and a list of the ✗ variants readers have seen (§10.1).
+25. **Conflicts from the log compaction** (author, 2026-11-27): symbol lists
+    start with the symbol (§3.2); an all-Latin list of names or credits stays
+    one Latin run (§3.2, §4); slide titles quote with “…” only (§4); headings
+    that name kinds are definite (§8: الطبقات ذات المعلَمات); no emphasis added,
+    not even on an English gloss (§4); names follow §7 unchanged (Arabic letters
+    inside a glossary term: إنتروبيا شانون، جداء كرونيكر; otherwise Latin:
+    متباينة Cauchy–Schwarz); an acronym the page never introduces is written
+    out in Arabic (§5.4).
 
 ## 13. Glossary corrections (applied 2026-11-27)
 
@@ -728,6 +739,7 @@ to §1–§10; chapter checks override units. Single terms are in the glossary a
 | Preface; Introduction (parts of the book); Advanced (part overview) | التمهيد; المقدمة; المواضيع المتقدمة | |
 | "the Basics part", "Parts 3 & 4", "Part 1: …" | جزء *الأساسيات*; الجزءان 3 و 4; الجزء 1: … | part names keep the English italics |
 | Legacy … Library (build-only, unlisted) | مكتبة … القديمة (للبناء فقط، غير مدرجة) | `*-lib.md` pages |
+| Legacy … Shims (build-only, unlisted) | دوال التوافق القديمة لـ … (للبناء فقط، غير مدرجة) | "Legacy Tokenizer Shims" → دوال التوافق القديمة للمجزئ |
 | *Name, date* (signature line) | *بقلم Name، date* | starts with an Arabic word; months transliterated: نوفمبر، يوليو |
 
 - **Heading patterns.** "X as Y" → X بوصفه / بوصفها Y (المربعات الصغرى بوصفها
@@ -841,6 +853,8 @@ word separates the source's Latin name from its Latin link text.
   (1964)" → الطريقة لدى Polyak (1964); "Wen et al. (2024) explain" → تفسير Wen et
   al. (2024) لـ …. A kicker that is only a citation takes بحث: [بحث Loshchilov
   و Hutter (2019)].
+  A lead-in made of two cited groups takes the dual: "Cho et al. & Sutskever et
+  al. (2014):" → بحثا Cho et al. و Sutskever et al. (2014):.
 - **A Latin name directly before :citet:** gets an Arabic word between them:
   (اختصار *Momentum Orthogonalized by Newton–Schulz*، وقد اقترحه :citet:`…`).
 
@@ -875,6 +889,7 @@ word separates the source's Latin name from its Latin link text.
 | Language models | نموذج (masculine) | نموذج GPT-2 small، النموذج Kimi K2 |
 | Optimizers | محسن (masculine); SGD → خوارزمية; AMSGrad, Yogi, SVRG → طريقة | محسنا Adam و AdamW، بالمحسن AdamW |
 | Layers, activations | طبقة; دالة | طبقة LayerNorm، دالتا التفعيل ReLU و GELU |
+| Recurrent and state space mixers | طبقة for the layer; نموذج for the trained model or an experiment arm; المازج for the mixer of a block; شبكة for LSTM and GRU; كتلة for a block; معمارية for a published design (Based, xLSTM, TTT, Titans); خلية mLSTM; إطار HiPPO; طريقة Longhorn | طبقة minGRU، طبقة S4D، طبقة Mamba، طبقة Gated DeltaNet، النموذج `MinGRU`، المازج `GatedDeltaNet`، شبكتا LSTM و GRU ✗ وحدة GRU (reads beside وحدة GPU) ✗ شبكة minGRU |
 | Techniques, methods | طريقة in prose; خوارزمية for FlashAttention on slides and for online softmax | طريقة Mixup، طريقة im2col، تنعيم Kneser–Ney |
 | Positional schemes | ترميز; NoPE → أسلوب | ترميزا RoPE و ALiBi |
 | Python class (also a page-defined "module"), function, decorator | الصنف، الدالة، المزخرف; وحدة only for a Python module or a network unit | الصنف `Trainer`، "the Trainer" → الصنف Trainer |
@@ -912,6 +927,17 @@ word separates the source's Latin name from its Latin link text.
   "(:numref:`a`--:numref:`b`)" → (من :numref:`a` إلى :numref:`b`).
 - **Quantity phrases with a math span** take a noun: "a $64\times$ range" →
   مدى قدره $64\times$; "capped at $2.5$" → بسقف مقداره $2.5$.
+- **A compound number above 100 governs its noun by its last two digits**
+  (this refines §5.2): 03–10 the plural in the genitive (103 خطوات), 11–99 the
+  singular in the accusative (128 بايتًا، 512 رمزًا مميزًا، 1,024 بتًا، 4,096
+  رمزًا مالئًا); only round hundreds, thousands and millions take the singular
+  in the genitive (200 رمز مميز، 1,000 خطوة). A following adjective agrees
+  (1,024 تسلسل اختبار جديدًا). Units written as Arabic words inflect like any
+  noun (✗ نوافذ من 128 بايت).
+- **"256K-token" and "a 256K context length"** in prose and captions → 256 ألف
+  رمز مميز، طول سياق قدره 256 ألف رمز مميز (✗ 256K in body text); a count
+  written with a space in a table cell ("4.3 M") is copied, and two of them are
+  joined by و.
 
 ### 15.8 Glosses, parentheses and quotations
 
@@ -936,6 +962,10 @@ Additions to §5.4:
   "dog bites man" → “الكلب يعض الرجل”. A well-known phrase is translated with
   the English once: “علينا أن نتعمق أكثر” (we need to go deeper). Words printed
   by code stay Latin in quotes: الحشو “same”.
+- **An illustrative English sentence about an invented person** (*"Mira is the
+  ship's engineer"*) is translated inside “…” with the person's name kept in
+  Latin script: *“Mira مهندسة السفينة”*. Place names in such an example are
+  written in Arabic (Paris → باريس، Rome → روما).
 
 ### 15.9 Notation lists, math and code in prose
 
@@ -978,6 +1008,12 @@ Additions to §5.4:
   chapter index decides the chapter's terms, a chapter check corrects earlier
   units in place, and may keep a chapter-specific term (تمديد السياق in
   attention, إطالة السياق in the RNN chapter).
+- **Agreement inside a fixed term stays the same in the plural:** the
+  adjectives of المسح agree with المسح, also after عمليات (عمليات المسح
+  التجميعي المتوازي ✗ عمليات المسح التجميعية المتوازية), so that the page title,
+  the slides and the chapter index print one form.
+- **Marks that drafts keep adding** and §2 does not allow: كلًا، أيًا (✗ كلًّا،
+  ✗ أيًّا), المكون (✗ المكوّن), وصلة تخط (✗ تخطٍ), دوال (✗ دوالَّ).
 - **Source defects** (a math span cut across a paragraph, "Theorem" on a slide
   against "Proposition" in the body) are translated as they stand; the English
   is fixed, not the Arabic.
