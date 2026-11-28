@@ -321,3 +321,138 @@ as proposed.
 9. **Italics:** decided that the Japanese build sets `*…*` in bold (author,
    2026-11-27), since Japanese fonts have no italic. This is build work, not a
    translator rule: translators keep the markers as §2.1 says.
+
+## 10. Conventions from the translated chapters
+
+Rules the translators of the first chapters settled in the decisions log.
+Single term mappings are in the lexicon, not here. Where a rule below and an
+earlier section disagree, the earlier section wins.
+
+### 10.1 Headings and recurring titles
+
+| Rule | Example |
+|---|---|
+| A chapter or section title that later pages repeat is fixed once and repeated verbatim, in headings, prose, slides and tables. Check the lexicon before rendering a title. | "Further Reading" → 関連文献 on every further-reading page; "Recommended Resources" → 推奨される参考資料; "Resources and Further Reading" → 参考資料と関連文献 |
+| Part and chapter titles are translated, not left in English; follow the shortened English title. The cover slide may keep the longer form. | "Computation" → 計算 (cover slide: 深層学習の計算); "Tools for Deep Learning" → 深層学習のためのツール |
+| A chapter titled with an architecture name keeps the name, in Latin script and singular. | "Transformers" → Transformer |
+| A subtitle after a colon takes full-width ： without spaces. | "Dynamics: Differential Equations and Generative Flows" → ダイナミクス：微分方程式と生成フロー |
+| Lists in a title take 、; parallel items inside one term take ・; never a slash. | "Vectors, Angles, and Projections" → ベクトル、角度、射影 ; "Latency–Bandwidth Model" → レイテンシ・帯域幅モデル |
+| "X as Y" → Y としての X; "X-Based" → X に基づく. | "Matrices as Linear Maps" → 線形変換としての行列 ; "Score-Based Comparison" → スコアに基づく比較 |
+| A section title repeats the chapter's term for its topic rather than a synonym. | "Numerical Solvers" → 数値ソルバ (as in the chapter body) |
+| Paired titles keep a visible pair. | "Integral Calculus" → 積分法, with 微分法 |
+| The recurring implementation pair is スクラッチ実装 / 簡潔な実装, the same in headings, prose, slides and tables. | "Softmax Regression Implementation from Scratch" → ソフトマックス回帰のスクラッチ実装 |
+| Build-only library pages carry 「（ビルド専用、非掲載）」 for "(build-only, unlisted)"; "plumbing" sections are 内部機構. | "Internal Plumbing" → 内部機構 ; "launch plumbing" → 起動処理の内部機構 |
+
+### 10.2 Slides and tables
+
+| Rule | Example |
+|---|---|
+| A long term has a full form in the body and may take a shorter compound in slides and tables. Use the short form only there. | body 有意性のしきい値 → slide 有意性しきい値 ; body 軟化された逆方向 KL ダイバージェンス → slide 軟化逆方向 KL |
+| "X-agnostic / -independent" is X に依存しない in prose and X 非依存 on slides. | 経路に依存しない (prose) / 経路非依存の (slide) |
+| Slides and tables use the bare acronym and keep a source abbreviation that prose spells out. | slide MAC, prose 積和演算（MAC）; slide bpb, prose バイトあたりビット数 (with a number: バイトあたり 2.1 ビット) |
+| Where the body glosses a term, the slide may keep the English label instead. | body パッチの集合（bag of patches）→ slide Bag-of-Patches |
+| A slide heading or mnemonic that the text explains keeps the English token. | LOTUS, EVVE; slide 分割 R-hat, body 分割 $\widehat R$ |
+| Width or fraction qualifiers: prose puts the qualifier before the name, tables put it in parentheses after. | prose 1/4 幅の VGG ; table VGG（1/4 幅） |
+
+### 10.3 Names and eponymous terms
+
+- **Glossary first.** An eponymous term in the glossary or lexicon keeps that
+  form. Otherwise decide by familiarity in Japanese literature:
+- **Well-known in Japanese:** katakana; ・ between co-named people; の before
+  定理, 不等式, 補題, 公式, 法則; no の before a head noun such as 過程, 方程式,
+  分布, 距離, 法. "Cauchy–Schwarz inequality" → コーシー・シュワルツの不等式 ;
+  "Fokker–Planck equation" → フォッカー・プランク方程式 ; "Box–Muller method" → ボックス・ミュラー法.
+  Japanese names in kanji: 伊藤の補題, オイラー・丸山法.
+- **Less common, recent, or used as a bare label:** Latin script, en dash kept
+  between names, half-width space before the Japanese noun or の.
+  "Tikhonov regularization" → Tikhonov 正則化 ; "Tweedie's formula" → Tweedie の公式 ;
+  "Barber–Agakov bound" → Barber–Agakov 下界 ; Armijo 条件.
+- One form per section. Different pages may differ only where the lexicon
+  records it (ゲルシュゴリンの円 on the chapter index, Gershgorin の円盤 in the section).
+- A bare person name stays Latin (§5): Bellman, Joseph の安定化形式.
+- Densities of named laws take 密度, not 分布: パレート密度, コーシー密度. A distribution
+  name drops 分布 before another noun: 対数正規密度, ガウスナイーブベイズ.
+- Proper names of models, methods, metrics and hyphenated variants stay Latin,
+  untranslated, with a Japanese head noun after a space: Pre-Norm, QK-Clip,
+  Double DQN, MeanFlow 恒等式, Rectified Flow, Dormand–Prince.
+- Code identifiers, class names and source abbreviations stay Latin inside a
+  translated term and are used as the English uses them, even when the term
+  is spelled out (minGRU, IsoFLOP 等高線, Sandwich-LN; PMI and pmi, KL, DV).
+
+### 10.4 Glosses and acronyms
+
+- §3.1 applies to new terms too: gloss a kanji or mixed rendering once per
+  page; also a rendering that is unusual or could be misread, and specialist
+  concepts the reader may not know. *肥沃度*（fertility） ; 陳腐化（stale） ;
+  エネルギー距離（energy distance）.
+- Acronym: 日本語（English、ABBR） once, the full-width 、 inside; afterwards the
+  acronym alone, as the English writes it. "high-bandwidth memory (HBM)" →
+  広帯域メモリ（high-bandwidth memory、HBM）, then HBM.
+- A Latin proper name with an acronym takes only the acronym in parentheses:
+  Deep Convolutional GAN（DCGAN）, Kernel Inception Distance（KID）. An
+  acronym that is a name and not a Japanese term may take its English
+  expansion: MINE（mutual information neural estimation）.
+- An eponymous term with an acronym puts the acronym after the names, before
+  the head noun: オルンシュタイン・ウーレンベック（OU）過程 ; Donsker–Varadhan（DV）下界.
+
+### 10.5 Spacing inside terms
+
+The §2.2 space applies inside compounds, and it overrides glossary entries
+written without it (VC次元 → VC 次元, ODEソルバー → ODE ソルバ).
+
+| Case | Example |
+|---|---|
+| Latin name or acronym + Japanese noun | He 初期化, F1 スコア, Q 学習, KV キャッシュ, ビジョン Transformer, マルチ GPU, 確率フロー ODE, I/O 律速 |
+| Single Latin letter or math + noun | $n$ グラム, f ダイバージェンス, $f$ ダイバージェンス, $\mathbf{v}$ 予測, Top-$k$ ルーティング, $\lambda$ 収益 |
+| Parameterised property | $L$ 滑らか, $\mu$ 強凸, $(L_0, L_1)$ 滑らか, $\kappa$ リプシッツ性, $\alpha$ 安定分布 |
+| Digit + noun or counter | 2 サンプル検定, 1 リプシッツ, 3 アトム分布, 2 元対称通信路, 1 段階法, 1 つ抜き交差検証 |
+| Inline code inside a term: code in backticks, Japanese modifier before it | デバイス対応の `Trainer` |
+
+### 10.6 Numbers and orders
+
+| Rule | Example |
+|---|---|
+| Kanji numerals in these set words, in addition to §4: 一次 (approximation), 二次 (bound, convergence, program), 二階 (derivative), 二値, 二峰性. | "first-order approximation" → 一次近似 ; "second derivative" → 二階微分 ; "quadratic convergence" → 二次収束 ; 二次上界 |
+| Digits for a counted order: tensor order 階, Markov, solver and Wasserstein order 次. | "third-order tensor" → 3 階テンソル ; "$m$-th order Markov model" → $m$ 次マルコフモデル ; "2-Wasserstein distance" → 2 次ワッサースタイン距離 ; 1 次 / 2 次ソルバ |
+| Counts of an operation: term + 数 or 回数. | "MACs" → 積和演算数 ; "number of function evaluations" → 関数評価回数（NFE） |
+| A unit whose katakana would be ambiguous stays in Latin script. | "nats per byte" → nat/byte (not ナット) |
+
+### 10.7 Word formation
+
+| Pattern | Rule | Example |
+|---|---|---|
+| -er / -or loanwords | §3.3 applies to every new word and compound: drop the final ー. Exceptions keep it like ユーザー: ワーカー, ギャザー. | サンプラ, トレーナ, ソルバ, ローダ, ヘッダ, プロファイラ, ラッパ, 損失スケーラ |
+| "-limited", "-bound" | X 律速, paired with 計算律速, メモリ律速 | 帯域幅律速, レイテンシ律速, ノイズ律速 |
+| "-dominated" | X 支配, usually in parentheses after the regime | 小バッチ（ノイズ支配）領域 |
+| "X parallelism" | X 並列 | データ並列, テンソル並列, パイプライン並列 |
+| "X-to-Y", "one-vs-rest" | 対 | 系列対系列学習, 1 対他 |
+| "-ability" | 〜性 | 可制御性, 可観測性, 置換同変性 |
+| Verb from a technical noun | noun + する or 化する; the same noun in every form across prose, slides and exercises | 蒸留 / 蒸留する ; 再ノイズ化する ; patchify → パッチ化 |
+| Convergence modes | する-verb | "converges in probability" → 確率収束する |
+| Coordinate compound "A–B" | ・ in the English order | 行列・ベクトル積, キー・値ヘッド, 知覚・歪みトレードオフ, 予測子・修正子 |
+| Alternatives the English writes "A / B" | keep the slash between whole terms, both halves parallel | 順方向 KL / 逆方向 KL ; 局所誤差 / 大域誤差 |
+| A new term next to an existing one | Build it from the glossary parts, in their order, and mirror the existing pattern; do not coin a parallel family. | ソフト最大値 → ハード最大値 ; 信頼上限 → 信頼下限 ; ノイズ除去拡散確率モデル |
+| A standard science or engineering term exists | Use it, not katakana. | べき乗則, 桁落ち, 損益分岐点, 経験則; 平方完成, 望遠鏡和 |
+| Metaphor | The literal technical term, not the image. | "winner's curse" → 勝者の呪い ; "dead zone" → 不感帯 |
+| UI labels | The official localized label in its UI form; a shorter noun form is allowed in prose. | "Restart Kernel and Run All Cells" → カーネルを再起動してすべてのセルを実行 |
+
+### 10.8 Consistency of senses
+
+- Where English uses one word for two concepts, keep two Japanese terms, as
+  in §7.1, and check the lexicon's `sense` field before choosing. Examples
+  the chapters fixed: 精度 (numeric) vs 適合率 (metric) vs 精度行列; 想起
+  (memory recall) vs 再現率 (metric); 通信路 (information theory) vs チャネル (CNN);
+  過剰訓練 vs 過学習; 条件性 (numerical) vs 条件付け (probability); 縮約 (tensor) vs
+  縮小写像 (RL); 補間 vs 補完; 特徴写像 vs 特徴マップ; 偏り (of a coin) vs バイアス.
+- Point vs value: a location takes 点 (極小点, 大域的最小点), a function value 値
+  (極小値, 大域的最小値).
+- Estimator vs estimate: 推定量 (the function), 推定値 (its value).
+- Opposed pairs stay parallel: 上界 / 下界, 行フルランク / 列フルランク,
+  主実行可能 / 双対実行可能, 勾配上昇法 / 勾配降下法, 陰的 / 陽的, 二峰性 / 単峰性 / 多峰性.
+- A recurring metaphor is one word in prose and slides, chosen so that it
+  does not collide with an existing term: "rung" → 段階 (not ステップ), "clock"
+  (log-SNR time) → 時計 (not クロック), "strays" → 逸脱サンプル (not 外れ値).
+- A chapter's "running example" keeps that chapter's word (通し例 or 共通例題,
+  as the lexicon records it).
+- Emphasised code-argument words keep the emphasis and are translated inside
+  it: `*left*` → *左* (§2.1: no added 「」).
