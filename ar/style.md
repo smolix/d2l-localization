@@ -793,7 +793,8 @@ These recur on every page; write them identically.
 
 - **"Exercise :exref:`…`" and "problem :exref:`…`"** → التمرين :exref:`…`,
   also in parentheses; "(Exercise 1)" → (التمرين 1); "Problems 29–30" →
-  المسألتان 29 و 30.
+  المسألتان 29 و 30. A bare reference takes the noun too: "the 70B model of
+  :exref:`…`" → نموذج 70B من التمرين :exref:`…`.
 - **Parts.** "part (a)" → الجزء (a); "from (b)", "your answer to (b)" → من
   الجزء (b)، إجابتك عن الجزء (b); "the previous part" → الجزء السابق; a part
   letter after a reference is copied (:exref:`…`a). (i) … (v) and (a) … (d) keep
@@ -858,6 +859,13 @@ word separates the source's Latin name from its Latin link text.
   في **Framework**; "A + B" between code → A مع B; "None" → لا شيء; "Standard
   for" → الخيار المعياري لـ; "predicted sick" → التنبؤ: مريض; "$3\times 3$ conv,
   64 to 128, stride 2" → التفاف $3\times 3$، من 64 إلى 128، بخطوة انزلاق 2.
+- **Architecture comparison tables** (model families by row): every cell names
+  its class noun (انتباه GQA، طبقة RMSNorm، ترميز RoPE، طريقة YaRN، تطبيع
+  QK-norm); a bare name stays only under a header that carries the noun (SwiGLU
+  under شبكة FFN). "GQA $32{:}8$" → انتباه GQA بنسبة $32{:}8$; "window 4096" →
+  نافذة عرضها 4096; "pre" / "pre and post" → تطبيع مسبق / مسبق ولاحق; "128
+  experts, 8 active" → 128 خبيرًا، النشطون منهم 8. Parameter counts in cells
+  (46.7B / 12.9B) are copied, not turned into مليار.
 
 ### 15.6 Class nouns and names
 
@@ -957,6 +965,10 @@ Additions to §5.4:
   `d2l.lr_sweep`" → نجري المسح بالدالة `d2l.lr_sweep`; "save `X`" → يحفظ الموتر
   `X`; "a fresh `X`" → نموذج `X` جديد; "toggling `norm`" → تبديل قيمة `norm`.
   Tab note "In JAX it is `x`" → في JAX هذا … هو `x`.
+- **A keyword option or an experiment label in backticks** is copied after its
+  noun: "`pos='learned'`:" as a lead-in or a named option → الخيار
+  `pos='learned'`; arm names (`no balancing`, `frozen router`, `dense`) → الإعداد
+  / الطرف / النموذج `…`; a plot colour → المنحنى `C0`.
 - **`if`--`else`** and a run of names joined by slashes (RandAugment/Mixup/CutMix)
   are copied as one left-to-right run; "`a` / `b`" → `a` أو `b`.
 
