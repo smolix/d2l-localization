@@ -40,6 +40,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - 64-bit → ذو 64 بتًا — 32-bit: ذات 32 بتًا
 - 774M parameters (slide) → 774 مليون معلَمة
 - 8-billion-parameter model → نموذج بـ 8 مليارات معلَمة — or ذو 8 مليارات معلَمة; no Latin 8B except the name Llama 3 8B
+- 8-bit Adam → المحسن Adam ذو 8 بتات
 - 8-GPU node → عقدة من 8 وحدات GPU
 - 95% interval → فترة بمستوى $95\%$
 - [Check] (slide kicker) → [التحقق] — التحقق من الفهم for Check Your Understanding; اختبار الفهم for Concept Check
@@ -70,13 +71,19 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - acceleration (optimizer) → التسريع — speedup also; acceleration law = قانون التسريع
 - accelerator → مسرع — plural مسرعات
 - accented letters / Latin diacritics (text) → الحروف التي تحمل علامات / الحروف اللاتينية ذات العلامات
+- access pattern → نمط الوصول — glossed (access pattern) once
+- Account of the Final Step (heading) → محاسبة الخطوة النهائية — Final Accounting (kicker): المحاسبة الختامية
+- Accounting for Slowdown (kicker) → تفسير التباطؤ
 - accumulate → يراكم — not تجميع (= pooling)
 - accumulate gradients → مراكمة التدرجات — تراكم التدرجات; التجميع = pooling
 - accumulate in fp32 → يراكم بالصيغة fp32 — Accumulation in fp32: المراكمة بالصيغة fp32
+- accumulated steps (slide) → الخطوات المتراكمة
 - accumulator → مركم — value accumulator -> مركم القيم
+- accumulator (gradient accumulation) → مركم — running gradient accumulator: مركم التدرجات الجاري; accumulator traffic: حركة بيانات المركم; accumulating micro-batch: دفعة جزئية مراكِمة
 - accuracy drop → انخفاض الدقة
 - accuracy leaderboard → لوحات المتصدرين في الدقة
 - accuracy plateaus → تستوي الدقة
+- achieved bandwidth → عرض النطاق المتحقق — the achieved 0.9 TB/s: المعدل المتحقق فعليًا
 - Acknowledgments → الشكر والتقدير
 - acquit → يبرئ
 - across / along (valley walls) → عبر — along = على امتداد; transverse = مستعرض
@@ -121,6 +128,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - additive shortcut → وصلات التخطي الجمعية — residual shortcut / skip: وصلة التخطي ذات البواقي
 - additive update → تحديثًا جمعيًا — writes additively -> كتابةً جمعية
 - additive write → الكتابة الجمعية — heading Additive Writes: الكتابة الجمعية; additive recall: الاستدعاء الجمعي; additive matrix memory: ذاكرة مصفوفية جمعية
+- address-translation caches → الذاكرات المخبئية لترجمة العناوين — SRAM caches: ذاكرات SRAM المخبئية
 - addressed by its path → عنوانه مساره — addressing by paths: العنونة بالمسارات
 - adjoint → قرين — القيم القرينة
 - Advanced (part overview heading) → المواضيع المتقدمة — part names in prose keep English emphasis: جزء *الأساسيات*، جزءا *النماذج اللغوية* *ونماذج الصور*
@@ -149,6 +157,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - algebraic route → مسار جبري — takes an algebraic route: يسلك مسارًا جبريًا
 - algorithmic tasks → مهام خوارزمية
 - alias → اسم مستعار
+- aliased (tensor sharing storage) → عند تشارك الذاكرة
 - align in sign with → تتوافق في الإشارة مع — aligned signs: إشارات متوافقة
 - align shapes → محاذاة الأشكال — aligned dimensions: بُعدان متحاذيان
 - aligning hidden units → محاذاة الوحدات المخفية
@@ -166,6 +175,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - allocated-memory counter → عداد الذاكرة المخصصة للموترات
 - allocation (of a compute budget) → التوزيع — Compute-Optimal Allocation: التوزيع الأمثل حسابيًا; Chinchilla-allocated: موزَّع وفق Chinchilla; حجز stays memory allocation
 - Allocation and In-Place Updates (heading) → الحجز والتحديث في الموضع
+- allocation timeline → الخط الزمني للحجز
 - allocator → نظام الحجز — caching allocator: نظام حجز ذو تخزين مؤقت
 - allowlist → قائمة السماح — glossed
 - allreduce (performance) → عملية allreduce — Latin as the English writes it
@@ -176,7 +186,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - always predicting zero → التنبؤ الدائم بالصفر
 - always-active (shared expert) → نشط دائمًا — خبير مشترك نشط دائمًا; not فعال, which reads as "effective"
 - ambiguous → ملتبس
+- Amdahl's law / Gustafson's law → قانون Amdahl / قانون Gustafson — names Latin
 - Ames → أيمز — ولاية أيوا; dataset name Ames Housing stays Latin
+- Amortizing Overheads (kicker) → توزيع الأعباء الإضافية
 - amortizing weight reads → توزيع كلفة قراءة الأوزان
 - amplify → يضخم — amplification = تضخيم
 - amplitude → سعة
@@ -196,6 +208,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - anisotropic → غير متناحٍ
 - ankle boot (Fashion-MNIST) → حذاء برقبة قصيرة — plural أحذية برقبة قصيرة; not حذاء كاحل
 - anneal (learning rate) → يخفض تدريجيًا — slide: خفض سلس; "anneals to zero": يتناقص تدريجيًا إلى الصفر
+- annotate (the sharding of inputs) → يصرّح بـ — annotated with `NamedSharding`: موسومة بالصنف; declarative placement: توضيع تصريحي
 - annotated references (optimization) → مراجع مشروحة
 - anomalous → شاذ — step, gradient, batch
 - anomaly screening → فحص الشذوذ
@@ -236,6 +249,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - arithmetic coder (text) → مشفر حسابي
 - Arithmetic Cost (heading) → كلفة العمليات الحسابية
 - arithmetic count → عدد العمليات الحسابية
+- arithmetic units → وحدات الحساب — as compute units
 - arm (of a comparison) → طرف في المقارنة
 - Armijo sufficient-decrease check → فحص النقصان الكافي بشرط Armijo — name in Latin
 - arrangement (pre-norm, 2017) → ترتيب — dual الترتيبان
@@ -264,6 +278,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - asymptotic ratio → النسبة التقاربية
 - asymptotic step floor → أرضية الخطوات التقاربية
 - asymptotics (noun, table header) → السلوك التقاربي
+- asynchronous / synchronous (updates, allreduce) → غير متزامن / متزامن
 - asynchronous backend → الواجهة الخلفية غير المتزامنة — bounded asynchrony = لاتزامن محدود
 - asynchronously → بصورة غير متزامنة
 - at chance / by chance → عند مستوى الصدفة / بالصدفة
@@ -318,6 +333,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - AUC → مساحة AUC — plural dual قيمتا AUC
 - audit (keys, partial load) → يدقق / تدقيق
 - auditing → التدقيق — to audit (calibration) = يدقق
+- augment (data, in the input pipeline) → يطبق زيادة البيانات — the glossary's زيادة البيانات
 - augmented assignment → الإسناد المركب
 - augmented least squares → مربعات صغرى موسعة — ordinary least squares = المربعات الصغرى العادية
 - augmented notation → الصيغة الموسعة — slide; ones column = عمود من الواحدات; absorbing the bias = استيعاب الانحياز
@@ -334,6 +350,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - autoregressive decoding → فك التشفير ذاتي الانحدار — not فك تشفير انحدار ذاتي (RNN chapter check)
 - autoregressive model (noun) → نموذج الانحدار الذاتي — with أي: أي نموذج من نماذج الانحدار الذاتي
 - Autoregressive Objective (heading) → دالة الهدف ذاتية الانحدار — Training Objective (kicker): دالة هدف التدريب
+- autotuning → الضبط التلقائي — glossed (autotuning)
 - auxiliary heads → رؤوس مساعدة
 - auxiliary logit regularizers → منظِّمات اللوجيتات المساعدة
 - Auxiliary Loss Balancing (kicker) → الموازنة بخسارة مساعدة
@@ -342,6 +359,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - average pooling → تجميع المتوسط — layer: طبقة تجميع المتوسط
 - average-velocity distillation (diffusion) → تقطير السرعة المتوسطة
 - averaged fans → متوسط التفرعين
+- averaged gradient → التدرج المتوسط
 - averaged lags (text) → متوسطات التأخرات
 - averaging horizon → أفق حساب المتوسط — memory horizon: أفق الذاكرة; EMA effective horizon: الأفق الفعلي
 - averaging model (text) → نموذج أخذ المتوسط
@@ -363,10 +381,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - backward recursion (text) → العلاقة التكرارية الخلفية
 - backward rule → قاعدة خلفية
 - backward sweep → اجتياز خلفي
+- backward tape → شريط التمرير الخلفي
 - bad local minimum → قيمة صغرى محلية رديئة — poor / bad local minima
 - bag (Fashion-MNIST) → حقيبة
 - bag of patches → “حقيبة رقع” — glossed (bag of patches) once; slide: أرضية حقيبة الرقع
 - bags of visual words → حقائب الكلمات البصرية — glossed at first mention
+- baked into (a recording, a graph) → مثبت في
 - balanced (split, images) → متوازن
 - Balanced complexity (slide) → تعقيد متوازن
 - ball of radius theta (math) → الكرة التي نصف قطرها $\theta$
@@ -379,11 +399,15 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - bandwidth (kernel) → عرض النطاق — glossed once; narrow/wide/intermediate -> ضيق / عريض / متوسط
 - bandwidth floor / transfer floor → أرضية عرض النطاق / أرضية النقل
 - bandwidth halving → تنصيف عرض النطاق
+- bandwidth roof → سقف عرض النطاق — beside سقف الحوسبة
 - bandwidth wall → جدار عرض النطاق — plural جدران عرض النطاق
+- bandwidth-bound → مقيد بعرض النطاق — glossed (bandwidth-bound); feminine مقيدة; like the glossary's مقيد بالحوسبة
+- bandwidth-optimal → أمثل في عرض النطاق — bandwidth optimality: أمثلية عرض النطاق
 - bank (of timescales, states, differential equations) → مجموعة — state bank: مجموعة حالات
 - bank of experts → مجموعة من الخبراء — expert bank: مجموعة الخبراء
 - bank of routed experts → مجموعة من الخبراء يُختار منهم بالتوجيه — router المسير (glossary)
 - bar (over a symbol) → الشرطة
+- bare (allreduce, benchmark) → مجرد — عملية allreduce مجردة، قياس الأداء المجرد; microbenchmark: قياس أداء مصغر
 - bare weights file → ملف أوزان مجرد — compartments of a checkpoint: أقسام; components: مكونات
 - bars (visual features) → أشرطة
 - base (RoPE exponent) → الأساس — same word as basis, kept apart by context: أساس RoPE vs أساس متعامد معياري
@@ -397,6 +421,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - base-rate neglect → إهمال المعدل الأساسي
 - baseline (level, value, measurement) → خط الأساس — dual خطا الأساس; uniform-guess baseline = خط أساس التخمين المنتظم; baseline sweep = مسح خط الأساس
 - baseline (model compared against) → نموذج مرجعي — recipe: الوصفة المرجعية
+- baseline (the unoptimized starting configuration of the case study) → خط الأساس — baseline implementation: تنفيذ خط الأساس; Baseline Profile: تحليل أداء خط الأساس
 - baseline floor (text) → الأرضية الأساسية
 - baseline model → نموذج مرجعي — chapter decision; the NN baseline النموذج المرجعي
 - baseline probability → الاحتمال الأساسي
@@ -410,11 +435,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - batch size transition (slide) → الانتقال مع حجم الدفعة
 - batch-major / time-major (code) → ترتيب الدفعة أولًا / ترتيب الزمن أولًا
 - batch-normalized networks → الشبكات المزودة بتطبيع الدفعات — the second batch norm: تطبيع الدفعات الثاني; slide BatchNorm: طبقة BatchNorm
+- batch-preserving speedups → التسريعات التي تحافظ على حجم الدفعة — batch-growing changes: التغييرات التي تكبّر الدفعة
+- batch-sharded → مقسم إلى حصص على محور الدفعة
 - batch-size ramp → الرفع التدريجي لحجم الدفعة — verb: يرفع $b$ تدريجيًا
 - batched → المجمع في دفعات / بالدفعات — جداء المصفوفات بالدفعات
 - batched decoding → فك التشفير بالدفعات — batched throughput: الإنتاجية بالدفعات; "free batching": “تجميع مجاني في دفعات”
 - Batched Matrix Formulation (slide) → الصياغة المصفوفية بالدفعات
 - batched matrix product (code) → جداء مصفوفات واحد بالدفعات
+- BatchNorm (name on slides) → تطبيع BatchNorm — طبقة BatchNorm for a layer
 - bathtub (U-shaped) curve → منحنى حوض استحمام (على شكل U) — slide "profile": شكل حوض استحمام
 - battery draw → استهلاك البطارية — flash storage: تخزين الفلاش
 - battle-tested defaults → قيم افتراضية أثبتت جدارتها في الميدان
@@ -436,6 +464,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - benchmark (timing; verb) → قياس الأداء — verb يقيس أداء (we benchmark -> نقيس); pl. قياسات أداء; قياس أداء المحمل; Benchmark class: الصنف (المساعد) Benchmark
 - Benchmark Model (slide) → النموذج المعياري
 - benchmark results → النتائج المرجعية
+- Benchmarking Discipline (kicker) → أصول قياس الأداء
 - Benchmarking Insight (kicker) → درس من الاختبارات المعيارية
 - benchmarking suites → مجموعات الاختبارات المعيارية
 - Bernoulli → برنولي — Arabic letters
@@ -456,6 +485,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Bidirectional Pretraining (kicker) → التدريب المسبق ثنائي الاتجاه
 - bigram → الثنائيات — token-bigram logits -> لوجيتات ثنائيات الرموز المميزة; glossed
 - bigram / trigram (items) → الثنائيات / الثلاثيات — ثنائيات الكلمات، ثلاثيات الكلمات; word pairs: أزواج الكلمات
+- bigram baseline (loss of the byte-bigram model) → خط الأساس الثنائي — bigram threshold: العتبة الثنائية
 - bilinear → ثنائي الخطية — softmax saturation = تشبع softmax
 - bin (confidence, histogram) → حاوية — plural حاويات; حاويات ثقة; خانات stays digits; well-populated = الحاويات الممتلئة جيدًا; equal-width = متساوية العرض
 - binary → ثنائي
@@ -466,11 +496,15 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - binary indicator → مؤشر ثنائي
 - binary source domain → مجال مصدر ثنائي
 - binary test pattern → نمط اختبار ثنائي القيم — piecewise-constant: ثابت قطعيًا
+- binary-tree allreduce → عملية allreduce بشجرة ثنائية
 - bind (a key to a value) → يقرن — noun إقران; association (a stored binding): اقتران, not ارتباط (= correlation)
+- bind (state to a jitted function) → يقرن — noun الإقران
 - bind an argument as an attribute → يحوّل الوسيط إلى سمة — ربط stays concatenation
 - bind to (self.val_dataloader) → تسند إلى
 - binding (of a key, noun) → إقران — initial binding: الإقران الأول; the two bindings: الإقرانان
+- binding floor → الأرضية المقيِّدة — "h binds": $h$ هو القيد
 - binomial → ثنائي الحدين
+- binomial checkpointing → نقاط الاستعادة ثنائية الحدين — glossed (binomial checkpointing)
 - biological circuits → الدارات البيولوجية
 - bisect (diverging runs) → يحدد بالبحث التنصيفي — bug bisection: البحث التنصيفي عن الخلل; diverge (runs): تفترق
 - bit → بت — dual بتان
@@ -502,11 +536,15 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Block Anatomy (kicker) → تشريح الكتلة
 - block average → متوسط الكتل — step losses = خسائر الخطوات
 - block index → دليل الكتلة — "block 32" الكتلة 32
+- block inputs → مدخلات الكتل
 - block mask → قناع كتلي — plural أقنعة كتلية
 - block means (text) → متوسطات الكتل
+- block scale (number formats) → معامل تحجيم الكتلة — plural معاملات تحجيم الكتل; block-scaled formats: الصيغ ذات التحجيم بالكتل; bit overhead: عبء إضافي من البتات
+- block transfer model → نموذج نقل الكتل
 - block-diagonal → قطري كتلي — adverbial: قطرية كتليًا
 - block-level Hessian heterogeneity → عدم تجانس المصفوفة الهيسية على مستوى الكتل
 - block-semiseparable → شبه قابلة للفصل كتليًا
+- block-shuffled gather → الالتقاط بخلط الكتل — permute blocks: يبدّل مواضع الكتل
 - blockwise → كتلةً بكتلة — chunkwise قطعةً بقطعة, tanwin as in عنصرًا بعنصر
 - blowup (cost) → تضخم
 - blueprint (slide) → مخطط — encoder-plus-head blueprint: المخطط العام المؤلف من مشفر ورأس
@@ -515,6 +553,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - blur kernel → نواة تضبيب
 - blurred → ضبابية
 - BN buffers → مخازن حالة BN
+- board trace → خط اللوحة — plural خطوط اللوحة; PCB traces: خطوط لوحة PCB
 - body (of a block or network) → جسم — definite الجسم; glossed once; جسم الشبكة; convolutional body: الجسم الالتفافي
 - boilerplate → شيفرة نمطية
 - bold → الغامقة
@@ -524,6 +563,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Boolean → منطقي
 - Boolean mask → قناع منطقي
 - boolean masking → التقنيع المنطقي — boolean mask -> قناع منطقي; boolean mask algebra -> جبر الأقنعة المنطقية
+- boost clock → تردد الساعة المعزز
 - bootstrap target → هدف البوتستراب
 - border / boundary (of an image) → الحدود — الحد; image borders: حدود الصورة; حافة = intensity edge
 - border darkening → تعتيم الحدود — dark frame: إطار داكن
@@ -546,6 +586,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - boundary layers (embedding and head around the blocks) → طبقتان طرفيتان
 - boundary masking overhead → العبء الإضافي للتقنيع عند الحدود — "up to" -> بصرف النظر عن (style §9.3)
 - boundary pixel → بكسلات الحدود
+- boundary values (exchanged between neighboring GPUs) → قيم حدّية
 - bounded across depth → محدودة على امتداد العمق
 - bounded away from zero → محدودة من الأسفل بعيدًا عن الصفر
 - bounded below → محدودة من الأسفل — bounded by η = محدود من الأعلى بالقيمة η
@@ -555,10 +596,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Bradley--Terry model → نموذج Bradley--Terry — names in Latin
 - brain floating point → *brain floating point* — stays Latin as the format name
 - brake → كابح — constant brake كابح دائم
+- branch (in code) → فرع / تفرع — the path taken: الفرع (الفرع المسلوك); the construct, and "branches on values": التفرع على القيم; data-dependent branch: تفرع يعتمد على البيانات
 - branch fusion → دمج الفروع — fused convolutions: التفافات مدمجة
 - branch gradient / Jacobian → تدرج الفرع — Jacobian: المصفوفة اليعقوبية للفرع; typical ranges: مجالات نموذجية
 - branch widths → عروض الفروع — four-branch رباعي الفروع; multi-branch متعدد الفروع
 - branching / to fork a branch → التفريع / تفريع فرع — يفرّع with shadda
+- break even (compilation) → يبلغ نقطة التعادل — break-even step: خطوة التعادل; Break-Even Step Count: عدد خطوات التعادل
 - break symmetry → كسر التناظر — symmetry breaking same
 - Breaking the Lockstep Between X and Y (slide title) → فك الاقتران بين X و Y
 - breakthrough → اختراق
@@ -575,9 +618,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - broken initializations → التهيئات المعطوبة — forward-pass diagnostic: تشخيص بالتمرير الأمامي
 - broken links → روابط معطلة
 - brute force → القوة الغاشمة
+- bubble (idle time of a pipeline stage) → فجوة — bubble (idle) fraction: كسر الفجوة (الخمول)
+- bucket (of gradients, DDP) → سلة — plural سلال; bucketing: تجميع التدرجات في سلال; خانة stays a histogram bin
+- bucket (of input shapes) → خانة — bucketing: التوزيع على خانات; bucketed shapes: الأشكال المجمَّعة في خانات
+- bucket model → نموذج السلال — glossed (bucket model) once
 - buffer (framework: registered non-trainable tensor) → مخزن حالة — plural مخازن الحالة, dual مخزني حالة; glossed (buffers) once per page
 - buffer (memory buffer) → مخزن مؤقت — plural مخازن مؤقتة; storage buffer: مخزن البيانات المؤقت
 - buffer (optimizer state) → مخزن — without مؤقت: مخزن السرعة، مخزن حالة; Adam m and v: مخزنا العزمين / مخزنا الحالة; glossary momentum buffer مخزن الزخم
+- buffer donation (JAX) → هبة المخازن المؤقتة — as the lexicon's يهب المخازن المؤقتة
 - buffer of boundary windows (data split) → منطقة عازلة قوامها … نافذة عند الحد — not مخزن مؤقت (= memory buffer)
 - buffered writes → الكتابات المخزنة مؤقتًا
 - bug → خلل — silent bug: خلل صامت; loud error: خطأ صريح
@@ -593,8 +641,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - bulk (of eigenvalues) → كتلة — الكتلة المنبسطة
 - bump (of a kernel) → نتوء — Gaussian bump: نتوء غاوسي; spike stays قفزة
 - bundle (framework .zip) → رزمة — plural رزم
+- bus bandwidth → عرض نطاق الناقل
 - busiest / idlest expert → الخبير الأكثر انشغالًا / الأكثر خمولًا — idle experts: الخبراء الخاملون
 - business logic → منطق الأعمال
+- busy (GPU) → مشغولة — idle: خاملة; idle time: زمن الخمول; busy device share: نصيب انشغال الجهاز; device busy time: زمن انشغال الجهاز
 - by a wide margin → بفارق كبير — هامش stays margin of a threshold
 - by default → افتراضيًا
 - by eye → بالنظر
@@ -604,6 +654,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - by symmetry → بالتناظر
 - bypass addition → الجمع عبر وصلة التخطي
 - byte → بايت — terabyte: تيرابايت
+- byte count / FLOP count (paper estimate) → عدّ البايتات / عدّ عمليات FLOP — construct state with its shadda (عدّ ما تحفظه الكتلة، عدّ VJP الخام); with the article العد
 - byte fallback (slide) → الرجوع إلى البايتات
 - byte frequencies → تواترات البايتات
 - byte language model → نموذج لغوي على مستوى البايتات
@@ -620,10 +671,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - byte-level Transformer language model (optimization) → نموذج لغوي مبني على المحول على مستوى البايتات
 - bytecode → الشيفرة البايتية — glossed
 - cache (forward values) → يخزن مؤقتًا — المدخل المخزن مؤقتًا، التفعيلات المخزنة مؤقتًا
+- cache (verb: keep the output of an op for the backward pass) → يخزن مؤقتًا — caching every `mm` output: تخزين كل مخرج `mm` مؤقتًا
 - cache buffer → المخزن المؤقت لذاكرة KV — plural مخازن الذاكرة المؤقتة; pre-allocated: محجوز مسبقًا; zeroed: مصفّر
 - cache directory → مجلد التخزين المؤقت
 - cache efficiency → الكفاءة في الذاكرة المؤقتة
+- cache line → سطر الذاكرة المخبئية — plural أسطر
 - cache miss → إخفاق في الذاكرة المخبئية
+- cache-aware roofline → خط السقف المدرك للذاكرات المخبئية — glossed (cache-aware roofline)
 - cached forward pass / decode step / step / prefix → التمرير الأمامي مع التخزين المؤقت / خطوة فك التشفير مع التخزين المؤقت / الخطوة مع التخزين المؤقت / البادئة المخزنة مؤقتًا — uncached: بلا تخزين مؤقت
 - cached generation → التوليد مع التخزين المؤقت
 - caching (past-token computations) → التخزين المؤقت
@@ -666,6 +720,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - caps memory and compute per update (text) → يضع سقفًا للذاكرة والحوسبة
 - capstone → ختامي — القسم الختامي، التحدي الختامي
 - captioning an image (text) → كتابة وصف لصورة
+- capture (a whole program) → التقاط — replay: إعادة تشغيل
 - card (GPU) → بطاقة
 - cardinality → الأصلية — of a set: أصلية المجموعة; ResNeXt kicker: شبكة ResNeXt والأصلية
 - careful loader → دالة تحميل حريصة
@@ -675,6 +730,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - carve out → يقتطع
 - case folding (text) → توحيد حالة الحروف
 - case study → دراسة حالة — slide
+- Case Study: Optimizing a Transformer (page title) → دراسة حالة: تحسين أداء محول — slide cover "Making a Transformer Fast Step by Step": تسريع محول خطوة بخطوة
 - cast → يحول النوع
 - catalyst → محفز — plural محفزات; slide "Catalyst N" المحفز N
 - catapulted out of the basin → يُقذف خارج الحوض
@@ -704,6 +760,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - causal symmetry → التناظر السببي
 - causal text generation → توليد النص السببي
 - causal tile skipping → تخطي البلاطات السببية
+- Causality gate (exercise title) → بوابة قبول للسببية — defective kernel: نواة معيبة; flag a defect: يكشف العيب
 - caveat → تنبيه — dual تنبيهان
 - CDF → دالة التوزيع التراكمي — glossary; no Latin acronym
 - ceiling (largest value) → سقف
@@ -721,6 +778,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Central Question (slide label) → السؤال المحوري
 - Ceres (dwarf planet) → سيريس
 - certify → يشهد بـ — certificate = شهادة; guarantee stays ضمان
+- chain (of elementwise operations) → سلسلة — to chain: يصل … في سلسلة; unfused chain: السلسلة غير المدمجة; eager chain: السلسلة الفورية
 - chain of connections → سلسلة من الوصلات
 - chain rule of mutual information → قاعدة السلسلة للمعلومات المتبادلة
 - chain rule of probability (text) → قاعدة السلسلة للاحتمالات
@@ -744,6 +802,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Chapter Map (slide) → خريطة الفصل
 - Chapter N Preview (slide) → لمحة عن الفصل N — written (لمحة عن الفصل N)
 - Chapter Roadmap (slide label) → خارطة طريق الفصل
+- Chapter Structure (kicker) → بنية الفصل — How to Study This Chapter: كيفية دراسة هذا الفصل
 - Chapter Study Guide (slide label) → دليل دراسة الفصل
 - Chapter thesis (slide) → أطروحة الفصل
 - character → محرف — the space الفراغ
@@ -752,6 +811,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - character / word n-gram → تتابعات $n$-gram من المحارف / من الكلمات — 4-gram: تتابع 4-gram
 - character encoding (text) → ترميز محارف
 - character-level / word-level / byte-level tokenization (text) → التجزئة على مستوى المحارف / الكلمات / البايتات — tokenizer: المجزئ على مستوى …
+- characteristic magnitudes → المقادير المميِّزة — typical magnitude (table header): المقدار المعتاد
 - characteristic polynomial → كثير الحدود المميز — characteristic roots = الجذران المميزان
 - characterize all coefficients → أعط وصفًا لكل معاملات …
 - Chebyshev / Sherman--Morrison → Chebyshev — stay Latin: كثيرات حدود Chebyshev، متطابقة Sherman--Morrison
@@ -768,7 +828,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - checkpoint tensor map → خريطة موترات نقطة الاستعادة
 - checkpoint uptraining → التدريب التكميلي لنقاط الاستعادة — uptraining glossed (uptraining) once; uptrain: تدريب تكميلي
 - checkpoint-and-rewind → الرجوع إلى نقطة استعادة
+- checkpointed activations → التفعيلات المحفوظة عند نقاط الاستعادة — checkpointed compute time: زمن الحوسبة مع نقاط الاستعادة
+- checkpointed block → كتلة ذات نقطة استعادة
 - Checks before Training (heading) → فحوص قبل التدريب
+- checksum → مجموع اختباري — plural مجاميع اختبارية
 - cherry-pick → ينتقي — انتقاء الأوفر حظًا
 - child module → وحدة ابنة — children: الأبناء / الوحدات الأبناء; parent: الوحدة الأم
 - children (graph node) → أبناء — parents = آباء
@@ -778,6 +841,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - choice probabilities → احتمالات الاختيار
 - Choosing a Loss from a Noise Model (section heading) → اختيار الخسارة من نموذج الضوضاء
 - Choosing a Mechanism (heading) → اختيار آلية
+- Choosing a Memory Technique (heading) → اختيار تقنية للذاكرة — memory techniques: تقنيات الذاكرة
 - chrF → المقياس chrF — class noun مقياس; BLEU keeps the glossary's درجة BLEU, table cell "BLEU Metric": مقياس BLEU
 - chrono initialization → التهيئة الزمنية — glossed (chrono initialization) once; Chrono bias (kicker): الانحياز الزمني
 - chronological split (slide) → تقسيم بالترتيب الزمني
@@ -787,6 +851,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - chunk-end state → حالة نهاية القطعة — chunk transition: انتقال القطعة; inter-chunk matrix scan: المسح المصفوفي بين القطع
 - chunk-parallel → متواز قطعة بقطعة
 - chunked → المقسم إلى قطع — تنفيذ مقسم إلى قطع; chunking: التقسيم إلى قطع; tiled: المقسم إلى بلاطات; not بالقطع
+- chunked cross-entropy loss → خسارة الإنتروبيا المتقاطعة المقسمة إلى قطع — token chunks: قطع من الرموز المميزة
 - chunked local layers → طبقات محلية مقسمة إلى قطع
 - chunked matrix-multiply training → التدريب المقسم إلى قطع بضرب المصفوفات
 - chunking → التقسيم إلى قطع — glossed (chunking); Chunked Computation (heading): الحساب المقسم إلى قطع; cross-chunk decay: اضمحلال عابر للقطع; chunk-level: على مستوى القطع; chunk-boundary states: حالات حدود القطع
@@ -837,6 +902,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - clipping threshold → عتبة القص
 - clipping weights → قص الأوزان — from قص التدرج
 - Clock Modulation (slide) → تعديل الساعة
+- clone (a tensor) → يستنسخ
 - clone (noun: copy of a model) → نسخة مستنسخة
 - clone (verb: a repository) → يستنسخ
 - closed bounded interval → فترة مغلقة ومحدودة
@@ -878,6 +944,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - collapse (merge (tokens, entries)) → يختزل
 - collapse (spatial coordinates, channel to a number) → يطوي — noun طي; collapse to ten logits: يطويها إلى عشرة لوجيتات
 - collapse onto the curve → الانطباق على المنحنى — تطبق … على
+- collective (communication operation) → عملية جماعية — plural العمليات الجماعية; collective latency: زمن استجابة العملية الجماعية
+- collective communication → الاتصال الجماعي — collective communication libraries / collective libraries: مكتبات الاتصال الجماعي; collectives: العمليات الجماعية; collective primitives: العمليات الأولية الجماعية
+- collective phase → طور جماعي — plural أطوار جماعية; half-collective: نصف عملية جماعية
 - collinear → متسامت — features: ميزات متسامتة; nearly collinear = شبه متسامتتين; not التداخل الخطي
 - collinearity (statistics) → التعدد الخطي — between features
 - color opponency → تضاد الألوان
@@ -887,15 +956,21 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - column slice → شريحة من الأعمدة — plural شرائح من الأعمدة
 - column vector → متجه عمودي — row vector: متجه صفي
 - column-normalized confusion matrix → مصفوفة الالتباس المطبَّعة حسب الأعمدة
+- column-wise / row-wise (direction in which a weight matrix is split across devices) → حسب الأعمدة / حسب الصفوف — صفًا بصف stays an operation applied to each row in turn
 - combination of the four indices → توليفة من الفهارس الأربعة
 - combine (of an associative scan) → عملية دمج — as combine (scan operation) → الدمج
 - combine (scan operation) → الدمج — verb يدمج (يُدمج كل موضع مع …); combines: عمليات الدمج; combine function: دالة الدمج
+- command buffer (XLA) → مخزن أوامر — plural مخازن أوامر
 - command queue → طابور الأوامر — indefinite طابور أوامر
 - commissioning editor → محرر التكليف
 - commit / commitment (softmax) → حسم دالة softmax / الحسم — حدة الحسم; حسم غير تام
 - common cause → سبب مشترك
 - common effect → نتيجة مشتركة
+- Communication Cost and Scaling (heading) → كلفة الاتصال وتناسب الأداء
+- Communication Model (kicker) → نموذج الاتصال
+- communication share (of a step) → نصيب الاتصال من الخطوة — not حصة, which is the shard on this page
 - communication topology (text) → طوبولوجيا الاتصال
+- communication volume → حجم الاتصال
 - commutation invariant (slide kicker) → لامتغير التبادل
 - commutative → تبديلي — associative and commutative تجميعي وتبديلي; not إبدالي
 - commuting diagram → مخطط تبادلي — f commutes with shifts: تتبادل مع الإزاحات
@@ -910,11 +985,18 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - competitive checkpoints → نقاط استعادة منافسة
 - competitive mathematics problems (text) → مسائل مسابقات الرياضيات
 - compilation → التصريف
+- compilation pipeline → خط التصريف — plural خطوط التصريف
 - compile → يصرّف
+- compiled artifacts → نواتج التصريف
 - compiled GPU/TPU kernels → نوى GPU/TPU المصرَّفة
 - compiled operations → عمليات مصرَّفة
+- compiled version (of a function) → النسخة المصرَّفة — eager version: النسخة الفورية
 - compiler flags → رايات المصرِّف
 - compiler fusion → دمج المصرِّف
+- Compiler Mechanism / Target Regime / How It Works / Concrete Chapter Benchmark (table head) → آلية المصرِّف / النمط المستهدف / كيفية العمل / قياس أداء ملموس من الفصل
+- Compiler Memory Plan (kicker) → خطة الذاكرة لدى المصرِّف — static memory plan: خطة الذاكرة الساكنة
+- compiler pass → مرحلة
+- compiler-partitioned single program → برنامج واحد يقسمه المصرِّف — slide: تصميم SPMD بتقسيم المصرِّف; partitioner: مقسِّم
 - complement rule → قاعدة المتمم
 - Complementary errors (slide) → أخطاء متكاملة
 - complete (basis) → تام
@@ -944,15 +1026,19 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Computation (chapter title) → الحوسبة — cover slide Deep Learning Computation: الحوسبة في التعلم العميق
 - computation DAG → مخطط DAG حسابي — plural مخططات DAG الحسابية
 - computation graph → مخططات حسابية — plural form
+- Computational Performance (chapter title) → الأداء الحسابي — as style §10.1
 - computational scale → الحساب عند الأحجام الكبيرة — slide 'Scale' -> الأحجام الكبيرة
 - computational scaling (cost growth) → تزايد الكلفة الحسابية — cubic parameter scaling = تزايد تكعيبي مع عدد المعلَمات
 - compute (noun) → الحوسبة — growing resource: القدرة الحاسوبية; حوسبة التدريب
 - compute bill → فاتورة الحوسبة — macroscopic quantities: كميتان إجماليتان
+- compute dividend (slide) → مكسب الحوسبة — communication & launch tax: ضريبة الاتصال والإطلاق; break-even rule: قاعدة التعادل
 - compute efficiency → كفاءة حسابية — scaling experiments = تجارب على زيادة الحجم; at larger scale = عند الأحجام الأكبر
+- compute floor / eager launch floor → أرضية الحوسبة / أرضية الإطلاق في التنفيذ الفوري
 - compute FLOPs → عمليات FLOP الحسابية
 - compute profile → توزيع الكلفة الحسابية
 - compute roof → سقف الحوسبة — peak compute: ذروة الحوسبة; bandwidth slope: ميل عرض النطاق
 - compute throughput → إنتاجية الحوسبة
+- compute time → زمن الحوسبة — device compute (time): (زمن) الحساب على الجهاز; arithmetic time: زمن الحساب
 - compute units → وحدات الحساب
 - compute-optimal split → التقسيم الأمثل حسابيًا
 - computing unit → وحدة حسابية
@@ -1027,6 +1113,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - constructor → مُنشئ — plural مُنشئات
 - constructor arguments → وسائط المُنشئ — dataset's constructor: مُنشئ مجموعة البيانات
 - consult → يرجع إليه — which keys each query consults
+- consumer (cards, bus) → استهلاكي
+- consumer cards → البطاقات الاستهلاكية
 - container (Sequential) → حاوية
 - container (tf.Variable) → حاوية
 - content blindness → العمى عن المحتوى
@@ -1041,6 +1129,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - content-based selection → الانتقاء القائم على المحتوى — glossed once; content selection = الانتقاء حسب المحتوى; content-selective = انتقائي حسب المحتوى; content-dependent retention = الاحتفاظ المعتمد على المحتوى
 - content-based sparse attention → الانتباه المتناثر القائم على المحتوى — glossed
 - content-dependent keys → المفاتيح المعتمدة على المحتوى
+- contention (kernels competing for one GPU) → تزاحم — compete: يتنافس
 - context (the encoder state passed to the decoder) → السياق
 - context extension → تمديد السياق — not إطالة السياق (RNN chapter, recurrent model)
 - context manager → مدير سياق — torch.autocast takes class noun السياق; autocast as noun: التحويل التلقائي للنوع
@@ -1055,6 +1144,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - continuation count (text) → تعداد التتمات — plural تعدادات التتمات
 - continuation tokens (text) → رموز مميزة من التكملة — greedy continuation: تكملة جشعة
 - continuous (function) → متصلة
+- continuous batching → التجميع المستمر في دفعات — glossed (continuous batching)
 - continuous corruption processes (text) → عمليات إفساد مستمرة
 - continuous parameter families → العائلات ذات المعلَمات المستمرة
 - continuous-time (adjective) → ذو الزمن المستمر / في الزمن المستمر — continuous-time dynamics: ديناميكيات الزمن المستمر; dynamical system: نظام ديناميكي
@@ -1064,6 +1154,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - contract (product into a small result) → يختزل
 - contraction (of error per step) → الانكماش — contracts = ينكمش; contraction factor = عامل الانكماش
 - contraction factor → عامل الانكماش — asymptotic = عامل الانكماش التقاربي; contracts at rate = ينكمش بالمعدل
+- contractions (tensor contractions: the matrix products of a step) → عمليات انكماش الموترات — glossed (contractions)
 - contractive / expansive regime → النمط الانكماشي / النمط التمددي
 - contrast (between results) → الفارق — never التباين (variance)
 - contrast (image) → تضاد — كاشفات تضاد، أنماط التضاد; التباين is variance only
@@ -1089,6 +1180,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - controller → متحكم
 - convenience constructor → مُنشئ مساعد
 - convention → عرف — the pooling page wrote اصطلاحات for an architecture's conventions
+- convention (benchmarking) → عرف — dual عرفان
 - converge to 1 asymptotically → يتقارب إلى $1$ في النهاية
 - converged basin → حوض التقارب
 - convergence pace → وتيرة التقارب
@@ -1120,11 +1212,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - coordinate-wise adaptive methods (optimization) → الطرائق التكيفية إحداثيًا بإحداثي
 - copy (of a pattern) → النسخة — النسخة الأولى / اللاحقة; later-copy accuracy -> الدقة في النسخ اللاحقة
 - copy circuit → دائرة النسخ
+- copy engine → محرك النسخ — glossed (copy engine); DMA copy engines: محركات النسخ بتقنية DMA; offload to: يحيل إلى
 - copy matrix → مصفوفة النسخ — OV copy matrix مصفوفة النسخ لدائرة OV; copying OV circuit دائرة OV ناسخة
 - copy test → اختبار النسخ
 - copy-both task → مهمة نسخ الاثنين — glossed
 - copying (task: output the string in reading order) → النسخ — beside العكس
 - Core Challenges (kicker) → التحديات الأساسية
+- Core Insight (kicker) → الفكرة الأساسية
 - Core Mental Model (slide) → النموذج الذهني الأساسي
 - Core practitioner sequence (slide) → المسار الأساسي للممارس
 - core primitives → العناصر الأولية الأساسية
@@ -1137,6 +1231,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - corpus positions (text) → مواضع المدونة
 - corrected value (WY form) → قيمة مصححة
 - correction (added to the direct-path derivative) → تصحيح — the correction vanishes: ينعدم التصحيح
+- correctness gate → بوابة قبول للصحة — numerical agreement: التوافق العددي
 - correctness indicator → مؤشر الصواب — not الإصابة (reads as infection)
 - correlated features → ميزات مترابطة
 - correlated keys → مفاتيح مرتبطة — key correlation: الارتباط بين المفاتيح
@@ -1156,6 +1251,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - cost-sensitive thresholds → العتبات الحساسة للكلفة — Bayes cost thresholds = عتبات الكلفة بمعنى بايز
 - Count (imperative (exercise)) → عُدّ — with marks
 - count (number of occurrences (n-gram, observed counts)) → تعداد — plural تعدادات; probability page: الأعداد المشاهدة
+- count / tally (of saved activations or bytes) → العد — verb يحصي (نعد would read as prepare); raw count: العد الخام; saved-tensor count: عد الموترات المحفوظة
 - count data → بيانات العد — counts = أعداد; observed count = العدد المرصود
 - count landmarks (optimization) → المعالم المرجعية القائمة على العد
 - count layers → يحصي الطبقات — نعد would read as prepare
@@ -1185,6 +1281,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - crash course → دورة مكثفة
 - crash-safe checkpoint → نقاط استعادة آمنة من الانهيار
 - crawl (too small a learning rate) → يزحف
+- credit (a metric credits work) → يحتسب
 - credit assignment → إسناد الفضل
 - crisp edge filters → مرشحات الحواف الحادة
 - critic that scores samples in pairs (GAN) → ناقد يحسب درجات العينات أزواجًا
@@ -1217,6 +1314,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - cross-talk → تداخل — glossed once; crosstalk coefficient -> معامل تداخل
 - cross-validated error → خطأ التحقق المتقاطع — cross-validated RMSE = خطأ RMSE في التحقق المتقاطع
 - crossover → نقطة التقاطع — slide Crossover Ratio -> نسبة التقاطع
+- crossover width / crossover size → عرض التقاطع / حجم التقاطع
 - crowded keys → مفاتيح مزدحمة — crowded decay: اضمحلال الازدحام
 - crowding, not aging → بالازدحام لا بالتقادم — slide: ازدحام لا تقادم
 - crown the winner (text) → يتوّج … فائزًا
@@ -1224,17 +1322,22 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - cryptographic checksum → مجموع اختباري تشفيري — glossed
 - cubic → تكعيبي — كثير حدود تكعيبي / المنحنى التكعيبي / دالة تكعيبية
 - CUDA driver → برنامج تشغيل CUDA — layer of the stack: طبقة من طبقات البرمجيات
+- CUDA graph → مخطط CUDA — plural مخططات CUDA
+- CUDA graph trees → أشجار مخططات CUDA
 - cue (colour cues across channels) → الدلائل
 - cumulative ablation → استئصال تراكمي
+- Cumulative Comparison (heading) → المقارنة التراكمية — Cumulative Single-GPU Waterfall: المخطط الشلالي التراكمي لوحدة GPU واحدة
 - cumulative decay product → جداء الاضمحلالات التراكمي — attenuated by: موهَّنًا بـ
 - cumulative displacement → إزاحة تراكمية
 - cumulative learning-rate budget → الميزانية التراكمية لمعدل التعلم — then الميزانية التراكمية; glossed
 - cumulative sum → المجموع التراكمي — plural المجاميع التراكمية; running sum
+- cumulative table → الجدول التراكمي
 - cumulative travel → المسير التراكمي — under-budgeted travel = ميزانية مسير غير كافية
 - curvature filter → مرشح الانحناء — sharp cliff = جرف حاد
 - curvature-weighted noise scale → مقياس الضوضاء الموزون بالانحناء
 - custom (layer, gradient, backward rule) → مخصص
 - custom layer / custom function → طبقة مخصصة / دالة مخصصة
+- cut (between two pipeline stages) → موضع القطع
 - cutoff (truncation rule) → حد البتر — plural حدود البتر
 - cycle through / cycle across (pair loads) → يتنقل دوريًا بين
 - cycles per input sample → عدد الدورات لكل عينة من المدخلات
@@ -1253,17 +1356,23 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - data loader → محمِّل — with the mark; محمِّل التحقق، محمِّل التدريب
 - data loading → تحميل البيانات
 - data module → وحدة البيانات — module tree = شجرة الوحدات; d2l.Module as common noun = Module in Latin
+- data movement → نقل البيانات
 - data overhead → عبء إضافي في البيانات
+- Data Parallelism in Practice (page title) → توازي البيانات في الممارسة العملية — as on the chapter index
+- data path → مسار البيانات — plural مسارات البيانات
 - data pipeline → خط معالجة البيانات — image pipeline = خط معالجة للصور
 - data pipelines → خطوط معالجة البيانات
 - data point / datum → نقطة بيانات
+- data stall → تعثر البيانات — plural تعثرات البيانات, glossed (data stalls); stall time: زمن التعثر
 - data type → نوع البيانات
 - data-center cards → بطاقات مراكز البيانات
+- data-center GPUs → وحدات GPU في مراكز البيانات — data-center accelerators: مسرعات مراكز البيانات
 - data-dependent forget gates → بوابات نسيان معتمدة على البيانات
 - data-driven calibration → المعايرة المعتمدة على البيانات — calibrate block by block: يعاير كتلة بكتلة
 - data-efficient → كفؤ في استخدام البيانات — spelling كفؤ
 - data-generating process → عملية توليد البيانات — data generator = مولد البيانات; on-the-fly generation = التوليد عند الطلب
 - data-generating process (slide) → عملية توليد البيانات
+- data-parallel step → خطوة توازي البيانات — indefinite: خطوة توازي بيانات واحدة; data-parallel training step: خطوة تدريب بتوازي البيانات
 - data-stream cursor → مؤشر سيل البيانات
 - database → قاعدة بيانات
 - database matching → المطابقة في قواعد البيانات
@@ -1271,12 +1380,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Dataclass Configurations (slide) → إعدادات بأصناف dataclass
 - DataFrame → جدول DataFrame — class noun جدول where needed
 - dataset ceiling → سقف مجموعة البيانات
+- DDP → طريقة DDP — feminine; standard DDP: طريقة DDP المعيارية; the code name `DDP` takes الصنف
 - dead (layer, ReLU units) → ميت — وحدة ReLU ميتة، وحدات ReLU الميتة
 - dead / collapsed channels → القنوات الميتة / المنهارة
 - dead class → الفئة الميتة — killing a class: موت الفئة
 - dead ReLU → وحدة ReLU ميتة — plural وحدات ReLU الميتة
 - dead ReLU activations → تفعيلات ReLU الميتة — fraction = نسبة
 - dead ReLU unit → وحدة ReLU ميتة
+- deadlock → حالة جمود — glossed (deadlock); verb يوقع في حالة جمود
 - deadly triad (RL) → الثالوث القاتل
 - death cap → فطر قبعة الموت
 - debugging → التنقيح
@@ -1295,13 +1406,16 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - decaying step sizes → أحجام خطوات متناقصة — definite أحجام الخطوات المتناقصة
 - decimal digits → خانات عشرية
 - decision boundary → حد القرار — plural حدود القرار
+- Decision Guide (kicker) → دليل القرار — on the sharding page; an architecture chapter's guide is دليل القرار المعماري (style §15.2)
 - decision regions → مناطق القرار
 - decision rule → قاعدة القرار
 - decision tree → شجرة القرار
 - decision trees → أشجار القرار
 - decision-making under uncertainty (RL) → اتخاذ القرار في ظل عدم اليقين
 - decode (ids to text) → يفك الترميز — noun فك الترميز; فك التشفير stays generation-time decoding
+- decode (images, audio) → يفك ترميز — noun فك الترميز; فك التشفير stays text generation
 - decode the bytes → فك ترميز البايتات
+- decoded (images, bytes) → مفكوك الترميز — الصور المفكوكة الترميز
 - Decoder Block Anatomy (kicker) → تشريح كتلة مفكك التشفير
 - decoder-only GPT pretraining → التدريب المسبق لنموذج GPT بمفكك تشفير فقط
 - decoder-only language model → النموذج اللغوي بمفكك تشفير فقط
@@ -1416,6 +1530,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - designated subset → مجموعة جزئية معيّنة
 - destabilize → يُفقِد … استقراره — with the marks
 - destination / source position → موضع الوجهة / موضع في المصدر — destination stream -> تيار الوجهة
+- destination GPU → وحدة GPU الوجهة
 - destroy (locality, contours) → يتلف — إتلاف
 - detach (autograd) → يفصل — noun الفصل; attached/detached: موصول / مفصول
 - detection (headings) → الاكتشاف
@@ -1428,11 +1543,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - deterministic policy → سياسة حتمية
 - deviation (of a token from the sequence mean) → الانحراف — plural الانحرافات; token-specific: الخاص بالرمز المميز
 - device (hardware) → جهاز — pl. أجهزة; glossed once; device-aware: المدرك للأجهزة; co-located: مجتمعة على جهاز واحد
+- device barrier → حاجز الجهاز — plural حواجز; hidden barriers: الحواجز الخفية
 - device memory → ذاكرة الجهاز
+- device mesh → شبكة الأجهزة
 - device migration / device movement → الانتقال بين الأجهزة
 - device placement → التوضيع — توضيع الموترات على الأجهزة; verb يضع / توضع; soft placement: التوضيع المرن; device scope: نطاق جهاز; glossed
 - device transfer → النقل بين الأجهزة
 - device transfer / device move → النقل بين الأجهزة — GPU transfer: النقل إلى وحدة GPU
+- device work → عمل الجهاز
 - diacritics (text) → علامات التشكيل
 - diagnosis / primary remedy → التشخيص / العلاج الأساسي
 - diagnostic asymmetry → لاتناظر تشخيصي
@@ -1449,6 +1567,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - diamond (geometry) → معيَّن
 - dichotomies → تقسيمات ثنائية
 - dictionary (Python) → قاموس
+- die (silicon) → شريحة — plural شرائح; شريحة السيليكون; on-die / off-die: على الشريحة / خارج الشريحة; chip stays رقاقة
 - die roll → رمية نرد
 - difference quotient → نسبة الفرق
 - differentiable → قابل للاشتقاق
@@ -1476,6 +1595,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - dimensionality → الأبعادية
 - dimensionless → عديم الأبعاد
 - diminishing returns → عوائد متناقصة
+- DIMM → وحدة DIMM — plural وحدات DIMM
 - dip → انخفاض
 - direct lookup → البحث المباشر
 - direct memory path → مسار الذاكرة المباشر
@@ -1533,6 +1653,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - domain label → وسم المجال
 - dominant eigenvector → المتجه الذاتي المهيمن
 - dominate → يطغى على
+- donate (model, optimizer state to a jitted step) → يهب — donated state: الحالة الموهوبة; as the lexicon's هبة المخازن المؤقتة
 - donates buffers → يهب المخازن المؤقتة
 - dot-product / additive scoring → درجات الجداء النقطي / الدرجات الجمعية — dot-product score -> درجة الجداء النقطي
 - dotted path → المسار المنقط
@@ -1544,6 +1665,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - doubling scan / tree scan / work-efficient scan → مسح المضاعفة / مسح الشجرة / المسح الكفء في العمل
 - doubling schedule (scan) → خطة المضاعفة — tree schedule: خطة الشجرة; not جدول
 - down to the last bit → حتى البت الأخير
+- down-projection (FFN) → إسقاط التقليص — gate projection: إسقاط البوابة; activated gate: البوابة المفعَّلة; up-projection stays إسقاط التوسيع
 - downcast → تحويل نزولي
 - download → نزّل
 - downsample (an image) → يصغّر بخفض أخذ العينات
@@ -1561,6 +1683,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - dress (Fashion-MNIST) → فستان
 - drift (distribution or definition) → ينجرف — glossary انجراف
 - drift away from (data) → تنجرف بعيدًا عن
+- drive (GPUs from a host thread) → يقود
 - driver → برنامج التشغيل
 - driver (function that runs an experiment) → الدالة المشغّلة — برنامج التشغيل stays a device driver
 - driver-assistance system → نظام مساعدة السائق
@@ -1589,8 +1712,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - duplicate tokens → الرموز المميزة المكررة
 - dwelling style → نمط المسكن
 - dyadic history block → كتلة ثنائية من التاريخ
+- E4M3 / E5M2 (fp8 encodings) → الترميز E4M3 / الترميز E5M2
 - eager (allocation, layer) → فوري — eagerly = فوريًا
 - Eager and Compiled Execution (heading) → التنفيذ الفوري والتنفيذ المصرَّف — compiled graph: المخطط المصرَّف; eagerly: فوريًا; glossed
+- eager autograd → الاشتقاق التلقائي الفوري
 - eager mode → نمط التنفيذ الفوري
 - Eager Parameter Allocation (slide) → الحجز الفوري للمعلَمات
 - early peak → الذروة المبكرة
@@ -1697,6 +1822,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - engineering toolkit → العدة الهندسية
 - English contractions (text) → صيغ الاختصار الإنجليزية
 - English-centric (slide) → المتمحور حول الإنجليزية
+- enqueue time → زمن الإضافة إلى الطابور
 - ensemble → مجموعة نماذج — of subnetworks: مجموعة الشبكات الجزئية; تقريب مجموعة النماذج
 - ensemble of decision trees → مجموعات أشجار القرار
 - ensemble of seven networks → مجموعة من سبع شبكات
@@ -1713,8 +1839,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - entrywise RMS → قيمة RMS عنصرًا بعنصر
 - envelope → غلاف
 - envelope rate → معدل الغلاف
+- Envelopes vs. Bytes (kicker) → الأغلفة مقابل البايتات
 - environment configuration → إعدادات البيئة
 - ep (epoch abbreviation) → حقبة
+- epilogue (of a GEMM kernel) → خاتمة
 - epistemic → المعرفي — glossary
 - epoch means → متوسطات الحقب
 - epoch time → زمن الحقبة — time per epoch same
@@ -1734,6 +1862,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - error-correcting delta rules (SSM) → قواعد دلتا المصححة للخطأ
 - error-correcting delta updates → تحديثات دلتا المصححة للخطأ
 - errors compound (text) → تتضاعف / تتراكم الأخطاء
+- Escalation ladder (slide lead-in) → سلم التصعيد
 - escape (a saddle) → يفلت — الإفلات; escape time = زمن الإفلات
 - escape route (slide) → مسار للخروج — "Route 1 — X": المسار 1، X; Architectural Crossroads: مفترق طرق معماري
 - Escaping Saddles (slide kicker) → الإفلات من نقاط السرج
@@ -1776,7 +1905,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - exactly on the boundary → على حده بالضبط
 - exactly represented → ممثَّل تمامًا — exact: مضبوط
 - example → مثال — plural أمثلة
+- examples/s (throughput, in prose) → بالأمثلة في الثانية
 - exception → استثناء
+- excess (measured memory above the count) → زيادة
 - excess loss → الخسارة الزائدة — parameter error = خطأ المعلَمات; expected loss = الخسارة المتوقعة; initial loss = الخسارة الابتدائية
 - excess similarity → تشابه زائد
 - exchange two axes → يبادل بين محورين
@@ -1809,8 +1940,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Experimental Rigor (kicker) → الصرامة التجريبية
 - Experimental Setup (slide kicker) → إعداد التجربة
 - experimental signature → علامة تجريبية
+- Experimental Verification (kicker) → التحقق التجريبي
 - expert (MoE) → خبير — plural خبراء, masculine plural agreement (الخبراء يتلقون، الخبراء المشتركون); glossed (experts) once; after a symbol $E$ خبيرًا; "all $E$ experts": الخبراء جميعًا وعددهم $E$; "expert FFN": كل منهم شبكة FFN
 - expert buffer → مخزن الخبير المؤقت — fixed-capacity buffers: مخازن مؤقتة ثابتة السعة; slot: خانة; static buffer: مخزن مؤقت ساكن; unclipped buffer: مخزن مؤقت غير مقصوص
+- expert parallelism → توازي الخبراء — built like توازي الموترات; the glossary's proposed تواز للخبراء cannot take the article
 - expert utilization → استخدام الخبراء — heavily skewed: شديد الالتواء; expert loads: أحمال الخبراء; empirical loads: الأحمال التجريبية
 - Experts per layer (table header) → الخبراء في كل طبقة — Active $k$: النشطون $k$; Expert width / $d$: عرض الخبير / $d$; Shared expert: خبير مشترك; Stored / active parameters: المعلَمات المخزنة / النشطة
 - explaining away → الاستبعاد بالتفسير — gloss once per page; verb: تكفي لتفسير
@@ -1834,7 +1967,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - exponentially weighted moving average → متوسط متحرك موزون أسيًا
 - exponentiate → يحسب الدالة الأسية لـ — the exponentials = القيم الأسية / الدوال الأسية
 - exponentiate score differences → يضخم فروق الدرجات تضخيمًا أسيًا
+- export (a graph) → التصدير
 - exposed (hidden state, output) → مكشوف — حالة مخفية مكشوفة; expose: يكشف
+- exposed communication (time) → الاتصال المكشوف — زمن الاتصال المكشوف; hidden behind: يُخفى خلف
 - exposure bias (text) → انحياز التعرض — glossary; no gloss in exercises
 - expression (code) → تعبير
 - expression swell → تضخم التعابير
@@ -1904,6 +2039,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - feature refinement → تنقيح الميزات
 - feature reuse → إعادة استخدام الميزات
 - feature selection → انتقاء الميزات
+- feature size (lithography) → حجم العنصر — glossed (feature size); ميزة stays an ML feature
 - feature width → عرض الميزات
 - feed-forward network (FFN) → شبكة تغذية أمامية — glossed (feed-forward network, FFN); afterwards شبكة FFN where the English writes FFN
 - feedback loop → حلقة تغذية راجعة — runaway = جامحة; decision-driven = الناشئة عن القرارات
@@ -2027,6 +2163,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - folklore → الاعتقاد الشائع
 - follow-up test → اختبار متابعة
 - footprint (dataset) → حجم
+- footprint (memory taken on a GPU) → ما يشغله … من الذاكرة
 - footprint (of a kernel) → مساحة التغطية — effective footprint: مساحة تغطية فعالة
 - footwear cluster → عنقود أحذية
 - forbidden pairs → الأزواج الممنوعة
@@ -2051,15 +2188,19 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Foundational papers (reading list group) → الأوراق البحثية التأسيسية
 - Foundations (slide) → الأسس
 - fraction (exercise) → كسر
+- fraction of peak → كسر الذروة — fraction of peak throughput: كسر ذروة الإنتاجية
 - fraction of rows → نسبة الصفوف
 - fraction of validation examples → نسبة أمثلة التحقق
 - fragility (of a learning rate) → الهشاشة
+- fragmentation (memory) → التجزؤ — non-contiguous fragments: أجزاء غير متجاورة
 - fragments (text) → أجزاء
 - framework (theoretical) → أطر — without عمل (unlike إطار عمل for software)
 - framework defaults (slide) → القيم الافتراضية في أطر العمل
+- framework dispatcher → مرسِل إطار العمل
 - framework edition (MXNet/PyTorch/...) → نسخة — طبعة kept for first/second edition
 - framework overhead → العبء الإضافي لإطار العمل
 - framework tab → تبويب
+- free / release (activations) → يحرر — noun تحرير
 - free online → متاح مجانًا على الإنترنت
 - free-running decoding → فك التشفير بالتنبؤ المتتابع
 - frees mass (text) → يحرر كتلة احتمالية
@@ -2115,6 +2256,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - fully connected network → شبكة كاملة الاتصال
 - fully decayed run → جولة مكتملة الاضمحلال
 - fully masked row → صف مقنع بالكامل
+- Fully Sharded Data Parallelism (FSDP) → توازي البيانات المقسم كليًا إلى حصص — glossed (fully sharded data parallelism, FSDP) once; then طريقة FSDP (feminine), bare FSDP after a preposition
 - function class → فئة الدوال
 - function evaluations (cost unit) → عدد مرات حساب الدالة
 - function words (text) → كلمات وظيفية
@@ -2126,11 +2268,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Further Reading (page title) → قراءات إضافية
 - fuse (kernels) → تدمج … في نوى منخفضة المستوى — fused kernel: النواة المدمجة
 - fuse (query, key, value projections) → يدمج — Fused QKV projection: إسقاط QKV المدمج; Fused Causal Self-Attention: الانتباه الذاتي السببي المدمج
+- fused block (Transformer block with fused kernels) → كتلة مدمجة — fused attention: الانتباه المدمج
 - fused graph / computation → مخطط مدمج / حساب مدمج — compiled step = خطوة مصرَّفة
 - fused kernel → نواة مدمجة — plural نوى مدمجة; glossed once; kernel fusion -> دمج النوى
 - fused library layer → طبقة المكتبة المدمجة — fused library kernels: نوى المكتبة المدمجة
 - fused log-sum-exp cross-entropy → الإنتروبيا المتقاطعة المدمجة القائمة على لوغاريتم مجموع الأسيات
 - fused log-sum-exp loss → خسارة مدمجة تقوم على لوغاريتم مجموع الأسيات — slides: خسارة LogSumExp المدمجة
+- fused multiply-add → عملية ضرب وجمع مدمجة
 - fused Triton kernels → نوى Triton مدمجة
 - fused-kernel speed → سرعة النوى المدمجة
 - future tokens / pairs → الرموز المميزة المستقبلية / أزواج مستقبلية
@@ -2147,6 +2291,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - garbage in, garbage out → مدخلات رديئة، مخرجات رديئة
 - garbled words (text) → كلمات مشوهة
 - garment → قطعة ملابس — upper-body tops = الملابس العلوية
+- gate (acceptance threshold of a check) → بوابة قبول — validation loss gates: بوابات قبول على خسارة التحقق
 - gate (gradient by activation slope) → يمر … عبر بوابة — بوابة ميل التفعيل، بوابة ReLU
 - gate (LSTM, GRU) → بوابة — glossed (gate) once; sigmoid gates: بوابات سيغمويد
 - gate product → جداء للبوابات — plural جداءات للبوابات
@@ -2166,6 +2311,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - gates/SSMs (slide) → البوابات أو نماذج SSM
 - gather → الالتقاط — not التجميع (= pooling)
 - gather (indexing op) → الالتقاط — as on the ndarray page
+- gather (weights of a block from their shards) → يركّب — same verb as assemble; gathered block / weights: الكتلة المركَّبة / الأوزان المركَّبة; re-gather: يعيد تركيب; يجمع stays "sum", الالتقاط stays the indexing op
 - gating → آليات البوابات
 - gating weights → أوزان البوابات — differentiable gate: البوابة القابلة للاشتقاق
 - gauge freedom → الحرية العيارية — glossed
@@ -2213,9 +2359,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - glitch token (text) → الرمز المميز المختل — italic with gloss; plural الرموز المميزة المختلة; خلل stays bug
 - global (attention layer) → شامل — طبقة شاملة; glossed once; all-global stack -> مجموعة مكدسة كل طبقاتها شاملة
 - global average pooling → تجميع متوسط شامل — glossary form, indefinite
+- global batch → دفعة كلية — plural دفعات كلية; beside دفعة جزئية (micro-batch); global statistics (batch norm): إحصاءات شاملة; per-shard statistics: إحصاءات لكل حصة; local: محلية
 - global byte-frequency shift → الإزاحة العامة في تواترات البايتات
 - global decay → الاضمحلال الشامل — global flush: إفراغ شامل; gentle accumulation: مراكمة لطيفة
 - global generator → المولد العام
+- global gradient / global batch (over all devices) → التدرج الكلي / الدفعة الكلية
 - global gradient clipping → قص التدرج الكلي — global norm clipping: قص المعيار الكلي
 - global gradient clipping (text) → قص التدرج الكلي — الشامل stays global pooling/minima
 - global gradient-norm clipping → قص معيار التدرج الكلي
@@ -2229,6 +2377,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Global Response Normalization (GRN) → تطبيع الاستجابة الشامل — with acronym: تطبيع GRN; glossed once
 - global sample mean → متوسط العينة الشامل
 - global state → حالة عامة
+- global step (gradient accumulation) → خطوة كلية — beside الدفعة الكلية
 - global ℓ2 norm → المعيار ℓ2 الكلي
 - global-norm gradient clipping → قص التدرج بالمعيار الكلي — global-norm clipping: القص بالمعيار الكلي
 - global-pooling head → رأس التجميع الشامل
@@ -2257,8 +2406,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - gradient checking → فحص التدرجات في اختبارات الوحدات
 - gradient checkpointing → نقاط استعادة التدرج — glossed
 - gradient closure → الدالة المغلقة التي تحسب التدرج
+- gradient exchange → تبادل التدرجات
 - gradient flow → سريان التدرج
 - gradient flow (backward) → سريان التدرج — تدفق التدرج stays continuous-time ODE
+- gradient fusion → دمج التدرجات
 - gradient highway → الطريق السريع للتدرج
 - gradient horizon → أفق التدرج — log-uniform horizon: الأفق المنتظم لوغاريتميًا
 - gradient magnitude → مقدار التدرج — raw gradients = التدرجات الخام
@@ -2266,6 +2417,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - gradient penalties (GAN) → عقوبتا التدرج
 - gradient saturation → تشبع التدرج
 - gradient scale → مقياس التدرج — plural مقاييس التدرجات
+- gradient slice (slides) → شريحة التدرج — plural شرائح; the glossary's slice
 - gradient spike / Jacobian spike (text) → قفزة — plural قفزات في التدرج / القفزات في المصفوفة اليعقوبية
 - gradient step → خطوة تدرج
 - gradient tape → شريط التدرج
@@ -2284,9 +2436,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Gram matrix → مصفوفة غرام — dual مصفوفتا غرام; Kronecker stays Latin
 - granularity (of MoE experts) → دقة التقسيم
 - granularity (tokens, vocabulary) → مستوى التفصيل
+- graph break → انقطاع في المخطط — glossed (graph break); plural انقطاعات المخطط
+- graph capture → التقاط المخطط — glossed (graph capture); verb يلتقط; captured graph: المخطط الملتقط; capture system: نظام الالتقاط; ahead-of-time capture: التقاط المخطط مسبقًا
 - Graph Compilation Limits (slide) → حدود تصريف المخطط الحسابي
 - graph deep learning → التعلم العميق على البيانيات
 - graph of a function → المنحنى البياني
+- graph primitive → عملية أولية في المخطط
 - graph-tracked container → حاوية يتتبعها المخطط — to track: يتتبع; attribute scan: فحص السمات; attach a layer: إلحاق طبقة
 - graphical models → النماذج البيانية
 - grayscale → بتدرج الرمادي
@@ -2301,6 +2456,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - grid of models → شبكة قيم تضم 15 نموذجًا — شبكة القيم so not read as a network
 - grid of patches → رقع مرتبة في شبكة نقطية
 - grid of values (hyperparameter sweep) → شبكة من القيم
+- grid shape (CUDA launch grid) → شكل شبكة الخيوط — thread grids: شبكات الخيوط
 - gridding → التشبيك — gridding artifacts: آثار التشبيك المصطنعة
 - grokking → ظاهرة grokking — also in caption, exercise title and slide titles
 - ground truth (reference run) → الحقيقة المرجعية — uninterrupted: غير منقطع / دون انقطاع
@@ -2322,6 +2478,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - GRU (class noun) → شبكة GRU — plural شبكات GRU; full term الوحدة المتكررة ذات البوابات, glossed (gated recurrent unit, GRU) once; a layer: طبقة GRU; the code label: النموذج / المازج / الطرف `GRU`; not وحدة GRU, which reads beside وحدة GPU
 - guaranteed decrease → النقصان المضمون
 - guard → احتياط — plural احتياطات; slide Guards: الاحتياطات
+- guard (Dynamo: a check on input shape and dtype that a compiled graph depends on) → شرط حراسة — plural شروط الحراسة; glossed (guards); guard failure: إخفاق شروط الحراسة; احتياط stays a precaution in training code
 - guard with → احمِ … بالشرط
 - guesser → مخمن — plural مخمنون
 - Gumbel distribution → توزيع Gumbel
@@ -2333,6 +2490,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - half-cosine wave → نصف دورة من جيب التمام — slide: نصف موجة متناظر
 - half-life → عمر النصف — glossed; plural أعمار النصف; "half-life 693 steps": عمر النصف 693 خطوة
 - half-open → نصف مفتوحة
+- half-performance size → الحجم عند نصف الأداء — Half-Bandwidth Size: الحجم عند نصف عرض النطاق; half-performance message size: حجم الرسالة عند نصف الأداء
 - half-power threshold → عتبة نصف القدرة
 - half-saturation batch size → حجم الدفعة عند نصف التشبع
 - halfplane → نصف مستوٍ
@@ -2363,24 +2521,32 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - hard-mask → يقنّع تقنيعًا قاطعًا — noun التقنيع القاطع
 - hardware → العتاد
 - hardware amortization → توزيع الكلفة الثابتة للعتاد — amortizes overhead across = يوزع العبء الإضافي على; glossed
+- hardware balance → توازن العتاد
 - Hardware Benchmark (kicker) → قياس الأداء على العتاد
 - hardware counters → عدادات العتاد
 - hardware efficiency → كفاءة العتاد — also كفاءة استخدام العتاد
 - hardware failures → أعطال العتاد
+- hardware FLOPs utilization (HFU) → استغلال العتاد لعمليات FLOP — glossed with the acronym; then مقياس HFU; MFU: مقياس MFU; Utilization (heading): الاستغلال
+- hardware gap → فجوة العتاد
 - hardware recovery → التعافي من أعطال العتاد
 - hardware roofline → خط السقف للعتاد — analysis تحليل خط السقف; profiling قياس; models profile يكتمل قياسها
+- hardware scheduler → مجدول العتاد
+- hardware speed limit (slide) → حد السرعة في العتاد
 - hardware sweet spot → النقطة المثلى للعتاد
 - hardware throughput saturates → تتشبع إنتاجية العتاد
 - hardware-aligned → الملائم للعتاد
 - hardware-efficient → يحسن استغلال العتاد
+- hardware-executed FLOPs → عمليات FLOP التي ينفذها العتاد — theoretical model FLOPs: عمليات FLOP النظرية للنموذج
 - hardware-tuned → مضبوط للعتاد
 - harmonic mean → المتوسط التوافقي
 - harmonic ratios → النسب التوافقية
 - harness → أدوات — collective; one function: أداة
 - has no minimizer → ليس لها نقطة تصغير
+- hash table → جدول التجزئة — graph traversal: اجتياز المخططات; sparse matrix: مصفوفة متناثرة
 - hat (over a symbol) → القبعة
 - hazard → خطر — pl. مخاطر
 - HBM bandwidth → عرض نطاق ذاكرة HBM
+- HBM stack → مجموعة HBM مكدسة — plural مجموعات HBM المكدسة
 - He-initialized → مهيأ بتهيئة He — He stays Latin
 - He-normal weights → أوزان من تهيئة He الطبيعية — He-normal: تهيئة He الطبيعية
 - He-scaled weights → أوزان بمقياس تهيئة He — He scale = مقياس He
@@ -2441,6 +2607,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - hidden space → الفضاء المخفي
 - hidden width → العرض المخفي — plural العروض المخفية
 - hidden-unit symmetry → تناظر الوحدات المخفية
+- hide (communication behind compute) → يخفي
 - hierarchical → تراتبي
 - hierarchical hybrids → النماذج الهجينة التراتبية — hierarchical pyramid: هرم تراتبي
 - hierarchical structure → البنية التراتبية
@@ -2468,12 +2635,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - hint → تلميح — (تلميح: …)
 - Hint: → تلميح:
 - HiPPO polynomial projections (SSM) → إسقاطات HiPPO على كثيرات الحدود
+- histogram → مدرج تكراري — ارسم مدرجًا تكراريًا لـ
 - historical accumulation → تراكم تاريخي
 - historical artifacts → تفاصيل تاريخية
 - history (a past sequence a state must tell apart) → تاريخ
 - history (self.history record) → السجل — حلقة التدريب والسجل
 - history (the past) → التاريخ
 - hit → إصابة
+- hit the cache → يصيب الذاكرة المؤقتة
 - Hoeffding bounds → حدود Hoeffding — Hoeffding radius = نصف قطر … بحد Hoeffding; name stays Latin
 - Hoeffding interval → فترة Hoeffding
 - Hoeffding's inequality → متباينة Hoeffding — names Latin (Hoeffding, Vapnik, Chervonenkis, Boole, Radon, Sauer, Shelah)
@@ -2499,12 +2668,19 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - horizontally concatenated → المربوطة أفقيًا — vertically stacked: المكدسة عموديًا
 - host → المضيف — ذاكرة RAM للمضيف; onboard memory: الذاكرة المدمجة; card: بطاقة
 - host and device → المضيف والجهاز
+- host bridge (PCIe) → جسر مضيف — dual جسرا مضيف PCIe
+- host dispatch → الإرسال من المضيف — host launch: الإطلاق من المضيف; single-op dispatch: إرسال عملية واحدة; un-jitted: بلا تصريف JIT; not إرسال المضيف
+- host dispatch overhead → عبء الإرسال من المضيف
+- host dispatch time → زمن الإرسال من المضيف — host dispatch: الإرسال من المضيف; launch latency: زمن استجابة الإطلاق
+- Host Overhead and Small Kernels (heading) → عبء المضيف والنوى الصغيرة
 - host synchronization stalls → توقفات المزامنة مع المضيف
+- host-bound → مقيد بالمضيف
 - host-to-device bandwidth → عرض نطاق النقل من المضيف إلى الجهاز
 - hosted notebook → دفتر مستضاف
 - house → منزل — plural منازل; starter home = منزل صغير رخيص
 - Householder reflection → انعكاس Householder — reflection: انعكاس; reverse the sign: يعكس الإشارة
 - hover near → تحوم قرب
+- hub (of a star allreduce) → المركز — hub device: الجهاز المركزي; not محور (= axis)
 - Huber loss → خسارة هوبر — Huber = هوبر
 - human feature engineering → هندسة الميزات بأيدي البشر
 - human-preference alignment → المواءمة مع تفضيلات البشر — المحاذاة = sequence alignment
@@ -2530,6 +2706,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - i.i.d. (exercise) → مستقلة ومتماثلة التوزيع
 - i.i.d. draws (exercise) → سحبات مستقلة ومتماثلة التوزيع
 - I/O → الإدخال والإخراج
+- I/O pads → وسائد الإدخال والإخراج — solder bumps: نتوءات اللحام
 - ideal linear-time layer → الطبقة المثالية ذات الزمن الخطي
 - identical learned class → الفئة المتعلَّمة نفسها
 - identical mathematical trajectory → مسار رياضي مطابق
@@ -2541,9 +2718,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - identity map → الدالة المحايدة — identity path (figure): المسار المحايد; identity surrogate: بديل محايد
 - identity mapping / the identity → الدالة المحايدة
 - identity path → المسار المحايد
+- identity permutation → التبديل المحايد
 - identity shortcut → وصلة تخطٍ محايدة — definite وصلة التخطي المحايدة; not وصلة تخطي هوية
 - identity term → الحد المحايد — identity highway: طريق سريع محايد
 - idle (heads) → تبقى خاملة
+- idle fraction (of a step) → كسر الخمول
+- idle gap → فجوة خمول — idle device: الجهاز خامل; busy: مشغول; busy device time: زمن انشغال الجهاز
 - IDX byte files → ملفات IDX الثنائية
 - IEEE convention → عرف IEEE
 - IID → i.i.d. — as glossed in u01: افتراض i.i.d.; dependent observations = المشاهدات غير المستقلة
@@ -2649,6 +2829,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - initial plateau → استواء ابتدائي — stalls -> يتعثر
 - initial variance → التباين الابتدائي
 - Initialization (page title) → التهيئة
+- Initialization Discipline (kicker) → منهجية التهيئة
 - Initialization Invariants (kicker) → لامتغيرات التهيئة
 - Initialization of Residual Networks (section heading) → تهيئة شبكات البواقي
 - initialized small → تُهيأ بقيم صغيرة
@@ -2681,10 +2862,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - instantaneous noise ball → كرة الضوضاء اللحظية
 - instantiate (a model) → ينشئ النموذج
 - instantiate (an architecture) → ينشئ
+- instruction (machine) → تعليمة — instruction fetch and decode: جلب التعليمة وفك ترميزها
+- instruction issue slots → خانات إصدار التعليمات — tile instructions: تعليمات البلاطات
 - instrumentation artifact → أثر جانبي لأدوات القياس
 - intact gradients → تدرجات سليمة
 - integer ids (text) → معرفات صحيحة
 - integer index tensors → موترات فهارس صحيحة
+- integer linear programming → البرمجة الخطية الصحيحة
 - integer overflow → طفح الأعداد الصحيحة
 - integer tensors (text) → موتران من الأعداد الصحيحة
 - integrate (SDE/ODE) → يكامل — noun المكاملة
@@ -2694,20 +2878,25 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - integrity → السلامة
 - intensity (pixel) → الشدة — arithmetic intensity: الكثافة الحسابية
 - intensity level → مستويات شدة — plural form in the log
+- inter-GPU link → الوصلة بين وحدات GPU — link (between GPUs or devices): وصلة, plural وصلات; host link: وصلة المضيف; bus bandwidth: عرض نطاق الناقل; host-staged: مرورًا بالمضيف; رابط stays a hyperlink
 - inter-layer routing / multi-layer routing → التوجيه بين الطبقات / التوجيه عبر طبقات متعددة
 - inter-token differences → الفروق بين الرموز المميزة
 - interactive visualizations → تمثيلات بصرية تفاعلية — Visualizing: التمثيل البصري
 - intercept → المقطع — glossary
 - intercept (keys and values in a layer) → اعتراض
+- interconnect → وصلة ربط — multi-GPU interconnects: وصلات الربط بين وحدات GPU; Interconnect Impact (kicker): أثر وصلة الربط
+- Interconnect Sensitivity (kicker) → الحساسية لوصلة الربط
 - interference (matrix memory) → التشويش — glossed (interference); interfering pairs: الأزواج المشوِّشة; تداخل stays cross-talk
 - interior layer → طبقة داخلية
 - interior pixel → بكسل داخلي — البكسل الداخلي
 - interior tiles → البلاطات الداخلية — run unmasked -> تعمل بلا تقنيع
 - interleave → يناوب بين … و … — التناوب
 - intermediate product → الجداء الوسيط
+- intermediate representation → تمثيل وسيط — typed: ذو أنواع; jaxpr stays Latin after تمثيل
 - intermediate tensor / array → موتر وسيط — array: مصفوفة وسيطة
 - intermediate width → عرض وسيط — single-channel kernel: نواة أحادية القناة
 - internal covariate shift → انزياح المتغيرات المصاحبة الداخلي — glossed once
+- internal node (tree) → عقدة داخلية
 - internal projection matrices → مصفوفات الإسقاط الداخلية
 - interoperability → التشغيل البيني
 - interpolate → يستوفي — glossary استيفاء
@@ -2720,6 +2909,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - interpolation (fitting data exactly) → الاستيفاء
 - interpolation (smoothing) → الاستيفاء — interpolated Kneser–Ney: تنعيم Kneser–Ney الاستيفائي
 - interpolator → مستوفٍ — المستوفي، مستوفيات; interpolating function = الدالة المستوفية
+- interposer → وسيط — وسيط سيليكوني, glossed (interposer) once
 - interpretability → قابلية التفسير
 - interpretability limits → حدود قابلية التفسير
 - Interpretability Methodology (slide) → منهجية قابلية التفسير
@@ -2732,6 +2922,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - interventional tools → الأدوات التدخلية
 - intra-attention → الانتباه الداخلي — glossed
 - intra-chunk / inter-chunk scan → داخل القطعة / المسح بين القطع — chunk-end states: حالات نهايات القطع; past-state readout: قراءة الحالة السابقة
+- intra-node NVLink domain → نطاق NVLink داخل العقدة الواحدة — node (machine of a cluster): عقدة
 - intractable → غير عملي
 - intractable (search) → غير عملي
 - intrinsic difficulty → الصعوبة الأصيلة — not الذاتية (= eigen)
@@ -2747,6 +2938,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - invariant to width → ثابت أمام العرض — across widths: ثابت عبر العروض
 - inventory → قائمة الجرد
 - inverse → المعكوس
+- inverse (reciprocal of a rate or a time) → مقلوب — مقلوب عرض نطاق الناقل، مقلوب زمن مسح الذاكرة; معكوس stays the matrix inverse
 - inverse Hessian → معكوس المصفوفة الهيسية
 - inverse temperature → مقلوب درجة الحرارة — glossed once; inverse variance -> مقلوب التباين; معكوس stays matrix inverse
 - invert (matrix) → عكس — negative eigenvalues invert the step direction = تعكس اتجاه الخطوة
@@ -2764,6 +2956,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - IsoFLOP advantage → الأفضلية بمقياس IsoFLOP — IsoFLOP Setup: إعداد IsoFLOP; IsoFLOP Learning Curves: منحنيات تعلم IsoFLOP
 - isotropic → متناحٍ — definite المتناحي / المتناحية
 - isotropic quadratic bowl → الوعاء التربيعي المتناحي
+- issue (an operation, a call, from the host) → يصدر — noun إصدار
+- issue an operation (host) → يصدر عملية — host cost of issuing each operation: كلفة إصدار كل عملية على المضيف
 - italic → المائلة
 - iterable → كائن قابل للتكرار
 - iterate (noun) → ناتج التكرار — ناتجا تكرارين متعاقبين
@@ -2779,7 +2973,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - jagged → وعر
 - JAX trainer (code) → مدرب JAX
 - Jensen–Shannon (name) → Jensen--Shannon — stays Latin
+- jit (verb) → يصرّف في أثناء التنفيذ — jitted function: دالة مصرَّفة في أثناء التنفيذ; (JIT) once at the first mention in a block of exercises
 - JIT compilation → التصريف في أثناء التنفيذ (JIT) — acronym in parentheses at first mention
+- jitted call → استدعاء مصرَّف في أثناء التنفيذ
 - jitter → اهتزاز
 - job (training) → المهمة — مهمة
 - join (tables) → يربط
@@ -2794,20 +2990,27 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Kaiming initialization → تهيئة Kaiming — name stays Latin like He; transposed Jacobian: منقول المصفوفة اليعقوبية
 - keep gate / keep-gate (initialization) → بوابة الاحتفاظ — indefinite بوابة احتفاظ; keep-gate LSTM and GRU: شبكتا LSTM و GRU ببوابة الاحتفاظ; keep-gate variants: نسختا بوابة الاحتفاظ; the code label `keep gate` is copied; not بوابة إبقاء
 - Kelvin / Celsius → الكلفن — Celsius = الدرجات المئوية
+- kept configuration → الإعداد المعتمد — branch (a configuration that is not kept): فرع, plural فروع; Branch Test: اختبار فرعي
 - kernel (compute (GPU)) → نواة — plural نوى; Tensor Core hardware cores: أنوية
 - kernel (similarity, Gaussian) → نواة — plural نوى; نواة تشابه، النواة الغاوسية
 - kernel (weight matrix of a dense layer (Keras/NNX)) → النواة — pl. النوى; without الالتفاف
+- kernel breakdown (of a step's time) → تفصيل الزمن بحسب النوى
 - kernel classifier → مصنف بدالة نواة
 - kernel enlargement → تكبير النواة — enlarge a kernel: يكبر النواة
+- kernel fusion → دمج النوى — operator fusion: دمج العمليات; activation recomputation: إعادة حساب التفعيلات
 - kernel launch (GPU) → إطلاق النواة — glossed; GPU kernel: نواة, pl. نوى; custom GPU kernels: نوى GPU مخصصة; deterministic kernel: نواة حتمية
 - kernel methods → طرق النواة
+- kernel profiling → تحليل أداء النوى
 - kernel regression (attention) → انحدار النواة — Nadaraya--Watson, Bahdanau stay Latin: انحدار النواة بطريقة Nadaraya--Watson، انتباه Bahdanau
+- kernel replay → إعادة تشغيل النوى — glossed (kernel replay); replay (verb): يعيد تشغيل; CUDA graph replay: إعادة تشغيل مخطط CUDA
 - kernel size sweep → مسح حجم النواة
 - kernel slice / filter slice → شريحة النواة / شريحة المرشح — شريحة من النواة
+- kernel split (of step time) → تقسيم الزمن بين النوى
 - kernel stack → مجموعة نوى مكدسة
 - kernel taps → أوزان النواة
 - kernel-launch overhead → العبء الإضافي الناتج عن إطلاق النوى
 - kernel-launch overhead / latency → العبء الإضافي لإطلاق النواة / زمن استجابة إطلاق النواة
+- kernel-start floor → أرضية بدء النواة
 - kernel-weighted average → متوسط موزون بالنواة
 - kernelizing / kernelized → صياغة الدرجة بنواة / المصوغ بنواة — factorized kernel -> نواة محللة إلى عوامل, glossed once
 - key (JAX) → مفتاح — split a key: يقسم المفتاح (u01) / يشتق مفتاحًا (init); random key: مفتاح عشوائي; glossed
@@ -2857,6 +3060,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - KV-cache decoding kernels → نوى فك التشفير بذاكرة KV المؤقتة
 - L-smooth descent bound → حد النزول للدوال الملساء بثابت $L$
 - L-smoothness → الملاسة بثابت $L$ — L-smooth = أملس / ملساء بثابت $L$, glossed (L-smooth) in plain text
+- L2 cache → ذاكرة L2 المخبئية — hardware caches (L2, SRAM, cache lines, cache miss) are مخبئية; software caches and the KV cache stay مؤقتة
 - label flip → قلب الوسوم
 - label frequencies → التكرارات النسبية للوسوم
 - label masking (slide) → تقنيع الوسوم
@@ -2876,6 +3080,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - landscape interpretation → التفسير بمشهد الخسارة — slide
 - landscapes and gradient descent (page title) → المشاهد والنزول التدرجي — chapter_optimization/gd page title
 - Landscapes and Gradient Descent (section title) → المشاهد والنزول التدرجي
+- lane (PCIe, NVLink) → ممر — plural ممرات, glossed (lane) once
 - language modeling → نمذجة اللغة
 - Language Modeling at Equal Size (heading) → نمذجة اللغة عند تساوي الحجم — Short Windows / Long Windows: النوافذ القصيرة / النوافذ الطويلة
 - Language Modeling Benchmark (kicker) → اختبار معياري لنمذجة اللغة
@@ -2890,6 +3095,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - large pretraining scales → أحجام التدريب المسبق الكبيرة
 - large-scale (text) → واسع النطاق
 - large-scale recipes → وصفات التدريب واسعة النطاق
+- Larger Minibatches (heading) → الدفعات المصغرة الأكبر
 - largest admissible tile → أكبر بلاطة مسموح بها
 - largest finite value → أكبر قيمة منتهية
 - largest singular value → القيمة المفردة العظمى
@@ -2897,6 +3103,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - largest weight → الوزن الأعظم
 - Lasso → Lasso — Latin after a class noun: طريقة Lasso، انحدار Lasso
 - late decay → الاضمحلال المتأخر
+- latency hiding → إخفاء زمن الاستجابة
+- latency-bound → مقيد بزمن الاستجابة
+- latency-hiding scheduler (XLA) → المجدول المخفي لزمن الاستجابة
 - latent → كامن
 - latent attention → الانتباه الكامن
 - latent autoregressive model → نموذج انحدار ذاتي كامن
@@ -2905,6 +3114,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Latent Bottleneck Code (kicker) → شيفرة عنق الزجاجة الكامن
 - latent summary (text) → ملخص كامن
 - lattice → شبيكة — plural شبيكات; sparse lattice: شبيكة متناثرة
+- launch gap → فجوة إطلاق
+- launch-bound → مقيد بالإطلاق
+- launcher (host thread that launches kernels) → المُطلِق — with its marks (المطلق reads "absolute"); single host launcher: مُطلِق واحد على المضيف; single-launcher model: نموذج المُطلِق الواحد
+- launcher (program that spawns the worker processes, torchrun) → برنامج إطلاق — spawn (processes): ينشئ
 - law of cosines → قانون جيب التمام
 - law of total probability → قانون الاحتمال الكلي
 - Layer Architecture (kicker) → معمارية الطبقة
@@ -2913,6 +3126,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - layer gain → كسب الطبقة
 - layer gradient spread (optimization) → تفاوت تدرجات الطبقات
 - layer scale → مقياس الطبقة — LayerScale stays Latin on slides (مقياس LayerScale); glossed once
+- layer stack → مجموعة الطبقات المكدسة
 - layer taxonomy → أصناف الطبقات — slide
 - layer-sequential unit-variance initialization → التهيئة المتتابعة على الطبقات بتباين مقداره واحد — unit-variance inputs: مدخلات تباينها واحد
 - layerwise → طبقة بطبقة — or الخاصة بكل طبقة
@@ -2963,6 +3177,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - learned scale parameter → معلَمة مقياس متعلَّمة
 - Learned Tables (slide title) → الجداول المتعلَّمة
 - learner → خوارزمية تعلم — definite خوارزمية التعلم; unstable learner = خوارزمية تعلم غير مستقرة
+- learner (the model variable of the training check, named without backticks) → النموذج learner — the code name is copied; خوارزمية تعلم stays the learning-theory sense
 - learning algorithm → خوارزمية التعلم
 - learning primitive → عنصر أولي في التعلم
 - learning-rate ceiling → سقف معدل التعلم
@@ -3022,6 +3237,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - limiting fraction → النسبة الحدية
 - Limits and Open Problems → الحدود والمسائل المفتوحة
 - Limits of a Fixed-Size State (heading) → حدود الحالة ثابتة الحجم — limits here are bounds, so not قصور; slide "Limit 1 / Limit 2": الحد 1 / الحد 2
+- Limits of Compilation (heading) → حدود التصريف — as the lexicon's حدود تصريف المخطط الحسابي
 - Limits of … (heading, shortcomings) → قصور …
 - line search → البحث الخطي — glossed
 - linear alignment → المحاذاة الخطية — saturation point: نقطة تشبع
@@ -3035,6 +3251,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - linear combination → تركيب خطي
 - linear decay (optimization) → الاضمحلال الخطي
 - linear dynamical system → نظام ديناميكي خطي — plural الأنظمة الديناميكية الخطية
+- linear fit → ملاءمة خطية
 - linear head → رأس خطي — definite الرأس الخطي; output head: رأس المخرجات
 - linear interpolation → الاستيفاء الخطي
 - linear map → تحويل خطي — glossary
@@ -3061,6 +3278,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - linearly independent / dependent → مستقلة خطيًا / مرتبطة خطيًا
 - linearly separable → قابلة للفصل خطيًا
 - linearly stable → مستقرة خطيًا — glossary استقرار خطي
+- Link Calibration (kicker) → معايرة الوصلة — calibrate (a constant by measurement): يعاير
+- link cost → كلفة الوصلة
+- link-bound → مقيد بالوصلة — compute share: نصيب الحوسبة
 - Lipschitz continuous → مستمر ليبشيتزيًا بثابت $L$ — L-Lipschitz continuous; glossary
 - Lipschitz sensitivity bound → حد ليبشيتز للحساسية — Lipschitz slope = ميل ليبشيتز
 - list containers → حاويات القوائم
@@ -3089,6 +3309,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - local resolution → دقة التمييز المحلي — position resolution دقة تمييز المواضع
 - local response normalization → تطبيع الاستجابة المحلية — glossed at first mention
 - local rule → القاعدة المحلية
+- local SGD → خوارزمية SGD المحلية
 - local syntax → النحو المحلي
 - Local Token Binding Ablation (kicker) → استئصال الإقران المحلي للرموز المميزة
 - local token mixing → مزج محلي للرموز المميزة — local receptive-field mixing: مزج بمجال استقبال محلي
@@ -3127,6 +3348,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - logarithmic target transformation → التحويل اللوغاريتمي للهدف
 - logarithmic y-axis → محور عمودي لوغاريتمي
 - logged symptom → العرَض المسجل — plural أعراض
+- logging interval → فترة التسجيل
 - logical AND → عملية AND المنطقية — AND stays Latin; conjunction rule -> قاعدة الوصل; composite mask -> قناع مركب
 - logistic sigmoid → دالة سيغمويد اللوجستية
 - logit → لوجيت — dual لوجيتان, plural لوجيتات; raw logits = اللوجيتات الخام; multi-logit head = رأس متعدد اللوجيتات
@@ -3182,12 +3404,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - low-loss basin → حوض منخفض الخسارة
 - low-pass box filtering → الترشيح الصندوقي منخفض التمرير
 - low-power (streaming) → منخفض القدرة
+- low-precision formats → الصيغ منخفضة الدقة — narrow formats: الصيغ الضيقة
 - low-probability choices (text) → الاختيارات ضعيفة الاحتمال
 - low-rank → منخفض الرتبة
 - low-rank key-value projections → إسقاطات منخفضة الرتبة للمفاتيح والقيم — compress cache across head count, width, length
 - low-rank KV compression → ضغط KV منخفض الرتبة — low-dimensional: منخفض البُعد
 - low-rank latent compression (MLA) → الضغط الكامن منخفض الرتبة (MLA) — table and slides: انتباه MLA; "KV compressed to a 512-dim latent": ضغط KV إلى تمثيل كامن بُعده 512
 - low-rank sequence projections → إسقاطات منخفضة الرتبة للتسلسل
+- lower (compiler: a graph into kernels) → يخفّض … إلى — noun التخفيض, as in برنامج HLO الناتج عن التخفيض
 - lower bound → حد أدنى — verb: يوجد حدًا أدنى لـ; strict lower bound: حد أدنى صارم
 - lower-order tensor → الموتر الأدنى مرتبة
 - lower-triangular / upper-triangular → مثلثية سفلية / المثلث العلوي — lower triangle -> مثلث سفلي; causal triangle -> مثلث سببي
@@ -3235,6 +3459,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - marginal returns → العوائد الحدية — finite-model / finite-data penalty: عقوبة النموذج المحدود / البيانات المحدودة; tangency points: نقاط التماس
 - marginalization → التهميش
 - mark (positions in a window, exercise) → يحدد — marked positions: المواضع المحددة; موسوم stays the marked symbol of selective copying
+- mark as reusable (buffers) → يسِم … بأنها قابلة لإعادة الاستخدام
 - marked symbol → رمز موسوم — plural رموز موسومة; not مميَّز (= token) and not معلَّم (= parameter)
 - marked with #@save → الموسومة بالعلامة `#@save`
 - marker (plot) → علامة
@@ -3261,6 +3486,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - massive outlier activations → قيم شاذة هائلة من التفعيلات
 - Master Comparison (slide title) → المقارنة الجامعة
 - master equation / Master Formula → معادلة جامعة / الصيغة الجامعة
+- master weights (fp32 shards) → الأوزان الرئيسية — master shards: الحصص الرئيسية
 - master weights / master copy → الأوزان الرئيسية — نسخة رئيسية; indefinite أوزان رئيسية; master copies: نسخ رئيسية
 - match-and-copy head → رأس المطابقة والنسخ — glossed
 - matched CNN / ResNet (slides) → شبكة CNN مطابقة / شبكة ResNet المطابقة — body: مساوية في عدد المعلَمات
@@ -3278,6 +3504,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Mathematics for Deep Learning (part) → الرياضيات للتعلم العميق
 - matmul → جداء مصفوفات
 - matrix calculus → التفاضل المصفوفي
+- matrix contractions (the matrix products of a step, summary) → عمليات انكماش مصفوفية — as عمليات انكماش الموترات in the body
 - matrix form → الصيغة المصفوفية
 - matrix head → رأس مصفوفي
 - matrix inversion → عكس مصفوفة
@@ -3288,6 +3515,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - matrix orthogonalization → معامدة المصفوفات — orthogonalized optimizers = محسنات المعامدة; orthogonalized matrices = تخضع للمعامدة; verb يعامد; not تعميد
 - matrix preconditioner → المُشرِّطات المسبقة المصفوفية — full-matrix preconditioning = اشتراط مسبق بالمصفوفة الكاملة
 - matrix product → جداء المصفوفات
+- Matrix Products across Sizes (heading) → جداءات المصفوفات بأحجام مختلفة
 - matrix state → حالة مصفوفية
 - matrix--slope factor / operator → عامل / مؤثر من مصفوفة وميل
 - matrix-state recurrence → علاقة تكرارية ذات حالة مصفوفية — page title العلاقات التكرارية ذات الحالة المصفوفية; matrix recurrence: العلاقة التكرارية المصفوفية; decayed: ذات الاضمحلال; additive: الجمعية
@@ -3332,6 +3560,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - mechanistic interpretation → تفسير الآلية — mechanistic opacity -> غموض الآلية
 - mechanistic pitfall → مزلق في تفسير الآلية
 - median imputation → التعويض بالوسيط
+- mega-kernel (hand-written) → نواة عملاقة — plural نوى عملاقة
 - megabyte → ميغابايت
 - megapixel → ميغابكسل — 1MP kept on slides
 - memorization → الحفظ — memorize = يحفظ
@@ -3351,8 +3580,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - memory horizon (text) → أفق الذاكرة
 - memory overhead → عبء ذاكرة إضافي
 - memory pass (slide) → مرور على الذاكرة
+- memory pipe → أنبوب ذاكرة
+- memory pool → مجمع ذاكرة — shared memory pool: مجمع ذاكرة مشترك
 - memory rule → قاعدة ذاكرة — four memory rules: أربع قواعد للذاكرة
+- Memory saver (not kept) (table cell) → توفير للذاكرة (غير معتمد) — unkept branch: فرع غير معتمد
 - memory slot (minGRU) → خانة الذاكرة
+- memory sweep time → زمن مسح الذاكرة — glossed (memory sweep time); short زمن المسح
 - memory traffic → حركة البيانات في الذاكرة
 - memory traffic / HBM traffic → حركة البيانات في الذاكرة / في HBM
 - memory views (slide) → منظورات للذاكرة — عرض stays the tensor view
@@ -3361,15 +3594,19 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - memory-compute asymmetry → اللاتناظر بين الذاكرة والحساب
 - memory-efficient → مقتصد في الذاكرة
 - memory-mapping → تعيين الملف في الذاكرة
+- memory-starved / math-saturated ops → العمليات المحرومة من الذاكرة / المشبعة حسابيًا
 - memoryless → عديم الذاكرة — memoryless limit = الحالة الحدية عديمة الذاكرة
 - mental arithmetic → الحساب الذهني
 - merge (BPE, one learned rule) → دمج — plural عمليات الدمج (ثلاث عمليات دمج); after a number: 768 دمجًا
 - merge (partial states) → الدمج — the merged ℓ -> ناتج الدمج
+- merge heads → ضم الرؤوس — دمج stays fuse
 - merge rank (BPE) → رتبة الدمج
 - merge rule (BPE) → قاعدة الدمج
 - merge table (BPE) → جدول الدمج
 - merge tree (BPE) → شجرة دمج — italic with gloss
 - mesh → الشبكة
+- message (communication) → رسالة — plural رسائل
+- message envelope → غلاف الرسالة — plural أغلفة الرسائل
 - meta tensor → موترات *meta* — meta device: جهاز meta (Latin); materialize: تحويل إلى نموذج فعلي; trace abstractly: يتتبع تتبعًا مجردًا
 - metadata → بيانات وصفية — glossed
 - metadata header → ترويسة بيانات وصفية
@@ -3382,10 +3619,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - micro design → التصميم التفصيلي
 - micro-batch (gradient accumulation) → دفعة جزئية
 - micro-batch (very small batch) → الدفعات بالغة الصغر
+- microbenchmark → قياس أداء مصغر — plural قياسات أداء مصغرة
+- microscaling → تحجيم مصغر
+- microseconds (written out) → ميكرو ثانية — plural ميكرو ثوان; symbol copied
 - mid-run → في أثناء الجولة
 - midpoint → نقطة المنتصف
 - milliseconds (written out) → ميلي ثانية — ميلي ثوان; symbols ms and s copied
 - milliseconds / microseconds → في أجزاء من الألف / من المليون من الثانية
+- min-cut partitioner → مقسِّم القطع الأصغر
 - minGRU → طبقة minGRU — class noun طبقة for the layer (طبقة minGRU عرضها $d$), كتلة minGRU for a block; the trained model: نموذج minGRU, النموذج `MinGRU`; not شبكة minGRU
 - miniature → مصغر
 - minibatch assembly → تكوين الدفعات المصغرة
@@ -3441,6 +3682,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - mode → نمط — نمط التدريب، نمط tf32، نمط حتمية
 - mode (training / evaluation) → نمط — headless mode = النمط بلا عرض
 - mode connectivity → ترابط القيم الصغرى — glossed; نمط is the Hessian eigenmode here
+- model (verb, exercises) → نمذج
 - Model / Metric (table header) → النموذج / المقياس
 - model casting → تحويل نوع النموذج — cast: يحول النوع
 - model class → فئة النماذج — parallel to فئة الفرضيات; صنف = Python class; عائلة = family
@@ -3449,6 +3691,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - model ensembling (slide) → تكوين مجموعات النماذج
 - model factory → مصنع نماذج
 - model family → عائلة النماذج
+- model FLOPs utilization (MFU) → استغلال النموذج لعمليات FLOP — built like استغلال العتاد لعمليات FLOP on the further-reading page; glossed at the definition; then مقياس MFU; "$45\%$ MFU": $45\%$ بمقياس MFU
 - Model Predictive Control (RL) → التحكم التنبؤي بالنموذج
 - model soups → حساء النماذج — glossed
 - model-agnostic interface (API) → واجهة مستقلة عن النموذج
@@ -3482,6 +3725,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - MoE Layer Anatomy (kicker) → تشريح طبقة MoE
 - MoELayer (class noun) → الصنف `MoELayer` — an instance in a block: طبقة `MoELayer`; `attn_factory`, `ffn_factory`: الخطاف
 - MoELayer Implementation (kicker) → تنفيذ MoELayer
+- moment estimates (Adam) → تقديرا العزمين — on slides عزما Adam, as the lexicon
 - momentum → الزخم — heavy-ball = زخم الكرة الثقيلة; coefficient = معامل الزخم
 - momentum average → متوسط الزخم
 - Momentum on Data (section heading) → الزخم على البيانات
@@ -3507,6 +3751,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - multi-branch → متعدد الفروع
 - multi-channel → متعدد القنوات — multi-input kernel: نواة متعددة المدخلات
 - multi-fold speedup → تسريع بعدة أضعاف — speedup -> التسريع
+- Multi-GPU (slide lead-in) → تعدد وحدات GPU — Multi-GPU Scaling: تناسب الأداء مع عدد وحدات GPU
+- Multi-GPU from First Principles (page title) → وحدات GPU المتعددة من المبادئ الأولى — multi-GPU step times: أزمنة الخطوة على وحدات GPU متعددة
 - multi-head (adjective) → متعددة الرؤوس
 - Multi-Head Latent Attention (MLA) → الانتباه الكامن متعدد الرؤوس — glossed (Multi-Head Latent Attention, MLA) once, on the page that defines it; then انتباه MLA / MLA; table "Low-rank latent (MLA)": متجه كامن منخفض الرتبة (MLA)
 - multi-head scaling → تحجيم الانتباه متعدد الرؤوس
@@ -3514,6 +3760,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - multi-hop leakage (slide) → تسرب متعدد القفزات — direct leakage: تسرب مباشر; Information Leakage Hazard: خطر تسرب المعلومات
 - multi-horizon models → نماذج لآفاق متعددة — slide
 - Multi-Layer Interaction (kicker) → التفاعل بين الطبقات المتعددة
+- multi-node parallelism → التوازي على عقد متعددة
 - multi-object ambiguity → التباس تعدد الكائنات
 - multi-polynomial Polar Express variant → صيغة Polar Express متعددة كثيرات الحدود — name Latin
 - Multi-Scale Geometry (slide) → هندسة متعددة المقاييس
@@ -3540,6 +3787,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - multiplier (per-step factor of a coordinate) → العامل الضربي
 - multiplier / factor (0.2 sqrt(max(m,n)) scale) → المعامل
 - multiply A by B → يضرب … في …
+- multiply-accumulate operations → عمليات الضرب والمراكمة — multiply-add stays عملية ضرب وجمع
 - multiply-add → عملية ضرب وجمع — plural عمليات الضرب والجمع; after a number: N عملية ضرب وجمع; slide MACs: عمليات MAC
 - multiset intersection → تقاطع المجموعات المتعددة
 - multivariable derivatives → المشتقات متعددة المتغيرات
@@ -3562,6 +3810,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - naive → الساذج — الانتباه الساذج / التنفيذ الساذج
 - naive autoregressive generation → التوليد ذاتي الانحدار الساذج
 - naive expression → التعبير الساذج
+- named mesh → شبكة مسماة — array placements: توضيع المصفوفات
 - namespace → فضاء الأسماء
 - NaN (prose) → القيمة NaN
 - narrative → سردية — plural سرديات
@@ -3572,6 +3821,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - nat / bit (information) → نات / بت — وحدة النات، وحدة البت; invariant after a number: $0.37$ نات
 - native (implementation) → أصلي — الطبقة الأصلية، مكافئ أصلي
 - native data loader → محمل البيانات الأصلي في إطار العمل
+- native format peak (of a configuration) → ذروة الصيغة الأصلية
 - native resolution → دقة الصورة الأصلية
 - nats/byte → نات لكل بايت
 - nats/byte (slides) → نات/بايت — body text نات لكل بايت
@@ -3621,7 +3871,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - no free lunch theorem → مبرهنة لا غداء مجاني
 - no ties → لا تعادل
 - no-op → عملية بلا أثر
+- no-op call → استدعاء بلا أثر — no-op function: دالة بلا أثر
 - no-op target → هدف هو عملية بلا أثر
+- no-overlap prediction → التنبؤ بلا تراكب — no-overlap floor: أرضية انعدام التراكب
 - Nobel Prize → جائزة نوبل
 - node → عقدة — plural عقد
 - noise ball → كرة الضوضاء — stationary noise ball = كرة الضوضاء المستقرة; glossed
@@ -3642,6 +3894,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - noisy descent bound → حد النزول مع الضوضاء
 - noisy gradient → التدرج المشوب بالضوضاء
 - noisy state → الحالة المشوبة بالضوضاء
+- nominal (rate, figure) → اسمي — nominally: اسميًا; (1.0 rated) in a table cell: (1.0 اسميًا)
 - nominal categories → فئات اسمية
 - nominal learning rate → معدل التعلم الاسمي — nominal = القيمة الاسمية
 - nominal receptive field → مجال الاستقبال الاسمي
@@ -3654,6 +3907,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - non-invasive (hooks) → لا تمس الشيفرة
 - non-invasive hook → خطافات لا تمس الشيفرة
 - non-looping (text) → لا يدور في حلقات
+- non-matmul kernels → النوى خارج جداءات المصفوفات — non-matmul device time: زمن الجهاز خارج جداءات المصفوفات; matmul-only bound: الحد الخاص بجداءات المصفوفات وحدها
 - non-monotonic dip → انخفاض غير رتيب
 - non-normal (matrix) → غير ناظمي
 - non-overlapping pixel patches → رقع غير متداخلة من البكسلات — ViT patches رقع ViT
@@ -3678,6 +3932,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - normal (perpendicular (normal equations)) → ناظم — ناظمًا، الناظمية; (normal) glossed once
 - normal interval / normal radius / normal approximation → الفترة الطبيعية / نصف القطر الطبيعي / التقريب الطبيعي
 - normal matrix (commutes with its adjoint) → مصفوفة ناظمية — not طبيعية (normal distribution) and not نظامية (regular language, normal float)
+- normal range (of a floating-point format) → المدى النظامي
 - normal range estimator → مقدر المدى للتوزيع الطبيعي
 - normal variable → متغيرات طبيعية — expected value -> القيمة المتوقعة
 - normalization (axiom) → التطبيع
@@ -3716,13 +3971,17 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - numerator / denominator → بسط / مقام
 - numeric category code → رمز فئة عددي — plural رموز الفئات العددية
 - numerical bug → مواطن الخلل العددية
+- numerical equivalence → التكافؤ العددي
 - Numerical Formats (page title) → الصيغ العددية
 - numerical precision (text) → الدقة العددية
 - numerical sanity check → فحص السلامة العددي — analytical hand-check: فحص تحليلي يدوي
 - numerical stability → استقرار عددي
+- numerical tolerance → هامش السماح العددي
 - Numerical Verification (kicker) → التحقق العددي
 - numerically stable → مستقر عدديًا
 - numerics (slide) → الصيغ العددية
+- NVLink fabric → شبكة ربط NVLink — plural شبكات ربط NVLink; slide short form شبكات NVLink; in the fabric: في شبكة الربط
+- NVMe drives → أقراص NVMe
 - object (mathematical) → كائن
 - object graph → مخطط الكائنات
 - object-oriented → كائني التوجه — التصميم كائني التوجه، أصناف كائنية التوجه; glossed once
@@ -3733,6 +3992,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - observed label / observed class → الوسم المرصود / الفئة المرصودة
 - observed value → القيمة المرصودة
 - obsolete → عفا عليه الزمن
+- occupancy floor → أرضية الإشغال — in flight: قيد النقل; Little's Law: قانون Little
 - occurrence (text) → مواضع / مرات الورود
 - occurrences → مرات الورود
 - octave (slide) → فترة تضاعف
@@ -3746,6 +4006,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - offline → دون اتصال
 - offline (fitted on all pairs at once) → غير آني — القاعدة غير الآنية `least squares`; not دون اتصال (network sense)
 - offline RL (RL) → التعلم المعزز دون اتصال — glossary غير متصل not used
+- offload (state to host memory or disk) → يحيل إلى — noun الإحالة, as the lexicon's offload to copy engines
 - offset (relative position) → الإزاحة — الإزاحة النسبية; fixed-offset shortcut -> طريق مختصر بإزاحة ثابتة (وصلة التخطي stays ResNet)
 - offset / shift (position) → إزاحة — relative offset الإزاحة النسبية; global shifts الإزاحة الشاملة
 - offset constraint → قيد الإزاحة
@@ -3753,7 +4014,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - on demand → عند الطلب
 - on the fly → آنيًا — binds each token to its successor
 - on the order of n^2 → من مرتبة n^2
+- on-chip → على الرقاقة — off-chip: خارج الرقاقة; chip: رقاقة
+- on-chip buffering → التخزين المؤقت على الرقاقة
 - on-chip SRAM → ذاكرة SRAM على الرقاقة
+- on-chip tiling → التقسيم إلى بلاطات على الرقاقة
+- on-package bridge → الجسر داخل الغلاف
 - on-the-fly augmentation → زيادة البيانات الآنية
 - one batched operation → عملية واحدة بالدفعات
 - one-dimensional stacks → المجموعتان المكدستان أحاديتا البُعد
@@ -3767,6 +4032,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - one-shot pattern completion (slide) → إكمال الأنماط من ورود واحد — single exposure ورود واحد (داخل السياق)
 - one-sided → أحادي الجانب
 - one-sided finite difference → الفرق المحدود أحادي الجانب
+- one-step check → فحص لخطوة واحدة — heading and table cell alike; One-Step Gradient Check: فحص التدرج لخطوة واحدة; one-step gradient checks: فحوص التدرجات لخطوة واحدة
 - one-step generator (GAN) → مولد ذو خطوة واحدة
 - one-step prediction → التنبؤ بخطوة واحدة
 - one-to-one → واحد لواحد
@@ -3779,6 +4045,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - OOM (slide) → خطأ OOM — full term: نفاد الذاكرة; Activation OOMs: نفاد الذاكرة بسبب التفعيلات
 - OOV penalty (text) → جزاء حالات OOV
 - opcode parser → محلل رموز العمليات
+- open-access (book) → مفتوح الوصول — dual كتابان مفتوحا الوصول
 - open-ended generation → التوليد المفتوح — free generation: التوليد الحر
 - open-ended generation / open-ended text (search) → التوليد المفتوح / النص المفتوح
 - open-source → مفتوح المصدر
@@ -3789,6 +4056,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - operating mode → نمط تشغيل — three operating modes: ثلاثة أنماط تشغيل
 - operating point (text) → نقطة العمل
 - operating regime → نمط التشغيل
+- operation fusion / operator fusion → دمج العمليات — glossed (operation fusion); unfused: غير مدمج; fused program: برنامج مدمج
 - operational pillar → ركيزة تشغيلية — operational -> تشغيلي
 - operational pillar (table header) → الركيزة التشغيلية — slide table headers: القاعدة الرياضية / الآلية / الهدف السليم في القياسات / الدور في بيئة الإنتاج
 - Operations (heading: tensor operations) → العمليات
@@ -3810,11 +4078,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - optimism (of the training error) → تفاؤل
 - optimistic / pessimistic bias → انحياز متفائل / متشائم
 - optimistic bias → الانحياز المتفائل
+- Optimization Caveat (kicker) → تنبيه بشأن التحسين — Systems rule: قاعدة الأنظمة
 - optimization degradation → تدهور التحسين — degradation problem: مشكلة التدهور; paradox: مفارقة التدهور; degrade: تتدهور
 - optimization dynamics → ديناميكيات التحسين
 - optimization pitfall (slide) → مزلق في التحسين
 - optimization problem → مسألة التحسين
 - Optimization Recipe (kicker) → وصفة التحسين — Modern Pretraining Optimizer: محسن التدريب المسبق الحديث
+- Optimization Rung / Bottleneck Targeted / Amdahl Prediction / Measured Gain / Cumulative Speedup / MFU (table header) → مرحلة التحسين / عنق الزجاجة المستهدف / تنبؤ Amdahl / التحسن المقاس / التسريع التراكمي / مقياس MFU
 - Optimization Safeguard (slide title) → إجراء وقائي في التحسين
 - optimization stability and scaling (text) → استقرار التحسين والتحجيم
 - optimization track → مسار التحسين
@@ -3823,6 +4093,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - optimizer moments → عزوم المحسن — dual: عزما المحسن
 - optimizer ranking → ترتيب المحسنات
 - optimizer state memory → ذاكرة حالة المحسن
+- optimizer step (the update call, opt.step()) → خطوة المحسن — Optimizer-step memory: ذاكرة خطوة المحسن
 - optimizer-level → على مستوى المحسن
 - optimizer-state memory → ذاكرة حالة المحسن — buffers/param = مخزن لكل معلَمة
 - optimum (of a grid) → القيمة المثلى — empirical optimum = القيمة المثلى التجريبية
@@ -3892,7 +4163,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - overestimate / underestimate → التقدير الزائد / التقدير الناقص
 - overflow (numerical) → الطفح — underflow = الطفح السفلي; verb يطفح (يطفح إلى `inf`)
 - overhead → عبء إضافي — dispatch overhead = عبء الإرسال; interpreter overhead = عبء المفسر
+- Overhead Regime (kicker) → نمط العبء الإضافي — "which regime binds": أي نمط هو المقيِّد
+- overhead-bound → مقيد بالعبء الإضافي — glossed (overhead-bound); the overhead-bound regime: النمط المقيد بالعبء الإضافي
 - overlap (between two functions) → التراكب
+- overlap (communication with the backward pass) → التراكب — no overlap: انعدام التراكب / بلا تراكب; full overlap: التراكب الكامل
 - overlap (verb, of two keys) → يتراكب مع — noun التراكب; key overlap: التراكب بين المفاتيح
 - overlap of communication with the backward pass (performance) → تداخل الاتصال مع التمرير الخلفي
 - overlapping max-pooling → تجميع أقصى متداخل
@@ -3908,11 +4182,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - overstate / understate → تبالغ في تقديره / تبخسه حقه
 - overtake (the dense model) → يتجاوز — starts behind: يبدأ متأخرًا عن; Early warm-up lag: تأخر الإحماء المبكر; Crossover: نقطة التقاطع
 - overwrite → يكتب فوق
+- overwrite (outputs in a fixed buffer) → يُكتب فوق
 - overwrite test → اختبار الكتابة الفوقية
+- own (a shard) → يملك — owned: المملوكة; non-owned shards: الحصص التي لا تملكها وحدة GPU, on slides الحصص غير المملوكة; owner GPU: الوحدة المالكة
 - p-fold tensor product → الجداء الموتري لوسيطها في نفسه p مرة
 - p-value → القيمة الاحتمالية — glossary; (p-value) once per page
 - pack (information into a state) → يحزم — with unpack يفك; learned packing: الحزم المتعلَّم
 - pack hyperparameters into → يحزم … في
+- package (chip packaging) → غلاف — plural أغلفة, glossed (package) once; multi-die packages: الأغلفة متعددة الشرائح; حزمة stays a Python package
 - package (Python) → حزمة — plural حزم
 - packed back to back → مرصوصة واحدًا تلو الآخر
 - packed sequences → التسلسلات المرصوصة — glossed; document packing -> رص المستندات; packed-document mask -> قناع المستندات المرصوصة
@@ -3921,6 +4198,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - padding → الحشو — zero padding: حشو الأصفار; padding values: قيم الحشو
 - padding overhead → العبء الإضافي للحشو
 - padding token → رموز الحشو — `<blank>` tokens -> الرموز المميزة `<blank>`
+- pageable memory → ذاكرة قابلة للترحيل — glossed (pageable); the OS swaps pages: يرحّل الصفحات
 - pair counts (BPE) → تعدادات الأزواج
 - pair load / load ratio → حمل الأزواج / نسبة الحمل — plural أحمال
 - paired evaluation → التقييم المقترن — comparison: المقارنات المقترنة
@@ -3935,6 +4213,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - pairwise sums → المجاميع الزوجية — differences: الفروق الزوجية
 - panel → لوحة
 - panel (of a figure) → لوحة — panel (a): اللوحة (a)
+- paper count → عدّ على الورق — two paper counts: عدّان نجريهما على الورق
+- paper estimate → التقدير المحسوب على الورق — uncounted memory transfer: نقل ذاكرة لم يُحسب; host barrier: حاجز على المضيف
+- paper prediction → التنبؤ المحسوب على الورق — paper threshold: العتبة المحسوبة على الورق
 - papers → الأوراق البحثية
 - parabola → قطع مكافئ — parabolic boundary = حد على شكل قطع مكافئ
 - paradigm (two paradigms) → النهجان
@@ -3957,6 +4238,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - parameter memory → ذاكرة المعلَمات — parameter count (act): إحصاء المعلَمات
 - parameter partitioning → تقسيم المعلَمات — suited parameter group = مجموعة المعلَمات المناسبة; Muon parameter group = مجموعة معلَمات Muon
 - parameter recovery → استعادة المعلَمات — recovered parameters = المعلَمات المستعادة
+- parameter server → خادم المعلَمات — plural خوادم المعلَمات, glossed (parameter servers)
 - parameter sharing → مشاركة المعلَمات — weight sharing: مشاركة الأوزان
 - parameter state (JAX) → حالة المعلَمات
 - parameter- and compute-efficient → مقتصد في المعلَمات وفي الحساب
@@ -3990,6 +4272,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - partial loading / transfer → التحميل الجزئي / النقل الجزئي
 - partial observability → قابلية المشاهدة الجزئية
 - partial sums / partial state → المجاميع الجزئية / الحالة الجزئية
+- partition (state across GPUs) → يقسم — noun تقسيم, without إلى حصص; Partitioning the Optimizer State, Gradients, and Weights: تقسيم حالة المحسن والتدرجات والأوزان
 - partition sum → مجموع التجزئة
 - Partitioning Sequences (title) → تقسيم التسلسلات
 - partner → نظير
@@ -4016,17 +4299,22 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - payload → الحمولة
 - peak (of a curve) → الذروة — double-descent peak was قمة; spike stays قفزة
 - peak activation memory → ذروة ذاكرة التفعيلات
+- peak arithmetic rate → ذروة المعدل الحسابي — peak bandwidth: ذروة عرض النطاق; Peak FLOP/s: ذروة FLOP/s
+- peak arithmetic throughput → ذروة الإنتاجية الحسابية
+- peak compute time → زمن الحوسبة عند ذروة المعدل
 - peak learning rate → ذروة معدل التعلم — peak rate: ذروة المعدل
 - peak likelihood (text) → ذروة الإمكان
 - peak LR & schedule → ذروة معدل التعلم وجدوله — table header; "Clip θ" عتبة القص $\theta$
 - peak memory → ذروة الذاكرة
 - peak memory footprint → ذروة بصمة الذاكرة
 - peak RAM → ذروة ذاكرة RAM
+- peak rate (GPU arithmetic) → ذروة المعدل الحسابي — peak arithmetic: ذروة الحساب; follows peak compute = ذروة الحوسبة
 - peaked → حاد القمة
 - Pedagogical Methodology (slide) → المنهجية التعليمية
 - pedagogical progression → المسار التعليمي — not التدرج (the gradient)
 - Pedagogical Role (slide title) → الدور التعليمي
 - peek at test data → اختلاس النظر إلى بيانات الاختبار
+- peer-to-peer (P2P) access → وصول من نظير إلى نظير — glossed (peer-to-peer, P2P) once per page; PCIe peer-to-peer: وصول PCIe من نظير إلى نظير
 - pen stroke → جرّة قلم
 - penalized (loss, objective, gradient step) → معاقَب — with fatha; to penalize = يعاقب; unpenalized = غير معاقَب / لا يعاقَب
 - penalized gradient → التدرج المعاقَب
@@ -4040,6 +4328,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - per lag → لكل موضع تأخر
 - per-axis tuple → مجموعة مرتبة لكل محور
 - per-batch overhead → العبء الإضافي لكل دفعة
+- per-block activation checkpointing → نقاط استعادة التفعيلات لكل كتلة
+- per-block checkpointing → نقاط الاستعادة لكل كتلة — indefinite نقاط استعادة لكل كتلة; under checkpointing: مع نقاط الاستعادة; a checkpoint (the wrapper around a computation): نقطة استعادة
 - per-coordinate → لكل إحداثي — معدلات التعلم التكيفية لكل إحداثي; RMS per coordinate = مقياس RMS لكل إحداثي
 - per-coordinate adaptive scaling → تحجيم تكيفي لكل إحداثي
 - per-coordinate RMS normalization (optimization) → تطبيع RMS لكل إحداثي
@@ -4050,6 +4340,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - per-expert router biases → انحيازات للمسير خاصة بكل خبير — balances its load: يوازن الحمل
 - per-head QK-Norm → تطبيع QK-Norm لكل رأس — sublayer-output normalization: تطبيع مخرجات الطبقات الفرعية
 - per-head temperature scaling → تحجيم درجة الحرارة لكل رأس
+- per-micro-batch clipping / global clipping → القص لكل دفعة جزئية / القص الكلي — accumulated gradient: التدرج المتراكم
 - per-pixel channel mixing → مزج القنوات عند كل بكسل
 - per-position validation loss (text) → خسارة التحقق لكل موضع
 - per-sequence memory → الذاكرة لكل تسلسل
@@ -4058,6 +4349,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - per-step states (code) → حالات الخطوات
 - per-token → لكل رمز مميز
 - per-unit (memory control, learned decay) → لكل وحدة — لكل وحدة على حدة in prose
+- per-window cost → الكلفة لكل نافذة — fixed per-step cost: الكلفة الثابتة في الخطوة الواحدة
 - Perceiver Architecture (kicker) → معمارية Perceiver
 - Perceiver resampler → وحدة إعادة أخذ العينات من نوع Perceiver — plural وحدات; multimodal vision–language resamplers: وحدات إعادة أخذ العينات متعددة الوسائط بين الرؤية واللغة
 - percentage points → نقطة مئوية
@@ -4082,6 +4374,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - persistence / persist models → الحفظ الدائم — تحفظ النماذج
 - persistent (gradients) → ثابت الاتجاه
 - persistent (tape, tensor) → دائم
+- persistent compilation cache → ذاكرة مؤقتة دائمة للتصريف — compiled binaries: الملفات الثنائية المصرَّفة
+- persistent gradients (kept across micro-batches) → التدرجات الدائمة — persistent gradient buffer: مخزن التدرجات الدائم
 - persistent training state → حالة التدريب الدائمة
 - personalization → التخصيص
 - perturbation → اضطراب — perturb: يغيّر
@@ -4098,6 +4392,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - physical minibatch size → الحجم الفعلي للدفعة المصغرة — effective step: الخطوة الفعالة; half-batches: أنصاف الدفعات
 - physics simulator → برنامج محاكاة فيزيائية
 - pickle → pickle — stays Latin: ملفات pickle; unpickling: فك pickle; unpickler: دالة فك pickle
+- picosecond → بيكو ثانية
 - pieces (generic) → قطع
 - pieces (parents of a merge) → جزءان — قطعة stays pre-tokenization chunk
 - piecewise linear → خطية قطعيًا
@@ -4110,6 +4405,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - pinned (versions) → محدد الإصدارات — verb form: يحدد إصدارات الحزم; not تثبيت (= install)
 - pinned memory → ذاكرة مثبَّتة — glossed (pinned, أي مقفلة الصفحات); pre-pinning: التثبيت المسبق
 - pipeline → خط معالجة
+- pipeline (of pipeline parallelism) → خط أنبوبي — two-stage pipeline: خط أنبوبي ذو مرحلتين; pipeline micro-batches: دفعات جزئية أنبوبية
+- pipeline model of dispatch → نموذج خط معالجة للإرسال
+- pipeline parallelism → التوازي الأنبوبي — the glossary's تواز أنبوبي with the article; glossed once
 - pipelining (CPU-GPU) → التتابع على هيئة خط معالجة — pipeline: خط المعالجة
 - pitfall → مزلق — plural مزالق; 'Pitfall: …' -> مزلق: …; 'Pitfall 1' -> المزلق 1
 - Pitfall Prevented (slide) → المزلق المتجنَّب
@@ -4117,7 +4415,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - pixel intensities → شدة البكسلات
 - pixel range → مجال قيم البكسلات
 - pixel-shuffled images → صور خُلطت بكسلاتها — pixel-shuffle test: اختبار خلط البكسلات
+- place (an array with a sharding) → يضع … بالمواصفة — leaves (of a state tree): أوراق
 - place values (digits) → القيم الموضعية للخانات — columns: الخانات
+- placeholder (ShapeDtypeStruct) → عنصر نائب — plural عناصر نائبة
+- placeholder (symbolic, in tracing) → عنصر نائب — plural عناصر نائبة; glossed (placeholders)
 - placement (on a device) → التوضيع
 - plain attention (without the convolution) → الانتباه العادي — attention with the convolution: الانتباه مع الالتفاف
 - plain attribute (Python) → سمة عادية — سمات Python عادية
@@ -4130,6 +4431,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - plain RNN / plain recurrent network → شبكة RNN العادية / الشبكة المتكررة العادية — follows plain network → شبكة عادية
 - planar vectors → متجهان في المستوي
 - Planck → Planck — stays Latin: قانون Planck، ثابت Planck; Boltzmann = بولتزمان
+- planned peak (XLA) → الذروة المخططة — memory plan: خطة الذاكرة
 - plateau (flat region of a landscape; schedule) → هضبة — plural هضاب; activation plateau = هضبة تفعيل; هضبة المعدل العالي
 - plateau (of a training curve) → الاستواء — الاستواء الابتدائي; plural فترات استواء; a curve that plateaus: يستقر / تستوي
 - plausible / implausible token (text) → معقول / غير معقول
@@ -4142,6 +4444,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - point minimum → نقطة صغرى واحدة
 - point solution → حل نقطي
 - pointer → مؤشر
+- pointer chasing → مطاردة المؤشرات — chain: سلسلة
 - pointwise convolution → الالتفاف النقطي
 - pointwise MLP → شبكة MLP نقطية
 - poisoned (steps, Adam) → تتسمم / يسمم
@@ -4216,10 +4519,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - post-warmup epoch → حقبة بعد الإحماء
 - posterior density → الكثافة البعدية
 - posterior probability → الاحتمال البعدي
+- power (electrical) → القدرة — القدرة الكهربائية at the first mention; energy stays الطاقة; watts: الواطات
+- power draw → استهلاك القدرة
 - power law → قانون القوة — indefinite قانون قوة
 - power rule → قاعدة القوة
 - power-law fit → ملاءمة قانون القوة — plural ملاءمات
 - power-law surface / penalty / scaling → سطح / عقوبة من نوع قانون القوة; تحجيم وفق قانون قوة — glossed (power law)
+- power-of-two (scale) → قوة للعدد اثنين
 - powers of gamma → قوى γ
 - Practical & Systems Role (table header) → الدور العملي ومن منظور الأنظمة
 - practical baseline → خط الأساس العملي
@@ -4240,6 +4546,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - pre-training checks / invariants → فحوص / لامتغيرات ما قبل التدريب
 - pre-training set → مجموعة تدريب مسبق
 - preallocated → محجوز مسبقًا
+- preallocation → الحجز المسبق — preallocate: يحجز مسبقًا
 - preamble cell → خلية الديباجة — not تمهيدية (= Preface)
 - precision (floating point) → الدقة — glossed once; إحكام is the classification metric
 - precision--recall curve → منحنى الإحكام والاستدعاء — ROC curve = منحنى ROC
@@ -4253,10 +4560,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - predict (reader, exercises) → توقع — توقعاتك; تنبؤ = model prediction
 - predictable scaling → التحجيم القابل للتنبؤ
 - predicted class frequencies → التكرارات النسبية للفئات المتنبأ بها
+- Predicted Speedup / Measured Speedup (heading) → التسريع المتنبأ به / التسريع المقاس
 - Predicting House Prices on Kaggle → التنبؤ بأسعار المنازل على Kaggle
 - prediction (exercises) → التنبؤ — inference stays الاستدلال
 - prediction (value of a formula) → التنبؤ — what the reader is asked to predict = توقع، التوقع
 - prediction minus observation → التنبؤ ناقص المشاهدة — glossary مشاهدة
+- predictions of opposite sign → التنبؤان المتعاكسا الإشارة
+- Predictive Method (kicker) → المنهج التنبؤي
 - predictive policing → الشرطة التنبؤية
 - predictor → متنبئ — trivial constant predictor = المتنبئ الثابت; forecasters = خبراء التنبؤ
 - preemptible cloud instance → مثيل سحابي قابل للانتزاع
@@ -4264,6 +4574,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Preface to the Second Edition → تمهيد الطبعة الثانية — First: الأولى
 - preference alignment → المواءمة مع التفضيلات
 - prefetch → يجلب مسبقًا
+- prefetching (the next block's weights) → الجلب المسبق — verb يجلب مسبقًا; Block prefetching: الجلب المسبق للكتل
 - prefill → ملء السياق المسبق — compute-bound prefill: ملء السياق المسبق المقيد بالحوسبة; glossed on defining page
 - prefix → البادئة — plural بادئات
 - prefix sum → مجموع بادئة — plural مجاميع البادئة; glossed once
@@ -4274,6 +4585,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - preprocessing → المعالجة المسبقة
 - preprocessing pipeline → خط المعالجة المسبقة
 - preprocessor → معالج مسبق
+- prerequisite (table cell) → متطلب مسبق
 - prerequisites → المتطلبات المسبقة
 - pretrained backbone → الهياكل المدرَّبة مسبقًا — backbone: الهيكل
 - pretrained weights → الأوزان المدرَّبة مسبقًا — loads: يحمّل
@@ -4307,6 +4619,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - problem formulation → صياغة المسألة — plural صياغات المسائل
 - Problem Formulation (slide title) → صياغة المسألة
 - problem set → مجموعة المسائل — Problem N: المسألة N
+- process (CMOS, 45 nm) / process node → تقنية تصنيع — modern process nodes: تقنيات التصنيع الحديثة
+- process (operating system) → عملية — plural عمليات; multi-process: تعدد العمليات / متعدد العمليات; host process: عملية على المضيف
 - process-wide flag → راية على مستوى العملية كلها
 - producer--consumer pipeline → خط معالجة من منتج ومستهلك
 - product (dot, Hadamard, matrix) → جداء — plural جداءات
@@ -4317,14 +4631,20 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - production architectures → المعماريات المستخدمة في بيئة الإنتاج
 - production BPE trainers (text) → برامج تدريب BPE في بيئة الإنتاج
 - production code → شيفرة الإنتاج
+- production data parallelism / tools / frameworks → توازي البيانات في بيئة الإنتاج — أدوات / أطر العمل المستخدمة في بيئة الإنتاج
 - production inference → الاستدلال في بيئة الإنتاج
 - production language models → النماذج اللغوية المستخدمة في بيئة الإنتاج
+- Production pattern (slide lead-in) → نمط بيئة الإنتاج
 - Production Recipes (slide) → وصفات بيئة الإنتاج
 - production tokenizer (text) → مجزئ بيئة الإنتاج
 - production training run → جولة تدريب في بيئة الإنتاج
 - production vocabularies (text) → مفردات بيئة الإنتاج
 - production-scale systems → أنظمة بحجم بيئة الإنتاج
+- profile (noun: the result of profiling) → تحليل الأداء — Reading the Profile: قراءة تحليل الأداء
 - profile (of state contributions over positions) → منحنى الإسهامات — State Contribution Profile (kicker) = منحنى الإسهامات في الحالة
+- profile (verb, a training step) → يحلل أداء — noun تحليل الأداء
+- profiler → أداة تحليل الأداء — glossed (profiler); profiler helper: دالة تحليل الأداء المساعدة; framework profiler: أداة تحليل الأداء في إطار العمل
+- profiler timeline → الخط الزمني في أداة تحليل الأداء
 - progress board → لوحة التقدم — class ProgressBoard: اللوحة `ProgressBoard`
 - Progress per Example (slide kicker) → التقدم لكل مثال
 - progress stalls (optimization) → يتعثر التقدم
@@ -4400,6 +4720,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - quantitative justification → المسوغ الكمي — slide
 - quantitative scaling breakdown → تفصيل كمي للتحجيم — slide
 - Quantitative Summary (kicker) → ملخص كمي
+- quantity / typical magnitude / our machine / why it matters (table header) → الكمية / المقدار المعتاد / جهازنا / سبب الأهمية
 - quantize → يكمّم — مكمَّم; quantizer: مكمِّم (مكمِّمات); clipped quantizers: المكمِّمات ذات القص; quantization-aware: المدرك للتكميم
 - quarter-width VGG → VGG بربع العرض — class noun شبكة in headings
 - quartiles → الربيعيات
@@ -4425,6 +4746,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - radian per token → راديان لكل رمز مميز — slide: راديان/رمز مميز
 - radius → نصف القطر — نصف قطر الثقة
 - Radon's theorem → مبرهنة Radon
+- ragged (lengths, sequences) → متفاوتة الأطوال
 - ragged batches → دفعات متفاوتة الأطوال — variable-length strings: سلاسل متغيرة الطول; non-padded: غير المحشوة; padded tokens: رموز مميزة للحشو
 - rail (cell rail, top rail in the LSTM figure) → سكة — سكة الخلية، السكة العلوية، سكة الذاكرة المباشرة
 - raise an error → يثير خطأ
@@ -4446,6 +4768,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - randomized exploration → استكشاف عشوائي
 - range (e.g. 40x range) → مدى قدره $40\times$ — 2x band = نطاق ضيق عرضه $2\times$
 - rank → رتبة — glossary; of a matrix; of a word by frequency: الرتبة
+- rank (index of a process in a distributed job) → رتبة — plural رتب; glossed (rank) once
 - rank rule (exercise) → قاعدة الرتبة
 - rank table (text) → جدول الرتب — glossed (rank table)
 - rank-$r$ subspace → فضاء جزئي رتبته $r$ — top $r$ directions: الاتجاهات الأولى وعددها $r$; singular vectors: متجهات مفردة
@@ -4457,6 +4780,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - rare tokens → الرموز المميزة النادرة
 - raster index / raster IDs → فهرس مسح صفي / معرّفات المسح الصفي
 - rate (Poisson) → المعدل
+- rated bandwidth → عرض النطاق الاسمي
+- rated boost clock → تردد الساعة المعزز المقنن — rated clock: التردد المقنن; nominal value: قيمة اسمية
 - raw → خام
 - raw (file data) → خام
 - raw accuracy → الدقة الخام
@@ -4472,6 +4797,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - razor's edge (text) → حد السكين
 - RCE → RCE — stays Latin after ثغرة
 - re-encode (exercise) → يعيد الترميز
+- re-gather (weights) → يعيد تركيب
 - re-index → يعيد الفهرسة
 - reach → المدى
 - read before writing → القراءة قبل الكتابة — read-before-write error correction: تصحيح الخطأ بالقراءة قبل الكتابة
@@ -4505,6 +4831,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - receptive-field boundary token → الرمز المميز الطرفي — at the boundary -> عند الطرف
 - Recipe A → الوصفة A
 - recognition rate → معدل التعرف
+- recommender tables → جداول التوصية
 - reconstruct (tokens) / reconstruction loss → إعادة بناء / خسارة إعادة البناء
 - record → سجل
 - recover (labels) → يستعيد
@@ -4525,23 +4852,31 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - recurrent training (text) → تدريب الشبكات المتكررة
 - recurse into → ينزل عوديًا إلى
 - recursion → علاقة تكرارية
+- recursive halving and doubling → التنصيف والمضاعفة العوديان — glossed once
 - recursive least squares → المربعات الصغرى العودية
 - recursive schedule (scan) → الخطة العودية
 - recursively → تعاوديًا — recursive: عودي
 - red flag → إنذار خطر
 - reduce partial states → تدمج الحالات الجزئية
+- reduce-scatter / all-gather (phases of the ring) → طور reduce-scatter / طور all-gather — Latin, lower case, after the class noun طور
+- reduce-scatter / all-gather / all-to-all (as collectives of their own) → عملية reduce-scatter / عملية all-gather / عملية all-to-all — طور only for the two phases inside a ring allreduce; as a verb: ينفذ عملية reduce-scatter على …
 - reduced heads → الرأسان المصغران
+- Reduced Precision (heading) → الدقة المخفضة
 - reduces to (softmax to logistic regression) → يُختزل إلى — الاختزال إلى
 - reduction → اختزال — plural اختزالات; the reduced axis: المحور المختزل
 - reduction ratio → نسبة التخفيض
 - reduction tree → شجرة اختزال — fixed-order reduction: اختزال ثابت الترتيب; partial sums: المجاميع الجزئية
 - redundancy (heads) → الفائض
+- redundancy (state replicated on every GPU) → التكرار — redundant: تكرار زائد; الفائض stays head redundancy
 - redundant features → الميزات المكررة
 - redundant logit → لوجيت فائض
 - redundant recomputation / FLOPs; redundancy (recomputation) → إعادة الحساب المكررة / عمليات FLOP المكررة; التكرار
 - reference (object) → مرجع — plural مراجع
 - reference benchmark → مرجع معياري للمقارنة — benchmark quantity = كمية مرجعية
+- reference gradients (true fp32) → تدرجات مرجعية — reference gradient entries: عناصر التدرج المرجعي
 - reference implementation → تنفيذ مرجعي — plural التنفيذات المرجعية
+- Reference Machine (kicker) → الجهاز المرجعي — benchmark host: مضيف قياس الأداء
+- reference model → النموذج المرجعي
 - reference outputs / metrics (text) → مخرجات / مقاييس مرجعية
 - references (object references) → مراجع
 - refinement (design space) → تنقيح
@@ -4549,9 +4884,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - reflection (matrix I - 2kk^T) → انعكاس — plural انعكاسات
 - regex (text) → التعابير النمطية
 - regime (mode, kind of behaviour) → نمط — plural أنماط, dual نمطان; أنماط التهيئة، نمط الانزياح; regime switching: تبدل النمط; table header النمط; not نظام; padding-and-stride settings: إعدادات
+- regime (performance: overhead-, bandwidth- or compute-bound) → نمط — plural أنماط; Three Regimes: ثلاثة أنماط; regime transitions: انتقالات النمط; "the regime of Amdahl's law" (where a law applies): نطاق قانون Amdahl
 - regime (range of a quantity) → نطاق — small-batch regime: نطاق الدفعات الصغيرة; النطاق الكلاسيكي، نطاق فرط المعلَمات; interpolating = نطاق الاستيفاء
 - regime shift (slide) → تبدل النمط
+- regional compilation → التصريف بالمناطق — glossed (regional compilation)
 - regions of input space → مناطق فضاء المدخلات
+- register-file pressure → الضغط على ملف المسجلات — shared-memory bank conflicts: تعارضات بنوك الذاكرة المشتركة
+- register-resident / SRAM-resident → مقيم في المسجلات / مقيم في SRAM
 - registered children → الأبناء المسجلون
 - registered parameters → المعلَمات المسجلة
 - registers → المسجلات
@@ -4592,6 +4931,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - relative weight change → التغير النسبي في الأوزان
 - relay → يرحّل — relayed -> المرحَّلة; multi-hop relays -> ترحيل متعدد القفزات
 - release / version → إصدار
+- release buckets (the backward pass) → يُخرج — يطلق stays launching an allreduce
 - release cycle → دورة إصدار
 - released models → النماذج المنشورة
 - relevance → الصلة — relevance of each coordinate -> أهمية كل إحداثي
@@ -4611,12 +4951,16 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - repeat an experiment → إعادة التجربة — avoid تكرار in two senses
 - repeatable blocks → كتل قابلة للتكرار
 - repeated cross-validation → التحقق المتقاطع المكرر
+- repeats (timing) → تكرارات
 - repetition loops → الحلقات المتكررة
 - repetitive loops / repetition loops (text) → حلقات متكررة
 - replace A by B → الاستعاضة عن A بـ B — keeps the token order
 - replay merges (text) → يعيد تطبيق عمليات الدمج
 - replays the first minibatches → تعيد أولى الدفعات المصغرة نفسها
+- replica (of the model on a device) → نسخة — plural النسخ; replicate: ينسخ … على
+- replicate (parameters, state on every device) → ينسخ — replicated: منسوخ
 - replicate padding → حشو التكرار
+- replicated Adam → Adam المنسوخ — as replicate: ينسخ
 - replications (of a study) → الدراسات التي كررتها
 - report (exercises) → أبلغ عن
 - repository → المستودع
@@ -4638,6 +4982,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - reset (gradient buffer) → يصفّر — التصفير
 - reshape → إعادة التشكيل
 - residual → الباقي — plural البواقي
+- residual add → جمع البواقي
 - residual angle → الزاوية الباقية
 - residual block → كتلة البواقي — residual branch: فرع البواقي (فرع بواقٍ)
 - residual branch → فرع البواقي — plural فروع البواقي; branch outputs مخرجات الفروع
@@ -4684,6 +5029,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - retention duration → مدة الاحتفاظ
 - retention factor (discrete) → عامل احتفاظ متقطع
 - retention fraction / keep fraction / kept fraction → نسبة الاحتفاظ — input fraction: نسبة الإدخال; retention: الاحتفاظ; long-range retention: الاحتفاظ بعيد المدى
+- reticle limit → حد القناع الضوئي — glossed (reticle limit); lithography: الطباعة الحجرية
 - retrieval capacity → قدرة الاسترجاع
 - retrieval error / read error → خطأ الاسترجاع / خطأ القراءة — expected squared retrieval error: خطأ الاسترجاع التربيعي المتوقع
 - retrieval-augmented generation → التوليد المعزز بالاسترجاع — glossed (retrieval-augmented generation) once
@@ -4715,6 +5061,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - rigid models → النماذج الصلبة — overly flexible = المفرطة المرونة
 - ring (wraps around) → حلقة — wraps around: تتصل نهايتها ببدايتها
 - ring / ringing (oscillation) → يتأرجح — ringing = التأرجح
+- ring allreduce → عملية allreduce الحلقية — the algorithm: خوارزمية allreduce الحلقية; glossed (ring allreduce) once; the ring: الحلقة
+- ring neighbor → الجار في الحلقة — successor / predecessor device: الجهاز التالي له / السابق له
 - ring-buffer cache / circular buffer → مخزن مؤقت حلقي / مخزن مؤقت دائري — overwrite slots: يكتب فوق الخانات
 - risk (portfolio) → المخاطرة
 - rival templates → القوالب المنافسة
@@ -4738,7 +5086,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - rollout → التنبؤ المتتابع — multistep: متعدد الخطوات; drift: انجراف التنبؤ المتتابع; free-running generation too
 - rollout (model fed its own predictions) → التنبؤ المتتابع — generated sample counted as item (50-token rollouts): مسار التوليد; greedy rollout: التوليد الجشع
 - rollout error compounding (text) → تراكم أخطاء التنبؤ المتتابع
+- roofline bound → حد خط السقف — the roofline: خط السقف
+- roofline floor → أرضية خط السقف — compute floor: أرضية الحوسبة
 - roofline model (performance) → نموذج خط السقف — glossed (roofline)
+- Roofline Positioning (kicker) → الموضع على خط السقف
 - root cause → السبب الجذري
 - root module → الوحدة الجذر
 - root-finding (optimization) → إيجاد الجذور
@@ -4755,7 +5106,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - round (cross-validation) → جولة
 - round (of a parallel scan; of state-dependent gating) → مرحلة — plural مراحل; $O(\log_2 T)$ مرحلة; parallel scan rounds: مراحل مسح متواز; doubling round: مرحلة مضاعفة; write round: مرحلة كتابة; جولة stays a training run
 - round (of training steps) → مرحلة — "30 rounds of 100 steps": 30 مرحلة في كل منها 100 خطوة; جولة = training run
+- round trip (device to host) → الذهاب والإياب بين الجهاز والمضيف
 - round trip (nnx.split then nnx.merge) → دورة فصل ودمج
+- round trip (through memory, DRAM) → رحلة ذهاب وإياب — plural رحلات الذهاب والإياب
 - round up to a power of two → يدوّر صعودًا إلى قوة للعدد اثنين
 - round-off (floating-point) → خطأ التدوير — في حساب الفاصلة العائمة; في حدود خطأ التدوير في float32
 - round-to-nearest-even → التدوير إلى الأقرب الزوجي — glossed (round-to-nearest-even)
@@ -4772,11 +5125,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - routing collapse → انهيار التوجيه — glossed (routing collapse) once
 - Routing Collapse (kicker) → انهيار التوجيه
 - routing to Muon → توجيه … إلى Muon — slide Routed to = الموجَّه إلى; internal block matrices = مصفوفات الكتل الداخلية
+- row (DRAM) → صف — glossed (rows) once in the DRAM sense
 - Row 1 / Row 2 (slide) → (السطر 1) / (السطر 2)
 - row gather (slide) → التقاط صفوف
 - row identifier → معرف الصفوف
 - row index (DataFrame) → فهرس الصفوف
 - row maximum → القيمة العظمى للصف
+- row reduction → اختزال الصفوف — plural اختزالات الصفوف
 - row space → فضاء الصفوف — full row rank = رتبة صفوف كاملة
 - row sums → مجاميع الصفوف — column sums: مجاميع الأعمدة; column means: متوسطات الأعمدة
 - row-major order → ترتيب الصفوف أولًا
@@ -4787,6 +5142,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - rowwise softmax → دالة softmax صفًا بصف
 - rule of three → قاعدة الثلاثة
 - rule of thumb → قاعدة تقريبية
+- Rules of Thumb (heading) → قواعد تقريبية
 - run (training run, experiment) → جولة — جولة تدريب; repeated runs: جولات متكررة; run-to-run variation = التفاوت من جولة إلى أخرى; rerun: الجولة المعادة
 - run / seed → جولات / بذور
 - run of letters / digits (text) → سلسلة حروف / سلسلة أرقام
@@ -4794,6 +5150,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - runaway accumulation (text) → تراكم جامح
 - runaway feedback loops → حلقات التغذية الراجعة الجامحة
 - runaway weights → أوزان جامحة
+- rung (one step of the optimization ladder, slides) → مرحلة — plural مراحل; Rung 0 (Baseline): المرحلة 0 (خط الأساس); later rungs: المراحل اللاحقة
 - runnable code → شيفرة قابلة للتشغيل
 - runner-up (text) → وصيف
 - running (averages, moments, statistics) → متحرك — العزوم المتحركة
@@ -4818,6 +5175,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - running variance / running statistics (BatchNorm) → التباين التراكمي / الإحصاءات التراكمية
 - running vector → متجه تراكمي
 - runtime → زمن التنفيذ — also زمن التشغيل
+- runtime (the system that executes kernels) → بيئة التشغيل — زمن التنفيذ stays the time
+- runtime assertion → تحقق صريح في زمن التنفيذ — lightweight: خفيف الكلفة
 - runtime error → خطأ في أثناء التشغيل
 - Saddle attraction (slide) → الانجذاب إلى نقاط السرج — Noise amplification = تضخيم الضوضاء
 - saddle surface → سطح السرج
@@ -4860,11 +5219,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - saturating / non-saturating → المتشبعة / غير المتشبعة
 - saturation → تشبع
 - Sauer's lemma → توطئة Sauer
+- save (activations for the backward pass) → يحفظ — saved activations: التفعيلات المحفوظة; store: يخزن; retain: يحتفظ بـ
 - save X as a residual (JAX custom_vjp) → يحفظ الموتر `X` ضمن البواقي
 - sawtooth wave → موجة سن المنشار
 - scalable → قابل للتوسع
+- scalar (fp32, units, ALUs: not on tensor cores) → قياسي — fp32 القياسية، الوحدات القياسية، وحدات ALU القياسية; strict scalar: الصيغة القياسية الصارمة; true fp32: صيغة fp32 الحقيقية
 - scalar bias → انحياز قياسي
 - scalar decay / vector decay → اضمحلال قياسي / اضمحلال متجهي — per-head: لكل رأس; per-key-coordinate: لكل إحداثي من المفتاح; total decay of a chunk: الاضمحلال الكلي للقطعة
+- scalar fp32 (arithmetic outside the tensor cores) → الحساب القياسي بصيغة fp32
 - Scalar GLA / Vector-Decay GLA (table) → انتباه GLA باضمحلال قياسي / انتباه GLA باضمحلال متجهي
 - scalar learning rate → معدل تعلم قياسي — single scalar step size = حجم خطوة قياسي واحد
 - scalar linear network → شبكة خطية قياسية — incoming weights = أوزان واردة
@@ -4893,6 +5255,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - scaled / unscaled (scores) → المقيس / غير المقيس
 - scaled dot-product attention / score → انتباه / درجة الجداء النقطي المقيس — glossary; scaled by 1/√d -> المقيس بالعامل
 - scaled error residual → باقي الخطأ المقيس
+- scaled gradient (multiplied by the learning rate) → التدرج المحجَّم
 - scaled normal initializer → المهيئ الطبيعي المحجَّم — uniform initializer: المهيئ المنتظم; measured plot: الرسم المقيس; range of weight values: المدى
 - scaled parameters → المعلَمات المحجَّمة
 - scaled up / scaled back down (loss, gradients) → تُكبَّر بالتحجيم — تعاد إلى مقياسها الأصلي; unscale: يلغي تحجيم; loss scaler: أداة لتحجيم الخسارة; scale factor: معامل تحجيم
@@ -4907,6 +5270,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - scaling down → تصغير — zeroing: تصفير
 - scaling factor → عامل التحجيم
 - scaling grid → شبكة قيم للتحجيم (body), شبكة التحجيم (slides) — 15-run grid: الشبكة ذات الـ 15 جولة
+- Scaling Laws (kicker, strong and weak scaling) → قوانين التناسب — قوانين التحجيم stays the scaling laws of models
+- scaling property / scaling law (memory and traffic as k grows) → خاصية التناسب / قانون التناسب — as قوانين التناسب on the multi-GPU page; قانون التحجيم stays the scaling laws of models
 - scaling rule → قاعدة تحجيم — scaling classes فئات تحجيم; to scale: يحجّم
 - scaling up → التحجيم إلى الأكبر — page title; "at scale": عند الأحجام الكبيرة
 - Scaling Up (section title) → التحجيم إلى الأكبر
@@ -4917,6 +5282,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - schedule (learning rate) → جدول معدل التعلم — not الجدول alone (= table)
 - schedule (of a computation: recurrence, chunked) → خطة حساب — run time: زمن التشغيل
 - schedule (of checkpointing) → خطة
+- schedule (of gathers and compute) → خطة حساب
 - schedule remedy → العلاج بالجدول — slide
 - Schedule-Free → الخالي من الجدول — glossed (Schedule-Free)
 - scheduled optimizer wrapper → غلاف المحسن المجدوَل
@@ -4966,6 +5332,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Section Summary → ملخص القسم — slide title
 - Section Synthesis (slide kicker) → خلاصة القسم — Section & Chapter Synthesis: خلاصة القسم والفصل; ملخص القسم = Section Summary
 - Section Takeaways (slide kicker) → خلاصات القسم
+- sector (GPU memory) → قطاع — plural قطاعات, glossed (sectors) once
 - seed → بذرة — plural بذور; verb يضبط بذرة; ضبط البذور; re-seed: يعيد ضبط البذرة; global seed: البذرة العامة
 - seed control → التحكم في البذور
 - seed noise → ضوضاء البذور
@@ -4983,8 +5350,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - segmentation (vision task) → التجزئة — as رؤوس التجزئة; تقطيع stays text segmentation; detection: الاكتشاف
 - segmentation head → رؤوس التجزئة — plural form as logged
 - select (columns) → ينتقي
+- select (graph primitive) → انتقاء — glossed (select); conditional op: عملية شرطية, glossed (conditional op)
 - selective → انتقائي
 - selective copying → النسخ الانتقائي — glossed (selective copying) once; the benchmark: اختبار النسخ الانتقائي المعياري; task: مهمة النسخ الانتقائي
+- selective recomputation → إعادة الحساب الانتقائية — glossed (selective recomputation) once; Targeted Recomputation (kicker): إعادة الحساب الموجهة
 - selective SSMs (slides) → نماذج SSM الانتقائية — structured & selective SSMs: نماذج SSM المهيكلة والانتقائية
 - selective state space model → نماذج فضاء الحالات الانتقائية — plural as page title; glossed (selective state space models) once; "the selective SSM" = نموذج SSM الانتقائي; a 1-state selective SSM = نموذج SSM انتقائي بحالة واحدة
 - selective weight decay → اضمحلال الأوزان الانتقائي
@@ -5000,6 +5369,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - self-stabilization → الاستقرار الذاتي
 - self-stabilizing → ذاتي الاستقرار
 - self-supervised (masked patch prediction) → بإشراف ذاتي — التنبؤ بالرقع المقنّعة بإشراف ذاتي
+- semantics (BatchNorm) → دلالة
 - semi-axes → نصفا المحورين
 - semi-supervised learning → التعلم شبه الخاضع للإشراف
 - semilog plot → رسم نصف لوغاريتمي
@@ -5026,17 +5396,20 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - sequence-to-sequence layer → طبقة من نوع تسلسل إلى تسلسل — plural طبقات من نوع …
 - sequence-to-sequence learning → التعلم من تسلسل إلى تسلسل — page title; glossed once with sequence transduction (تحويل التسلسلات)
 - sequence-to-sequence RNN → شبكات RNN من نوع تسلسل إلى تسلسل
+- sequential addresses → العناوين التسلسلية — streams sequentially: يُسحب تسلسليًا; coalesced addresses: العناوين المتلاصقة
 - sequential container → حاوية تسلسلية — glossed once; module container: حاوية وحدات
 - sequential data → البيانات التسلسلية
 - sequential data (text) → البيانات التسلسلية
 - sequential depth → عمق تسلسلي
 - sequential loop → الحلقة (الزمنية) التسلسلية — hoist out of the loop: إخراج … من الحلقة
 - sequential step / operation → الخطوة / العملية التسلسلية
+- serial part (of a step) → الجزء التسلسلي
 - serial steps (slide) → خطوات متتالية — sequential: تسلسلي
 - serialization → التسلسيل — يسلسل; glossed on saving-loading page only
 - serialization format → صيغة تسلسيل — file format: صيغة ملفات; التسلسيل glossed (serialization)
 - serialization round-trip → دورة حفظ وتحميل — round trip: الحفظ ثم التحميل / الحفظ والاسترجاع
 - serialize → يسلسل — التسلسيل, only on saving-loading page (not التسلسل=sequence); elsewhere avoid: يكتب على القرص / يحفظ في نقاط الاستعادة; serializable: قابل للحفظ
+- serialize (host and device run one after the other) → يجعلهما يتعاقبان — serialized execution: تنفيذ متعاقب
 - Serve & Compress (slide) → التقديم والضغط — trained, served, scaled: تُدرَّب، تُقدَّم، تُحجَّم
 - Serving & Generation Footprint (kicker) → بصمة الذاكرة في التقديم والتوليد
 - serving (model) → تقديم النماذج
@@ -5055,8 +5428,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - shape error → خطأ في الأشكال
 - shape-preserving padding → الحشو الحافظ للشكل
 - shard → حصة — glossed (shard) once
+- shard (verb) → يقسم … إلى حصص — sharded: مقسم إلى حصص; sharded state: الحالة المقسمة إلى حصص
 - sharded training → التدريب المقسم إلى حصص
+- Sharded Training on Two GPUs (heading) → التدريب المقسم إلى حصص على وحدتي GPU
 - sharding (performance) → التقسيم إلى حصص
+- Sharding the Training State (page title) → تقسيم حالة التدريب إلى حصص
+- share (of compute in a step) → نصيب — compute share: نصيب الحوسبة; حصة stays a shard
 - share (of the state from a set of positions) → حصة
 - share (of tokens, per expert) → حصة — plural حصص; even share: الحصة المتساوية; ideal share: الحصة المثالية; even utilization: استخدام متساوٍ
 - share weights → يشارك الأوزان
@@ -5065,6 +5442,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - shared communication channel → قناة اتصال مشتركة — slide ناقل اتصال مشترك
 - shared initialization → تهيئة مشتركة
 - shared map / separate maps → التحويل المشترك / التحويلات المنفصلة
+- shared memory (GPU, on-chip) → الذاكرة المشتركة
 - shared value head → رأس القيم المشترك — plural رؤوس القيم المشتركة; shared value width عرض القيم المشترك
 - sharp (measurement) → دقيق
 - sharp (query on a key) → حاد — accusative حادًا; sharpness الحدة
@@ -5103,6 +5481,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - shim (compatibility code) → دالة التوافق — plural دوال التوافق; "Legacy Tokenizer Shims" → دوال التوافق القديمة للمجزئ, with the style.md §15.1 tail (للبناء فقط، غير مدرجة)
 - ship (a model) → ينشر
 - shirt (Fashion-MNIST) → قميص
+- shoreline → خط الساحل — glossed (shoreline) once
 - Short Convolution (heading) → الالتفاف القصير — width-4 causal convolution: التفاف سببي عرضه 4 / الالتفاف السببي ذو العرض 4
 - short-gap rebound keys → المفاتيح المعاد إقرانها بفجوة قصيرة
 - short-horizon → على أفق قصير
@@ -5116,6 +5495,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - shuffle → يخلط — reshuffle = يعيد الخلط; reshuffling = إعادة الخلط
 - shuffle order → ترتيب الخلط — base seed: البذرة الأساسية; base key: مفتاح أساسي; seeding: ضبط البذور; dataset class: صنف مجموعة بيانات
 - shuffled pixels / images → البكسلات / الصور المخلوطة — shuffled dataset: مجموعة البيانات المخلوطة; ordered: المرتبة
+- side (of a square matrix) → ضلع — plural أضلاع
 - side by side → جنبًا إلى جنب
 - side effect → أثر جانبي — plural آثار جانبية
 - side length → طول الضلع
@@ -5136,6 +5516,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - signal propagation → انتشار الإشارة
 - signal-to-noise scale (slide) → مقياس الإشارة إلى الضوضاء
 - signature (function) → توقيع
+- signature (telltale sign) → علامة — توقيع stays a function signature
 - signed length → الطول ذو الإشارة
 - signed prediction error → خطأ التنبؤ ذو الإشارة — overpredicts = يتنبأ بقيمة أكبر من اللازم
 - significance threshold → عتبة الدلالة — multi-seed adjective: عتبة دلالة متعددة البذور
@@ -5152,6 +5533,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - simulate (imperative) → حاكِ — simulated scores = الدرجات المحاكاة
 - simultaneous (confidence radius) → المتزامن — في آن واحد
 - single precision → الدقة المفردة — glossary
+- single program, multiple data (SPMD) → برنامج واحد وبيانات متعددة — glossed with the acronym; then تصميم SPMD
 - single-example SGD → خوارزمية SGD بمثال واحد — constant-step SGD = خوارزمية SGD بخطوة ثابتة; constant-rate iterates = نواتج التكرار بمعدل ثابت
 - single-image inference → الاستدلال على صورة واحدة
 - single-label → أحادي الوسم
@@ -5177,6 +5559,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - sinusoidal code (2D) → ترميز جيبي ثنائي الأبعاد — encodes the grid by construction: يرمّز الشبكة النقطية بحكم بنائه
 - site (where a child module is used) → موضع — plural مواضع
 - size (norm of a vector) → مقدار
+- size expansion (of decoded data) → تمدد في الحجم
+- Size Sweep (kicker) → مسح الحجم
 - Sizing (a model) → تقدير حجم
 - skeleton (of a class) → هيكل الصنف
 - skew-indexed relative logits → لوجيتات نسبية مفهرسة بالإمالة
@@ -5205,10 +5589,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - slope matrices → مصفوفات الميول
 - slot (cache buffer) → خانة — plural خانات; مواضع stays positions and vector slots
 - slot (patch position in the sequence) → موضع
+- slot (PCIe) → فتحة — خانة stays a cache slot
 - slots (vector) → مواضع
 - slow regime → النطاق البطيء
 - slow warmup → إحماء بطيء
+- slowdown → التباطؤ
 - sluggish (epoch) → متثاقلة
+- SM (streaming multiprocessor, on slides) → معالج SM — plural معالجات SM, also in body text after the gloss (✗ وحدات SM); SM contention: تزاحم على معالجات SM
 - small MLP (text) → شبكة MLP صغيرة — acronym after class noun
 - small-batch limit → الحالة الحدية للدفعات الصغيرة
 - small-data regime → نطاق البيانات القليلة — unaugmented datasets: مجموعات البيانات التي لا زيادة فيها
@@ -5227,6 +5614,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Snippet A → المقطع A
 - SNR → نسبة SNR — stays Latin; noise-to-signal ratio = نسبة الضوضاء إلى الإشارة
 - socio-technical systems → الأنظمة الاجتماعية التقنية
+- socket (CPU) → مقبس — لكل مقبس CPU
 - soft lookup → البحث اللين — slide/index form بحث لين; glossed once; hard lookup -> البحث القاطع
 - soft target distribution → توزيع مستهدف لين — softened: توزيع ملين
 - soft-capping → التسقيف اللين — glossed (soft-capping) once; soft-capped logits: اللوجيتات ذات السقف اللين
@@ -5281,6 +5669,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - special tokens → الرموز الخاصة
 - special tokens (text) → الرموز الخاصة
 - special-token registry / map (text) → سجل / خريطة الرموز الخاصة
+- specialize (kernels to shapes) → يخصِّص … بحسب — noun التخصيص; مخصص stays custom
 - specification → مواصفات
 - specificity → النوعية
 - spectral lens / picture → العدسة الطيفية / الصورة الطيفية
@@ -5297,6 +5686,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - speech recognition → التعرف على الكلام
 - speech synthesis → توليف الكلام
 - speech transcription → تحويل الكلام إلى نص
+- speed limit (table cell) → حد السرعة
+- speedrun → سباق السرعة — سباق السرعة modded-nanoGPT
 - speedup / gain of speed → تسريع — كسب stays gain of a layer
 - speedup factor → معامل التسريع
 - spelling cost (unknown word) → كلفة التهجئة
@@ -5337,9 +5728,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - stack (tensors, layers) → التكديس — verb يكدس; slide "Joining Tensors": ضم الموترات; concatenate joins: تربط
 - stack frame → إطار المكدس — caller's frame = إطار المستدعي
 - stack of matrices → مجموعة مكدسة من المصفوفات
+- stack trace → أثر المكدس — plural آثار المكدس; breakpoint: نقطة توقف
 - stack-based virtual machine → آلة افتراضية مبنية على مكدس
 - stage (CNN) → مرحلة — plural مراحل
 - stage (ResNet backbone) → مرحلة — plural مراحل
+- stage (verb: prepare a transfer or a batch in host memory) → يجهّز — staging buffer: مخزن تجهيز مؤقت
 - stage ratio → نسبة المراحل
 - stage widths → عروض المراحل
 - staged pretraining → تدريب مسبق على مراحل
@@ -5360,6 +5753,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - standard benchmarks → الاختبارات المعيارية المعتمدة
 - standard convolution → الالتفاف المعتاد — قياسي = scalar
 - standard error → الخطأ المعياري — of a frequency: الخطأ المعياري للتكرار النسبي
+- standard fix → الحل المعياري — fixes: حلول; remedies: علاجات; Diagnosis and Fixes: التشخيص والحلول
 - standard normal → طبيعي معياري — the distribution: التوزيع الطبيعي المعياري
 - standard normal CDF → دالة التوزيع التراكمي للتوزيع الطبيعي المعياري
 - standard normal density and distribution function → دالة الكثافة ودالة التوزيع للتوزيع الطبيعي المعياري
@@ -5371,12 +5765,17 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - standardize → يوحد معياريًا — standardized: موحد معياريًا
 - standardized / unstandardized → موحد معياريًا / غير موحد معياريًا
 - standardized benchmarks → الاختبارات المعيارية الموحدة — موحد معياريًا = statistical standardization
+- star allreduce → عملية allreduce النجمية — the star: النجمة
+- star gather/scatter → الالتقاط والبعثرة النجميان — ring / tree collectives: العمليات الجماعية الحلقية / الشجرية; hub: المركز
 - start position (window) → موضع بداية
 - start token → رمز البداية
+- start-up latency → زمن استجابة البدء — fixed start-up overhead: عبء البدء الثابت
 - starting offset (window) → إزاحة بداية
 - starve (gradients) → يُضمر — starved gradients: ضمور التدرجات; تحرم stays "starve of data, of updates"
 - starve a direction → تحرم الاتجاه — starving embeddings = محرومة من التحديث
 - starve the GPU → تُحرم وحدة GPU من البيانات
+- starved data loader → محمِّل بيانات قاصر — as starved input pipeline: مسار معالجة مدخلات قاصر
+- starved input pipeline → مسار معالجة مدخلات قاصر — keep the GPU fed: إبقاء وحدة GPU مزودة بالبيانات
 - starved of data → شحيح البيانات — verb: تحرم النموذج من البيانات
 - state (recurrent layer) → حالة — glossed (state) on the chapter index; fixed-size state: حالة ثابتة الحجم; fixed state: حالة ثابتة; state vector: متجه الحالة
 - state bandwidth → عرض نطاق الحالة — horizon reach: مدى الأفق; horizon wall: جدار الأفق
@@ -5446,17 +5845,21 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - stem / body / head / stage → الجذع / الجسم / الرأس / المرحلة — glossed once per page that defines them
 - stem--body--head → جذع وجسم ورأس — no dashes; تخطيط من جذع وجسم ورأس; القالب ثلاثي الأجزاء
 - stem-body-head layout → تخطيط من جذع وجسم ورأس — template: قالب من جذع وجسم ورأس; one form for whole chapter
+- Step Accounting (kicker) → محاسبة الخطوة
+- step boundary → حد الخطوة
 - step budget → ميزانية من الخطوات — plural ميزانيات الخطوات; cumulative = ميزانية الخطوات التراكمية; travel budget = ميزانية المسير
 - step count → عدد الخطوات — example count عدد الأمثلة
 - step counter → عداد الخطوات
 - step decay → اضمحلال درجي — step-wise: اضمحلال معدل التعلم على درجات; step schedule جدول درجي
 - step direction (optimization) → اتجاه الخطوة
+- step down (memory trace) → ينزل درجةً درجة — staircase-fashion: كدرجات السلم; sawtooth lifecycle: دورة حياة على هيئة سن المنشار
 - step function → الدالة الدرجية — indefinite دالة درجية
 - step grid → شبكة قيم الخطوة
 - step Jacobian (text) → المصفوفة اليعقوبية للخطوة
 - step jitter → اهتزاز الخطوات
 - step length → طول الخطوة — direct step length = طول خطوة مباشر; حجم الخطوة stays step size
 - step noise → ضوضاء الخطوات
+- Step Prediction (kicker) → التنبؤ بالخطوة
 - step reduction → تقليص في عدد الخطوات
 - step through (one token at a time) → يتقدم عبر … رمزًا مميزًا واحدًا في كل مرة
 - step time → زمن الخطوة — also for "step latency"; step cost: كلفة الخطوة
@@ -5490,10 +5893,13 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - stored parameter capacity → سعة المعلَمات المخزنة
 - stored pattern → النمط المخزن — plural الأنماط المخزنة
 - stored-to-active capacity (ratio) → النسبة بين السعة المخزنة والسعة النشطة — capacity ratio: نسبة سعة; "total / active": في المجموع / نشطة
+- straddle the ridge point → يقع على جانبي نقطة الانكسار — Clearing the ridge point: تجاوز نقطة الانكسار
 - straddle word boundaries (text) → يتخطى حدود الكلمات
 - straight-through estimator → مقدر العبور المباشر — not التمرير المباشر (feedthrough); glossed once in custom-layers
+- Strategy / Sharded Across k GPUs / Memory per Param / Collectives per Step / Bytes Sent per GPU (table header) → الاستراتيجية / المقسم إلى حصص على $k$ وحدة GPU / الذاكرة / معلَمة / العمليات الجماعية في الخطوة / البايتات المرسلة / وحدة GPU
 - strategy keyword arguments (code) → وسائط مسماة تخص الاستراتيجية
 - streak of clean steps → سلسلة من الخطوات السليمة — skip the optimizer step: يتخطى
+- stream (CUDA stream) → مجرى
 - stream (random numbers, tokens) → سيل — pl. سيول
 - stream (residual stream) → مجرى الإشارة — glossary residual stream: تيار البواقي
 - stream (weights, cache from HBM) → يسحب … من ذاكرة HBM — noun سحب; weight-streaming floor: أرضية سحب الأوزان
@@ -5501,6 +5907,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - stream variance budget → ميزانية تباين التيار
 - streaming → معالجة السيل — معالجة السيل بحالة ثابتة; not متدفق
 - streaming cache → ذاكرة مؤقتة لمعالجة السيل
+- streaming multiprocessor (SM) → معالج متعدد دفقي — plural المعالجات المتعددة الدفقية; glossed (streaming multiprocessor, SM), then معالج SM; written out where a page never introduces SM
+- streaming reduce-scatter (slide title) → عملية reduce-scatter … أولًا بأول
 - streaming regime → نمط السيل
 - strength (weight decay) → شدة — plural شدات
 - stress test → اختبار إجهاد
@@ -5528,6 +5936,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - string reversal → عكس السلاسل النصية — reversed string: السلسلة المعكوسة; reversal accuracy: دقة العكس
 - stripe → شريط — plural أشرطة; striped -> شريطي
 - stripe / band (of the test image) → شريط — border of zeros: إطار من الأصفار
+- strong scaling / weak scaling → التناسب القوي / التناسب الضعيف — glossed on the defining page; scaling efficiency: كفاءة التناسب; near-linear scaling: تناسب شبه خطي
 - strongly convex → محدب بقوة — smooth strongly convex function = دالة ملساء شديدة التحدب (momentum.md#u02); glossed
 - structural constraints → القيود البنيوية
 - structural groups → مجموعات بنيوية
@@ -5589,6 +5998,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Summary: Parameter Initialization (slide title) → الملخص: تهيئة المعلَمات — pattern Summary: X -> الملخص: X
 - summary: represent / match-and-copy induction head → رأس الاستقراء القائم بالمطابقة والنسخ
 - Summary: … at a Glance (slide title) → الملخص: … في لمحة
+- summed gradient → التدرج المجموع
 - summing out → الجمع على قيم المتغير
 - sums in quadrature → يُجمع جمعًا تربيعيًا
 - superpose (writes) → يراكب
@@ -5623,6 +6033,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - swap the two probabilities → تبديل الاحتمالين أحدهما بالآخر
 - sweep (autograd pass) → اجتياز — اجتياز خلفي / عكسي / أمامي; pass stays تمرير
 - sweep (hyperparameter) → مسح — plural عمليات مسح; verb يمسح (يمسح قيم `wd`); not اجتياز
+- sweep (reading a GPU's whole memory once) → مسح — sweep invariant: لامتغير زمن المسح
 - sweep alpha over values (text) → يمسح قيم $\alpha$ على …
 - sweep harness → أدوات مسح معدل التعلم — training harness = أدوات التدريب
 - sweep out a subspace → يرسم فضاءً جزئيًا — flat subspace = فضاء جزئي مستو; d-dimensional subspace = فضاء جزئي بُعده $d$; observation space = فضاء المشاهدات
@@ -5639,6 +6050,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - symbol (alphabet) → رمز — plural رموز; kept apart from الرمز المميز
 - symbolic algebra → الجبر الرمزي
 - symbolic control flow → تدفق تحكم رمزي — data-dependent: المعتمد على البيانات; unroll: تنفرد
+- symbolic dimension → بُعد رمزي — symbolic integer dimension: بُعد صحيح رمزي
+- symbolic tracing → التتبع الرمزي
 - symmetric / asymmetric padding → حشو متناظر / غير متناظر — same padding on slides: الحشو “same”
 - symmetric group → الزمرة التناظرية — solvable group: زمرة قابلة للحل
 - symmetric per-tensor scaling → تحجيم متناظر لكل موتر
@@ -5648,11 +6061,14 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - symmetry principles → مبادئ التناظر
 - symmetry trap → فخ التناظر — all-zeros trap: فخ الأصفار الكاملة
 - symptom → عرَض — culprit: الجاني
+- symptom / technique / effect on memory / cost (table header) → العرَض / التقنية / الأثر في الذاكرة / الكلفة
 - synaptic weights → الأوزان المشبكية
 - sync barrier → حاجز مزامنة
 - synced → مزامَن
 - synchronization point → نقطة مزامنة — synchronization bubble: فجوة مزامنة; asynchronous dispatch: الإرسال غير المتزامن; glossed
 - synchronize → يزامن
+- synchronized timing → التوقيت المتزامن — asynchronous timing traps: فخاخ التوقيت غير المتزامن
+- synchronizing line (of code) → سطر يسبب مزامنة
 - syntax error → خطأ نحوي
 - synthesize (samples) → تخليق
 - synthetic benchmark → اختبار معياري اصطناعي
@@ -5667,6 +6083,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Systems Cost (slide) → كلفة الأنظمة
 - systems intuition → الحدس في الأنظمة
 - systems pitfall (slide kicker) → مزلق في الأنظمة
+- systolic → انقباضي — tile multipliers: ضوارب بلاطات
+- systolic array → المصفوفة الانقباضية — glossed (systolic array)
 - T-shirt (Fashion-MNIST) → قميص قصير الكمين — not تيشيرت, قميص قطني; English given once
 - tab → تبويب
 - Tab completion → الإكمال بمفتاح Tab
@@ -5687,6 +6105,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - tails (coin) → الكتابة — gloss (tails) once
 - Take as given that → سلّم بأن
 - take off (training curve) → تنطلق
+- take turns (host and device) → يتناوبان — noun التناوب
 - Takeaway → الخلاصة — Summary: Key Takeaways from X الملخص: أهم الخلاصات من X
 - taking action a → اتخاذ الإجراء a
 - tally → يبني بالعد — also يحصي
@@ -5727,6 +6146,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - teacher model → نموذج معلم
 - teacher-forced decoder input (slide) → مدخلات مفكك التشفير بفرض مخرجات المعلم
 - technical report → تقرير تقني
+- Technique / Component; Effect on Step Memory; Time / Compute Cost; When to Use It (table header) → التقنية / المكون; الأثر في ذاكرة الخطوة; كلفة الزمن / الحوسبة; متى تُستخدم
 - temperature → درجة الحرارة — glossary درجة حرارة softmax
 - temperature and top-k sampling → أخذ العينات بدرجة الحرارة وبطريقة top-k
 - Temperature Sampling (slide title) → أخذ العينات بدرجة الحرارة
@@ -5747,10 +6167,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Tensor Core GEMM → عملية GEMM على أنوية الموترات
 - tensor cores → أنوية الموترات
 - tensor library → مكتبة موترات — plural مكتبات الموترات
+- tensor parallelism → توازي الموترات — built like the verified توازي البيانات; the glossary's proposed تواز للموترات cannot take the article
 - tensor primitives → عمليات أولية على الموترات — systems discipline: تخصص في هندسة الأنظمة
 - tent function → دالة الخيمة
 - term (of a bound) → المقدار — not الحد, which is bound
 - term (of a sum) (beside a bound) → مقادير — المقادير الخطية في n
+- term (of the step-memory formula) → حد — حد المعلَمات، حد التفعيلات
 - term omitted by an equation → الحد الذي تغفله هذه المعادلة
 - terminal → الطرفية
 - terminal learning rate / terminal rate → معدل التعلم النهائي / المعدل النهائي — نهائي for terminal; glossed
@@ -5789,9 +6211,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - The Modern Recipe (heading) → الوصفة الحديثة
 - the moving target (slide) → الهدف المتحرك
 - The Normal Equations (section heading) → المعادلات الناظمية
+- The Performance Model (page title) → نموذج الأداء
 - the plane (geometry) → المستوي
 - the press → دار النشر
 - The Regression Table (kicker) → جدول الانحدار
+- the ridge (roofline) → نقطة الانكسار — below / above the ridge: تحت / فوق نقطة الانكسار; plural نقاط انكسار
 - the standard → المعيار
 - The Systems Challenge (slide) → تحدي الأنظمة
 - the Trainer → الصنف Trainer — in tab notes
@@ -5812,8 +6236,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - thousands separators (text) → فواصل الآلاف
 - thread (OS) → خيط — pl. خيوط
 - thread-block scheduling → جدولة كتل الخيوط
+- thread-block tiles → بلاطات كتل الخيوط
 - three orders of magnitude → ثلاث مراتب مقدار — blows the loss up a thousandfold: تضخمت الخسارة ألف مرة
 - three regimes (slide) → ثلاثة أنماط
+- Three-Floor Time Bound (slide) → حد الزمن ذو الأرضيات الثلاث — Three-Floor Step Bound: حد الخطوة ذو الأرضيات الثلاث; crossover knee: ركبة التقاطع; overhead knee: ركبة العبء الإضافي; plural رُكب
+- three-floor time model → نموذج الزمن ذو الأرضيات الثلاث — predicted floor: الأرضية المتوقعة
 - threshold → عتبة — decision threshold: عتبة القرار
 - threshold (text) → عتبة
 - threshold a classifier at τ → نضع عتبته عند $\tau$
@@ -5823,6 +6250,10 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - threshold-free → لا يعتمد على أي عتبة
 - thresholded linear filter → مرشح خطي ذو عتبة
 - throughput → الإنتاجية — images/second: الإنتاجية (بالصور في الثانية)
+- throughput benchmark → قياس أداء الإنتاجية — Throughput Measurement: قياس الإنتاجية
+- throughput multiplier → العامل الضربي للإنتاجية
+- throughput retention → الإنتاجية المحتفظ بها — retained fraction of throughput: كسر الإنتاجية الذي يبقى
+- Throughput versus time to target (exercise title) → الإنتاجية مقابل الزمن اللازم لبلوغ الهدف
 - thumbnail → الصور المصغرة
 - tie → تعادل — verb يتعادل; virtual tie: تعادل شبه تام; break ties: يحسم التعادل; two logits tie: يتساوى اللوجيتان
 - tie / tying (output projection to the embedding table) → يربط … بـ / ربط — glossed (tying) once; tied embeddings: التضمينات المربوطة; weight-tied output head: رأس المخرجات مربوط الأوزان; Tied Head: الرأس المربوط
@@ -5839,8 +6270,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - tile row / tile count / tile sparsity → صف من البلاطات / عدد البلاطات / تناثر البلاطات — visit/skip a tile -> يزور / يتخطى بلاطة
 - tile the input (windows) → تتراصف النوافذ على المدخلات — tiles (table): بلاطات
 - tiled → المقسم إلى بلاطات
+- tiled algorithm → خوارزمية مقسمة إلى بلاطات — hand-tiled: مقسمة يدويًا إلى بلاطات
+- tiled algorithmic rewrite → إعادة كتابة خوارزمية مقسمة إلى بلاطات — plural إعادات الكتابة
 - tiled online softmax → خوارزمية softmax الآنية المقسمة إلى بلاطات
 - tilt (a loss) → يميل
+- time (verb: measure a duration) → يوقّت — noun توقيت; Timing GPU Code: توقيت الشيفرة على وحدة GPU; timed properly: والتوقيت سليم; timed windows: نوافذ موقّتة; "measure the step time" stays يقيس زمن
 - time complexity → التعقيد الزمني
 - time one pass over the training data → قس زمن مرور واحد على بيانات التدريب
 - time series → سلسلة زمنية — plural السلاسل الزمنية; تسلسل stays ML sequence
@@ -5848,10 +6282,15 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - time-homogeneous (statistics) → متجانس زمنيًا
 - time-invariant (statistics) → ثابت زمنيًا
 - time-optimal / compute-optimal → أمثل زمنيًا / أمثل حسابيًا
+- time-to-target-loss → الزمن اللازم لبلوغ خسارة مستهدفة — as the further-reading heading; time-to-loss: الزمن اللازم لبلوغ الخسارة
+- timeline (host, device) → خط زمني — dual الخطان الزمنيان
+- timeline trace → أثر على خط زمني — trace directory: مجلد الأثر
 - timer → المؤقت
 - timescale → المقياس الزمني
 - timescale (optimization) → المقياس الزمني
+- timestamp → طابع زمني — plural طوابع زمنية
 - timing helper → دالة التوقيت المساعدة — routine = دالة
+- timing protocol → بروتوكول التوقيت
 - tiny-data regime → نطاق البيانات الضئيلة — tiny datasets: مجموعات البيانات الضئيلة
 - to agree (two versions) → متطابقتان — "the two versions agree": النسختان متطابقتان
 - to attach a hook to → يلحق خطافًا بـ — hooks fire: تنطلق الخطافات; execution hooks: خطافات التنفيذ; wrapper: غلاف; observer: مراقب
@@ -5909,6 +6348,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - toggle (a stored state) → يبدّل
 - token batch size → حجم الدفعة بالرموز المميزة — production batch sizes = أحجام دفعات بيئة الإنتاج
 - token budget → ميزانية من الرموز المميزة — plural ميزانيات
+- token capacity → السعة من الرموز المميزة — slide title: سعة الرموز المميزة; token budget: ميزانية الرموز المميزة
 - token collapse → انهيار الرموز المميزة — glossed (token collapse) at its first body mention
 - token diversity / inter-token diversity → تنوع الرموز المميزة / التنوع بين الرموز المميزة
 - token embedding → تضمين الرمز المميز
@@ -5919,6 +6359,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - token ids → معرفات الرموز المميزة — discrete: المتقطعة
 - token index (text) → فهرس — plural فهارس صحيحة
 - token mixing / channel mixing → مزج الرموز المميزة / مزج القنوات — not glossed
+- token rate → معدل الرموز المميزة — tokens/s in prose: رمزًا مميزًا في الثانية
 - token representation → تمثيل الرمز المميز — plural تمثيلات الرموز المميزة
 - token spread → تشتت الرموز المميزة — glossed (token spread); logit spread: تشتت اللوجيتات; measured spread: التشتت المقاس / الذي قسناه (المقيس stays "scaled")
 - token transitions → انتقالات الرموز المميزة
@@ -5967,7 +6408,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - top-expert share → حصة الخبير الأكثر انشغالًا
 - top-k / top-p / min-p sampling (text) → أخذ العينات بطريقة top-$k$ / top-$p$ / min-$p$ — then طريقة top-k (feminine); Top-k in slide tables
 - top-left anchor → التثبيت عند الركن العلوي الأيسر
+- top-level model → النموذج في المستوى الأعلى
 - topology → الطوبولوجيا
+- total (verb: add up bytes) → يحسب مجموع — tally the collectives: إحصاء العمليات الجماعية
 - total budget → الميزانية الكلية
 - total step horizon → أفق الخطوات الكلي
 - total-compute optimum → القيمة المثلى للحوسبة الكلية
@@ -5980,6 +6423,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - trace (compilation) → يتتبع — noun التتبع; trace time: وقت التتبع; tracer: متتبِّع
 - trace (recorded operations) → الأثر — الأثر المسجل، أثر التنفيذ; matrix trace: أثر المصفوفة
 - trace by hand (text) → يتتبع يدويًا — noun التتبع اليدوي
+- tracing (graph capture) → التتبع — glossed (tracing); symbolic tracing: التتبع الرمزي; trace time: وقت التتبع; a trace: عملية تتبع; traced array: مصفوفة متتبَّعة
+- tracing compiler → مصرِّف معتمد على التتبع — plural المصرِّفات المعتمدة على التتبع
 - track / lag → يتتبع / يتأخر عنه
 - tracked variable → المتغير المتتبَّع
 - tractable → قابل للتحليل
@@ -5988,6 +6433,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - trade-off → مقايضة
 - trade-off frontier → حد المقايضة
 - tradeoff → المفاضلة
+- traffic (bytes sent and received) → حركة البيانات — ring traffic: حركة بيانات الحلقة
 - trail → يتأخر عن
 - trailing singular value → ذيل الطيف — noise damping = إخماد الضوضاء; pure noise directions = اتجاهات الضوضاء البحتة
 - trailing space (text) → الفراغ اللاحق — italic with gloss at first mention
@@ -6003,6 +6449,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - trainer (common noun) → المدرِّب — kasra+shadda, against مدرَّب (trained); the class Trainer takes الصنف
 - Training & Validation Trajectories (slide title) → مسارات التدريب والتحقق — Long-Horizon … Caveats = محاذير … الطويل الأمد
 - training budget → ميزانية التدريب
+- Training Check (heading) → التحقق من التدريب — training gate: بوابة قبول التدريب; passed gate: اجتياز بوابة القبول
 - training checkpoint → نقطة استعادة التدريب
 - Training Curve and Empirical Entropy Yardsticks (slide title) → منحنى التدريب ومعايير الإنتروبيا التجريبية للمقارنة — Training Results: نتائج التدريب
 - training draw → سحبة مجموعة التدريب $\mathcal{S}$
@@ -6029,11 +6476,15 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - training script → برنامج تدريب — script: البرنامج; standalone script: برنامج مستقل
 - training split → قسم التدريب
 - training stabilizers → عوامل استقرار للتدريب
+- training state (parameters, gradients, optimizer state) → حالة التدريب
 - training table → جدول التدريب
 - training topology / inference topology → طوبولوجيا التدريب / طوبولوجيا الاستدلال
+- training-aware cache → ذاكرة مؤقتة مدركة للتدريب
 - trajectory (accuracy curves) → المسار — dual المساران; trajectory-for-trajectory = مسارًا بمسار
+- transcendental (arithmetic, operations) → متسام — العمليات المتسامية
 - transcribing speech (text) → تحويل الكلام إلى نص
 - transfer learning → نقل التعلم
+- transfer time → زمن النقل
 - transformation → تحويل
 - transformer architectures → معماريات المحول — glossed (transformer) once
 - transformer block → كتلة المحول — glossed (transformer block)
@@ -6048,6 +6499,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - transient progress → التقدم العابر — deterministic curvature ceiling = سقف الانحناء الحتمي
 - transient spike → قفزات عابرة — قفزة = spike; وثبة = jump
 - transient steps → الخطوات العابرة
+- transistor → ترانزستور — plural ترانزستورات; logic density: كثافة الدارات المنطقية
 - transition (of a matrix memory) → الانتقال — matrix transition: الانتقال المصفوفي; delta transition matrix: مصفوفة انتقال دلتا; right-multiplied: المضروبة من اليمين
 - transition (of a recurrent state) → انتقال — dense transition matrices: مصفوفات الانتقال الكثيفة; affine state transitions: انتقالات الحالة التآلفية
 - transition counts → تعدادات الانتقال
@@ -6066,6 +6518,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - travel budget → ميزانية المسير — cumulative: التراكمية
 - travel budget (optimization) → ميزانية المسير
 - traverse → يجتاز
+- tree algorithm (allreduce) → خوارزمية شجرية — trees: أشجار
+- tree mode (nnx.jit) → نمط الشجرة — tree traversal: اجتياز الشجرة; reference graph: مخطط المراجع
 - trend (text) → الاتجاه
 - trial run → جولة تجريبية — proxy trials: جولات بديلة تجريبية
 - triangle deficit → عجز المثلث
@@ -6075,6 +6529,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - trigram model (text) → النموذج الثلاثي
 - trinity (ODE–recurrence–convolution) → ثلاثية
 - triple → ثلاثية
+- Triton (class noun) → لغة Triton
 - trivial copy → نسخ تافه — trivial copy terms: حدود نسخ تافهة
 - trough → أخدود
 - trouser (Fashion-MNIST) → بنطال — plural بناطيل; not سروال
@@ -6135,7 +6590,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - unbounded norm → معيار غير محدود
 - unboxed → غير معلَّب — with the mark
 - uncentered second moment → العزم الثاني غير المركزي — bias-corrected = بعد تصحيح الانحياز; bias correction glossed
+- unchunked (version) → غير المقسمة إلى قطع — The loss in chunks (exercise title): الخسارة على قطع
 - unclipped → غير مقصوص / بلا قص
+- uncompiled baseline → خط الأساس غير المصرَّف
 - unconditional stability → استقرار غير مشروط
 - unconstrained scenes → المشاهد غير المقيدة
 - uncorrelated → غير مرتبط
@@ -6150,13 +6607,16 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - underutilized (GPU) → يبقى معظم قدرتها معطلًا
 - undiscounted momentum → زخم بلا خصم
 - undo (exercise title "X, undone") → إبطال X
+- undocumented flag → راية غير موثقة — transport flags: رايات النقل
 - unembedding projection → إسقاط فك التضمين — glossed (unembedding)
 - Unfair ablation trap → فخ الاستئصال غير المنصف — confound A with B: يخلط A بـ B
 - unfreeze → يلغي تجميد
 - Unicode character classes (text) → فئات محارف Unicode
 - unidentifiability → عدم قابلية التحديد
 - Unified Block & Census (kicker) → الكتلة الموحدة والتعداد
+- unified memory → الذاكرة الموحدة — unified-memory machines: الأجهزة ذات الذاكرة الموحدة
 - unified sampler (code) → خوارزمية موحدة لأخذ العينات — sampler: خوارزمية أخذ العينات
+- Unified Time Model (kicker) → نموذج الزمن الموحد
 - unified token interface → واجهة رموز مميزة موحدة
 - uniform (the same for all: gate initialization) → موحد — التهيئة الموحدة للبوابات
 - uniform approximation → التقريب المنتظم
@@ -6173,6 +6633,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - uniform-shift invariance → الثبات تحت الإزاحة المنتظمة
 - uniformly chosen → مختارة بانتظام
 - uniformly random vocabulary token → رمز مميز عشوائي مسحوب بانتظام من المفردات
+- Unifying Analytical Model (kicker) → نموذج تحليلي موحِّد
 - Unifying Preconditioners (slide) → توحيد المُشرِّطات المسبقة
 - unigram / bigram / trigram model (text) → النموذج الأحادي / الثنائي / الثلاثي
 - unigram byte table → جدول أحادي للبايتات — bigram = ثنائي; glossed (unigram), (bigram) once
@@ -6222,6 +6683,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - unroll (RNN) → يفرد — noun الفرد; شبكة مفرودة
 - unroll / unfold (kernel, image) → يفرد — فرد
 - unrolled → مفرودة — الصورة المفرودة; temporal unrolling: الفرد الزمني
+- unscale (divide by the loss scale $S$) → يلغي التحجيم — imperative ألغِ التحجيم بالعامل $S$; scaled entries: العناصر المحجَّمة
 - unscaled → غير محجَّم — or دون تحجيم
 - unscaled gradients (after dividing by S) → التدرجات بعد إلغاء التحجيم
 - unscaled model → النموذج قبل التحجيم
@@ -6289,6 +6751,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - validation cross-entropy → الإنتروبيا المتقاطعة على بيانات التحقق
 - validation images → صور تحقق
 - validation lead → تقدم في خسارة التحقق — trainable = قابل للتدريب
+- validation log-perplexity → لوغاريتم حيرة التحقق
 - validation perplexity → حيرة التحقق — degrades = تسوء
 - validation perplexity (metric) → حيرة التحقق — training perplexity: حيرة التدريب; initial: الحيرة الابتدائية
 - validation score (text) → درجة التحقق
@@ -6297,6 +6760,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - valley → الوادي
 - valley floor → قاع الوادي — flat floor = القاع المنبسط
 - Valley Simulation (slide kicker) → محاكاة الوادي
+- Value / Behavior (table header) → القيمة / السلوك — Role in Multi-GPU Training: الدور في التدريب على وحدات GPU متعددة
+- value aggregation (attention) → إجمال القيم — as the lexicon's الإجمال
 - Value of Two-Sided Context (kicker) → قيمة السياق من الجانبين
 - value range → مجالات القيم
 - Vandermonde → Vandermonde — stays Latin: مصفوفة تصميم Vandermonde
@@ -6323,6 +6788,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - VC generalization bound → حد VC للتعميم
 - VC theory → نظرية VC
 - vector bus → ناقل متجهات مشترك — shared width-d: عرضه d
+- vector instructions → التعليمات المتجهية
 - vector of ones → متجه عناصره واحدات
 - vector processor → المعالجات المتجهية — CPUs and GPUs = وحدات CPU ووحدات GPU
 - vector state → حالة متجهية — beside حالة مصفوفية
@@ -6337,6 +6803,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - vendor guide → دليل الشركة المصنعة
 - verbatim → حرفيًا
 - verbatim memorization (text) → الحفظ الحرفي
+- Verification Discipline (kicker) → منهجية التحقق
 - verifier → متحقق — plural متحققات
 - versatile / context-bound word (text) → المتعددة السياقات / المقيدة بسياقها
 - version (build date) → الإصدار
@@ -6353,6 +6820,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - virtual → ظاهري — ظاهريًا; not افتراضي (= default / virtual environment), not وهمي (= dummy)
 - virtual environment → بيئة افتراضية
 - virtual key → مفتاح ظاهري
+- virtual memory management → إدارة الذاكرة الظاهرية
 - virtual sink bias → انحياز مصرف ظاهري
 - virtual sink logit → لوجيت مصرف ظاهري — non-token sink logit: لوجيت مصرف لا يقابل أي رمز مميز; virtual denominator logit: لوجيت المقام الظاهري; kept sink tokens: رموز المصرف المبقاة
 - viscous friction → احتكاك لزج
@@ -6389,9 +6857,12 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - wall-clock time per epoch → الزمن الفعلي للحقبة
 - wander (iterates) → تهيم
 - warm restarts → إعادات تشغيل دافئة — glossed
+- warm up (a device) → يحمي — noun إحماء; warm-up iterations: تكرارات إحماء
 - warm up the hidden state (text) → يجري إحماءً للحالة المخفية — prefix warm-up loop: حلقة إحماء على البادئة
 - Warm-Up (slide title) → إحماء
 - warm-up call → استدعاء إحماء
+- warm-up run (before recording a CUDA graph) → تشغيل إحماء
+- warm-up runs → استدعاءات إحماء
 - warmup → الإحماء — linear warmup إحماء خطي; glossed once
 - warmup and cosine learning-rate schedules (text) → جداول معدل التعلم القائمة على الإحماء وجيب التمام
 - warmup steps → خطوات إحماء — 500 خطوة إحماء; warmup length: طول الإحماء
@@ -6401,9 +6872,11 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - warmup-stable-decay (WSD) → الإحماء ثم الثبات ثم الاضمحلال — then جدول WSD; glossed at first mention
 - warmup-stable-decay schedule → جداول الإحماء ثم الثبات ثم الاضمحلال — glossed
 - warmup–stable–decay (WSD) schedule (optimization) → جداول الإحماء ثم الثبات ثم الاضمحلال — then جدول WSD
+- warp → مجموعة warp — on slides; resident warps: المجموعات المقيمة
 - warp-specialized → ضمن مجموعات خيوط (warps) متخصصة — warps glossed
 - warped (history, time axis) → ممطوط — exponentially warped: ممطوط أسيًا
 - watershed → نقطة التحول
+- wave (of tiles on the streaming multiprocessors) → موجة — plural موجات; wave model: نموذج الموجات
 - waveform samples (text) → عينات الموجة الصوتية
 - wavelength → طول موجي — الطول الموجي with article
 - wavelet → المويجات — plural form as logged
@@ -6412,6 +6885,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - web text (text) → نصوص الويب — WebText dataset name stays Latin
 - weight an example by → يرجح المثال بالوزن $\beta_i$ — verb
 - weight averaging → حساب متوسط الأوزان
+- weight casts → تحويل نوع الأوزان
+- weight copies (bf16) → نسخ الأوزان — نسخ من الأوزان بصيغة bf16
 - weight decay → اضمحلال الأوزان — verb decay = يضمحل; decoupled = اضمحلال الأوزان المنفصل
 - weight EMA → متوسط EMA للأوزان
 - weight EMA (optimization) → متوسط EMA للأوزان
@@ -6424,6 +6899,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - weight update → تحديثات الأوزان — slide: فحص تحديثات الأوزان
 - weight-decay strength → شدة اضمحلال الأوزان
 - weight-decay timescale → المقياس الزمني لاضمحلال الأوزان — weight's decay rate = معدل اضمحلال الوزن
+- weight-gradient / input-gradient product → جداء تدرج الأوزان / جداء تدرج المدخلات
 - weight-norm regularization → التنظيم بمعيار الأوزان
 - Weight-Space Circuit Analysis (slide) → تحليل الدوائر في فضاء الأوزان
 - weighted / unweighted → الموزون / غير الموزون
@@ -6437,6 +6913,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - weighted value → القيمة الموزونة
 - weighting (attention) → ترجيح — plural ترجيحات; soft -> لينة
 - weighting scheme → مخطط ترجيح
+- weightless matrix product → جداء مصفوفات بلا أوزان — weight FLOPs: عمليات FLOP الخاصة بالأوزان; attention FLOPs: عمليات FLOP الخاصة بالانتباه
 - Welch overlap ceiling / Welch rank limit → سقف Welch للتراكب / حد Welch للرتبة
 - Welch's bound → حد Welch — Welch stays Latin; Welch floor: أرضية Welch; Welch's lower bound: حد Welch الأدنى; overlap bound: حد Welch للتراكب
 - well scaled (activations) → في مقياس سليم — signal scale: مقياس الإشارة; additive / multiplicative growth: نمو جمعي / ضربي
@@ -6445,13 +6922,16 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - What Depth Introduces (slide) → ما يجلبه العمق
 - What it fits / How (table header) → ما تلائمه / الكيفية
 - Where the Parameters Live (slide title) → مواضع المعلَمات
+- Where the peak lands (exercise title) → موضع الذروة — the peak lies at: تقع الذروة عند
 - Where Training Stalls (slide kicker) → موضع تعثر التدريب
 - Where's Waldo → “أين Waldo” — name stays Latin
 - white noise → ضوضاء بيضاء
 - whitespace (text) → الفراغات
 - whole-garment templates → قوالب لقطع ملابس كاملة
+- whole-program graph → مخطط البرنامج كله
 - Why Attention Alone Is Not Enough (slide) → لماذا لا يكفي الانتباه وحده
 - Why Extrapolation Fails (kicker) → أسباب إخفاق الاستكمال خارج المدى
+- Why it matters: (slide lead-in) → سبب الأهمية:
 - widely deployed (text) → الواسعة الانتشار
 - widen → يزداد عرضه — wider أعرض; transitive يعرّض, noun زيادة العرض; not يوسع / التوسيع (= dilation)
 - widen blocks → زيادة عرض الكتل — يوسع stays dilation; at matched cost: بكلفة مماثلة
@@ -6465,15 +6945,18 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Wigner's semicircle law → قانون Wigner لنصف الدائرة — name Latin
 - wild outliers → قيم شاذة جامحة — outlier = قيمة شاذة
 - wind-tunnel measurements → قياسات في نفق هوائي — sound-pressure target = هدف هو ضغط الصوت
+- window (range of a scale factor $S$ in which a format is accurate) → نافذة — fp16 gradient window: نافذة التدرجات في fp16; valid window: النافذة الصالحة
 - window edge / window boundary → طرف النافذة / حد النافذة — edge penalty (slide): عقوبة الطرفين
 - window length (text) → طول النافذة
 - window of 128 bytes / 128-byte window → نافذة من 128 بايتًا — also نوافذ من 1,024 بايتًا; the counted noun follows the last two digits (style §15.7); 16 بايتًا
 - window position → الموضع داخل النافذة — context position: موضع السياق
+- window spread (timing windows) → تشتت النوافذ — relative spread: التشتت النسبي
 - windowed / unwindowed curve → المنحنى ذو النافذة / المنحنى بلا نافذة
 - winner's curse → لعنة الفائز
 - winning element → العنصر الفائز
 - winning key → مفتاح فائز
 - winning weight decay → اضمحلال الأوزان الفائز
+- wire (data wire) → سلك — plural أسلاك; wire count: عدد الأسلاك; the wire law: قانون الأسلاك
 - wiring (of a Transformer block: encoder-only, decoder-only, encoder–decoder) → توصيل — plural توصيلات; the three wirings: التوصيلات الثلاثة; canonical wirings: توصيلات معيارية; glossed (wirings) once
 - with probability one (math) → باحتمال يساوي واحدًا
 - with replacement → مع الإرجاع — without replacement = دون إرجاع; glossed
@@ -6485,6 +6968,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Word-Order Invariance (slide) → الثبات أمام ترتيب الكلمات
 - work (cost of an algorithm) → عمل — "in $O(T \log T)$ work": بعمل مقداره $O(T \log T)$
 - work (parallel computation: total operations) → العمل — training work: عمل التدريب; pairwise work: عمل زوجي; projection work: عمل الإسقاطات
+- work item → عنصر عمل — plural عناصر العمل
 - Work out these … → المطلوب حل … / المطلوب إجراء … — no colon after المطلوب
 - work-efficient (scan) → كفء في العمل — glossed (work-efficient) once; feminine كفؤة
 - worked configuration → الإعداد المحلول — heading: إعداد محلول من طرف إلى طرف
@@ -6496,7 +6980,9 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - working example → مثال عامل — working model: نموذج عامل
 - working memory → الذاكرة العاملة
 - workload → حجم العمل
+- workload (kind of computation run on the hardware) → حمل العمل — plural أحمال العمل; حجم العمل stays the amount of work
 - workspace memory → ذاكرة مساحة العمل — layout transformation: تحويل التخطيط
+- workstation → محطة عمل — our build workstation: محطة العمل التي نبني عليها الكتاب
 - worst case → أسوأ الحالات — adverbial: في أسوأ الحالات
 - worst-case loss → الخسارة في أسوأ الحالات
 - wrap → يغلف
@@ -6529,6 +7015,8 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - zero OOV (text) → انعدام حالات OOV / بلا أي حالة OOV
 - zero out → يصفّر — zeroing -> التصفير
 - zero padding (p=0) (no padding) → حشو مقداره صفر — not حشو الأصفار (= padding with zeros)
+- ZeRO Stage 1 → المرحلة 1 من ZeRO — table and kicker alike; slide short form ZeRO-1: المرحلة ZeRO-1; the family: عائلة ZeRO; expansion kept in English with its italics and an Arabic explanation (أي المحسن الخالي من التكرار)
+- ZeRO Taxonomy (kicker) → أصناف ZeRO
 - zero the state → تصفير الحالة — State-Reset Ablation: الاستئصال بإعادة ضبط الحالة
 - zero-bias initialization → التهيئة بانحياز صفري
 - zero-block model → نموذج بلا كتل
@@ -6539,6 +7027,7 @@ before compaction is in git history (commit before "ar: compact the decisions lo
 - Zero-layer tied-embedding baseline → نموذج مرجعي بلا طبقات بتضمينات مربوطة — 1-block model: النموذج ذو الكتلة الواحدة; untied model: النموذج غير المربوط
 - zero-loss solutions → الحلول ذات الخسارة الصفرية
 - zero-mean → ذو متوسط صفري
+- zero-memory device (`'meta'`) → الجهاز عديم الذاكرة
 - zero-one error → خطأ صفر-واحد — خطأ التصنيف صفر-واحد
 - zero-order hold → الإمساك من المرتبة الصفرية — glossed (zero-order hold) on the SSM page only; then ZOH with a class noun: تقطيع ZOH، تحديث ZOH، اضمحلال ZOH; not الماسك
 - zero-padded kernel → نواة محشوة بالأصفار

@@ -855,6 +855,10 @@ word separates the source's Latin name from its Latin link text.
   و Hutter (2019)].
   A lead-in made of two cited groups takes the dual: "Cho et al. & Sutskever et
   al. (2014):" → بحثا Cho et al. و Sutskever et al. (2014):.
+- **A book named in body text with a Latin citation** takes كتاب before its
+  link, and the citation is opened so that an Arabic word separates the two
+  Latin runs: "[Title](url) (Austin et al., 2025)" → كتاب [Title](url) لمؤلفيه
+  Austin et al. (2025); an organization: الصادر عن Hugging Face (2025).
 - **A Latin name directly before :citet:** gets an Arabic word between them:
   (اختصار *Momentum Orthogonalized by Newton–Schulz*، وقد اقترحه :citet:`…`).
 
@@ -880,6 +884,11 @@ word separates the source's Latin name from its Latin link text.
   نافذة عرضها 4096; "pre" / "pre and post" → تطبيع مسبق / مسبق ولاحق; "128
   experts, 8 active" → 128 خبيرًا، النشطون منهم 8. Parameter counts in cells
   (46.7B / 12.9B) are copied, not turned into مليار.
+- **Hardware and communication tables.** A cell that names a link takes the
+  class noun وصلة and بمعدل between the name and the rate: "NVLink 4, 450 GB/s"
+  → وصلة NVLink 4 بمعدل 450 GB/s. A cell that counts collectives keeps the
+  digit before the class noun: "2 All-Gathers + 1 Reduce-Scatter" → 2 عملية
+  all-gather + 1 عملية reduce-scatter; slide shorthand (RS) is written out.
 
 ### 15.6 Class nouns and names
 
@@ -910,6 +919,9 @@ word separates the source's Latin name from its Latin link text.
   Kullback–Leibler، Nadaraya--Watson، Black--Scholes; a pair term in an equation
   label takes an en dash between Arabic words (حد المحتوى–الموضع); body text
   the descriptive form (الحدان التقاطعيان بين المحتوى والموضع).
+- **A product named with its maker's possessive** puts the class noun and the
+  product first, then من and the maker: "NVIDIA's Nsight Systems" → أداة Nsight
+  Systems من NVIDIA; "Apple's M3 Ultra" → الجهاز M3 Ultra من Apple.
 
 ### 15.7 Numbers and units
 
@@ -927,6 +939,12 @@ word separates the source's Latin name from its Latin link text.
   "(:numref:`a`--:numref:`b`)" → (من :numref:`a` إلى :numref:`b`).
 - **Quantity phrases with a math span** take a noun: "a $64\times$ range" →
   مدى قدره $64\times$; "capped at $2.5$" → بسقف مقداره $2.5$.
+- **A multiplier in a math span after a comparative** in prose takes بمقدار or
+  بنحو: "$24\times$ fewer wires" → عدد الأسلاك أقل بمقدار $24\times$; "~$3\times$
+  more" → أكبر بنحو $3\times$; a speedup: تسريع قدره $1.6\times$.
+- **Time units written as words keep the prefix as a separate word**, like ميلي
+  ثانية: ميكرو ثانية (ميكرو ثوان)، بيكو ثانية (✗ ميكروثانية); the symbols ms, µs,
+  ns are copied.
 - **A compound number above 100 governs its noun by its last two digits**
   (this refines §5.2): 03–10 the plural in the genitive (103 خطوات), 11–99 the
   singular in the accusative (128 بايتًا، 512 رمزًا مميزًا، 1,024 بتًا، 4,096
