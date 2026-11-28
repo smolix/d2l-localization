@@ -324,7 +324,7 @@ d_h = 4$ ويعود إلى عنق الزجاجة $0.71$ مع أنه يتعلم �
 - **التحجيم ودالة softmax:** القسمة على $\sqrt{2}$ تعطي الدرجة $1.41$ للأسماء الثلاثة و $0$ لما سواها، فتنتج الأوزان $e^{1.41}/(3e^{1.41}+2) \approx \mathbf{0.29}$ لكل اسم و $\mathbf{0.07}$ لكل من *gave* و *the*.
 
 <!--en:ea20b190-->
-::: {.slide title="تصوير رأس واحد على ‘Alice gave Bob the book’"}
+::: {.slide title="تصوير رأس واحد على “Alice gave Bob the book”"}
 
 <!--en:064c597f-->
 [الهندسة والتقنيع السببي]{.kicker}
@@ -333,7 +333,7 @@ d_h = 4$ ويعود إلى عنق الزجاجة $0.71$ مع أنه يتعلم �
 ![رأس واحد من الانتباه الذاتي يحسب درجة للكلمة “gave” مقابل الكلمات الخمس كلها.](../img/mdl-attention-self-attention.svg){.nostretch width=90%}
 
 <!--en:e9abe0bc-->
-::: {.slide title="حساب رأس واحد على ‘Alice gave Bob the book’"}
+::: {.slide title="حساب رأس واحد على “Alice gave Bob the book”"}
 
 <!--en:064c597f-2-->
 [الهندسة والتقنيع السببي]{.kicker}

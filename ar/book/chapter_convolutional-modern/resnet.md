@@ -26,7 +26,7 @@
 ## كتل البواقي
 
 <!--en:fc8e39f3-->
-بدل أن تتعلم كتلة البواقي (:numref:`fig_residual_block`) الدالة المستهدفة $f(\mathbf{x})$ مباشرةً، تتعلم *الباقي* (residual) $g(\mathbf{x}) = f(\mathbf{x}) - \mathbf{x}$ وتضيف المدخلات من جديد عبر *وصلة تخطٍ* (*shortcut* connection أو *skip* connection)، فتكون مخرجاتها $\mathbf{x} + g(\mathbf{x})$. ولدفع الكتلة إلى الدالة المحايدة يكفي تصفير الطبقة الأخيرة في $g$.
+بدل أن تتعلم كتلة البواقي (:numref:`fig_residual_block`) الدالة المستهدفة $f(\mathbf{x})$ مباشرةً، تتعلم *الباقي* (residual) $g(\mathbf{x}) = f(\mathbf{x}) - \mathbf{x}$ وتضيف المدخلات من جديد عبر *وصلة تخطٍ* (shortcut connection أو skip connection)، فتكون مخرجاتها $\mathbf{x} + g(\mathbf{x})$. ولدفع الكتلة إلى الدالة المحايدة يكفي تصفير الطبقة الأخيرة في $g$.
 
 <!--en:9c8f5f4b-->
 ![الكتلة المعتادة (يسار) يجب أن تتعلم الدالة $f(\mathbf{x})$ مباشرةً. أما كتلة البواقي (يمين) فتتعلم دالة الباقي $g(\mathbf{x}) = f(\mathbf{x}) - \mathbf{x}$ وتضيف المدخلات من جديد، فتكون الدالة المحايدة $f(\mathbf{x}) = \mathbf{x}$ هي الحالة $g(\mathbf{x}) = 0$.](../img/arch-residual-concept.svg)
