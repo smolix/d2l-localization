@@ -783,6 +783,8 @@ These recur on every page; write them identically.
 - **"Why …" titles** are questions with ؟, a lead-in "Why never …:" → سبب …:.
   Verb-led titles become noun phrases: "Notice the flaw:" → العيب الظاهر:;
   "Replacing A by B" → الاستعاضة عن A بـ B (the English order of A and B kept).
+- **"How X affects Y" titles** become a noun phrase: أثر X في Y. A lead-in
+  "In words:" → بعبارة أخرى:.
 - **Tasks on slides** take المطلوب. With a colon in the English: "Work out …
   for each scenario:" → المطلوب: حساب … في كل حالة:; as a sentence without a
   colon: "Work out these 3 problems." → المطلوب حل هذه المسائل الثلاث.
@@ -812,6 +814,8 @@ These recur on every page; write them identically.
   letter after a reference is copied (:exref:`…`a). (i) … (v) and (a) … (d) keep
   Latin markers, with a free-standing و before the last. "(Optional.)" →
   (اختياري.).
+  Where the build numbers the parts and the English writes "part b" without
+  parentheses, the letter is copied bare: الجزء b.
 - **Exercise titles** are noun phrases with the English full stop: "Where the
   savings come from." → مصدر التوفير.; "Why reshuffle." → لماذا نعيد الخلط. (no
   ؟); "X ablation" → استئصال X.
@@ -890,6 +894,20 @@ word separates the source's Latin name from its Latin link text.
   digit before the class noun: "2 All-Gathers + 1 Reduce-Scatter" → 2 عملية
   all-gather + 1 عملية reduce-scatter; slide shorthand (RS) is written out.
 
+- **Formulas and shorthand in table cells.** A cell that is only a formula is
+  copied; a cell that mixes a formula with words starts with a lead noun
+  (التحديث، الكلفة، العجز). "w.p." → باحتمال: "Random w.p. $\epsilon$, else …"
+  → عشوائي باحتمال $\epsilon$، وإلا …. Several symbols or two references in one
+  cell are joined by a free-standing و. A label repeated down a column ("named
+  in" for methods the book describes but does not implement) is one invariant
+  phrase, مذكورة في, quoted “مذكورة في” where the caption explains it.
+- **Method maps** (a table that surveys a field's methods): a method with a
+  glossary term is written out with its acronym in parentheses (تحسين السياسة
+  التقاربي (PPO)، شبكة Q العميقة (DQN)); a name without one keeps its Latin
+  form after a class noun (طريقة GRPO، خوارزمية Rainbow، خوارزميتا DDPG و TD3).
+  On a page that never introduces the acronyms the glossary term stands alone
+  (§5.4).
+
 ### 15.6 Class nouns and names
 
 | Kind | Class noun | Example |
@@ -908,6 +926,7 @@ word separates the source's Latin name from its Latin link text.
 | Quoted example word; a letter | الكلمة; الرمز | الكلمة *gave*، الكلمتان *Alice* و *Bob* |
 | Books, novels | كتاب، رواية | رواية *The Time Machine* للكاتب H. G. Wells |
 | Games, datasets | لعبة; بيانات / مجموعة بيانات | لعبة Go، بيانات Fashion-MNIST |
+| Reinforcement learning | طريقة for an update rule or estimator; خوارزمية for DAgger, Rainbow, SAC; قاعدة for UCB; بيئة for an environment, also as a heading; المنظم / تحكم / تتبع for LQR, MPC, TV-LQR | طريقة REINFORCE، طريقة SARSA، طريقة TD(0)، خوارزمية DAgger، قاعدة UCB، بيئة CartPole، بيئة `Pendulum-v1`، المنظم LQR، تحكم MPC |
 
 - **Agreement follows the class noun**, also for the bare name later (يحقق Muon،
   خوارزمية BPTT المقتطعة). The noun is needed at the start of a block, clause or
@@ -985,6 +1004,13 @@ Additions to §5.4:
   Latin script: *“Mira مهندسة السفينة”*. Place names in such an example are
   written in Arabic (Paris → باريس، Rome → روما).
 
+- **A term defined together with its symbol** takes an Arabic connective
+  between the English gloss and the math span: "the *transition kernel*
+  $P(s' \mid s, a)$" → *نواة الانتقال* (transition kernel)، ونكتبها
+  $P(s' \mid s, a)$. A term that ends in a symbol is glossed with وتسمى, so
+  that an Arabic word separates the math from the Latin: القاعدة الجشعة
+  $\epsilon$ (وتسمى epsilon-greedy); headings and slide titles write الجشعة ε.
+
 ### 15.9 Notation lists, math and code in prose
 
 - **Notation entries** (`* $x$: عدد قياسي`): several symbols before the colon
@@ -1009,6 +1035,11 @@ Additions to §5.4:
 - **A display equation followed by a counted noun:** the block after the
   equation starts with the noun (معلَمة قابلة للتعلم.); a following "and
   concatenates …" → ثم يربط ….
+- **A paragraph that continues the sentence of a display equation** ("is the
+  *reward-to-go* …", "with a step size …", "a quadratic in $c$ …") starts with
+  هو / وهو / بـ, so that it reads on from the equation.
+- **A shape written as plain text** is translated: "(seeds, updates, 3)" →
+  (البذور، التحديثات، 3); in backticks it is copied.
 - **Code named in prose** takes its class noun as the object: "sweep
   `d2l.lr_sweep`" → نجري المسح بالدالة `d2l.lr_sweep`; "save `X`" → يحفظ الموتر
   `X`; "a fresh `X`" → نموذج `X` جديد; "toggling `norm`" → تبديل قيمة `norm`.
@@ -1030,6 +1061,17 @@ Additions to §5.4:
   adjectives of المسح agree with المسح, also after عمليات (عمليات المسح
   التجميعي المتوازي ✗ عمليات المسح التجميعية المتوازية), so that the page title,
   the slides and the chapter index print one form.
+- **A word that is a chapter's technical term keeps that one sense on its
+  pages.** In reinforcement learning حالة is the state, so "case" → مثال / نوع
+  / وضع (المثال الخاص، نوعان خاصان، الوضع المستقر); حلقة is the episode, so a
+  code loop → حلقة التكرار / حلقة التدريب, a cycle of states → دورة, a ring of
+  cells → طوق (حلقة مغلقة / مفتوحة stays the control term); الهدف is the
+  target, so the goal cell → المقصد; مسار is the trajectory, so a path on the
+  grid → طريق; مكافأة is the reward, so a bonus → علاوة.
+- **Agent nouns and passives that read as another word carry their mark**
+  (§2): المتعلِّم، المخطِّط، المصمِّم، المقلِّد، المغلِّف، الموجَّه ("directed";
+  الموجه is the prompt), يغرّم، لنثبّت ("let us fix"; لنثبت reads "let us
+  prove").
 - **Marks that drafts keep adding** and §2 does not allow: كلًا، أيًا (✗ كلًّا،
   ✗ أيًّا), المكون (✗ المكوّن), وصلة تخط (✗ تخطٍ), دوال (✗ دوالَّ).
 - **Source defects** (a math span cut across a paragraph, "Theorem" on a slide
